@@ -1,4 +1,14 @@
-# The Voynich Manuscript: A Falsification Campaign
+# What is the Voynich manuscript, anyway?
+
+I am not a cryptographer, linguist, statistician, or data scientist. I have almost no usable skills for pursuing the hidden depths of the [Voynich manuscript](https://en.wikipedia.org/wiki/Voynich_manuscript).
+
+But I do have a Claude subscription, three years of LLM tool intuition, and a love of mystery. So for three days, between other tasks, I asked Opus 4.8 to explore various strategies to unearth hidden meaning within this strange text.
+
+We found no information. Just structure.
+
+But perhaps you have a different approach. More domain knowledge, more structured LLM strategy, or some other secret sauce. Here's a repo full of strategies and conclusions to either build from or falsify. Have fun! **Pull requests welcome.** If you find more than I did, or simply tighten the ratchet further, drop me some commits.
+
+## In the robot's words
 
 This repo is a from-scratch attempt to figure out what the Voynich manuscript
 *is*, using statistics, null models, and multimodal vision — run as a series
