@@ -1,0 +1,110 @@
+loaded 104 bound label loci from 4 folios
+  f70v2: n=30  conf: {'high': 23, 'med': 7}
+  f71r: n=15  conf: {'high': 13, 'med': 2}
+  f72r2: n=29  conf: {'high': 17, 'med': 12}
+  f73v: n=30  conf: {'med': 7, 'high': 23}
+
+==========================================================================
+TEST A  all bound loci (n=104): morphology vs referent attributes
+==========================================================================
+  attr body         dist={'nude': 85, 'unknown': 1, 'clothed': 18}  H=0.74b
+  attr star         dist={'yes': 100, 'no': 4}  H=0.24b
+  attr clothing_color dist={'none': 90, 'red': 10, 'green': 4}  H=0.69b
+  attr container    dist={'vessel': 40, 'none': 64}  H=0.96b
+  attr star_tail    dist={'yes': 26, 'no': 78}  H=0.81b
+  attr arms         dist={'one_raised': 38, 'other': 56, 'both_raised': 2, 'down': 7, '': 1}  H=1.45b
+  attr headwear     dist={'none': 70, 'some': 34}  H=0.91b
+  attr facing       dist={'right': 62, 'front': 26, 'left': 15, '': 1}  H=1.41b
+  attr clock_sector dist={3: 34, 0: 26, 1: 23, 2: 21}  H=1.97b
+  --- body ---
+    prefix             MI=0.126  p=0.8070
+    suffix             MI=0.129  p=0.4044
+    core_first2        MI=0.266  p=0.3575
+    core_len           MI=0.052  p=0.4169
+    core_has_gallows   MI=0.007  p=1.0000
+    wholeword_first2   MI=0.149  p=0.5418
+    DISCRIMINATOR: template floor=0.129 core(best)=0.266 -> core EXCEEDS floor
+  --- star ---
+    prefix             MI=0.067  p=0.0103 *
+    suffix             MI=0.023  p=1.0000
+    core_first2        MI=0.159  p=0.0093 *
+    core_len           MI=0.011  p=0.9540
+    core_has_gallows   MI=0.001  p=1.0000
+    wholeword_first2   MI=0.091  p=0.0106 *
+    DISCRIMINATOR: template floor=0.067 core(best)=0.159 -> core EXCEEDS floor
+  --- clothing_color ---
+    prefix             MI=0.182  p=0.0089 *
+    suffix             MI=0.139  p=0.6544
+    core_first2        MI=0.253  p=0.1016
+    core_len           MI=0.071  p=0.2455
+    core_has_gallows   MI=0.011  p=0.5294
+    wholeword_first2   MI=0.182  p=0.0092 *
+    DISCRIMINATOR: template floor=0.182 core(best)=0.253 -> core EXCEEDS floor
+  --- container ---
+    prefix             MI=0.180  p=0.5202
+    suffix             MI=0.050  p=0.7976
+    core_first2        MI=0.395  p=0.5807
+    core_len           MI=0.034  p=0.0073 *
+    core_has_gallows   MI=0.008  p=1.0000
+    wholeword_first2   MI=0.223  p=0.5704
+    DISCRIMINATOR: template floor=0.180 core(best)=0.395 -> core EXCEEDS floor
+  --- star_tail ---
+    prefix             MI=0.066  p=0.6887
+    suffix             MI=0.124  p=0.1652
+    core_first2        MI=0.268  p=0.5238
+    core_len           MI=0.021  p=0.3319
+    core_has_gallows   MI=0.014  p=0.2896
+    wholeword_first2   MI=0.160  p=0.4953
+    DISCRIMINATOR: template floor=0.124 core(best)=0.268 -> core EXCEEDS floor
+  --- arms ---
+    prefix             MI=0.168  p=0.7568
+    suffix             MI=0.280  p=0.1856
+    core_first2        MI=0.570  p=0.4058
+    core_len           MI=0.101  p=0.2195
+    core_has_gallows   MI=0.050  p=0.2189
+    wholeword_first2   MI=0.281  p=0.7059
+    DISCRIMINATOR: template floor=0.280 core(best)=0.570 -> core EXCEEDS floor
+  --- headwear ---
+    prefix             MI=0.095  p=0.3904
+    suffix             MI=0.066  p=0.8229
+    core_first2        MI=0.344  p=0.0590
+    core_len           MI=0.028  p=0.4787
+    core_has_gallows   MI=0.008  p=0.5347
+    wholeword_first2   MI=0.143  p=0.5507
+    DISCRIMINATOR: template floor=0.095 core(best)=0.344 -> core EXCEEDS floor
+  --- facing ---
+    prefix             MI=0.177  p=0.3181
+    suffix             MI=0.255  p=0.1587
+    core_first2        MI=0.581  p=0.4351
+    core_len           MI=0.046  p=0.7602
+    core_has_gallows   MI=0.032  p=0.4761
+    wholeword_first2   MI=0.273  p=0.5828
+    DISCRIMINATOR: template floor=0.255 core(best)=0.581 -> core EXCEEDS floor
+  --- clock_sector ---
+    prefix             MI=0.213  p=0.1368
+    suffix             MI=0.231  p=0.7262
+    core_first2        MI=0.664  p=0.6998
+    core_len           MI=0.035  p=0.8342
+    core_has_gallows   MI=0.068  p=0.0145 *
+    wholeword_first2   MI=0.392  p=0.2029
+    DISCRIMINATOR: template floor=0.231 core(best)=0.664 -> core EXCEEDS floor
+  OMNIBUS max-MI over 54 cells: max=0.664  FAMILY-WISE p=0.7287
+
+==========================================================================
+TEST C  morphology vs TIER (within-folio null — K12-artifact-prone, caveat)
+==========================================================================
+    prefix             MI=0.121  p=0.4440
+    suffix             MI=0.244  p=0.0295 *
+    core_first2        MI=0.447  p=0.4567
+    core_len           MI=0.036  p=0.5845
+    core_has_gallows   MI=0.006  p=0.6267
+    wholeword_first2   MI=0.227  p=0.6658
+
+==========================================================================
+POWER CONTROLS (n=104, within folio-x-tier null)
+==========================================================================
+  POSITIVE prefix-carried (100%)     carrier-MI=0.987 p=0.0001 | best-feat[prefix] MI=0.987 p=0.0001
+  PARTIAL  prefix-carried (75%)      carrier-MI=0.170 p=0.0043 | best-feat[core_first2] MI=0.292 p=0.5621
+  POSITIVE core-carried (100%)       carrier-MI=0.939 p=0.0001 | best-feat[core_first2] MI=0.939 p=0.0001
+  PARTIAL  core-carried (75%)        carrier-MI=0.537 p=0.0001 | best-feat[core_first2] MI=0.537 p=0.0001
+  NEGATIVE random attr               prefix-MI=0.093 p=0.1921  <- must be ~uniform

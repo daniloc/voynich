@@ -1,0 +1,794 @@
+===== SUBAGENT agent-a005ab043b1f9ade1.jsonl =====
+--- TASK PROMPT ---
+You are a 2026 model running a constraint-intersection prosopographical sieve for the Voynich manuscript, in /Users/user/Documents/Dev/voynich. You have Bash/Python and web tools. READ /Users/user/Documents/Dev/voynich/FINDINGS.md fully (esp. D9 maker-sieve, §7 M1–M10, and the standing verdict).
+
+GOAL: Do for the CUSTOMER/PATRON what D9's maker-sieve did for the maker — a disciplined, falsifiable sieve that constrains the customer TYPE (not a name), ranks candidate patron-categories, and identifies the decisive archival test. The customer = whoever found it worth funding a one-off, ~6–13 person-month ELITE commission whose materials are cheap (no gold/lapis) — i.e. they paid for brains+time, for the WONDER of a complete sealed secret-knowledge system, not for bullion.
+
+THE ESTABLISHED CONSTRAINTS (each prunes the customer population — use them):
+ - Wealth to fund a multi-hand workshop + a rare system-designer for ~a year (court/prince, prince-bishop, great merchant-banker, or wealthy adept).
+ - Appetite for ESOTERICA (astrology/alchemy/secret natural-philosophy) — prestige-laden, semi-forbidden knowledge.
+ - Values MYSTIQUE/intellect over visual luxury (the no-gold palette — argues against a magpie trophy-collector, toward a connoisseur of secret knowledge).
+ - One-off BESPOKE (singularity → a specific commission, not a product line).
+ - In/near the maker's orbit: D9 put the workshop in the Milan–Pavia VISCONTI/SFORZA arc, c.1404–1438 (C14).
+ - The object is DEBUNK-PROOF, not decode-proof (M10): the customer wanted the AURA of complete hidden mastery; could be a KNOWING collector of a magnificent enigma OR a BELIEVING mark — this fork is likely unresolvable; treat both.
+
+METHOD:
+1. WebSearch the documented patronage culture of the target milieu: Visconti court astrology/occultism (Filippo Maria Visconti and his astrologers; the Pavia/Visconti library; court astrologers e.g. Pietro da Castelletto, Antonio Bernareggi); N-Italian signorial/condottiere/merchant-ba
+--- FINAL REPORT ---
+I now have everything needed. The research confirms: (1) Milan under the Visconti was a top-tier center of court astrology with salaried physician-astrologers (Bernareggi at Pavia); (2) Filippo Maria Visconti himself is a documented paranoid astrology-obsessed reclusive prince — a textbook "believing mark" specimen; (3) the demonstrated 150-year-later buyer-type (Rudolf II as "secret wisdom," then a Prague/Rome physician-alchemist-Jesuit chain) is a precise type-specimen; (4) no commission record exists, ~150-year provenance gap. I'll now produce the deliverable.
+
+---
+
+# CUSTOMER / PATRON SIEVE — Voynich Manuscript
+
+A constraint-intersection prosopographical sieve for the **commissioner**, run as the mirror of D9's maker-sieve. Per the standing verdict (FINDINGS §6/§7): the object is a **sustained multi-hand asemic "secret-knowledge" marvel**, cheap materials (no gold/lapis), one-off, debunk-proof not decode-proof. The customer is whoever found *that* worth ~6–13 person-months of elite labor. **This sieve constrains the customer TYPE and ranks patron-categories. It does not name a person, and no commission record exists** (Rudolf II is the first hard owner, c.1576–1612; ~150 years of prior ownership is a documented blank).
+
+---
+
+## METHOD
+
+1. **Inherit the maker locus (D9) as the spatial prior.** The workshop sits in the Milan–Pavia Visconti/Sforza arc, c.1404–1438 (C14). A bespoke one-off is normally commissioned within or adjacent to the maker's patronage orbit, so the customer population is seeded from that milieu and pruned outward.
+2. **Translate each production-forensic finding (M1–M10, D9) into a demand-side constraint** — what kind of buyer does *this specific object* (not "an expensive book") imply.
+3. **Score each constraint by PRUNING POWER and apply the NULL TEST:** drop any constraint that nearly every wealthy person of the era satisfies (it carries no likelihood weight — the K1/K10 lesson applied to people).
+4. **Read the DOCUMENTED LATER MARKET as a type-specimen.** Who actually paid for this object once it surfaces in the record (Rudolf II → Horčický → Barschius → Marci → Kircher) is hard evidence of the buyer-type the object was *built to satisfy* — the only demand-side data that isn't speculation.
+5. **Hold the believer-vs-knowing-collector fork open** (M10): the object equally fits a *credulous mark* who thinks he bought hidden mastery and a *connoisseur* who knows it's a magnificent enigma and wants exactly that. Both survive; the artifact can't separate them. I treat both and note where each leads.
+6. **Output:** constraint catalog → surviving customer-category → ranked patron-TYPES (confidence-flagged, named individuals marked speculative) → the type-specimen argument → the single decisive archival test → limits.
+
+---
+
+## THE CUSTOMER CONSTRAINT CATALOG
+
+Each row: the demand-side constraint, the FINDINGS evidence behind it, its pruning power on the "wealthy-enough European, c.1410–1440" population, and whether it survives the null test.
+
+| # | Constraint on the customer | Evidence | Pruning power | Survives null? |
+|---|---|---|---|---|
+| C1 | **Could fund ~a year of a multi-hand workshop + a rare system-designer** | ≥5 hands (D9), no decay/sustained discipline to the tail (M2), no rush (M2/M8) | **Weak alone.** Thousands of courts, prelates, bankers qualify. "Rich" barely discriminates. | ❌ **DROP** — this is the "wealthy" null; it prunes almost no one in the candidate class. |
+| C2 | **Paid for BRAINS + TIME, not BULLION** — value-in-intellect, not display | No gold/lapis; 3 faded pigments (M3, Supporting); value not in materials | **Strong.** Inverts the default elite buyer. A trophy-collector/magpie prince buys the gilded Book of Hours; this buyer deliberately bought the *opposite*. Prunes the entire status-display-via-luxury majority. | ✅ **SURVIVES** — discriminates hard against the typical patron. |
+| C3 | **Appetite for ESOTERICA** — astrology / alchemy / secret natural-philosophy | Costumed as a physician-astrologer's complete shelf (M3, D9); herbal/astro/balneo/pharma/recipe genres | **Medium-strong.** Esoterica was prestigious but *not universal* among the rich; it self-selects the astrology-and-secrets sub-elite. | ✅ **SURVIVES.** |
+| C4 | **Wanted the AURA of a COMPLETE, SEALED system** — wonder of total hidden mastery | Encyclopedic completeness, end-to-end effort, set-pieces as deep climaxes not cover-dazzle (M8); image-first staged-for-a-viewer layout (M5) | **Strong.** This is the precise psychological want. Not "a book on X" but "the *whole* of a secret order, sealed." Rare appetite. | ✅ **SURVIVES** — the signature constraint. |
+| C5 | **Wanted DEBUNK-PROOF, not decode-proof** — reads as learned, can't be exposed as empty; *not* engineered against elite codebreakers | M10: maximizes (not suppresses) the regularities cryptanalysts feed on; experts *most* likely to see through impossible plants/garbled zodiac | **Strong + directional.** Prunes the "spymaster / chancery-cipher buyer" (would demand real security) AND the "expert adept who'd test it" (would catch it). Points to a buyer who consumes the *impression*, not the contents. | ✅ **SURVIVES** — and it shapes the *believer-vs-collector* fork (below). |
+| C6 | **Commissioned a ONE-OFF bespoke object** — not a product line | Singularity; no sibling manuscripts, no copies (D9, Supporting) | **Medium.** Implies a specific commission/gift occasion, not a workshop selling stock. Prunes the open-market speculative-fraud model (which makes many). | ✅ **SURVIVES.** |
+| C7 | **Tolerated / preferred OPACITY in the buyer relationship** — accepted an object whose content was never demonstrated to work | No authored key (M7), no functional decode (R1), fake-functional scaffolding (K9) | **Medium.** Either the buyer never demanded a demonstration (status/wonder buyer) or was complicit in the enigma. Prunes the practical buyer who wanted a working medical/astrological reference. | ✅ **SURVIVES.** |
+| C8 | **In/
+
+===== SUBAGENT agent-a1a719d6d9e19222e.jsonl =====
+--- TASK PROMPT ---
+You are a 2026 multimodal model investigating the Voynich manuscript in /Users/user/Documents/Dev/voynich. You have vision (Read images) and web tools (WebSearch/WebFetch). READ /Users/user/Documents/Dev/voynich/FINDINGS.md first (esp. §7 M3).
+
+BACKGROUND: M3 found the imagery is ~85% borrowed-real drawing-grammar across 5 learned genres, but only at TRADITION level (no manuscript match — there's no visual-embedding index here). It surfaced one sharp lead: the ZODIAC iconography reads TRANSALPINE, not Italian — specifically a HUMAN CROSSBOWMAN Sagittarius (a rare, regionally-marked convention pointing to German/French/Central-European calendar cycles), in mild tension with the N-Italian C14/paleographic anchor (D9). Your job is to push that lead from tradition-level toward candidate-exemplar level, scoped and honest.
+
+YOUR TASK — SCOPED VISUAL SOURCE RETRIEVAL (zodiac-focused):
+1. Examine the Voynich zodiac/calendar emblems directly: z70v_center.jpg (goat), iiif_71r.jpg (wheel), z72r_*.jpg, and render the Sagittarius page (f73v) from Voynich_Manuscript.pdf or fetch full-res IIIF (Yale oid 2002046; iiif_canvases.json). Catalog the diagnostic features: the crossbowman Sagittarius, the goat/ram poses, the "creature eating a bush" motif, the nymph-and-star rings, any costume/dress details (clothing fashion is strongly dateable/regionally-markable).
+2. Via WebSearch/WebFetch, identify SPECIFIC digitized comparand zodiac/calendar cycles — German/French/Central-European Books of Hours, De Sphaera, calendar/labours-of-the-months manuscripts c.1380–1450 — that share the crossbowman-Sagittarius convention and the human-figure-zodiac style. Where you can fetch comparand images, vision-compare them to the Voynich emblems. Look at the COSTUME/headdress fashion in the zodiac figures as a dating/region cue.
+3. Pin, as tightly as the evidence honestly allows: which regional tradition + approximate date the zodiac exemplar belongs to, and whether that's consistent with (a N-It
+--- FINAL REPORT ---
+That closes the loop: the "creature eating a bush" is a **calendar/labours-of-the-months genre scene** redrawn into a zodiac roundel — confirming the source was an astronomical calendar or **Hausbuch** (the genre converges with D9's physician's-shelf), with the Diebold Lauber Alsatian workshop floated as a stylistic neighbor. I have everything needed. The herbal plant comparison is optional and I've spent the budget productively on the primary zodiac lead; I'll note it as a flagged limit rather than do it thinly. Synthesizing the deliverable.
+
+---
+
+# DELIVERABLE — Zodiac-focused visual source retrieval (pushing the M3 transalpine lead)
+
+## METHOD
+Direct vision examination of the in-repo Voynich zodiac emblems (z70v, z72r A–D, z72v, z73r, z73v) to build a diagnostic-feature catalog, then targeted web retrieval (WebSearch/WebFetch) of the established comparand scholarship (Zandbergen/voynich.nu, voynichportal, Marco Ponzi/Darren Worley, Sensfelder arms analysis, Sniezynska-Stolot/Blume). I then fetched a real comparand image via IIIF — **Codex Schürstab (Zürich ZB Ms C 54), f22v Sagittarius**, from the e-codices Loris image server — and vision-compared it side-by-side against Voynich z73v. No visual-embedding index exists here, so all claims are tradition/family-level, not "copied from MS X."
+
+## DIAGNOSTIC-FEATURE CATALOG (Voynich zodiac, from direct vision)
+- **Sagittarius (z73v):** Standing **human male**, walking stance, drawing a **crossbow** (bolt nocked, at waist height); blue belted short tunic, hose, calf-boots, and a **pale hat with a flared tail/brim**. NOT a centaur, NOT a longbow. This is the sharp diagnostic.
+- **Scorpio (z73r):** A **green/blue four-legged lizard/salamander** with a long looping tail — reptilian, not an arthropod. Month label "Novebre."
+- **Cancer (z72r_D):** **Two red crayfish/lobsters** back-to-back (not a crab).
+- **Leo (z72v_0):** Maned lion, walking; month "augst."
+- **Libra (z72v_1):** A **hanging two-pan balance** alone (no holder); month "octebre."
+- **Aries/Taurus (z70v, z72r):** **Doubled** — two Aries and two Taurus, each roundel split into 15 nymphs + 15 stars = **30-day / half-month windows**. The goat/ram is shown **eating a green bush** (a labours-of-the-months genre scene transplanted into the roundel).
+- **Nymph rings:** Mostly nude but several wear dateable **costume/headgear** — tall conical/horned and "flowerpot"-shaped headdresses, plus figures in green and blue gowns and **pointed shoes (poulaines)** in the upper register of z73r. Fashion reads c. 1400–1440 N-European.
+- **Month-name labels:** A **later hand**, vernacular: "abril, may, augst, octebre, novebre" — Occitan/Provençal-to-NW-Italian spelling.
+
+## CANDIDATE COMPARAND TRADITION / REGION / DATE
+**Iconography → South-German / Lake Constance, c. 1400–1440 (Holy Roman Empire), the *Iatromathematisches Hausbuch* / calendar-zodiac family.** Confidence: **moderately high** (this is well-established, multiply-attested community consensus, and my own vision comparison corroborates it).
+
+Convergent markers, each regionally diagnostic:
+1. **Human crossbowman Sagittarius** — clusters in the HRE c.1395–1496; the crossbow sub-variant is rarer and earlier-skewed.
+2. **Lizard/salamander Scorpio** + **crayfish Cancer** + **leg-tailed lion** — the same Central-European/French cluster.
+3. **Fox-tail cap** on Sagittarius — cited as a specifically German marker (Sniezynska-Stolot/Blume).
+4. **Calendar genre-scene leakage** ("ram eating a bush") + **doubled signs in 15+15 day windows** — signature of a copied astronomical calendar / Hausbuch.
+5. **High-German marginal note "der Mussteil"** elsewhere in the MS — independent German trace.
+
+**Specific manuscripts consulted, named only as "same family as":**
+- **Cod. Sang. 827** (St. Gallen; Lake Constance, c.1425) — repeatedly cited closest: **crossbowman with wide-sleeves-narrow-at-wrist tunic**, crouching/sitting Virgo. The tightest single analog. (e-codices)
+- **Codex Schürstab = Zürich ZB Ms C 54** (Nuremberg, c.1472), **f22v** — I fetched and vision-compared this. It shares the **standing human walking-archer template, belted tunic + hose** — but holds a **recurved hand-bow, not a crossbow**, and is ~30+ yrs after the Voynich C14 window. So: same human-archer convention, *not* the crossbow sub-variant; a cousin, not a parent. (https://www.e-codices.unifr.ch/loris/zbz/zbz-C0054/zbz-C0054_022v.jp2/full/full/0/default.jpg)
+- **Clm 13076** (Regensburg, mid-1300s) — lion w/ protruding tongue, lizardy Scorpio, human archer, crayfish Cancer — the convention's older German root.
+- **Graz UB Ms 287** (Austria, c.1390–1405) and **LJS 449** (S-German, mid-15thc) — human archer + crayfish + leg-tailed lion + squatting Virgo.
+- Stylistic neighbor floated by others: **Diebold Lauber workshop** (Hagenau, Alsace) for the Gemini/genre handling.
+- **Crossbow type (Sensfelder, arms expert):** a wooden **"one-foot" crossbow with stirrup and recurved lathe tips** — a 15th-c. type, consistent with the C14 window.
+
+**Counter-current (the honest tension within the page itself):** the **month-name labels** are not German — they are **Occitan/Provençal**, with spelling pointing to the France / NW-Italy / Iberia corridor (community consensus; Wikipedia phrases it "medieval languages of France, northwest Italy, or the Iberian Peninsula"). These were added by a **later hand**, so they date the *annotation/use*, not necessarily the *drawing exemplar*.
+
+## REFINED EXEMPLAR-POOL HYPOTHESIS vs D9
+**The zodiac exemplar belongs to the South-German/Lake-Constance Hausbuch-calendar family, c.1400–1440.** This **refines but does not overturn D9** (N-Italian physician-astrologer circle, C14 1404–1438). Best-fit reconciliation, in line with M3:
+- A **workshop in or near the N-Italian / Alpine zone copying a northern (South-German) calendar exemplar** is fully consistent with: the German iconography (borrowed drawing-grammar, M3), the Occitan labels (a later user in the Occitan/Ligurian 
+
+===== SUBAGENT agent-a1bc37b8d975e4f06.jsonl =====
+--- TASK PROMPT ---
+You are a 2026 multimodal model investigating the Voynich manuscript in /Users/user/Documents/Dev/voynich. You have vision (Read images), Bash/Python, and web tools. READ /Users/user/Documents/Dev/voynich/FINDINGS.md first (esp. §7 M4).
+
+BACKGROUND: M4 (`plant_tags.json` on disk) tagged 15 Voynich herbal plants into 4 morphological slots (root/stem/leaf/inflorescence) and found they recombine FREELY — 87% of plants are unique combinations, sitting at the free-recombination ceiling, and the flower type predicts nothing about root/leaf. That's the inverse of real botany, where inflorescence largely pins down family (umbellifers: taproot + divided leaf + umbel, etc.). But M4 had NO real-herbal control — it's currently 🟡 directional. Your job is to supply the control and make it quantitative.
+
+YOUR TASK — REAL-HERBAL CONTROL:
+1. Build a control set of ~20–30 REAL plant species that actually appear in medieval herbals (e.g. from the Dioscorides/Tractatus de herbis/Pseudo-Apuleius repertoire: mandrake, plantain, fern, iris, rose, viola, nettle, vine, fennel/umbellifers, etc.). Tag each by its TRUE botanical morphology using the SAME slot scheme and the SAME filler categories M4 used (read `plant_tags.json` to match the categories exactly). Real-plant morphology is ground truth you know reliably — that's the point: real species have correlated parts (syndromes).
+2. OPTIONAL/strengthening: fetch a few real digitized herbal page images via WebSearch/WebFetch (e.g. BL Egerton 747 Tractatus de herbis; Vienna Dioscorides) and vision-confirm that the drawings preserve those part-correlations (i.e. a real herbal *drawing* still shows umbel→taproot, etc.).
+3. Compute, for BOTH the real-herbal control and the Voynich set, identical metrics: distinct fillers/slot, per-slot entropy, **inter-slot mutual information** (does flower predict root/leaf?), and **% unique whole-plant combinations vs the free-recombination Monte-Carlo ceiling**. 
+4. THE DISCRIMINATOR: real botany should
+--- FINAL REPORT ---
+The verdict is robust to my tagging subjectivity. Even corrupting 3 of 27 real tags, the syndrome signal stays significant 100% of the time. The conclusion does not depend on getting every real-plant tag exactly right.
+
+I have everything needed. Here is the deliverable.
+
+---
+
+# M4 REAL-HERBAL CONTROL — Deliverable
+
+## METHOD
+
+The original M4 claim ("Voynich plants recombine at the free ceiling, the inverse of real botany") had **no real-herbal control**. I supplied one and made the test quantitative.
+
+**The fairness move (most important):** M4's raw fillers are fine-grained (`taproot` vs `taproot_red` vs `taproot_red_forked` — that grain alone forces 100% uniqueness). Real plants would explode even worse at that grain. So I defined **one shared, deliberately coarse morphological vocabulary** per slot and forced **both** sets through it identically — colour/size qualifiers dropped for both:
+- **root:** taproot | fibrous | rhizome | bulb
+- **stem:** single | branching | multi
+- **leaf:** simple_entire | lobed | divided | linear
+- **infl:** none | umbel | spike | head | cluster | berry
+
+I then computed, on both sets identically: distinct fillers/slot, per-slot entropy, inter-slot mutual information, %unique whole-plant combos, and a Monte-Carlo free-recombination ceiling. The decisive test is a **per-set MI permutation null** (shuffle each slot column independently, keeping marginals). Script: `/Users/user/Documents/Dev/voynich/herbal_control.py`.
+
+**Real-herbal control set (27 species, true botany, Dioscorides/Tractatus de herbis repertoire):** mandrake, plantain, fennel, dill, hemlock, wild carrot (4 umbellifers = taproot+branching+divided+umbel syndrome), iris, rose, violet, nettle, grapevine, male fern, mallow, wormwood, garlic, onion, lily, sage, mint, poppy, celandine, vervain, comfrey, burdock, centaury, saffron crocus, asphodel. (Note the bulb→linear→head syndrome: garlic/onion/lily/crocus all collapse to the same coarse combo — that clustering is the point.)
+
+## SIDE-BY-SIDE METRICS
+
+| metric | VOYNICH | REAL HERBAL | free-recomb null |
+|---|---|---|---|
+| avg I(infl;root)+I(infl;leaf) /2 | 0.643 | 0.637 | — |
+| %unique whole-plant | 87% | 63% | — |
+| free-recomb ceiling %unique | 83% (band 53–100) | 71% (band 48–93) | — |
+| observed vs own ceiling | **AT** (−4 pts) | **AT** (+8 pts) | — |
+| **total inter-slot MI** | **3.10** | **3.07** | — |
+| **— vs own shuffle null** | null 2.85, **p=0.22 (n.s.)** | null 1.32, **p<0.0001** | — |
+
+## VERDICT
+
+**The naive metrics M4 leaned on FAIL to discriminate — but a matched null rescues a weaker, corrected version of the claim.**
+
+- **Raw MI is a mirage.** Voynich MI (3.10) and real MI (3.07) are nearly identical. Taken at face value this would say "real plants don't predict flower→root better than Voynich" — i.e. it would *kill* M4's qualitative story.
+- **The matched permutation null is the real discriminator.** Voynich's MI is entirely explained by its skewed marginals at small-n (its shuffle null already sits at 2.85; p=0.22, not significant). Real-herbal MI sits *far above* its own null (1.32; p<0.0001). Real botany has genuine syndromes; Voynich has none detectable.
+- **Robust to small-n:** down-sampling the real set to n=15 (matching Voynich), it still beats its null in **95% of subsamples (median p=0.001)**, while Voynich at n=15 is p=0.22.
+- **Robust to my tagging subjectivity:** corrupting 3 of 27 real tags at random, the real-plant signal stays significant **100/100 times**.
+- **%unique:** real (63%) is below Voynich (87%) in the predicted direction, but this is the *weak* leg — both sets technically sit within their own (wide, small-n) MC ceiling bands, so %unique alone is not decisive.
+
+This is the **same K-pattern** that recurs throughout FINDINGS: the headline number (raw MI, raw %unique) doesn't separate signal from a content-free null; only the matched null does — and here it separates them cleanly and in the predicted direction.
+
+## CONFIDENCE AND LIMITS
+
+**Confidence: moderate.** The direction M4 asserted is confirmed and now quantified, but the honest finding is more nuanced than M4 stated:
+- M4 said Voynich MI is "near-zero" and flower "predicts nothing." Literally false at raw values (raw MI ≈ real). **Correct statement:** Voynich's inter-slot correlation is *statistically indistinguishable from its own marginal-shuffle null*, whereas real botany's is ~2× its null at p<0.0001.
+- **Limits:** (1) Both n are tiny (15, 27); the %unique ceilings are too wide to discriminate, so that specific M4 framing ("at the free-recombination ceiling") is **not** what carries the result — the MI null is. (2) The coarsening was necessary for fairness but is my choice; a finer real-plant grain would *raise* real syndromes further (real species cluster harder at fine grain), so coarsening is conservative against my own conclusion. (3) Voynich tags come from M4's vision pass on 15 plants — heavily stylized drawings where "true" morphology is partly unrecoverable; that uncertainty cuts both ways. (4) I did not fetch external herbal page images (the statistical result was already decisive and the optional leg would not change the verdict).
+
+**Net effect on M4:** hardens from 🟡 directional toward 🟢, but with a **corrected claim**: the discriminator is *"real inter-slot MI beats its shuffle null (p<10⁻⁴); Voynich's does not (p=0.22),"* **not** the original *"Voynich MI ≈ 0 / sits at the %unique ceiling."* Recommend logging as M4-revised with the permutation-null as the test it passed.
+
+===== SUBAGENT agent-a369e001924f82306.jsonl =====
+--- TASK PROMPT ---
+You are investigating the Voynich manuscript in /Users/user/Documents/Dev/voynich as a 2026 multimodal model. You have vision — Read images directly — plus Bash/Python and web tools.
+
+CONTEXT: A long, disciplined analysis concluded the text is an ASEMIC generated artifact (rule-governed word-engine, no syntax, no recoverable cipher; substitution attack null with a working positive control). The frontier is "why it was made". READ /Users/user/Documents/Dev/voynich/FINDINGS.md first (D*, K*, confounds).
+DISCIPLINE: this project's whole ethos is null-discipline. Do NOT manufacture leaks. A confident "no new tell found, and here's why the known ones don't count" is a fully valid and valuable result. Distinguish genuine new leaks from already-known/already-debated features.
+
+DATA: images on disk — f116v_*.jpg (the famous last-page marginalia "michiton oladabas…"), contact_sheet.png, scan_*.png, raw_###.png, iiif_*.jpg, z*.jpg; render any folio from Voynich_Manuscript.pdf (.venv has pymupdf/`fitz`) or fetch full-res IIIF (Yale oid 2002046). corpus.json has all parsed text + meta. `source .venv/bin/activate`. WebSearch allowed for checking what's already documented.
+
+YOUR INVESTIGATION — FULL-CORPUS "TELL" SCAN: Hunt for the highest-information ANOMALIES — moments where the generative discipline BREAKS or something REAL leaks:
+ (a) Plain-script MARGINALIA in Latin-ish/other scripts: f116v (last page), f17r top, f66r, f1r, and any month-names in the zodiac margins. Render and read them; assess whether they encode anything.
+ (b) Corrected / erased / over-written glyphs, or under-drawing/under-text.
+ (c) A REAL, cleanly identifiable plant/object among the fakes (a genuine species drawing would be a tell) — scan the herbal broadly.
+ (d) Real words in any known language hidden in text or labels; anomalous glyph sequences that break the automaton's rules (you can compute rule-violations from corpus.json).
+ (e) Anything resembling a signature, date, cipher-key, or alphabet 
+--- FINAL REPORT ---
+This confirms the f57v ring is a thoroughly documented feature with my exact reading (`oldrvxkmf...trªyc`), 4×17, and the known interpretations (alphabet-wheel vs degree-marks/nocturnal). My fresh quantitative result (12/14 positions identical) matches the literature's hand-observed variation points (positions 7, 8, 14). It is a genuine structured anomaly but already known and already debated — not a new leak, and it has resisted decryption for decades.
+
+I have thoroughly covered the brief. Let me compose the deliverable.
+
+## TELL-SCAN REPORT — Voynich full-corpus anomaly hunt (2026-06-20)
+
+### METHOD / COVERAGE
+- Read FINDINGS.md + memory; calibrated against existing D/K/L/M ledger to distinguish new leaks from known features.
+- **Marginalia (item a):** read f116v (all lines, multiple crops + IIIF context), f17r top, f66r margin, viewed contact sheet. All in plain/Latin-ish script.
+- **Computational rule-violation scan (item d):** parsed `corpus.json` (37,031 tokens, 8,433 types, 23-glyph inventory). Pulled every word containing the 4 rarest glyphs (z, v, x, g), the 15 longest words, and analyzed the f57v ring's repeat structure position-by-position.
+- **Alphabet/key tables (item e):** identified and fetched full-res IIIF for the two isolated-single-glyph pages (f57v, f66r); cropped and read the f57v concentric rings.
+- **Real-plant scan (item c):** reviewed all 3 herbal montages (24 folios) + pharma/balneo crops.
+
+### RANKED CANDIDATE TELLS
+
+**1. f57v inner ring — a fixed glyph string repeated 4× (highest structural information; KNOWN/debated).**
+The transliteration `oldrvxkkf?tr??yc` recurs 4 times around one ring. Position-aligned, **12 of 14 positions are identical across all four repeats**; the only variation is pos-7 (k/m) and pos-8 (f/p). It uses the rare glyphs `v` and `x`, which appear almost nowhere else in 37k tokens — the profile of a *display set* (alphabet/dial), not running text. VERDICT: **genuine structured anomaly, but fully known and decades-debated** (the "4×17 character sequence"; competing reads as an alphabet-wheel vs a 4×18=72 degree/nocturnal scale). It is the manuscript's most table-like object, yet it has never yielded a key, and a 14-symbol fixed ring carries far too little information to be a cipher key for a 3000-core lexicon (consistent with D3/R1). Not a new leak.
+
+**2. f66r left-margin glyph column + "der mus" cluster (KNOWN).**
+A vertical column of ~30 isolated single glyphs (`y o s sh y d o f x air d sh y f f y o d r f c r x t o l r t o x p d`) runs down the left edge, each beside a short label, next to the reclining "dead man" figure and the "der mus del" marginalia. VERDICT: known marginal oddity; the glyph column is single-letters-in-a-list, not decodable text. Pairs with #1 as the only two "letters listed in isolation" sites — worth noting they exist, but both already catalogued.
+
+**3. f116v marginalia "michiton oladabas…" (KNOWN, famously debated).**
+Clean reads obtained: top line ~"por le bos / umon putrer"; main block "+ anchiton/michiton oladabas + multos + te + tc(cr) cere + portas + …" and below "six + … ix + morix + vix + ahia + maria +", with crosses between words and a few Voynichese glyphs spliced in (e.g. the figure-8 ending "oladabas"). VERDICT: the canonical f116v last-page marginalia — different (clumsier) hand, mixes pseudo-Latin/German with Voynichese glyphs, "maria"/"vix" legible but the whole resists coherent translation. Almost certainly **not by the main scribe and not a content key**; centuries of attempts (Newbold→present) have produced no stable decipherment. Not new.
+
+**4. f17r top-margin line (KNOWN, faint).** Plain-script Latin-ish "mallier allar luz(?) …" — a later annotator's note, faded, undeciphered. Known; not a leak.
+
+**5. Rare-glyph words / "monster" tokens (NEW check → NEGATIVE, valuable null).** I specifically tested whether rare-glyph or ultra-long words break the slot-automaton. They do **not**: every long token (e.g. `shdydchdchschsaotchdy`, `zepchydsaopchordy`) decomposes cleanly into standard morphemes — they are missed word-spaces, not rule violations. The f57v line-3/4 "words" with embedded `v`/`x` are the ring itself, not prose. **No automaton-breaking sequence exists in the corpus.** This is a genuine new confirmation that the generative discipline holds even at the rare-glyph tail — there is no leak where one would most expect it.
+
+**6. A "real" plant among the fakes (item c → NEGATIVE).** The naturalistic *parts* (a clear pinnate fern frond; viola/pansy-like flowers; plausible umbels) are grafted onto consistently **fantastical roots** (zoomorphic/f-shaped/dragon roots). This chimeric "real-leaves-impossible-whole" pattern is itself the signature of borrowed-then-recombined iconography (supports the M-section "asemic marvel costumed as herbal" verdict), not a recoverable species identification.
+
+### SINGLE BEST LEAD
+None rises to a *new* recoverable-information leak. The highest-information object remains **f57v's 4×-repeated fixed ring** — but it is known, finite, decades-resistant, and far too small to key the lexicon. If any residual deserves a fresh, controlled probe it is the pairing of the two *isolated-glyph inventories* (f57v ring + f66r margin column): are they the *same ordered set*? That's a cheap, falsifiable test (does f66r's column sequence align to the f57v ring order?) and, to my knowledge from the ledger, not yet run as such. Prior is low.
+
+### OVERALL ASSESSMENT
+The scan found **no genuine new leak**. Every high-information anomaly is one of the famous already-debated features (f116v marginalia, f57v ring, f66r margin, f17r note), and each has individually failed to yield recoverable content for decades. The one genuinely fresh result is a **null with teeth**: a targeted rule-violation hunt over the rarest glyphs and longest tokens found the automaton's discipline *unbroken* — the places most likely to leak (rare glyphs, concatenation glitches) instead resolve to clean morpheme strings
+
+===== SUBAGENT agent-a657d186276a03678.jsonl =====
+--- TASK PROMPT ---
+You are investigating the Voynich manuscript in /Users/user/Documents/Dev/voynich as a 2026 multimodal model used as a perceptual/codicological instrument. You have vision — Read images directly.
+
+CONTEXT: A long, disciplined analysis concluded the text is an ASEMIC generated artifact (no syntax, no recoverable cipher). The frontier is "why it was made"; best-fit is a sustained multi-hand workshop marvel, dressed as learned medicine/astrology. READ /Users/user/Documents/Dev/voynich/FINDINGS.md first (D*, K*, confounds). Relevant: text is laid out around images on herbal pages; gallows glyphs open paragraphs; labels sit beside drawn objects.
+DISCIPLINE: never oversell; distinguish what the resolution actually supports from inference; flag confounds.
+
+DATA: high-res images on disk — iiif_*.jpg (≈3000px herbal/pharma/zodiac), pf_*.jpg, raw_###.png page renders, bal_*.jpg (balneo), z*.jpg (zodiac), f116v_*.jpg. Render more / zoom regions from Voynich_Manuscript.pdf (the .venv has pymupdf/`fitz`) or fetch full-res IIIF regions (Yale oid 2002046; iiif_canvases.json/iiif_urls.json). `source .venv/bin/activate`.
+
+YOUR INVESTIGATION — DRAWING-ORDER FORENSICS: Determine, per section and overall, whether the IMAGE came first (text written to fill space around a pre-drawn picture) or the TEXT came first (illustration squeezed in afterward). Evidence to read at high zoom:
+ - Does text WRAP/avoid the drawing (image-first) or do drawings cram into leftover gaps and collide with text (text-first)?
+ - Ink LAYERING where a pen-stroke crosses another — which line sits on top (drawn-over = later)?
+ - Does text line-spacing/length DEFORM near an image (accommodating it = image-first)?
+ - Are labels positioned as if the object already existed (image-first locally)?
+ - On diagram pages (zodiac wheels, rosettes): was the circle/figure ruled first and text fitted to the rings?
+Sample ~8–12 pages ACROSS sections (herbal, pharma, balneo, zodiac, recipes/text-only). For each: call IMAGE-
+--- FINAL REPORT ---
+Decisive herbal case. The lower paragraph on f16r: a left text block of ~6 lines whose right margin is ragged and pulls back as it descends, exactly tracing the widening red stem/root of the plant. To the RIGHT of the stem there's a separate narrow stack of 4 short words ("ottlo8o / Aotcc8o / olltcch8y / ccoAaoy") — text poured into the leftover wedge of space between the stem and the page edge. The roots at the bottom splay outward and the text stops above them. This is unambiguous image-first: the plant was on the page, and text was written into the cleared regions around it, including a cramped right-side column in the residual gap.
+
+I have a strong, cross-section sample. Let me compile the deliverable.
+
+---
+
+# DRAWING-ORDER FORENSICS — Voynich Manuscript
+
+## METHOD
+
+I read 9 folios across all five page-classes at high zoom (3000px IIIF where available, otherwise 1600px IIIF / 2800px page-renders up-sampled 2.5–3.5×), applying five codicological tests: (1) does text **wrap/deform** around a drawing or do drawings **cram** into text gaps; (2) at pen-stroke crossings, which layer sits **on top**; (3) does line-length/spacing **deform** near images; (4) are **labels** placed as if the object pre-existed; (5) on diagrams, was the **circle/figure ruled first** and text fitted to rings. I treated the marginal-star recipe pages (raw_204) as a **layout control** — the text-engine running with nothing to accommodate — and measured the illustrated pages' deformation against it. This kind of at-scale, multi-page stroke-and-margin reading is exactly what previously required an in-person codicologist with a loupe; doing it across sections in one pass is the new capability.
+
+## PER-PAGE CALLS
+
+- **f16r herbal** (raw_026, `cherb_split.png`) — **IMAGE-FIRST.** Lower paragraph's right margin pulls back line-by-line to trace the widening stem; a separate 4-word column is squeezed into the residual wedge between stem and page edge. Text routed around an existing plant.
+- **f1r herbal** (pf_1r, `cf1_leafcross.png`, `cf1_micro.png`) — **AMBIGUOUS, leaning TEXT-FIRST/wash-last.** Unlike f16r, the green leaves here are a thin decorative **wash** that text lines run straight through without any baseline deflection; glyph strokes read as crisp over/within the green. The writing grid is dominant; the green is subordinate decoration, not a structural object the scribe avoided. (Micro-layer between brown ink and green is not 100% decisive — slight ink feathering inside the wash is consistent with either order — but the unbroken text grid is.)
+- **f88r pharma** (iiif_88r, `c88_row1.png`, `c88_block2.png`, `c88_jar_text.png`) — **IMAGE-FIRST.** Row of root objects each carry a one-word label centered in the gap directly above it, spaced to match object spacing (labels placed to point at existing objects). Text block's left margin steps in to clear the bulge of the pre-drawn pharma jar.
+- **f99v pharma** (iiif_99v) — **IMAGE-FIRST** (same logic; jars column + labeled objects + interstitial text bands). Consistent with f88r.
+- **f78r balneo** (iiif_78r / bal_78r, `cbal_wrap.png`) — **IMAGE-FIRST.** Text lines stop exactly at the pool's upper rim, the final line tracing its arc; a small label is tucked against the pool's lower-right edge; text clears the blue inlet tube. Space bounded by pre-drawn plumbing/pools.
+- **f67r cosmo diagram** (iiif_67r) — **IMAGE-FIRST (diagram).** Sun-rosette ruled as a circle; text runs as captions between the painted rays and as curved arcs in the rings, fitted to the pre-established geometry.
+- **f69r cosmo diagram** (iiif_69r) — **IMAGE-FIRST (diagram).** Radial spoke wheel; ring text and spoke labels follow the ruled rings.
+- **f71r zodiac** (iiif_71r, `c71_nymph.png`, `c71_outerarc.png`) — **IMAGE-FIRST (diagram).** Ring text follows a smooth invisible guide-arc, bends to clear nymph heads; each tub-nymph holds an 8-pointed star with a label word riding the arc beside the star (label placed at an existing star). Outer ring text curves around the zodiac creature.
+- **f103–116 recipes** (raw_204, `crec_stars.png`) — **TEXT-FIRST / N-A control.** No drawing to accommodate; full paragraphs, free flow, gallows-glyph openers, marginal star bullets in a reserved gutter column. The engine's native unconstrained layout.
+
+## PER-SECTION VERDICT
+
+- **Herbal — IMAGE-FIRST, with one wash-decorated exception.** Structural plants (stem/root/leaf as line drawing) displace text (f16r). Where "plants" are only loose colour wash (f1r), text ignores them — suggesting wash was sometimes the *last* step, layered over finished text. So herbal mixes (a) pre-drawn structural plants that text wraps, and (b) post-applied decorative colour.
+- **Pharma — IMAGE-FIRST, strongest label evidence.** Object rows + jars exist; text occupies the bands between them; labels are positioned per-object.
+- **Balneo — IMAGE-FIRST.** Text fits the space bounded by pre-drawn pools/plumbing; labels tucked against structures.
+- **Astro/Zodiac/Cosmo diagrams — IMAGE-FIRST.** Circle/figure ruled first; text demonstrably fitted to rings, rays, and to figures (stars, nymphs).
+- **Recipes — text-only**, no image order to determine (the control).
+
+## OVERALL VERDICT
+
+**IMAGE-FIRST is the dominant production order across every illustrated section.** The picture (plant, jar, pool, ruled diagram, star) was on the page first; the text was written into and around the reserved space, and labels were placed against already-existing drawn objects. The one qualification: **flat colour wash** appears to be applied *after* text in at least some herbal cases (f1r), so the layered order is best stated as **line-drawing → text → colour wash**, not a single monolithic sequence.
+
+## WHAT IT IMPLIES (for the "why")
+
+This is a **picture-book dressed with generated text**, not a text-engine that was later decorated. That sharpens the FINDINGS motive picture (§7) in a specific way:
+
+- The **image layout is the skeleton; the text is poured into the spaces
+
+===== SUBAGENT agent-a7077f888d0e4cecd.jsonl =====
+--- TASK PROMPT ---
+You are a 2026 multimodal model investigating the Voynich manuscript in /Users/user/Documents/Dev/voynich. You have vision (Read images), Bash/Python, web tools. READ /Users/user/Documents/Dev/voynich/FINDINGS.md first (esp. §7 M6).
+
+BACKGROUND: The manuscript has two rare sites where single glyphs are written in ISOLATION (not running text): (a) f57v — an inner ring with a fixed ~14–17-glyph string repeated 4× around the circle (a tell-scan read it as ≈ `oldrvxkkf?tr??yc`, 12/14 positions identical across repeats, using rare glyphs v/x); (b) f66r — a left-margin vertical COLUMN of ~30 isolated single glyphs (a tell-scan read ≈ `y o s sh y d o f x air d sh y f f y o d r f c r x t o l r t o x p d`), beside the reclining-figure marginalia. These are the only two "letters listed in isolation" sites. M6 surfaced a cheap, untried, falsifiable question.
+
+YOUR TASK — ARE f57v RING AND f66r COLUMN THE SAME ORDERED GLYPH-SET?
+1. Get the EXACT sequences from the source, don't trust the rough reads above: the IVTFF transliteration is `LSI_ivtff.txt` (grep for f57v and f66r loci; the isolated-glyph loci have special locus codes). Also fetch full-res IIIF crops (Yale oid 2002046; see iiif_canvases.json/iiif_urls.json) and read the rings/column directly with vision to confirm. Reconcile transliteration vs your own reading; report both.
+2. Compare the two sequences three ways: (i) as SETS — glyph-inventory Jaccard; (ii) as ORDERED sequences — longest common subsequence / alignment score; (iii) against a NULL — random orderings of the shared alphabet, to see if any overlap/alignment exceeds chance.
+3. Also test whether EITHER sequence matches a known ordering: a Latin abecedary, the EVA alphabet order, or a reversed/rotated version. 
+4. Interpretation: same ordered set stated twice = a deliberate "alphabet"/key object the makers reused (mildly interesting); unrelated = two independent display flourishes (the more likely null given everything else).
+
+Be disciplined: a clean ne
+--- FINAL REPORT ---
+All tests confirm the same picture. Even the closest analog (f57v's own second single-glyph row, R4) shows no special alignment with the f66r column beyond chance-level overlap of the common glyph inventory. The investigation is complete.
+
+---
+
+# DELIVERABLE: f57v ring vs f66r column — same ordered glyph-set?
+
+## VERDICT: NO. They are not the same ordered set, and not the same set. Two independent display flourishes. High confidence.
+
+## METHOD
+Pulled exact sequences from the IVTFF transliteration (`LSI_ivtff.txt`), reconciled across all transcriber tracks (H/V/U for f57v; H/C/F/U for f66r) by majority. Confirmed the page structures directly against full-res Yale IIIF crops (oid 1006187 / 1006192). Then compared the two sequences three ways (set Jaccard, ordered LCS, vs randomized nulls) and against known alphabet orders. Script: `/Users/user/Documents/Dev/voynich/ring_column_compare.py`.
+
+## KEY STRUCTURAL CORRECTION (the rough reads were misleading)
+- **f57v has the ring** (`<f57v.3,+Cc>`, locus R2): a **17-element** sequence repeated **4×**, 12–14/17 positions identical across repeats; only position 8 (k~m) and 9 (f~p) vary. Confirmed in the image: a band of widely-spaced isolated glyphs just outside the central rosette. Rough read "oldrvxkkf?tr??yc" was right in spirit.
+- **f66r is two stacked things, not one.** The IVTFF splits them: `f66r.L` (items 1–15) is a column of short **words** (`rary rals qor dara ykcol syly salf fary qotesy ykaly daoly raiin qokal qolsa raral`) — ordinary running-text-like tokens. The actual **isolated single-glyph column is `f66r.M`** (items 16–49, **34 glyphs**), a separate narrower column to the right of the word-column, confirmed in the IIIF crop. The reclining-figure marginalia sits at bottom-left. So the real comparison is f57v ring vs f66r**.M**.
+
+## THE TWO EXACT SEQUENCES
+- **f57v ring (one repeat, 17):** `o l d r v x k k f @169 t r @170 @171 y c @172`  (vision: matches; spaced isolated glyphs incl. rare gallows weirdos)
+- **f66r.M column (34):** `y o s sh y d o f ? x air d sh y f f y o d r f c @172 x t o @195 l r t o x p d`  (vision: matches; single isolated glyphs, one per ruled line)
+
+## COMPARISON NUMBERS
+| Test | Result | Null |
+|---|---|---|
+| (i) SET — Jaccard | **0.476** (10 shared / 21 union) | random subsets of a 27-glyph pool reach this **P=0.32** — not unusual |
+| (ii) ORDER — LCS | **7** (norm 0.41 of min-len) | shuffled-column null **P=0.54**; mean random LCS = 6.66, i.e. observed ≈ chance |
+| LCS vs reversed column | 6 | (no improvement → not a reversal) |
+
+Shared glyphs are exactly the common Voynich high-frequency set (`o d r l t y c x f` + the `@172` upside-down-lambda weirdo). Each site also has glyphs the other lacks: ring-only `k v @169 @170 @171`; column-only `s sh p air @195 ?`. The overlap is fully explained by both drawing from the same general glyph inventory — there is no shared ordering.
+
+**Sibling sanity check:** f57v's *own* second isolated-glyph row (`R4`, 28 glyphs) vs the f66r.M column gives Jaccard 0.48 / LCS 9 — i.e. indistinguishable from the f57v-ring↔f66r comparison. The overlap level is just the baseline two arbitrary Voynich glyph-strings share; it is not specific to these two sites.
+
+## KNOWN-ALPHABET CHECK
+Neither sequence follows a Latin abecedary or an EVA/frequency order, forward or reversed. Fraction of in-order adjacent pairs going "forward": ring vs Latin 0.14, vs EVA 0.44; column vs Latin 0.35, vs EVA 0.40 — all at or below the 0.5 no-ordering line. No rotation/reversal recovers an abecedary either. These are not enumerations of any alphabet in canonical order.
+
+## WHAT IT IMPLIES
+A clean negative. The f57v ring and the f66r isolated-glyph column are **not a reused "alphabet"/key object**; they share only the manuscript's ordinary glyph stock with no ordered correspondence. They read as **two independent display flourishes** — the more likely null. This fits the standing asemic-marvel verdict (FINDINGS §6–7): the makers produced isolated-glyph showpieces (a repeated ring, a glyph column) as visual furniture, not as an authored, transmissible symbol-set. As anticipated, this bears only on whether an explicit key was authored (it wasn't) and does nothing to reopen decipherment — a 14–17-symbol ring could never key the 3042-core lexicon regardless.
+
+One note worth logging for M6: the rough read of f66r as "a column of isolated glyphs beside the figure" conflated two adjacent columns (a word-column `.L` and the true single-glyph column `.M`). The single-glyph site is the 34-glyph `.M` column specifically.
+
+Crops saved: `vis_f57v_full.jpg`, `vis_f57v_ring.jpg`, `vis_f66r_full.jpg`, `vis_f66r_col.jpg`. Analysis: `ring_column_compare.py`.
+
+===== SUBAGENT agent-a8ac423bfd4e9175c.jsonl =====
+--- TASK PROMPT ---
+You are a 2026 multimodal model doing iconographic source-retrieval for the Voynich manuscript, in /Users/user/Documents/Dev/voynich. Vision (Read images), Bash/Python, web tools. READ /Users/user/Documents/Dev/voynich/FINDINGS.md §7, esp. M9 and M11.
+
+STATE OF THE HUNT (from M11): the Voynich zodiac borrows from the South-German calendar-zodiac family. Closest VERIFIED figural relative so far = Clm 13076 (1356, ancestor-type, but has a LONGBOW). Codex Schürstab f22v (1472) = verified but late + hand-bow. **No in-window (1404–1438) drawn human-CROSSBOW Sagittarius has yet been put on screen.** Critically, the literature's "crossbow-Sagittarius" list is UNRELIABLE — two cited entries (Cod. Sang. 827, Clm 13076) failed pixel inspection. So you must VISION-VERIFY everything; credit nothing from text alone.
+
+GOAL: Find and vision-verify a digitized *Iatromathematisches Hausbuch* / South-German astro-medical PICTURE manuscript with a genuine drawn **human crossbow Sagittarius** (+ lizard/reptile Scorpio, crayfish Cancer, fox-tail/flared cap, doubled signs), ideally in or near the C14 window (1404–1438) — to move M9/M11 from "family" to a verified candidate-exemplar, or to conclude honestly that the in-window crossbow witness stays unlocated.
+
+PRIORITY TARGETS (named in the Ponzi–Worley crossbow-Sagittarius literature, NOT yet pixel-verified — go get the actual Sagittarius/zodiac folios):
+ - **BL Egerton 2724** (British Library)
+ - **Munich BSB Cgm 312** (and other Munich Cgm calendar/Volkskalender astro-medical MSS)
+ - **Tübingen UB Cod. Md 2 (Tübinger Hausbuch)** — calendar text dates 1404; find the Sagittarius folio this pass (OpenDigi IIIF, 656 canvases — search for the zodiac/Monatsbilder section folio numbers)
+ - **Berlin Ms. germ. quart. 642 (a Losbuch)**
+ - **ÖNB Vienna Cod. 1842**
+ - the canonical "Iatromathematisches Hausbuch" picture manuscript itself (search for which shelfmark this names and whether digitized)
+
+METHOD:
+1. WebSearch each for its digital 
+--- FINAL REPORT ---
+Done. Deliverable below.
+
+---
+
+# Iconographic source-retrieval pass — human-crossbow Sagittarius hunt
+
+## METHOD — what I actually fetched and viewed on screen
+
+| Source | How fetched | Folios viewed (pixel-inspected) |
+|---|---|---|
+| **Voynich f73v** | on disk `z73v_center.jpg` | crossbowman + ringed text — the comparand |
+| **Heidelberg Cod. Pal. germ. 291** ("Iatromathematisches Hausbuch") | Heidelberg IIIF `cpg291` (manifest → full-res crops) | **f16v Sagittarius** (rubric "SAGITTARIUS"), f16r Scorpio, f17r Capricorn, f13r Cancer |
+| **BSB Cgm 312** (Losbuch / Volkskalender-B) | BSB IIIF `bsb00093677` manifest → f83v full-res | **f83v Sagittarius**, Scorpio (same opening) |
+| **Tübingen UB Md 2** (Tübinger Hausbuch) | OpenDigi IIIF, downloaded ff.116–122 | **f116r Sagittarius** (rubric "Das zeichen des schützen … das nünde huss") |
+| **BSB Cgm 28** (c.1440 Swabian) | bavarikon → BSB IIIF `bsb00092991`, 87-canvas montage + calendar pages | calendar is **labors-of-the-months** (June=Brachmonat man with hoe), NOT a zodiac-figure cycle — format mismatch |
+| Catalog-only (no usable image): **Nürnberg Staatsarchiv Hs.426** (Handschriftencensus 5502), **Egerton 2724** (BL), **ÖNB Cod. 1842** | WebSearch/WebFetch | see verdict |
+
+Reference frame: Brévart's **Volkskalender-B** family list (via Cipher Mysteries) — gives dated members and the crossbowman-from-constellation copying theory.
+
+## PER-CANDIDATE MARKER TABLES (only what I saw)
+
+**Heidelberg cpg291 — Iatromathematisches Hausbuch — Bavaria, after 1477/before 1496**
+| marker | result | reason |
+|---|---|---|
+| Crossbow-Sagittarius | **MATCH** | two-legged HUMAN drawing a stocked crossbow (tiller to cheek, prod vertical); rubric "SAGITTARIUS" |
+| Reptile-Scorpio | partial | lobster/scorpion hybrid, more crustacean than reptile |
+| Crayfish-Cancer | **MATCH** | red crayfish, big claws, segmented tail |
+| Cap | partial | rounded cap (not the Voynich flared/fox-tail) |
+| Format | **MISMATCH** | roundel medallion, not ring-of-text-around-figure |
+
+**BSB Cgm 312 — Volkskalender-B / Losbuch — 1450–1473, Swabian**
+| marker | result | reason |
+|---|---|---|
+| Crossbow-Sagittarius | **MATCH** | HUMAN in red tunic/blue hose, clearly stocked crossbow |
+| Reptile-Scorpio | **MATCH** | gray scaly quadruped, curled segmented tail (lizard-flavored) |
+| Cap | mismatch | bare light hair |
+| Format | **MISMATCH** | roundel |
+
+**Tübingen Md 2 — Tübinger Hausbuch — calendar text 1404 (in-window)**
+| marker | result | reason |
+|---|---|---|
+| Crossbow-Sagittarius | **MISMATCH** | **hairy wild-man / shaggy hermit with a LONGBOW** (D-bow + arrow), spanning two arches |
+| Cap | mismatch | naked hairy figure, no cap |
+| Genre/region/date | match | South-German Hausbuch, in-window — corroborates family only |
+
+## RANKED VERDICT + confidence
+
+1. **cpg291 f16v** and **Cgm 312 f83v** (tie) — the **closest verified FIGURAL crossbow type-matches** to Voynich f73v found to date. Both beat the prior leaders (Clm 13076 longbow, Md 2 longbow-wildman, LJS 449 centaur-longbow). Confidence in the crossbow identification: **high** (pixel-clear stock+prod on both).
+2. Clm 13076 (1356) stays the closest *figural overall* on non-bow markers but is longbow + 50 yrs early.
+
+## Was an in-window crossbow-Sagittarius found?
+
+**No — not on screen.** But the situation improved materially:
+- The **crossbow-Sagittarius marker is now VERIFIED as real and diagnostic** of the Iatromathematisches-Hausbuch / Volkskalender-B family (the exact family M9 named). It is **not** a literature artifact — earlier failures (Cod. Sang. 827, Clm 13076) were individual mislabels, not a phantom marker.
+- The two on-screen crossbow witnesses are **40–60 years late** (1450s–1480s).
+- Per Brévart, the **earliest** family member is **Nürnberg Staatsarchiv Hs. 426 [before 1431]** — an *Iatromathematisches Hausbuch*, **squarely in the C14 window** — but **Handschriftencensus shows NO digital facsimile**. It is catalog-attested and unviewable.
+- Egerton 2724 = English folding-almanac (wrong family); ÖNB 1842 = Prague-court constellation group (~1409–20, likely centaur branch).
+
+## Effect on M9/M11
+
+M9/M11 **strengthened, not overturned.** The diagnostic marker that defines the family is now verified-real and pinned to the named family; the Voynich crossbow figure-type has on-screen relatives. **Ceiling stays "closest verified family + figure-type," not "the exemplar"** — because (a) no embedding index, (b) the on-screen crossbow witnesses are late, (c) the one in-window crossbow witness is undigitized, and (d) all family members use roundels vs Voynich's ringed-figure layout. Logged as **M13** in FINDINGS.md.
+
+## LIMITS / discipline
+
+- Format gap is real: every verified crossbow witness puts Sagittarius in a **roundel**; the Voynich uses a **figure ringed by text** — so these are family/type matches, not layout matches.
+- Cgm 28 turned out to be a labors-of-the-months book, not a zodiac-figure cycle — a format dead-end, honestly reported.
+- The decisive in-window pictorial test (Nürnberg Hs. 426) is blocked by non-digitization; resolving it needs an archive request, not pixels.
+
+**Artifacts written:** `SAG_compare2.jpg` (6-way Sagittarius montage), `cand_cpg291/sag16v_hi.jpg`, `cgm312_sag.jpg`, `cgm312_sco.jpg`, `cand_md2/sag116_zoom.jpg`; FINDINGS.md M13 row added.
+
+Sources: [Cipher Mysteries — Volkskalender B](https://ciphermysteries.com/2017/08/05/brevarts-volkskalender-b-family-manuscripts), [Heidelberg cpg291](https://digi.ub.uni-heidelberg.de/diglit/cpg291), [BSB Cgm 312](https://www.digitale-sammlungen.de/de/details/bsb00093677), [Handschriftencensus Nürnberg Hs.426](https://handschriftencensus.de/5502), [bavarikon Cgm 28](https://www.bavarikon.de/object/bav:BSB-HSS-00000BSB00092991).
+
+===== SUBAGENT agent-a9417bf2f0a0c260c.jsonl =====
+--- TASK PROMPT ---
+You are a 2026 multimodal model investigating the Voynich manuscript in /Users/user/Documents/Dev/voynich. You have vision (Read images), Bash/Python. READ /Users/user/Documents/Dev/voynich/FINDINGS.md first (esp. §7: M1 multi-hand, M2 no-decay, M5 image-first).
+
+BACKGROUND: The best-fit "why" is a produced-for-an-audience marvel. M5 established the book was built IMAGE-FIRST (layout is the skeleton, text fills it). A marvel meant to impress on first opening might FRONT-LOAD its spectacle — lavish, eye-catching pages early, plainer filler later. Test that.
+
+YOUR TASK — EFFORT/SPECTACLE GRADIENT vs PRODUCTION ORDER:
+1. Build a per-folio "spectacle/effort" score from data already on disk + vision: `page_features.json` and `grounding.json` (28 folios graded) and `corpus.json` 'meta' (I=illustration type, Q=quire, P=position, L, H). Candidate components: pigment/illustration area, number of distinct drawn elements, presence of large diagrams/foldouts, decoration density, text-to-image ratio. Render/scan a representative sample across the book to ground the score (contact_sheet.png; Voynich_Manuscript.pdf via the .venv's pymupdf/`fitz`). `source .venv/bin/activate`.
+2. Order folios by codicological production order (quire Q + position P — note caveat: quire order = rebound order, an approximation). Test for a trend: spectacle vs production index (Spearman + a shuffle null).
+3. CRITICAL CONFOUND TO CONTROL: the herbal section naturally dominates the front of the book, so a raw "spectacle falls over the book" trend could just be "herbal first, dense-text recipes last" — a genre artifact, not deliberate front-loading. Control by: (a) testing the trend WITHIN sections, and (b) noting that the most spectacular set-pieces — the rosettes foldout (f85–86), the astronomical/zodiac foldouts (f67–73) — are actually MID/LATE, which cuts against simple front-loading. Be honest about whether "front-loading" survives the genre confound.
+
+Return: METHOD; the per-folio spectacle sc
+--- FINAL REPORT ---
+The result is robust across all three spectacle weightings: center-of-mass is back-of-book (0.555-0.660), trend is positive or flat, never front-loaded. (The herbal-internal sign flipped because 1/tok favors sparse-text early pages, but it's weak and within-genre — it doesn't rescue front-loading globally.)
+
+I have everything needed. Let me write up the deliverable.
+
+## DELIVERABLE: Effort/Spectacle Gradient vs Production Order
+
+### METHOD
+
+I tested whether the manuscript front-loads its visual spectacle (the "open it and be dazzled" prediction of a produced-for-audience marvel). Two independent spectacle scores, two failure modes controlled:
+
+1. **Vision-derived page score** — from `page_features.json` (all 209 facsimile pages, the only full-coverage source): per-page ink fraction, green/red-brown/blue pigment fractions, and `edge_per_ink` (high = stringy text strokes; low = solid drawn fills). I ranked pigment-area and text-likeness to 0–1 and set spectacle = 0.6·pigment + 0.4·(1−text-likeness). I grounded the extremes by eye: PDF p10 (early herbal = single plant + sparse text), p200 (recipe tail = wall-to-wall text, zero illustration), and the rosette/zodiac/cosmo set-pieces (e.g. `pf_73r.jpg`, a full Taurus zodiac wheel). This score is honest about *colored ink area* but cannot tell a high-effort rosette from a low-effort green herb.
+
+2. **Metadata + vision-anchored "set-piece" score** — from `corpus.json` `meta` (I=illustration class, Q=quire, P=position) reduced to 202 physical folio-sides, scored by section using the **measured grounded-element counts** from `grounding.json` (28 vision-graded folios): cosmo median 67 drawn elements, zodiac 62, astro 55, bio 16, pharma 18, vs herbal ≈ single plant and recipe = pure text. Foldout sides got a panel multiplier (a 4-panel rosette side is the showpiece). This isolates genuine *effort/complexity*, not just "any pigment."
+
+**Production order** = the codicological folio sequence (quire Q + position P, the standard Beinecke quire numbering). Caveat per the task and FINDINGS confound #2: quire order = rebound order, an approximation of true production order; but it is the best available and is what a first-time reader actually pages through.
+
+**Tests**: Spearman ρ of spectacle vs production index; 20,000-shuffle permutation null; spectacle center-of-mass (COM) in production position (0=front, 0.5=neutral, 1=back); within-section trends to partial out genre; robustness across 3 spectacle weightings.
+
+### THE GRADIENT (numbers)
+
+- **Naïve vision score**: ρ = **−0.514**, shuffle p < 0.0001 — spectacle appears to *fall* front→back. **But this is the genre artifact**: it just measures "green herbal pages up front, text-dense recipe pages at the back."
+- **Vision-anchored set-piece score (effort, not pigment)**: ρ = **+0.079**, shuffle p = 0.26 — **no front-loading**. Spectacle COM = **0.593** (back half). Front third = **17.3%** of spectacle mass; middle = 40.7%; back = 41.4%.
+- **Robustness** (3 weightings): COM = 0.555 / 0.593 / 0.660; ρ = +0.07 / +0.08 / +0.13. Every variant puts spectacle in the **second half**, never front-loaded.
+- **Opening pages**: f1r/f1v/f2r (production position 0.00) are low-spectacle single herbs (score ≈ 8–10 vs showpiece ≈ 55–100).
+- **The showpieces are mid/late**: top-15 spectacle sides sit at production positions **0.55–0.82** — the rosette/cosmo foldouts (f86, f68, f67, f70), the zodiac wheels (f71–73), the f57v ring. The single most lavish side (f86v, the rosettes) is at position **0.82**.
+
+### GENRE-CONFOUND ANALYSIS
+
+The confound is real and is the whole story behind the −0.51:
+- Quires A–G are **pure herbal** (front); astro/zodiac/cosmo are **mid** (quires H–N); bio (M), pharma (O,S) and the text-only recipe section (quire T, the tail) are **back**. So "colored drawing falls off, text rises" is a layout fact about genre sequence, not a deliberate dazzle-gradient.
+- **Within-section controls kill front-loading entirely**: herbal ρ = +0.285 (p=0.001) — later herbal pages are if anything slightly *busier*; zodiac ρ = −0.14 (n.s.); bio and recipe are spectacle-constant. No section shows spectacle declining over its own production run. There is no within-genre front-loading to find.
+- The decisive geometric fact the task flagged is confirmed: the genuine set-pieces (rosettes f85–86, zodiac/astro foldouts f67–73) are **mid-to-late**, which directly contradicts simple front-loading.
+
+### VERDICT
+
+**No. There is no deliberate front-loading of spectacle beyond the herbal-first genre artifact.** The only "spectacle falls over the book" signal (ρ=−0.51) is entirely a genre-sequencing artifact — herbal-green-up-front, text-recipes-at-the-back — and it evaporates the moment you (a) score genuine effort instead of raw pigment area, or (b) test within sections. On an effort-calibrated score the trend is flat-to-mildly-*back*-loaded (COM ≈ 0.59), the opening pages are modest single herbs, and the real showpieces — the rosette foldout and the zodiac/cosmo wheels — sit at production positions 0.6–0.8. If anything, the book *back*-loads its spectacle relative to its opening.
+
+### WHAT IT IMPLIES FOR THE MARVEL / "WHY"
+
+This **refines, not refutes, the produced-for-audience marvel** (M1/M5):
+- It cuts against a *cheap* showman's marvel — the kind built to wow on first opening and coast on filler. There is no "lavish front, plain filler" deadline economy. This converges with **M2 (no production decay, sustained discipline end-to-end)**: effort is distributed across the whole book, with the most demanding artifacts placed *deep* in it.
+- The spectacle is organized by **internal genre logic** (a physician's-shelf sequence: herbal → astronomical → balneological → pharmaceutical → recipes), not by a viewer's attention curve. The marvel impresses by **sustained, encyclopedic completeness and the placement of set-pieces as structural climaxes mid-work**, not by a dazzling cover. That is more consistent with a prestige/wonder object me
+
+===== SUBAGENT agent-aabb12ab68ce9e635.jsonl =====
+--- TASK PROMPT ---
+You are a 2026 multimodal model doing iconographic source-retrieval for the Voynich manuscript, in /Users/user/Documents/Dev/voynich. You have vision (Read images), Bash/Python, web tools. READ /Users/user/Documents/Dev/voynich/FINDINGS.md §7, esp. M3 and M9 (note: M9's named analog Cod. Sang. 827 was just WITHDRAWN — it has no drawn zodiac figures; the figural pictorial exemplar is still unlocated).
+
+GOAL: Find an actual digitized South-German / Central-European calendar-zodiac or *Iatromathematisches Hausbuch* PICTURE manuscript that has DRAWN zodiac SIGN-FIGURES matching the Voynich markers, c.1380–1450, and vision-compare it feature-by-feature to the Voynich zodiac. Move M9 from "family" toward a verified near-sub-tradition / candidate exemplar pool — or fail honestly.
+
+THE VOYNICH MARKERS to match (from M9): human-CROSSBOW Sagittarius (clothed, standing, crossbow not longbow), lizard/salamander Scorpio, crayfish/lobster Cancer, fox-tail or flared cap, leg-tailed/tongue lion, "creature eating a bush" calendar genre-scene, doubled signs in 15-day windows.
+
+CANDIDATES already flagged by prior passes (literature, NOT vision-verified) — these are your priority targets because they reportedly have the DRAWN figures:
+ - **Clm 13076** (Bayerische Staatsbibliothek Munich, Regensburg, mid-1300s) — reportedly human archer + lizard Scorpio + crayfish Cancer + tongue-lion.
+ - **Graz UB Ms 287** (Austria, c.1390–1405; unipub.uni-graz.at) — reportedly human archer + crayfish + leg-tailed lion + squatting Virgo.
+ - **LJS 449** (UPenn, South-German, mid-15c; fully digitized on OPenn / Penn-in-Hand / Schoenberg) — astronomical-astrological, drawn signs.
+ - Also consider: Munich BSB digitized Volkskalender / astro-medical MSS; ÖNB Vienna calendar MSS; the classic Iatromathematisches Hausbuch picture cycle.
+
+METHOD:
+1. WebSearch each candidate for its digital home + the folio(s) with the zodiac/Sagittarius figures. Fetch those folio images (BSB/Graz/Penn IIIF or direct image
+--- FINAL REPORT ---
+Note: De Gruyter HBOL titles the calendar work "Das Kalenderwerk (**1404**) im Tübinger Hausbuch" — the calendar's text/exemplar dates to 1404, squarely in the Voynich C14 window, even though this codex copy is ~1475. The zodiac figures are spread through 656 pages; without a folio-precise reference I'd be probing many more pages. I have sufficient verified material to deliver. Let me do a final cleanup and write nothing to FINDINGS (read-only deliverable). Let me confirm the Md2 figure I glimpsed at deep montage isn't the archer by checking the one clear standing figure folio, then conclude.
+
+I have enough verified, on-screen evidence to deliver a rigorous result. Here is the deliverable.
+
+---
+
+# DELIVERABLE — Iconographic source-retrieval for the Voynich zodiac (M9 follow-up)
+
+## METHOD — what I actually fetched and viewed on screen
+
+**Voynich comparand (on disk):** `z73v_center.jpg` viewed at full res. Confirmed markers: clothed **standing human**, blue belted tunic, **pointed/flared "fox-tail" cap**, holding a **crossbow** (horizontal stock, perpendicular bow-arms, bolt laid across), striding; flanked by two reclining nude calendar-nymphs; 8-pointed stars. This is the canonical Voynich Sagittarius.
+
+**Candidate 1 — UPenn LJS 449** (SW Germany, **c.1446**, in-window). Source: OPenn. Downloaded and viewed full-folio + 2× crops:
+- f16v Sagittarius — `cand_ljs449/0229_0035.jpg`, crop `sag_crop.jpg`
+- f16r Scorpio — `0229_0034.jpg`, crop `sco_crop.jpg`
+- f14r Cancer — `0229_0030.jpg`
+- f14v Leo — `0229_0031.jpg`
+- f15r Virgo (text only in my crop)
+
+**Candidate 2 — BSB Munich Clm 13076** ("Monatsregeln, Aderlassregel, Calendarium cum figuris", **dated 1356**, S. Germany). Source: BSB IIIF (`bsb00042783`). Located the drawn zodiac roundels in the calendar-leaf feet and viewed at 1600px + 2× crops:
+- Sagittarius (Nov leaf) — `cand_clm13076/hi21.jpg`, crop `clm_sag.jpg`
+- Scorpio (Oct leaf) — `btm20.jpg`
+- Cancer (Jun/Jul leaf) — `btm16.jpg`
+- Leo (Jul leaf) — `btm17.jpg`
+- Virgo (Aug leaf) — `btm18.jpg`
+- Capricorn + faint Aquarius (Dec leaf) — `foot22.jpg`
+
+**Candidate 3 — Tübinger Hausbuch, Tübingen UB Cod. Md 2** (S. Germany, Ulm/Urach; codex ~1475 but its **calendar-work text dates 1404**, per De Gruyter HBOL). Source: OpenDigi IIIF (656 canvases). Downloaded/montaged folios 9–61. Found the Zodiac-Man, volvelle, and planet-children scenes; did **not** isolate the individual Sagittarius sign-figure on screen (no folio-precise reference found; sign-cycle is buried in a 656-page compendium). **Not vision-scored** — flagged honestly as unverified.
+
+**Rejected before fetch:** **Graz UB Ms 287** — the prior pass's "c.1390–1405, human archer" attribution is **wrong**: Handschriftencensus/manuscripta.at date it **1st quarter 13th c. (not before 1200), Seckau**. Out of window, wrong era; dropped.
+
+**3-way Sagittarius composite built and viewed:** `SAG_compare.jpg` (Voynich | Clm 13076 | LJS 449).
+
+## Per-candidate per-marker comparison
+
+### LJS 449 (c.1446, SW Germany) — VISION-VERIFIED
+| Marker | Verdict | Visual reason |
+|---|---|---|
+| Sagittarius | **MISMATCH** | A **centaur** (human torso fused to 4-legged body) drawing a **longbow**. Voynich = standing human + crossbow. Wrong body-type AND wrong weapon. |
+| Scorpio | **PARTIAL** | Segmented body, long curling tail, but with **crustacean pincers** (scorpion/lobster hybrid). Voynich's is a tail-less-pincer reptile/lizard. |
+| Cancer | **MATCH** | Red **crayfish/lobster** with claws, legs, antennae — the Voynich crustacean type exactly. |
+| Leo | **MATCH** | Striding lion, **tail curled over back, open mouth/tongue** — the Voynich tongue-/curling-tail lion. |
+| Virgo | n/a | Not isolated. |
+| Genre-scene / doubled signs | **MISMATCH** | Single framed bestiary-style miniature per sign; no calendar genre-scene, no 15-day doubling. |
+
+### Clm 13076 (1356, S. Germany) — VISION-VERIFIED
+| Marker | Verdict | Visual reason |
+|---|---|---|
+| Sagittarius | **PARTIAL (strong on body-type)** | A **clothed standing human** (short belted tunic, bare legs, striding, profile) — the rare human type, NOT a centaur. BUT draws a **longbow** held vertically, and is **bare-headed** (no fox-tail cap). Same type-family as Voynich; differs on the two refinements (crossbow, cap). |
+| Scorpio | **MATCH** | A winged **four-legged dragon/lizard** in a roundel — reptilian quadruped, exactly the Voynich lizard/salamander Scorpio (not a classical scorpion). |
+| Cancer | **MATCH** | Forward-facing **crayfish/crab** with claws + feelers. |
+| Leo | **MATCH** | Maned lion, profile, **tail curling up over the back, mouth open/tongue**. |
+| Virgo | **PARTIAL** | Standing woman with flower-sprig — **standing, not squatting** (the Voynich/Lake-Constance squatting-Virgo trait is absent). |
+| Genre-scene / doubled signs | **PARTIAL** | True **KL-calendar** with sign-roundels in the month-feet + monthly verses = the genre, but one figure per sign (no 15-day doubling visible). |
+
+## Ranked closeness verdict + confidence
+
+1. **Clm 13076 (1356) — closest VERIFIED figural relative.** 4 of 6 markers match/strong-partial, including the two hardest: the **human (not centaur) Sagittarius** and the **reptilian-quadruped Scorpio**. It misses only the crossbow (has longbow), the fox-tail cap, and the squatting Virgo. It is, however, **~50 years too early** to be a direct exemplar — it is an **ancestor-type witness** of the same South-German human-archer calendar tradition. Confidence: **high** that it is a genuine relative; **nil** that it is the exemplar (date + missing crossbow).
+2. **LJS 449 (c.1446) — in-window but iconographically farther.** Strong on Cancer + Leo, but its Sagittarius is a **centaur with a longbow** — the wrong branch of the tradition on the single most diagnostic marker. Confidence: **high** it is the same broad genre/region, **low** as a Sagittarius relative.
+3. **Tübinger Hausbuch Md 2** — same genre, in-window text (1404), but **unverified on the figures**. Held open, n
+
+===== SUBAGENT agent-ab0e959b11190e410.jsonl =====
+--- TASK PROMPT ---
+You are a 2026 multimodal model doing iconographic source-verification for the Voynich manuscript, in /Users/user/Documents/Dev/voynich. You have vision (Read images), Bash/Python, and web tools (WebSearch/WebFetch). READ /Users/user/Documents/Dev/voynich/FINDINGS.md §7, esp. M9.
+
+BACKGROUND: M9 established the Voynich zodiac borrows from the South-German/Lake-Constance *Iatromathematisches Hausbuch* calendar-zodiac family (c.1400–1440), on 5 markers: human-CROSSBOW Sagittarius, lizard/salamander Scorpio, crayfish Cancer, fox-tail cap, calendar genre-scenes + doubled signs (15-day windows). The single closest NAMED analog flagged was **Cod. Sang. 827** (Stiftsbibliothek St. Gallen, Lake Constance, ~1425) — but it was NOT vision-verified (the prior pass cited it from literature only). Your job: actually fetch it and do a direct, pixel-level comparison to move M9 from "same family" toward "near-exemplar" (or to fail honestly).
+
+YOUR TASK:
+1. Locate Cod. Sang. 827 on e-codices (e-codices.unifr.ch — it's digitized). Find the IIIF manifest and the folios with the zodiac/calendar cycle (astronomical/computistical section). WebSearch for "Cod. Sang. 827 Sagittarius / zodiac / e-codices" to get exact folio numbers, then fetch those folio images (IIIF; e-codices Loris image server, pattern like https://www.e-codices.unifr.ch/loris/csg/csg-0827/csg-0827_NNN.jp2/full/full/0/default.jpg or via the manifest). Confirm its date/origin precisely.
+2. Get the Voynich comparands: render the Sagittarius folio f73v from Voynich_Manuscript.pdf (the .venv has pymupdf/`fitz`; `source .venv/bin/activate`) or fetch full-res Yale IIIF (oid 2002046; iiif_canvases.json). Also use z73v/z73r/z72r/z70v crops already on disk.
+3. DIRECT VISION COMPARISON, feature by feature, Voynich vs Cod. Sang. 827: Sagittarius (crossbow vs other bow? stance, dress: tunic sleeve shape, hose, hat/fox-tail cap), and as many other signs as Cod. Sang. 827 shows (Scorpio reptile? Cancer crayfish? Leo tongue/tail?
+--- FINAL REPORT ---
+The contrast is now fully grounded. The Voynich f73v (z73v_center.jpg) shows a standing, fully-clothed human figure (blue tunic with skirted hem, hose, hat) aiming a drawn-out **crossbow** horizontally — a pictorial Sagittarius figure. Cod. Sang. 827 p262 is a Zodiac-Man: a frontal nude with sign-names lettered on the body; "Sagittarius" is just red text on the thigh, with no bow, no archer scene at all.
+
+I have everything needed. Let me confirm the date precisely and write the deliverable.
+
+The manifest gave: Place of Origin = Lake Constance region; Date of Origin = 1425/28; Material = Paper; Latin + German. That matches M9's citation precisely on provenance/date, but fails it on iconography. Here is my deliverable.
+
+---
+
+# DELIVERABLE: Vision-verification of Cod. Sang. 827 vs Voynich zodiac (M9 / D9)
+
+## METHOD
+
+**Cod. Sang. 827 — sourced and confirmed.** IIIF manifest fetched from e-codices:
+`https://www.e-codices.unifr.ch/metadata/iiif/csg-0827/manifest.json` (359 canvases). Catalog: `https://www.e-codices.unifr.ch/en/description/csg/0827`.
+
+Manifest metadata (verbatim): **Place of Origin = "Lake Constance region"; Date of Origin = "1425/28"; Material = Paper; Title = "Late Medieval Composite Manuscript of Computistic and Astronomical Content"; Languages = Latin + German; authors incl. Johannes de Sacrobosco (De spera).** Provenance and date are exactly as M9 stated, and **the date (1425–28) sits inside the Voynich C14 window (1404–1438).**
+
+Folios fetched via Loris (`.../loris/csg/csg-0827/csg-0827_NNN.jp2/full/1024,/0/default.jpg`), saved to `/Users/user/Documents/Dev/voynich/csg827/`:
+- Calendar (front): p1–3, p6 — KL computus tables
+- Calendar/computus (back): p196, p200, p204, p208, p256, p270 — tables + world diagram
+- **Astro-zodiac core: p262–273** (the section the catalog flags as "Aderlassmännchen + Lat. Diätetik der 12 Zeichen und 12 Monate + Monatsbilder").
+
+**Voynich comparands.** f73v Sagittarius via on-disk full-res crop `z73v_center.jpg` (and `pf_73v.jpg`, full Yale IIIF render already on disk); cross-checked against the project's prior M3/M9 reads.
+
+## What Cod. Sang. 827 actually contains (per-folio vision)
+
+| Folio | Content (observed) | Pictorial zodiac sign-figure? |
+|---|---|---|
+| p2, p1–6 | Front Kalendarium: golden-number/dominical-letter columns, saints | No — table only |
+| p196–256 | Back computus: Latin text, tables, De spera | No |
+| **p262** | **Zodiac-Man (homo signorum / bloodletting figure)** — frontal nude, sign NAMES lettered on body parts (Aries head … Sagittarius thigh, Scorpio groin) | No drawn signs — names as text |
+| p263, p267 | Dietetic verses for the 12 signs; sign names as red rubrics | No |
+| p264 | Monthly dietetic verses (Januarius…) | No |
+| **p265–266** | **Labor-of-the-Months / occupations cycle** (drinking by fire, pruning vines, courtship/flower-gathering, ploughing, sowing, pig scene, grape harvest) | No (genre scenes, not signs) |
+| p268–269 | Cosmographic planet ring-diagrams; planets as red stars, zodiac names lettered round the rim | No drawn signs — names as text |
+| p270 | T-O world map (Jerusalem-centred), text labels | No |
+
+**Key result: Cod. Sang. 827 contains NO pictorial zodiac sign-figures.** There is no drawn archer/crossbowman, no drawn Scorpio reptile, no drawn crayfish/Cancer, no Leo, no Virgo figure. The zodiac is present only as (a) lettered names on a Zodiac-Man, (b) red rubrics over dietetic verses, and (c) labels around cosmographic rings.
+
+## Per-feature comparison: Voynich vs Cod. Sang. 827
+
+| Feature | Voynich (f73v etc.) | Cod. Sang. 827 | Score |
+|---|---|---|---|
+| Sagittarius as **crossbow** archer | Standing clothed human drawing a horizontal **crossbow** | No archer figure exists; "Sagittarius" = red text on thigh (p262) / rim label | **MISMATCH** (no comparand to compare) |
+| Sagittarius dress (tunic w/ skirted hem, hose, hat) | Yes — blue tunic, hose, brimmed hat | No figure | **N/A — absent** |
+| Scorpio as lizard/reptile | Reptilian Scorpio (M9) | Text rubric only | **MISMATCH (absent)** |
+| Cancer as crayfish | Crayfish (M9) | Text rubric only | **MISMATCH (absent)** |
+| Leo / Virgo figures | Drawn signs | Absent | **MISMATCH (absent)** |
+| **Calendar genre-scenes** | Voynich zodiac rings hold nymph/medallion scenes | **Labor-of-the-Months cycle present** (p265–266) | **PARTIAL MATCH** (shared calendar genre-scene habit, different subject) |
+| **Zodiac-as-calendar / month coupling** | Signs tied to month windows | Signs tied to months via dietetic verses + Monatsbilder | **MATCH (genre/structure)** |
+| Doubled signs / 15-day windows | Voynich doubles signs | Not present as doubled figures | **MISMATCH** |
+| Region / date | C14 1404–1438; transalpine exemplar inferred | **Lake Constance, 1425/28** | **MATCH (provenance/date)** |
+
+## VERDICT
+
+**Cod. Sang. 827 is NOT a near-exemplar, and on the decisive iconographic markers it is not even a valid pictorial comparand.** It matches the Voynich zodiac only at the level of *region, date, and genre family* — a Lake-Constance computus/calendar book of the right decade carrying a Zodiac-Man, dietetic-zodiac verses, and a Labor-of-the-Months cycle. It fails on every *pictorial* marker that made M9's case (crossbow Sagittarius, reptile Scorpio, crayfish Cancer, fox-tail cap, doubled figural signs) for the simple reason that **it has no pictorial sign-figures at all.** The "single closest named analog" flag in M9 was a literature citation that does not survive pixel inspection: the prior pass evidently matched it on *family membership* (computus + Monatsbilder + Lake Constance + ~1425), not on the figural iconography it was being credited with.
+
+**Confidence: high (0.85)** that Cod. Sang. 827 lacks pictorial zodiac figures — I viewed the entire flagged astro-zodiac run (p262–273) plus both calendars at legible resolution; the only figural art is the Zodiac-Man and the months-occupations. Residual 0.15: a sign-cycle on an unviewed folio elsewhere in 359 p
+
+===== SUBAGENT agent-adbaeb37fea81b6d7.jsonl =====
+--- TASK PROMPT ---
+You are a research analyst building an actionable archival research brief for the Voynich manuscript investigation, in /Users/user/Documents/Dev/voynich. You have web tools (WebSearch/WebFetch) and Bash. READ /Users/user/Documents/Dev/voynich/FINDINGS.md, esp. §7 M12 (the customer sieve) and its "decisive archival test".
+
+GOAL: Turn M12's decisive archival test into a concrete, feasibility-assessed research brief. M12 concluded the customer was a "wonder-of-hidden-mastery" patron in the Visconti/Sforza orbit, c.1410–1450, and named this test: search Visconti–Sforza ducal financial + library records for a multi-scribe payment for an unnamed *liber secretorum* / astrological-medical volume with NO gold/azure line-item, or a library-inventory entry for an undeciphered/secret-script book unmatchable to known texts. Your job: make that searchable in the real world.
+
+INVESTIGATE AND REPORT:
+1. **What records survive and where.** The Visconti–Sforza ducal financial administration (Archivio di Stato di Milano — Registri ducali, bollette, mandati/Sforzesco fondi): what categories exist for c.1410–1450, what survives, what's catalogued/digitized/published. Note Filippo Maria Visconti's reign (1412–1447) is the key window.
+2. **The Visconti–Pavia library.** The ducal library at Pavia castle: the surviving INVENTORIES (e.g. the 1426 inventory; later 1459/1469 catalogues). Crucially, is it published? — search for **Élisabeth Pellegrin, *La bibliothèque des Visconti et des Sforza ducs de Milan au XVe siècle*** (the standard edition of the inventories). Is it digitized/searchable? Also: the library was largely carried to France (Blois → Bibliothèque nationale) after the 1499 French conquest — what does that mean for tracing an item.
+3. **Court astrologers / physicians** as a record trail (salaried court astrologer-physicians at Pavia; their commissions/payments).
+4. **What a HIT looks like, concretely** — the exact fingerprint to search for (multi-scribe payment, no precious
+--- FINAL REPORT ---
+I now have enough to write the brief. Two crucial facts are confirmed: (1) the centralized financial treasury didn't exist until Galeazzo Maria Sforza created it in 1468 — meaning for the C14 window (1404-1438) there is no single tesoreria series, payments were dispersed and largely lost; (2) the 1447 destruction wiped most Visconti administrative records, with registers surviving only because kept at Pavia. This is decisive for feasibility. I'll compose the deliverable.
+
+---
+
+# ARCHIVAL RESEARCH BRIEF: Operationalizing M12's "Decisive Test"
+
+## Voynich customer-sieve → real-world archival search (Visconti–Sforza orbit, c.1410–1450)
+
+### METHOD / sources
+
+Web reconnaissance of (a) the Archivio di Stato di Milano (ASMi) institutional catalogue and digitization portals; (b) the standard scholarly edition of the Pavia ducal-library inventories (Pellegrin 1955); (c) the Visconti–Sforza financial-administration literature; (d) the Voynich provenance literature (voynich.nu / Zandbergen, Cipher Mysteries / Pelling, Wikipedia provenance summary). Goal: convert M12's named test into a runnable query with a known feasibility ceiling and an honest prior. I did **not** access the archives themselves — this is a brief, not a finding. No record was located; none is claimed.
+
+---
+
+### 1. THE SURVIVING-RECORDS MAP (archive → fonds → coverage → status)
+
+| Archive / fonds | What it is | Coverage for c.1410–50 | Catalogued / digitized / published |
+|---|---|---|---|
+| **ASMi — Visconteo-Sforzesco, *Registri ducali*** | 213 registers, Visconti + Sforza mixed | Visconti-era originals **survive only because they were kept in Pavia castle**; the rest reconstituted as copies/summaries under Francesco Sforza by Cicco Simonetta after 1450. Content is chancery-type: fiefs, investitures, oaths, safe-conducts, taxes, impositions — **governance, not bespoke-purchase ledgers** | Reading-room inventory **VS 4** (PDF online); whole fonds microfilmed (inventory VS 5); **digital reproductions of Registri ducali available** via the MIC *Archivio Digitale* (icar.cultura.gov.it) |
+| **ASMi — Carteggio Visconteo-Sforzesco** | Chancery correspondence, minutes & originals, 15th–17th c. | The richest narrative source for the court; *Carteggio Sforzesco / Carteggio interno* substantially post-1450 | Catalogued (Fumi/Vittani reconstruction); *Carteggio interno* **fully digitized**, *Potenze sovrane* partially |
+| **ASMi — financial / treasury series (*bollette, mandati, Tesoreria, Camera ducale*)** | Payment orders & account books | **The critical gap.** A unified *general treasury* (with officials for receipts, payments, ledgers, *bollette*) was **not created until 1468, by Galeazzo Maria Sforza.** For the C14 window (1404–1438) there is **no single tesoreria series**; Filippo Maria's finances ran through individuals (e.g. treasurer Vitaliano Borromeo — a 1427 *mastro*/ledger survives, but in the **private Borromeo archive at Isola Bella, not ASMi**). The 1447 collapse destroyed most central administrative paper | Sparse, dispersed, partly in private family archives, **largely not digitized**; no clean ducal "accounts payable" run for the window |
+
+**Decisive structural fact for M12:** the institutional apparatus that would record "a payment to scribes for an unnamed *liber secretorum*" **did not exist in centralized form during the carbon-date window**, and what financial paper did exist was mostly destroyed in 1447. The treasury that *would* leave that trail begins ~1468 — i.e. **after** the production window. This sharply lowers the prior on the "no-gold multi-scribe payment" half of the test.
+
+URLs: ASMi Visconteo-Sforzesco overview (https://archiviodistatomilano.cultura.gov.it/patrimonio/fondi-e-inventari/visconteo-sforzesco-1183-1593); Registri ducali / VS 4 inventory (https://archiviodistatomilano.cultura.gov.it/fileadmin/risorse/Patrimonio_archivistico/Fondi_e_Inventari/Visconteo-Sforzesco__1183-1593_/Visconteo_Sforzesco-Registri-Registri_Ducali-VS_4.pdf); Lombardia Beni Culturali fonds record (https://www.lombardiabeniculturali.it/archivi/complessi-archivistici/MIBA002437/); ASMi databases/digitization (https://archiviodistatomilano.cultura.gov.it/patrimonio/banche-dati); MIC Archivio Digitale (https://archiviodigitale-icar.cultura.gov.it/); Mainoni et al., *Il ducato di Filippo Maria Visconti, 1412–1447* (open access, http://www.rmoa.unina.it/3235/1/Mainoni.pdf).
+
+---
+
+### 2. THE PAVIA LIBRARY — and the good news: it's PUBLISHED
+
+This is the **strong half of the test**, because the second prong (a library-inventory entry for an undeciphered/secret-script book unmatchable to known texts) rests on records that **survive and are edited**.
+
+- The Visconti ducal library at **Pavia castle** (founded by Galeazzo II Visconti, c.1360) is documented by a series of inventories: the **1426 *consignatio librorum*** (the foundational one, **988 entries**), and later catalogues of **1459, 1469, 1488, 1490**.
+- **These are all published** in the standard critical edition: **Élisabeth Pellegrin, *La Bibliothèque des Visconti et des Sforza, ducs de Milan, au XVe siècle*** (Paris, CNRS / Publications de l'IRHT V, 1955; vii+492 pp.), with a later supplement. This is the authoritative, item-by-item edition of the inventories — **the single most important document for this entire test.**
+- **Digitization status:** Pellegrin's *reviews* are free on Persée; the **1955 volume itself is print/library (not openly digitized)** — obtainable via research libraries, and partly searchable through *Iter Italicum* (Kristeller) and IRHT resources. The **manuscripts themselves** are extensively digitized: after the 1499 French conquest the library was carried to **Blois, then absorbed into the royal collection → today's Bibliothèque nationale de France, *fonds latin*** (e.g. the Latin 6000–7000 medical/scientific run), much of it on **Gallica / Biblissima IIIF**.
+
+**Implication of the France transfer:** an item that left Pavia is traceable *forward* (Pavi
+
+===== SUBAGENT agent-af6544de637c3c953.jsonl =====
+--- TASK PROMPT ---
+You are investigating the Voynich manuscript in /Users/user/Documents/Dev/voynich as a 2026 multimodal model used as a perceptual instrument. You have vision — Read images directly.
+
+CONTEXT: A long, disciplined analysis reached a standing conclusion — the text is an ASEMIC generated artifact (rule-governed word-engine, no syntax; substitution cipher attack with a working positive control came back NULL; verbose cipher excluded by glyph position-locking). The frontier is now PRODUCTION FORENSICS / "why it was made". Best-fit: a sustained multi-hand workshop production of an asemic "secret-knowledge" marvel, dressed as learned medicine/astrology, modest materials, one-off. READ /Users/user/Documents/Dev/voynich/FINDINGS.md first for the full ledger (durable findings D*, killed claims K*, the confounds catalog).
+DISCIPLINE: this project's signature failure mode is in-sample signals that die out-of-sample, plus confounds (Currier A/B dialect; folio/position autocorrelation; content-free reproducibility). Report honestly, never oversell, do not fabricate specific manuscript matches.
+
+DATA: corpus.json ('meta' has per-folio I=illustration-type, L=Currier A/B, H=hand, Q=quire, P=position); grounding.json/body_spatial.json (28-folio vision grounding); images on disk — plants_montage_0/1/2.png, raw_###.png (page renders), iiif_*.jpg (high-res), z*.jpg (zodiac crops), bal_*.jpg (balneo), f116v_*.jpg (marginalia), contact_sheet.png, scan_*.png; Voynich_Manuscript.pdf (209 pp — render more with the .venv's pymupdf/`fitz` or pdftoppm); Yale IIIF oid 2002046 (iiif_canvases.json / iiif_urls.json) for full-res region fetches. Use the venv: `source .venv/bin/activate`. You may WebSearch/WebFetch.
+
+YOUR INVESTIGATION — SOURCE RETRIEVAL: Identify the real iconographic traditions the Voynich imagery copies or adapts, SECTION BY SECTION (herbal, zodiac/astronomical, balneological/biological, pharmaceutical, cosmological/rosettes). For each section decide: BORROWED-REAL (a degrade
+--- FINAL REPORT ---
+I have everything I need. My direct vision observations align with and refine the documented scholarship. Writing the deliverable now.
+
+---
+
+# SOURCE-RETRIEVAL REPORT — Voynich iconographic traditions, section by section
+
+## METHOD
+
+Direct vision pass (Opus 4.8 reading images) over all five illustrated sections at the resolutions on disk plus a fresh Yale IIIF fetch of the 85v/86r rosettes foldout (`https://collections.library.yale.edu/iiif/2/1006231`). For each section I scored two things: (1) **drawing-grammar provenance** — is the *vocabulary of marks* (how a root, a star-holder, a bathing pool, a zodiac emblem is rendered) drawn from a real medieval pictorial convention? and (2) **composition integrity** — does the assembly of those marks obey the source tradition's logic, or are real parts recombined into something the tradition would never produce? The "degraded-copy signature" I looked for is the diagnostic split: **borrowed grammar + broken composition** = a copyist reproducing marks they no longer understand. I then calibrated against published comparative work (Ponzi/Worley zodiac cycles, the De Balneis Puteolanis balneo argument, the alchemical-herbal composite-plant consensus, Wastl–Feger rosettes-as-mappamundi) to avoid inventing matches and to set confidence honestly.
+
+**Hard limit (stated up front, per brief):** true source retrieval requires a visual-embedding index over digitized manuscript corpora (Tractatus de herbis, Pseudo-Apuleius, the alchemical-herbal family, De Sphaera cycles, De Balneis copies) that I do not have here. Everything below is **tradition-level**, not manuscript-level. I name no specific source manuscript as a match. Confidence is calibrated against the gap between "this echoes a tradition" (defensible) and "this copies object X" (not available to me).
+
+---
+
+## PER-SECTION SOURCE HYPOTHESIS
+
+### 1. HERBAL (the bulk — plants_montage_0/1/2, raw_172/176/088r)
+
+**Verdict: BORROWED-REAL grammar, INVENTED species. The textbook degraded-copy signature is present and strong.** Confidence: **high (0.8)** that the drawing-grammar is from the real herbal tradition; **high (0.85)** that the species are recombinant/non-identifiable rather than faithful copies.
+
+What I see directly: the *mark vocabulary* is unambiguously real herbal-manuscript drawing — a central stem, a fibrous or tap root rendered with the standard root conventions, leaves with serrated/lobed/palmate margins drawn competently, distinct flower heads. These are the gestures of someone trained in or copying from a real Herbarius/Tractatus-de-herbis-class tradition. But the *assembly* repeatedly violates botany: on montage_0 a plant carries a flat blue-grey fungal/coral cap on an unrelated leafy stalk; raw_172 (f96) shows star-burst leaf rosettes hung along a stem under a giant fan-shaped sponge-like cap with a porous interior — an impossible chimera; several roots are drawn as decorative tendril-fans rather than as any real root system. This is exactly the "copy of a copy where diagnostic features are lost, parts of different plants fused" pattern that the alchemical-herbal scholarship describes. The relevant tradition is the **late-medieval N-Italian "alchemical herbal" (pseudo-Arnald de Villanova) family and the Tractatus de herbis / Pseudo-Apuleius lineage** — schematic, stylized herbals already one or more copy-generations from observation, where composite and fantastical plants are a known feature of the genre itself, not unique to Voynich. So Voynich sits at the *degraded end of an already-schematic tradition*, which is why the grammar reads real and the species read invented.
+
+### 2. PHARMACEUTICAL (raw_176/f100, iiif_88r, iiif_99v)
+
+**Verdict: BORROWED-REAL, and the most confidently placeable section.** Confidence: **high (0.85).**
+
+Direct read: rows of **detached plant parts** (isolated roots, single leaves, small flowering sprigs) laid out as a register, with **ornate apothecary jars (albarelli)** stacked in the left margin — banded, footed, lidded vessels in red/green that are recognizably the storage-jar form of a real pharmacy. This layout — *materia medica components arrayed against drug-storage vessels* — is a genuine convention of late-medieval pharmaceutical/herbal-pharmacy manuscripts (the simples-and-containers page). The jars are competently and consistently drawn; the plant fragments share the herbal section's degraded-composite character (many roots are non-identifiable). So: real pharmaceutical page-grammar, populated with the same invented botanical content. This section does the most work in making the book "read as" a functioning physician's pharmacopoeia.
+
+### 3. ZODIAC / ASTROLOGICAL (iiif_71r, z70v_center, z72r)
+
+**Verdict: BORROWED-REAL, recognizably-garbled.** Confidence: **high (0.8)** on tradition; this is the section where the borrowing is least deniable because the emblems are nameable.
+
+Direct read of f71r: a true concentric zodiac/calendar **rota** — central animal emblem, an inner ring, an outer ring of ~30 figures each holding a star, with month/sign labels around the rim. This is the standard medieval zodiac-wheel / labours-of-the-months structural convention. The emblems are individually recognizable: z70v shows a clear **goat** (Capricorn/Aries-type caprid) with the conventional pose; z72r shows a **caprid/ram** plus star-holding human figures and a robed figure. The crossbowman Sagittarius (documented elsewhere in the section) is the single most diagnostic feature: a *human crossbowman* Sagittarius is a rare, regionally-marked convention pointing to Central-European/German/French cycles (per Ponzi/Worley's comparison across ~100+ cycles), not Italian. The "garbling" signatures: the star-holding-nymph rings replace the normal degree/decan markers and zodiac-figure conventions with the manuscript's own repeating bathing-figure motif, and emblems like the goat reaching for a bush ("Aries eating a bush") read as genre scenes redrawn from a calendar by someone 
+
+===== SUBAGENT agent-af8ccd43055d73479.jsonl =====
+--- TASK PROMPT ---
+You are investigating the Voynich manuscript in /Users/user/Documents/Dev/voynich as a 2026 multimodal model. You have vision — Read images directly — and Bash/Python.
+
+CONTEXT: A long, disciplined analysis reached a standing conclusion — the text is an ASEMIC generated artifact: a rule-governed word-engine with slot-template morphology prefix·core·suffix, reducible to a ~472-parameter finite-state glyph automaton; NO syntax; no recoverable cipher. The frontier is "why it was made"; best-fit is a sustained multi-hand workshop marvel. READ /Users/user/Documents/Dev/voynich/FINDINGS.md first (durable findings D1–D12, killed K*, confounds). Key text facts you'll compare against: the word system is a SMALL CLOSED inventory of slot-fillers (prefix: 15 values; suffix: 18 values; core: ~3042 open keys) recombined productively and POSITION-LOCKED (glyphs slotted, q always initial, n always final).
+DISCIPLINE: signature failure mode is in-sample signals dying out-of-sample, and confounds. Report nulls honestly, caveat sample size and tagger-subjectivity, never oversell.
+
+DATA: corpus.json ('meta' per-folio I/L/H/Q/P; 'folios' has parsed tokens); images — plants_montage_0/1/2.png, raw_###.png page renders, iiif_*.jpg; Voynich_Manuscript.pdf (render herbal pages with the .venv's pymupdf/`fitz`). `source .venv/bin/activate`.
+
+YOUR INVESTIGATION — CROSS-MODAL GENERATIVE FINGERPRINT: Test QUANTITATIVELY whether ONE recombination procedure generates BOTH the plants and the words.
+Step A — vision-tag the visual PARTS-INVENTORY of the herbal plants: categorize each plant's root (taproot / rhizome / bulb / fibrous / tuber / …), stem, leaves (palmate / serrate / whorled / lobed / sword / …), inflorescence (umbel / spike / composite-head / berry-cluster / …). Sample as many plants as feasible (use the 3 montages + render more herbal folios; aim for 20–40 plants). Record your tags in a file.
+Step B — quantify the visual combinatorics: count distinct part-types per slot, the entrop
+--- FINAL REPORT ---
+# CROSS-MODAL GENERATIVE FINGERPRINT — Does one recombination engine generate both the plants and the words?
+
+## METHOD
+- **Step A (vision tagging):** I tagged 15 distinct herbal plant diagrams across 4 morphological slots — **root / stem / leaf / inflorescence** — from the 3 plant montages (12 plants, folio-labeled) plus three full-res renders (raw_016=f8, raw_026=f16, raw_050=f26). Tags recorded in `/Users/user/Documents/Dev/voynich/plant_tags.json`. Color/size modifiers were stripped to keep canonical morphology (taproot/fibrous/rhizome; single/branching/radiating; lanceolate/pinnate/palmate/etc.; composite/umbel/spike/berry/none).
+- **Step B (visual combinatorics):** distinct fillers per slot, Shannon entropy + normalized H/Hmax, inter-slot mutual information, whole-plant combination uniqueness vs a free-recombination Monte-Carlo ceiling.
+- **Step C (text inventory):** recomputed the prefix·core·suffix decomposition directly from `corpus.json` (prose loci only), reproducing FINDINGS D3 exactly.
+- **NULL:** an explicit real-herbal model (parts are phylogenetically correlated; species cluster and repeat) with a falsifiable discriminator (the "umbel/flower-predicts-family" test).
+
+## VISUAL PARTS-INVENTORY (n=15)
+| slot | distinct | H (bits) | H/Hmax | top types |
+|---|---|---|---|---|
+| root | 3 | 1.43 | 0.90 | taproot 7, fibrous 6, rhizome 2 |
+| stem | 3 | 1.46 | 0.92 | single 8, branching 4, radiating 3 |
+| leaf | 10 | 3.19 | 0.96 | palmate/lanceolate/pinnate/ovate… |
+| infl | 5 | 1.86 | 0.80 | composite 8, none 3, berry 2, umbel 1, spike 1 |
+
+Total visual inventory = **21 fillers**. Whole-plant combinations: **14 distinct of 15 plants (87% unique)**, sitting essentially **at the free-recombination ceiling** (Monte-Carlo expectation 14.4/15 under independent slots).
+
+## TEXT INVENTORY (recomputed, matches D3)
+| slot | distinct | H (bits) | H/Hmax |
+|---|---|---|---|
+| prefix | 15 | 3.34 | 0.85 (closed enum) |
+| core | 3042 | 6.81 | 0.59 (open key) |
+| suffix | 18 | 3.34 | 0.80 (closed enum) |
+
+## NUMERIC CROSS-MODAL COMPARISON
+| signature property | TEXT | VISUAL |
+|---|---|---|
+| slot-template grammar | yes (3 slots) | yes (4 slots) |
+| closed small enums | prefix 15, suffix 18 | root 3, stem 3, infl 5 |
+| closed-slot entropy efficiency | 0.80–0.85 | 0.80–0.96 |
+| slots near-independent | I(pre;suf)=0.20 | no flower→root/leaf prediction |
+| recombination | productive/free | 87% combos unique, at ceiling |
+
+**The decisive figure:** the dominant inflorescence type ("composite head," 8/15 plants) sits on **all 3 root types and 6 different leaf types**. The flower does not predict the rest of the plant — the exact inverse of real botany, where inflorescence type largely pins down family (umbel→taproot+divided leaf, etc.).
+
+**NULL contrast:** a real herbal would show (1) high inter-slot MI, (2) repeated/clustered whole-plant profiles well *below* the free ceiling, and (3) defining syndromes. Voynich shows the opposite on (1) and (2); (3) is absent/scrambled.
+
+## VERDICT
+**A shared generative fingerprint exists, and it is the same one the text shows: a small closed inventory of slot-fillers recombined freely into forms that don't track real referents.** Each plant is a unique draw of root×stem×leaf×inflorescence, parts assemble without the cross-part correlations that real species impose — structurally identical to how Voynichese builds words by drawing affixes from closed slots that are mutually near-independent (D3). The visual channel reproduces the text's **affix-system signature** (small, closed, evenly-used, freely-recombined slots).
+
+**Strength: moderate, directional.** The combinatorial evidence (87% unique combos at the free-recombination ceiling; flower independent of root/leaf across all types) is robust and one-directional. The formal inter-slot MI permutation test was *inconclusive* (observed 0.85 vs null 0.81, p=0.26) — but that test is badly underpowered at n=15 and small-sample MI is upward-biased, so it cannot establish correlation, only fail to. The qualitative "flower-predicts-nothing" diagnostic is the load-bearing result.
+
+## CONFOUNDS / LIMITS
+- **Sample size n=15** (target was 20–40). The PDF holds only 131×185px thumbnails, so I was capped to the high-res montages + a few raw renders. Per-slot cardinalities (esp. leaf=10) are undersampled; the MI test has near-zero power.
+- **Tagger subjectivity:** my own categories. "Composite head" lumps several stylized flower-blobs; root taproot/fibrous boundary is judgment. A different tagger could shift counts ±1–2 per slot.
+- **No true real-herbal comparand was measured** — the NULL is literature-grounded reasoning, not a tagged Dioscorides control. That control is the obvious next step to harden this from "directional" to "quantitative."
+- **Scale mismatch (honest):** the visual system is small+closed in *every* slot; there is **no visual analogue of the text's 3042-key open core**. The shared fingerprint matches the text's closed affixes, not its open lexicon.
+
+## WHAT IT IMPLIES for "one generative mind across both channels"
+Consistent with — and modestly strengthening — the standing asemic verdict (FINDINGS §6/§7). The same disposition that built words by recombining closed-slot fillers without semantic cross-constraint appears to have built the plants: assemble a recognizable "herbal plant" from a parts-kit, vary every instance, never let the parts cohere into a real species. It does **not** prove a single hand (D9: ≥5 scribes), but it does suggest **one shared generative procedure operating in both modalities** — the visual herbal is plausibly the same "fake-functional, language-shaped but referent-free marvel" engine (M1/M2) expressed in pictures. It does not reopen meaning-recovery: like the text, the pictures are structured and referent-free.
+
+Tags saved to `/Users/user/Documents/Dev/voynich/plant_tags.json`. No FINDINGS.md row appended (leaving the ledger edit to you, per hygiene rule — suggested status: 🟡 di
+

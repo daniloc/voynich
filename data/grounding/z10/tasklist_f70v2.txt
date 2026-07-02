@@ -1,0 +1,36 @@
+TAKAHASHI Lz LABEL SEQUENCE for f70v2 (transcription order within each tier)
+Multi-word labels shown with '.' separating words; treat as ONE locus bound to ONE referent.
+
+--- panel f70v2, outer ring of labels between stars [tier=outer] ---
+  locus   5: oty
+  locus   6: oky.ody
+  locus   7: oty.or
+  locus   8: okaly
+  locus   9: otody
+  locus  10: otald
+  locus  11: otal.dar
+  locus  12: okody
+  locus  13: opys.am
+  locus  14: chckhhy
+  locus  15: otaly
+  locus  16: otal.!rar
+  locus  17: otal.dy
+  locus  18: okeoly
+  locus  19: oky!dy
+  locus  20: okees
+  locus   2: otalalg
+  locus   3: okasy
+  locus   4: otar!!
+--- panel f70v2, inner ring of labels between stars [tier=inner] ---
+  locus  23: otar!al
+  locus  24: otal!ar
+  locus  25: otal!am
+  locus  26: dolara!m!!!!!!!!!!!!!!
+  locus  27: okaram
+  locus  28: oteosal
+  locus  29: sal!ols
+  locus  30: okal!dal
+  locus  31: ykolaiin
+  locus  22: s!ar.am
+--- panel f70v2, inner ring of text [tier=inner] ---
+  locus  33: otylal

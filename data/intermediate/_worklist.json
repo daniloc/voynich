@@ -1,0 +1,358 @@
+[
+ {
+  "folio": "f1r",
+  "section": "text",
+  "nlabels": 3,
+  "codes": [
+   "Lx"
+  ],
+  "images": [
+   "pf_1r.jpg"
+  ]
+ },
+ {
+  "folio": "f67r1",
+  "section": "astronomical",
+  "nlabels": 119,
+  "codes": [
+   "Cc",
+   "Ri"
+  ],
+  "images": [
+   "iiif_67r.jpg"
+  ]
+ },
+ {
+  "folio": "f67r2",
+  "section": "astronomical",
+  "nlabels": 56,
+  "codes": [
+   "L0",
+   "Ls"
+  ],
+  "images": [
+   "iiif_67r.jpg"
+  ]
+ },
+ {
+  "folio": "f69r",
+  "section": "cosmological",
+  "nlabels": 128,
+  "codes": [
+   "Cc",
+   "L0",
+   "Ro"
+  ],
+  "images": [
+   "iiif_69r.jpg"
+  ]
+ },
+ {
+  "folio": "f70v1",
+  "section": "zodiac",
+  "nlabels": 86,
+  "codes": [
+   "Cc",
+   "Lz"
+  ],
+  "images": [
+   "pf_70v.jpg",
+   "z70v_abril2.jpg",
+   "z70v_abrilword.jpg"
+  ]
+ },
+ {
+  "folio": "f70v2",
+  "section": "zodiac",
+  "nlabels": 140,
+  "codes": [
+   "Cc",
+   "Lz"
+  ],
+  "images": [
+   "pf_70v.jpg",
+   "z70v_abril2.jpg",
+   "z70v_abrilword.jpg"
+  ]
+ },
+ {
+  "folio": "f71r",
+  "section": "zodiac",
+  "nlabels": 90,
+  "codes": [
+   "Cc",
+   "Lz"
+  ],
+  "images": [
+   "iiif_71r.jpg"
+  ]
+ },
+ {
+  "folio": "f72r1",
+  "section": "zodiac",
+  "nlabels": 104,
+  "codes": [
+   "Cc",
+   "Lz"
+  ],
+  "images": [
+   "pf_72r.jpg",
+   "z72r_A.jpg",
+   "z72r_Aword.jpg"
+  ]
+ },
+ {
+  "folio": "f72r2",
+  "section": "zodiac",
+  "nlabels": 110,
+  "codes": [
+   "Cc",
+   "Lz"
+  ],
+  "images": [
+   "pf_72r.jpg",
+   "z72r_A.jpg",
+   "z72r_Aword.jpg"
+  ]
+ },
+ {
+  "folio": "f72r3",
+  "section": "zodiac",
+  "nlabels": 167,
+  "codes": [
+   "Cc",
+   "Lz"
+  ],
+  "images": [
+   "pf_72r.jpg",
+   "z72r_A.jpg",
+   "z72r_Aword.jpg"
+  ]
+ },
+ {
+  "folio": "f72v1",
+  "section": "zodiac",
+  "nlabels": 101,
+  "codes": [
+   "Cc",
+   "Lz"
+  ],
+  "images": [
+   "pf_72v.jpg",
+   "z72v0_word.jpg",
+   "z72v1_word.jpg"
+  ]
+ },
+ {
+  "folio": "f72v2",
+  "section": "zodiac",
+  "nlabels": 110,
+  "codes": [
+   "Cc",
+   "Lz"
+  ],
+  "images": [
+   "pf_72v.jpg",
+   "z72v0_word.jpg",
+   "z72v1_word.jpg"
+  ]
+ },
+ {
+  "folio": "f72v3",
+  "section": "zodiac",
+  "nlabels": 121,
+  "codes": [
+   "Cc",
+   "Lz"
+  ],
+  "images": [
+   "pf_72v.jpg",
+   "z72v0_word.jpg",
+   "z72v1_word.jpg"
+  ]
+ },
+ {
+  "folio": "f73r",
+  "section": "zodiac",
+  "nlabels": 96,
+  "codes": [
+   "Cc",
+   "Lz"
+  ],
+  "images": [
+   "pf_73r.jpg",
+   "z73r_center.jpg",
+   "z73r_word.jpg"
+  ]
+ },
+ {
+  "folio": "f73v",
+  "section": "zodiac",
+  "nlabels": 97,
+  "codes": [
+   "Cc",
+   "Lz"
+  ],
+  "images": [
+   "pf_73v.jpg",
+   "z73v_center.jpg"
+  ]
+ },
+ {
+  "folio": "f75v",
+  "section": "biological",
+  "nlabels": 37,
+  "codes": [
+   "L0",
+   "Ln",
+   "Lt"
+  ],
+  "images": [
+   "bal_75v.jpg",
+   "z_75v_row.jpg"
+  ]
+ },
+ {
+  "folio": "f76r",
+  "section": "biological",
+  "nlabels": 9,
+  "codes": [
+   "L0"
+  ],
+  "images": [
+   "bal_76r.jpg"
+  ]
+ },
+ {
+  "folio": "f77r",
+  "section": "biological",
+  "nlabels": 10,
+  "codes": [
+   "Ln",
+   "Lt"
+  ],
+  "images": [
+   "bal_77r.jpg",
+   "z_77r_manifold.jpg"
+  ]
+ },
+ {
+  "folio": "f77v",
+  "section": "biological",
+  "nlabels": 10,
+  "codes": [
+   "Ln",
+   "Lt"
+  ],
+  "images": [
+   "bal_77v.jpg"
+  ]
+ },
+ {
+  "folio": "f78r",
+  "section": "biological",
+  "nlabels": 6,
+  "codes": [
+   "Lt"
+  ],
+  "images": [
+   "bal_78r.jpg",
+   "iiif_78r.jpg",
+   "z_78r_pools.jpg"
+  ]
+ },
+ {
+  "folio": "f80r",
+  "section": "biological",
+  "nlabels": 10,
+  "codes": [
+   "Ln"
+  ],
+  "images": [
+   "bal_80r.jpg"
+  ]
+ },
+ {
+  "folio": "f82r",
+  "section": "biological",
+  "nlabels": 15,
+  "codes": [
+   "Ln",
+   "Lt"
+  ],
+  "images": [
+   "bal_82r.jpg"
+  ]
+ },
+ {
+  "folio": "f82v",
+  "section": "biological",
+  "nlabels": 15,
+  "codes": [
+   "Ln",
+   "Lt"
+  ],
+  "images": [
+   "bal_82v.jpg"
+  ]
+ },
+ {
+  "folio": "f83r",
+  "section": "biological",
+  "nlabels": 4,
+  "codes": [
+   "Lt"
+  ],
+  "images": [
+   "bal_83r.jpg"
+  ]
+ },
+ {
+  "folio": "f83v",
+  "section": "biological",
+  "nlabels": 4,
+  "codes": [
+   "Ln",
+   "Lt"
+  ],
+  "images": [
+   "bal_83v.jpg"
+  ]
+ },
+ {
+  "folio": "f84r",
+  "section": "biological",
+  "nlabels": 15,
+  "codes": [
+   "Ln",
+   "Lt"
+  ],
+  "images": [
+   "bal_84r.jpg"
+  ]
+ },
+ {
+  "folio": "f88r",
+  "section": "pharmaceutical",
+  "nlabels": 16,
+  "codes": [
+   "Lc",
+   "Lf"
+  ],
+  "images": [
+   "iiif_88r.jpg"
+  ]
+ },
+ {
+  "folio": "f99v",
+  "section": "pharmaceutical",
+  "nlabels": 26,
+  "codes": [
+   "Lc",
+   "Lf"
+  ],
+  "images": [
+   "iiif_99v.jpg"
+  ]
+ }
+]

@@ -1,0 +1,20 @@
+TAKAHASHI Lz LABEL SEQUENCE for f71r (transcription order within each tier)
+Multi-word labels shown with '.' separating words; treat as ONE locus bound to ONE referent.
+
+--- Outer band of nymphs [tier=outer] ---
+  locus   2: oteos.arar
+  locus   3: okldam
+  locus   4: oteoaldy
+  locus   5: oteolar
+  locus   6: okeoaly
+  locus   7: otaleky
+  locus   8: otalsar
+  locus   9: chsary
+  locus  10: oteo!tey.sary
+  locus  11: otalaly
+--- Inner band of nymphs [tier=inner] ---
+  locus  13: otol.chdy
+  locus  14: otoloaram
+  locus  15: oteeol
+  locus  16: otolchd
+  locus  17: otal.dar

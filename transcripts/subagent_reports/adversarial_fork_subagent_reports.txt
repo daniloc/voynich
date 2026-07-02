@@ -1,0 +1,1225 @@
+===== SUBAGENT agent-a009ca03a0bb9a3d7.jsonl =====
+--- TASK PROMPT ---
+You are grounding the LABELS of one Voynich folio to its DRAWING, to build a spatial corpus for a decipherment attack.
+
+FOLIO f72v2  (section: zodiac)
+1) Open and LOOK at the scan(s): /Users/user/Documents/Dev/voynich/pf_72v.jpg, /Users/user/Documents/Dev/voynich/z72v0_word.jpg, /Users/user/Documents/Dev/voynich/z72v1_word.jpg  (extra ones are crops/details of the same folio)
+2) Read this folio's labels: Read /Users/user/Documents/Dev/voynich/_labels/f72v2.json  — a JSON list of {locus, role, words}, the EVA labels in transliteration reading-order.
+
+Locus-code key: Lz=zodiac label, Ls=star label, Lf=label-on-figure, L0=generic label, Ln/Lt/Lc=label variants, Cc=circular text, Ri/Ro=radial text (inward/outward).
+
+YOUR JOB — ground POSITION and REFERENT; do NOT translate the (undecipherable) script:
+1. Identify what the drawing depicts (central figure, scene, objects).
+2. ZODIAC: identify the central sign/animal and implied month; the folios run in zodiac order (Pisces→Aries→Taurus…). Describe ring structure: how many concentric rings of star-labels, ~how many per ring, clockwise from 12 o'clock.
+3. BALNEO: locate nymphs/basins/tubes; which element each label group sits beside.
+4. PHARMA: link each Lf label to the specific jar/container/plant-part it labels (these sit next to objects — most groundable).
+5. COSMO/astronomical: describe rings/radial spokes the Cc/Ri/Ro text occupies.
+Map each labelset (by locus code) to the drawn element it annotates, with a spatial position (clock-angle, inner/outer ring, or zone). Be explicit about legibility and confidence; honest "illegible/low confidence" is useful. Return ONLY the structured object.
+--- FINAL REPORT ---
+Grounded f72v2. Summary of findings:
+
+- **Drawing**: The right-hand roundel on folio 72v — a standard Voynich zodiac/month wheel. A central medallion holds a single robed emblem-figure (blue cape, headdress), surrounded by two concentric rings of nude star-nymphs (~15 per ring, ~30 total), each beside a star with a curved text arc.
+- **Sign/month**: Tentatively Leo / August (confidence ~0.45), based on the conventional zodiac ordering placing the second 72v disk at Leo, plus an apparent summer "august"-like later-hand Latin gloss in z72v0_word.jpg. The central emblem is a robed human (no animal), so the sign is uncertain.
+- **Label grounding**:
+  - `@Lz` ("oeedey okaiin") and `&Lz` (31 words) = the hub-encircling text tied to the central emblem-figure (inner ring, ~9-11 o'clock and around the medallion rim).
+  - `@Cc` (~75 words) = the continuous circular text band running around the wreath, one short arc per nymph, read clockwise from ~12 o'clock. Individual token-to-nymph alignment isn't separable at this scan resolution.
+
+Relevant files: /Users/user/Documents/Dev/voynich/pf_72v.jpg (full scan, f72v2 = right disk), /Users/user/Documents/Dev/voynich/z72v0_word.jpg (Latin month gloss detail), /Users/user/Documents/Dev/voynich/_labels/f72v2.json (labels).
+
+===== SUBAGENT agent-a02dd2ff7e6bf8d13.jsonl =====
+--- TASK PROMPT ---
+You are grounding the LABELS of one Voynich folio to its DRAWING, to build a spatial corpus for a decipherment attack.
+
+FOLIO f72r1  (section: zodiac)
+1) Open and LOOK at the scan(s): /Users/user/Documents/Dev/voynich/pf_72r.jpg, /Users/user/Documents/Dev/voynich/z72r_A.jpg, /Users/user/Documents/Dev/voynich/z72r_Aword.jpg  (extra ones are crops/details of the same folio)
+2) Read this folio's labels: Read /Users/user/Documents/Dev/voynich/_labels/f72r1.json  — a JSON list of {locus, role, words}, the EVA labels in transliteration reading-order.
+
+Locus-code key: Lz=zodiac label, Ls=star label, Lf=label-on-figure, L0=generic label, Ln/Lt/Lc=label variants, Cc=circular text, Ri/Ro=radial text (inward/outward).
+
+YOUR JOB — ground POSITION and REFERENT; do NOT translate the (undecipherable) script:
+1. Identify what the drawing depicts (central figure, scene, objects).
+2. ZODIAC: identify the central sign/animal and implied month; the folios run in zodiac order (Pisces→Aries→Taurus…). Describe ring structure: how many concentric rings of star-labels, ~how many per ring, clockwise from 12 o'clock.
+3. BALNEO: locate nymphs/basins/tubes; which element each label group sits beside.
+4. PHARMA: link each Lf label to the specific jar/container/plant-part it labels (these sit next to objects — most groundable).
+5. COSMO/astronomical: describe rings/radial spokes the Cc/Ri/Ro text occupies.
+Map each labelset (by locus code) to the drawn element it annotates, with a spatial position (clock-angle, inner/outer ring, or zone). Be explicit about legibility and confidence; honest "illegible/low confidence" is useful. Return ONLY the structured object.
+--- FINAL REPORT ---
+Grounded f72r1 (first Aries wheel of the f72r foldout). Structured output submitted.
+
+Key findings:
+- Central figure: red-orange ram on a green ground line with the "oMarS"/doary ground-inscription, confirming Aries (March), the first of the two Aries wheels on this foldout.
+- The label JSON only carries aggregate loci, not individual positioned star-labels: @Cc (81-word circular text band around the medallion), @Lz (2-word central sign label), and &Lz (22-token run of ring star-labels). Per-star clock-angle grounding isn't possible from this file; the standard 30-star roster (~15 per ring, 2 rings) is inferred from manuscript convention plus the visible nymph-and-star arrangement.
+- Relevant files: /Users/user/Documents/Dev/voynich/z72r_A.jpg (clearest crop of ram + inscription), /Users/user/Documents/Dev/voynich/pf_72r.jpg (leftmost wheel = this folio), /Users/user/Documents/Dev/voynich/_labels/f72r1.json.
+
+===== SUBAGENT agent-a05edee7eef89248d.jsonl =====
+--- TASK PROMPT ---
+You are grounding the LABELS of one Voynich folio to its DRAWING, to build a spatial corpus for a decipherment attack.
+
+FOLIO f72v3  (section: zodiac)
+1) Open and LOOK at the scan(s): /Users/user/Documents/Dev/voynich/pf_72v.jpg, /Users/user/Documents/Dev/voynich/z72v0_word.jpg, /Users/user/Documents/Dev/voynich/z72v1_word.jpg  (extra ones are crops/details of the same folio)
+2) Read this folio's labels: Read /Users/user/Documents/Dev/voynich/_labels/f72v3.json  — a JSON list of {locus, role, words}, the EVA labels in transliteration reading-order.
+
+Locus-code key: Lz=zodiac label, Ls=star label, Lf=label-on-figure, L0=generic label, Ln/Lt/Lc=label variants, Cc=circular text, Ri/Ro=radial text (inward/outward).
+
+YOUR JOB — ground POSITION and REFERENT; do NOT translate the (undecipherable) script:
+1. Identify what the drawing depicts (central figure, scene, objects).
+2. ZODIAC: identify the central sign/animal and implied month; the folios run in zodiac order (Pisces→Aries→Taurus…). Describe ring structure: how many concentric rings of star-labels, ~how many per ring, clockwise from 12 o'clock.
+3. BALNEO: locate nymphs/basins/tubes; which element each label group sits beside.
+4. PHARMA: link each Lf label to the specific jar/container/plant-part it labels (these sit next to objects — most groundable).
+5. COSMO/astronomical: describe rings/radial spokes the Cc/Ri/Ro text occupies.
+Map each labelset (by locus code) to the drawn element it annotates, with a spatial position (clock-angle, inner/outer ring, or zone). Be explicit about legibility and confidence; honest "illegible/low confidence" is useful. Return ONLY the structured object.
+--- FINAL REPORT ---
+Grounded f72v3. It is a zodiac wheel (rightmost of three medallions on the f72v scan), with a central blue-pigmented robed female figure holding a star, surrounded by two concentric rings of star-nymphs arranged clockwise from 12 o'clock. Label grounding: `@Lz` ("ogeom sholeey") captions the central figure, `@Cc` is the medallion-frame circular text, and `&Lz` is the per-nymph star-label series across both rings. Sign/month (Gemini region) is low confidence because the center is a human star-holder, not a recognizable animal emblem.
+
+Relevant files:
+- /Users/user/Documents/Dev/voynich/pf_72v.jpg (full scan; f72v3 = right disk)
+- /Users/user/Documents/Dev/voynich/_labels/f72v3.json (labels)
+
+===== SUBAGENT agent-a11c21345ef571e6d.jsonl =====
+--- TASK PROMPT ---
+You are grounding the LABELS of one Voynich folio to its DRAWING, to build a spatial corpus for a decipherment attack.
+
+FOLIO f75v  (section: biological)
+1) Open and LOOK at the scan(s): /Users/user/Documents/Dev/voynich/bal_75v.jpg, /Users/user/Documents/Dev/voynich/z_75v_row.jpg  (extra ones are crops/details of the same folio)
+2) Read this folio's labels: Read /Users/user/Documents/Dev/voynich/_labels/f75v.json  — a JSON list of {locus, role, words}, the EVA labels in transliteration reading-order.
+
+Locus-code key: Lz=zodiac label, Ls=star label, Lf=label-on-figure, L0=generic label, Ln/Lt/Lc=label variants, Cc=circular text, Ri/Ro=radial text (inward/outward).
+
+YOUR JOB — ground POSITION and REFERENT; do NOT translate the (undecipherable) script:
+1. Identify what the drawing depicts (central figure, scene, objects).
+2. ZODIAC: identify the central sign/animal and implied month; the folios run in zodiac order (Pisces→Aries→Taurus…). Describe ring structure: how many concentric rings of star-labels, ~how many per ring, clockwise from 12 o'clock.
+3. BALNEO: locate nymphs/basins/tubes; which element each label group sits beside.
+4. PHARMA: link each Lf label to the specific jar/container/plant-part it labels (these sit next to objects — most groundable).
+5. COSMO/astronomical: describe rings/radial spokes the Cc/Ri/Ro text occupies.
+Map each labelset (by locus code) to the drawn element it annotates, with a spatial position (clock-angle, inner/outer ring, or zone). Be explicit about legibility and confidence; honest "illegible/low confidence" is useful. Return ONLY the structured object.
+--- FINAL REPORT ---
+Grounded f75v. It is a balneological folio (no zodiac/cosmo rings), so the structured object reflects a row layout. The strongest grounding is the two `Ln` labelsets (11 tokens each) mapping one-to-one onto the horizontal row of ~11 nymphs each standing in a tablet/barrel container under a blue water-fan; the shorter `Lt` clusters sit beside individual basin units but cannot be pinned to specific containers at this resolution, and the `L0` single-letter tokens are generic/unanchorable.
+
+===== SUBAGENT agent-a16b2893a5f1ba12d.jsonl =====
+--- TASK PROMPT ---
+You are grounding the LABELS of one Voynich folio to its DRAWING, to build a spatial corpus for a decipherment attack.
+
+FOLIO f72r2  (section: zodiac)
+1) Open and LOOK at the scan(s): /Users/user/Documents/Dev/voynich/pf_72r.jpg, /Users/user/Documents/Dev/voynich/z72r_A.jpg, /Users/user/Documents/Dev/voynich/z72r_Aword.jpg  (extra ones are crops/details of the same folio)
+2) Read this folio's labels: Read /Users/user/Documents/Dev/voynich/_labels/f72r2.json  — a JSON list of {locus, role, words}, the EVA labels in transliteration reading-order.
+
+Locus-code key: Lz=zodiac label, Ls=star label, Lf=label-on-figure, L0=generic label, Ln/Lt/Lc=label variants, Cc=circular text, Ri/Ro=radial text (inward/outward).
+
+YOUR JOB — ground POSITION and REFERENT; do NOT translate the (undecipherable) script:
+1. Identify what the drawing depicts (central figure, scene, objects).
+2. ZODIAC: identify the central sign/animal and implied month; the folios run in zodiac order (Pisces→Aries→Taurus…). Describe ring structure: how many concentric rings of star-labels, ~how many per ring, clockwise from 12 o'clock.
+3. BALNEO: locate nymphs/basins/tubes; which element each label group sits beside.
+4. PHARMA: link each Lf label to the specific jar/container/plant-part it labels (these sit next to objects — most groundable).
+5. COSMO/astronomical: describe rings/radial spokes the Cc/Ri/Ro text occupies.
+Map each labelset (by locus code) to the drawn element it annotates, with a spatial position (clock-angle, inner/outer ring, or zone). Be explicit about legibility and confidence; honest "illegible/low confidence" is useful. Return ONLY the structured object.
+--- FINAL REPORT ---
+Grounded f72r2 as the Aries zodiac wheel. Key findings:
+
+- Central figure: red/orange ram on a green ground line — Aries, implied month April, confirmed by sequential order (Pisces→Aries→Taurus across the foldout, with the Taurus bull on the adjacent wheel to the right).
+- Layout: ~2 concentric rings of 8-pointed stars and small clothed nymph-figures (some holding stars on tethers), ~15 per ring, clockwise from 12 o'clock.
+- Label grounding: @Lz (3 words) = inner caption beside the central ram; &Lz (~30 words) = the radial star/figure labels distributed across the two rings; @Cc (~78 tokens) = the continuous circumferential text band.
+- Legibility partial, overall confidence 0.6 (high on the Aries identification, lower on per-label ring assignment).
+
+Relevant files: /Users/user/Documents/Dev/voynich/_labels/f72r2.json, /Users/user/Documents/Dev/voynich/pf_72r.jpg, /Users/user/Documents/Dev/voynich/z72r_A.jpg, /Users/user/Documents/Dev/voynich/z72r_Aword.jpg
+
+===== SUBAGENT agent-a1ddf2e91a3b245bf.jsonl =====
+--- TASK PROMPT ---
+You are grounding the LABELS of one Voynich folio to its DRAWING, to build a spatial corpus for a decipherment attack.
+
+FOLIO f82v  (section: biological)
+1) Open and LOOK at the scan(s): /Users/user/Documents/Dev/voynich/bal_82v.jpg  (extra ones are crops/details of the same folio)
+2) Read this folio's labels: Read /Users/user/Documents/Dev/voynich/_labels/f82v.json  — a JSON list of {locus, role, words}, the EVA labels in transliteration reading-order.
+
+Locus-code key: Lz=zodiac label, Ls=star label, Lf=label-on-figure, L0=generic label, Ln/Lt/Lc=label variants, Cc=circular text, Ri/Ro=radial text (inward/outward).
+
+YOUR JOB — ground POSITION and REFERENT; do NOT translate the (undecipherable) script:
+1. Identify what the drawing depicts (central figure, scene, objects).
+2. ZODIAC: identify the central sign/animal and implied month; the folios run in zodiac order (Pisces→Aries→Taurus…). Describe ring structure: how many concentric rings of star-labels, ~how many per ring, clockwise from 12 o'clock.
+3. BALNEO: locate nymphs/basins/tubes; which element each label group sits beside.
+4. PHARMA: link each Lf label to the specific jar/container/plant-part it labels (these sit next to objects — most groundable).
+5. COSMO/astronomical: describe rings/radial spokes the Cc/Ri/Ro text occupies.
+Map each labelset (by locus code) to the drawn element it annotates, with a spatial position (clock-angle, inner/outer ring, or zone). Be explicit about legibility and confidence; honest "illegible/low confidence" is useful. Return ONLY the structured object.
+--- FINAL REPORT ---
+Grounded f82v. It is a biological/balneological folio, so the zodiac/cosmo fields are null. Findings returned via StructuredOutput: text-dominant page with marginal nymph-in-tub figures linked by tube conduits and a bottom green-ground bathing scene with blue arcs; the six short Ln/Lt label groups sit in the margins beside the nymphs/basins and caption the bottom scene, with @Ln and @Lt (the longest groups) anchoring the most prominent figure clusters. Grounding confidence is moderate-low (0.42) due to the single low-resolution scan and faint/abraded marginal labels.
+
+===== SUBAGENT agent-a2a0ca4008adebd86.jsonl =====
+--- TASK PROMPT ---
+You are grounding the LABELS of one Voynich folio to its DRAWING, to build a spatial corpus for a decipherment attack.
+
+FOLIO f84r  (section: biological)
+1) Open and LOOK at the scan(s): /Users/user/Documents/Dev/voynich/bal_84r.jpg  (extra ones are crops/details of the same folio)
+2) Read this folio's labels: Read /Users/user/Documents/Dev/voynich/_labels/f84r.json  — a JSON list of {locus, role, words}, the EVA labels in transliteration reading-order.
+
+Locus-code key: Lz=zodiac label, Ls=star label, Lf=label-on-figure, L0=generic label, Ln/Lt/Lc=label variants, Cc=circular text, Ri/Ro=radial text (inward/outward).
+
+YOUR JOB — ground POSITION and REFERENT; do NOT translate the (undecipherable) script:
+1. Identify what the drawing depicts (central figure, scene, objects).
+2. ZODIAC: identify the central sign/animal and implied month; the folios run in zodiac order (Pisces→Aries→Taurus…). Describe ring structure: how many concentric rings of star-labels, ~how many per ring, clockwise from 12 o'clock.
+3. BALNEO: locate nymphs/basins/tubes; which element each label group sits beside.
+4. PHARMA: link each Lf label to the specific jar/container/plant-part it labels (these sit next to objects — most groundable).
+5. COSMO/astronomical: describe rings/radial spokes the Cc/Ri/Ro text occupies.
+Map each labelset (by locus code) to the drawn element it annotates, with a spatial position (clock-angle, inner/outer ring, or zone). Be explicit about legibility and confidence; honest "illegible/low confidence" is useful. Return ONLY the structured object.
+--- FINAL REPORT ---
+Done. f84r is a balneological (biological-section) folio with three vertically stacked pools of nymphs, colored vessels, and a long blue conduit feeding the bottom basin — no zodiac or cosmological ring structure, so zodiac/month/ring fields are null. The 4 label loci are all label variants (@Lt, @/+/=Ln) embedded in the figure clusters rather than ring/spoke text; I grounded them to the pool clusters but flagged low confidence on exact per-figure anchoring since the labels are sparse relative to ~28 nymphs. Structured output submitted.
+
+===== SUBAGENT agent-a2bb337404006386d.jsonl =====
+--- TASK PROMPT ---
+You are grounding the LABELS of one Voynich folio to its DRAWING, to build a spatial corpus for a decipherment attack.
+
+FOLIO f70v2  (section: zodiac)
+1) Open and LOOK at the scan(s): /Users/user/Documents/Dev/voynich/pf_70v.jpg, /Users/user/Documents/Dev/voynich/z70v_abril2.jpg, /Users/user/Documents/Dev/voynich/z70v_abrilword.jpg  (extra ones are crops/details of the same folio)
+2) Read this folio's labels: Read /Users/user/Documents/Dev/voynich/_labels/f70v2.json  — a JSON list of {locus, role, words}, the EVA labels in transliteration reading-order.
+
+Locus-code key: Lz=zodiac label, Ls=star label, Lf=label-on-figure, L0=generic label, Ln/Lt/Lc=label variants, Cc=circular text, Ri/Ro=radial text (inward/outward).
+
+YOUR JOB — ground POSITION and REFERENT; do NOT translate the (undecipherable) script:
+1. Identify what the drawing depicts (central figure, scene, objects).
+2. ZODIAC: identify the central sign/animal and implied month; the folios run in zodiac order (Pisces→Aries→Taurus…). Describe ring structure: how many concentric rings of star-labels, ~how many per ring, clockwise from 12 o'clock.
+3. BALNEO: locate nymphs/basins/tubes; which element each label group sits beside.
+4. PHARMA: link each Lf label to the specific jar/container/plant-part it labels (these sit next to objects — most groundable).
+5. COSMO/astronomical: describe rings/radial spokes the Cc/Ri/Ro text occupies.
+Map each labelset (by locus code) to the drawn element it annotates, with a spatial position (clock-angle, inner/outer ring, or zone). Be explicit about legibility and confidence; honest "illegible/low confidence" is useful. Return ONLY the structured object.
+--- FINAL REPORT ---
+Grounded f70v2. Summary of findings:
+
+- Central subject: the Aries ram — a horned goat/ram quadruped eating a green bush, standing on a wavy blue water/ground line, with the marginal gloss "abril" (April) directly beneath it (visible in /Users/user/Documents/Dev/voynich/z70v_p1.jpg and /Users/user/Documents/Dev/voynich/z70v_center.jpg). The adjacent inner medallion (f70v1) holds the two Pisces fish with the "Mars" inscription.
+- Month: April; order is Pisces (f70v1) → Aries (f70v2).
+- Layout: concentric_rings — two rings of star-holding nymph busts (~15 each), clockwise from 12 o'clock, plus a circular inscription band.
+- Label mapping: @Cc = the long circular ring inscription (~100 tokens, not figure-specific); &Lz = ~33 short per-nymph decan labels across both rings; @Lz = a small 4-token isolated label beside one figure/segment.
+- Legibility partially / confidence 0.6: subject and month identification are solid; ring counts and individual nymph-to-label pairing are lower confidence because the f70v2 Aries roundel is a small inset.
+
+EVA tokens were not translated (undecipherable script); only position and referent were grounded.
+
+===== SUBAGENT agent-a2f815549ee146f14.jsonl =====
+--- TASK PROMPT ---
+You are grounding the LABELS of one Voynich folio to its DRAWING, to build a spatial corpus for a decipherment attack.
+
+FOLIO f70v1  (section: zodiac)
+1) Open and LOOK at the scan(s): /Users/user/Documents/Dev/voynich/pf_70v.jpg, /Users/user/Documents/Dev/voynich/z70v_abril2.jpg, /Users/user/Documents/Dev/voynich/z70v_abrilword.jpg  (extra ones are crops/details of the same folio)
+2) Read this folio's labels: Read /Users/user/Documents/Dev/voynich/_labels/f70v1.json  — a JSON list of {locus, role, words}, the EVA labels in transliteration reading-order.
+
+Locus-code key: Lz=zodiac label, Ls=star label, Lf=label-on-figure, L0=generic label, Ln/Lt/Lc=label variants, Cc=circular text, Ri/Ro=radial text (inward/outward).
+
+YOUR JOB — ground POSITION and REFERENT; do NOT translate the (undecipherable) script:
+1. Identify what the drawing depicts (central figure, scene, objects).
+2. ZODIAC: identify the central sign/animal and implied month; the folios run in zodiac order (Pisces→Aries→Taurus…). Describe ring structure: how many concentric rings of star-labels, ~how many per ring, clockwise from 12 o'clock.
+3. BALNEO: locate nymphs/basins/tubes; which element each label group sits beside.
+4. PHARMA: link each Lf label to the specific jar/container/plant-part it labels (these sit next to objects — most groundable).
+5. COSMO/astronomical: describe rings/radial spokes the Cc/Ri/Ro text occupies.
+Map each labelset (by locus code) to the drawn element it annotates, with a spatial position (clock-angle, inner/outer ring, or zone). Be explicit about legibility and confidence; honest "illegible/low confidence" is useful. Return ONLY the structured object.
+--- FINAL REPORT ---
+I've grounded folio f70v1 and returned the structured result. Summary of findings:
+
+- **Subject**: Pisces zodiac roundel — two fish at the medallion center, arranged head-to-tail (clearest in `/Users/user/Documents/Dev/voynich/z70v_p0.jpg`), with a short central label between them.
+- **Month**: February–March (Pisces precedes Aries in the manuscript sequence).
+- **Layout**: concentric rings — central two-fish figure surrounded by ~2 rings of ~30 nymph figures, most beside a star, with a continuous circular text band.
+- **Label mapping**: `@Cc` = the encircling running-text band (59 words, full 360°); `@Lz` = the central/zodiac cluster anchored on the fish and nearest inner labels near 12 o'clock; `&Lz` = the per-nymph star labels distributed clockwise around the two rings.
+- **Important correction**: the "abril"/April marginal annotation visible at upper-right (`z70v_abrilword.jpg`, `z70v_center.jpg`) belongs to the adjacent **Aries** goat/ram figure, not to the Pisces center — it should not be read as labeling this diagram's central fish.
+
+Confidence 0.55; legibility partial (central word and ring script visible, several outer-ring words blur at this resolution). Script left untranslated per instructions.
+
+===== SUBAGENT agent-a322302819011f387.jsonl =====
+--- TASK PROMPT ---
+You are grounding the LABELS of one Voynich folio to its DRAWING, to build a spatial corpus for a decipherment attack.
+
+FOLIO f73v  (section: zodiac)
+1) Open and LOOK at the scan(s): /Users/user/Documents/Dev/voynich/pf_73v.jpg, /Users/user/Documents/Dev/voynich/z73v_center.jpg  (extra ones are crops/details of the same folio)
+2) Read this folio's labels: Read /Users/user/Documents/Dev/voynich/_labels/f73v.json  — a JSON list of {locus, role, words}, the EVA labels in transliteration reading-order.
+
+Locus-code key: Lz=zodiac label, Ls=star label, Lf=label-on-figure, L0=generic label, Ln/Lt/Lc=label variants, Cc=circular text, Ri/Ro=radial text (inward/outward).
+
+YOUR JOB — ground POSITION and REFERENT; do NOT translate the (undecipherable) script:
+1. Identify what the drawing depicts (central figure, scene, objects).
+2. ZODIAC: identify the central sign/animal and implied month; the folios run in zodiac order (Pisces→Aries→Taurus…). Describe ring structure: how many concentric rings of star-labels, ~how many per ring, clockwise from 12 o'clock.
+3. BALNEO: locate nymphs/basins/tubes; which element each label group sits beside.
+4. PHARMA: link each Lf label to the specific jar/container/plant-part it labels (these sit next to objects — most groundable).
+5. COSMO/astronomical: describe rings/radial spokes the Cc/Ri/Ro text occupies.
+Map each labelset (by locus code) to the drawn element it annotates, with a spatial position (clock-angle, inner/outer ring, or zone). Be explicit about legibility and confidence; honest "illegible/low confidence" is useful. Return ONLY the structured object.
+--- FINAL REPORT ---
+Grounded f73v. Summary: it is the Sagittarius zodiac rondel (central clothed archer drawing a crossbow, the Voynich Sagittarius = November). Layout is concentric rings: two rings of ~30 star-bearing nymph figures plus the conventional top trio, all enclosed by an outer circular text band.
+
+Label grounding from /Users/user/Documents/Dev/voynich/_labels/f73v.json:
+- @Lz (3 words) → central zodiac caption near the archer.
+- &Lz (28 words) → the per-figure star labels around both rings, but the file lumps them into one run, so word-to-figure mapping is by clockwise reading-order only, not exact clock-angle (low confidence per word).
+- @Cc (~66 words) → the outer circular inscription, read clockwise around the full disk.
+
+Legibility partial; overall identification high-confidence, per-word spatial assignment low-confidence due to the coarse transliteration.
+
+===== SUBAGENT agent-a32dce8174b007af5.jsonl =====
+--- TASK PROMPT ---
+You are grounding the LABELS of one Voynich folio to its DRAWING, to build a spatial corpus for a decipherment attack.
+
+FOLIO f83v  (section: biological)
+1) Open and LOOK at the scan(s): /Users/user/Documents/Dev/voynich/bal_83v.jpg  (extra ones are crops/details of the same folio)
+2) Read this folio's labels: Read /Users/user/Documents/Dev/voynich/_labels/f83v.json  — a JSON list of {locus, role, words}, the EVA labels in transliteration reading-order.
+
+Locus-code key: Lz=zodiac label, Ls=star label, Lf=label-on-figure, L0=generic label, Ln/Lt/Lc=label variants, Cc=circular text, Ri/Ro=radial text (inward/outward).
+
+YOUR JOB — ground POSITION and REFERENT; do NOT translate the (undecipherable) script:
+1. Identify what the drawing depicts (central figure, scene, objects).
+2. ZODIAC: identify the central sign/animal and implied month; the folios run in zodiac order (Pisces→Aries→Taurus…). Describe ring structure: how many concentric rings of star-labels, ~how many per ring, clockwise from 12 o'clock.
+3. BALNEO: locate nymphs/basins/tubes; which element each label group sits beside.
+4. PHARMA: link each Lf label to the specific jar/container/plant-part it labels (these sit next to objects — most groundable).
+5. COSMO/astronomical: describe rings/radial spokes the Cc/Ri/Ro text occupies.
+Map each labelset (by locus code) to the drawn element it annotates, with a spatial position (clock-angle, inner/outer ring, or zone). Be explicit about legibility and confidence; honest "illegible/low confidence" is useful. Return ONLY the structured object.
+--- FINAL REPORT ---
+Grounded both labels for f83v. This is a balneological folio with a central pool-and-tube scene flanked by two nymphs, and the two label loci (@Lt three-word group, @Ln single word) each sit beside one of those flanking figures. Full details are in the structured output.
+
+===== SUBAGENT agent-a449f64f37701803f.jsonl =====
+--- TASK PROMPT ---
+You are grounding the LABELS of one Voynich folio to its DRAWING, to build a spatial corpus for a decipherment attack.
+
+FOLIO f1r  (section: text)
+1) Open and LOOK at the scan(s): /Users/user/Documents/Dev/voynich/pf_1r.jpg  (extra ones are crops/details of the same folio)
+2) Read this folio's labels: Read /Users/user/Documents/Dev/voynich/_labels/f1r.json  — a JSON list of {locus, role, words}, the EVA labels in transliteration reading-order.
+
+Locus-code key: Lz=zodiac label, Ls=star label, Lf=label-on-figure, L0=generic label, Ln/Lt/Lc=label variants, Cc=circular text, Ri/Ro=radial text (inward/outward).
+
+YOUR JOB — ground POSITION and REFERENT; do NOT translate the (undecipherable) script:
+1. Identify what the drawing depicts (central figure, scene, objects).
+2. ZODIAC: identify the central sign/animal and implied month; the folios run in zodiac order (Pisces→Aries→Taurus…). Describe ring structure: how many concentric rings of star-labels, ~how many per ring, clockwise from 12 o'clock.
+3. BALNEO: locate nymphs/basins/tubes; which element each label group sits beside.
+4. PHARMA: link each Lf label to the specific jar/container/plant-part it labels (these sit next to objects — most groundable).
+5. COSMO/astronomical: describe rings/radial spokes the Cc/Ri/Ro text occupies.
+Map each labelset (by locus code) to the drawn element it annotates, with a spatial position (clock-angle, inner/outer ring, or zone). Be explicit about legibility and confidence; honest "illegible/low confidence" is useful. Return ONLY the structured object.
+--- FINAL REPORT ---
+f1r is the manuscript's opening text page (herbal/text section), not a diagram folio. I grounded what little there is and returned the structured object. Key findings:
+
+- No central figure, zodiac wheel, ring/spoke system, nymph/basin scene, or pharma container exists on this page. It is four blocks of running Voynichese prose.
+- Only graphic content: faded pale-green foliage-like color staining in the upper-central area, and two decorated maroon paragraph-initial flourishes in the left margin (starting paragraphs 2 and 3).
+- The labels file (/Users/user/Documents/Dev/voynich/_labels/f1r.json) contains only two non-standard `@Lx`/`+Lx` loci with single stray characters (d, g, r) — marginal/line-terminal stray glyphs with no drawn referent, hence ungroundable.
+- No month/zodiac/ring data applies. Confidence 0.9 on section identification; legibility "illegible" (undeciphered script, no figure-labels).
+
+===== SUBAGENT agent-a4606f81e76ca6b0b.jsonl =====
+--- TASK PROMPT ---
+You are grounding the LABELS of one Voynich folio to its DRAWING, to build a spatial corpus for a decipherment attack.
+
+FOLIO f80r  (section: biological)
+1) Open and LOOK at the scan(s): /Users/user/Documents/Dev/voynich/bal_80r.jpg  (extra ones are crops/details of the same folio)
+2) Read this folio's labels: Read /Users/user/Documents/Dev/voynich/_labels/f80r.json  — a JSON list of {locus, role, words}, the EVA labels in transliteration reading-order.
+
+Locus-code key: Lz=zodiac label, Ls=star label, Lf=label-on-figure, L0=generic label, Ln/Lt/Lc=label variants, Cc=circular text, Ri/Ro=radial text (inward/outward).
+
+YOUR JOB — ground POSITION and REFERENT; do NOT translate the (undecipherable) script:
+1. Identify what the drawing depicts (central figure, scene, objects).
+2. ZODIAC: identify the central sign/animal and implied month; the folios run in zodiac order (Pisces→Aries→Taurus…). Describe ring structure: how many concentric rings of star-labels, ~how many per ring, clockwise from 12 o'clock.
+3. BALNEO: locate nymphs/basins/tubes; which element each label group sits beside.
+4. PHARMA: link each Lf label to the specific jar/container/plant-part it labels (these sit next to objects — most groundable).
+5. COSMO/astronomical: describe rings/radial spokes the Cc/Ri/Ro text occupies.
+Map each labelset (by locus code) to the drawn element it annotates, with a spatial position (clock-angle, inner/outer ring, or zone). Be explicit about legibility and confidence; honest "illegible/low confidence" is useful. Return ONLY the structured object.
+--- FINAL REPORT ---
+Grounded f80r. It is a balneological/biological-section text page, not a zodiac or cosmological folio. The only figural content is a top-row frieze of nude nymphs (several crowned) standing on an undulating water/ground line, with the four Ln label groups sitting in the gaps above them (reading left to right), plus two small unlabeled marginal vessels at lower-left and lower-right. No rings, spokes, or circular text exist. Structured output returned.
+
+Relevant files: /Users/user/Documents/Dev/voynich/bal_80r.jpg and /Users/user/Documents/Dev/voynich/_labels/f80r.json.
+
+===== SUBAGENT agent-a4baa3c44c5f9e469.jsonl =====
+--- TASK PROMPT ---
+You are grounding the LABELS of one Voynich folio to its DRAWING, to build a spatial corpus for a decipherment attack.
+
+FOLIO f69r  (section: cosmological)
+1) Open and LOOK at the scan(s): /Users/user/Documents/Dev/voynich/iiif_69r.jpg  (extra ones are crops/details of the same folio)
+2) Read this folio's labels: Read /Users/user/Documents/Dev/voynich/_labels/f69r.json  — a JSON list of {locus, role, words}, the EVA labels in transliteration reading-order.
+
+Locus-code key: Lz=zodiac label, Ls=star label, Lf=label-on-figure, L0=generic label, Ln/Lt/Lc=label variants, Cc=circular text, Ri/Ro=radial text (inward/outward).
+
+YOUR JOB — ground POSITION and REFERENT; do NOT translate the (undecipherable) script:
+1. Identify what the drawing depicts (central figure, scene, objects).
+2. ZODIAC: identify the central sign/animal and implied month; the folios run in zodiac order (Pisces→Aries→Taurus…). Describe ring structure: how many concentric rings of star-labels, ~how many per ring, clockwise from 12 o'clock.
+3. BALNEO: locate nymphs/basins/tubes; which element each label group sits beside.
+4. PHARMA: link each Lf label to the specific jar/container/plant-part it labels (these sit next to objects — most groundable).
+5. COSMO/astronomical: describe rings/radial spokes the Cc/Ri/Ro text occupies.
+Map each labelset (by locus code) to the drawn element it annotates, with a spatial position (clock-angle, inner/outer ring, or zone). Be explicit about legibility and confidence; honest "illegible/low confidence" is useful. Return ONLY the structured object.
+--- FINAL REPORT ---
+Grounded f69r. It is a cosmological rosette/star-wheel diagram (no zodiac sign, no nymphs, no jars), so I mapped the four label sets to drawing zones by their locus role rather than to discrete objects. Source scan: /Users/user/Documents/Dev/voynich/iiif_69r.jpg; labels: /Users/user/Documents/Dev/voynich/_labels/f69r.json. Structured output returned via the tool.
+
+===== SUBAGENT agent-a4e2927103c5084e6.jsonl =====
+--- TASK PROMPT ---
+You are grounding the LABELS of one Voynich folio to its DRAWING, to build a spatial corpus for a decipherment attack.
+
+FOLIO f88r  (section: pharmaceutical)
+1) Open and LOOK at the scan(s): /Users/user/Documents/Dev/voynich/iiif_88r.jpg  (extra ones are crops/details of the same folio)
+2) Read this folio's labels: Read /Users/user/Documents/Dev/voynich/_labels/f88r.json  — a JSON list of {locus, role, words}, the EVA labels in transliteration reading-order.
+
+Locus-code key: Lz=zodiac label, Ls=star label, Lf=label-on-figure, L0=generic label, Ln/Lt/Lc=label variants, Cc=circular text, Ri/Ro=radial text (inward/outward).
+
+YOUR JOB — ground POSITION and REFERENT; do NOT translate the (undecipherable) script:
+1. Identify what the drawing depicts (central figure, scene, objects).
+2. ZODIAC: identify the central sign/animal and implied month; the folios run in zodiac order (Pisces→Aries→Taurus…). Describe ring structure: how many concentric rings of star-labels, ~how many per ring, clockwise from 12 o'clock.
+3. BALNEO: locate nymphs/basins/tubes; which element each label group sits beside.
+4. PHARMA: link each Lf label to the specific jar/container/plant-part it labels (these sit next to objects — most groundable).
+5. COSMO/astronomical: describe rings/radial spokes the Cc/Ri/Ro text occupies.
+Map each labelset (by locus code) to the drawn element it annotates, with a spatial position (clock-angle, inner/outer ring, or zone). Be explicit about legibility and confidence; honest "illegible/low confidence" is useful. Return ONLY the structured object.
+--- FINAL REPORT ---
+Grounded f88r. Summary of findings:
+
+f88r is a pharmaceutical herbal page, not a circular/zodiac diagram, so no rings, spokes, nymphs, or zodiac sign apply. Layout is three horizontal registers of detached plant parts (brown taproots/rootstocks plus green leaf tufts) each over a text block, with a left-margin column of three ornate apothecary jars (albarelli, red/green/white banded).
+
+Label grounding (from /Users/user/Documents/Dev/voynich/_labels/f88r.json):
+- @Lf (13 tokens) — label-on-figure set, grounded to the top-register row of detached root/leaf specimens; tokens run left-to-right as per-specimen names. With ~6 visible specimens and 13 tokens, some specimens carry multi-word labels or the row spills into the next register.
+- @Lc (3 tokens) — label-variant caption attached to a specimen in the upper-middle region.
+
+Legibility is partial (faint script, single scan only — no detail crops of f88r exist in the directory), so token-to-specimen mapping is positional inference. The three left-margin jars are the most distinctive icons but are not tied to any locus in the provided JSON, so I did not force a jar link. Confidence 0.5.
+
+===== SUBAGENT agent-a564666b7a93bc9af.jsonl =====
+--- TASK PROMPT ---
+You are grounding the LABELS of one Voynich folio to its DRAWING, to build a spatial corpus for a decipherment attack.
+
+FOLIO f72v1  (section: zodiac)
+1) Open and LOOK at the scan(s): /Users/user/Documents/Dev/voynich/pf_72v.jpg, /Users/user/Documents/Dev/voynich/z72v0_word.jpg, /Users/user/Documents/Dev/voynich/z72v1_word.jpg  (extra ones are crops/details of the same folio)
+2) Read this folio's labels: Read /Users/user/Documents/Dev/voynich/_labels/f72v1.json  — a JSON list of {locus, role, words}, the EVA labels in transliteration reading-order.
+
+Locus-code key: Lz=zodiac label, Ls=star label, Lf=label-on-figure, L0=generic label, Ln/Lt/Lc=label variants, Cc=circular text, Ri/Ro=radial text (inward/outward).
+
+YOUR JOB — ground POSITION and REFERENT; do NOT translate the (undecipherable) script:
+1. Identify what the drawing depicts (central figure, scene, objects).
+2. ZODIAC: identify the central sign/animal and implied month; the folios run in zodiac order (Pisces→Aries→Taurus…). Describe ring structure: how many concentric rings of star-labels, ~how many per ring, clockwise from 12 o'clock.
+3. BALNEO: locate nymphs/basins/tubes; which element each label group sits beside.
+4. PHARMA: link each Lf label to the specific jar/container/plant-part it labels (these sit next to objects — most groundable).
+5. COSMO/astronomical: describe rings/radial spokes the Cc/Ri/Ro text occupies.
+Map each labelset (by locus code) to the drawn element it annotates, with a spatial position (clock-angle, inner/outer ring, or zone). Be explicit about legibility and confidence; honest "illegible/low confidence" is useful. Return ONLY the structured object.
+--- FINAL REPORT ---
+Grounded f72v1. It is the right-hand zodiac roundel on folio 72v: a central blue-robed female personification (star-tipped staff + blue dotted ray-spray, an 8-pointed star at her left, and a brown-ink later month-gloss at lower-left), surrounded by two concentric rings of nude nymphs each holding an 8-pointed star (~15 per ring, ~30 total). The @Cc labelset is the circular running-text band along the rim (75 words, not per-figure), while @Lz (2 words) and &Lz (28 words) are the per-figure zodiac/star labels sitting beneath the ring nymphs. Sign best-guess Leo (July/Aug) from sequence position plus the month-gloss, at lower confidence since no diagnostic central animal emblem is legibly drawn in this scan. Structure grounding is high confidence; label legibility is partial (glyphs visible, not translated).
+
+Relevant files: /Users/user/Documents/Dev/voynich/pf_72v.jpg, /Users/user/Documents/Dev/voynich/_labels/f72v1.json.
+
+===== SUBAGENT agent-a5a3c42e0cc6c197e.jsonl =====
+--- TASK PROMPT ---
+You are grounding the LABELS of one Voynich folio to its DRAWING, to build a spatial corpus for a decipherment attack.
+
+FOLIO f76r  (section: biological)
+1) Open and LOOK at the scan(s): /Users/user/Documents/Dev/voynich/bal_76r.jpg  (extra ones are crops/details of the same folio)
+2) Read this folio's labels: Read /Users/user/Documents/Dev/voynich/_labels/f76r.json  — a JSON list of {locus, role, words}, the EVA labels in transliteration reading-order.
+
+Locus-code key: Lz=zodiac label, Ls=star label, Lf=label-on-figure, L0=generic label, Ln/Lt/Lc=label variants, Cc=circular text, Ri/Ro=radial text (inward/outward).
+
+YOUR JOB — ground POSITION and REFERENT; do NOT translate the (undecipherable) script:
+1. Identify what the drawing depicts (central figure, scene, objects).
+2. ZODIAC: identify the central sign/animal and implied month; the folios run in zodiac order (Pisces→Aries→Taurus…). Describe ring structure: how many concentric rings of star-labels, ~how many per ring, clockwise from 12 o'clock.
+3. BALNEO: locate nymphs/basins/tubes; which element each label group sits beside.
+4. PHARMA: link each Lf label to the specific jar/container/plant-part it labels (these sit next to objects — most groundable).
+5. COSMO/astronomical: describe rings/radial spokes the Cc/Ri/Ro text occupies.
+Map each labelset (by locus code) to the drawn element it annotates, with a spatial position (clock-angle, inner/outer ring, or zone). Be explicit about legibility and confidence; honest "illegible/low confidence" is useful. Return ONLY the structured object.
+--- FINAL REPORT ---
+f76r is a text-only folio with no drawing to ground labels against. The scan at /Users/user/Documents/Dev/voynich/bal_76r.jpg shows full-page continuous prose (no central figure, nymphs, basins, jars, rings, or zodiac sign). The labels file /Users/user/Documents/Dev/voynich/_labels/f76r.json contains a single generic `*L0` entry with no pictorial referent. No spatial label-to-element links are possible for this folio.
+
+===== SUBAGENT agent-a6495ee3c7fd5cddd.jsonl =====
+--- TASK PROMPT ---
+You are grounding the LABELS of one Voynich folio to its DRAWING, to build a spatial corpus for a decipherment attack.
+
+FOLIO f82r  (section: biological)
+1) Open and LOOK at the scan(s): /Users/user/Documents/Dev/voynich/bal_82r.jpg  (extra ones are crops/details of the same folio)
+2) Read this folio's labels: Read /Users/user/Documents/Dev/voynich/_labels/f82r.json  — a JSON list of {locus, role, words}, the EVA labels in transliteration reading-order.
+
+Locus-code key: Lz=zodiac label, Ls=star label, Lf=label-on-figure, L0=generic label, Ln/Lt/Lc=label variants, Cc=circular text, Ri/Ro=radial text (inward/outward).
+
+YOUR JOB — ground POSITION and REFERENT; do NOT translate the (undecipherable) script:
+1. Identify what the drawing depicts (central figure, scene, objects).
+2. ZODIAC: identify the central sign/animal and implied month; the folios run in zodiac order (Pisces→Aries→Taurus…). Describe ring structure: how many concentric rings of star-labels, ~how many per ring, clockwise from 12 o'clock.
+3. BALNEO: locate nymphs/basins/tubes; which element each label group sits beside.
+4. PHARMA: link each Lf label to the specific jar/container/plant-part it labels (these sit next to objects — most groundable).
+5. COSMO/astronomical: describe rings/radial spokes the Cc/Ri/Ro text occupies.
+Map each labelset (by locus code) to the drawn element it annotates, with a spatial position (clock-angle, inner/outer ring, or zone). Be explicit about legibility and confidence; honest "illegible/low confidence" is useful. Return ONLY the structured object.
+--- FINAL REPORT ---
+Grounded f82r. It is a balneological folio (no zodiac/cosmo rings), so the StructuredOutput reflects nymph/conduit grounding rather than ring structure.
+
+Key findings:
+- **Subject**: text-heavy balneo page with a green bathing pool of nymph busts along the bottom, marginal nymphs in tub-vessels, and a mid-band cup-and-conduit apparatus terminating in a star/sun rosette.
+- **@Lt** (`orol dain darol daryry`) is the highest-confidence link: written directly ON the horizontal conduit/tube beside the two cylindrical containers in the middle band.
+- **@Ln / +Ln / *Ln / =Ln** are short labels under individual nymph heads emerging from the bottom green pool, mapped left-to-right; `sororl` and a `sokoly`-like token are legibly visible.
+- No Cc/Ri/Ro/Lz/Ls loci, no concentric rings — confidence 0.55, with the conduit label far more certain than the per-nymph assignments.
+
+Relevant files: `/Users/user/Documents/Dev/voynich/bal_82r.jpg`, `/Users/user/Documents/Dev/voynich/_labels/f82r.json`.
+
+===== SUBAGENT agent-a86324bbe8811151e.jsonl =====
+--- TASK PROMPT ---
+You are grounding the LABELS of one Voynich folio to its DRAWING, to build a spatial corpus for a decipherment attack.
+
+FOLIO f67r1  (section: astronomical)
+1) Open and LOOK at the scan(s): /Users/user/Documents/Dev/voynich/iiif_67r.jpg  (extra ones are crops/details of the same folio)
+2) Read this folio's labels: Read /Users/user/Documents/Dev/voynich/_labels/f67r1.json  — a JSON list of {locus, role, words}, the EVA labels in transliteration reading-order.
+
+Locus-code key: Lz=zodiac label, Ls=star label, Lf=label-on-figure, L0=generic label, Ln/Lt/Lc=label variants, Cc=circular text, Ri/Ro=radial text (inward/outward).
+
+YOUR JOB — ground POSITION and REFERENT; do NOT translate the (undecipherable) script:
+1. Identify what the drawing depicts (central figure, scene, objects).
+2. ZODIAC: identify the central sign/animal and implied month; the folios run in zodiac order (Pisces→Aries→Taurus…). Describe ring structure: how many concentric rings of star-labels, ~how many per ring, clockwise from 12 o'clock.
+3. BALNEO: locate nymphs/basins/tubes; which element each label group sits beside.
+4. PHARMA: link each Lf label to the specific jar/container/plant-part it labels (these sit next to objects — most groundable).
+5. COSMO/astronomical: describe rings/radial spokes the Cc/Ri/Ro text occupies.
+Map each labelset (by locus code) to the drawn element it annotates, with a spatial position (clock-angle, inner/outer ring, or zone). Be explicit about legibility and confidence; honest "illegible/low confidence" is useful. Return ONLY the structured object.
+--- FINAL REPORT ---
+I've grounded folio f67r1. Summary:
+
+f67r1 is the left-hand diagram of folio 67r — a cosmological sun rosette (astronomical section), not a zodiac medallion. Structure from center outward: anthropomorphic Sun face → corona of ~16-17 alternating red/blue rays → a ring of ~17 gold star emblems each with a short radial caption → outer annulus with two concentric bands of running cursive text.
+
+Label grounding:
+- @Ri (17 words): the radial star captions — one per star in the star ring, distributed clockwise. Cleanest 1:1 grounding (word count matches star/sector count).
+- @Cc (36 words): inner of the two concentric circular running-text bands in the outer annulus.
+- +Cc (66 words): outermost circular text band at the disk rim.
+
+Legibility partial (strokes clear, script undecipherable; top captions clearest, bottom text inverted). Confidence 0.6 — the @Ri-to-star mapping is solid; the inner/outer assignment of @Cc vs +Cc is the weaker point.
+
+Relevant files:
+- /Users/user/Documents/Dev/voynich/iiif_67r.jpg (scan; f67r1 = left disk)
+- /Users/user/Documents/Dev/voynich/_labels/f67r1.json (labels)
+
+===== SUBAGENT agent-a90d4c977188cb7d2.jsonl =====
+--- TASK PROMPT ---
+You are grounding the LABELS of one Voynich folio to its DRAWING, to build a spatial corpus for a decipherment attack.
+
+FOLIO f72r3  (section: zodiac)
+1) Open and LOOK at the scan(s): /Users/user/Documents/Dev/voynich/pf_72r.jpg, /Users/user/Documents/Dev/voynich/z72r_A.jpg, /Users/user/Documents/Dev/voynich/z72r_Aword.jpg  (extra ones are crops/details of the same folio)
+2) Read this folio's labels: Read /Users/user/Documents/Dev/voynich/_labels/f72r3.json  — a JSON list of {locus, role, words}, the EVA labels in transliteration reading-order.
+
+Locus-code key: Lz=zodiac label, Ls=star label, Lf=label-on-figure, L0=generic label, Ln/Lt/Lc=label variants, Cc=circular text, Ri/Ro=radial text (inward/outward).
+
+YOUR JOB — ground POSITION and REFERENT; do NOT translate the (undecipherable) script:
+1. Identify what the drawing depicts (central figure, scene, objects).
+2. ZODIAC: identify the central sign/animal and implied month; the folios run in zodiac order (Pisces→Aries→Taurus…). Describe ring structure: how many concentric rings of star-labels, ~how many per ring, clockwise from 12 o'clock.
+3. BALNEO: locate nymphs/basins/tubes; which element each label group sits beside.
+4. PHARMA: link each Lf label to the specific jar/container/plant-part it labels (these sit next to objects — most groundable).
+5. COSMO/astronomical: describe rings/radial spokes the Cc/Ri/Ro text occupies.
+Map each labelset (by locus code) to the drawn element it annotates, with a spatial position (clock-angle, inner/outer ring, or zone). Be explicit about legibility and confidence; honest "illegible/low confidence" is useful. Return ONLY the structured object.
+--- FINAL REPORT ---
+Grounded f72r3 as the Aries zodiac wheel. Summary:
+
+- Central figure: red/orange ram standing on green grass (Aries, implied month April), with a small word-caption tucked under its belly.
+- Ring structure: two concentric rings of star-labels, each star tethered to a small clothed nymph/figure, ~15 per ring (~30 total), running clockwise from 12 o'clock.
+- Label grounding: `@Cc` = the long circular band text (~120 words) encircling the central ram medallion; `&Lz` = the bulk of discrete star-labels (~43 word-groups, one per star/figure across both rings); `@Lz` = one short isolated 4-word label beside a single figure or the medallion edge.
+- Legibility partial, confidence 0.6 — sign identification is solid; per-label clock-angles and exact star counts on the inverted lower arc are approximate.
+
+Relevant files: `/Users/user/Documents/Dev/voynich/pf_72r.jpg`, `/Users/user/Documents/Dev/voynich/z72r_A.jpg`, `/Users/user/Documents/Dev/voynich/z72r_Aword.jpg`, `/Users/user/Documents/Dev/voynich/_labels/f72r3.json`.
+
+===== SUBAGENT agent-a9bd7887702127d6d.jsonl =====
+--- TASK PROMPT ---
+You are grounding the LABELS of one Voynich folio to its DRAWING, to build a spatial corpus for a decipherment attack.
+
+FOLIO f71r  (section: zodiac)
+1) Open and LOOK at the scan(s): /Users/user/Documents/Dev/voynich/iiif_71r.jpg  (extra ones are crops/details of the same folio)
+2) Read this folio's labels: Read /Users/user/Documents/Dev/voynich/_labels/f71r.json  — a JSON list of {locus, role, words}, the EVA labels in transliteration reading-order.
+
+Locus-code key: Lz=zodiac label, Ls=star label, Lf=label-on-figure, L0=generic label, Ln/Lt/Lc=label variants, Cc=circular text, Ri/Ro=radial text (inward/outward).
+
+YOUR JOB — ground POSITION and REFERENT; do NOT translate the (undecipherable) script:
+1. Identify what the drawing depicts (central figure, scene, objects).
+2. ZODIAC: identify the central sign/animal and implied month; the folios run in zodiac order (Pisces→Aries→Taurus…). Describe ring structure: how many concentric rings of star-labels, ~how many per ring, clockwise from 12 o'clock.
+3. BALNEO: locate nymphs/basins/tubes; which element each label group sits beside.
+4. PHARMA: link each Lf label to the specific jar/container/plant-part it labels (these sit next to objects — most groundable).
+5. COSMO/astronomical: describe rings/radial spokes the Cc/Ri/Ro text occupies.
+Map each labelset (by locus code) to the drawn element it annotates, with a spatial position (clock-angle, inner/outer ring, or zone). Be explicit about legibility and confidence; honest "illegible/low confidence" is useful. Return ONLY the structured object.
+--- FINAL REPORT ---
+Grounded f71r. Summary of findings:
+
+Folio f71r is a zodiac diagram. The central medallion holds a single quadruped beast in profile (the Voynich "dark Aries" ram/goat figure) with a gaping open mouth and a green segmented mane, with a word written across its flank (visible in /Users/user/Documents/Dev/voynich/f71r_word.jpg). Placement in the Pisces→Aries→Taurus sequence makes this Aries / April (moderate confidence — the beast reads ambiguously ram vs goat).
+
+Label grounding:
+- @Cc → the concentric circular running-text band(s) between the medallion and the figure ring (71 tokens, read around the full circle; not anchored to one object).
+- @Lz → a single peripheral zodiac figure/star in the outer ring (4-word annotation).
+- &Lz → the sequence of peripheral nymph figures/stars around the ring (15 tokens, one per figure, clockwise reading order).
+
+Drawing also shows ~10 peripheral human figures, several standing in colored tub/barrels (blue/green/red), each with a star.
+
+Relevant files: /Users/user/Documents/Dev/voynich/iiif_71r.jpg (full scan), /Users/user/Documents/Dev/voynich/f71r_center.jpg (central beast), /Users/user/Documents/Dev/voynich/f71r_word.jpg (label-on-figure). Note: pdf_p204.jpeg is an unrelated text page. One caveat: the central animal's body-word is a real label-on-figure but is not present as a locus in /Users/user/Documents/Dev/voynich/_labels/f71r.json (which only lists @Cc, @Lz, &Lz).
+
+===== SUBAGENT agent-ab3a2598d3e78a35a.jsonl =====
+--- TASK PROMPT ---
+You are grounding the LABELS of one Voynich folio to its DRAWING, to build a spatial corpus for a decipherment attack.
+
+FOLIO f83r  (section: biological)
+1) Open and LOOK at the scan(s): /Users/user/Documents/Dev/voynich/bal_83r.jpg  (extra ones are crops/details of the same folio)
+2) Read this folio's labels: Read /Users/user/Documents/Dev/voynich/_labels/f83r.json  — a JSON list of {locus, role, words}, the EVA labels in transliteration reading-order.
+
+Locus-code key: Lz=zodiac label, Ls=star label, Lf=label-on-figure, L0=generic label, Ln/Lt/Lc=label variants, Cc=circular text, Ri/Ro=radial text (inward/outward).
+
+YOUR JOB — ground POSITION and REFERENT; do NOT translate the (undecipherable) script:
+1. Identify what the drawing depicts (central figure, scene, objects).
+2. ZODIAC: identify the central sign/animal and implied month; the folios run in zodiac order (Pisces→Aries→Taurus…). Describe ring structure: how many concentric rings of star-labels, ~how many per ring, clockwise from 12 o'clock.
+3. BALNEO: locate nymphs/basins/tubes; which element each label group sits beside.
+4. PHARMA: link each Lf label to the specific jar/container/plant-part it labels (these sit next to objects — most groundable).
+5. COSMO/astronomical: describe rings/radial spokes the Cc/Ri/Ro text occupies.
+Map each labelset (by locus code) to the drawn element it annotates, with a spatial position (clock-angle, inner/outer ring, or zone). Be explicit about legibility and confidence; honest "illegible/low confidence" is useful. Return ONLY the structured object.
+--- FINAL REPORT ---
+Grounded f83r. It is a biological/balneological folio (no zodiac/cosmo rings). The three Lt labels float within the lower-left water apparatus and I mapped each by spatial proximity: `olsaiin` (=Lt) at the tip of the nymph's liquid stream-strands, `darolsy` (+Lt) over the blue water pool below, and `chtorol saroldal` (@Lt) at the confluence/tube-head above. Relevant files: scan `/Users/user/Documents/Dev/voynich/bal_83r.jpg`, labels `/Users/user/Documents/Dev/voynich/_labels/f83r.json`.
+
+===== SUBAGENT agent-abbbbf4977f8e6846.jsonl =====
+--- TASK PROMPT ---
+You are grounding the LABELS of one Voynich folio to its DRAWING, to build a spatial corpus for a decipherment attack.
+
+FOLIO f73r  (section: zodiac)
+1) Open and LOOK at the scan(s): /Users/user/Documents/Dev/voynich/pf_73r.jpg, /Users/user/Documents/Dev/voynich/z73r_center.jpg, /Users/user/Documents/Dev/voynich/z73r_word.jpg  (extra ones are crops/details of the same folio)
+2) Read this folio's labels: Read /Users/user/Documents/Dev/voynich/_labels/f73r.json  — a JSON list of {locus, role, words}, the EVA labels in transliteration reading-order.
+
+Locus-code key: Lz=zodiac label, Ls=star label, Lf=label-on-figure, L0=generic label, Ln/Lt/Lc=label variants, Cc=circular text, Ri/Ro=radial text (inward/outward).
+
+YOUR JOB — ground POSITION and REFERENT; do NOT translate the (undecipherable) script:
+1. Identify what the drawing depicts (central figure, scene, objects).
+2. ZODIAC: identify the central sign/animal and implied month; the folios run in zodiac order (Pisces→Aries→Taurus…). Describe ring structure: how many concentric rings of star-labels, ~how many per ring, clockwise from 12 o'clock.
+3. BALNEO: locate nymphs/basins/tubes; which element each label group sits beside.
+4. PHARMA: link each Lf label to the specific jar/container/plant-part it labels (these sit next to objects — most groundable).
+5. COSMO/astronomical: describe rings/radial spokes the Cc/Ri/Ro text occupies.
+Map each labelset (by locus code) to the drawn element it annotates, with a spatial position (clock-angle, inner/outer ring, or zone). Be explicit about legibility and confidence; honest "illegible/low confidence" is useful. Return ONLY the structured object.
+--- FINAL REPORT ---
+Done. f73r is a Scorpio zodiac wheel (November), grounded as structured output above.
+
+===== SUBAGENT agent-ad3ebba7c7f53bfd8.jsonl =====
+--- TASK PROMPT ---
+You are grounding the LABELS of one Voynich folio to its DRAWING, to build a spatial corpus for a decipherment attack.
+
+FOLIO f78r  (section: biological)
+1) Open and LOOK at the scan(s): /Users/user/Documents/Dev/voynich/bal_78r.jpg, /Users/user/Documents/Dev/voynich/iiif_78r.jpg, /Users/user/Documents/Dev/voynich/z_78r_pools.jpg  (extra ones are crops/details of the same folio)
+2) Read this folio's labels: Read /Users/user/Documents/Dev/voynich/_labels/f78r.json  — a JSON list of {locus, role, words}, the EVA labels in transliteration reading-order.
+
+Locus-code key: Lz=zodiac label, Ls=star label, Lf=label-on-figure, L0=generic label, Ln/Lt/Lc=label variants, Cc=circular text, Ri/Ro=radial text (inward/outward).
+
+YOUR JOB — ground POSITION and REFERENT; do NOT translate the (undecipherable) script:
+1. Identify what the drawing depicts (central figure, scene, objects).
+2. ZODIAC: identify the central sign/animal and implied month; the folios run in zodiac order (Pisces→Aries→Taurus…). Describe ring structure: how many concentric rings of star-labels, ~how many per ring, clockwise from 12 o'clock.
+3. BALNEO: locate nymphs/basins/tubes; which element each label group sits beside.
+4. PHARMA: link each Lf label to the specific jar/container/plant-part it labels (these sit next to objects — most groundable).
+5. COSMO/astronomical: describe rings/radial spokes the Cc/Ri/Ro text occupies.
+Map each labelset (by locus code) to the drawn element it annotates, with a spatial position (clock-angle, inner/outer ring, or zone). Be explicit about legibility and confidence; honest "illegible/low confidence" is useful. Return ONLY the structured object.
+--- FINAL REPORT ---
+Grounded f78r. It is a biological/balneological folio (two stacked nymph pools joined by a tube, fed by a top pipe-and-rosette apparatus), with a single `@Lt` label-variant set of six short word-tokens floating in the inter-pool corridor on the right side near the connecting tube/outflow and the trio of standing nymphs. No zodiac, pharma, or cosmological structures apply, so no star-rings, jars, or radial spokes to ground. Structured output returned.
+
+Relevant files:
+- /Users/user/Documents/Dev/voynich/_labels/f78r.json
+- /Users/user/Documents/Dev/voynich/bal_78r.jpg
+- /Users/user/Documents/Dev/voynich/iiif_78r.jpg
+- /Users/user/Documents/Dev/voynich/z_78r_pools.jpg
+
+===== SUBAGENT agent-ae54c43bbb1b23705.jsonl =====
+--- TASK PROMPT ---
+You are grounding the LABELS of one Voynich folio to its DRAWING, to build a spatial corpus for a decipherment attack.
+
+FOLIO f77v  (section: biological)
+1) Open and LOOK at the scan(s): /Users/user/Documents/Dev/voynich/bal_77v.jpg  (extra ones are crops/details of the same folio)
+2) Read this folio's labels: Read /Users/user/Documents/Dev/voynich/_labels/f77v.json  — a JSON list of {locus, role, words}, the EVA labels in transliteration reading-order.
+
+Locus-code key: Lz=zodiac label, Ls=star label, Lf=label-on-figure, L0=generic label, Ln/Lt/Lc=label variants, Cc=circular text, Ri/Ro=radial text (inward/outward).
+
+YOUR JOB — ground POSITION and REFERENT; do NOT translate the (undecipherable) script:
+1. Identify what the drawing depicts (central figure, scene, objects).
+2. ZODIAC: identify the central sign/animal and implied month; the folios run in zodiac order (Pisces→Aries→Taurus…). Describe ring structure: how many concentric rings of star-labels, ~how many per ring, clockwise from 12 o'clock.
+3. BALNEO: locate nymphs/basins/tubes; which element each label group sits beside.
+4. PHARMA: link each Lf label to the specific jar/container/plant-part it labels (these sit next to objects — most groundable).
+5. COSMO/astronomical: describe rings/radial spokes the Cc/Ri/Ro text occupies.
+Map each labelset (by locus code) to the drawn element it annotates, with a spatial position (clock-angle, inner/outer ring, or zone). Be explicit about legibility and confidence; honest "illegible/low confidence" is useful. Return ONLY the structured object.
+--- FINAL REPORT ---
+Grounded f77v. Summary: it is a biological/balneological text page (not a zodiac or cosmological folio), so ring/zodiac/radial fields are null. The three label groups attach to marginal nymph-and-vessel drawings: @Ln (sosoral/oleoeder) by the left-margin nymph-in-basin column, =Lt (olkeedal/orchedal/otol/shedy) by the top-right reclining nymph on a horizontal tube plus the coiled serpentine conduit, and @Lt (okain/ykal/okalo/otolor) at the uppermost figure cluster. Legibility partial, overall confidence ~0.45. Images inspected: /Users/user/Documents/Dev/voynich/bal_77v.jpg plus crops at /tmp/lm.png, /tmp/rm.png, /tmp/r_top.png, /tmp/r_snake.png.
+
+===== SUBAGENT agent-aed65c9811f0d96d0.jsonl =====
+--- TASK PROMPT ---
+You are grounding the LABELS of one Voynich folio to its DRAWING, to build a spatial corpus for a decipherment attack.
+
+FOLIO f67r2  (section: astronomical)
+1) Open and LOOK at the scan(s): /Users/user/Documents/Dev/voynich/iiif_67r.jpg  (extra ones are crops/details of the same folio)
+2) Read this folio's labels: Read /Users/user/Documents/Dev/voynich/_labels/f67r2.json  — a JSON list of {locus, role, words}, the EVA labels in transliteration reading-order.
+
+Locus-code key: Lz=zodiac label, Ls=star label, Lf=label-on-figure, L0=generic label, Ln/Lt/Lc=label variants, Cc=circular text, Ri/Ro=radial text (inward/outward).
+
+YOUR JOB — ground POSITION and REFERENT; do NOT translate the (undecipherable) script:
+1. Identify what the drawing depicts (central figure, scene, objects).
+2. ZODIAC: identify the central sign/animal and implied month; the folios run in zodiac order (Pisces→Aries→Taurus…). Describe ring structure: how many concentric rings of star-labels, ~how many per ring, clockwise from 12 o'clock.
+3. BALNEO: locate nymphs/basins/tubes; which element each label group sits beside.
+4. PHARMA: link each Lf label to the specific jar/container/plant-part it labels (these sit next to objects — most groundable).
+5. COSMO/astronomical: describe rings/radial spokes the Cc/Ri/Ro text occupies.
+Map each labelset (by locus code) to the drawn element it annotates, with a spatial position (clock-angle, inner/outer ring, or zone). Be explicit about legibility and confidence; honest "illegible/low confidence" is useful. Return ONLY the structured object.
+--- FINAL REPORT ---
+Completed the grounding for f67r2. It is the right-hand circular cosmological/lunar diagram on scan iiif_67r.jpg (the left disk is f67r1, the famous sunburst face). Mapped the five aggregate label loci to the drawn zones, with crops saved at /tmp/f67r2_zoom2.jpg, /tmp/f67r2_center2.jpg, and /tmp/f67r2_wide2.jpg.
+
+===== SUBAGENT agent-af141fcccffd52bc0.jsonl =====
+--- TASK PROMPT ---
+You are grounding the LABELS of one Voynich folio to its DRAWING, to build a spatial corpus for a decipherment attack.
+
+FOLIO f77r  (section: biological)
+1) Open and LOOK at the scan(s): /Users/user/Documents/Dev/voynich/bal_77r.jpg, /Users/user/Documents/Dev/voynich/z_77r_manifold.jpg  (extra ones are crops/details of the same folio)
+2) Read this folio's labels: Read /Users/user/Documents/Dev/voynich/_labels/f77r.json  — a JSON list of {locus, role, words}, the EVA labels in transliteration reading-order.
+
+Locus-code key: Lz=zodiac label, Ls=star label, Lf=label-on-figure, L0=generic label, Ln/Lt/Lc=label variants, Cc=circular text, Ri/Ro=radial text (inward/outward).
+
+YOUR JOB — ground POSITION and REFERENT; do NOT translate the (undecipherable) script:
+1. Identify what the drawing depicts (central figure, scene, objects).
+2. ZODIAC: identify the central sign/animal and implied month; the folios run in zodiac order (Pisces→Aries→Taurus…). Describe ring structure: how many concentric rings of star-labels, ~how many per ring, clockwise from 12 o'clock.
+3. BALNEO: locate nymphs/basins/tubes; which element each label group sits beside.
+4. PHARMA: link each Lf label to the specific jar/container/plant-part it labels (these sit next to objects — most groundable).
+5. COSMO/astronomical: describe rings/radial spokes the Cc/Ri/Ro text occupies.
+Map each labelset (by locus code) to the drawn element it annotates, with a spatial position (clock-angle, inner/outer ring, or zone). Be explicit about legibility and confidence; honest "illegible/low confidence" is useful. Return ONLY the structured object.
+--- FINAL REPORT ---
+Grounded f77r. It is a balneological folio (no zodiac/cosmo structure), dominated by the arched green tube/conduit "manifold" across the top with ~6 pendant downspouts, end-nymphs at each terminus, and a central spout feeding a reddish basin. The six labelsets map to a left-to-right spout-label sequence along the arch, anchored by the two end-nymphs and the red-basin spout at center. Confidence is moderate (0.55) because the row clearly has ~6 spouts matching 6 labelsets, but exact one-nozzle-per-group pairing is uncertain.
+
+===== SUBAGENT agent-aff3f35cc31d91496.jsonl =====
+--- TASK PROMPT ---
+You are grounding the LABELS of one Voynich folio to its DRAWING, to build a spatial corpus for a decipherment attack.
+
+FOLIO f99v  (section: pharmaceutical)
+1) Open and LOOK at the scan(s): /Users/user/Documents/Dev/voynich/iiif_99v.jpg  (extra ones are crops/details of the same folio)
+2) Read this folio's labels: Read /Users/user/Documents/Dev/voynich/_labels/f99v.json  — a JSON list of {locus, role, words}, the EVA labels in transliteration reading-order.
+
+Locus-code key: Lz=zodiac label, Ls=star label, Lf=label-on-figure, L0=generic label, Ln/Lt/Lc=label variants, Cc=circular text, Ri/Ro=radial text (inward/outward).
+
+YOUR JOB — ground POSITION and REFERENT; do NOT translate the (undecipherable) script:
+1. Identify what the drawing depicts (central figure, scene, objects).
+2. ZODIAC: identify the central sign/animal and implied month; the folios run in zodiac order (Pisces→Aries→Taurus…). Describe ring structure: how many concentric rings of star-labels, ~how many per ring, clockwise from 12 o'clock.
+3. BALNEO: locate nymphs/basins/tubes; which element each label group sits beside.
+4. PHARMA: link each Lf label to the specific jar/container/plant-part it labels (these sit next to objects — most groundable).
+5. COSMO/astronomical: describe rings/radial spokes the Cc/Ri/Ro text occupies.
+Map each labelset (by locus code) to the drawn element it annotates, with a spatial position (clock-angle, inner/outer ring, or zone). Be explicit about legibility and confidence; honest "illegible/low confidence" is useful. Return ONLY the structured object.
+--- FINAL REPORT ---
+Grounding complete for f99v. Summary of findings:
+
+f99v is a pharmaceutical-section folio (not zodiac/cosmo/balneo), so no rings, spokes, nymphs, or zodiac sign apply. The drawing shows:
+- A left-margin vertical stack of ~4 banded ornamental apothecary jars/containers
+- ~14 free-floating plant-part specimens (roots, rootlets, feathery fronds, leaf-sprays) arranged in ~4 horizontal rows, each captioned by an adjacent label
+- A large green leafy plant with a radiating root fan in the bottom-right corner
+
+Two labelsets:
+- @Lc (otaramy okoldody darolaly dralas): a 4-word grouped caption in the upper specimen region, not bound to a single object
+- @Lf (22 words): on-figure labels annotating the individual specimens left-to-right, top-to-bottom
+
+Legibility partial, confidence moderate (0.55) for layout/role, low for individual word-to-specimen pairings since specimens outnumber clean label slots and the script is undeciphered. Relevant files examined: /Users/user/Documents/Dev/voynich/iiif_99v.jpg, /Users/user/Documents/Dev/voynich/f99v_band.png, /Users/user/Documents/Dev/voynich/band_f99v.png, /Users/user/Documents/Dev/voynich/_labels/f99v.json.
+
+===== SUBAGENT agent-a00dd176fb792434b.jsonl =====
+--- TASK PROMPT ---
+You are auditing one Python analysis script in a Voynich-manuscript investigation. Working dir: /Users/user/Documents/Dev/voynich. Run python as: .venv/bin/python <script>
+
+CORPUS FACTS you must use to judge soundness:
+- corpus.json has {meta, folios}. folios[f] = list of lines {line, locus, words}. The locus letter (after @/+) marks line type: P=paragraph body, L=label, etc.
+- corpus.json['meta'][folio] carries the REAL IVTFF page metadata: 'I'=illustration type (H herbal, A astronomical, Z zodiac, B biological/balneo, C cosmological, P pharma, S stars/recipes, T text), 'L'=Currier language/dialect (A/B/unassigned), 'Q'=quire, 'H'=scribal hand.
+
+ESTABLISHED CONFOUNDS this session has already proven (use them to grade):
+1. Several scripts define "sections" by hand-rolled FOLIO-NUMBER RANGES. The corpus already contains the real IVTFF 'I' labels, and the ranges MISMATCH them (e.g. the folio-range "pharma" bucket is ~half actual herbal pages). Reconstructing sections by folio range when real labels exist = flawed.
+2. SECTION SIZE drives raw shared-vocabulary counts: the two largest sections share the most word-types by chance alone. Any "cross-reference" claim from RAW shared counts without a size-permutation null is flawed. (A permutation null showed the headline herbal-recipes edge is BELOW chance.)
+3. CURRIER A/B dialect: vocabulary overlap between sections largely tracks the documented A/B scribal split, not "function". Claims of a functional pipeline that ignore A/B are confounded.
+4. NORMALIZED ENRICHMENT inflates for the SMALLEST sections (small-denominator artifact). High enrichment among tiny sky-sections is an artifact, not signal.
+5. CONTENT-FREE GENERATORS reproduce the corpus's headline "pro-content" signatures: a ~12-15% self-citation + char-template generator matches real burstiness (IoD~1.3), section-localization, the label/body repetition split, char conditional-entropy h2 (2.12), Zipf slope, Heaps beta (~0.83), and the 72%-hapax open lexicon. So a
+--- FINAL REPORT ---
+Audit complete. pivot.py is flawed/flourish: legitimate clustering mechanics (affix-profile PCA + k-means on word cores) but every interpretive conclusion is confounded or unsupported — it uses fake folio-range sections instead of the real IVTFF 'I' labels, ignores Currier A/B, runs no content-free null (so "low-rank => declension types" is both circular and reproducible by a content-free morphology generator), its cross-modal "JOIN" returns an empty set (0 label-entities), and the "index-like depth axis" claim has no null distinguishing it from open-lexicon first-word diversity.
+
+===== SUBAGENT agent-a06fe6ffb5903fea1.jsonl =====
+--- TASK PROMPT ---
+You are auditing one Python analysis script in a Voynich-manuscript investigation. Working dir: /Users/user/Documents/Dev/voynich. Run python as: .venv/bin/python <script>
+
+CORPUS FACTS you must use to judge soundness:
+- corpus.json has {meta, folios}. folios[f] = list of lines {line, locus, words}. The locus letter (after @/+) marks line type: P=paragraph body, L=label, etc.
+- corpus.json['meta'][folio] carries the REAL IVTFF page metadata: 'I'=illustration type (H herbal, A astronomical, Z zodiac, B biological/balneo, C cosmological, P pharma, S stars/recipes, T text), 'L'=Currier language/dialect (A/B/unassigned), 'Q'=quire, 'H'=scribal hand.
+
+ESTABLISHED CONFOUNDS this session has already proven (use them to grade):
+1. Several scripts define "sections" by hand-rolled FOLIO-NUMBER RANGES. The corpus already contains the real IVTFF 'I' labels, and the ranges MISMATCH them (e.g. the folio-range "pharma" bucket is ~half actual herbal pages). Reconstructing sections by folio range when real labels exist = flawed.
+2. SECTION SIZE drives raw shared-vocabulary counts: the two largest sections share the most word-types by chance alone. Any "cross-reference" claim from RAW shared counts without a size-permutation null is flawed. (A permutation null showed the headline herbal-recipes edge is BELOW chance.)
+3. CURRIER A/B dialect: vocabulary overlap between sections largely tracks the documented A/B scribal split, not "function". Claims of a functional pipeline that ignore A/B are confounded.
+4. NORMALIZED ENRICHMENT inflates for the SMALLEST sections (small-denominator artifact). High enrichment among tiny sky-sections is an artifact, not signal.
+5. CONTENT-FREE GENERATORS reproduce the corpus's headline "pro-content" signatures: a ~12-15% self-citation + char-template generator matches real burstiness (IoD~1.3), section-localization, the label/body repetition split, char conditional-entropy h2 (2.12), Zipf slope, Heaps beta (~0.83), and the 72%-hapax open lexicon. So a
+--- FINAL REPORT ---
+Audit complete. The structured output has been returned for page_vision.py.
+
+===== SUBAGENT agent-a09770235217dd5c8.jsonl =====
+--- TASK PROMPT ---
+You are auditing one Python analysis script in a Voynich-manuscript investigation. Working dir: /Users/user/Documents/Dev/voynich. Run python as: .venv/bin/python <script>
+
+CORPUS FACTS you must use to judge soundness:
+- corpus.json has {meta, folios}. folios[f] = list of lines {line, locus, words}. The locus letter (after @/+) marks line type: P=paragraph body, L=label, etc.
+- corpus.json['meta'][folio] carries the REAL IVTFF page metadata: 'I'=illustration type (H herbal, A astronomical, Z zodiac, B biological/balneo, C cosmological, P pharma, S stars/recipes, T text), 'L'=Currier language/dialect (A/B/unassigned), 'Q'=quire, 'H'=scribal hand.
+
+ESTABLISHED CONFOUNDS this session has already proven (use them to grade):
+1. Several scripts define "sections" by hand-rolled FOLIO-NUMBER RANGES. The corpus already contains the real IVTFF 'I' labels, and the ranges MISMATCH them (e.g. the folio-range "pharma" bucket is ~half actual herbal pages). Reconstructing sections by folio range when real labels exist = flawed.
+2. SECTION SIZE drives raw shared-vocabulary counts: the two largest sections share the most word-types by chance alone. Any "cross-reference" claim from RAW shared counts without a size-permutation null is flawed. (A permutation null showed the headline herbal-recipes edge is BELOW chance.)
+3. CURRIER A/B dialect: vocabulary overlap between sections largely tracks the documented A/B scribal split, not "function". Claims of a functional pipeline that ignore A/B are confounded.
+4. NORMALIZED ENRICHMENT inflates for the SMALLEST sections (small-denominator artifact). High enrichment among tiny sky-sections is an artifact, not signal.
+5. CONTENT-FREE GENERATORS reproduce the corpus's headline "pro-content" signatures: a ~12-15% self-citation + char-template generator matches real burstiness (IoD~1.3), section-localization, the label/body repetition split, char conditional-entropy h2 (2.12), Zipf slope, Heaps beta (~0.83), and the 72%-hapax open lexicon. So a
+--- FINAL REPORT ---
+Audited library_shadow.py at /Users/user/Documents/Dev/voynich/library_shadow.py. Classification returned via StructuredOutput: investigatory, flawed, flourish.
+
+===== SUBAGENT agent-a0c782e939a927391.jsonl =====
+--- TASK PROMPT ---
+You are auditing one Python analysis script in a Voynich-manuscript investigation. Working dir: /Users/user/Documents/Dev/voynich. Run python as: .venv/bin/python <script>
+
+CORPUS FACTS you must use to judge soundness:
+- corpus.json has {meta, folios}. folios[f] = list of lines {line, locus, words}. The locus letter (after @/+) marks line type: P=paragraph body, L=label, etc.
+- corpus.json['meta'][folio] carries the REAL IVTFF page metadata: 'I'=illustration type (H herbal, A astronomical, Z zodiac, B biological/balneo, C cosmological, P pharma, S stars/recipes, T text), 'L'=Currier language/dialect (A/B/unassigned), 'Q'=quire, 'H'=scribal hand.
+
+ESTABLISHED CONFOUNDS this session has already proven (use them to grade):
+1. Several scripts define "sections" by hand-rolled FOLIO-NUMBER RANGES. The corpus already contains the real IVTFF 'I' labels, and the ranges MISMATCH them (e.g. the folio-range "pharma" bucket is ~half actual herbal pages). Reconstructing sections by folio range when real labels exist = flawed.
+2. SECTION SIZE drives raw shared-vocabulary counts: the two largest sections share the most word-types by chance alone. Any "cross-reference" claim from RAW shared counts without a size-permutation null is flawed. (A permutation null showed the headline herbal-recipes edge is BELOW chance.)
+3. CURRIER A/B dialect: vocabulary overlap between sections largely tracks the documented A/B scribal split, not "function". Claims of a functional pipeline that ignore A/B are confounded.
+4. NORMALIZED ENRICHMENT inflates for the SMALLEST sections (small-denominator artifact). High enrichment among tiny sky-sections is an artifact, not signal.
+5. CONTENT-FREE GENERATORS reproduce the corpus's headline "pro-content" signatures: a ~12-15% self-citation + char-template generator matches real burstiness (IoD~1.3), section-localization, the label/body repetition split, char conditional-entropy h2 (2.12), Zipf slope, Heaps beta (~0.83), and the 72%-hapax open lexicon. So a
+--- FINAL REPORT ---
+Audit complete. Classification returned via StructuredOutput for `/Users/user/Documents/Dev/voynich/multimodal.py`.
+
+Summary: mixed soundness, useful value. The script's strength is that it uses the REAL IVTFF locus line-type tags (not folio ranges) and measures the line-initial gallows enrichment against a proper within-corpus baseline (a clean, reusable structural test). Its weakness is the raw "54% of label vocab never seen in prose" claim printed with no null — though a size-matched permutation null I ran shows that effect is actually real (~1% expected), so the script under-demonstrates a genuine finding while ignoring the A/B-dialect confound.
+
+===== SUBAGENT agent-a128082fc93089025.jsonl =====
+--- TASK PROMPT ---
+You are auditing one Python analysis script in a Voynich-manuscript investigation. Working dir: /Users/user/Documents/Dev/voynich. Run python as: .venv/bin/python <script>
+
+CORPUS FACTS you must use to judge soundness:
+- corpus.json has {meta, folios}. folios[f] = list of lines {line, locus, words}. The locus letter (after @/+) marks line type: P=paragraph body, L=label, etc.
+- corpus.json['meta'][folio] carries the REAL IVTFF page metadata: 'I'=illustration type (H herbal, A astronomical, Z zodiac, B biological/balneo, C cosmological, P pharma, S stars/recipes, T text), 'L'=Currier language/dialect (A/B/unassigned), 'Q'=quire, 'H'=scribal hand.
+
+ESTABLISHED CONFOUNDS this session has already proven (use them to grade):
+1. Several scripts define "sections" by hand-rolled FOLIO-NUMBER RANGES. The corpus already contains the real IVTFF 'I' labels, and the ranges MISMATCH them (e.g. the folio-range "pharma" bucket is ~half actual herbal pages). Reconstructing sections by folio range when real labels exist = flawed.
+2. SECTION SIZE drives raw shared-vocabulary counts: the two largest sections share the most word-types by chance alone. Any "cross-reference" claim from RAW shared counts without a size-permutation null is flawed. (A permutation null showed the headline herbal-recipes edge is BELOW chance.)
+3. CURRIER A/B dialect: vocabulary overlap between sections largely tracks the documented A/B scribal split, not "function". Claims of a functional pipeline that ignore A/B are confounded.
+4. NORMALIZED ENRICHMENT inflates for the SMALLEST sections (small-denominator artifact). High enrichment among tiny sky-sections is an artifact, not signal.
+5. CONTENT-FREE GENERATORS reproduce the corpus's headline "pro-content" signatures: a ~12-15% self-citation + char-template generator matches real burstiness (IoD~1.3), section-localization, the label/body repetition split, char conditional-entropy h2 (2.12), Zipf slope, Heaps beta (~0.83), and the 72%-hapax open lexicon. So a
+--- FINAL REPORT ---
+I've audited topic_gen.py and returned the structured classification. Summary: it's an investigatory, mixed-soundness, useful script. The design is a genuinely valuable discriminator (parameterize a content-free generator by number of latent topics K and find the minimum K needed to jointly match multiple real signatures), but as built it pools Currier A/B and is underpowered — the generator matches neither target at any K, so its negative result reflects this generator's weakness rather than resolving whether the manuscript needs page-specific content.
+
+===== SUBAGENT agent-a194c7b7c6caad6fc.jsonl =====
+--- TASK PROMPT ---
+You are auditing one Python analysis script in a Voynich-manuscript investigation. Working dir: /Users/user/Documents/Dev/voynich. Run python as: .venv/bin/python <script>
+
+CORPUS FACTS you must use to judge soundness:
+- corpus.json has {meta, folios}. folios[f] = list of lines {line, locus, words}. The locus letter (after @/+) marks line type: P=paragraph body, L=label, etc.
+- corpus.json['meta'][folio] carries the REAL IVTFF page metadata: 'I'=illustration type (H herbal, A astronomical, Z zodiac, B biological/balneo, C cosmological, P pharma, S stars/recipes, T text), 'L'=Currier language/dialect (A/B/unassigned), 'Q'=quire, 'H'=scribal hand.
+
+ESTABLISHED CONFOUNDS this session has already proven (use them to grade):
+1. Several scripts define "sections" by hand-rolled FOLIO-NUMBER RANGES. The corpus already contains the real IVTFF 'I' labels, and the ranges MISMATCH them (e.g. the folio-range "pharma" bucket is ~half actual herbal pages). Reconstructing sections by folio range when real labels exist = flawed.
+2. SECTION SIZE drives raw shared-vocabulary counts: the two largest sections share the most word-types by chance alone. Any "cross-reference" claim from RAW shared counts without a size-permutation null is flawed. (A permutation null showed the headline herbal-recipes edge is BELOW chance.)
+3. CURRIER A/B dialect: vocabulary overlap between sections largely tracks the documented A/B scribal split, not "function". Claims of a functional pipeline that ignore A/B are confounded.
+4. NORMALIZED ENRICHMENT inflates for the SMALLEST sections (small-denominator artifact). High enrichment among tiny sky-sections is an artifact, not signal.
+5. CONTENT-FREE GENERATORS reproduce the corpus's headline "pro-content" signatures: a ~12-15% self-citation + char-template generator matches real burstiness (IoD~1.3), section-localization, the label/body repetition split, char conditional-entropy h2 (2.12), Zipf slope, Heaps beta (~0.83), and the 72%-hapax open lexicon. So a
+--- FINAL REPORT ---
+Audit complete. The structured output for columns.py has been returned: graded flawed/flourish. The script imposes a hand-rolled prefix|core|suffix affix decomposition and claims a "database record with orthogonal columns + conserved justification width," but it has no null model, its closure result is circular (the affix lists are hand-defined), and its own printed numbers contradict the conclusions (MI of 1.33/1.61 bits is not "low/orthogonal"; CV ratio of 0.98 shows no width conservation; corr -0.21 is mislabeled "strong negative"). It ignores Currier A/B, the real IVTFF I-labels, and the content-free-generator confound. The one reusable nugget is the CV(glyphs)/CV(words) width-conservation test.
+
+===== SUBAGENT agent-a1cac43f2871f07f8.jsonl =====
+--- TASK PROMPT ---
+You are auditing one Python analysis script in a Voynich-manuscript investigation. Working dir: /Users/user/Documents/Dev/voynich. Run python as: .venv/bin/python <script>
+
+CORPUS FACTS you must use to judge soundness:
+- corpus.json has {meta, folios}. folios[f] = list of lines {line, locus, words}. The locus letter (after @/+) marks line type: P=paragraph body, L=label, etc.
+- corpus.json['meta'][folio] carries the REAL IVTFF page metadata: 'I'=illustration type (H herbal, A astronomical, Z zodiac, B biological/balneo, C cosmological, P pharma, S stars/recipes, T text), 'L'=Currier language/dialect (A/B/unassigned), 'Q'=quire, 'H'=scribal hand.
+
+ESTABLISHED CONFOUNDS this session has already proven (use them to grade):
+1. Several scripts define "sections" by hand-rolled FOLIO-NUMBER RANGES. The corpus already contains the real IVTFF 'I' labels, and the ranges MISMATCH them (e.g. the folio-range "pharma" bucket is ~half actual herbal pages). Reconstructing sections by folio range when real labels exist = flawed.
+2. SECTION SIZE drives raw shared-vocabulary counts: the two largest sections share the most word-types by chance alone. Any "cross-reference" claim from RAW shared counts without a size-permutation null is flawed. (A permutation null showed the headline herbal-recipes edge is BELOW chance.)
+3. CURRIER A/B dialect: vocabulary overlap between sections largely tracks the documented A/B scribal split, not "function". Claims of a functional pipeline that ignore A/B are confounded.
+4. NORMALIZED ENRICHMENT inflates for the SMALLEST sections (small-denominator artifact). High enrichment among tiny sky-sections is an artifact, not signal.
+5. CONTENT-FREE GENERATORS reproduce the corpus's headline "pro-content" signatures: a ~12-15% self-citation + char-template generator matches real burstiness (IoD~1.3), section-localization, the label/body repetition split, char conditional-entropy h2 (2.12), Zipf slope, Heaps beta (~0.83), and the 72%-hapax open lexicon. So a
+--- FINAL REPORT ---
+Audit complete. manifest.py is mixed/useful — its paragraph-alignment sub-test is a genuine, non-circular discriminator (statistical boundaries coupled to physical paragraph marks, 42% vs 23% chance), but its coherence and inventory-completion sub-tests are circular (the TextTiling detector optimizes the same cosine objective the coherence null scores, and boundaries are placed exactly where new-type rate must spike), and it ignores Currier A/B contiguity and content-free reproducibility, so the headline "manifest" narrative overreaches what the tests support.
+
+===== SUBAGENT agent-a28164c51e549c835.jsonl =====
+--- TASK PROMPT ---
+You are auditing one Python analysis script in a Voynich-manuscript investigation. Working dir: /Users/user/Documents/Dev/voynich. Run python as: .venv/bin/python <script>
+
+CORPUS FACTS you must use to judge soundness:
+- corpus.json has {meta, folios}. folios[f] = list of lines {line, locus, words}. The locus letter (after @/+) marks line type: P=paragraph body, L=label, etc.
+- corpus.json['meta'][folio] carries the REAL IVTFF page metadata: 'I'=illustration type (H herbal, A astronomical, Z zodiac, B biological/balneo, C cosmological, P pharma, S stars/recipes, T text), 'L'=Currier language/dialect (A/B/unassigned), 'Q'=quire, 'H'=scribal hand.
+
+ESTABLISHED CONFOUNDS this session has already proven (use them to grade):
+1. Several scripts define "sections" by hand-rolled FOLIO-NUMBER RANGES. The corpus already contains the real IVTFF 'I' labels, and the ranges MISMATCH them (e.g. the folio-range "pharma" bucket is ~half actual herbal pages). Reconstructing sections by folio range when real labels exist = flawed.
+2. SECTION SIZE drives raw shared-vocabulary counts: the two largest sections share the most word-types by chance alone. Any "cross-reference" claim from RAW shared counts without a size-permutation null is flawed. (A permutation null showed the headline herbal-recipes edge is BELOW chance.)
+3. CURRIER A/B dialect: vocabulary overlap between sections largely tracks the documented A/B scribal split, not "function". Claims of a functional pipeline that ignore A/B are confounded.
+4. NORMALIZED ENRICHMENT inflates for the SMALLEST sections (small-denominator artifact). High enrichment among tiny sky-sections is an artifact, not signal.
+5. CONTENT-FREE GENERATORS reproduce the corpus's headline "pro-content" signatures: a ~12-15% self-citation + char-template generator matches real burstiness (IoD~1.3), section-localization, the label/body repetition split, char conditional-entropy h2 (2.12), Zipf slope, Heaps beta (~0.83), and the 72%-hapax open lexicon. So a
+--- FINAL REPORT ---
+I've audited structure_atlas.py at /Users/user/Documents/Dev/voynich/structure_atlas.py and returned the classification. Summary: flawed but useful. Part B's conditional-entropy comparison (register/position/section each reduce prefix entropy by only 1-3%) is a clean, reusable negative result; but Part C's per-folio "register seam" map is substantially a Currier A/B dialect artifact (I verified q-onset rate 0.105 for A folios vs 0.163 for B) with an arbitrary, null-free change-point threshold, and Part A's 97% coverage is near-circular given the permissive hand-tuned affix lists.
+
+===== SUBAGENT agent-a291fc99cec5bdf44.jsonl =====
+--- TASK PROMPT ---
+You are auditing one Python analysis script in a Voynich-manuscript investigation. Working dir: /Users/user/Documents/Dev/voynich. Run python as: .venv/bin/python <script>
+
+CORPUS FACTS you must use to judge soundness:
+- corpus.json has {meta, folios}. folios[f] = list of lines {line, locus, words}. The locus letter (after @/+) marks line type: P=paragraph body, L=label, etc.
+- corpus.json['meta'][folio] carries the REAL IVTFF page metadata: 'I'=illustration type (H herbal, A astronomical, Z zodiac, B biological/balneo, C cosmological, P pharma, S stars/recipes, T text), 'L'=Currier language/dialect (A/B/unassigned), 'Q'=quire, 'H'=scribal hand.
+
+ESTABLISHED CONFOUNDS this session has already proven (use them to grade):
+1. Several scripts define "sections" by hand-rolled FOLIO-NUMBER RANGES. The corpus already contains the real IVTFF 'I' labels, and the ranges MISMATCH them (e.g. the folio-range "pharma" bucket is ~half actual herbal pages). Reconstructing sections by folio range when real labels exist = flawed.
+2. SECTION SIZE drives raw shared-vocabulary counts: the two largest sections share the most word-types by chance alone. Any "cross-reference" claim from RAW shared counts without a size-permutation null is flawed. (A permutation null showed the headline herbal-recipes edge is BELOW chance.)
+3. CURRIER A/B dialect: vocabulary overlap between sections largely tracks the documented A/B scribal split, not "function". Claims of a functional pipeline that ignore A/B are confounded.
+4. NORMALIZED ENRICHMENT inflates for the SMALLEST sections (small-denominator artifact). High enrichment among tiny sky-sections is an artifact, not signal.
+5. CONTENT-FREE GENERATORS reproduce the corpus's headline "pro-content" signatures: a ~12-15% self-citation + char-template generator matches real burstiness (IoD~1.3), section-localization, the label/body repetition split, char conditional-entropy h2 (2.12), Zipf slope, Heaps beta (~0.83), and the 72%-hapax open lexicon. So a
+--- FINAL REPORT ---
+I've audited glue.py and returned the structured classification. Summary: it's an investigatory script that is mixed in soundness and useful in value. Its Test 2 (line-edge KL specialization with a within-line shuffle null) is a genuinely sound, reusable discriminating test, but the surrounding tests are flawed/oversold — Test 1's data actually refutes its own "glue frames the line" hypothesis (glue is depleted, not enriched, at edges), Test 3 is a null result, and Test 4's "justification" claim has no baseline and ignores that content-free generators reproduce line-length regularity.
+
+===== SUBAGENT agent-a2ae360ac022954c5.jsonl =====
+--- TASK PROMPT ---
+You are auditing one Python analysis script in a Voynich-manuscript investigation. Working dir: /Users/user/Documents/Dev/voynich. Run python as: .venv/bin/python <script>
+
+CORPUS FACTS you must use to judge soundness:
+- corpus.json has {meta, folios}. folios[f] = list of lines {line, locus, words}. The locus letter (after @/+) marks line type: P=paragraph body, L=label, etc.
+- corpus.json['meta'][folio] carries the REAL IVTFF page metadata: 'I'=illustration type (H herbal, A astronomical, Z zodiac, B biological/balneo, C cosmological, P pharma, S stars/recipes, T text), 'L'=Currier language/dialect (A/B/unassigned), 'Q'=quire, 'H'=scribal hand.
+
+ESTABLISHED CONFOUNDS this session has already proven (use them to grade):
+1. Several scripts define "sections" by hand-rolled FOLIO-NUMBER RANGES. The corpus already contains the real IVTFF 'I' labels, and the ranges MISMATCH them (e.g. the folio-range "pharma" bucket is ~half actual herbal pages). Reconstructing sections by folio range when real labels exist = flawed.
+2. SECTION SIZE drives raw shared-vocabulary counts: the two largest sections share the most word-types by chance alone. Any "cross-reference" claim from RAW shared counts without a size-permutation null is flawed. (A permutation null showed the headline herbal-recipes edge is BELOW chance.)
+3. CURRIER A/B dialect: vocabulary overlap between sections largely tracks the documented A/B scribal split, not "function". Claims of a functional pipeline that ignore A/B are confounded.
+4. NORMALIZED ENRICHMENT inflates for the SMALLEST sections (small-denominator artifact). High enrichment among tiny sky-sections is an artifact, not signal.
+5. CONTENT-FREE GENERATORS reproduce the corpus's headline "pro-content" signatures: a ~12-15% self-citation + char-template generator matches real burstiness (IoD~1.3), section-localization, the label/body repetition split, char conditional-entropy h2 (2.12), Zipf slope, Heaps beta (~0.83), and the 72%-hapax open lexicon. So a
+--- FINAL REPORT ---
+Audited index_test.py. The script tests whether a folio's opening paragraph word acts as a special index pointing at the page's section/type, using a within-folio random-word control. The control design is sound and reusable, but the printed conclusion overreaches: both opener (36%) and random-word (24%) accuracies fall below the 56% majority baseline, the MI ratios are internally contradictory (suffix favors opener, prefix strongly favors random), and it builds sections from hand-rolled folio ranges rather than the real IVTFF 'I' labels while never controlling for Currier A/B. Graded mixed / useful.
+
+===== SUBAGENT agent-a2b8d68e8dc215559.jsonl =====
+--- TASK PROMPT ---
+You are auditing one Python analysis script in a Voynich-manuscript investigation. Working dir: /Users/user/Documents/Dev/voynich. Run python as: .venv/bin/python <script>
+
+CORPUS FACTS you must use to judge soundness:
+- corpus.json has {meta, folios}. folios[f] = list of lines {line, locus, words}. The locus letter (after @/+) marks line type: P=paragraph body, L=label, etc.
+- corpus.json['meta'][folio] carries the REAL IVTFF page metadata: 'I'=illustration type (H herbal, A astronomical, Z zodiac, B biological/balneo, C cosmological, P pharma, S stars/recipes, T text), 'L'=Currier language/dialect (A/B/unassigned), 'Q'=quire, 'H'=scribal hand.
+
+ESTABLISHED CONFOUNDS this session has already proven (use them to grade):
+1. Several scripts define "sections" by hand-rolled FOLIO-NUMBER RANGES. The corpus already contains the real IVTFF 'I' labels, and the ranges MISMATCH them (e.g. the folio-range "pharma" bucket is ~half actual herbal pages). Reconstructing sections by folio range when real labels exist = flawed.
+2. SECTION SIZE drives raw shared-vocabulary counts: the two largest sections share the most word-types by chance alone. Any "cross-reference" claim from RAW shared counts without a size-permutation null is flawed. (A permutation null showed the headline herbal-recipes edge is BELOW chance.)
+3. CURRIER A/B dialect: vocabulary overlap between sections largely tracks the documented A/B scribal split, not "function". Claims of a functional pipeline that ignore A/B are confounded.
+4. NORMALIZED ENRICHMENT inflates for the SMALLEST sections (small-denominator artifact). High enrichment among tiny sky-sections is an artifact, not signal.
+5. CONTENT-FREE GENERATORS reproduce the corpus's headline "pro-content" signatures: a ~12-15% self-citation + char-template generator matches real burstiness (IoD~1.3), section-localization, the label/body repetition split, char conditional-entropy h2 (2.12), Zipf slope, Heaps beta (~0.83), and the 72%-hapax open lexicon. So a
+--- FINAL REPORT ---
+Audit complete for /Users/user/Documents/Dev/voynich/hinges.py. Classified as investigatory, mixed soundness, useful value. The H1 q-strippability test (54% vs 37% baseline) is a clean, properly-nulled discriminating mechanic worth reusing; H2's "affix agreement" (MI=0.186 bits = 6% of suffix entropy, no permutation null) and H3's positional counts (no significance test, no content-free control) are oversold, and none of the three tests distinguish a real grammar from content-free templated morphology.
+
+===== SUBAGENT agent-a2d37c9e4cba65ee6.jsonl =====
+--- TASK PROMPT ---
+You are auditing one Python analysis script in a Voynich-manuscript investigation. Working dir: /Users/user/Documents/Dev/voynich. Run python as: .venv/bin/python <script>
+
+CORPUS FACTS you must use to judge soundness:
+- corpus.json has {meta, folios}. folios[f] = list of lines {line, locus, words}. The locus letter (after @/+) marks line type: P=paragraph body, L=label, etc.
+- corpus.json['meta'][folio] carries the REAL IVTFF page metadata: 'I'=illustration type (H herbal, A astronomical, Z zodiac, B biological/balneo, C cosmological, P pharma, S stars/recipes, T text), 'L'=Currier language/dialect (A/B/unassigned), 'Q'=quire, 'H'=scribal hand.
+
+ESTABLISHED CONFOUNDS this session has already proven (use them to grade):
+1. Several scripts define "sections" by hand-rolled FOLIO-NUMBER RANGES. The corpus already contains the real IVTFF 'I' labels, and the ranges MISMATCH them (e.g. the folio-range "pharma" bucket is ~half actual herbal pages). Reconstructing sections by folio range when real labels exist = flawed.
+2. SECTION SIZE drives raw shared-vocabulary counts: the two largest sections share the most word-types by chance alone. Any "cross-reference" claim from RAW shared counts without a size-permutation null is flawed. (A permutation null showed the headline herbal-recipes edge is BELOW chance.)
+3. CURRIER A/B dialect: vocabulary overlap between sections largely tracks the documented A/B scribal split, not "function". Claims of a functional pipeline that ignore A/B are confounded.
+4. NORMALIZED ENRICHMENT inflates for the SMALLEST sections (small-denominator artifact). High enrichment among tiny sky-sections is an artifact, not signal.
+5. CONTENT-FREE GENERATORS reproduce the corpus's headline "pro-content" signatures: a ~12-15% self-citation + char-template generator matches real burstiness (IoD~1.3), section-localization, the label/body repetition split, char conditional-entropy h2 (2.12), Zipf slope, Heaps beta (~0.83), and the 72%-hapax open lexicon. So a
+--- FINAL REPORT ---
+I've audited zodiac_join.py and returned the structured classification. Summary: it's a **mixed/useful** investigatory script. Its standout feature is testing label morphology against an external known key (the decoded Occitan month names) — a genuinely discriminating cross-modal join that most corpus scripts lack. But the execution is undermined by a hardcoded "|r|~0 month-blind" conclusion that contradicts its own output (q_rate r=+0.48, suf_y r=+0.38), no significance test for the tiny n=12, no permutation null on the Part A/C raw-Jaccard claims, and an unverified folio-order=month-order proxy. The skeptical "no referential join" verdict is roughly correct but reached by mis-narration rather than by the statistics actually run.
+
+===== SUBAGENT agent-a2d70ff66faa7a774.jsonl =====
+--- TASK PROMPT ---
+You are auditing one Python analysis script in a Voynich-manuscript investigation. Working dir: /Users/user/Documents/Dev/voynich. Run python as: .venv/bin/python <script>
+
+CORPUS FACTS you must use to judge soundness:
+- corpus.json has {meta, folios}. folios[f] = list of lines {line, locus, words}. The locus letter (after @/+) marks line type: P=paragraph body, L=label, etc.
+- corpus.json['meta'][folio] carries the REAL IVTFF page metadata: 'I'=illustration type (H herbal, A astronomical, Z zodiac, B biological/balneo, C cosmological, P pharma, S stars/recipes, T text), 'L'=Currier language/dialect (A/B/unassigned), 'Q'=quire, 'H'=scribal hand.
+
+ESTABLISHED CONFOUNDS this session has already proven (use them to grade):
+1. Several scripts define "sections" by hand-rolled FOLIO-NUMBER RANGES. The corpus already contains the real IVTFF 'I' labels, and the ranges MISMATCH them (e.g. the folio-range "pharma" bucket is ~half actual herbal pages). Reconstructing sections by folio range when real labels exist = flawed.
+2. SECTION SIZE drives raw shared-vocabulary counts: the two largest sections share the most word-types by chance alone. Any "cross-reference" claim from RAW shared counts without a size-permutation null is flawed. (A permutation null showed the headline herbal-recipes edge is BELOW chance.)
+3. CURRIER A/B dialect: vocabulary overlap between sections largely tracks the documented A/B scribal split, not "function". Claims of a functional pipeline that ignore A/B are confounded.
+4. NORMALIZED ENRICHMENT inflates for the SMALLEST sections (small-denominator artifact). High enrichment among tiny sky-sections is an artifact, not signal.
+5. CONTENT-FREE GENERATORS reproduce the corpus's headline "pro-content" signatures: a ~12-15% self-citation + char-template generator matches real burstiness (IoD~1.3), section-localization, the label/body repetition split, char conditional-entropy h2 (2.12), Zipf slope, Heaps beta (~0.83), and the 72%-hapax open lexicon. So a
+--- FINAL REPORT ---
+Audit complete. crossmodal.py at /Users/user/Documents/Dev/voynich/crossmodal.py is flawed/flourish: its Mantel test reports a significant positive correlation (r=+0.0492, p=0.0055) but by the script's own annotation a positive sign means closer-looking pages share FEWER words — the sim/diff Jaccard ratio of 0.974 confirms the effect is null-to-negative, yet it prints "SIGNAL: imagery tracks text" on p-value alone. It also ignores the Currier A/B confound (same-dialect pairs share far more vocab) and a vocab-size artifact, both of which account for the trivial residual.
+
+===== SUBAGENT agent-a36795be334a24a09.jsonl =====
+--- TASK PROMPT ---
+You are auditing one Python analysis script in a Voynich-manuscript investigation. Working dir: /Users/user/Documents/Dev/voynich. Run python as: .venv/bin/python <script>
+
+CORPUS FACTS you must use to judge soundness:
+- corpus.json has {meta, folios}. folios[f] = list of lines {line, locus, words}. The locus letter (after @/+) marks line type: P=paragraph body, L=label, etc.
+- corpus.json['meta'][folio] carries the REAL IVTFF page metadata: 'I'=illustration type (H herbal, A astronomical, Z zodiac, B biological/balneo, C cosmological, P pharma, S stars/recipes, T text), 'L'=Currier language/dialect (A/B/unassigned), 'Q'=quire, 'H'=scribal hand.
+
+ESTABLISHED CONFOUNDS this session has already proven (use them to grade):
+1. Several scripts define "sections" by hand-rolled FOLIO-NUMBER RANGES. The corpus already contains the real IVTFF 'I' labels, and the ranges MISMATCH them (e.g. the folio-range "pharma" bucket is ~half actual herbal pages). Reconstructing sections by folio range when real labels exist = flawed.
+2. SECTION SIZE drives raw shared-vocabulary counts: the two largest sections share the most word-types by chance alone. Any "cross-reference" claim from RAW shared counts without a size-permutation null is flawed. (A permutation null showed the headline herbal-recipes edge is BELOW chance.)
+3. CURRIER A/B dialect: vocabulary overlap between sections largely tracks the documented A/B scribal split, not "function". Claims of a functional pipeline that ignore A/B are confounded.
+4. NORMALIZED ENRICHMENT inflates for the SMALLEST sections (small-denominator artifact). High enrichment among tiny sky-sections is an artifact, not signal.
+5. CONTENT-FREE GENERATORS reproduce the corpus's headline "pro-content" signatures: a ~12-15% self-citation + char-template generator matches real burstiness (IoD~1.3), section-localization, the label/body repetition split, char conditional-entropy h2 (2.12), Zipf slope, Heaps beta (~0.83), and the 72%-hapax open lexicon. So a
+--- FINAL REPORT ---
+Audit complete. register.py is classified as mixed soundness / useful value. The locality section (#4) contributes a legitimate paired-permutation test, but sections 1-3 lack any null model and the "two registers of one generator" conclusion overreaches given the pool-size and content-free-morphology confounds.
+
+===== SUBAGENT agent-a3cd2283c10776d19.jsonl =====
+--- TASK PROMPT ---
+You are auditing one Python analysis script in a Voynich-manuscript investigation. Working dir: /Users/user/Documents/Dev/voynich. Run python as: .venv/bin/python <script>
+
+CORPUS FACTS you must use to judge soundness:
+- corpus.json has {meta, folios}. folios[f] = list of lines {line, locus, words}. The locus letter (after @/+) marks line type: P=paragraph body, L=label, etc.
+- corpus.json['meta'][folio] carries the REAL IVTFF page metadata: 'I'=illustration type (H herbal, A astronomical, Z zodiac, B biological/balneo, C cosmological, P pharma, S stars/recipes, T text), 'L'=Currier language/dialect (A/B/unassigned), 'Q'=quire, 'H'=scribal hand.
+
+ESTABLISHED CONFOUNDS this session has already proven (use them to grade):
+1. Several scripts define "sections" by hand-rolled FOLIO-NUMBER RANGES. The corpus already contains the real IVTFF 'I' labels, and the ranges MISMATCH them (e.g. the folio-range "pharma" bucket is ~half actual herbal pages). Reconstructing sections by folio range when real labels exist = flawed.
+2. SECTION SIZE drives raw shared-vocabulary counts: the two largest sections share the most word-types by chance alone. Any "cross-reference" claim from RAW shared counts without a size-permutation null is flawed. (A permutation null showed the headline herbal-recipes edge is BELOW chance.)
+3. CURRIER A/B dialect: vocabulary overlap between sections largely tracks the documented A/B scribal split, not "function". Claims of a functional pipeline that ignore A/B are confounded.
+4. NORMALIZED ENRICHMENT inflates for the SMALLEST sections (small-denominator artifact). High enrichment among tiny sky-sections is an artifact, not signal.
+5. CONTENT-FREE GENERATORS reproduce the corpus's headline "pro-content" signatures: a ~12-15% self-citation + char-template generator matches real burstiness (IoD~1.3), section-localization, the label/body repetition split, char conditional-entropy h2 (2.12), Zipf slope, Heaps beta (~0.83), and the 72%-hapax open lexicon. So a
+--- FINAL REPORT ---
+Audit complete. roster_test.py is flawed/flourish. The full reasoning is in the StructuredOutput call above; key points: its "persistent named entities" are degenerate stripper fragments (single letters like 'a','e','ol'), Test A's real-vs-shuffle adjacency gap (0.182 vs 0.138) is uncontrolled section/dialect locality reproducible by content-free generators, Test C's own numbers (drift +0.013, 16% over threshold) actually fail its hypothesis, and B/D are non-discriminating descriptive stats. The only reusable mechanic is lag-Jaccard-with-shuffle, but it needs within-section/within-Currier permutation to mean anything.
+
+===== SUBAGENT agent-a3de6163a62f1c301.jsonl =====
+--- TASK PROMPT ---
+You are auditing one Python analysis script in a Voynich-manuscript investigation. Working dir: /Users/user/Documents/Dev/voynich. Run python as: .venv/bin/python <script>
+
+CORPUS FACTS you must use to judge soundness:
+- corpus.json has {meta, folios}. folios[f] = list of lines {line, locus, words}. The locus letter (after @/+) marks line type: P=paragraph body, L=label, etc.
+- corpus.json['meta'][folio] carries the REAL IVTFF page metadata: 'I'=illustration type (H herbal, A astronomical, Z zodiac, B biological/balneo, C cosmological, P pharma, S stars/recipes, T text), 'L'=Currier language/dialect (A/B/unassigned), 'Q'=quire, 'H'=scribal hand.
+
+ESTABLISHED CONFOUNDS this session has already proven (use them to grade):
+1. Several scripts define "sections" by hand-rolled FOLIO-NUMBER RANGES. The corpus already contains the real IVTFF 'I' labels, and the ranges MISMATCH them (e.g. the folio-range "pharma" bucket is ~half actual herbal pages). Reconstructing sections by folio range when real labels exist = flawed.
+2. SECTION SIZE drives raw shared-vocabulary counts: the two largest sections share the most word-types by chance alone. Any "cross-reference" claim from RAW shared counts without a size-permutation null is flawed. (A permutation null showed the headline herbal-recipes edge is BELOW chance.)
+3. CURRIER A/B dialect: vocabulary overlap between sections largely tracks the documented A/B scribal split, not "function". Claims of a functional pipeline that ignore A/B are confounded.
+4. NORMALIZED ENRICHMENT inflates for the SMALLEST sections (small-denominator artifact). High enrichment among tiny sky-sections is an artifact, not signal.
+5. CONTENT-FREE GENERATORS reproduce the corpus's headline "pro-content" signatures: a ~12-15% self-citation + char-template generator matches real burstiness (IoD~1.3), section-localization, the label/body repetition split, char conditional-entropy h2 (2.12), Zipf slope, Heaps beta (~0.83), and the 72%-hapax open lexicon. So a
+--- FINAL REPORT ---
+Audit complete. decoder_trap.py is a sound, useful debunking control: it puts both real Voynich and a content-free char-Markov null through the identical frequency-decode-and-score-against-Latin pipeline, anchored by a real-Latin ceiling and random-letter floor. Real (-3.524) and null (-3.392) land together near the floor (null slightly higher), proving the "it comes out looking like Latin" trap is non-discriminating. It correctly instantiates the content-free-generator confound as its null rather than mistaking surface resemblance for meaning.
+
+===== SUBAGENT agent-a40f31acb8f7a65e6.jsonl =====
+--- TASK PROMPT ---
+You are auditing one Python analysis script in a Voynich-manuscript investigation. Working dir: /Users/user/Documents/Dev/voynich. Run python as: .venv/bin/python <script>
+
+CORPUS FACTS you must use to judge soundness:
+- corpus.json has {meta, folios}. folios[f] = list of lines {line, locus, words}. The locus letter (after @/+) marks line type: P=paragraph body, L=label, etc.
+- corpus.json['meta'][folio] carries the REAL IVTFF page metadata: 'I'=illustration type (H herbal, A astronomical, Z zodiac, B biological/balneo, C cosmological, P pharma, S stars/recipes, T text), 'L'=Currier language/dialect (A/B/unassigned), 'Q'=quire, 'H'=scribal hand.
+
+ESTABLISHED CONFOUNDS this session has already proven (use them to grade):
+1. Several scripts define "sections" by hand-rolled FOLIO-NUMBER RANGES. The corpus already contains the real IVTFF 'I' labels, and the ranges MISMATCH them (e.g. the folio-range "pharma" bucket is ~half actual herbal pages). Reconstructing sections by folio range when real labels exist = flawed.
+2. SECTION SIZE drives raw shared-vocabulary counts: the two largest sections share the most word-types by chance alone. Any "cross-reference" claim from RAW shared counts without a size-permutation null is flawed. (A permutation null showed the headline herbal-recipes edge is BELOW chance.)
+3. CURRIER A/B dialect: vocabulary overlap between sections largely tracks the documented A/B scribal split, not "function". Claims of a functional pipeline that ignore A/B are confounded.
+4. NORMALIZED ENRICHMENT inflates for the SMALLEST sections (small-denominator artifact). High enrichment among tiny sky-sections is an artifact, not signal.
+5. CONTENT-FREE GENERATORS reproduce the corpus's headline "pro-content" signatures: a ~12-15% self-citation + char-template generator matches real burstiness (IoD~1.3), section-localization, the label/body repetition split, char conditional-entropy h2 (2.12), Zipf slope, Heaps beta (~0.83), and the 72%-hapax open lexicon. So a
+--- FINAL REPORT ---
+Audit complete for /Users/user/Documents/Dev/voynich/crib.py.
+
+This is a known-plaintext crib search that pools folio text by hand-tagged visual plant attributes and looks for separating trigrams, gated by a max-statistic permutation null. The statistical machinery is the cleanest in the session — a real label-permutation null over the same folios, with honest NULL verdicts (colour p=0.64, root p=0.056). It does not fall for the size confound. Its weaknesses are upstream: the `TAGS` dict is fabricated and unverifiable, it ignores Currier A/B and locus structure when pooling, and n=4-6 folios per group gives near-zero power. Graded mixed/useful: the test template is reusable and discriminating, the conclusion follows, but it rests on invented plaintext.
+
+===== SUBAGENT agent-a58bf234fdb01520e.jsonl =====
+--- TASK PROMPT ---
+You are auditing one Python analysis script in a Voynich-manuscript investigation. Working dir: /Users/user/Documents/Dev/voynich. Run python as: .venv/bin/python <script>
+
+CORPUS FACTS you must use to judge soundness:
+- corpus.json has {meta, folios}. folios[f] = list of lines {line, locus, words}. The locus letter (after @/+) marks line type: P=paragraph body, L=label, etc.
+- corpus.json['meta'][folio] carries the REAL IVTFF page metadata: 'I'=illustration type (H herbal, A astronomical, Z zodiac, B biological/balneo, C cosmological, P pharma, S stars/recipes, T text), 'L'=Currier language/dialect (A/B/unassigned), 'Q'=quire, 'H'=scribal hand.
+
+ESTABLISHED CONFOUNDS this session has already proven (use them to grade):
+1. Several scripts define "sections" by hand-rolled FOLIO-NUMBER RANGES. The corpus already contains the real IVTFF 'I' labels, and the ranges MISMATCH them (e.g. the folio-range "pharma" bucket is ~half actual herbal pages). Reconstructing sections by folio range when real labels exist = flawed.
+2. SECTION SIZE drives raw shared-vocabulary counts: the two largest sections share the most word-types by chance alone. Any "cross-reference" claim from RAW shared counts without a size-permutation null is flawed. (A permutation null showed the headline herbal-recipes edge is BELOW chance.)
+3. CURRIER A/B dialect: vocabulary overlap between sections largely tracks the documented A/B scribal split, not "function". Claims of a functional pipeline that ignore A/B are confounded.
+4. NORMALIZED ENRICHMENT inflates for the SMALLEST sections (small-denominator artifact). High enrichment among tiny sky-sections is an artifact, not signal.
+5. CONTENT-FREE GENERATORS reproduce the corpus's headline "pro-content" signatures: a ~12-15% self-citation + char-template generator matches real burstiness (IoD~1.3), section-localization, the label/body repetition split, char conditional-entropy h2 (2.12), Zipf slope, Heaps beta (~0.83), and the 72%-hapax open lexicon. So a
+--- FINAL REPORT ---
+Audited vparse.py — the foundational IVTFF/EVA parser at /Users/user/Documents/Dev/voynich/vparse.py. It is a sound utility (not investigatory): it builds corpus.json and, importantly, extracts the genuine IVTFF header metadata (I/L/Q/H) that the rest of the audit treats as ground truth, rather than fabricating sections from folio ranges. No inferential claims, so no confounds apply. Classified as utility / sound / useful.
+
+===== SUBAGENT agent-a6f00e4be5fe7b693.jsonl =====
+--- TASK PROMPT ---
+You are auditing one Python analysis script in a Voynich-manuscript investigation. Working dir: /Users/user/Documents/Dev/voynich. Run python as: .venv/bin/python <script>
+
+CORPUS FACTS you must use to judge soundness:
+- corpus.json has {meta, folios}. folios[f] = list of lines {line, locus, words}. The locus letter (after @/+) marks line type: P=paragraph body, L=label, etc.
+- corpus.json['meta'][folio] carries the REAL IVTFF page metadata: 'I'=illustration type (H herbal, A astronomical, Z zodiac, B biological/balneo, C cosmological, P pharma, S stars/recipes, T text), 'L'=Currier language/dialect (A/B/unassigned), 'Q'=quire, 'H'=scribal hand.
+
+ESTABLISHED CONFOUNDS this session has already proven (use them to grade):
+1. Several scripts define "sections" by hand-rolled FOLIO-NUMBER RANGES. The corpus already contains the real IVTFF 'I' labels, and the ranges MISMATCH them (e.g. the folio-range "pharma" bucket is ~half actual herbal pages). Reconstructing sections by folio range when real labels exist = flawed.
+2. SECTION SIZE drives raw shared-vocabulary counts: the two largest sections share the most word-types by chance alone. Any "cross-reference" claim from RAW shared counts without a size-permutation null is flawed. (A permutation null showed the headline herbal-recipes edge is BELOW chance.)
+3. CURRIER A/B dialect: vocabulary overlap between sections largely tracks the documented A/B scribal split, not "function". Claims of a functional pipeline that ignore A/B are confounded.
+4. NORMALIZED ENRICHMENT inflates for the SMALLEST sections (small-denominator artifact). High enrichment among tiny sky-sections is an artifact, not signal.
+5. CONTENT-FREE GENERATORS reproduce the corpus's headline "pro-content" signatures: a ~12-15% self-citation + char-template generator matches real burstiness (IoD~1.3), section-localization, the label/body repetition split, char conditional-entropy h2 (2.12), Zipf slope, Heaps beta (~0.83), and the 72%-hapax open lexicon. So a
+--- FINAL REPORT ---
+Audit complete. collision.py is flawed/flourish: Test 1 has a valid permutation mechanic but its global-prose null ignores that label pages skew to different sections/dialects, and high label uniqueness cannot distinguish "hash/naming" from filler or a content-free generator. Test 2 is degenerate — only 6 testable labels, all single key-column characters on a single folio (f49v), producing structurally-zero spread and a meaningless p=1.0 that the script misreports as a substantive negative finding.
+
+===== SUBAGENT agent-a70bd96d51a4d76de.jsonl =====
+--- TASK PROMPT ---
+You are auditing one Python analysis script in a Voynich-manuscript investigation. Working dir: /Users/user/Documents/Dev/voynich. Run python as: .venv/bin/python <script>
+
+CORPUS FACTS you must use to judge soundness:
+- corpus.json has {meta, folios}. folios[f] = list of lines {line, locus, words}. The locus letter (after @/+) marks line type: P=paragraph body, L=label, etc.
+- corpus.json['meta'][folio] carries the REAL IVTFF page metadata: 'I'=illustration type (H herbal, A astronomical, Z zodiac, B biological/balneo, C cosmological, P pharma, S stars/recipes, T text), 'L'=Currier language/dialect (A/B/unassigned), 'Q'=quire, 'H'=scribal hand.
+
+ESTABLISHED CONFOUNDS this session has already proven (use them to grade):
+1. Several scripts define "sections" by hand-rolled FOLIO-NUMBER RANGES. The corpus already contains the real IVTFF 'I' labels, and the ranges MISMATCH them (e.g. the folio-range "pharma" bucket is ~half actual herbal pages). Reconstructing sections by folio range when real labels exist = flawed.
+2. SECTION SIZE drives raw shared-vocabulary counts: the two largest sections share the most word-types by chance alone. Any "cross-reference" claim from RAW shared counts without a size-permutation null is flawed. (A permutation null showed the headline herbal-recipes edge is BELOW chance.)
+3. CURRIER A/B dialect: vocabulary overlap between sections largely tracks the documented A/B scribal split, not "function". Claims of a functional pipeline that ignore A/B are confounded.
+4. NORMALIZED ENRICHMENT inflates for the SMALLEST sections (small-denominator artifact). High enrichment among tiny sky-sections is an artifact, not signal.
+5. CONTENT-FREE GENERATORS reproduce the corpus's headline "pro-content" signatures: a ~12-15% self-citation + char-template generator matches real burstiness (IoD~1.3), section-localization, the label/body repetition split, char conditional-entropy h2 (2.12), Zipf slope, Heaps beta (~0.83), and the 72%-hapax open lexicon. So a
+--- FINAL REPORT ---
+Audit complete. Classified implicit_morph.py as investigatory / mixed soundness / useful value.
+
+The script runs two legitimate zero-input unsupervised segmenters (Harris branching entropy and BPE) and finds both rediscover the hand-built affix grammar (qo/ch/sh prefixes, -ar/-ol/-dy/-aiin suffixes), with 85.3% of tokens segmented and a 14.7% unsegmentable residual ceiling. The mechanic is sound and dodges the size/folio-range/Currier/small-denominator confounds entirely. Its one gap is the content-free-generator null (confound 5/6): productive template morphology would also produce strong branching-entropy boundaries and recurring BPE units, so this can't discriminate meaningful from merely-productive morphology — but the script is honest about scope and only claims discoverability, not meaning, so the stated conclusion holds.
+
+File: /Users/user/Documents/Dev/voynich/implicit_morph.py
+
+===== SUBAGENT agent-a7618bd8c326cecd9.jsonl =====
+--- TASK PROMPT ---
+You are auditing one Python analysis script in a Voynich-manuscript investigation. Working dir: /Users/user/Documents/Dev/voynich. Run python as: .venv/bin/python <script>
+
+CORPUS FACTS you must use to judge soundness:
+- corpus.json has {meta, folios}. folios[f] = list of lines {line, locus, words}. The locus letter (after @/+) marks line type: P=paragraph body, L=label, etc.
+- corpus.json['meta'][folio] carries the REAL IVTFF page metadata: 'I'=illustration type (H herbal, A astronomical, Z zodiac, B biological/balneo, C cosmological, P pharma, S stars/recipes, T text), 'L'=Currier language/dialect (A/B/unassigned), 'Q'=quire, 'H'=scribal hand.
+
+ESTABLISHED CONFOUNDS this session has already proven (use them to grade):
+1. Several scripts define "sections" by hand-rolled FOLIO-NUMBER RANGES. The corpus already contains the real IVTFF 'I' labels, and the ranges MISMATCH them (e.g. the folio-range "pharma" bucket is ~half actual herbal pages). Reconstructing sections by folio range when real labels exist = flawed.
+2. SECTION SIZE drives raw shared-vocabulary counts: the two largest sections share the most word-types by chance alone. Any "cross-reference" claim from RAW shared counts without a size-permutation null is flawed. (A permutation null showed the headline herbal-recipes edge is BELOW chance.)
+3. CURRIER A/B dialect: vocabulary overlap between sections largely tracks the documented A/B scribal split, not "function". Claims of a functional pipeline that ignore A/B are confounded.
+4. NORMALIZED ENRICHMENT inflates for the SMALLEST sections (small-denominator artifact). High enrichment among tiny sky-sections is an artifact, not signal.
+5. CONTENT-FREE GENERATORS reproduce the corpus's headline "pro-content" signatures: a ~12-15% self-citation + char-template generator matches real burstiness (IoD~1.3), section-localization, the label/body repetition split, char conditional-entropy h2 (2.12), Zipf slope, Heaps beta (~0.83), and the 72%-hapax open lexicon. So a
+--- FINAL REPORT ---
+I've completed the audit of `/Users/user/Documents/Dev/voynich/burst_tables.py` and returned the structured classification.
+
+===== SUBAGENT agent-a92d030fd92256377.jsonl =====
+--- TASK PROMPT ---
+You are auditing one Python analysis script in a Voynich-manuscript investigation. Working dir: /Users/user/Documents/Dev/voynich. Run python as: .venv/bin/python <script>
+
+CORPUS FACTS you must use to judge soundness:
+- corpus.json has {meta, folios}. folios[f] = list of lines {line, locus, words}. The locus letter (after @/+) marks line type: P=paragraph body, L=label, etc.
+- corpus.json['meta'][folio] carries the REAL IVTFF page metadata: 'I'=illustration type (H herbal, A astronomical, Z zodiac, B biological/balneo, C cosmological, P pharma, S stars/recipes, T text), 'L'=Currier language/dialect (A/B/unassigned), 'Q'=quire, 'H'=scribal hand.
+
+ESTABLISHED CONFOUNDS this session has already proven (use them to grade):
+1. Several scripts define "sections" by hand-rolled FOLIO-NUMBER RANGES. The corpus already contains the real IVTFF 'I' labels, and the ranges MISMATCH them (e.g. the folio-range "pharma" bucket is ~half actual herbal pages). Reconstructing sections by folio range when real labels exist = flawed.
+2. SECTION SIZE drives raw shared-vocabulary counts: the two largest sections share the most word-types by chance alone. Any "cross-reference" claim from RAW shared counts without a size-permutation null is flawed. (A permutation null showed the headline herbal-recipes edge is BELOW chance.)
+3. CURRIER A/B dialect: vocabulary overlap between sections largely tracks the documented A/B scribal split, not "function". Claims of a functional pipeline that ignore A/B are confounded.
+4. NORMALIZED ENRICHMENT inflates for the SMALLEST sections (small-denominator artifact). High enrichment among tiny sky-sections is an artifact, not signal.
+5. CONTENT-FREE GENERATORS reproduce the corpus's headline "pro-content" signatures: a ~12-15% self-citation + char-template generator matches real burstiness (IoD~1.3), section-localization, the label/body repetition split, char conditional-entropy h2 (2.12), Zipf slope, Heaps beta (~0.83), and the 72%-hapax open lexicon. So a
+--- FINAL REPORT ---
+Audit complete. The script is at /Users/user/Documents/Dev/voynich/structure_gaps.py.
+
+Summary: classified as **mixed / useful**. Part 1 (word-order/syntax test) is the load-bearing, genuinely discriminating contribution — it compares real bigram conditional entropy against a within-line shuffle null and honestly reports +0.00 bits of order information (no syntax beyond a bag-of-words), an anti-overreach result. Its weakness is sensitivity: with a 72%-hapax open lexicon the estimator can saturate, so it lacks a positive control proving the test can detect order when present. Parts 2 and 3 fall back to hand-rolled folio-range buckets instead of the real IVTFF labels (the ranges happen to coincide with real Z/S labels here, so little empirical harm) and add non-discriminating flourishes: "~30 labels = days of a month" numerology (counts actually span 19-47) and a frequency listing of the corpus's commonest words as "recipe openers."
+
+===== SUBAGENT agent-aa5584cc25b20f646.jsonl =====
+--- TASK PROMPT ---
+You are auditing one Python analysis script in a Voynich-manuscript investigation. Working dir: /Users/user/Documents/Dev/voynich. Run python as: .venv/bin/python <script>
+
+CORPUS FACTS you must use to judge soundness:
+- corpus.json has {meta, folios}. folios[f] = list of lines {line, locus, words}. The locus letter (after @/+) marks line type: P=paragraph body, L=label, etc.
+- corpus.json['meta'][folio] carries the REAL IVTFF page metadata: 'I'=illustration type (H herbal, A astronomical, Z zodiac, B biological/balneo, C cosmological, P pharma, S stars/recipes, T text), 'L'=Currier language/dialect (A/B/unassigned), 'Q'=quire, 'H'=scribal hand.
+
+ESTABLISHED CONFOUNDS this session has already proven (use them to grade):
+1. Several scripts define "sections" by hand-rolled FOLIO-NUMBER RANGES. The corpus already contains the real IVTFF 'I' labels, and the ranges MISMATCH them (e.g. the folio-range "pharma" bucket is ~half actual herbal pages). Reconstructing sections by folio range when real labels exist = flawed.
+2. SECTION SIZE drives raw shared-vocabulary counts: the two largest sections share the most word-types by chance alone. Any "cross-reference" claim from RAW shared counts without a size-permutation null is flawed. (A permutation null showed the headline herbal-recipes edge is BELOW chance.)
+3. CURRIER A/B dialect: vocabulary overlap between sections largely tracks the documented A/B scribal split, not "function". Claims of a functional pipeline that ignore A/B are confounded.
+4. NORMALIZED ENRICHMENT inflates for the SMALLEST sections (small-denominator artifact). High enrichment among tiny sky-sections is an artifact, not signal.
+5. CONTENT-FREE GENERATORS reproduce the corpus's headline "pro-content" signatures: a ~12-15% self-citation + char-template generator matches real burstiness (IoD~1.3), section-localization, the label/body repetition split, char conditional-entropy h2 (2.12), Zipf slope, Heaps beta (~0.83), and the 72%-hapax open lexicon. So a
+--- FINAL REPORT ---
+Audit complete. analyze.py is the cross-corpus statistical battery, classified as investigatory / mixed soundness / useful.
+
+Summary: clean mechanics (identical pipeline on Latin + English baselines, real Currier 'L' metadata for the A/B split, a built-in shuffle null for the repetition metric), and several metrics that actually show Voynich *diverging* from natural language (low h2, low word-length var/mean, off-Zipf). The mixed grade comes from the shuffle null only ruling out positional — not content-free-generator — repetition (confound #5), hapax reported without a content-free-morphology null (confound #6), and unmatched token counts/alphabet sizes confounding the cross-corpus magnitudes. It is a measurement battery rather than a meaning claim, so it earns "useful."
+
+===== SUBAGENT agent-aad8130603d4b1add.jsonl =====
+--- TASK PROMPT ---
+You are auditing one Python analysis script in a Voynich-manuscript investigation. Working dir: /Users/user/Documents/Dev/voynich. Run python as: .venv/bin/python <script>
+
+CORPUS FACTS you must use to judge soundness:
+- corpus.json has {meta, folios}. folios[f] = list of lines {line, locus, words}. The locus letter (after @/+) marks line type: P=paragraph body, L=label, etc.
+- corpus.json['meta'][folio] carries the REAL IVTFF page metadata: 'I'=illustration type (H herbal, A astronomical, Z zodiac, B biological/balneo, C cosmological, P pharma, S stars/recipes, T text), 'L'=Currier language/dialect (A/B/unassigned), 'Q'=quire, 'H'=scribal hand.
+
+ESTABLISHED CONFOUNDS this session has already proven (use them to grade):
+1. Several scripts define "sections" by hand-rolled FOLIO-NUMBER RANGES. The corpus already contains the real IVTFF 'I' labels, and the ranges MISMATCH them (e.g. the folio-range "pharma" bucket is ~half actual herbal pages). Reconstructing sections by folio range when real labels exist = flawed.
+2. SECTION SIZE drives raw shared-vocabulary counts: the two largest sections share the most word-types by chance alone. Any "cross-reference" claim from RAW shared counts without a size-permutation null is flawed. (A permutation null showed the headline herbal-recipes edge is BELOW chance.)
+3. CURRIER A/B dialect: vocabulary overlap between sections largely tracks the documented A/B scribal split, not "function". Claims of a functional pipeline that ignore A/B are confounded.
+4. NORMALIZED ENRICHMENT inflates for the SMALLEST sections (small-denominator artifact). High enrichment among tiny sky-sections is an artifact, not signal.
+5. CONTENT-FREE GENERATORS reproduce the corpus's headline "pro-content" signatures: a ~12-15% self-citation + char-template generator matches real burstiness (IoD~1.3), section-localization, the label/body repetition split, char conditional-entropy h2 (2.12), Zipf slope, Heaps beta (~0.83), and the 72%-hapax open lexicon. So a
+--- FINAL REPORT ---
+Audit complete. The script at /Users/user/Documents/Dev/voynich/collision_signal.py is graded mixed/useful, with the structured verdict returned above.
+
+===== SUBAGENT agent-ab3e49526e0c7cf61.jsonl =====
+--- TASK PROMPT ---
+You are auditing one Python analysis script in a Voynich-manuscript investigation. Working dir: /Users/user/Documents/Dev/voynich. Run python as: .venv/bin/python <script>
+
+CORPUS FACTS you must use to judge soundness:
+- corpus.json has {meta, folios}. folios[f] = list of lines {line, locus, words}. The locus letter (after @/+) marks line type: P=paragraph body, L=label, etc.
+- corpus.json['meta'][folio] carries the REAL IVTFF page metadata: 'I'=illustration type (H herbal, A astronomical, Z zodiac, B biological/balneo, C cosmological, P pharma, S stars/recipes, T text), 'L'=Currier language/dialect (A/B/unassigned), 'Q'=quire, 'H'=scribal hand.
+
+ESTABLISHED CONFOUNDS this session has already proven (use them to grade):
+1. Several scripts define "sections" by hand-rolled FOLIO-NUMBER RANGES. The corpus already contains the real IVTFF 'I' labels, and the ranges MISMATCH them (e.g. the folio-range "pharma" bucket is ~half actual herbal pages). Reconstructing sections by folio range when real labels exist = flawed.
+2. SECTION SIZE drives raw shared-vocabulary counts: the two largest sections share the most word-types by chance alone. Any "cross-reference" claim from RAW shared counts without a size-permutation null is flawed. (A permutation null showed the headline herbal-recipes edge is BELOW chance.)
+3. CURRIER A/B dialect: vocabulary overlap between sections largely tracks the documented A/B scribal split, not "function". Claims of a functional pipeline that ignore A/B are confounded.
+4. NORMALIZED ENRICHMENT inflates for the SMALLEST sections (small-denominator artifact). High enrichment among tiny sky-sections is an artifact, not signal.
+5. CONTENT-FREE GENERATORS reproduce the corpus's headline "pro-content" signatures: a ~12-15% self-citation + char-template generator matches real burstiness (IoD~1.3), section-localization, the label/body repetition split, char conditional-entropy h2 (2.12), Zipf slope, Heaps beta (~0.83), and the 72%-hapax open lexicon. So a
+--- FINAL REPORT ---
+I've audited hash_hypothesis.py at /Users/user/Documents/Dev/voynich/hash_hypothesis.py and returned the classification: investigatory, flawed, flourish.
+
+The decisive problems: the headline information-budget result (the "181x" caption/image ratio) is built on fabricated image-bit constants (`ROOTS,LEAVES,FLOWERS,ARRANGE=6,8,4,4`, admitted in-code as "generous counts from the sample") plus an independence-assumption word entropy that ignores the corpus's known burstiness; the "herbal" subset is selected by folio-number range rather than the real IVTFF 'I' label; the pigment-vs-length correlation has no null; and none of the signals rule out the content-free self-citation generator, so the directional "image = hash of text" conclusion overreaches its tests. The only sound piece (low-entropy/self-repeating text doesn't resemble hash output) is non-discriminating and already established.
+
+===== SUBAGENT agent-ab3f269415e5f03b6.jsonl =====
+--- TASK PROMPT ---
+You are auditing one Python analysis script in a Voynich-manuscript investigation. Working dir: /Users/user/Documents/Dev/voynich. Run python as: .venv/bin/python <script>
+
+CORPUS FACTS you must use to judge soundness:
+- corpus.json has {meta, folios}. folios[f] = list of lines {line, locus, words}. The locus letter (after @/+) marks line type: P=paragraph body, L=label, etc.
+- corpus.json['meta'][folio] carries the REAL IVTFF page metadata: 'I'=illustration type (H herbal, A astronomical, Z zodiac, B biological/balneo, C cosmological, P pharma, S stars/recipes, T text), 'L'=Currier language/dialect (A/B/unassigned), 'Q'=quire, 'H'=scribal hand.
+
+ESTABLISHED CONFOUNDS this session has already proven (use them to grade):
+1. Several scripts define "sections" by hand-rolled FOLIO-NUMBER RANGES. The corpus already contains the real IVTFF 'I' labels, and the ranges MISMATCH them (e.g. the folio-range "pharma" bucket is ~half actual herbal pages). Reconstructing sections by folio range when real labels exist = flawed.
+2. SECTION SIZE drives raw shared-vocabulary counts: the two largest sections share the most word-types by chance alone. Any "cross-reference" claim from RAW shared counts without a size-permutation null is flawed. (A permutation null showed the headline herbal-recipes edge is BELOW chance.)
+3. CURRIER A/B dialect: vocabulary overlap between sections largely tracks the documented A/B scribal split, not "function". Claims of a functional pipeline that ignore A/B are confounded.
+4. NORMALIZED ENRICHMENT inflates for the SMALLEST sections (small-denominator artifact). High enrichment among tiny sky-sections is an artifact, not signal.
+5. CONTENT-FREE GENERATORS reproduce the corpus's headline "pro-content" signatures: a ~12-15% self-citation + char-template generator matches real burstiness (IoD~1.3), section-localization, the label/body repetition split, char conditional-entropy h2 (2.12), Zipf slope, Heaps beta (~0.83), and the 72%-hapax open lexicon. So a
+--- FINAL REPORT ---
+Audit complete for /Users/user/Documents/Dev/voynich/log_test.py. Classified as investigatory / mixed / useful — the within-paragraph shuffle null is a clean, reusable order-dependence test, but the "TRANSITION LOG" verdict overreaches: only T1 (weak local autocorrelation, p=0.0025) is supported and is reproducible by line-template/repetition artifacts, while T2 (directional drift, the actual log-vs-bag discriminator) is null and T3 has no control.
+
+===== SUBAGENT agent-acc34b08653172e6f.jsonl =====
+--- TASK PROMPT ---
+You are auditing one Python analysis script in a Voynich-manuscript investigation. Working dir: /Users/user/Documents/Dev/voynich. Run python as: .venv/bin/python <script>
+
+CORPUS FACTS you must use to judge soundness:
+- corpus.json has {meta, folios}. folios[f] = list of lines {line, locus, words}. The locus letter (after @/+) marks line type: P=paragraph body, L=label, etc.
+- corpus.json['meta'][folio] carries the REAL IVTFF page metadata: 'I'=illustration type (H herbal, A astronomical, Z zodiac, B biological/balneo, C cosmological, P pharma, S stars/recipes, T text), 'L'=Currier language/dialect (A/B/unassigned), 'Q'=quire, 'H'=scribal hand.
+
+ESTABLISHED CONFOUNDS this session has already proven (use them to grade):
+1. Several scripts define "sections" by hand-rolled FOLIO-NUMBER RANGES. The corpus already contains the real IVTFF 'I' labels, and the ranges MISMATCH them (e.g. the folio-range "pharma" bucket is ~half actual herbal pages). Reconstructing sections by folio range when real labels exist = flawed.
+2. SECTION SIZE drives raw shared-vocabulary counts: the two largest sections share the most word-types by chance alone. Any "cross-reference" claim from RAW shared counts without a size-permutation null is flawed. (A permutation null showed the headline herbal-recipes edge is BELOW chance.)
+3. CURRIER A/B dialect: vocabulary overlap between sections largely tracks the documented A/B scribal split, not "function". Claims of a functional pipeline that ignore A/B are confounded.
+4. NORMALIZED ENRICHMENT inflates for the SMALLEST sections (small-denominator artifact). High enrichment among tiny sky-sections is an artifact, not signal.
+5. CONTENT-FREE GENERATORS reproduce the corpus's headline "pro-content" signatures: a ~12-15% self-citation + char-template generator matches real burstiness (IoD~1.3), section-localization, the label/body repetition split, char conditional-entropy h2 (2.12), Zipf slope, Heaps beta (~0.83), and the 72%-hapax open lexicon. So a
+--- FINAL REPORT ---
+Classified music_test.py. Summary: it is an investigatory script testing the "is it music?" hypothesis via four sequence signatures. Graded mixed/useful — its phrase-recurrence-vs-within-line-shuffle null (Test 1) is a clean, reusable discriminating test for ordered structure, and its meter/refrain negatives are honest, but its "melodic memory" framing of glyph conditional entropy (h2=2.12) leans on a feature that confound 5 shows a content-free generator reproduces, with no content-free null. The 4-gram ratio 10.0 is a divide-by-1e-9 artifact and `bags` is dead code. Net, the script's own results mostly fail to support the music hypothesis.
+
+===== SUBAGENT agent-ad6e7b709919e71ea.jsonl =====
+--- TASK PROMPT ---
+You are auditing one Python analysis script in a Voynich-manuscript investigation. Working dir: /Users/user/Documents/Dev/voynich. Run python as: .venv/bin/python <script>
+
+CORPUS FACTS you must use to judge soundness:
+- corpus.json has {meta, folios}. folios[f] = list of lines {line, locus, words}. The locus letter (after @/+) marks line type: P=paragraph body, L=label, etc.
+- corpus.json['meta'][folio] carries the REAL IVTFF page metadata: 'I'=illustration type (H herbal, A astronomical, Z zodiac, B biological/balneo, C cosmological, P pharma, S stars/recipes, T text), 'L'=Currier language/dialect (A/B/unassigned), 'Q'=quire, 'H'=scribal hand.
+
+ESTABLISHED CONFOUNDS this session has already proven (use them to grade):
+1. Several scripts define "sections" by hand-rolled FOLIO-NUMBER RANGES. The corpus already contains the real IVTFF 'I' labels, and the ranges MISMATCH them (e.g. the folio-range "pharma" bucket is ~half actual herbal pages). Reconstructing sections by folio range when real labels exist = flawed.
+2. SECTION SIZE drives raw shared-vocabulary counts: the two largest sections share the most word-types by chance alone. Any "cross-reference" claim from RAW shared counts without a size-permutation null is flawed. (A permutation null showed the headline herbal-recipes edge is BELOW chance.)
+3. CURRIER A/B dialect: vocabulary overlap between sections largely tracks the documented A/B scribal split, not "function". Claims of a functional pipeline that ignore A/B are confounded.
+4. NORMALIZED ENRICHMENT inflates for the SMALLEST sections (small-denominator artifact). High enrichment among tiny sky-sections is an artifact, not signal.
+5. CONTENT-FREE GENERATORS reproduce the corpus's headline "pro-content" signatures: a ~12-15% self-citation + char-template generator matches real burstiness (IoD~1.3), section-localization, the label/body repetition split, char conditional-entropy h2 (2.12), Zipf slope, Heaps beta (~0.83), and the 72%-hapax open lexicon. So a
+--- FINAL REPORT ---
+Audit complete. stroke.py classified as investigatory, flawed, and a flourish.
+
+The script (/Users/user/Documents/Dev/voynich/stroke.py) decomposes EVA glyphs via a hand-written COMP dictionary and argues for a hidden Latin scribal tradition. Its fatal problems: the "stroke inventory" is an invented relabeling of EVA glyphs (circular, no external paleographic ground truth), and all four claims are asserted by analogy to Latin with zero null model. The real measurements it surfaces (EVA y is 84% word-final, minim runs are length 1-2 closed by n/r) are correct positional facts but are exactly the template-morphology signatures the session's content-free generator already reproduces, so they cannot discriminate meaning from artifact.
+
+===== SUBAGENT agent-ae146524e88297c3c.jsonl =====
+--- TASK PROMPT ---
+You are auditing one Python analysis script in a Voynich-manuscript investigation. Working dir: /Users/user/Documents/Dev/voynich. Run python as: .venv/bin/python <script>
+
+CORPUS FACTS you must use to judge soundness:
+- corpus.json has {meta, folios}. folios[f] = list of lines {line, locus, words}. The locus letter (after @/+) marks line type: P=paragraph body, L=label, etc.
+- corpus.json['meta'][folio] carries the REAL IVTFF page metadata: 'I'=illustration type (H herbal, A astronomical, Z zodiac, B biological/balneo, C cosmological, P pharma, S stars/recipes, T text), 'L'=Currier language/dialect (A/B/unassigned), 'Q'=quire, 'H'=scribal hand.
+
+ESTABLISHED CONFOUNDS this session has already proven (use them to grade):
+1. Several scripts define "sections" by hand-rolled FOLIO-NUMBER RANGES. The corpus already contains the real IVTFF 'I' labels, and the ranges MISMATCH them (e.g. the folio-range "pharma" bucket is ~half actual herbal pages). Reconstructing sections by folio range when real labels exist = flawed.
+2. SECTION SIZE drives raw shared-vocabulary counts: the two largest sections share the most word-types by chance alone. Any "cross-reference" claim from RAW shared counts without a size-permutation null is flawed. (A permutation null showed the headline herbal-recipes edge is BELOW chance.)
+3. CURRIER A/B dialect: vocabulary overlap between sections largely tracks the documented A/B scribal split, not "function". Claims of a functional pipeline that ignore A/B are confounded.
+4. NORMALIZED ENRICHMENT inflates for the SMALLEST sections (small-denominator artifact). High enrichment among tiny sky-sections is an artifact, not signal.
+5. CONTENT-FREE GENERATORS reproduce the corpus's headline "pro-content" signatures: a ~12-15% self-citation + char-template generator matches real burstiness (IoD~1.3), section-localization, the label/body repetition split, char conditional-entropy h2 (2.12), Zipf slope, Heaps beta (~0.83), and the 72%-hapax open lexicon. So a
+--- FINAL REPORT ---
+Audit complete. genealogy.py at /Users/user/Documents/Dev/voynich/genealogy.py is **flawed / flourish**: its three "discriminating tests" all print hardcoded genealogy-affirming conclusions that the data contradict (T1 non-significant at p=0.1429, T2 confounds section-localization, T3 broken with an empty comparison bucket / nan).
+
+===== SUBAGENT agent-ae39eba847035a4bd.jsonl =====
+--- TASK PROMPT ---
+You are auditing one Python analysis script in a Voynich-manuscript investigation. Working dir: /Users/user/Documents/Dev/voynich. Run python as: .venv/bin/python <script>
+
+CORPUS FACTS you must use to judge soundness:
+- corpus.json has {meta, folios}. folios[f] = list of lines {line, locus, words}. The locus letter (after @/+) marks line type: P=paragraph body, L=label, etc.
+- corpus.json['meta'][folio] carries the REAL IVTFF page metadata: 'I'=illustration type (H herbal, A astronomical, Z zodiac, B biological/balneo, C cosmological, P pharma, S stars/recipes, T text), 'L'=Currier language/dialect (A/B/unassigned), 'Q'=quire, 'H'=scribal hand.
+
+ESTABLISHED CONFOUNDS this session has already proven (use them to grade):
+1. Several scripts define "sections" by hand-rolled FOLIO-NUMBER RANGES. The corpus already contains the real IVTFF 'I' labels, and the ranges MISMATCH them (e.g. the folio-range "pharma" bucket is ~half actual herbal pages). Reconstructing sections by folio range when real labels exist = flawed.
+2. SECTION SIZE drives raw shared-vocabulary counts: the two largest sections share the most word-types by chance alone. Any "cross-reference" claim from RAW shared counts without a size-permutation null is flawed. (A permutation null showed the headline herbal-recipes edge is BELOW chance.)
+3. CURRIER A/B dialect: vocabulary overlap between sections largely tracks the documented A/B scribal split, not "function". Claims of a functional pipeline that ignore A/B are confounded.
+4. NORMALIZED ENRICHMENT inflates for the SMALLEST sections (small-denominator artifact). High enrichment among tiny sky-sections is an artifact, not signal.
+5. CONTENT-FREE GENERATORS reproduce the corpus's headline "pro-content" signatures: a ~12-15% self-citation + char-template generator matches real burstiness (IoD~1.3), section-localization, the label/body repetition split, char conditional-entropy h2 (2.12), Zipf slope, Heaps beta (~0.83), and the 72%-hapax open lexicon. So a
+--- FINAL REPORT ---
+Audit complete. genfit.py is an investigatory, mixed-soundness, useful script. It implements the correct content-free-generator discriminating test (the exact framework this session validated), with two explicit null generators and a stat battery, and honestly defines its conclusion as "residual = what the generator can't reproduce." It's downgraded from sound to mixed because the copy parameters are hardcoded rather than fit (so the burstiness/hapax residual could be a tuning artifact rather than a real limit of copying), it runs a single seed with no error bars, and it pools all P-lines while ignoring the Currier A/B split.
+
+===== SUBAGENT agent-aefad6731453672df.jsonl =====
+--- TASK PROMPT ---
+You are auditing one Python analysis script in a Voynich-manuscript investigation. Working dir: /Users/user/Documents/Dev/voynich. Run python as: .venv/bin/python <script>
+
+CORPUS FACTS you must use to judge soundness:
+- corpus.json has {meta, folios}. folios[f] = list of lines {line, locus, words}. The locus letter (after @/+) marks line type: P=paragraph body, L=label, etc.
+- corpus.json['meta'][folio] carries the REAL IVTFF page metadata: 'I'=illustration type (H herbal, A astronomical, Z zodiac, B biological/balneo, C cosmological, P pharma, S stars/recipes, T text), 'L'=Currier language/dialect (A/B/unassigned), 'Q'=quire, 'H'=scribal hand.
+
+ESTABLISHED CONFOUNDS this session has already proven (use them to grade):
+1. Several scripts define "sections" by hand-rolled FOLIO-NUMBER RANGES. The corpus already contains the real IVTFF 'I' labels, and the ranges MISMATCH them (e.g. the folio-range "pharma" bucket is ~half actual herbal pages). Reconstructing sections by folio range when real labels exist = flawed.
+2. SECTION SIZE drives raw shared-vocabulary counts: the two largest sections share the most word-types by chance alone. Any "cross-reference" claim from RAW shared counts without a size-permutation null is flawed. (A permutation null showed the headline herbal-recipes edge is BELOW chance.)
+3. CURRIER A/B dialect: vocabulary overlap between sections largely tracks the documented A/B scribal split, not "function". Claims of a functional pipeline that ignore A/B are confounded.
+4. NORMALIZED ENRICHMENT inflates for the SMALLEST sections (small-denominator artifact). High enrichment among tiny sky-sections is an artifact, not signal.
+5. CONTENT-FREE GENERATORS reproduce the corpus's headline "pro-content" signatures: a ~12-15% self-citation + char-template generator matches real burstiness (IoD~1.3), section-localization, the label/body repetition split, char conditional-entropy h2 (2.12), Zipf slope, Heaps beta (~0.83), and the 72%-hapax open lexicon. So a
+--- FINAL REPORT ---
+Audit complete. The structured classification has been returned for null_and_morph.py.
+
+Summary: The script is **mixed/useful**. Part 1 (null generators) embodies the correct discriminating logic — build content-free text and demand any "meaning" claim beat it — though its self-citation generator is buggy and neither generator actually reproduces the profile cleanly. Part 2 (slot grammar) is descriptive with no null: "50.9% of types decompose" is never compared against chance for such a permissive, hand-tuned affix list (bare `y`, `o`, `d` affixes trivially inflate it), and is oversold as "central evidence" when it's equally consistent with content-free productive morphology.
+

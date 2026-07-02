@@ -1,0 +1,20 @@
+{
+  "_method": "Vision tags by claude-opus-4-8, 2026-06-20. Each plant = one herbal diagram. Slots: root, stem, leaf, inflorescence. Tag = visual part-type category. '?' = not visible/ambiguous. Source: 3 plant montages (4 plants each, labeled by folio) + raw_016/026/050 full-res renders.",
+  "plants": [
+    {"id":"m0_a","src":"montage0 TL","root":"taproot","stem":"single_erect","leaf":"lanceolate_drooping","infl":"none_leafy"},
+    {"id":"m0_b","src":"montage0 TR","root":"fibrous_thin","stem":"single_erect","leaf":"pinnate_fern","infl":"berry_pair"},
+    {"id":"m0_c","src":"montage0 BL","root":"taproot_branched","stem":"branching","leaf":"palmate_lobed","infl":"none_leafy"},
+    {"id":"m0_d","src":"montage0 BR","root":"fibrous_dense","stem":"multi_radiating","leaf":"none_small","infl":"composite_blue_cluster"},
+    {"id":"m1_a","src":"montage1 TL","root":"taproot_red","stem":"single_erect","leaf":"pinnate_fern","infl":"umbel"},
+    {"id":"m1_b","src":"montage1 TR","root":"taproot","stem":"single_erect","leaf":"ovate_paired","infl":"composite_blue_head"},
+    {"id":"m1_c","src":"montage1 BL","root":"fibrous_thin","stem":"branching","leaf":"small_oval","infl":"spike_red"},
+    {"id":"m1_d","src":"montage1 BR","root":"rhizome_horizontal","stem":"multi_radiating","leaf":"palmate_lobed","infl":"composite_blue_cluster"},
+    {"id":"m2_a","src":"montage2 TL","root":"taproot_red_forked","stem":"single_erect","leaf":"ovate_paired","infl":"composite_white_cluster"},
+    {"id":"m2_b","src":"montage2 TR","root":"taproot_red","stem":"single_erect","leaf":"basal_brown_mass","infl":"composite_blue_head"},
+    {"id":"m2_c","src":"montage2 BL","root":"fibrous_dense_red","stem":"multi_radiating","leaf":"palmate_lobed","infl":"composite_white_cluster"},
+    {"id":"m2_d","src":"montage2 BR","root":"taproot_red_heart","stem":"branching","leaf":"lanceolate","infl":"composite_blue_cluster"},
+    {"id":"r016_f8","src":"raw_016 f8","root":"fibrous_thin","stem":"single_erect","leaf":"hastate_single_large","infl":"none_leafy"},
+    {"id":"r026_f16","src":"raw_026 f16","root":"rhizome_segmented_coiled","stem":"single_erect","leaf":"sword_whorl","infl":"composite_head"},
+    {"id":"r050_f26","src":"raw_050 f26","root":"fibrous_fingered","stem":"branching","leaf":"round_cordate","infl":"berry_cluster"}
+  ]
+}

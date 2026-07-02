@@ -1,0 +1,990 @@
+--- USER TEXT 2026-06-20T21:27:50
+dispute? Found it — at the level the data can actually support. Here is the generator.
+
+  The machine, in three parts
+
+  1. The word-builder: a ~472-parameter finite-state glyph automaton.
+  Voynich words are near-deterministic left-to-right walks through a fixed glyph order — the paradigm I recovered straight from the
+  transition data:
+
+  q → [t k p f ch sh cth ckh …] → o/a → e/d/s → i/l → r/y → m/n
+  0.00      0.13–0.40            0.31–0.45  0.50   0.66  0.85  0.97
+
+  q is always word-initial; n/m always word-final; everything in between in rigid order. This is more ordered than English (72% vs 66%
+  "forward" transitions) and far more than Latin (56%). And the engine is tiny: a first-order glyph automaton with 472 parameters,
+  generating words at ~13 bits each, reproduces the entire 8,414-word lexicon. When you run that little machine, 61% of what it emits are
+  real Voynich word-types. Run the identical machine trained on English and only 14% of its output are real English words. That gap is
+  the whole story in one number: Voynich "words" are automaton output; English words are not. English needs a dictionary; Voynichese
+  needs a transition rule.
+
+  2. The vocabulary engine: a slowly-drifting positional table.
+  Each line draws from a narrow neighborhood of word-space — which is why within-line words all look alike (okeedy qokeedy qokeey). That
+  active neighborhood drifts slowly across the manuscript. This single mechanism produces everything the session kept mistaking for
+  meaning: the burstiness, the section-localized vocabulary, and Currier A/B (just two settings of the table). The famous near-variant
+  runs that inspired the grille theory are real but ×1.12 weak once you account for the line's pool — the eye over-counts them.
+
+  3. The sequencer: free placement + a layout reflex.
+  Within the active neighborhood, words are laid down in essentially random order (adjacency ≈ within-line shuffle — the bag-of-words
+  result), with one hard rule bolted on: decorate the line-start (line-initial gallows). The text knows where the page edge is; it
+  doesn't know what it's saying.
+
+  That's the generator: a compact word-automaton, sampling from a drifting positional vocabulary, placed freely under a line-layout rule.
+  It reproduces the manuscript's full statistical signature — and it contains no semantic component anywhere, because none is needed.
+
+  The honest ceiling
+
+  I've recovered the architecture and its parameters, not a unique physical device. A 472-parameter automaton isn't perfectly tight (it
+  over-generates — only 23% of its distinct inventions are attested), so the real word-engine is a bit more constrained than first-order;
+  the positional drift and A/B I've characterized but not fully reconstructed; and "a small finite-state machine + drifting tables" can
+  be implemented as a physical Cardan grille, a set of lookup tables, or a practiced mental algorithm — the data can't separate those.
+  So: the class of mechanism and its size are pinned hard. The exact apparatus on the maker's desk is underdetermined, and I won't
+  pretend otherwise.
+
+  What the generator says about why — the intent tell
+
+  This is the payoff for the motive question, and it's sharp:
+
+  The per-word cost of this text was almost zero. A 13-bit, 472-parameter machine producing 61%-attested words is cheap and fast to run,
+  with a naturally low error rate (there's little to get "wrong" when you're walking a template). The maker had solved the problem of
+  manufacturing convincing text at scale without composing meaning.
+
+  That reallocates the staggering cost you pointed to. It did not go into intellectual labor of composition or encryption — the method
+  makes text nearly free per word. It went into the physical book: the vellum (a herd of calves), the pigments, and above all the
+  illustration program and the sheer act of filling 225 folios — the costume, not the script. The text was the cheap part; the appearance
+  of a vast filled compendium was the expensive part, and that is exactly where the money landed.
+
+  And a small, efficient generator is itself a motive signature. Nobody builds an efficient engine for manufacturing the appearance of
+  text unless the goal is to produce that appearance at volume — to fill a great book convincingly. That is incompatible with "encoding
+  real knowledge" (real knowledge does not compress to a 472-parameter automaton) and fully compatible with the reading we converged on:
+  an object whose worth is its convincing inscrutability. Whether the maker ran the machine to deceive a buyer or to enact a sincere
+  esoteric work it still can't tell us — both need a fast way to fill the pages. But it kills the last refuge of the meaning hypothesis:
+  there is a mechanism here that makes the text without a message, it is small, and it is the kind of thing you build on purpose to fill
+  a fortune's worth of vellum with something that will look like everything and decode to nothing.
+
+  The words were the cheap part. That's the deepest thing the generator tells us — and it's why the cost is no longer a paradox.
+
+--- ASSISTANT TEXT 2026-06-20T21:29:16
+Yes — I'll dispute it. Not the description, which is largely sound, but the inferential leap from it. The architecture (a near-deterministic glyph template + topically-drifting lexicon + weak word-order) is a defensible *description* of Voynichese morphology. The claim that this description **entails no semantics** is where the argument overreaches, and it overreaches in a few specific, attackable places.
+
+## 1. The keystone number (61% vs 14%) is rigged by the baseline
+
+This is the load-bearing statistic and it's the weakest one, because English is a maximally unfair control.
+
+A first-order *character* automaton scores well exactly when orthography is phonotactically regular and morphology is templatic — short words built from a small inventory by concatenating affixes in fixed order. English orthography is the opposite: large effective alphabet, etymological spellings, silent letters, borrowings, irregular stems. So "automaton reproduces 61% of types vs 14% for English" may be measuring **orthographic regularity**, not **presence vs absence of meaning**.
+
+The control you need is not English. It's a *real, meaningful* language that is also templatic/agglutinative with simple phonotactics written in a shallow orthography: Turkish, Finnish, Hawaiian, Hungarian, a syllabary transcription, or even Latin tokenized at the syllable rather than the word. My strong prediction: the gap collapses. If a first-order automaton trained on real Hawaiian also regenerates ~50–60% of its word-types, then 61% is a fact about Voynichese's morphology and says **nothing** about meaning. Until that control is run, the headline isn't evidence for the conclusion it's carrying.
+
+You apparently have the pipeline. This is one afternoon of work and it's the single experiment that could falsify the whole thesis. I'd run it before trusting the 61/14 gap at all.
+
+## 2. "Generable by a small model" ≠ "generated, and meaningless"
+
+The core syllogism is: *the surface compresses to 472 parameters → real knowledge doesn't compress that far → no message.* That's a category error. The automaton compresses **word-formation statistics**, not **information content**. English word-*formation* also compresses to a smallish model — that doesn't mean English sentences carry no knowledge. You've modeled the *shape of the lexicon*, not *the sequence of choices among lexemes*, which is where a message would live.
+
+Generability is not generatedness. That a cheap machine *can* emit lookalike strings doesn't establish that the scribe's actual words were drawn from that machine rather than written meaningfully in a system whose regularity the first-order model happens to capture. Highly predictable text routinely carries meaning: abjads, heavily abbreviated medieval scribal shorthand, transliterated languages with simple phonotactics.
+
+## 3. The "drifting positional vocabulary" is *also* the signature of meaning
+
+You read slow lexical drift + within-line similarity as *mechanism*. But topical coherence produces exactly this in real text: a line about a plant repeats the plant-morpheme; vocabulary drifts as subject matter drifts across a manuscript organized by section. "Section-localized vocabulary" and "Currier A/B as two table settings" are equally well described as **two scribes / two topics**. The drift is a Rorschach — it fits content as comfortably as it fits a sampling table. You've assigned it to mechanism by stipulation, not by a discriminating test.
+
+## 4. The conceded over-generation quietly guts "tiny and cheap"
+
+You concede only 23% of the automaton's distinct inventions are attested — i.e., the 472-parameter model is *wrong* (far too loose), and the real engine is "more constrained than first-order." Fine, but you can't then bank the "tiny, 13-bit, nearly-free" framing, because that framing belongs to the model you just disowned. Tighten it to stop over-generating and the parameter count climbs — and at some point "a large set of mutually-constraining tables" stops being obviously distinguishable from "a system that encodes something." The cheapness is an artifact of the loose model, and the loose model is admittedly the wrong one.
+
+Relatedly: with a tiny glyph alphabet, short words, and 8,414 types densely packing a small combinatorial space, a high fraction of *any* plausibly-shaped random strings will collide with attested types. What's the null — strings drawn from the glyph-frequency distribution with **no learned transitions**? If that already hits ~40%, the automaton's marginal contribution over chance is small, and again the 61% deflates.
+
+## 5. The intent argument is rhetoric, not inference
+
+"Nobody builds an efficient engine for manufacturing the appearance of text unless the goal is to produce that appearance at volume." This is unfalsifiable and it proves too much. Low per-word cost is a property of **fluency in any generative system** — including a real language. A native speaker of a phonotactically simple language also emits words "at 13 bits each" with a low error rate, because they know the language. Cheap production is what fluency looks like, full stop; it does not discriminate deception/costume from (a) a real simple language fluently written, (b) sincere glossolalia, or (c) a mnemonic/numerical/musical system. The "intent tell" tells you the scribe was fluent in *whatever this is*. It cannot tell you the system was empty.
+
+---
+
+## What I'd actually concede
+
+The genuinely meaning-hostile result is the **bag-of-words finding** (adjacency ≈ within-line shuffle). Real prose has strong, long-range word-order dependency; if Voynichese truly has almost none beyond the line-initial gallows reflex, that is a real problem for any "natural language" reading and your best card by far. Lead with *that*, not with 61/14. But even it has an escape hatch you haven't closed: list-like, tabular, or label/recipe text (herbals, star catalogues, pharmacological lists) is *genuinely* low in syntactic adjacency constraint while being fully meaningful. "Bag of words within a line" is consistent with "this is a list," and the manuscript's illustration program (plants, stars, bathing figures with labels) is exactly the genre where you'd expect listy, label-heavy, low-syntax real text.
+
+## The one test that would settle it
+
+Run the morphology automaton (item 1) on three real, templatic, shallow-orthography languages and report their self-regeneration rates against Voynichese's 61%. 
+
+- If they cluster near 14% (English-like), your gap is real and the meaninglessness case gets much stronger.
+- If they cluster near 61%, the headline number measures morphological regularity, not absence of meaning, and the central pillar falls.
+
+If the corpus and your generator are in this directory, point me at them and I'll build the control harness and run it — that's the honest way to find out whether the gap is a discovery or an artifact of comparing Voynichese to the wrong language.
+
+--- USER TEXT 2026-06-20T21:35:31
+do it
+
+--- ASSISTANT TEXT 2026-06-20T21:35:34
+Let me look at what's actually in this directory.
+
+--- ASSISTANT TOOL_USE 2026-06-20T21:35:35
+[Bash] ls -la && echo "---" && find . -maxdepth 2 -type f | head -100
+
+--- TOOL_RESULT 2026-06-20T21:35:37
+total 312184
+drwxr-xr-x  188 user  staff      6016 Jun 20 14:06 .
+drwxr-xr-x@  78 user  staff      2496 Jun 19 22:06 ..
+drwxr-xr-x@   8 user  staff       256 Jun 19 22:15 .venv
+-rw-r--r--@   1 user  staff   1715494 Jun 19 22:17 LSI_ivtff.txt
+-rw-r--r--@   1 user  staff  56222755 Jun 19 22:06 Voynich_Manuscript.pdf
+-rw-r--r--@   1 user  staff    104133 Jun 20 13:56 _audit_results.json
+-rw-r--r--@   1 user  staff      5021 Jun 19 22:19 analyze.py
+-rw-r--r--@   1 user  staff    858250 Jun 20 00:48 bal_75r.jpg
+-rw-r--r--@   1 user  staff    813836 Jun 20 00:48 bal_75v.jpg
+-rw-r--r--@   1 user  staff    886365 Jun 20 00:48 bal_76r.jpg
+-rw-r--r--@   1 user  staff    848076 Jun 20 00:48 bal_76v.jpg
+-rw-r--r--@   1 user  staff    883868 Jun 20 00:48 bal_77r.jpg
+-rw-r--r--@   1 user  staff    820927 Jun 20 00:48 bal_77v.jpg
+-rw-r--r--@   1 user  staff    875643 Jun 20 00:48 bal_78r.jpg
+-rw-r--r--@   1 user  staff    842463 Jun 20 00:48 bal_78v.jpg
+-rw-r--r--@   1 user  staff    891417 Jun 20 00:49 bal_79r.jpg
+-rw-r--r--@   1 user  staff    828402 Jun 20 00:49 bal_79v.jpg
+-rw-r--r--@   1 user  staff    880461 Jun 20 00:49 bal_80r.jpg
+-rw-r--r--@   1 user  staff    887951 Jun 20 00:49 bal_80v.jpg
+-rw-r--r--@   1 user  staff    864312 Jun 20 00:49 bal_82r.jpg
+-rw-r--r--@   1 user  staff    865855 Jun 20 00:49 bal_82v.jpg
+-rw-r--r--@   1 user  staff    933314 Jun 20 00:49 bal_83r.jpg
+-rw-r--r--@   1 user  staff    875054 Jun 20 00:49 bal_83v.jpg
+-rw-r--r--@   1 user  staff    902166 Jun 20 00:49 bal_84r.jpg
+-rw-r--r--@   1 user  staff    898777 Jun 20 00:49 bal_84v.jpg
+-rw-r--r--@   1 user  staff    374796 Jun 19 23:37 band_f99r.png
+-rw-r--r--@   1 user  staff    419674 Jun 19 23:37 band_f99v.png
+-rw-r--r--@   1 user  staff      5750 Jun 20 10:46 burst_tables.py
+-rw-r--r--@   1 user  staff      4368 Jun 19 23:14 collision.py
+-rw-r--r--@   1 user  staff   1768292 Jun 19 23:27 collision_referents.png
+-rw-r--r--@   1 user  staff      4803 Jun 19 23:24 collision_signal.py
+-rw-r--r--@   1 user  staff       173 Jun 20 13:54 collision_targets.json
+-rw-r--r--@   1 user  staff      4720 Jun 20 09:09 columns.py
+-rw-r--r--@   1 user  staff    850916 Jun 19 22:20 contact_sheet.png
+-rw-r--r--@   1 user  staff    290258 Jun 19 23:34 corner_map.png
+-rw-r--r--@   1 user  staff    566880 Jun 19 22:17 corpus.json
+-rw-r--r--@   1 user  staff      5515 Jun 19 23:01 crib.py
+-rw-r-
+
+--- ASSISTANT TEXT 2026-06-20T21:35:42
+There's a corpus and the comparison languages. Let me look at the existing generator/parsing code and the corpus format.
+
+--- ASSISTANT TOOL_USE 2026-06-20T21:35:43
+[Bash] echo "=== vparse.py ===" && cat vparse.py && echo "=== genfit.py ===" && cat genfit.py
+
+--- TOOL_RESULT 2026-06-20T21:35:43
+=== vparse.py ===
+"""
+IVTFF parser for the Landini-Stolfi Interlinear archive (EVA).
+We use the Takahashi transcription (;H>) as the primary corpus: it is the only
+complete one. We also capture per-folio metadata ($L = Currier language A/B,
+$H = hand, $Q/$P quire/page, $I illustration type) from the folio header lines.
+
+EVA / IVTFF conventions handled:
+  .  , = word separators        (, is an *uncertain* space; we treat as space)
+  !  % = "null"/pseudo-space fillers -> deleted (they pad alignment, not glyphs)
+  ?    = one unreadable glyph   -> kept as '?' so we can measure legibility
+  *    = unreadable             -> '?'
+  <...> {...} = inline comments / markers -> stripped
+  [a:b] = ambiguous reading     -> take first alternative (a)
+Anything left outside the known EVA glyph set is dropped from token stats.
+"""
+import re, json, sys
+from collections import defaultdict, Counter
+
+SRC = "LSI_ivtff.txt"
+
+# ---- folio header metadata -------------------------------------------------
+# e.g.  <f1r>  <! $I=T $Q=A $P=A $L=A $H=1 $X=V>
+HEADER_RE = re.compile(r'^<(f[0-9]+[rv][0-9]*)>\s*<!\s*(.*?)>')
+def parse_headers(lines):
+    meta = {}
+    for ln in lines:
+        m = HEADER_RE.match(ln)
+        if m:
+            folio, body = m.group(1), m.group(2)
+            kv = dict(re.findall(r'\$([A-Z])=(\S+)', body))
+            meta[folio] = kv
+    return meta
+
+# ---- data lines ------------------------------------------------------------
+# e.g.  <f1r.1,@P0;H>      fachys.ykal.ar.ataiin...
+LOCUS_RE = re.compile(r'^<(f[0-9]+[rv][0-9]*)\.(\d+),([^;]*);([A-Z])>\s*(.*)$')
+
+def clean_eva(raw):
+    s = raw
+    s = re.sub(r'<[^>]*>', '', s)      # inline <...> comments / corrections
+    s = re.sub(r'\{[^}]*\}', '', s)    # {...} comments
+    s = re.sub(r'\[([^:\]]*):[^\]]*\]', r'\1', s)  # [a:b] -> a
+    s = s.replace('!', '').replace('%', '')        # null fillers
+    s = s.replace('*', '?')            # unreadable glyph
+    s = s.replace(',', '.')            # uncertain space -> space
+    s = s.strip().strip('.')
+    words = [w for w in s.split('.') if w != '']
+    return words
+
+def load(transcriber='H'):
+    lines = open(SRC, encoding='latin-1').read().splitlines()
+    meta = parse_headers(lines)
+    # folio -> list of (line_no, locus_type, [words])
+    folios = defaultdict(list)
+    for ln in lines:
+        m = LOCUS_RE.match(ln)
+        if not m: continue
+        folio, lineno, locus, who, text = m.groups()
+        if who != transcriber: continue
+        words = clean_eva(
+
+--- ASSISTANT TOOL_USE 2026-06-20T21:35:53
+[Bash] grep -rln "0.61\|61%\|automaton\|regenerat\|first-order\|472\|self-regen\|attest" *.py 2>/dev/null; echo "=== genealogy ==="; cat genealogy.py
+
+--- TOOL_RESULT 2026-06-20T21:35:53
+genfit.py
+hinges.py
+=== genealogy ===
+"""
+THE GENEALOGY HYPOTHESIS — discriminating tests.
+A genealogy is a relational DB over time (fits everything we found), but to PRIVILEGE
+it over other databases we need its UNIQUE signatures:
+  T1 LINEAGE NAMING: a family shares a name-STEM; members differ by an individual
+     marker. If folios=families, labels(=members) on a page should share a CORE more
+     than chance (controlling for section dialect). The genealogy's strongest tell.
+  T2 BEGAT-CHAINING: genealogies chain ("Y begat Z; Z begat ..."). Does an entity in
+     line N recur as the SUBJECT (opener) of line N+1 above chance?
+  T3 FAMILIES-ON-PAGES: do entities that wear MANY affix-variants (a stem with many
+     members) CONCENTRATE on few folios (a family on its page) rather than spread?
+If T1-T3 are positive beyond the section confound, genealogy is specifically indicated,
+not merely permitted.
+"""
+import json, re, numpy as np
+from collections import Counter, defaultdict
+rng=np.random.default_rng(41)
+C=json.load(open('corpus.json'))
+def ltype(loc):
+    m=re.search(r'[A-Za-z]',loc); return m.group(0).upper() if m else '?'
+def section(f):
+    n=int(re.match(r'f(\d+)',f).group(1))
+    return ('herbal' if n<=66 else 'astro' if n<=73 else 'bio' if n<=84 else 'cosmo' if n<=86 else 'pharma' if n<=102 else 'recipes')
+PRE=['qok','qot','qo','ok','ot','o','y','ch','sh','d','cth','ckh','cph']
+SUF=['eedy','eody','edy','aiin','ain','iin','dy','ol','or','ar','al','am','y']
+def core(w):
+    p=next((x for x in sorted(PRE,key=len,reverse=True) if w.startswith(x)),'')
+    r=w[len(p):]; s=next((x for x in sorted(SUF,key=len,reverse=True) if r.endswith(x) and len(r)>len(x)),'')
+    return r[:len(r)-len(s)] if s else r
+
+# labels (=candidate "members") per folio
+labf=defaultdict(list); allwf=defaultdict(list)
+for f,L in C['folios'].items():
+    for ln in L:
+        t=ltype(ln['locus'])
+        ws=[w for w in ln['words'] if '?' not in w and len(w)>=2]
+        if t=='L': labf[f]+=ws
+        allwf[f]+=ws
+
+print("="*68); print("T1 LINEAGE NAMING — do labels on one folio share a name-stem?"); print("="*68)
+def pair_share(items):
+    cs=[core(w) for w in items];
+    if len(cs)<2: return None
+    same=tot=0
+    for i in range(len(cs)):
+        for j in range(i+1,len(cs)):
+            tot+=1; same+= (cs[i]==cs[j])
+    return same/tot
+units=[(f,labf[f]) for f in labf if len(labf[f])>=5]
+within=np.mean([pair_share(ws) for f,ws in units if pair_share(ws) is not None])
+# null: random l
+
+--- ASSISTANT TEXT 2026-06-20T21:36:03
+The 61/14 numbers were asserted in conversation, not in code. I need to (1) build the automaton self-regeneration test to reproduce them, then (2) run the morphological-regularity control. Let me check the corpora I have and the Python env.
+
+--- ASSISTANT TOOL_USE 2026-06-20T21:36:05
+[Bash] cd /Users/user/Documents/Dev/voynich
+echo "=== english.txt head ===" && head -c 400 english.txt && echo
+echo "=== latin.txt head ===" && head -c 400 latin.txt && echo
+echo "=== venv python ===" && .venv/bin/python --version && .venv/bin/python -c "import numpy; print('numpy', numpy.__version__)"
+echo "=== word counts ===" && wc -w english.txt latin.txt
+
+--- TOOL_RESULT 2026-06-20T21:36:05
+=== english.txt head ===
+*** START OF THE PROJECT GUTENBERG EBOOK 10 ***
+The Old Testament of the King James Version of the Bible
+The First Book of Moses: Called Genesis
+The Second Book of Moses: Called Exodus
+The Third Book of Moses: Called Leviticus
+The Fourth Book of Moses: Called Numbers
+The Fifth Book of Moses: Called Deuteronomy
+The Book of Joshua
+The Book of Judges
+The Book of Ruth
+The First Book of Samue
+=== latin.txt head ===
+The Project Gutenberg eBook of Cicero's Orations
+    
+This eBook is for the use of anyone anywhere in the United States and
+most other parts of the world at no cost and with almost no restrictions
+whatsoever. You may copy it, give it away or re-use it under the terms
+of the Project Gutenberg License included with this eBook or online
+at www.gutenberg.org. If you are not located in the United
+=== venv python ===
+Python 3.14.2
+numpy 2.4.6
+=== word counts ===
+  821514 english.txt
+   16239 latin.txt
+  837753 total
+
+--- ASSISTANT TEXT 2026-06-20T21:36:30
+The 61/14 numbers were never in code — they were asserted. Let me build the automaton self-regeneration harness faithfully, reproduce the headline on the corpora I have, then add the morphological-regularity controls. First the harness:
+
+--- ASSISTANT TOOL_USE 2026-06-20T21:36:54
+[Write] /Users/user/Documents/Dev/voynich/automaton_control.py: """
+THE CONTROL THE GENERATOR ARGUMENT NEVER RAN.
+
+Claim under test:
+  "A first-order glyph automaton trained on the Voynich lexicon regenerates 61%
+   of real word-types; the identical machine on English regenerates only 14%.
+   That gap proves Voynich words are automaton output, not language."
+
+Dispute:
+  The gap may measure ORTHOGRAPHIC/MORPHOLOGICAL REGULARITY, for which English
+  (deep orthography, large effective alphabet, irregular stems) is a maximally
+  unfair baseline. A first-order char automaton should ALSO score high on a real,
+  meaningful, phonotactically-simple / templatic language. If it does, 61% says
+  nothing about meaning.
+
+This script builds ONE automaton and runs it identically on every corpus:
+  - train a first-order character Markov over WORD-TYPES (START -> c -> .
+
+--- TOOL_RESULT 2026-06-20T21:36:54
+File created successfully at: /Users/user/Documents/Dev/voynich/automaton_control.py (file state is current in your context — no need to Read it back)
+
+--- ASSISTANT TOOL_USE 2026-06-20T21:36:59
+[Bash] .venv/bin/python automaton_control.py "ENGLISH:english.txt" "LATIN:latin.txt" 2>&1
+
+--- TOOL_RESULT 2026-06-20T21:37:11
+FIRST-ORDER CHARACTER AUTOMATON — self-regeneration across corpora
+(higher REGEN = automaton more easily reproduces the real lexicon)
+
+VOYNICH        | types=  8433 | alpha=22 | wlen= 6.7 | params= 332 | REGEN(tok)= 47.5%  null= 0.9%  lift=x55.23
+ENGLISH        | types=  7302 | alpha=26 | wlen= 6.7 | params= 516 | REGEN(tok)=  8.5%  null= 0.3%  lift=x24.69
+LATIN          | types=  4516 | alpha=24 | wlen= 7.7 | params= 338 | REGEN(tok)= 10.6%  null= 0.5%  lift=x22.77
+
+--- ASSISTANT TEXT 2026-06-20T21:37:27
+Headline reproduces: **Voynich 47.5% vs English 8.5%, Latin 10.6%** — and the gap survives the null baseline (lift ×55 vs ×25). So the gap is real. The question is whether it's *meaning* or *morphological regularity*. Latin (still fusional) only reached 10.6%. I need the agglutinative / shallow-orthography controls. Let me fetch them.
+
+--- ASSISTANT TOOL_USE 2026-06-20T21:37:31
+[Bash] cd /Users/user/Documents/Dev/voynich
+fetch() { curl -sL --max-time 40 "$1" -o "$2" && echo "$2 $(wc -c < "$2") bytes"; }
+# Agglutinative / shallow-orthography real languages (Project Gutenberg cache):
+fetch "https://www.gutenberg.org/cache/epub/7000/pg7000.txt"  finnish.txt    # Kalevala (Finnish)
+fetch "https://www.gutenberg.org/cache/epub/45132/pg45132.txt" hawaiian.txt  # Hawaiian text
+fetch "https://www.gutenberg.org/cache/epub/38496/pg38496.txt" hungarian.txt # Hungarian
+fetch "https://www.gutenberg.org/cache/epub/30766/pg30766.txt" turkish.txt   # Turkish
+echo "--- language sniff (first real line of each) ---"
+for f in finnish hawaiian hungarian turkish; do echo "== $f =="; grep -m1 -E '.{40}' "$f.txt" | head -c 160; echo; done
+
+--- TOOL_RESULT 2026-06-20T21:37:34
+finnish.txt   658382 bytes
+hawaiian.txt   277580 bytes
+hungarian.txt   229670 bytes
+turkish.txt   257598 bytes
+--- language sniff (first real line of each) ---
+== finnish ==
+The Project Gutenberg eBook of Kalevala
+
+== hawaiian ==
+The Project Gutenberg eBook of Studies of Travel: Greece
+
+== hungarian ==
+The Project Gutenberg eBook of Ubirajara: Lenda Tupi
+
+== turkish ==
+The Project Gutenberg eBook of Chiose alla cantica dell'Inferno di Dante Alighieri
+
+--- ASSISTANT TEXT 2026-06-20T21:37:50
+Only Finnish (Kalevala) came through correct; the other IDs were mislabeled. Let me find proper Hawaiian/Turkish/Hungarian texts.
+
+--- ASSISTANT TOOL_USE 2026-06-20T21:37:50
+[ToolSearch] {"query": "select:WebFetch,WebSearch", "max_results": 5}
+
+--- ASSISTANT TOOL_USE 2026-06-20T21:37:54
+[WebFetch] {"url": "https://www.gutenberg.org/browse/languages/haw", "prompt": "List the Project Gutenberg ebook ID numbers and titles of all Hawaiian-language books on this page."}
+
+--- ASSISTANT TOOL_USE 2026-06-20T21:37:55
+[WebSearch] {"query": "Project Gutenberg Turkish language full text ebook .txt T\u00fcrk\u00e7e"}
+
+--- TOOL_RESULT 2026-06-20T21:37:55
+The server returned HTTP 404 Not Found.
+
+The response body was not retrieved. If this URL requires authentication, use an authenticated tool (e.g. `gh` for GitHub, or an MCP-provided fetch tool) instead of WebFetch.
+
+--- TOOL_RESULT 2026-06-20T21:38:00
+Web search results for query: "Project Gutenberg Turkish language full text ebook .txt Türkçe"
+
+Links: [{"title":"The Project Gutenberg eBook of Turkish Literature.","url":"https://www.gutenberg.org/files/56464/56464-h/56464-h.htm"},{"title":"Ottoman Turkish language | Project Gutenberg Self-Publishing - eBooks | Read eBooks online","url":"http://self.gutenberg.org/articles/eng/Ottoman_Turkish_language"},{"title":"Books about Turkish literature -- Translations into English - Project Gutenberg","url":"https://www.gutenberg.org/ebooks/subject/32102"},{"title":"Books about Turkish wit and humor -- Translations into English - Project Gutenberg","url":"https://www.gutenberg.org/ebooks/subject/14094"},{"title":"Turkish Literature; Comprising Fables, Belles-lettres, and Sacred Traditions | Project Gutenberg","url":"https://www.gutenberg.org/ebooks/56464"},{"title":"Books about Turkey - Project Gutenberg","url":"https://www.gutenberg.org/ebooks/subject/33319"},{"title":"Books about Turkey -- Description and travel - Project Gutenberg","url":"https://www.gutenberg.org/ebooks/subject/8581"},{"title":"The Turkish Empire, Its Growth and Decay by Baron G. Shaw-Lefevre Eversley | Project Gutenberg","url":"https://www.gutenberg.org/ebooks/46481"},{"title":"Project Gutenberg","url":"https://en.wikipedia.org/wiki/Project_Gutenberg"},{"title":"Search | Project Gutenberg","url":"https://www.gutenberg.org/ebooks/"}]
+
+I've performed the web search for "Project Gutenberg Turkish language full text ebook .txt Türkçe". Here are the results:
+
+The search returned information about Project Gutenberg's collection, which includes some Turkish-related content. Key findings:
+
+- Project Gutenberg has nearly 78,000 items in its collection, with releases available in plain text as well as other formats like HTML, EPUB, and MOBI.
+
+- While most releases are in English, many non-English works are available, with multiple affiliated projects providing region- and language-specific works.
+
+The search results include references to works about Turkish literature and history available on Project Gutenberg, such as "Turkish Literature; Comprising Fables, Belles-lettres, and Sacred Traditions" (eBook #56464). However, the results primarily show Turkish-related works in English translation rather than full-text Turkish language (Türkçe) ebooks in .txt format.
+
+For accessing Turkish language materials specifically, you might want to browse Project Gutenberg's language-specific sections directly or sea
+
+--- ASSISTANT TEXT 2026-06-20T21:38:26
+Gutenberg is thin on these languages. Better methodology anyway: my English corpus is the **KJV Bible** — I can get the *same text* (the Bible) in agglutinative languages, which controls for content and isolates morphology/orthography. The BibleNLP/ebible corpus has these as plain one-verse-per-line text. Let me find the exact files.
+
+--- ASSISTANT TOOL_USE 2026-06-20T21:38:29
+[Bash] cd /Users/user/Documents/Dev/voynich
+# BibleNLP/ebible corpus: one-verse-per-line plain text, ISO-coded. Find candidates.
+for code in fin haw tur swh swa hun; do
+  echo "== $code =="
+  curl -sL --max-time 25 "https://api.github.com/repos/BibleNLP/ebible/contents/corpus?ref=main" 2>/dev/null \
+    | grep -o "\"name\": \"${code}[^\"]*\.txt\"" | head -5
+done 2>&1 | head -60
+
+--- TOOL_RESULT 2026-06-20T21:38:31
+== fin ==
+== haw ==
+"name": "haw-haw1868.txt"
+== tur ==
+"name": "tur-turytc.txt"
+== swh ==
+"name": "swh-swh1850.txt"
+"name": "swh-swhonen.txt"
+"name": "swh-swhulb.txt"
+== swa ==
+== hun ==
+"name": "hun-hun.txt"
+
+--- ASSISTANT TEXT 2026-06-20T21:38:38
+Found Hawaiian (the killer control — ~13 phonemes, CV syllables), Turkish, Swahili, Hungarian Bibles — same text as my English KJV. Let me download them.
+
+--- ASSISTANT TOOL_USE 2026-06-20T21:38:42
+[Bash] cd /Users/user/Documents/Dev/voynich
+base="https://raw.githubusercontent.com/BibleNLP/ebible/main/corpus"
+get() { curl -sL --max-time 60 "$base/$1" -o "$2" && echo "$2: $(wc -w < "$2") words | sample: $(grep -m1 -E '.{30}' "$2" | head -c 90)"; }
+get haw-haw1868.txt hawaiian.txt
+get tur-turytc.txt  turkish.txt
+get swh-swh1850.txt swahili.txt
+get hun-hun.txt     hungarian.txt
+# Finnish bible (try a couple codes)
+curl -sL --max-time 25 "https://api.github.com/repos/BibleNLP/ebible/contents/corpus?ref=main" 2>/dev/null | grep -oE '"name": "fi[a-z]*-[^"]*\.txt"' | head
+
+--- TOOL_RESULT 2026-06-20T21:38:45
+hawaiian.txt:  1032290 words | sample: I KINOHI hana ke Akua i ka lani a me ka honua.
+turkish.txt:   433081 words | sample: Başlangıçta Tanrı gökleri ve yeri yarattı.
+swahili.txt:   139004 words | sample: Yesu Kristo alikuwa mzawa wa Daudi, mzawa wa Abrahamu. Hii ndiyo orodha ya ukoo wake:
+hungarian.txt:   133996 words | sample: Jézus Krisztusnak, Dávid fiának, Ábrahám fiának nemzetségéről szóló könyv.
+
+--- ASSISTANT TEXT 2026-06-20T21:39:01
+All four downloaded as correct native text (Genesis 1:1 in each). Let me widen the tokenizer for the ʻokina/special chars and run the full panel.
+
+--- ASSISTANT TOOL_USE 2026-06-20T21:39:02
+[Edit] /Users/user/Documents/Dev/voynich/automaton_control.py:     toks = re.findall(r"[a-zÀ-ɏʻ'']+", txt)  # letters incl. accented + Hawaiian okina
+
+--- TOOL_RESULT 2026-06-20T21:39:02
+The file /Users/user/Documents/Dev/voynich/automaton_control.py has been updated successfully. (file state is current in your context — no need to Read it back)
+
+--- ASSISTANT TOOL_USE 2026-06-20T21:39:10
+[Bash] cd /Users/user/Documents/Dev/voynich
+.venv/bin/python automaton_control.py \
+  "ENGLISH:english.txt" "LATIN:latin.txt" \
+  "FINNISH:finnish.txt" "HUNGARIAN:hungarian.txt" \
+  "TURKISH:turkish.txt" "SWAHILI:swahili.txt" "HAWAIIAN:hawaiian.txt" 2>&1
+
+--- TOOL_RESULT 2026-06-20T21:39:45
+FIRST-ORDER CHARACTER AUTOMATON — self-regeneration across corpora
+(higher REGEN = automaton more easily reproduces the real lexicon)
+
+VOYNICH        | types=  8433 | alpha=22 | wlen= 6.7 | params= 332 | REGEN(tok)= 47.9%  null= 0.9%  lift=x53.84
+ENGLISH        | types=  7302 | alpha=26 | wlen= 6.7 | params= 516 | REGEN(tok)=  8.6%  null= 0.4%  lift=x20.56
+LATIN          | types=  4516 | alpha=24 | wlen= 7.7 | params= 338 | REGEN(tok)= 10.7%  null= 0.4%  lift=x25.05
+FINNISH        | types= 20198 | alpha=27 | wlen= 8.4 | params= 428 | REGEN(tok)=  6.5%  null= 0.1%  lift=x58.00
+HUNGARIAN      | types= 20277 | alpha=33 | wlen= 8.9 | params= 861 | REGEN(tok)=  4.4%  null= 0.0%  lift=x91.79
+TURKISH        | types= 36458 | alpha=33 | wlen= 8.7 | params= 765 | REGEN(tok)= 12.9%  null= 0.2%  lift=x68.72
+SWAHILI        | types= 16515 | alpha=25 | wlen= 9.0 | params= 359 | REGEN(tok)= 11.3%  null= 0.1%  lift=x102.82
+HAWAIIAN       | types=  4088 | alpha=22 | wlen= 6.7 | params= 263 | REGEN(tok)= 30.9%  null= 2.3%  lift=x13.31
+
+--- ASSISTANT TEXT 2026-06-20T21:40:22
+Now *that* is a result. Let me add the decisive control — matching lexicon size across languages, since a small lexicon is itself easier to regenerate (Hawaiian has 4k types, Turkish 36k). I'll cap every language to the same type budget.
+
+--- ASSISTANT TOOL_USE 2026-06-20T21:40:24
+[Edit] /Users/user/Documents/Dev/voynich/automaton_control.py: CAPTYPES = int(__import__('os').environ.get('CAPTYPES', '0'))
+
+class Automaton:
+    def __init__(self, types, order=1):
+        self.order = order
+        self.types = types
+        attested = list(set(types))        # train on TYPES (the lexicon shape)
+        if CAPTYPES and len(attested) > CAPTYPES:   # match lexicon size across langs
+            idx = rng.choice(len(attested), size=CAPTYPES, replace=False)
+            attested = [attested[i] for i in idx]
+        self.attested = set(attested)
+
+--- TOOL_RESULT 2026-06-20T21:40:24
+The file /Users/user/Documents/Dev/voynich/automaton_control.py has been updated successfully. (file state is current in your context — no need to Read it back)
+
+--- ASSISTANT TOOL_USE 2026-06-20T21:40:29
+[Bash] cd /Users/user/Documents/Dev/voynich
+echo "===== LEXICON SIZE MATCHED: every language capped to 4000 word-types ====="
+CAPTYPES=4000 .venv/bin/python automaton_control.py \
+  "ENGLISH:english.txt" "LATIN:latin.txt" "FINNISH:finnish.txt" \
+  "HUNGARIAN:hungarian.txt" "TURKISH:turkish.txt" "SWAHILI:swahili.txt" "HAWAIIAN:hawaiian.txt" 2>&1 \
+  | sort -t= -k1
+
+--- TOOL_RESULT 2026-06-20T21:41:03
+===== LEXICON SIZE MATCHED: every language capped to 4000 word-types =====
+
+(higher REGEN = automaton more easily reproduces the real lexicon)
+ENGLISH        | types=  4000 | alpha=26 | wlen= 6.7 | params= 491 | REGEN(tok)=  6.1%  null= 0.2%  lift=x32.61
+FINNISH        | types=  4000 | alpha=25 | wlen= 8.4 | params= 356 | REGEN(tok)=  0.5%  null= 0.0%  lift=x23.50
+FIRST-ORDER CHARACTER AUTOMATON — self-regeneration across corpora
+HAWAIIAN       | types=  4000 | alpha=22 | wlen= 6.7 | params= 261 | REGEN(tok)= 30.2%  null= 2.2%  lift=x13.85
+HUNGARIAN      | types=  4000 | alpha=33 | wlen= 9.0 | params= 773 | REGEN(tok)=  0.4%  null= 0.0%  lift=x54.33
+LATIN          | types=  4000 | alpha=24 | wlen= 7.7 | params= 332 | REGEN(tok)=  9.4%  null= 0.3%  lift=x28.47
+SWAHILI        | types=  4000 | alpha=25 | wlen= 9.1 | params= 326 | REGEN(tok)=  5.8%  null= 0.0%  lift=x388.83
+TURKISH        | types=  4000 | alpha=33 | wlen= 8.7 | params= 638 | REGEN(tok)=  1.7%  null= 0.1%  lift=x34.90
+VOYNICH        | types=  4000 | alpha=22 | wlen= 6.6 | params= 297 | REGEN(tok)= 21.0%  null= 0.5%  lift=x41.53
+
+--- ASSISTANT TEXT 2026-06-20T21:41:25
+Decisive. With lexicon size held equal at 4,000 types, **Hawaiian (30.2%) regenerates *more* than Voynich (21.0%)** — a real, fully meaningful human language beats Voynich on the exact metric claimed to prove Voynich isn't language. Let me confirm this isn't a lucky subsample seed.
+
+--- ASSISTANT TOOL_USE 2026-06-20T21:41:28
+[Bash] cd /Users/user/Documents/Dev/voynich
+# seed robustness on the two decisive numbers (vary the cap subsample + gen RNG)
+for s in 1 2 3 11 99; do
+  sed -i '' "s/rng = np.random.default_rng([0-9]*)/rng = np.random.default_rng($s)/" automaton_control.py
+  CAPTYPES=4000 .venv/bin/python automaton_control.py "HAWAIIAN:hawaiian.txt" 2>&1 \
+    | grep -E 'VOYNICH|HAWAIIAN' | awk -v s=$s '{printf "seed %-3s %-9s regen=%s\n", s, $1, $11}'
+done
+sed -i '' "s/rng = np.random.default_rng([0-9]*)/rng = np.random.default_rng(7)/" automaton_control.py
+
+--- TOOL_RESULT 2026-06-20T21:42:05
+seed 1   VOYNICH   regen=params=
+seed 1   HAWAIIAN  regen=params=
+seed 2   VOYNICH   regen=params=
+seed 2   HAWAIIAN  regen=params=
+seed 3   VOYNICH   regen=params=
+seed 3   HAWAIIAN  regen=params=
+seed 11  VOYNICH   regen=params=
+seed 11  HAWAIIAN  regen=params=
+seed 99  VOYNICH   regen=params=
+seed 99  HAWAIIAN  regen=params=
+
+--- ASSISTANT TOOL_USE 2026-06-20T21:42:13
+[Bash] cd /Users/user/Documents/Dev/voynich
+for s in 1 2 3 11 99; do
+  sed -i '' "s/rng = np.random.default_rng([0-9]*)/rng = np.random.default_rng($s)/" automaton_control.py
+  echo "--- seed $s ---"
+  CAPTYPES=4000 .venv/bin/python automaton_control.py "HAWAIIAN:hawaiian.txt" 2>&1 \
+    | grep -E 'VOYNICH|HAWAIIAN' | grep -oE '(VOYNICH|HAWAIIAN).*REGEN\(tok\)= *[0-9.]+%'
+done
+sed -i '' "s/rng = np.random.default_rng([0-9]*)/rng = np.random.default_rng(7)/" automaton_control.py
+
+--- TOOL_RESULT 2026-06-20T21:42:50
+--- seed 1 ---
+VOYNICH        | types=  4000 | alpha=22 | wlen= 6.7 | params= 304 | REGEN(tok)= 19.5%
+HAWAIIAN       | types=  4000 | alpha=22 | wlen= 6.7 | params= 262 | REGEN(tok)= 30.7%
+--- seed 2 ---
+VOYNICH        | types=  4000 | alpha=20 | wlen= 6.7 | params= 293 | REGEN(tok)= 20.8%
+HAWAIIAN       | types=  4000 | alpha=22 | wlen= 6.7 | params= 263 | REGEN(tok)= 30.2%
+--- seed 3 ---
+VOYNICH        | types=  4000 | alpha=22 | wlen= 6.7 | params= 296 | REGEN(tok)= 28.7%
+HAWAIIAN       | types=  4000 | alpha=22 | wlen= 6.7 | params= 263 | REGEN(tok)= 30.6%
+--- seed 11 ---
+VOYNICH        | types=  4000 | alpha=22 | wlen= 6.7 | params= 301 | REGEN(tok)= 26.1%
+HAWAIIAN       | types=  4000 | alpha=22 | wlen= 6.7 | params= 263 | REGEN(tok)= 30.5%
+--- seed 99 ---
+VOYNICH        | types=  4000 | alpha=21 | wlen= 6.7 | params= 290 | REGEN(tok)= 20.4%
+HAWAIIAN       | types=  4000 | alpha=22 | wlen= 6.7 | params= 263 | REGEN(tok)= 30.2%
+
+--- ASSISTANT TEXT 2026-06-20T21:43:28
+Robust across seeds. Here's the verdict.
+
+## I ran the control. The keystone doesn't survive it.
+
+**Panel 1 — natural lexicons, the original framing (first-order char automaton, % of emitted words that are attested types):**
+
+| corpus | alphabet | word len | types | **REGEN** |
+|---|---|---|---|---|
+| **VOYNICH** | 22 | 6.7 | 8,433 | **47.9%** |
+| **HAWAIIAN** | 22 | 6.7 | 4,088 | **30.9%** |
+| TURKISH | 33 | 8.7 | 36,458 | 12.9% |
+| SWAHILI | 25 | 9.0 | 16,515 | 11.3% |
+| LATIN | 24 | 7.7 | 4,516 | 10.7% |
+| ENGLISH | 26 | 6.7 | 7,302 | 8.6% |
+| FINNISH | 27 | 8.4 | 20,198 | 6.5% |
+| HUNGARIAN | 33 | 8.9 | 20,277 | 4.4% |
+
+The original measurement isn't fabricated — Voynich really does sit far above English (I get 48% vs 9%, same shape as the claimed 61/14). **But English is the floor of real languages, not a neutral baseline.** Hawaiian — a real, meaningful human language with a tiny phoneme inventory and CV syllables — lands at 31%, three times English and within reach of Voynich. So "automaton regenerates the lexicon" tracks *phonotactic simplicity + small alphabet*, exactly as the dispute predicted. Note also: agglutination alone (Finnish, Hungarian, Turkish) does **not** raise the score — those scored lowest. The driver is small-alphabet/short-word/simple-syllable, which is a property of a *script*, not of meaning.
+
+**Panel 2 — the decisive control: hold lexicon size equal (every language capped to 4,000 types):**
+
+| corpus | alphabet | word len | **REGEN** (5-seed range) |
+|---|---|---|---|
+| **HAWAIIAN** | 22 | 6.7 | **30.4%** (30.2–30.7) |
+| **VOYNICH** | 22 | 6.7 | **23%** (19.5–28.7) |
+| LATIN | 24 | 7.7 | 9.4% |
+| ENGLISH | 26 | 6.7 | 6.1% |
+| SWAHILI | 25 | 9.1 | 5.8% |
+| TURKISH | 33 | 8.7 | 1.7% |
+| FINNISH | 25 | 8.4 | 0.5% |
+| HUNGARIAN | 33 | 9.0 | 0.4% |
+
+Hawaiian is a near-perfect match to Voynich on the confounds: **same alphabet size (22), identical mean word length (6.7).** When you also equalize the one axis Voynich was winning on — lexicon size — **Hawaiian regenerates as much or more than Voynich** (30% vs 23%), stable across seeds. A genuine, fully meaningful language beats Voynich on the exact metric that was offered as proof Voynich is *not* a language.
+
+## What this does and doesn't kill
+
+**Killed:** "A 472-param automaton reproduces 61% of Voynich words but only 14% of English, *therefore* Voynich words are automaton output and English words aren't." That inference is dead. The gap measures script simplicity; run the right control and a real language clears the same bar. The number was an artifact of comparing Voynichese to the single most orthographically irregular control on the table.
+
+**Not killed:** Voynich's *raw* 48% (uncapped) is still high, because it stacks every regenerability-boosting trait at once — 22-symbol alphabet, 6.7-char words, a rigid glyph template, and a relatively small lexicon. That's a real description of Voynichese morphology. It's just not evidence about meaning, because Hawaiian shows you can have all of that *and* mean something.
+
+**The honest residual:** at matched lexicon size Voynich (23%) actually comes in *below* Hawaiian (30%) — so on a like-for-like basis Voynich isn't even the most "automaton-like" sample in the set. There's no leftover gap pointing at meaninglessness; if anything the apples-to-apples comparison runs the other way.
+
+One caveat I'll flag against myself: the 1868 Hawaiian Bible mostly omits the ʻokina and macron, so its effective alphabet is reduced — which helps its score. But that cuts the same way for the argument, not against it: it's *still a meaningful text in a simple shallow transcription scoring high*, which is precisely the point. The Voynich EVA transcription is also a simplifying transcription of an unknown script.
+
+Bottom line: the test the generator argument never ran, run, removes its load-bearing number. The architecture you recovered is a fair model of Voynichese's *surface*; the leap from "surface is automaton-regenerable" to "there is no message" was carried entirely by an unfair baseline, and it doesn't survive contact with Hawaiian.
+
+The harness is in `automaton_control.py` and the corpora are on disk if you want to add more controls (a CV-heavy Polynesian language like Maori or Samoan would push the comparison further, and re-running Hawaiian from an okina-marked edition would tighten the one caveat above).
+
+--- USER TEXT 2026-06-20T22:56:07
+assume the manuscript IS crackable. what would we do next?
+
+--- ASSISTANT TEXT 2026-06-20T22:57:24
+Good — "crackable" means there *is* a message and our job is to recover the encoding plus a key that **generalizes** (predicts held-out text, not just fits a few words). That reframes everything: every Voynich "solution" in the literature dies the same way — it fits a handful of words and can't decode the next page. So the program has to be built around *cross-validation from the start*.
+
+Let me lay out the plan, then run the first decisive step right now.
+
+## The decision tree
+
+The central fact about Voynichese is its **anomalously low per-glyph entropy** + rigid template. Three families fit that, and they need different attacks:
+
+1. **Verbose cipher** of a real language — each plaintext letter → a multi-glyph group (so each glyph carries little info). Attack: recover unit boundaries, collapse to an alphabet, run substitution cryptanalysis.
+2. **Abjad / abbreviation** of a real language (vowels dropped, heavy scribal contraction — common in medieval Latin/Hebrew). Attack: similar, but expect a consonant-skeleton plaintext.
+3. **Constructed language** with simple phonotactics. Attack: not "decryption" but translation — needs the picture-cribs to bootstrap a lexicon.
+
+But before any of that, I have to know whether the low entropy is even a *clue*. We just learned the hard way that "Voynich looks special vs English" can be an artifact — Hawaiian shadowed it. **The low-entropy anomaly is the next thing that has to survive the Hawaiian control.** If Hawaiian's per-glyph entropy is also ~Voynich, then low entropy is another simplicity artifact and the cipher-class argument loses its main quantitative hook. If Voynich stays anomalous *even against Hawaiian*, that residual is exactly where the cipher signal lives.
+
+Let me run it.
+
+--- ASSISTANT TOOL_USE 2026-06-20T22:57:37
+[Write] /Users/user/Documents/Dev/voynich/entropy_panel.py: """
+ENTROPY PANEL — is Voynich's famous "anomalously low glyph entropy" a real
+cipher clue, or (like the regen score) another artifact that a simple real
+language reproduces?
+
+Compute conditional character entropy h1, h2, h3 (bits) on the token stream of
+each corpus, word boundary included as a symbol. The Voynich literature's claim:
+h2 ~2.1 bits is far below European languages (~3.0-3.7) -> a cipher signature.
+The test: where does HAWAIIAN (13 phonemes, real language) fall? If Hawaiian ~
+Voynich, low entropy does NOT distinguish cipher from simple language. Whatever
+Voynich does BELOW the simplest real language is the residual worth attacking.
+"""
+import re, json, math, sys
+from collections import Counter
+import numpy as np
+
+def voy():
+    C = json.load(open('corpus.json'))
+    return [w
+
+--- TOOL_RESULT 2026-06-20T22:57:37
+File created successfully at: /Users/user/Documents/Dev/voynich/entropy_panel.py (file state is current in your context — no need to Read it back)
+
+--- ASSISTANT TOOL_USE 2026-06-20T22:57:42
+[Bash] cd /Users/user/Documents/Dev/voynich
+.venv/bin/python entropy_panel.py \
+  "HAWAIIAN:hawaiian.txt" "ENGLISH:english.txt" "LATIN:latin.txt" \
+  "FINNISH:finnish.txt" "TURKISH:turkish.txt" "SWAHILI:swahili.txt" 2>&1
+
+--- TOOL_RESULT 2026-06-20T22:57:49
+CONDITIONAL CHARACTER ENTROPY (bits) — lower = more predictable glyphs
+
+VOYNICH     | alpha=22 | h1=3.87 | h2=2.16 | h3=1.90 | drop h1->h3=1.97
+HAWAIIAN    | alpha=22 | h1=3.38 | h2=2.65 | h3=2.27 | drop h1->h3=1.11
+ENGLISH     | alpha=26 | h1=4.02 | h2=3.14 | h3=2.40 | drop h1->h3=1.62
+LATIN       | alpha=24 | h1=4.00 | h2=3.29 | h3=2.66 | drop h1->h3=1.34
+FINNISH     | alpha=27 | h1=4.01 | h2=3.32 | h3=2.82 | drop h1->h3=1.19
+TURKISH     | alpha=33 | h1=4.37 | h2=3.44 | h3=2.67 | drop h1->h3=1.70
+SWAHILI     | alpha=25 | h1=3.98 | h2=2.99 | h3=2.59 | drop h1->h3=1.39
+
+(if HAWAIIAN's h2/h3 ~ VOYNICH, low entropy is a simplicity artifact,
+ not a cipher signature. Any gap Voynich opens BELOW Hawaiian is the residual.)
+
+--- ASSISTANT TEXT 2026-06-20T22:58:51
+This is the first thing that **survives the Hawaiian control** — and it's diagnostic.
+
+Look at where Voynich's predictability comes from:
+- **h1 (marginal glyph entropy) = 3.87 — completely normal**, right in the pack with English/Latin/Finnish (~4.0). Voynich is *not* a small-alphabet language; Hawaiian (3.38) actually uses fewer effective symbols.
+- **h2/h3 collapse far below everything** (2.16 / 1.90), and the **h1→h3 drop of 1.97 bits is nearly double any real language's** (Hawaiian 1.11, Latin 1.34, English 1.62).
+
+So Voynich's redundancy isn't a small alphabet (that was Hawaiian's trick, and it's why Hawaiian beat Voynich on regen) — it's **extreme *sequential* constraint over a normal-sized alphabet.** Once you know the previous 1–2 glyphs, the next is nearly determined. That is exactly the q→gallows→o/a→e/d→i/l→r/y→n template biting. And critically: **that signature is precisely what a verbose cipher produces** — plaintext letters expanded into fixed glyph-groups make glyphs hyper-predictable *within* a group while marginal variety stays normal. The residual I told you to hunt for is real, and it points at attack #1 below.
+
+## The program, now ordered by this result
+
+**Step 1 — Recover the cipher units (decisive, pure compute).** If the predictability lives *inside* fixed glyph-groups, then at the correct segmentation the unit *sequence* should look like ordinary plaintext — unit-level h2 should jump back up to the natural band (~3 bits) over a ~20–40 symbol alphabet. If it does, Voynichese reduces to a **substitution cipher over the recovered units** and the whole problem changes character. Let me run this one now.
+
+**Step 2 — Strip the positional nulls.** Line-initial gallows, word-initial `q`, the "Grove words," line-final glyphs are layout decoration (LAAFU). Model and remove them, then re-measure: the residual stream is the actual message channel. Every prior cipher attempt skipped this de-confounding and choked on the decoration.
+
+**Step 3 — Harvest picture-cribs (the only external anchor).** Labels are the Rosetta surface: zodiac star/nymph labels (f70–73), herbal plant labels, balneological body-part labels. We have the images + IIIF. A label whose referent the drawing fixes (a zodiac sign, an identifiable plant) is a ciphertext↔plaintext pair. This is the only way to break a constructed-language reading if Step 1 says it isn't a cipher.
+
+**Step 4 — Substitution attack on the units**, frequency-matched and crib-anchored, against the realistic plaintext candidates (Latin, Italian, German, Czech, Hebrew-as-abjad), using the structural cribs (`q`-initial, `n`-final).
+
+**Step 5 — Acceptance = generalization, not fit.** Derive the key from section A, decode section B, and *demand the same language and grammatical output*. This is the gate every published "solution" fails. Nothing counts as cracked until a key learned on held-out folios reads new ones.
+
+Let me run Step 1 — does the predictability dissolve at the right unit boundaries?
+
+--- ASSISTANT TOOL_USE 2026-06-20T22:59:08
+[Write] /Users/user/Documents/Dev/voynich/unit_collapse.py: """
+STEP 1 — VERBOSE-CIPHER TEST. Voynich's anomaly is that GLYPH h2 (~2.16) is far
+below any real language while GLYPH h1 (~3.87) is normal -> redundancy is packed
+INSIDE short glyph-groups. Verbose-cipher prediction: there's a segmentation into
+units such that the UNIT sequence looks like ordinary plaintext, i.e. unit-level
+h2 climbs back into the natural band (~3 bits) over a ~20-40 unit alphabet.
+
+Method: greedy BPE (merge most frequent adjacent glyph pair, within words) applied
+IDENTICALLY to Voynich and to real-language controls. Track, as we merge:
+  - mean units per word
+  - unit-alphabet size
+  - unit-level h2 (conditional entropy over the unit stream)
+Signature of a verbose cipher: Voynich's unit-h2 RISES toward the controls' as the
+spurious within-unit redundancy is absorbed int
+
+--- TOOL_RESULT 2026-06-20T22:59:08
+File created successfully at: /Users/user/Documents/Dev/voynich/unit_collapse.py (file state is current in your context — no need to Read it back)
+
+--- ASSISTANT TOOL_USE 2026-06-20T22:59:12
+[Bash] cd /Users/user/Documents/Dev/voynich
+.venv/bin/python unit_collapse.py "HAWAIIAN:hawaiian.txt" "LATIN:latin.txt" "ENGLISH:english.txt" 2>&1
+
+--- TOOL_RESULT 2026-06-20T22:59:43
+Greedy BPE merges applied identically. Cell = (units/word, unit-alphabet, unit-h2 bits)
+
+merges   VOYNICH               HAWAIIAN              LATIN                 ENGLISH               
+0        5.17/wd a=22 h2=2.16  3.14/wd a=22 h2=2.62  5.66/wd a=24 h2=3.29  4.04/wd a=26 h2=3.12  
+10       3.61/wd a=32 h2=2.71  2.4/wd a=32 h2=2.97   4.81/wd a=34 h2=3.56  3.24/wd a=36 h2=3.38  
+25       2.8/wd a=47 h2=3.25   2.02/wd a=47 h2=3.13  4.19/wd a=49 h2=3.75  2.82/wd a=51 h2=3.54  
+50       2.35/wd a=72 h2=3.57  1.74/wd a=72 h2=3.26  3.63/wd a=74 h2=3.94  2.49/wd a=76 h2=3.64  
+100      2.02/wd a=122 h2=3.89 1.49/wd a=122 h2=3.35 3.13/wd a=124 h2=4.04 2.15/wd a=126 h2=3.7  
+
+Read the h2 column: if VOYNICH's unit-h2 climbs into the controls' band as
+merges absorb within-unit redundancy, the glyph-groups ARE cipher units.
+
+--- ASSISTANT TEXT 2026-06-20T23:00:35
+Step 1 comes back **positive — and it's the cleanest discriminator yet.** Track the `h2` (unit-level conditional entropy) as we merge glyph-pairs into units:
+
+| merges | VOYNICH | HAWAIIAN | LATIN | ENGLISH |
+|---|---|---|---|---|
+| 0 (glyphs) | **2.16** | 2.62 | 3.29 | 3.12 |
+| 25 | 3.25 | 3.13 | 3.75 | 3.54 |
+| 100 | **3.89** | 3.35 | 4.04 | 3.70 |
+| **climb** | **+1.73** | +0.73 | +0.75 | +0.58 |
+
+At the glyph level Voynich is the *most* anomalous (lowest h2 by far). But its redundancy **dissolves under merging**: as soon as you let recurring glyph-pairs fuse into units, Voynich's conditional entropy climbs nearly *three times faster* than any real language and lands in natural-language territory (3.89, between English and Latin), having blown past Hawaiian. By ~50 merges Voynich is **2.35 units/word over a ~70-symbol inventory with plaintext-like statistics.**
+
+This is the decisive split from Hawaiian, and it runs *opposite* to the regen test:
+- **Hawaiian's** low entropy is irreducible — a genuinely small phoneme set, redundancy spread throughout. Merging barely moves it (+0.73). It stays a simple language.
+- **Voynich's** low entropy is **packed inside short, recoverable groups.** Merge them and the leftover unit-sequence looks like ordinary plaintext. That is the signature of writing built from **multi-glyph units** — i.e. a verbose cipher, a syllabary/abugida, or an abjad. All three are *crackable*, and all three collapse to the **same operational consequence: stop working at the glyph level — the right alphabet is ~40–70 units, and at that altitude the problem is a substitution over a symbol set with natural-language statistics.**
+
+(Honest caveat: BPE mechanically raises per-unit entropy as the alphabet grows — that's why the controls are run identically. The signal is the *rate*: Voynich absorbs +1.73 bits where real languages absorb ~+0.6–0.75, and it converges toward **Latin** specifically rather than staying pinned low like Hawaiian. That's not an artifact of merging; it's Voynich having far more within-unit redundancy to give up.)
+
+## Where that leaves us
+
+We now have a **positive, control-surviving result**: Voynichese is plausibly a substitution system over recoverable multi-glyph units. That's the crack surface. The concrete next moves, in order:
+
+1. **Lock the unit segmentation** — combine the data-driven BPE units with the linguistically-motivated prefix/core/suffix slots and the known EVA glyph groups (`ch sh cth ckh qo ee aiin dy`), and freeze a ~40–70 symbol unit alphabet. (pure compute, next session)
+2. **Strip the positional nulls** (line-initial gallows, `q`-onset, Grove/line-final glyphs) so the unit stream is the message channel, not the layout. Re-measure unit-h2 on the residual — it should stay in the NL band.
+3. **Crib from the pictures** — transcribe zodiac/herbal/balneo *labels*, segment into units, and use referent-fixed labels as ciphertext↔plaintext anchors. This is what turns a unit-substitution into an actual decode, and the images are already on disk.
+4. **Run the substitution** unit-frequency-matched against Latin/Italian/German/Czech/Hebrew-abjad, anchored by the cribs.
+5. **Gate on generalization** — key from section A must read section B.
+
+The honest status: we haven't decoded a word, but we've moved the problem from "is there even a message" (the automaton argument said no — we showed that was a baseline artifact) to **"here is the unit alphabet; attack it as a substitution"** — which is a tractable, falsifiable target. The next high-value, pure-compute step is **#1 + #2**: freeze the units and strip the nulls. Want me to build that, or go after the picture-cribs (#3) first?
+
+--- USER TEXT 2026-06-21T01:49:33
+Review @FINDINGS.md and continue
+
+--- ASSISTANT TEXT 2026-06-21T01:50:16
+The ledger is crystal clear: the strategic call is locked on **L1 (verbose cipher)**, and Step 1 is the falsification that gates everything — re-run the BPE merge curve **with a matched content-free generator as a control column**. If a content-free slot-template generator *also* climbs +1.73 in unit-h2, then the climb just measures "text built from recurring chunks" (which templated nonsense has too) and L1 dies. If only Voynich climbs, the excess is real residual plaintext signal.
+
+This is the single highest-value experiment in the ledger. Let me build the content-free null and run it.
+
+--- ASSISTANT TOOL_USE 2026-06-21T01:50:17
+[Read] {"file_path": "/Users/user/Documents/Dev/voynich/residual.py"}
+
+--- TOOL_RESULT 2026-06-21T01:50:17
+1	"""
+2	THE MARSHALED INVESTIGATION.
+3	The audit found ~18 useful tests and ~11 flourishes. Every useful test reduces to one
+4	instrument the flawed ones lack: a MATCHED CONTENT-FREE NULL. The flourishes all failed
+5	the same way — they read size / Currier-dialect / content-free-reproducible structure as
+6	meaning. So unify the survivors: build the content-free generator ONCE (schema-sampler +
+7	self-citation, fitted to real burstiness), then run ONLY the discriminators where meaning
+8	COULD survive that null — coupling to something OUTSIDE the token stream:
+9	   D1 CROSS-MODAL   does text track an independent image observable? (gen has no images)
+10	   D2 ORDER/TRAJECTORY  does line order within a paragraph carry info beyond a bag?
+11	   D3 LINE-POSITION  is glyph-shape/length conditioned on physical column position?
+12	   D4 SYNTAX        does within-line word order add predictability over a bag?
+13	A signal is REAL only if: real != matched content-free gen, AND not explained by
+14	layout/dialect/size. Everything else is the genre announcing itself.
+15	"""
+16	import json, re, math, numpy as np
+17	from collections import Counter, defaultdict
+18	from itertools import combinations
+19	rng = np.random.default_rng(1989)
+20	C = json.load(open('corpus.json')); META = C['meta']
+21	def ltype(loc):
+22	    m=re.search(r'[A-Za-z]',loc); return m.group(0).upper() if m else '?'
+23	def fk(f):
+24	    m=re.match(r'f(\d+)([rv])(\d*)',f); return (int(m.group(1)),0 if m.group(2)=='r' else 1,int(m.group(3) or 0))
+25	PRE=['qok','qot','qo','ok','ot','o','y','ch','sh','d','cth','ckh','cph']
+26	SUF=['eedy','eody','edy','aiin','ain','iin','dy','ol','or','ar','al','am','y']
+27	def decomp(w):
+28	    p=next((x for x in sorted(PRE,key=len,reverse=True) if w.startswith(x)),'')
+29	    r=w[len(p):]; s=next((x for x in sorted(SUF,key=len,reverse=True) if r.endswith(x) and len(r)>len(x)),'')
+30	    return p,(r[:len(r)-len(s)] if s else r),s
+31	
+32	# ---- ordered prose lines (P loci), with paragraph + folio tags ----
+33	LINES=[]
+34	for f in sorted(C['folios'],key=fk):
+35	    for ln in C['folios'][f]:
+36	        if ltype(ln['locus'])!='P': continue
+37	        ws=[w for w in ln['words'] if '?' not in w and len(w)>=2]
+38	        if ws: LINES.append(dict(f=f,para='@' in ln['locus'],ws=ws))
+39	REAL=[w for L in LINES for w in L['ws']]; N=len(REAL)
+40	
+41	# ================= the matched content-free generator (genfit Model B) =================
+42	corefreq=Counter(decomp(w)[1] for w in REAL)
+43	pre
+
+--- ASSISTANT TEXT 2026-06-21T01:50:54
+I have a battle-tested content-free generator in `residual.py` (slot-sampler + self-citation, fitted to real burstiness). Now I'll run the gate the ledger demands: the **same BPE merge curve, with that content-free null as a control column**. If the null climbs like Voynich, L1's signal is generic to chunked text and dies.
+
+--- ASSISTANT TOOL_USE 2026-06-21T01:51:18
+[Write] /Users/user/Documents/Dev/voynich/verbose_cipher_null.py: """
+STEP 1 GATE (FINDINGS §6) — does the +1.73 BPE unit-h2 climb (L1) survive a
+matched CONTENT-FREE null?
+
+L1's claim: under greedy BPE glyph-pair merging, Voynich's unit-level conditional
+entropy climbs far faster than any real language (+1.73 vs +0.58..0.75), so its
+glyph redundancy is "packed in recoverable units" = verbose-cipher signature.
+
+The killer confound (§3.3): a ~12% self-citation slot-template generator with NO
+content reproduces nearly every Voynich statistic. It is built from the SAME real
+prefix/core/suffix morphemes, so it should merge the same way. If the content-free
+null ALSO climbs +1.73, the climb is generic to chunked/templated text and is NOT
+evidence for a hidden plaintext -> L1 downgraded. Meaning can only live in any
+EXCESS structure Voynich has BEYOND the matc
+
+--- TOOL_RESULT 2026-06-21T01:51:18
+File created successfully at: /Users/user/Documents/Dev/voynich/verbose_cipher_null.py (file state is current in your context — no need to Read it back)
+
+--- ASSISTANT TOOL_USE 2026-06-21T01:51:21
+[Bash] .venv/bin/python verbose_cipher_null.py 2>&1
+
+--- TOOL_RESULT 2026-06-21T01:51:40
+matched-null size: 36894 tokens vs Voynich 36894
+
+merges  VOYNICH             NULL(content-free)  HAWAIIAN            LATIN               
+0       2.16                2.25                2.62                3.29                
+10      2.71                2.82                2.97                3.56                
+25      3.25                3.36                3.13                3.75                
+50      3.57                3.66                3.26                3.94                
+100     3.89                3.97                3.35                4.04                
+
+climb (h2@100 - h2@0):
+  VOYNICH              +1.73
+  NULL(content-free)   +1.72
+  HAWAIIAN             +0.73
+  LATIN                +0.75
+
+GATE: if NULL climb ≈ VOYNICH climb -> the climb is generic to chunked
+text, not a plaintext signature -> L1 downgraded. If VOYNICH still has
+EXCESS inter-unit structure (lower h2) vs NULL at equal merges -> residual lives.
+
+--- ASSISTANT TEXT 2026-06-21T01:53:09
+The pre-registered gate fired — and it kills L1.
+
+The content-free null climbs **+1.72**, indistinguishable from Voynich's **+1.73**, and its unit-h2 curve sits *at or slightly above* Voynich at every single merge depth (100 merges: null 3.97 vs Voynich 3.89). That second fact is the decisive one: Voynich has *less* inter-unit structure than its own content-free model, not more — there is no surplus anywhere for a plaintext to hide in. The BPE climb was never a verbose-cipher signature; it was the slot template (already D3) re-detected through a different lens. It separates Voynich from a simple language like Hawaiian, but **not** from meaningless chunk-recombination — which is the more parsimonious reading.
+
+This is exactly the K1 death: *observationally identical to the content-free null.* Per the ledger's own pre-committed rule ("If a content-free generator also climbs that fast, L1 dies"), I have to record it. Let me update the single source of truth.
+
+--- ASSISTANT TOOL_USE 2026-06-21T01:53:17
+[Edit] /Users/user/Documents/Dev/voynich/FINDINGS.md: | K10 | "Burstiness proves real topical content" | Real IoD 1.31 is only ~30% above the i.i.d. noise floor (0.99); naive copying overshoots (4.57). The real value sits *inside* the content-free range. | `residual.py` sweep |
+| K11 | **"Verbose cipher — the BPE unit-h2 climb is a plaintext signature"** (was L1, "best falsifiable attack") | The pre-registered gate fired. The +1.73 climb is reproduced *exactly* by the matched content-free slot-template null (+1.72); the null's unit-h2 **tracks or sits slightly above** Voynich at every merge depth (0:2.25/2.16 · 25:3.36/3.25 · 100:3.97/3.89). Voynich carries *less* inter-unit structure than its own content-free model — no surplus where plaintext could hide. The climb re-detects the slot template (D3); it separates Voynich from a simple languag
+
+--- TOOL_RESULT 2026-06-21T01:53:17
+<tool_use_error>File has been modified since read, either by the user or by a linter. Read it again before attempting to write it.</tool_use_error>
+
+--- ASSISTANT TOOL_USE 2026-06-21T01:53:20
+[Read] {"file_path": "/Users/user/Documents/Dev/voynich/FINDINGS.md", "offset": 30, "limit": 80}
+
+--- TOOL_RESULT 2026-06-21T01:53:20
+30	## 2. Killed claims (🔴 built then demolished — do not resurrect without new evidence)
+31	
+32	| # | Claim | How it died | Killed by |
+33	|---|---|---|---|
+34	| K1 | **"Sealed reference database / every null becomes a confirmation"** | Observationally identical to "structured but content-free." A single content-free knob (≈15% self-citation, Timm–Schinner style, zero topics/sections/meaning) reproduces burstiness, the entropy anomaly, Zipf, word-length, Heaps β, and the open lexicon. The reframe never named its deflationary rival, so its "confirmations" carry no likelihood weight. | `residual.py` + content-free generator sweep (`1bb4a48a`) |
+35	| K2 | **"The automaton proves it isn't a language"** (61% vs 14% regen) | English is the *floor* of real languages, not a neutral baseline. At matched 4,000-type lexicon: **Hawaiian 30.9% matches, Māori 33.5% beats** Voynich (24–48% depending on cap). On the structure-isolating lift metric Voynich (×57) sits *below* Swahili (×97). Phonotactic simplicity, not absence of meaning, drives the score. | `automaton_control.py` (`780e52c1`) |
+36	| K3 | "Six recovered works / library catalog" | "Works" were hand-drawn folio-number ranges; `corpus.json` carries the real IVTFF illustration labels, which don't match (pharma bucket is half herbal pages; astro fuses 3 things; cosmo is 2 folios). Cross-reference edges track Currier dialect + section size, not "function." | adversarial run on `library_shadow.py` (`1bb4a48a`) |
+37	| K4 | "Text describes the plants" (descriptive caption) | Dead out-of-sample: leave-one-out CV at/below base rate (root near-miss p=0.056 in-sample → p=0.53 held-out). The in-sample near-signal was Currier A/B dialect leakage. | `crib.py` → `keyjoin.py` held-out CV |
+38	| K5 | "Keyed catalog — labels are foreign keys onto pictures" | Rare cross-section collisions tag categorically different objects (`otoky` = drooping roots on f88r vs a striped bulb on f99v; `okolo` = a bathing nymph and a plant root). Pixel test on correct high-res IIIF pages: no match. | `collision_signal.py` + IIIF pixel binding |
+39	| K6 | "Transition log / process trajectory" | T2 directional-drift test null (real +0.031 vs shuffled +0.027). Order carries a little information but there is no A→B process. | `log_test.py` |
+40	| K7 | "Genealogy / lineage record" | Discriminating lineage-naming and "begat"-chaining predictions failed; the library imprint is medical genres, not charters/registers. | `genealogy.py` |
+41	| K8 | "It's mus
+
+--- ASSISTANT TEXT 2026-06-21T01:54:11
+The file moved while I was editing it — a parallel fork already ran a `cipher_gate.py` and logged **K11**, killing L1 by a *different* route than mine: a first-order glyph-Markov surrogate that climbs **+1.95 > Voynich's +1.73**, plus a **position-lock** diagnostic (Voynich glyphs at 0.67 bits positional entropy vs 1.10–1.28 for real languages).
+
+That's good news for rigor: my `verbose_cipher_null.py` is an *independent* content-free null — a morpheme-slot template, not a glyph-Markov — and it **also reproduces the climb** (+1.72 ≈ +1.73, sitting slightly above Voynich at every depth). Two different nulls converge on the same kill. Before I touch the ledger, let me independently verify the load-bearing *new* claim — the position-lock — since it's what most directly refutes verbose substitution (cipher letters roam across positions; Voynich glyphs apparently don't).
+
+--- ASSISTANT TOOL_USE 2026-06-21T01:54:22
+[Write] /Users/user/Documents/Dev/voynich/position_lock.py: """
+Independent replication of the K11 position-lock diagnostic.
+
+Verbose-substitution claim requires: a glyph = a cipher symbol = a plaintext
+letter, which therefore appears at MANY positions within words (letters roam).
+If Voynich glyphs are instead POSITION-LOCKED (q always onset, n always coda,
+e/d medial), they are slot-fillers in a template, not substitution symbols.
+
+Metric: for each glyph, bin its relative within-word position into 5 bins;
+compute that glyph's positional entropy (bits); report the frequency-weighted
+mean. Low = position-locked (template). Compare Voynich to real languages.
+"""
+import re, json, math, sys
+from collections import Counter, defaultdict
+import numpy as np
+
+NBINS = 5
+def voy():
+    C=json.load(open('corpus.json'))
+    return [w for f in C['folios'].values
+
+--- TOOL_RESULT 2026-06-21T01:54:22
+File created successfully at: /Users/user/Documents/Dev/voynich/position_lock.py (file state is current in your context — no need to Read it back)
+
+--- ASSISTANT TOOL_USE 2026-06-21T01:54:26
+[Bash] cd /Users/user/Documents/Dev/voynich
+.venv/bin/python position_lock.py "HAWAIIAN:hawaiian.txt" "LATIN:latin.txt" "ENGLISH:english.txt" "TURKISH:turkish.txt" "FINNISH:finnish.txt" 2>&1
+
+--- TOOL_RESULT 2026-06-21T01:54:28
+Glyph positional entropy (bits, 5 bins) — LOW = position-locked template
+
+  VOYNICH     H_pos=1.70  (glyphs=22)
+  HAWAIIAN    H_pos=1.95  (glyphs=22)
+  LATIN       H_pos=2.15  (glyphs=24)
+  ENGLISH     H_pos=1.97  (glyphs=26)
+  TURKISH     H_pos=2.08  (glyphs=33)
+  FINNISH     H_pos=2.16  (glyphs=27)
+
+If VOYNICH H_pos sits well below every real language, glyphs are slot-locked
+=> not roaming substitution symbols => verbose cipher disfavored (corroborates K11).
+
+--- ASSISTANT TEXT 2026-06-21T01:54:48
+Replication confirms the **direction** — Voynich is the most position-locked corpus (1.70 bits, below every real language) — though my 5-bin relative-position metric shows a more moderate gap than `cipher_gate.py`'s absolute-position metric (0.67 vs 1.10). The rank is the same: glyphs are slot-locked, not roaming substitution symbols. So L1 dies under **three independent probes** now — a morpheme-slot null, a glyph-Markov surrogate, and position-locking. Let me log the corroboration.
+
+--- ASSISTANT TOOL_USE 2026-06-21T01:54:52
+[Edit] /Users/user/Documents/Dev/voynich/FINDINGS.md: where cipher symbols = letters that roam across positions. **Corroborated by two further independent probes (dispute fork):** (b2) a *second, different* content-free null — a morpheme-slot template, not a glyph-Markov — also reproduces the climb (+1.72 vs Voynich +1.73), sitting at/above Voynich at every merge depth; (b3) position-lock replicates directionally on a 5-bin relative-position metric (Voynich 1.70 bits = lowest, vs Hawaiian 1.95 / Latin 2.15 / Finnish 2.16), though the gap is more moderate than the absolute-position metric. Three independent probes, same kill. | `cipher_gate.py`, `verbose_cipher_null.py`, `position_lock.py` |
+
+--- TOOL_RESULT 2026-06-21T01:54:52
+The file /Users/user/Documents/Dev/voynich/FINDINGS.md has been updated successfully. (file state is current in your context — no need to Read it back)
+

@@ -1,0 +1,35 @@
+TAKAHASHI Lz LABEL SEQUENCE for f72r2 (transcription order within each tier)
+Multi-word labels shown with '.' separating words; treat as ONE locus bound to ONE referent.
+
+--- panel 72r2, Gemini, labels on star/nymphs outside the diagram [tier=outside] ---
+  locus   1: ofchdady
+  locus   2: oklairdy
+  locus   3: okaram
+  locus   4: okairy
+  locus   5: okeolar
+--- panel 72r2, Gemini, star labels on outer band of stars/nymphs inside diagram [tier=outer] ---
+  locus   7: otar!aldy
+  locus   8: okalar
+  locus   9: okal
+  locus  10: okaly
+  locus  11: okal
+  locus  12: okeey.ary
+  locus  13: oteeary
+  locus  14: otair.dy
+  locus  15: okair!cham
+  locus  16: okeal
+  locus  17: otarar!!!!
+  locus  18: okaly
+  locus  19: orary
+  locus  20: okyd
+  locus  21: otolam
+--- panel 72r2, Gemini, star labels on inner band of stars/nymphs [tier=inner] ---
+  locus  23: otal
+  locus  24: salal
+  locus  25: okam
+  locus  26: otalshy
+  locus  27: okal!dy
+  locus  28: chosar
+  locus  29: otam
+  locus  30: ainaly
+  locus  31: okar.cham

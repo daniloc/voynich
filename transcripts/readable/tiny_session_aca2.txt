@@ -1,0 +1,11 @@
+--- USER TEXT 2026-06-20T05:27:01
+interesting math
+
+--- USER TEXT 2026-06-20T05:27:14
+A credible source claims to have cracked the Voynich manuscript using LLM tools and other machine cognition strategies. I have no reason
+  to disbelieve this source: they have been consistently credible in their increasingly daring LLM exploits. at the same time, I do not wish
+  to wait the two weeks for publication and verification. I am curious to hear how a savvy amateur like this might break down the problem.
+  They have previously shaken out some interesting math proofs from LLM-guided explorations, and reconstructed some otherwise lost family
+  history of theirs. They are not an expert cryptographer nor a linguist. they have a liberal arts education in classes they barely
+  attended, and a deep enjoyment of computing. So: what might they have tried?
+

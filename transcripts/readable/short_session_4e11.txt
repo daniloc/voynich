@@ -1,0 +1,625 @@
+--- USER TEXT 2026-06-21T01:58:35
+@FINDINGS.md remember the movie Contact? the codex finally unlocks when Hadden reveals that the raster images have a hidden third dimension. is there an analogous move to make here?
+
+--- ASSISTANT TEXT 2026-06-21T01:59:51
+Yes — and the Contact analogy is sharper here than it first looks, so let me take it literally before I take it metaphorically.
+
+## What the Hadden move actually *is*
+
+The primer was complete the whole time. What was wrong was the **dimensionality the humans imposed on it** — they read it as flat pages; the registration marks were pagination for a *volume*. Rotate the substrate, and constraints that looked unsatisfiable suddenly close. Crucially: the symbols never changed. The *geometry of how you index into them* did.
+
+So the question isn't "what new transform decodes the glyphs" (that's the verbose-cipher reflex, and K11 killed it). It's: **are we flattening an axis the data is actually structured along?**
+
+## The eerie part: D2 already *is* a registration mark
+
+D2 says word order within a line carries ≈ zero information — "a bag of records." We filed that as a *negative* result. But read it as Hadden would: **it's telling us the left-to-right axis is the wrong one.** A bag-of-records finding is exactly what you'd see if the real unit runs *across* records, not along them, and you're collapsing the wrong dimension. We treated "no syntax" as a wall; it might be a pointer.
+
+## Three candidate "third dimensions," ranked by how untried they are
+
+**1. Tabular registration — stop reading lines, read *columns*.** Stack all lines and ask whether word-position-*k* (1st word of every line, 2nd word, …) draws from a constrained sub-vocabulary. If the "open key" core (D3, 6.8 bits, the thing that refuses to close) collapses toward a *closed* enumeration once you condition on column-position-across-records, that's the constraints snapping shut on rotation. L6/D7 brushed this (cores tied to referent class, stable entities) but nobody has run the full "does the open core become closed under the right grouping axis" test. **This is the most direct Hadden analog and I think it's genuinely open.**
+
+**2. Codicology — the manuscript was rebound; current folio order ≠ production order.** This is the *most literal* version of "the pages interlock when you stack them right." Every folio-autocorrelation control we ran (confound #2) used the **current** binding order. If the original quire/bifolio order differs (Lisa Fagin Davis's reconstruction exists), the adjacency statistics that we partial out as "position-on-shelf" could be the wrong adjacency entirely. Re-running the autocorrelation confounds on *reconstructed* order is cheap and could either dissolve or sharpen half our nulls.
+
+**3. Image as the anchor axis.** Already the live thread (L2, D12 grounding). This is the one dimension we *are* exploiting — and notably it's the inverse of Contact (D6: text→image one-way, not image-as-key).
+
+## The honest counterweight
+
+In Contact, a message was *guaranteed* — the primer was engineered to be decoded, so adding the right dimension had to pay off. Here the leading verdict is the opposite bet: an asemic generated artifact has **no hidden dimension to find**, and the brutal lesson of K1/K11 is that every new structure we add gets reproduced by a matched content-free null. So a rotation that "reveals structure" proves nothing on its own — the column-registration test will *find* column structure (templates produce it for free). It only counts if it clears spec §5: the collapse must **generalize out-of-sample and beat a matched null**, not just look tidy in-sample.
+
+That's the real difference. Hadden had a guarantee. We have a filter.
+
+---
+
+My recommendation: run **#1 (column registration)** with the content-free null built in from the start, and do **#2 (quire-order re-run)** as a cheap parallel check since it could undermine a confound we lean on heavily. Want me to spin up the column-registration test against `body_spatial.json` — open-core entropy conditioned on column-position-across-records, with the matched template null as the control?
+
+--- USER TEXT 2026-06-21T02:02:25
+proceed
+
+--- ASSISTANT TOOL_USE 2026-06-21T02:02:31
+[Bash] ls -la && echo "---PY---" && ls *.py 2>/dev/null && echo "---JSON---" && ls *.json 2>/dev/null
+
+--- TOOL_RESULT 2026-06-21T02:02:33
+total 392184
+drwxr-xr-x  215 user  staff      6880 Jun 20 19:02 .
+drwxr-xr-x@  78 user  staff      2496 Jun 19 22:06 ..
+drwxr-xr-x@   8 user  staff       256 Jun 19 22:15 .venv
+-rw-r--r--@   1 user  staff     15736 Jun 20 18:59 FINDINGS.md
+-rw-r--r--@   1 user  staff   1715494 Jun 19 22:17 LSI_ivtff.txt
+-rw-r--r--@   1 user  staff  56222755 Jun 19 22:06 Voynich_Manuscript.pdf
+drwxr-xr-x@   3 user  staff        96 Jun 20 18:52 __pycache__
+-rw-r--r--@   1 user  staff    104133 Jun 20 13:56 _audit_results.json
+-rw-r--r--@   1 user  staff       976 Jun 20 14:57 _automaton_control.json
+-rw-r--r--@   1 user  staff       956 Jun 20 15:57 _entropy_panel.json
+-rw-r--r--@   1 user  staff     23276 Jun 20 16:03 _ground_payload.json
+drwxr-xr-x@  30 user  staff       960 Jun 20 16:05 _labels
+-rw-r--r--@   1 user  staff     25837 Jun 20 14:56 _mri_tatoeba
+-rw-r--r--@   1 user  staff      7320 Jun 20 14:56 _mri_tatoeba.bz2
+-rw-r--r--@   1 user  staff      4350 Jun 20 16:03 _worklist.json
+-rw-r--r--@   1 user  staff      5021 Jun 19 22:19 analyze.py
+-rw-r--r--@   1 user  staff      5489 Jun 20 14:42 automaton_control.py
+-rw-r--r--@   1 user  staff    858250 Jun 20 00:48 bal_75r.jpg
+-rw-r--r--@   1 user  staff    813836 Jun 20 00:48 bal_75v.jpg
+-rw-r--r--@   1 user  staff    886365 Jun 20 00:48 bal_76r.jpg
+-rw-r--r--@   1 user  staff    848076 Jun 20 00:48 bal_76v.jpg
+-rw-r--r--@   1 user  staff    883868 Jun 20 00:48 bal_77r.jpg
+-rw-r--r--@   1 user  staff    820927 Jun 20 00:48 bal_77v.jpg
+-rw-r--r--@   1 user  staff    875643 Jun 20 00:48 bal_78r.jpg
+-rw-r--r--@   1 user  staff    842463 Jun 20 00:48 bal_78v.jpg
+-rw-r--r--@   1 user  staff    891417 Jun 20 00:49 bal_79r.jpg
+-rw-r--r--@   1 user  staff    828402 Jun 20 00:49 bal_79v.jpg
+-rw-r--r--@   1 user  staff    880461 Jun 20 00:49 bal_80r.jpg
+-rw-r--r--@   1 user  staff    887951 Jun 20 00:49 bal_80v.jpg
+-rw-r--r--@   1 user  staff    864312 Jun 20 00:49 bal_82r.jpg
+-rw-r--r--@   1 user  staff    865855 Jun 20 00:49 bal_82v.jpg
+-rw-r--r--@   1 user  staff    933314 Jun 20 00:49 bal_83r.jpg
+-rw-r--r--@   1 user  staff    875054 Jun 20 00:49 bal_83v.jpg
+-rw-r--r--@   1 user  staff    902166 Jun 20 00:49 bal_84r.jpg
+-rw-r--r--@   1 user  staff    898777 Jun 20 00:49 bal_84v.jpg
+-rw-r--r--@   1 user  staff    374796 Jun 19 23:37 band_f99r.png
+-rw-r--r--@   1 user  staff    419674 Jun 19 23:37 band_f99v.png
+-rw
+
+--- ASSISTANT TEXT 2026-06-21T02:02:39
+Let me inspect the data schema and the existing scripts that come closest (`columns.py` for slot-parsing, `pivot.py`, `structure_gaps.py`), so the new test matches conventions and I don't duplicate prior work.
+
+--- ASSISTANT TOOL_USE 2026-06-21T02:02:41
+[Bash] python3 -c "
+import json
+d=json.load(open('body_spatial.json'))
+print('TYPE', type(d))
+if isinstance(d,dict):
+    print('KEYS', list(d.keys())[:20])
+    for k in list(d.keys())[:3]:
+        print('---',k, type(d[k]))
+elif isinstance(d,list):
+    print('LEN', len(d))
+    print('SAMPLE0', json.dumps(d[0], indent=1)[:1500])
+"
+
+--- TOOL_RESULT 2026-06-21T02:02:41
+TYPE <class 'dict'>
+KEYS ['pages', 'tokens']
+--- pages <class 'dict'>
+--- tokens <class 'list'>
+
+--- ASSISTANT TOOL_USE 2026-06-21T02:02:46
+[Bash] python3 -c "
+import json
+d=json.load(open('body_spatial.json'))
+t=d['tokens']
+print('NTOK', len(t))
+print('TOK0', json.dumps(t[0], indent=1))
+print('TOK1', json.dumps(t[1], indent=1))
+# pages sample
+pk=list(d['pages'].keys())[0]
+print('PAGE',pk, json.dumps(d['pages'][pk], indent=1)[:800])
+"
+
+--- TOOL_RESULT 2026-06-21T02:02:46
+NTOK 37019
+TOK0 {
+ "folio": "f1r",
+ "line": 1,
+ "locus": "@P0",
+ "lprefix": "@",
+ "lcode": "P0",
+ "role": "paragraph",
+ "idx": 0,
+ "nline": 10,
+ "linepos": "first",
+ "word": "fachys",
+ "uncertain": false,
+ "section": "text",
+ "currier": "A",
+ "quire": "A",
+ "hand": "1",
+ "subject": "Opening text page of the manuscript (herbal/text section). A",
+ "topology": "other"
+}
+TOK1 {
+ "folio": "f1r",
+ "line": 1,
+ "locus": "@P0",
+ "lprefix": "@",
+ "lcode": "P0",
+ "role": "paragraph",
+ "idx": 1,
+ "nline": 10,
+ "linepos": "mid",
+ "word": "ykal",
+ "uncertain": false,
+ "section": "text",
+ "currier": "A",
+ "quire": "A",
+ "hand": "1",
+ "subject": "Opening text page of the manuscript (herbal/text section). A",
+ "topology": "other"
+}
+PAGE f1r {
+ "section": "text",
+ "illus": "T",
+ "quire": "A",
+ "currier": "A",
+ "hand": "1"
+}
+
+--- ASSISTANT TOOL_USE 2026-06-21T02:02:52
+[Read] {"file_path": "/Users/user/Documents/Dev/voynich/columns.py"}
+
+--- TOOL_RESULT 2026-06-21T02:02:52
+1	"""
+2	WHAT ARE THE COLUMNS? and what else does layout-position fix?
+3	Hypothesis: the record is the WORD, with three columns prefix|core|suffix =
+4	attribute|entity|attribute. A database column = a CLOSED small domain; a key = a
+5	large OPEN domain; columns are roughly INDEPENDENT. Tests:
+6	  A. FIELD CARDINALITY & CLOSURE — are prefix/suffix small closed enums and core the
+7	     large open key?
+8	  B. FIELD INDEPENDENCE — mutual information between the three columns (low = orthogonal
+9	     fields, like real table columns).
+10	  C. POSITIONAL INVARIANTS — which field-values are locked by line/word position
+11	     (beyond the daiin row-marker): word-length, gallows, prefix, suffix by position.
+12	  D. CONSERVED WIDTH — do lines fill to a fixed glyph-width (justification invariant):
+13	     does word-count trade off against word-length within a line?
+14	"""
+15	import json, re, math, numpy as np
+16	from collections import Counter, defaultdict
+17	C=json.load(open('corpus.json'))
+18	def ltype(loc):
+19	    m=re.search(r'[A-Za-z]',loc); return m.group(0).upper() if m else '?'
+20	PRE=['qok','qot','qo','ok','ot','o','y','ch','sh','d','cth','ckh','cph','cfh']
+21	SUF=['eedy','eody','edy','aiin','aiir','ain','iin','dy','ol','or','ar','al','am','dam','ey','eey','y']
+22	def decomp(w):
+23	    p=next((x for x in sorted(PRE,key=len,reverse=True) if w.startswith(x)),'')
+24	    r=w[len(p):]; s=next((x for x in sorted(SUF,key=len,reverse=True) if r.endswith(x) and len(r)>len(x)),'')
+25	    return p,(r[:len(r)-len(s)] if s else r),s
+26	GALLOWS=set('ktpf')
+27	def has_gallows(w): return any(g in w for g in GALLOWS)
+28	
+29	lines=[]
+30	for f,L in C['folios'].items():
+31	    for ln in L:
+32	        if ltype(ln['locus'])!='P': continue
+33	        ws=[w for w in ln['words'] if '?' not in w and len(w)>=2]
+34	        if len(ws)>=4: lines.append(ws)
+35	allw=[w for ln in lines for w in ln]
+36	D=[decomp(w) for w in allw]
+37	N=len(allw)
+38	
+39	def H(c):
+40	    n=sum(c.values()); return -sum(v/n*math.log2(v/n) for v in c.values()) if n else 0
+41	def field_report(name, vals):
+42	    c=Counter(vals); n=sum(c.values())
+43	    top10=sum(v for _,v in c.most_common(10))/n
+44	    print(f"  {name:8s}: {len(c):4d} distinct | top-10 cover {100*top10:3.0f}% | entropy {H(c):.2f} bits | top: {[x for x,_ in c.most_common(6)]}")
+45	
+46	print("="*70); print("A. THE THREE COLUMNS — cardinality & closure"); print("="*70)
+47	field_report("prefix", [p for p,_,_ in D])
+48	field_report("core",   [c for _,c,
+
+--- ASSISTANT TEXT 2026-06-21T02:03:33
+`columns.py` establishes the slot-decomposition convention (the `PRE`/`SUF` lists and `decomp`) and confirms the prior work conditioned the core on *within-line position* descriptively (its section C) — but never as the Hadden test: never asked whether the **open key closes** under column position, never with a held-out generalization split, never against a matched shuffle null. That's the gap. Let me confirm the `idx` field is within-line, then build it.
+
+--- ASSISTANT TOOL_USE 2026-06-21T02:03:37
+[Bash] python3 -c "
+import json
+from collections import Counter
+d=json.load(open('body_spatial.json'))
+t=d['tokens']
+# does idx reset per line?
+prev=None
+resets=0; sample=[]
+for x in t[:40]:
+    sample.append((x['folio'],x['line'],x['idx'],x['word']))
+for s in sample[:25]: print(s)
+# distribution of idx max per line
+import itertools
+key=lambda x:(x['folio'],x['line'])
+maxidx=[]
+for k,g in itertools.groupby(t,key):
+    g=list(g); maxidx.append(max(z['idx'] for z in g))
+print('lines',len(maxidx),'idx looks within-line if maxidx small. mean',sum(maxidx)/len(maxidx),'max',max(maxidx))
+print('sections',Counter(x['section'] for x in t))
+print('currier',Counter(x['currier'] for x in t))
+"
+
+--- TOOL_RESULT 2026-06-21T02:03:37
+('f1r', 1, 0, 'fachys')
+('f1r', 1, 1, 'ykal')
+('f1r', 1, 2, 'ar')
+('f1r', 1, 3, 'ataiin')
+('f1r', 1, 4, 'shol')
+('f1r', 1, 5, 'shory')
+('f1r', 1, 6, 'cthres')
+('f1r', 1, 7, 'y')
+('f1r', 1, 8, 'kor')
+('f1r', 1, 9, 'sholdy')
+('f1r', 2, 0, 'sory')
+('f1r', 2, 1, 'ckhar')
+('f1r', 2, 2, 'or')
+('f1r', 2, 3, 'y')
+('f1r', 2, 4, 'kair')
+('f1r', 2, 5, 'chtaiin')
+('f1r', 2, 6, 'shar')
+('f1r', 2, 7, 'are')
+('f1r', 2, 8, 'cthar')
+('f1r', 2, 9, 'cthar')
+('f1r', 2, 10, 'dan')
+('f1r', 3, 0, 'syaiir')
+('f1r', 3, 1, 'sheky')
+('f1r', 3, 2, 'or')
+('f1r', 3, 3, 'ykaiin')
+lines 5211 idx looks within-line if maxidx small. mean 6.104010746497793 max 50
+sections Counter({'herbal': 10724, 'stars_recipes': 10670, 'biological': 6866, 'pharmaceutical': 2504, 'cosmological': 2469, 'text': 1625, 'zodiac': 1322, 'astronomical': 839})
+currier Counter({'B': 22973, 'A': 10849, '?': 3197})
+
+--- ASSISTANT TEXT 2026-06-21T02:04:18
+`idx` is within-line (0-based), lines avg ~6 words. Confound #1 (Currier) is severe here — B dominates (22,973) — so I'll run within a single Currier×section stratum. Writing the test now.
+
+--- ASSISTANT TOOL_USE 2026-06-21T02:04:52
+[Write] /Users/user/Documents/Dev/voynich/contact.py: """
+THE CONTACT TEST — does the open key close when you rotate to the column axis?
+
+Hadden move (the film): the data was complete; the wrong DIMENSIONALITY was imposed
+on it. Here D2 says within-line word order carries ~0 info ("bag of records") — read
+as a pointer, that says the left-to-right axis is wrong and the real unit may run
+ACROSS records (down columns), not along them.
+
+D3 found the core morpheme is an OPEN key: ~3000 values, 6.8 bits, refuses to close.
+Hypothesis: it closes once you condition on COLUMN position (word-index-within-line).
+
+Spec §5 arbiters built in:
+  (1) beat a matched shuffle null (position<->core association destroyed), and
+  (2) GENERALIZE out-of-sample (train column-vocab on half the folios, predict the
+      other half better than a position-agnostic model).
+
+--- TOOL_RESULT 2026-06-21T02:04:52
+File created successfully at: /Users/user/Documents/Dev/voynich/contact.py (file state is current in your context — no need to Read it back)
+
+--- ASSISTANT TOOL_USE 2026-06-21T02:04:57
+[Bash] .venv/bin/python contact.py 2>&1 || python3 contact.py 2>&1
+
+--- TOOL_RESULT 2026-06-21T02:05:04
+==========================================================================
+STRATUM herbal/A  | 1079 paragraph lines, 6758 words, 95 folios
+==========================================================================
+  field     H(f)  H(f|col)     IG  null_IG      z       p   |  held-out CV:  H_glob   H_col  Δ(gen)
+  prefix    3.38      3.27  0.112    0.009   71.4  0.0033   |                 3.36    3.27  +0.092
+  core      6.86      6.18  0.677    0.557   27.9  0.0033   |                 7.06    7.02  +0.031
+  suffix    2.86      2.81  0.048    0.010   24.0  0.0033   |                 2.85    2.83  +0.020
+  open-key closure (distinct CORE values): global=1187 | p0:313 p1:216 p2:241 p3:230 p4:228 mid:269 last:339
+
+==========================================================================
+STRATUM recipes/B  | 1065 paragraph lines, 10532 words, 23 folios
+==========================================================================
+  field     H(f)  H(f|col)     IG  null_IG      z       p   |  held-out CV:  H_glob   H_col  Δ(gen)
+  prefix    3.15      3.03  0.115    0.006  116.2  0.0033   |                 3.18    3.10  +0.078
+  core      6.45      5.94  0.503    0.335   40.2  0.0033   |                 6.60    6.54  +0.062  <==
+  suffix    3.49      3.41  0.079    0.007   74.2  0.0033   |                 3.48    3.44  +0.046
+  open-key closure (distinct CORE values): global=1146 | p0:359 p1:204 p2:204 p3:192 p4:188 mid:511 last:316
+
+==========================================================================
+STRATUM bio/B  | 762 paragraph lines, 6616 words, 20 folios
+==========================================================================
+  field     H(f)  H(f|col)     IG  null_IG      z       p   |  held-out CV:  H_glob   H_col  Δ(gen)
+  prefix    3.21      3.12  0.095    0.009   69.4  0.0033   |                 3.20    3.13  +0.065
+  core      5.37      4.94  0.427    0.284   34.4  0.0033   |                 5.52    5.46  +0.066  <==
+  suffix    3.20      3.14  0.064    0.010   37.1  0.0033   |                 3.23    3.20  +0.031
+  open-key closure (distinct CORE values): global=585 | p0:169 p1:112 p2:121 p3:111 p4:116 mid:233 last:159
+
+==========================================================================
+STRATUM herbal/B  | 363 paragraph lines, 3175 words, 32 folios
+==========================================================================
+  field     H(f)  H(f|col)     IG  null_IG      z       p   |  held-out CV:  H_glob   H_col  Δ(gen)
+  prefix    3.22
+
+--- ASSISTANT TEXT 2026-06-21T02:05:47
+## Result: the rotation produces a real signal — but it's template-grade, and the key does not close
+
+The Contact move was worth making precisely *because* it could have paid off, and the in-sample numbers look like a hit. They aren't. Here's the honest read across all four Currier×section strata:
+
+**In-sample, the column axis looks electric.** Conditioning the open-key core on column position cuts its entropy by 0.43–0.75 bits and beats the shuffle null at **z = 17–40, p ≈ 0.003** (the permutation floor) in every stratum. If I stopped here I'd be announcing a crack.
+
+**Held-out, it evaporates.** Train the column→core vocabulary on half the folios, predict the other half: knowing the column reduces the core's cross-entropy by only **+0.03 to +0.07 bits** out of ~5.4–6.9 — roughly **1% of the key's entropy**. The closure headline says the same thing directly: in recipes/B, fixing the column leaves 359–511 of the 1,146 distinct cores in play. **The open key does not close.**
+
+**And the discriminator kills the semantic reading outright.** The whole point of running prefix/suffix through the identical pipeline was to measure the template floor. The core's generalizable column signal does **not exceed** it:
+
+| stratum | core Δ(gen) | prefix Δ(gen) | verdict |
+|---|---|---|---|
+| herbal/A | +0.031 | **+0.092** | core *below* the closed-enum floor |
+| recipes/B | +0.062 | +0.078 | core ≤ floor |
+| bio/B | +0.066 | +0.065 | core ≈ floor |
+| herbal/B | +0.066 | +0.038 | core ≈ floor |
+
+The column axis is re-expressing the positional *template* grammar `columns.py` already documented (first-word lengthening, q-prefix positional law) — not a hidden semantic field. The huge in-sample IG is the same mirage K1/K11 warned about: structure that a content-free positional template reproduces. **Another null reproduced.** Rotating the substrate found the registration mark and turned it — and behind it was the template, not a message.
+
+The §5 filter did exactly its job: the z=40 in-sample number is what every dead literature "solution" reports; the held-out collapse is why they're dead.
+
+Let me log it.
+
+--- ASSISTANT TOOL_USE 2026-06-21T02:05:48
+[Read] {"file_path": "/Users/user/Documents/Dev/voynich/FINDINGS.md", "offset": 44, "limit": 5}
+
+--- TOOL_RESULT 2026-06-21T02:05:48
+44	| K9 | "The folio-opener is an index / table of contents" | Predicts section *below* the majority baseline (36% opener vs 56% always-guess-herbal); no ordinal trend. A formatting spine that points at nothing. | `index_test.py` |
+45	| K10 | "Burstiness proves real topical content" | Real IoD 1.31 is only ~30% above the i.i.d. noise floor (0.99); naive copying overshoots (4.57). The real value sits *inside* the content-free range. | `residual.py` sweep |
+46	| K11 | **"Verbose-cipher signature: unit-h2 climbs 3× faster than real languages"** (was L1, the project's last live lead) | Killed by the matched content-free null it never ran. A first-order glyph-Markov **surrogate** of Voynich (meaningless, same glyph stats) climbs *more* under BPE: Voynich **+1.73** vs surrogate **+1.95**. The climb is an orthographic artifact of templatic spelling, not recoverable cipher units. Confirmed by a second diagnostic: Voynich glyphs are **position-locked (0.67 bits** positional entropy **vs 1.10–1.28 for every real language)** — incompatible with verbose substitution, where cipher symbols = letters that roam across positions. **Corroborated by two further independent probes (dispute fork):** (b2) a *second, different* content-free null — a morpheme-slot template, not a glyph-Markov — also reproduces the climb (+1.72 vs Voynich +1.73), sitting at/above Voynich at every merge depth; (b3) position-lock replicates directionally on a 5-bin relative-position metric (Voynich 1.70 bits = lowest, vs Hawaiian 1.95 / Latin 2.15 / Finnish 2.16), though the gap is more moderate than the absolute-position metric. Three independent probes, same kill. | `cipher_gate.py`, `verbose_cipher_null.py`, `position_lock.py` |
+47	
+48	**Pattern:** every confident *referential / semantic* claim has been killed. What survives is *structural*.
+
+--- ASSISTANT TOOL_USE 2026-06-21T02:06:01
+[Edit] /Users/user/Documents/Dev/voynich/FINDINGS.md: | K12 | **"Column registration — the open key closes when you rotate to the column axis"** (the *Contact* / Hadden move: D2's "no word order" reread as "the left-to-right axis is wrong; records run down columns") | Looks electric in-sample, dead held-out. Conditioning the open-key core on column position (word-index-in-line) cuts core entropy 0.43–0.75 bits and beats a position-shuffle null at **z=17–40, p≈0.003 in all 4 Currier×section strata**. But on held-out folios the column→core gain collapses to **+0.03–0.07 bits (~1% of the key's ~6.5-bit entropy)** — the key does **not** close (recipes/B: fixing the column leaves 359–511 of 1146 distinct cores). Decisive discriminator: the SAME pipeline on the closed enums shows the core's *generalizable* column signal does **not exceed** the pref
+
+--- TOOL_RESULT 2026-06-21T02:06:01
+The file /Users/user/Documents/Dev/voynich/FINDINGS.md has been updated successfully. (file state is current in your context — no need to Read it back)
+
+--- ASSISTANT TEXT 2026-06-21T02:06:08
+Now recording the two rotations that remain genuinely untried, since the column axis is closed:
+
+--- ASSISTANT TOOL_USE 2026-06-21T02:06:13
+[Edit] /Users/user/Documents/Dev/voynich/FINDINGS.md: | L7 | **Quire-order re-run** (the most literal *Contact* rotation) | Every folio-autocorrelation control (confound #2) used the **current** binding order; the MS was rebound, so production order ≠ shelf order. Re-running the position confounds on Lisa Fagin Davis's reconstructed gathering order could dissolve or sharpen half our nulls. Cheap; needs the quire-reconstruction mapping. | untried |
+| L8 | **Row-axis tabular coherence** | The column axis (word-index) is dead (K12), but the *row* axis (line-index-within-page as record, columns aligned across rows) wasn't tested — does the same column down successive rows share a constrained vocabulary beyond a row-shuffle null? Weak prior after K12, but it's the other half of the literal "stack the pages" move. | untried |
+| L6 | **Domain-cores*
+
+--- TOOL_RESULT 2026-06-21T02:06:13
+The file /Users/user/Documents/Dev/voynich/FINDINGS.md has been updated successfully. (file state is current in your context — no need to Read it back)
+
+--- ASSISTANT TEXT 2026-06-21T02:06:21
+Logged as **K12**. Let me check the memory file — its index line still calls verbose-cipher the live lead, which K11 already killed last session, so it's stale.
+
+--- ASSISTANT TOOL_USE 2026-06-21T02:06:22
+[Read] {"file_path": "/Users/user/.claude/projects/-Users-user-Documents-Dev-voynich/memory/voynich-investigation-state.md"}
+
+--- TOOL_RESULT 2026-06-21T02:06:22
+1	---
+2	name: voynich-investigation-state
+3	description: State and meta-findings of the Voynich manuscript analysis project as of 2026-06-20
+4	metadata: 
+5	  node_type: memory
+6	  type: project
+7	  originSessionId: ac7bc224-d570-492b-91a2-4be14a3267c4
+8	---
+9	
+10	Voynich decipherment-analysis project in /Users/user/Documents/Dev/voynich (Python scripts + IVTFF transliteration `LSI_ivtff.txt` + facsimile PDF/IIIF images). Goal: figure out what the manuscript is, using stats + multimodal vision. Started as a "what would a savvy amateur try" exercise.
+11	
+12	**Durable findings (survived adversarial controls):** rule-governed system not noise; NO word-order syntax (within-line shuffle ≈ identical); slot-template morphology `prefix·core·suffix` reducible to a ~472-param finite-state word automaton; low entropy = sequential constraint over a normal alphabet; image ≈ lossy fingerprint of text (not vice versa); Latin-trained scribe (figure-9 = Cappelli -us/-um siglum), maker likely a N-Italian physician-astrologer circle c.1420s-30s.
+13	
+14	**Killed claims (built up then demolished by the project's own later controls):** "sealed reference database / every null is a confirmation" (observationally identical to a content-free generator); "automaton proves not-a-language" (Hawaiian/Māori match-or-beat the 61/14 regen keystone at matched lexicon size).
+15	
+16	**Meta-problem:** the investigation circles — three sessions independently reset to "assume it's crackable, what next?" because there was no shared findings ledger; each fork rebuilt and re-demolished the same claims. **Fixed 2026-06-20:** `FINDINGS.md` ledger now exists at repo root with survival-status columns (🟢 survived / 🔴 killed / 🟡 live / ⚪ external), the recurring-confounds catalog, and the standing verdict. Read it first; append a row for every new script. **Cipher attempt resolved 2026-06-20:** the verbose-cipher lead was killed (K11, `cipher_gate.py`: a meaningless surrogate reproduces the unit-h2 climb; glyphs are position-locked at half any real language's freedom), and the R1 substitution attack (`cipher_attack.py`) came back NULL with a working positive control — Voynich decodes no better than meaningless noise and 0.21 bits/char below a real cipher the method cracked. Major cipher families empirically excluded. **Standing conclusion:** generated, language-shaped artifact with no recoverable content (Codex Seraphinianus class); the open question is *why it was made*, not *what it says*. This was
+
+--- ASSISTANT TOOL_USE 2026-06-21T02:06:34
+[Edit] /Users/user/.claude/projects/-Users-user-Documents-Dev-voynich/memory/voynich-investigation-state.md: description: State and meta-findings of the Voynich analysis as of 2026-06-20; verbose-cipher AND column-registration both killed, asemic verdict leading, R1/quire-order untried
+
+--- TOOL_RESULT 2026-06-21T02:06:34
+The file /Users/user/.claude/projects/-Users-user-Documents-Dev-voynich/memory/voynich-investigation-state.md has been updated successfully. (file state is current in your context — no need to Read it back)
+
+--- ASSISTANT TOOL_USE 2026-06-21T02:06:46
+[Edit] /Users/user/.claude/projects/-Users-user-Documents-Dev-voynich/memory/voynich-investigation-state.md: **Contact/Hadden "rotate the substrate" move killed 2026-06-20 (K12, `contact.py`):** D2's "no word-order" reread as "records run down columns, not along lines." Conditioning the open-key core on column position looks electric in-sample (beats shuffle null z=17–40, p≈0.003, all 4 strata) but the held-out gain collapses to ~1% of the key's entropy and does NOT exceed the prefix/suffix template floor — it just re-expresses the known positional template grammar. The in-sample/held-out gap is now the project's signature: every dead "solution" reports a z=40 in-sample number; the held-out collapse is why they're dead. **Standing conclusion:** generated, language-shaped artifact with no recoverable content (Codex Seraphinianus class); the open question is *why it was made*, not *what it says*. *
+
+--- TOOL_RESULT 2026-06-21T02:06:46
+The file /Users/user/.claude/projects/-Users-user-Documents-Dev-voynich/memory/voynich-investigation-state.md has been updated successfully. (file state is current in your context — no need to Read it back)
+
+--- ASSISTANT TOOL_USE 2026-06-21T02:06:50
+[Read] {"file_path": "/Users/user/.claude/projects/-Users-user-Documents-Dev-voynich/memory/MEMORY.md"}
+
+--- TOOL_RESULT 2026-06-21T02:06:50
+1	- [Voynich investigation state](voynich-investigation-state.md) — durable findings, killed claims, and the circling meta-problem; verbose-cipher is the live lead
+2
+
+--- ASSISTANT TOOL_USE 2026-06-21T02:06:55
+[Edit] /Users/user/.claude/projects/-Users-user-Documents-Dev-voynich/memory/MEMORY.md: durable findings, killed claims, and the circling meta-problem; verbose-cipher + column-registration both killed, asemic verdict leading
+
+--- TOOL_RESULT 2026-06-21T02:06:55
+The file /Users/user/.claude/projects/-Users-user-Documents-Dev-voynich/memory/MEMORY.md has been updated successfully. (file state is current in your context — no need to Read it back)
+
+--- ASSISTANT TEXT 2026-06-21T02:07:13
+## Done
+
+The Hadden move was the right instinct and I'm glad we made it — D2 genuinely reads like a registration mark, and the only way to know was to turn it. It turned. Behind it was the template, not a message.
+
+**What happened:** `contact.py` rotated the corpus onto the column axis (word-index-within-line) and asked whether the open semantic key (D3's stubborn 6.8-bit core) closes. In-sample it *screams* yes — z = 17–40 against a shuffle null in all four strata. Out-of-sample it's ~1% of the key's entropy and doesn't beat the prefix/suffix template floor. Logged as **K12**.
+
+The lasting takeaway is sharper than the result itself: **K12 is a calibration of what a false positive looks like here.** A z=40 in-sample number — exactly what the literature's "I cracked it" papers report — survived to one decimal place and then died on the held-out split. That in-sample/electric → held-out/collapse gap is now the project's diagnostic signature, and it's written into both the ledger and memory.
+
+**Why this differs from Contact, restated:** Hadden's reveal was guaranteed to pay off because the primer was *built to be decoded*. Our every rotation just hands the content-free template another axis to reproduce. The asemic verdict isn't "we failed to find the dimension" — it's "the artifact has no dimension that closes," and K1/K10/K11/K12 are four independent rotations all returning the template.
+
+**Ledger now carries** two genuinely *unrotated* axes, both cheap, both with weak priors:
+- **L7 — quire/codicology order.** The most literal Contact analog left: every position confound (confound #2) used the *rebound* shelf order, not production order. Re-running on Fagin Davis's reconstructed gatherings could dissolve or sharpen half our nulls. Needs the quire-reconstruction mapping.
+- **L8 — row axis.** The other half of "stack the pages" — line-as-record with columns aligned across rows. Weak after K12 but untested.
+
+R1 (crib-anchored held-out decode) remains the only test that could *overturn* the verdict rather than re-confirm it. If you want to keep going, my order would be **L7 first** (it can undermine a confound we lean on everywhere, so it's high-leverage regardless of outcome), then R1 as the last genuine swing at meaning.
+
+--- USER TEXT 2026-06-21T02:11:59
+proceed
+
+--- ASSISTANT TEXT 2026-06-21T02:12:40
+Proceeding with **L7**. First, an honest scope check: Fagin Davis's full bifolio *reconstruction* isn't a file I have, but the production structure her work turns on — **quire** and **scribal hand** — is already in `body_spatial.json`. The substantive version of L7 is testable in-repo: does the confound-#2 vocabulary autocorrelation actually track *production units* (quire/scribe — written together) rather than smooth *reading-order* distance (shelf position)? If similarity is a step-function at quire/scribe boundaries, then the right thing to partial out is quire+scribe, not folio distance — which changes how much we trust every signal that "survived" a folio-distance control.
+
+Let me check the fields I need.
+
+--- ASSISTANT TOOL_USE 2026-06-21T02:12:44
+[Bash] python3 -c "
+import json,itertools
+from collections import Counter,OrderedDict
+d=json.load(open('body_spatial.json'))
+t=d['tokens']
+print('quire vals',Counter(x['quire'] for x in t))
+print('hand vals',Counter(x['hand'] for x in t))
+# folio order by first appearance
+seen=OrderedDict()
+for x in t: seen.setdefault(x['folio'],True)
+fol=list(seen.keys())
+print('n folios',len(fol),'first',fol[:6],'last',fol[-4:])
+# per-folio: quire, hand, currier, section consistency
+meta={}
+for x in t:
+    f=x['folio']; meta.setdefault(f,Counter())[ (x['quire'],x['hand'],x['currier'],x['section']) ]+=1
+# how mixed is hand within folio?
+mixed=sum(1 for f in meta if len(set(k[1] for k in meta[f]))>1)
+print('folios w/ mixed hand',mixed)
+# quire sizes (folios per quire)
+q=Counter()
+for f in fol:
+    qq=meta[f].most_common(1)[0][0][0]; q[qq]+=1
+print('folios per quire',dict(q))
+"
+
+--- TOOL_RESULT 2026-06-21T02:12:45
+quire vals Counter({'T': 10670, 'M': 6866, 'N': 1810, 'F': 1641, 'S': 1513, 'G': 1455, 'H': 1438, 'E': 1417, 'O': 1417, 'A': 1405, 'C': 1368, 'D': 1158, 'I': 1056, 'B': 950, 'K': 903, 'Q': 880, 'J': 879, 'L': 193})
+hand vals Counter({'?': 14022, '2': 9507, '1': 6836, 'X': 2740, '3': 1810, '4': 817, 'Y': 758, '5': 529})
+n folios 226 first ['f1r', 'f1v', 'f2r', 'f2v', 'f3r', 'f3v'] last ['f115r', 'f115v', 'f116r', 'f116v']
+folios w/ mixed hand 0
+folios per quire {'A': 16, 'B': 14, 'C': 16, 'D': 16, 'E': 16, 'F': 16, 'G': 16, 'H': 8, 'I': 10, 'J': 6, 'K': 8, 'L': 2, 'M': 20, 'N': 6, 'O': 12, 'Q': 10, 'S': 10, 'T': 24}
+
+--- ASSISTANT TEXT 2026-06-21T02:13:09
+Clean structure: 18 quires, scribal hands (several known), no mixed-hand folios, 226 folios in reading order. The key obstacle is that section/quire/reading-distance are mutually confounded (the book is laid out by topic in order) — so the decisive test is **within a single section that spans multiple quires, hands, and both Currier dialects**, which is exactly the herbal. Writing it.
+
+--- ASSISTANT TOOL_USE 2026-06-21T02:13:39
+[Write] /Users/user/Documents/Dev/voynich/quire_test.py: """
+L7 — CODICOLOGY RE-RUN: is confound #2's vocabulary autocorrelation a smooth
+READING-ORDER (shelf-position) decay, or a step-function at PRODUCTION units
+(quire / scribal hand — leaves written together)?
+
+Why it matters: every control for confound #2 partials out *folio distance in
+current binding order*. If the real driver is "same gathering / same scribe," then
+(a) signals that "survived" a distance control but actually track quire identity are
+weaker than credited, and (b) the correct thing to partial out is quire+hand.
+
+Design: section/quire/reading-distance are mutually confounded (book laid out by
+topic in order), so the decisive run is WITHIN ONE SECTION that spans multiple
+quires, hands, and both Currier dialects — the herbal. There, topic is held
+constant and we can ask what's
+
+--- TOOL_RESULT 2026-06-21T02:13:39
+File created successfully at: /Users/user/Documents/Dev/voynich/quire_test.py (file state is current in your context — no need to Read it back)
+
+--- ASSISTANT TOOL_USE 2026-06-21T02:13:44
+[Bash] .venv/bin/python quire_test.py 2>&1 || python3 quire_test.py 2>&1
+
+--- TOOL_RESULT 2026-06-21T02:13:44
+/Users/user/Documents/Dev/voynich/.venv/lib/python3.14/site-packages/numpy/lib/_function_base_impl.py:3023: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+/Users/user/Documents/Dev/voynich/.venv/lib/python3.14/site-packages/numpy/lib/_function_base_impl.py:3024: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+/Users/user/Documents/Dev/voynich/quire_test.py:99: RuntimeWarning: Mean of empty slice
+  f"cross-quire {sim_xq.mean():.3f} (n={len(sim_xq)})  Δ={sim_sq.mean()-sim_xq.mean():+.3f}")
+/Users/user/Documents/Dev/voynich/.venv/lib/python3.14/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+==============================================================================
+WITHIN HERBAL (topic held constant; the decisive run): 59 folios (quires=10, hands=['1', '2', '4', '5', '?'], currier=['A', 'B'])
+==============================================================================
+  raw corr(similarity, predictor):
+    reading-distance -0.099 | same-quire +0.120 | same-hand +0.453 | same-currier +0.518
+  OLS similarity ~ all (standardized dist), R2=0.277:
+    reading-dist   beta=-0.0022
+    same-quire     beta=+0.0317
+    same-hand      beta=+0.0193
+    same-currier   beta=+0.1364
+  matched short reading-distance (<=8 leaves): same-quire mean sim 0.600 (n=147) vs cross-quire 0.541 (n=66)  Δ=+0.059
+  partial corr(reading-distance | quire,hand,currier) = -0.012  (near 0 => 'smooth shelf decay' was really production-unit identity)
+
+==============================================================================
+WITHIN BIOLOGICAL: 20 folios (quires=1, hands=['2'], currier=['B'])
+==============================================================================
+  raw corr(similarity, predictor):
+    reading-distance +0.080 | same-quire +nan | same-hand +nan | same-currier +nan
+  OLS similarity ~ all (standardized dist), R2=0.006:
+    reading-dist   beta=+0.0031
+    same-quire     beta=+0.2295
+    same-hand      beta=+0.2295
+    same-currier   beta=+0.2295
+  matched short reading-distance (<=8 leaves): same-quire mean sim 0.913 (n=124) vs cross-quire nan (n=0)  Δ=+nan
+  partial corr(reading-distance | quire,hand,currier) = +0.080  (near 0 => 'smooth shelf decay' was really production-unit identity)
+
+==============================================================================
+WITHIN STARS/RECIPES: 23 folios (quires=1, han
+
+--- ASSISTANT TEXT 2026-06-21T02:14:23
+## Result: confound #2 is block-structured, not a smooth decay — a useful sharpening, not a crack
+
+The decisive run is the herbal (the only section with real variation across quire, hand, *and* both Currier dialects — topic held constant). Reading it straight:
+
+| predictor | raw corr w/ folio-similarity | net effect (OLS) |
+|---|---|---|
+| same-Currier | **+0.518** | **+0.136** (dominates) |
+| same-hand | +0.453 | +0.019 |
+| same-quire | +0.120 | +0.032 |
+| reading-distance | −0.099 | **−0.002 (~0)** |
+
+And the clincher: **partial corr(reading-distance \| quire, hand, currier) = −0.012.** The smooth "shelf-position decay" that confound #2 has us partialling out **is essentially zero once you control for production/dialect blocks.** What looked like a distance gradient was block membership all along. There's also a real, smaller quire-boundary *step*: at matched short reading distance (≤8 leaves), same-quire pairs sit at 0.600 vs 0.541 across a boundary (Δ=+0.059) — a discontinuity a distance-only control can't see.
+
+(The other sections are single-quire/single-hand/single-Currier, so they degenerate to `nan` — can't separate the predictors there. Expected; the herbal was always the test.)
+
+**What this is and isn't:**
+- It is *not* the dramatic Hadden payoff (the hoped-for "production order differs from shelf order and everything shifts"). The opposite, really: because the unit is the **quire/dialect block**, not fine reading position, Fagin Davis's bifolio *reordering* wouldn't move much.
+- It *is* a real methodological correction. Confound #2 should be modeled as **discrete block membership (Currier ≫ quire ≈ hand), not a smooth folio-distance term.** A distance-only control under-corrects within-quire pairs and over-corrects across boundaries — it was leaky. Every future test should partial out quire+hand+Currier, not distance.
+- It does *not* resurrect any killed claim (those died to stronger controls) and creates no meaning. Currier dominating just re-confirms confound #1 is the giant.
+
+Logging it as a refinement to the confound catalog rather than a kill or a meaning finding.
+
+--- ASSISTANT TOOL_USE 2026-06-21T02:14:24
+[Read] {"file_path": "/Users/user/Documents/Dev/voynich/FINDINGS.md", "offset": 52, "limit": 10}
+
+--- TOOL_RESULT 2026-06-21T02:14:24
+52	
+53	## 3. The recurring confounds (the killers — check every new claim against these)
+54	
+55	1. **Currier A/B dialect leakage** — `edy/oke/qok` (B) vs `ain/cha/hai` (A) separate groups that look like they split on something else. Always check dialect balance of any contrast.
+56	2. **Folio-position / manuscript-order autocorrelation** — pages made together share pigment *and* vocabulary; many "signals" are just position-on-shelf. Always partial out folio distance.
+57	3. **Content-free reproducibility** — a ~15% self-citation + character-template generator reproduces nearly every distributional statistic. A finding only counts if it *beats a matched content-free null*.
+58	4. **English-as-floor** — never use English alone as the "real language" baseline; it's an outlier (deep orthography). Use templatic/CV controls (Hawaiian, Māori, Latin, Turkish).
+59	5. **Local copying mimics order** — lag-decay and adjacent near-variants come free from copying; refit the copy knob to real burstiness before claiming "order information."
+60	
+61	---
+
+--- ASSISTANT TOOL_USE 2026-06-21T02:14:33
+[Edit] /Users/user/Documents/Dev/voynich/FINDINGS.md: 2. **Production-unit / dialect-block autocorrelation** (*refined 2026-06-20, `quire_test.py`, L7*) — pages made together share vocabulary, but the structure is **discrete block membership, NOT smooth shelf-distance**. Within the herbal (topic held constant): similarity is driven by **same-Currier (raw r +0.52) ≫ same-quire / same-hand**, while **smooth reading-distance is ~0 once blocks are controlled (partial r = −0.012)**; there's a real quire-boundary *step* (+0.059 at matched distance) a distance control can't see. **So partial out quire+hand+Currier block identity, not folio distance** — distance-only controls were leaky (under-correct within-quire, over-correct across boundaries). Corollary: Fagin-Davis bifolio *reordering* would change little, because the unit is the gathering/diale
+
+--- TOOL_RESULT 2026-06-21T02:14:33
+The file /Users/user/Documents/Dev/voynich/FINDINGS.md has been updated successfully. (file state is current in your context — no need to Read it back)
+
+--- ASSISTANT TOOL_USE 2026-06-21T02:14:41
+[Edit] /Users/user/Documents/Dev/voynich/FINDINGS.md: | ~~L7~~ | ~~Quire-order re-run~~ | **DONE → refined confound #2 (`quire_test.py`).** Autocorrelation is discrete block identity (Currier ≫ quire ≈ hand), not smooth shelf-distance (partial r=−0.012). No meaning; sharpened the control. Bifolio reordering would change little (unit = gathering/dialect block). | done |
+
+--- TOOL_RESULT 2026-06-21T02:14:41
+The file /Users/user/Documents/Dev/voynich/FINDINGS.md has been updated successfully. (file state is current in your context — no need to Read it back)
+
+--- ASSISTANT TEXT 2026-06-21T02:15:02
+## Where the Contact thread leaves us
+
+Both substrate rotations are now done, and they point the same way:
+
+- **Column axis (K12):** electric in-sample (z=40), collapses to template-grade out-of-sample. The open key does not close.
+- **Quire/codicology axis (L7):** the autocorrelation is real but it's discrete *block* identity (Currier ≫ quire ≈ hand), not a smooth dimension you can rotate into meaning. Net effect: it sharpened a control, created no content.
+
+So the honest verdict on the Hadden question: **we made the move, twice, and there is no hidden third dimension in the geometry of the substrate.** That's not a failure of imagination — it's the asemic hypothesis surviving two more falsification attempts. The difference from *Contact* holds: Ellie's primer was *built to reward* the rotation; this artifact rewards every rotation with the template that generated it.
+
+The ledger is updated: K12 logged, confound #2 rewritten as block-structured, L7 closed.
+
+**What's actually left**, in descending value:
+
+1. **R1 — crib-anchored held-out decode.** The one test that could *overturn* the verdict rather than re-confirm it — and crucially, **it doesn't depend on a hidden dimension at all.** It seeds glyph values from the stroke paleography (D8: figure-9 = `-us/-um`), restricts to image-constrained labels (plant/star/month), and asks whether *any* substitution yields readings that predict held-out cribs above a permutation null. Low prior (position-locking from K11 already disfavors context-free substitution), but it's the last genuine swing at meaning.
+2. **L8 — row-axis tabular coherence.** The other half of "stack the pages." After K12 the prior is weak — if the column axis is template-grade, the row axis almost certainly is too — but it's cheap and completes the geometry.
+
+My recommendation: **run R1.** It's the only remaining test whose *positive* outcome would matter, and it sidesteps the dimensional dead-end entirely. Want me to build it? It's a bigger piece than the last two — I'd wire in the stroke-seeded key, the crib set from `cribs.json`, and a held-out permutation null from the start. Or if you'd rather close the geometry first, L8 is a 10-minute add.
+

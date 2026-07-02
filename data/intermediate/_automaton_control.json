@@ -1,0 +1,52 @@
+[
+  {
+    "name": "VOYNICH",
+    "types": 4000,
+    "alpha": 22,
+    "wlen": 6.66875,
+    "params": 298,
+    "regen_tok": 0.244025,
+    "regen_typ": 0.04583727530747398,
+    "null_tok": 0.0037
+  },
+  {
+    "name": "HAWAIIAN",
+    "types": 4000,
+    "alpha": 22,
+    "wlen": 6.68825,
+    "params": 261,
+    "regen_tok": 0.3026,
+    "regen_typ": 0.029759862778730703,
+    "null_tok": 0.023
+  },
+  {
+    "name": "MAORI",
+    "types": 4000,
+    "alpha": 22,
+    "wlen": 6.991,
+    "params": 214,
+    "regen_tok": 0.3349,
+    "regen_typ": 0.03466950770186887,
+    "null_tok": 0.018675
+  },
+  {
+    "name": "LATIN",
+    "types": 4000,
+    "alpha": 24,
+    "wlen": 7.71325,
+    "params": 334,
+    "regen_tok": 0.099475,
+    "regen_typ": 0.006951228676636357,
+    "null_tok": 0.00445
+  },
+  {
+    "name": "ENGLISH",
+    "types": 4000,
+    "alpha": 26,
+    "wlen": 6.6815,
+    "params": 494,
+    "regen_tok": 0.06735,
+    "regen_typ": 0.008664315289066095,
+    "null_tok": 0.0024
+  }
+]

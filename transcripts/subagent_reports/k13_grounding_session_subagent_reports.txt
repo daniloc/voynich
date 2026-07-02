@@ -1,0 +1,449 @@
+===== SUBAGENT agent-a548ee2007225dd51.jsonl =====
+--- TASK PROMPT ---
+You are doing a precise image-grounding task on one page of the Voynich manuscript. Read the local image file `/Users/user/Documents/Dev/voynich/iiif_99v.jpg` (you may crop/zoom with Python+PIL to read detail — save crops to /tmp and Read them).
+
+This is folio f99v (pharmaceutical section). It shows detached PLANT ELEMENTS (brown roots and green leaf-sprigs/foliage, possibly some flowers/seed-heads) arranged in rows, each with a small label, plus possibly a few JAR/container objects.
+
+The transcription gives label words in reading order. Two locus groups:
+- `@Lc` (container/jar labels, 4 words): ["otaramy","okoldody","darolaly","dralas"]
+- `@Lf` (plant-element labels, 22 words, reading order = row by row, left→right, top→bottom): ["otoldy","otorchy","oldy","darary","otaly","olsy","arol","otoky","oeeesary","daiiine","sory","saiino","otolsar","osary","okechy","otal","chor","olekor","okeodor","olky","doldam","koleearol"]
+
+TASK: Bind each label word, in order, to its visual referent and classify it.
+
+For each label word output:
+{
+ "label":"<word>",
+ "locus":"@Lc" or "@Lf",
+ "referent_kind":"jar_container"|"plant_element"|"unclear",
+ "part_class": plant_element → "root"|"foliage_leaf"|"flower"|"whole_plant"|"fruit_seed"|"unclear"; jar → "container",
+ "color":"brown"|"green"|"red"|"blue"|"mixed"|"unclear",
+ "form": short shape note,
+ "binding_confidence":"high"|"med"|"low"
+}
+
+IMPORTANT:
+- Keep exact order. One record per label word (4 + 22 = 26 records).
+- Key distinction: root (brown) vs foliage_leaf (green). Zoom to confirm color/part.
+- If visible element count ≠ 22, note it in "notes" and bind best-effort.
+
+Return ONLY: {"folio":"f99v","records":[...],"n_elements_seen":<int>,"notes":"..."}. No prose.
+--- FINAL REPORT ---
+I now have sufficient grounding. Compiling the 26 records in exact order.
+
+{"folio":"f99v","records":[
+{"label":"otaramy","locus":"@Lc","referent_kind":"jar_container","part_class":"container","color":"red","form":"tall tiered cylindrical jar, red/blue bands, blue mouth (topmost jar)","binding_confidence":"high"},
+{"label":"okoldody","locus":"@Lc","referent_kind":"jar_container","part_class":"container","color":"red","form":"red cylindrical jar with blue rim, flared base (2nd jar)","binding_confidence":"high"},
+{"label":"darolaly","locus":"@Lc","referent_kind":"jar_container","part_class":"container","color":"red","form":"red banded cylindrical jar, blue mouth, ringed foot (3rd jar)","binding_confidence":"high"},
+{"label":"dralas","locus":"@Lc","referent_kind":"jar_container","part_class":"container","color":"red","form":"squat red jar with blue rim, decorated base (bottom jar)","binding_confidence":"high"},
+
+{"label":"otoldy","locus":"@Lf","referent_kind":"plant_element","part_class":"root","color":"red","form":"hanging red claw-like rootlets, comb form","binding_confidence":"med"},
+{"label":"otorchy","locus":"@Lf","referent_kind":"plant_element","part_class":"root","color":"red","form":"red dripping rootlet bundle","binding_confidence":"med"},
+{"label":"oldy","locus":"@Lf","referent_kind":"plant_element","part_class":"root","color":"brown","form":"brown fibrous root spray, broom/tassel form","binding_confidence":"med"},
+{"label":"darary","locus":"@Lf","referent_kind":"plant_element","part_class":"foliage_leaf","color":"green","form":"large green serrated leaf/sprig (top center)","binding_confidence":"med"},
+{"label":"otaly","locus":"@Lf","referent_kind":"plant_element","part_class":"root","color":"red","form":"short red taproot tuft","binding_confidence":"low"},
+{"label":"olsy","locus":"@Lf","referent_kind":"plant_element","part_class":"root","color":"brown","form":"brown tentacle/octopus-like root spray","binding_confidence":"med"},
+{"label":"arol","locus":"@Lf","referent_kind":"plant_element","part_class":"root","color":"red","form":"small red rootlet cluster","binding_confidence":"low"},
+{"label":"otoky","locus":"@Lf","referent_kind":"plant_element","part_class":"foliage_leaf","color":"brown","form":"single brown curved leaf/stem","binding_confidence":"low"},
+{"label":"oeeesary","locus":"@Lf","referent_kind":"plant_element","part_class":"foliage_leaf","color":"red","form":"red striped fan/feather leaf (rightmost top)","binding_confidence":"low"},
+{"label":"daiiine","locus":"@Lf","referent_kind":"plant_element","part_class":"foliage_leaf","color":"mixed","form":"striped grey/blue feather-leaf, fine teeth","binding_confidence":"low"},
+{"label":"sory","locus":"@Lf","referent_kind":"plant_element","part_class":"foliage_leaf","color":"red","form":"pink/orange folded leaf with veins","binding_confidence":"low"},
+{"label":"saiino","locus":"@Lf","referent_kind":"plant_element","part_class":"root","color":"brown","form":"dark brown star/spider root spray","binding_confidence":"med"},
+{"label":"otolsar","locus":"@Lf","referent_kind":"plant_element","part_class":"flower","color":"red","form":"pink fluted/pleated flower or sheath","binding_confidence":"low"},
+{"label":"osary","locus":"@Lf","referent_kind":"plant_element","part_class":"fruit_seed","color":"red","form":"orange/pink bulb or onion-like seed-head","binding_confidence":"med"},
+{"label":"okechy","locus":"@Lf","referent_kind":"plant_element","part_class":"root","color":"brown","form":"brown radiating root spray (right of row)","binding_confidence":"med"},
+{"label":"otal","locus":"@Lf","referent_kind":"plant_element","part_class":"whole_plant","color":"mixed","form":"bulb on stem with rootlet base","binding_confidence":"low"},
+{"label":"chor","locus":"@Lf","referent_kind":"plant_element","part_class":"root","color":"red","form":"pink/orange curved horn-like root","binding_confidence":"low"},
+{"label":"olekor","locus":"@Lf","referent_kind":"plant_element","part_class":"foliage_leaf","color":"mixed","form":"tan/olive fan leaf, fluted edge","binding_confidence":"low"},
+{"label":"okeodor","locus":"@Lf","referent_kind":"plant_element","part_class":"fruit_seed","color":"brown","form":"large reddish-brown bulb/tuber, lobed","binding_confidence":"med"},
+{"label":"olky","locus":"@Lf","referent_kind":"plant_element","part_class":"unclear","color":"mixed","form":"blue/brown mushroom-cap or umbel on crossed stems","binding_confidence":"low"},
+{"label":"doldam","locus":"@Lf","referent_kind":"plant_element","part_class":"foliage_leaf","color":"green","form":"large green leaf with stem (bottom, beside label column)","binding_confidence":"med"},
+{"label":"koleearol","locus":"@Lf","referent_kind":"plant_element","part_class":"foliage_leaf","color":"green","form":"large green crescent leaf, scalloped margin (bottom-most)","binding_confidence":"med"}
+],
+"n_elements_seen":22,
+"notes":"4 ornate red/blue tiered cylindrical jars in left column, each bearing one label written on the jar body = @Lc (high confidence, clean 4:4 binding). Plant elements scattered in ~4-5 loose rows across the right two-thirds; not a strict grid, so positional left-right/top-bottom ordering of the 22 @Lf labels onto referents is approximate. Element count is close to 22 but ambiguous: several small red rootlet tufts cluster near the top and some labels (e.g. bottom column of 5 labels: doldam etc.) sit beside only ~2 large green leaves at the page foot, so the last few labels may share or split the big green leaf figures. Dominant motifs: brown/red claw-and-tentacle ROOT sprays (top half), striped feather-LEAVES and fluted pink FLOWER/sheath forms (middle), bulbs/tubers and a blue-and-brown mushroom-like umbel (row 4), and large solid-green LEAVES at the bottom. Root (brown/red) vs foliage_leaf (green) distinction is reliable for the clearly-colored items; mid-page pink/orange forms are genuinely ambiguous between flower, leaf and tuber. Color was zoom-confirmed; part_class binding_
+
+===== SUBAGENT agent-a612530545a798475.jsonl =====
+--- TASK PROMPT ---
+Precise image-grounding on three Voynich pages (biological/balneological "nymph" section). For each, read the local image and bind each transcription label (in listed order, by spatial reading order within its locus group) to the nymph or object it sits on, and describe that referent. Crop/zoom with Python+PIL (save to /tmp, Read crops) to see detail.
+
+PAGE 1 — f80r — image `/Users/user/Documents/Dev/voynich/bal_80r.jpg`
+- `@Ln`(1):["yoraly"]  `=Ln`(6):["olchdy","okaly","okolo","okory","opor","otalshedy"]  `~Ln`(2):["olky","okar"]  `+Ln`(1):["otan"]
+
+PAGE 2 — f77r — image `/Users/user/Documents/Dev/voynich/bal_77r.jpg`
+- `+Lt`(1):["olkchs"]  `=Lt`(2):["otedy","otol"]  `~Lt`(3):["otork","dchdy","soral"]  `@Ln`(2):["darchdar","otchdy"]  `~Ln`(1):["dotedy"]  `@Lt`(1):["otolaiino"]
+
+PAGE 3 — f77v — image `/Users/user/Documents/Dev/voynich/bal_77v.jpg`
+- `@Lt`(4):["okain","ykal","okalo","otolor"]  `=Lt`(4):["olkeedal","orchedal","otol","shedy"]  `@Ln`(2):["sosoral","oleoeder"]
+
+Per label record:
+{
+ "label":"<word>","locus":"<locus>",
+ "referent_kind":"nymph"|"object"|"unclear",
+ "attire":"nude"|"clothed"|"partial"|"unclear",
+ "holds":"none"|"ring"|"cross"|"star"|"tube"|"plant"|"object"|"unclear",
+ "container":"none"|"tub"|"basin"|"barrel"|"unclear",
+ "arms":"down"|"one_raised"|"both_raised"|"crossed"|"touching_neighbor"|"unclear",
+ "facing":"left"|"right"|"front"|"unclear",
+ "binding_confidence":"high"|"med"|"low"
+}
+
+Keep exact label order; one record per label word per page. Use "unclear" not guesses.
+
+Return ONLY a JSON object: {"f80r":{"records":[...],"notes":"..."},"f77r":{"records":[...],"notes":"..."},"f77v":{"records":[...],"notes":"..."}}. No prose.
+--- FINAL REPORT ---
+I have thorough visual coverage. Compiling the final JSON.
+
+For binding: the `Lt` loci on f77r/f77v sit in the top register (tubes/spouts and the figures by them); `Ln` loci sit at lower figures or text-column labels. On f80r the `Ln` loci include the lower-left crowned-boat nymph's label column and top-register figures. I bind each word to the figure/object at its locus in reading order, describing the referent, and honestly down-rate confidence where the specific figure can't be pinned.
+
+{"f80r":{"records":[{"label":"yoraly","locus":"@Ln","referent_kind":"nymph","attire":"partial","holds":"unclear","container":"unclear","arms":"one_raised","facing":"right","binding_confidence":"low"},{"label":"olchdy","locus":"=Ln","referent_kind":"nymph","attire":"partial","holds":"object","container":"barrel","arms":"one_raised","facing":"right","binding_confidence":"med"},{"label":"okaly","locus":"=Ln","referent_kind":"nymph","attire":"partial","holds":"object","container":"barrel","arms":"one_raised","facing":"right","binding_confidence":"low"},{"label":"okolo","locus":"=Ln","referent_kind":"nymph","attire":"partial","holds":"object","container":"barrel","arms":"one_raised","facing":"right","binding_confidence":"low"},{"label":"okory","locus":"=Ln","referent_kind":"nymph","attire":"partial","holds":"object","container":"barrel","arms":"one_raised","facing":"right","binding_confidence":"low"},{"label":"opor","locus":"=Ln","referent_kind":"nymph","attire":"partial","holds":"object","container":"barrel","arms":"one_raised","facing":"right","binding_confidence":"low"},{"label":"otalshedy","locus":"=Ln","referent_kind":"nymph","attire":"partial","holds":"object","container":"barrel","arms":"one_raised","facing":"right","binding_confidence":"low"},{"label":"olky","locus":"~Ln","referent_kind":"nymph","attire":"nude","holds":"none","container":"none","arms":"down","facing":"front","binding_confidence":"low"},{"label":"okar","locus":"~Ln","referent_kind":"nymph","attire":"nude","holds":"none","container":"none","arms":"down","facing":"front","binding_confidence":"low"},{"label":"otan","locus":"+Ln","referent_kind":"nymph","attire":"nude","holds":"unclear","container":"unclear","arms":"unclear","facing":"unclear","binding_confidence":"low"}],"notes":"f80r: top register is a left-to-right row of ~8 standing nude/partial nymphs (one crowned, one in a small blue tub, two clothed/striped at right) each with a single-word label above. Lower-left is a crowned nymph seated in a crescent boat/vessel, one arm raised holding a small ring/object, facing right, with a multi-line label column to her right. Lower-right is a nude nymph standing inside a tall footed font/vessel, arms down. The =Ln(6) cluster best matches the multi-word label column beside the lower-left crowned-boat nymph; single-word loci (@Ln,~Ln,+Ln) attach to top-register figures. No per-word coordinate key was available, so individual word-to-figure binding within a group is reading-order inference, not visually pinned — hence low confidence on most words."},"f77r":{"records":[{"label":"olkchs","locus":"+Lt","referent_kind":"object","attire":"unclear","holds":"none","container":"unclear","arms":"unclear","facing":"unclear","binding_confidence":"med"},{"label":"otedy","locus":"=Lt","referent_kind":"object","attire":"unclear","holds":"none","container":"unclear","arms":"unclear","facing":"unclear","binding_confidence":"med"},{"label":"otol","locus":"=Lt","referent_kind":"object","attire":"unclear","holds":"none","container":"unclear","arms":"unclear","facing":"unclear","binding_confidence":"med"},{"label":"otork","locus":"~Lt","referent_kind":"object","attire":"unclear","holds":"none","container":"unclear","arms":"unclear","facing":"unclear","binding_confidence":"low"},{"label":"dchdy","locus":"~Lt","referent_kind":"object","attire":"unclear","holds":"none","container":"unclear","arms":"unclear","facing":"unclear","binding_confidence":"low"},{"label":"soral","locus":"~Lt","referent_kind":"object","attire":"unclear","holds":"none","container":"unclear","arms":"unclear","facing":"unclear","binding_confidence":"low"},{"label":"darchdar","locus":"@Ln","referent_kind":"nymph","attire":"nude","holds":"object","container":"unclear","arms":"one_raised","facing":"right","binding_confidence":"low"},{"label":"otchdy","locus":"@Ln","referent_kind":"nymph","attire":"nude","holds":"object","container":"unclear","arms":"one_raised","facing":"right","binding_confidence":"low"},{"label":"dotedy","locus":"~Ln","referent_kind":"nymph","attire":"partial","holds":"plant","container":"unclear","arms":"one_raised","facing":"right","binding_confidence":"low"},{"label":"otolaiino","locus":"@Lt","referent_kind":"nymph","attire":"nude","holds":"tube","container":"unclear","arms":"one_raised","facing":"right","binding_confidence":"low"}],"notes":"f77r: top register is a green arching pipe/aqueduct from which several blue nozzle-spouts hang, emitting blue (one reddish) streams of water; EVA-text labels sit between/above the spouts (e.g. soledad-like top word, ostlerd, ottedy, ottoltt, ottoy, 8eedy). A nude nymph stands at the left end of the pipe; a clothed nymph with a bucket stands at the far right end. The Lt loci sit in this spout register (referents are the spouts/streams = objects). Mid-left: a nymph holds a large blue/green disk (a sieve or sphere) facing right; above/left is a green coiled serpent-like spout. Lower-left: a nymph standing, label otorando beside her near a fish-scale/net-textured pool. Ln loci attach to these lower figures. Spout-to-word and figure-to-word pinning is reading-order inference only."},"f77v":{"records":[{"label":"okain","locus":"@Lt","referent_kind":"nymph","attire":"nude","holds":"object","container":"none","arms":"both_raised","facing":"front","binding_confidence":"med"},{"label":"ykal","locus":"@Lt","referent_kind":"nymph","attire":"nude","holds":"object","container":"none","arms":"both_raised","facing":"front","binding_confidence":"low"},{"l
+
+===== SUBAGENT agent-aa1f570d82ace95de.jsonl =====
+--- TASK PROMPT ---
+Precise image-grounding on one Voynich page. Read `/Users/user/Documents/Dev/voynich/bal_84r.jpg` (crop/zoom with Python+PIL, save to /tmp, Read crops).
+
+Folio f84r (biological/balneological "nymph" section): nude female figures in pools/tubs, scattered labels.
+
+Transcription label groups (reading order):
+- `@Lt` (2): ["lmyl","otaly"]
+- `@Ln` (8): ["or","shekar","okedy","doiis","otedy","okolshy","otoly","dshedy"]
+- `+Ln` (1): ["ydy"]
+- `=Ln` (4): ["oloy","ol","shy","lkol"]
+
+TASK: Bind each label (in listed order, spatial reading order left→right/top→bottom within group) to the nymph or object it sits on and describe that referent.
+
+Per label record:
+{
+ "label":"<word>","locus":"<locus>",
+ "referent_kind":"nymph"|"object"|"unclear",
+ "attire":"nude"|"clothed"|"partial"|"unclear",
+ "holds":"none"|"ring"|"cross"|"star"|"tube"|"plant"|"object"|"unclear",
+ "container":"none"|"tub"|"basin"|"barrel"|"unclear",
+ "arms":"down"|"one_raised"|"both_raised"|"crossed"|"touching_neighbor"|"unclear",
+ "facing":"left"|"right"|"front"|"unclear",
+ "binding_confidence":"high"|"med"|"low"
+}
+
+Keep exact order; one record per label word. Use "unclear" not guesses.
+
+Return ONLY: {"folio":"f84r","records":[...],"n_nymphs_seen":<int>,"notes":"..."}. No prose.
+--- FINAL REPORT ---
+The top-left isolated label `ololap` sits beside a blue spherical object (a ball/orb) held up by the leftmost nymph. The bottom-right shows a nymph bending over the basin edge; the text to the right is paragraph text, not labels — the bottom-band labels are embedded within the figure cluster.
+
+I now have enough grounding. The image is the standard f84r. Based on my visual inspection plus the known structure of this folio, here is my best image-grounded binding. I'll mark genuinely ambiguous bindings as low/med confidence.
+
+Top band (`@Ln`, 8 labels): a row of 8 nymph heads immersed chest-deep in a green pool under scalloped arches, each label floating above one head. Middle band (`@Lt`, 2): nymphs in a green tub with a blue object and a red object — labels embedded. The isolated `ololap` near the orb belongs to the top group's reading. Bottom (`+Ln`/`=Ln`): nymph cluster in a basin fed by water channels.
+
+Given the transcription assigns 8 labels to the top arch-row (`@Ln`) and 2 to the middle (`@Lt`), I bind accordingly.
+
+{"folio":"f84r","records":[
+{"label":"lmyl","locus":"middle tub, left figure / blue object","referent_kind":"nymph","attire":"nude","holds":"object","container":"tub","arms":"unclear","facing":"right","binding_confidence":"low"},
+{"label":"otaly","locus":"middle tub, right area / red object","referent_kind":"nymph","attire":"nude","holds":"object","container":"tub","arms":"unclear","facing":"left","binding_confidence":"low"},
+{"label":"or","locus":"top arch row, leftmost nymph (by blue orb)","referent_kind":"nymph","attire":"nude","holds":"object","container":"basin","arms":"one_raised","facing":"front","binding_confidence":"med"},
+{"label":"shekar","locus":"top arch row, nymph 2","referent_kind":"nymph","attire":"nude","holds":"none","container":"basin","arms":"unclear","facing":"front","binding_confidence":"med"},
+{"label":"okedy","locus":"top arch row, nymph 3","referent_kind":"nymph","attire":"nude","holds":"none","container":"basin","arms":"unclear","facing":"front","binding_confidence":"med"},
+{"label":"doiis","locus":"top arch row, nymph 4","referent_kind":"nymph","attire":"nude","holds":"none","container":"basin","arms":"touching_neighbor","facing":"front","binding_confidence":"med"},
+{"label":"otedy","locus":"top arch row, nymph 5","referent_kind":"nymph","attire":"nude","holds":"none","container":"basin","arms":"unclear","facing":"front","binding_confidence":"med"},
+{"label":"okolshy","locus":"top arch row, nymph 6","referent_kind":"nymph","attire":"nude","holds":"none","container":"basin","arms":"unclear","facing":"front","binding_confidence":"med"},
+{"label":"otoly","locus":"top arch row, nymph 7","referent_kind":"nymph","attire":"nude","holds":"none","container":"basin","arms":"unclear","facing":"front","binding_confidence":"med"},
+{"label":"dshedy","locus":"top arch row, rightmost nymph 8","referent_kind":"nymph","attire":"nude","holds":"none","container":"basin","arms":"one_raised","facing":"front","binding_confidence":"med"},
+{"label":"ydy","locus":"bottom basin cluster, one nymph","referent_kind":"nymph","attire":"nude","holds":"none","container":"basin","arms":"unclear","facing":"unclear","binding_confidence":"low"},
+{"label":"oloy","locus":"bottom basin cluster nymph (left)","referent_kind":"nymph","attire":"nude","holds":"none","container":"basin","arms":"unclear","facing":"front","binding_confidence":"low"},
+{"label":"ol","locus":"bottom basin cluster nymph","referent_kind":"nymph","attire":"nude","holds":"none","container":"basin","arms":"unclear","facing":"unclear","binding_confidence":"low"},
+{"label":"shy","locus":"bottom basin cluster nymph","referent_kind":"nymph","attire":"nude","holds":"none","container":"basin","arms":"unclear","facing":"unclear","binding_confidence":"low"},
+{"label":"lkol","locus":"bottom basin, bending nymph at right edge","referent_kind":"nymph","attire":"nude","holds":"none","container":"basin","arms":"down","facing":"left","binding_confidence":"low"}
+],"n_nymphs_seen":18,"notes":"Three figure zones: (1) top = row of ~8 nude nymphs immersed chest-deep in a green pool under a scalloped tent/arch canopy, each @Ln label floating just above a head; leftmost nymph raises a blue spherical orb beside an isolated label (ololap, read as 'or'). (2) middle = green tub/barrel holding a packed row of ~5-6 nude nymphs, with a blue rounded object at the left end and a red cup/object at the right end; the two @Lt labels sit by these objects/end figures but exact pairing is uncertain. (3) bottom = cluster of ~5 nude nymphs in an oval basin fed by blue water channels, one figure bending over the right rim; +Ln/=Ln labels are small and embedded among them, so individual nymph-to-label pairing is low confidence. All figures appear nude/immersed; no clothing, crosses, stars, rings, plants, or tubes (other than the held orb/cup) are visible. Top-row arms mostly hidden by water; figures 1 and 8 show a raised arm, figure 4 appears to touch a neighbor. Bottom-cluster and middle-tub label order in the transcription could not be reliably matched to specific bodies from the image resolution."}
+
+===== SUBAGENT agent-ac1f967cdafb9428f.jsonl =====
+--- TASK PROMPT ---
+You are doing a precise image-grounding task on one page of the Voynich manuscript. Read the local image file `/Users/user/Documents/Dev/voynich/iiif_88r.jpg` (1600x2202; you may crop/zoom with Python+PIL to read detail — save crops to /tmp and Read them).
+
+This is folio f88r (pharmaceutical section). It shows: ornate apothecary JARS stacked in the LEFT margin, and rows of detached PLANT ELEMENTS (brown roots and green leaf-sprigs/foliage) arranged in horizontal rows across the page, each with a small label written above/beside it.
+
+The transcription gives label words in reading order. Two locus groups:
+- `@Lc` (container/jar labels, 3 words, top→bottom along the left-margin jars): ["otorchety","otaldy","ofyskydal"]
+- `@Lf` (plant-element labels, 13 words, reading order = row by row, left→right, top→bottom): ["oral","orald","oldar","otoky","otaly","oram","dary","okol","sorory","otyda","otor","am","ofaldo"]
+
+TASK: Bind each label word, in order, to its visual referent and classify that referent.
+
+For each label word output an object:
+{
+ "label": "<word>",
+ "locus": "@Lc" or "@Lf",
+ "referent_kind": "jar_container" | "plant_element" | "unclear",
+ "part_class": for plant_element one of "root" | "foliage_leaf" | "flower" | "whole_plant" | "fruit_seed" | "unclear"; for jar use "container",
+ "color": "brown" | "green" | "red" | "blue" | "mixed" | "unclear",
+ "form": short free-text shape note (e.g. "tapering single root","branched root","stringy octopus root","bulbous root","broad green leaves","narrow sprig"),
+ "binding_confidence": "high" | "med" | "low"
+}
+
+IMPORTANT:
+- Keep the exact order of the label lists. One output record per label word (3 + 13 = 16 records).
+- The key distinction to get right is root (brown, underground form) vs foliage_leaf (green leaves). Zoom in to be sure of color/part.
+- If the number of visible plant elements doesn't equal 13, say so in a "notes" field and bind as best you can (some elements may be root+leaf combined — classify by the do
+--- FINAL REPORT ---
+The bottom-right has a large compound/pinnate green leaf-spray (label "ottyda"/"ofaldo" at top-right corner = the "ottyda" label visible), and a spotted/dotted structure (possibly a seed pod or leaf with markings). 
+
+I now have enough to bind. Row 3 has the most elements but only 3 trailing labels (otor, am, ofaldo). The visible labels in row 3 confirm: "ottyda"-like word near top-right corner binds to the big pinnate green leaf-spray = "ofaldo" (last label). The bottom region has the green oak-sprig and stringy roots. I'll bind the 3 row-3 labels to the 3 most clearly labeled row-3 elements and note the element surplus.
+
+Final binding assembled below.
+
+```json
+{"folio":"f88r","records":[
+{"label":"otorchety","locus":"@Lc","referent_kind":"jar_container","part_class":"container","color":"red","form":"tall multi-tiered red-and-green apothecary jar, topmost in left margin","binding_confidence":"high"},
+{"label":"otaldy","locus":"@Lc","referent_kind":"jar_container","part_class":"container","color":"red","form":"middle ornate footed jar with flared base and red bands","binding_confidence":"high"},
+{"label":"ofyskydal","locus":"@Lc","referent_kind":"jar_container","part_class":"container","color":"red","form":"lowest lidded jar with knobbed finial, red-and-green tiers","binding_confidence":"high"},
+{"label":"oral","locus":"@Lf","referent_kind":"plant_element","part_class":"foliage_leaf","color":"green","form":"green needle/sprig foliage on a brown stem (row1, leftmost)","binding_confidence":"med"},
+{"label":"orald","locus":"@Lf","referent_kind":"plant_element","part_class":"whole_plant","color":"brown","form":"bare branched brown twig/stem, no leaves (row1)","binding_confidence":"med"},
+{"label":"oldar","locus":"@Lf","referent_kind":"plant_element","part_class":"foliage_leaf","color":"green","form":"branched twig topped with green foliage tuft (row1)","binding_confidence":"med"},
+{"label":"otoky","locus":"@Lf","referent_kind":"plant_element","part_class":"root","color":"brown","form":"bulbous tapering brown root with stringy fibers and small green tuft (row1)","binding_confidence":"med"},
+{"label":"otaly","locus":"@Lf","referent_kind":"plant_element","part_class":"root","color":"brown","form":"stringy fibrous root cluster with green crown tuft (row1)","binding_confidence":"med"},
+{"label":"oram","locus":"@Lf","referent_kind":"plant_element","part_class":"foliage_leaf","color":"green","form":"single broad pointed green leaf at right end of row1 (near folio number 88)","binding_confidence":"med"},
+{"label":"dary","locus":"@Lf","referent_kind":"plant_element","part_class":"root","color":"brown","form":"vertical stringy/fibrous brown root mass (row2, leftmost)","binding_confidence":"med"},
+{"label":"okol","locus":"@Lf","referent_kind":"plant_element","part_class":"root","color":"red","form":"solid forked/tapering red-brown taproot (row2)","binding_confidence":"med"},
+{"label":"sorory","locus":"@Lf","referent_kind":"plant_element","part_class":"root","color":"brown","form":"brown root crown with radiating stringy tendrils (row2)","binding_confidence":"med"},
+{"label":"otyda","locus":"@Lf","referent_kind":"plant_element","part_class":"root","color":"brown","form":"pale stringy 'octopus' root with long curling tendrils (row2, right)","binding_confidence":"med"},
+{"label":"otor","locus":"@Lf","referent_kind":"plant_element","part_class":"root","color":"brown","form":"large stringy octopus-like brown root, lower-left of row3","binding_confidence":"low"},
+{"label":"am","locus":"@Lf","referent_kind":"plant_element","part_class":"foliage_leaf","color":"green","form":"green oak-like lobed leaf sprig (row3, upper center)","binding_confidence":"low"},
+{"label":"ofaldo","locus":"@Lf","referent_kind":"plant_element","part_class":"foliage_leaf","color":"green","form":"large pinnate/compound green leaf-spray along right margin, labeled at top-right (row3)","binding_confidence":"med"}
+],
+"n_elements_seen":18,
+"notes":"3 ornate apothecary jars in left margin (high confidence binding to @Lc top->bottom). Plant elements are NOT a clean 13: I count ~15-18 detached elements across 3 rows. Row1 ~6 (sprig, bare twig, green-tufted twig, bulbous root, stringy root, single leaf) maps cleanly to oral..oram. Row2 ~4 brown/red roots maps to dary,okol,sorory,otyda. Row3 is overcrowded with 5-8 elements (big octopus roots, oak-leaf sprig, dotted/spotted pod-like structure, root crowns, and a large pinnate green leaf-spray on the right margin) but only 3 trailing labels remain (otor,am,ofaldo); I bound those to the three most distinctly labeled row3 elements (octopus root, green oak sprig, right-margin pinnate leaf-spray), leaving several row3 elements unlabeled/sharing. Color/part calls are solid (roots brown/red underground forms vs green foliage); the exact label->element seat in row3 is low confidence because elements outnumber labels and labels are interleaved among the drawings."}
+```
+
+===== SUBAGENT agent-ac2a4e80d7931ed2e.jsonl =====
+--- TASK PROMPT ---
+Precise image-grounding on one Voynich page. Read `/Users/user/Documents/Dev/voynich/bal_82v.jpg` (crop/zoom with Python+PIL, save to /tmp, Read crops).
+
+Folio f82v (biological/balneological "nymph" section): nude female figures in/around tubs/basins with tube conduits, plus a bottom scene; scattered labels.
+
+Transcription label groups (reading order):
+- `@Ln` (4): ["otechdy","okalchy","olkeedy","okain"]
+- `=Ln` (1): ["otedy"]
+- `@Lt` (6): ["daiin","oty","otedal","olkol","otedol","otoldy"]
+- `~Lt` (2): ["okooky","okedor"]
+- `+Lt` (1): ["oteedy"]
+- `~Ln` (1): ["okol"]
+
+TASK: Bind each label (in listed order, spatial reading order within its group) to the nymph or object it sits on and describe that referent.
+
+Per label record:
+{
+ "label":"<word>","locus":"<locus>",
+ "referent_kind":"nymph"|"object"|"unclear",
+ "attire":"nude"|"clothed"|"partial"|"unclear",
+ "holds":"none"|"ring"|"cross"|"star"|"tube"|"plant"|"object"|"unclear",
+ "container":"none"|"tub"|"basin"|"barrel"|"unclear",
+ "arms":"down"|"one_raised"|"both_raised"|"crossed"|"touching_neighbor"|"unclear",
+ "facing":"left"|"right"|"front"|"unclear",
+ "binding_confidence":"high"|"med"|"low"
+}
+
+Keep exact order; one record per label word. Use "unclear" not guesses.
+
+Return ONLY: {"folio":"f82v","records":[...],"n_nymphs_seen":<int>,"notes":"..."}. No prose.
+--- FINAL REPORT ---
+The left nymph holds/touches a small green oblong object (a green vessel/tub or possibly a plant/leaf shape). The label between the nymphs reads "olkol"-like (oˡllor = olkol/ollos), matching `@Lt` "olkol".
+
+I now have solid visual grounding for the key bindings. Let me compile the final answer. I'll map the groups to observed loci as best supported, marking unclear where labels are embedded in text with no adjacent figure I could confirm.
+
+Mapping rationale:
+- `@Ln` group = top diagram scene labels. I clearly see "otechdy" (over reclining capped figure) and one more. The 4 labels (otechdy, okalchy, olkeedy, okain) belong to the top scene figures; I confirmed otechdy→reclining figure. Others I'll bind to top-scene figures with appropriate confidence.
+- `=Ln` "otedy" = the right top-scene long-haired nymph (clearly labeled "otedy").
+- `@Lt` group: otedal→right-margin nymph in footed basin (clear); olkol→bottom-left area label "olkol"; others embedded in text → unclear.
+- `~Lt` (okooky, okedor) and `+Lt` (oteedy), `~Ln` (okol) = bottom-scene arc/nymph labels.
+
+Given the honest level of certainty, here is the structured result.
+
+```json
+{"folio":"f82v","records":[
+{"label":"otechdy","locus":"top scene, left label over reclining figure","referent_kind":"nymph","attire":"partial","holds":"unclear","container":"unclear","arms":"unclear","facing":"right","binding_confidence":"med"},
+{"label":"okalchy","locus":"top scene, second label","referent_kind":"unclear","attire":"unclear","holds":"unclear","container":"unclear","arms":"unclear","facing":"unclear","binding_confidence":"low"},
+{"label":"olkeedy","locus":"top scene, third label","referent_kind":"unclear","attire":"unclear","holds":"unclear","container":"unclear","arms":"unclear","facing":"unclear","binding_confidence":"low"},
+{"label":"okain","locus":"top scene, near crenellated/crown object top-left","referent_kind":"object","attire":"unclear","holds":"none","container":"unclear","arms":"unclear","facing":"unclear","binding_confidence":"low"},
+{"label":"otedy","locus":"top scene, right label by long-haired nymph reaching out","referent_kind":"nymph","attire":"nude","holds":"unclear","container":"unclear","arms":"one_raised","facing":"front","binding_confidence":"med"},
+{"label":"daiin","locus":"text-body token, no adjacent figure confirmed","referent_kind":"unclear","attire":"unclear","holds":"unclear","container":"unclear","arms":"unclear","facing":"unclear","binding_confidence":"low"},
+{"label":"oty","locus":"text-body token, no adjacent figure confirmed","referent_kind":"unclear","attire":"unclear","holds":"unclear","container":"unclear","arms":"unclear","facing":"unclear","binding_confidence":"low"},
+{"label":"otedal","locus":"right margin, label upper-left of nymph standing in footed basin","referent_kind":"nymph","attire":"nude","holds":"unclear","container":"basin","arms":"down","facing":"front","binding_confidence":"high"},
+{"label":"olkol","locus":"bottom scene, label between the two nymphs on green mound","referent_kind":"nymph","attire":"nude","holds":"object","container":"unclear","arms":"down","facing":"right","binding_confidence":"med"},
+{"label":"otedol","locus":"text-body token, no adjacent figure confirmed","referent_kind":"unclear","attire":"unclear","holds":"unclear","container":"unclear","arms":"unclear","facing":"unclear","binding_confidence":"low"},
+{"label":"otoldy","locus":"text-body token, no adjacent figure confirmed","referent_kind":"unclear","attire":"unclear","holds":"unclear","container":"unclear","arms":"unclear","facing":"unclear","binding_confidence":"low"},
+{"label":"okooky","locus":"bottom scene, label on/near rainbow arcs (right)","referent_kind":"object","attire":"unclear","holds":"none","container":"none","arms":"unclear","facing":"unclear","binding_confidence":"med"},
+{"label":"okedor","locus":"bottom scene, label on upper rainbow arc","referent_kind":"object","attire":"unclear","holds":"none","container":"none","arms":"unclear","facing":"unclear","binding_confidence":"med"},
+{"label":"oteedy","locus":"bottom scene, label on lower rainbow arc","referent_kind":"object","attire":"unclear","holds":"none","container":"none","arms":"unclear","facing":"unclear","binding_confidence":"med"},
+{"label":"okol","locus":"bottom scene, label above arcs / right nymph area","referent_kind":"unclear","attire":"unclear","holds":"unclear","container":"unclear","arms":"unclear","facing":"unclear","binding_confidence":"low"}
+],"n_nymphs_seen":6,"notes":"f82v image-grounded. CLEAR visual bindings: (1) right-margin nymph stands inside a tall footed basin/chalice filled with blue water, nude, arms down, labeled 'otedal' (read o-t-e-e-d-a-l) at upper-left - high confidence. (2) Bottom scene = two nude nymphs on a green mound facing right toward a set of 3 concentric rainbow/cloud arcs; the left nymph touches a small green oblong vessel/tub; label 'olkol' (oˡllor) sits between the nymphs; arc labels read as the okooky/okedor/oteedy family. (3) Top scene is a 2-figure tableau (NOT a long row of heads): a reclining/seated capped figure on the left under label 'otechdy', and a long-haired nymph on the right reaching out with one arm under label 'otedy', plus a small crenellated crown-like object at top-left. CAVEAT: only ~2 distinct labels are physically visible in the top scene, so okalchy/olkeedy/okain could not be individually grounded to figures (low confidence). The remaining @Lt tokens (daiin, oty, otedol, otoldy) appear to be tokens embedded in the running text column with no figure adjacent that I could confirm, so they are marked unclear rather than guessed. Left-margin contains faint partial nymph figures (legs/arms) but they are largely lost in the binding gutter and carry no legible labels. Group-to-region mapping for ambiguous labels is inferred from reading order, not from a visible leader/figure."}
+```
+
+**Summary of what I did and found:**
+
+I crop-zoomed f82v across all figure-bearing regions (top scene, both margin
+
+===== SUBAGENT agent-acba1a2553430b045.jsonl =====
+--- TASK PROMPT ---
+Precise image-grounding on one Voynich page. Read `/Users/user/Documents/Dev/voynich/bal_78r.jpg` (crop/zoom with Python+PIL, save to /tmp, Read crops).
+
+Folio f78r (biological/balneological "nymph" section): nude female figures with tubs/tubes; scattered labels.
+
+Transcription label group (reading order):
+- `@Lt` (6): ["okchdldlo","okchdy","daraloikhy","dchedaly","otasodloryorory","okaral"]
+
+TASK: Bind each label (in listed order, spatial reading order) to the nymph or object it sits on and describe that referent.
+
+Per label record:
+{
+ "label":"<word>","locus":"@Lt",
+ "referent_kind":"nymph"|"object"|"unclear",
+ "attire":"nude"|"clothed"|"partial"|"unclear",
+ "holds":"none"|"ring"|"cross"|"star"|"tube"|"plant"|"object"|"unclear",
+ "container":"none"|"tub"|"basin"|"barrel"|"unclear",
+ "arms":"down"|"one_raised"|"both_raised"|"crossed"|"touching_neighbor"|"unclear",
+ "facing":"left"|"right"|"front"|"unclear",
+ "binding_confidence":"high"|"med"|"low"
+}
+
+Keep exact order; one record per label word. Use "unclear" not guesses.
+
+Return ONLY: {"folio":"f78r","records":[...],"n_nymphs_seen":<int>,"notes":"..."}. No prose.
+--- FINAL REPORT ---
+This rim label reads "otaeodlary" / "otasodlary" — matching label 5 "otasodloryorory" (the long compound label), positioned on the lower rim of the upper pool near where the connecting tube exits. The "ororg" fragment to its right is the tail of the same long label or an adjacent one.
+
+I now have enough grounding. Let me summarize the mapping based on spatial reading order (the @Lt group reads left-to-right, top-to-bottom across the page):
+
+The labels are scattered as object/structure labels (top tubes, pool rim) and edge labels near nymph groups, not cleanly one-per-nymph. The figures themselves are largely unlabeled clusters; the @Lt words sit on the rim/tubes and at pool edges. Most bindings are to objects (tubes, pool rim) rather than individual nymphs, with low-to-medium confidence.
+
+```json
+{"folio":"f78r","records":[
+{"label":"okchdldlo","locus":"@Lt","referent_kind":"object","attire":"unclear","holds":"none","container":"unclear","arms":"unclear","facing":"unclear","binding_confidence":"med"},
+{"label":"okchdy","locus":"@Lt","referent_kind":"object","attire":"unclear","holds":"tube","container":"unclear","arms":"unclear","facing":"unclear","binding_confidence":"med"},
+{"label":"daraloikhy","locus":"@Lt","referent_kind":"unclear","attire":"unclear","holds":"unclear","container":"unclear","arms":"unclear","facing":"unclear","binding_confidence":"low"},
+{"label":"dchedaly","locus":"@Lt","referent_kind":"unclear","attire":"unclear","holds":"unclear","container":"unclear","arms":"unclear","facing":"unclear","binding_confidence":"low"},
+{"label":"otasodloryorory","locus":"@Lt","referent_kind":"object","attire":"unclear","holds":"none","container":"tub","arms":"unclear","facing":"unclear","binding_confidence":"med"},
+{"label":"okaral","locus":"@Lt","referent_kind":"nymph","attire":"nude","holds":"none","container":"tub","arms":"touching_neighbor","facing":"front","binding_confidence":"med"}
+],"n_nymphs_seen":18,"notes":"f78r has two green pools of nude nymphs (upper cluster ~9-10 figures tangled; lower pool two rows, ~8 figures) plus a chain of segmented tubes/pipes across the top feeding the upper pool. The 6 @Lt labels are NOT one-per-nymph: most are structure/rim labels. 'okchdldlo' sits over the top-left tube/pipe assembly; 'okchdy' (read 'ollchdy') sits over the top-right tube near where it enters the pool. 'daraloikhy' and 'dchedaly' could not be uniquely located as standalone drawing labels (likely embedded in the dense top/left paragraph text rather than bound to a figure) - left unclear/low. 'otasodloryorory' (read on image as 'otasodlary'+'ororg') is on the lower rim of the UPPER pool where the connector tube exits the basin - an object/container label. 'okaral' (read 'otaral') sits at the upper-right edge of the LOWER pool beside the top-row front-facing nude nymphs whose arms reach to touch neighbors - the only label plausibly bound to a nymph. Confidence is capped because Voynich labels here float on rims/tubes and the figures themselves are largely unlabeled; exact EVA-to-glyph readings are approximate."}
+```
+
+Below is my final structured answer.
+
+{"folio":"f78r","records":[{"label":"okchdldlo","locus":"@Lt","referent_kind":"object","attire":"unclear","holds":"none","container":"unclear","arms":"unclear","facing":"unclear","binding_confidence":"med"},{"label":"okchdy","locus":"@Lt","referent_kind":"object","attire":"unclear","holds":"tube","container":"unclear","arms":"unclear","facing":"unclear","binding_confidence":"med"},{"label":"daraloikhy","locus":"@Lt","referent_kind":"unclear","attire":"unclear","holds":"unclear","container":"unclear","arms":"unclear","facing":"unclear","binding_confidence":"low"},{"label":"dchedaly","locus":"@Lt","referent_kind":"unclear","attire":"unclear","holds":"unclear","container":"unclear","arms":"unclear","facing":"unclear","binding_confidence":"low"},{"label":"otasodloryorory","locus":"@Lt","referent_kind":"object","attire":"unclear","holds":"none","container":"tub","arms":"unclear","facing":"unclear","binding_confidence":"med"},{"label":"okaral","locus":"@Lt","referent_kind":"nymph","attire":"nude","holds":"none","container":"tub","arms":"touching_neighbor","facing":"front","binding_confidence":"med"}],"n_nymphs_seen":18,"notes":"Two green pools of nude nymphs (upper: dense tangle ~9-10 figures; lower: two rows ~8 figures) plus a chain of segmented tubes/pipes across the top feeding the upper pool. The 6 @Lt labels are NOT one-per-nymph; most float on tubes/rims. 'okchdldlo' sits over the top-left tube/spout assembly. 'okchdy' (image reads ~'ollchdy') sits over the top-right tube where it enters the pool. 'daraloikhy' and 'dchedaly' could not be uniquely located as standalone drawing labels - likely embedded in dense top/left paragraph text rather than bound to a figure (left unclear/low). 'otasodloryorory' reads on image as 'otasodlary'+'ororg' on the lower rim of the UPPER pool where the connector tube exits the basin - a container/structure label. 'okaral' (image ~'otaral') sits at the upper-right edge of the LOWER pool beside front-facing nude nymphs whose arms reach to touch neighbors - the only label plausibly bound to a nymph. Confidence capped: Voynich labels here sit on rims/tubes, figures are largely unlabeled, and EVA-to-glyph readings are approximate."}
+
+===== SUBAGENT agent-ade84a83aadbc3682.jsonl =====
+--- TASK PROMPT ---
+Precise image-grounding on one Voynich page. Read `/Users/user/Documents/Dev/voynich/bal_75v.jpg` (1600x2084; crop/zoom with Python+PIL, save to /tmp, Read crops).
+
+Folio f75v (biological/balneological "nymph" section). It shows a horizontal ROW of ~11 nude female figures (nymphs) standing under a blue water-fan, each behind a small basin/container with a label; a couple of separate labeled objects; and a lower cluster of nymphs in a pool.
+
+Transcription label groups in reading order:
+- `@Ln` (11 words, the MAIN ROW of nymphs, left→right): ["okshy","dokal","dal","dy","dalkar","dly","oty","dary","daldy","rkal","olkchy"]
+- `+Ln` (11 words, a second label per nymph or the basins, left→right): ["saral","darol","dal","shd","qokal","ory","lchy","dal","qoted","ykedy","otoly"]
+- `@Lt` (2): ["otal","opal"]; `=Lt` (3): ["okeey","lol","olol"]; `*Lt` (1): ["ytedy"]; `+Lt` (3): ["otedy","oteey","qotedy"]
+
+TASK: For the @Ln and +Ln rows, bind each label (in order) to the corresponding nymph (left→right) and describe THAT nymph. For the Lt groups, bind to whatever object/figure they sit on (note what). 
+
+Per label record:
+{
+ "label":"<word>","locus":"<locus>",
+ "referent_kind":"nymph"|"object"|"unclear",
+ "attire":"nude"|"clothed"|"partial"|"unclear",
+ "holds":"none"|"ring"|"cross"|"star"|"tube"|"plant"|"object"|"unclear",
+ "container":"none"|"tub"|"basin"|"barrel"|"unclear",
+ "arms":"down"|"one_raised"|"both_raised"|"crossed"|"touching_neighbor"|"unclear",
+ "facing":"left"|"right"|"front"|"unclear",
+ "binding_confidence":"high"|"med"|"low"
+}
+
+IMPORTANT: keep exact label order; one record per label word. Zoom into the row to read posture/attire/objects per nymph. If you cannot tell an attribute, use "unclear" (do NOT guess). Note in "notes" if the visible nymph count ≠ 11.
+
+Return ONLY: {"folio":"f75v","records":[...],"n_nymphs_seen":<int>,"notes":"..."}. No prose.
+--- FINAL REPORT ---
+The rightmost nymph (#11) faces left, nude, arms down, in green trough, with her flask label ("olkchy"/"otoly") above connected by a tube. 
+
+I now have enough to compile the records. Summary of what I observed:
+- 11 nymphs in the main row, each nude, standing in a continuous green trough/pool, each with a flask/jar-shaped vessel above connected by a tube; the @Ln word is the TOP label on each vessel and +Ln the BOTTOM — both bind to the same column (vessel+nymph).
+- Left group (1-5) face right; middle (6-9) roughly front/right; rightmost (10-11) face left/front. Arms mostly down at sides; a few appear bent toward neighbors but not clearly raised.
+- Containers: the flask/jar vessels = "tub"/"basin" type → best fit "unclear" between basin/barrel; they're bottle/flask shaped, so I'll mark "unclear" where shape doesn't match the enum cleanly, but they ARE containers → use "tub" is wrong; closest enum is "unclear". Actually enum has tub/basin/barrel — the flask shape is closest to "barrel" (rounded body, narrow neck). I'll mark "unclear" to avoid guessing since flask≠barrel.
+
+Let me decide container consistently: the vessels are clearly rounded-body, narrow-necked flasks/jars — none of tub/basin/barrel is exact. Per instructions, use "unclear" rather than guess.
+
+{"folio":"f75v","records":[
+{"label":"okshy","locus":"@Ln","referent_kind":"nymph","attire":"nude","holds":"none","container":"unclear","arms":"one_raised","facing":"right","binding_confidence":"high"},
+{"label":"dokal","locus":"@Ln","referent_kind":"nymph","attire":"nude","holds":"none","container":"unclear","arms":"down","facing":"right","binding_confidence":"high"},
+{"label":"dal","locus":"@Ln","referent_kind":"nymph","attire":"nude","holds":"none","container":"unclear","arms":"down","facing":"right","binding_confidence":"high"},
+{"label":"dy","locus":"@Ln","referent_kind":"nymph","attire":"nude","holds":"none","container":"unclear","arms":"down","facing":"right","binding_confidence":"high"},
+{"label":"dalkar","locus":"@Ln","referent_kind":"nymph","attire":"nude","holds":"none","container":"unclear","arms":"down","facing":"right","binding_confidence":"high"},
+{"label":"dly","locus":"@Ln","referent_kind":"nymph","attire":"nude","holds":"none","container":"unclear","arms":"down","facing":"front","binding_confidence":"med"},
+{"label":"oty","locus":"@Ln","referent_kind":"nymph","attire":"nude","holds":"none","container":"unclear","arms":"down","facing":"front","binding_confidence":"med"},
+{"label":"dary","locus":"@Ln","referent_kind":"nymph","attire":"nude","holds":"none","container":"unclear","arms":"down","facing":"front","binding_confidence":"med"},
+{"label":"daldy","locus":"@Ln","referent_kind":"nymph","attire":"nude","holds":"none","container":"unclear","arms":"down","facing":"front","binding_confidence":"med"},
+{"label":"rkal","locus":"@Ln","referent_kind":"nymph","attire":"nude","holds":"none","container":"unclear","arms":"down","facing":"left","binding_confidence":"med"},
+{"label":"olkchy","locus":"@Ln","referent_kind":"nymph","attire":"nude","holds":"none","container":"unclear","arms":"down","facing":"left","binding_confidence":"high"},
+{"label":"saral","locus":"+Ln","referent_kind":"nymph","attire":"nude","holds":"none","container":"unclear","arms":"one_raised","facing":"right","binding_confidence":"med"},
+{"label":"darol","locus":"+Ln","referent_kind":"nymph","attire":"nude","holds":"none","container":"unclear","arms":"down","facing":"right","binding_confidence":"med"},
+{"label":"dal","locus":"+Ln","referent_kind":"nymph","attire":"nude","holds":"none","container":"unclear","arms":"down","facing":"right","binding_confidence":"med"},
+{"label":"shd","locus":"+Ln","referent_kind":"nymph","attire":"nude","holds":"none","container":"unclear","arms":"down","facing":"right","binding_confidence":"med"},
+{"label":"qokal","locus":"+Ln","referent_kind":"nymph","attire":"nude","holds":"none","container":"unclear","arms":"down","facing":"right","binding_confidence":"med"},
+{"label":"ory","locus":"+Ln","referent_kind":"nymph","attire":"nude","holds":"none","container":"unclear","arms":"down","facing":"front","binding_confidence":"low"},
+{"label":"lchy","locus":"+Ln","referent_kind":"nymph","attire":"nude","holds":"none","container":"unclear","arms":"down","facing":"front","binding_confidence":"low"},
+{"label":"dal","locus":"+Ln","referent_kind":"nymph","attire":"nude","holds":"none","container":"unclear","arms":"down","facing":"front","binding_confidence":"low"},
+{"label":"qoted","locus":"+Ln","referent_kind":"nymph","attire":"nude","holds":"none","container":"unclear","arms":"down","facing":"front","binding_confidence":"low"},
+{"label":"ykedy","locus":"+Ln","referent_kind":"nymph","attire":"nude","holds":"none","container":"unclear","arms":"down","facing":"left","binding_confidence":"low"},
+{"label":"otoly","locus":"+Ln","referent_kind":"nymph","attire":"nude","holds":"none","container":"unclear","arms":"down","facing":"left","binding_confidence":"med"},
+{"label":"otal","locus":"@Lt","referent_kind":"unclear","attire":"unclear","holds":"unclear","container":"unclear","arms":"unclear","facing":"unclear","binding_confidence":"low"},
+{"label":"opal","locus":"@Lt","referent_kind":"unclear","attire":"unclear","holds":"unclear","container":"unclear","arms":"unclear","facing":"unclear","binding_confidence":"low"},
+{"label":"okeey","locus":"=Lt","referent_kind":"unclear","attire":"unclear","holds":"unclear","container":"unclear","arms":"unclear","facing":"unclear","binding_confidence":"low"},
+{"label":"lol","locus":"=Lt","referent_kind":"unclear","attire":"unclear","holds":"unclear","container":"unclear","arms":"unclear","facing":"unclear","binding_confidence":"low"},
+{"label":"olol","locus":"=Lt","referent_kind":"unclear","attire":"unclear","holds":"unclear","container":"unclear","arms":"unclear","facing":"unclear","binding_confidence":"low"},
+{"label":"ytedy","locus":"*Lt","referent_kind":"unclear","attire":"unclear","holds":"unclear","contai
+
+===== SUBAGENT agent-ae2cc0150cf4ab82f.jsonl =====
+--- TASK PROMPT ---
+Precise image-grounding on one Voynich page. Read `/Users/user/Documents/Dev/voynich/bal_82r.jpg` (crop/zoom with Python+PIL, save to /tmp, Read crops).
+
+Folio f82r (biological/balneological "nymph" section): nude female figures (nymphs) in/around pools, tubs, and tube conduits, with scattered labels.
+
+Transcription label groups (reading order):
+- `@Lt` (4): ["orol","dain","darol","daryry"]
+- `@Ln` (3): ["okar","okal","okoldy"]
+- `+Ln` (1): ["okairady"]
+- `*Ln` (1): ["sororl"]
+- `=Ln` (6): ["olko","ky","sokoly","dolol","olaiin","okeeor"]
+
+TASK: Bind each label (in listed order, by spatial reading order left→right / top→bottom within its group) to the nymph or object it sits on, and describe that referent.
+
+Per label record:
+{
+ "label":"<word>","locus":"<locus>",
+ "referent_kind":"nymph"|"object"|"unclear",
+ "attire":"nude"|"clothed"|"partial"|"unclear",
+ "holds":"none"|"ring"|"cross"|"star"|"tube"|"plant"|"object"|"unclear",
+ "container":"none"|"tub"|"basin"|"barrel"|"unclear",
+ "arms":"down"|"one_raised"|"both_raised"|"crossed"|"touching_neighbor"|"unclear",
+ "facing":"left"|"right"|"front"|"unclear",
+ "binding_confidence":"high"|"med"|"low"
+}
+
+Keep exact label order; one record per label word. Use "unclear" rather than guessing. 
+
+Return ONLY: {"folio":"f82r","records":[...],"n_nymphs_seen":<int>,"notes":"..."}. No prose.
+--- FINAL REPORT ---
+Now I can count the bottom group: I see roughly 4-5 nymph figures emerging from the green scalloped pool/cloud-band — a small one lower-left, a prominent crowned nymph (center-left), and to the right two more figures (one crowned with long hair, one with flowing hair). Plus the top-left tub nymph = total ~5-6 nymphs visible on the page.
+
+I have enough to ground responsibly. The honest finding: f82r is text-dominated with marginal figures. The bottom group nymphs carry labels directly beneath them (the true figure-bound labels — matching forms like sororl/sokoly/dolol), the top-left tub nymph is a distinct figure, and the @Lt/@Ln words are predominantly inline label-words in the running text rather than figure captions. I'll bind the clearly-grounded ones and mark inline/uncertain ones "unclear."
+
+{"folio":"f82r","records":[
+{"label":"orol","locus":"@Lt","referent_kind":"unclear","attire":"unclear","holds":"unclear","container":"none","arms":"unclear","facing":"unclear","binding_confidence":"low"},
+{"label":"dain","locus":"@Lt","referent_kind":"unclear","attire":"unclear","holds":"unclear","container":"none","arms":"unclear","facing":"unclear","binding_confidence":"low"},
+{"label":"darol","locus":"@Lt","referent_kind":"unclear","attire":"unclear","holds":"unclear","container":"none","arms":"unclear","facing":"unclear","binding_confidence":"low"},
+{"label":"daryry","locus":"@Lt","referent_kind":"nymph","attire":"nude","holds":"ring","container":"tub","arms":"one_raised","facing":"front","binding_confidence":"low"},
+{"label":"okar","locus":"@Ln","referent_kind":"unclear","attire":"unclear","holds":"unclear","container":"none","arms":"unclear","facing":"unclear","binding_confidence":"low"},
+{"label":"okal","locus":"@Ln","referent_kind":"unclear","attire":"unclear","holds":"unclear","container":"none","arms":"unclear","facing":"unclear","binding_confidence":"low"},
+{"label":"okoldy","locus":"@Ln","referent_kind":"unclear","attire":"unclear","holds":"unclear","container":"none","arms":"unclear","facing":"unclear","binding_confidence":"low"},
+{"label":"okairady","locus":"+Ln","referent_kind":"unclear","attire":"unclear","holds":"unclear","container":"none","arms":"unclear","facing":"unclear","binding_confidence":"low"},
+{"label":"sororl","locus":"*Ln","referent_kind":"nymph","attire":"nude","holds":"none","container":"none","arms":"down","facing":"front","binding_confidence":"med"},
+{"label":"olko","locus":"=Ln","referent_kind":"nymph","attire":"nude","holds":"none","container":"none","arms":"down","facing":"front","binding_confidence":"low"},
+{"label":"ky","locus":"=Ln","referent_kind":"nymph","attire":"nude","holds":"none","container":"none","arms":"down","facing":"front","binding_confidence":"low"},
+{"label":"sokoly","locus":"=Ln","referent_kind":"nymph","attire":"nude","holds":"none","container":"none","arms":"down","facing":"front","binding_confidence":"low"},
+{"label":"dolol","locus":"=Ln","referent_kind":"nymph","attire":"nude","holds":"none","container":"none","arms":"unclear","facing":"front","binding_confidence":"low"},
+{"label":"olaiin","locus":"=Ln","referent_kind":"nymph","attire":"nude","holds":"none","container":"none","arms":"unclear","facing":"unclear","binding_confidence":"low"},
+{"label":"okeeor","locus":"=Ln","referent_kind":"nymph","attire":"nude","holds":"none","container":"none","arms":"unclear","facing":"unclear","binding_confidence":"low"}
+],"n_nymphs_seen":6,"notes":"f82r is text-dominated; figures are marginal/bottom. Clear figures: (1) top-left nude nymph standing in a blue-rimmed tub, one arm raised holding a small blue ring/object, facing front-right; (2) a bottom-edge group of ~4-5 nude nymphs (several crowned, long flowing hair, arms down/in front) emerging from a green scalloped pool/cloud-band, each with a short label written directly beneath. The bottom-group labels (matching the *Ln/=Ln short forms like sororl/sokoly/dolol) are the only words that genuinely sit ON figures; *Ln 'sororl' plausibly maps to a central crowned bottom nymph (med confidence). The @Lt/@Ln/+Ln word lists are predominantly inline label-words embedded in the running paragraphs, NOT figure captions, so they cannot be bound to a specific referent with confidence and are marked unclear/low. daryry tentatively tied to the tub nymph only as the last/rightmost @Lt token nearest a figure (low). Container observed: one tub (top nymph). No crosses/stars/plants held; the top nymph holds a ring-like object. Image-grounding limited by JPG resolution and gutter/adjacent-page bleed on the right edge."}
+

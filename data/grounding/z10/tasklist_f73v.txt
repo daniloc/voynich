@@ -1,0 +1,36 @@
+TAKAHASHI Lz LABEL SEQUENCE for f73v (transcription order within each tier)
+Multi-word labels shown with '.' separating words; treat as ONE locus bound to ONE referent.
+
+--- Labels on stars, Sagittarius, not in circle [tier=outside] ---
+  locus   1: okol
+  locus   2: oteody
+  locus   3: oteody
+  locus   4: cheody
+--- Labels on stars, Sagittarius, outer ring [tier=outer] ---
+  locus   6: okeody
+  locus   7: sheol
+  locus   8: odees
+  locus   9: ecsy
+  locus  10: ykeor
+  locus  11: opals
+  locus  12: ykeody
+  locus  13: okeody
+  locus  14: ypaiin
+  locus  15: yfaiin.y
+  locus  16: ofcheesy
+  locus  17: oraiiny
+  locus  18: ykeeody
+  locus  19: okeos
+  locus  20: ykeear
+  locus  21: qokeoly
+--- Labels on stars, Sagittarius, inner band [tier=inner] ---
+  locus  24: ched
+  locus  25: oky
+  locus  26: oi!air
+  locus  27: okal
+  locus  28: ykey
+  locus  29: ykeeo
+  locus  30: okeod!
+  locus  31: ykey
+  locus  32: ypal
+  locus  23: otedy

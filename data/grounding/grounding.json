@@ -1,0 +1,1710 @@
+{
+ "f82v": {
+  "folio": "f82v",
+  "identified_subject": "Biological/balneological folio. A dense continuous text block fills the page (no diagram wheel). Around it, marginal nude female figures (nymphs) stand inside barrel/tub-like basins connected by tube/pipe conduits: one nymph at top-left in a tub with a hanging tube, two nymphs in the right margin standing in basins with tubes/legs descending, and a green-ground scene across the bottom showing nymphs standing in tubs with blue arc/rainbow shapes above them. There is NO zodiac sign, NO concentric star rings, and NO cosmological radial spokes on this folio.",
+  "layout_topology": "scattered_near_figures",
+  "elements": [
+   {
+    "type": "marginal_nymph_in_tub_topleft",
+    "count": 1,
+    "position_note": "top-left margin, ~10 o'clock; nude figure standing in a barrel/tub with a tube/conduit hanging below"
+   },
+   {
+    "type": "marginal_nymph_in_basin_right",
+    "count": 2,
+    "position_note": "right margin, upper (~1-2 o'clock) and mid (~3 o'clock); nude figures standing in basins with tube/leg conduits descending"
+   },
+   {
+    "type": "left_margin_object_flag_tube",
+    "count": 1,
+    "position_note": "left margin mid-page; a flag/banner-like object and vertical tube/conduit running down the gutter"
+   },
+   {
+    "type": "bottom_scene_nymphs_in_tubs",
+    "count": 2,
+    "position_note": "bottom of page on green ground; nymphs standing in tubs flanked by blue arc/rainbow shapes"
+   },
+   {
+    "type": "blue_arc_rainbow",
+    "count": 2,
+    "position_note": "bottom scene, center-left and center-right, drawn as concentric blue arcs over the green ground"
+   },
+   {
+    "type": "main_text_block",
+    "count": 1,
+    "position_note": "central, ~20+ lines of running EVA text occupying the whole page body"
+   }
+  ],
+  "label_links": [
+   {
+    "locus": "@Ln",
+    "linked_element": "marginal nymph/tub group (top-left figure standing in a tub) \u2014 multi-word label cluster (otechdy okalchy olkeedy okain) set beside/above the figure",
+    "position": "top-left margin, ~10-11 o'clock, beside the upper tub-nymph",
+    "note": "Longest label group; sits adjacent to the top-left marginal figure-and-tub assembly. Words legible as EVA but figure-to-word assignment approximate."
+   },
+   {
+    "locus": "=Ln",
+    "linked_element": "single-word tag (otedy) beside a marginal nymph/basin",
+    "position": "margin, level with an upper marginal figure (right or left margin)",
+    "note": "Short one-word label; the '=' variant suggests a label aligned in-line with a figure."
+   },
+   {
+    "locus": "@Lt",
+    "linked_element": "label cluster (daiin oty otedal olkol otedol otoldy) beside the bottom/right scene nymphs-in-tubs",
+    "position": "bottom scene / lower-right zone, beside the tub-and-nymph group on the green ground",
+    "note": "Multi-word group; likely the bottom-scene caption set (the single inked word visible mid-scene corresponds to one of these). Legible EVA, grounding approximate."
+   },
+   {
+    "locus": "~Lt",
+    "linked_element": "two-word tag (okooky okedor) beside a marginal basin/tube element",
+    "position": "right margin, ~2-3 o'clock, beside a basin-nymph",
+    "note": "'~' variant indicates a satellite/offset label near a figure."
+   },
+   {
+    "locus": "+Lt",
+    "linked_element": "single-word tag (oteedy) beside a tube/conduit or basin",
+    "position": "margin near a tube-and-basin element",
+    "note": "One-word label; the single word centered in the bottom-arc scene ('olkeedy'-like) is a candidate referent."
+   },
+   {
+    "locus": "~Ln",
+    "linked_element": "single-word tag (okol) beside a marginal nymph/object",
+    "position": "margin, near a small figure/object",
+    "note": "Shortest label; low-confidence grounding."
+   }
+  ],
+  "legibility": "partially",
+  "confidence": 0.42,
+  "month_guess": null,
+  "zodiac_sign": null,
+  "ring_count": null,
+  "notes": "f82v is in the BIOLOGICAL (balneological) section, not zodiac/cosmo, so there is no central sign, no implied month, no concentric star rings, and no radial Cc/Ri/Ro text \u2014 those fields are null. The drawing is text-dominant with marginal nymph-in-tub figures linked by tube conduits and a bottom green-ground bathing scene with blue arcs. The 6 label loci are all short EVA word groups (Ln/Lt variants) sitting in the margins beside the nymphs/basins or captioning the bottom scene; the longest (@Ln, @Lt) anchor the most prominent figure groups. Only one label word is clearly inked WITHIN the bottom scene (center, beside the blue arcs); the marginal labels are faint and partly cropped/abraded near the gutter, so figure-to-word grounding is approximate. The EVA transliteration itself is legible (per the JSON), but precise on-image positions are low-to-moderate confidence given the single low-resolution scan. Confidence reflects uncertainty in mapping each locus to a specific figure, not in the transliterated text."
+ },
+ "f75v": {
+  "folio": "f75v",
+  "identified_subject": "Balneological (biological) section folio. A large blue fan/spray structure at the top (water issuing from a spout/cloud-band edge with scalloped border) discharges downward onto a horizontal row of roughly eleven nude female figures (nymphs). Each nymph stands behind/within a tablet- or barrel-shaped container (basin), and each container/figure carries a short written label. A lower scene at the bottom of the page shows a smaller cluster of nymphs grouped in a basin/pool with serpentine tube-like channels. Surrounding text runs in paragraph blocks above and below the figures.",
+  "layout_topology": "rows",
+  "elements": [
+   {
+    "type": "nymph_figures",
+    "count": 11,
+    "position_note": "Single horizontal row of nude female figures spanning the page width beneath the blue water-fan, heads roughly at mid-page; the row reads left to right."
+   },
+   {
+    "type": "basins_containers",
+    "count": 11,
+    "position_note": "Row of tablet/barrel-shaped containers, one per nymph, the nymphs emerging from behind/within them; labels are written on the upper face of each container."
+   },
+   {
+    "type": "water_feature",
+    "count": 1,
+    "position_note": "Large blue fan/spray of radiating lines occupying the upper third, with a scalloped/looped border, discharging downward onto the row of nymphs."
+   },
+   {
+    "type": "lower_nymph_cluster",
+    "count": 1,
+    "position_note": "Secondary group of nymphs in a basin/pool at the bottom-left/center, fed by serpentine tube channels."
+   },
+   {
+    "type": "text_paragraphs",
+    "count": 4,
+    "position_note": "Paragraph blocks of running text above the water-fan and below the figure row."
+   }
+  ],
+  "label_links": [
+   {
+    "locus": "@Ln",
+    "linked_element": "row of nymphs/basins (upper sequence of labels-on-figures, left half to center)",
+    "position": "horizontal row at mid-page, reading left-to-right across the containers each nymph stands in",
+    "note": "Eleven short words (okshy, dokal, dal, dy, dalkar, dly, oty, dary, daldy, rkal, olkchy) corresponding one-to-one with successive nymph/basin units along the row. Each token sits on/above an individual container. Partially legible script; grounded to figure positions left through center."
+   },
+   {
+    "locus": "+Ln",
+    "linked_element": "row of nymphs/basins (continuation/second tier of labels-on-figures)",
+    "position": "horizontal row at mid-page, continuing the per-container labels across the same row (center toward right)",
+    "note": "Eleven short words (saral, darol, dal, shd, qokal, ory, lchy, dal, qoted, ykedy, otoly) forming a second sequence aligned with the nymph/basin units. Likely a second written line of labels on the containers or the continuation across the right portion of the row."
+   },
+   {
+    "locus": "@Lt",
+    "linked_element": "container/figure label cluster",
+    "position": "near the figure row, short label pair",
+    "note": "Two tokens (otal, opal); a label-variant tag beside an individual basin/nymph. Position within the row not precisely resolvable from the scan; low confidence on exact container."
+   },
+   {
+    "locus": "=Lt",
+    "linked_element": "container/figure label cluster",
+    "position": "near the figure row",
+    "note": "Three tokens (okeey, lol, olol); short label-variant set adjacent to a nymph/basin unit. Exact container not resolvable; low confidence."
+   },
+   {
+    "locus": "*Lt",
+    "linked_element": "single figure/container label",
+    "position": "near the figure row",
+    "note": "Single token (ytedy); isolated label-variant beside one nymph/basin."
+   },
+   {
+    "locus": "+Lt",
+    "linked_element": "container/figure label cluster",
+    "position": "near the figure row, right side",
+    "note": "Three tokens (otedy, oteey, qotedy); short label-variant group beside a nymph/basin unit, likely toward the right end of the row."
+   },
+   {
+    "locus": "=L0",
+    "linked_element": "generic label near figures/water feature",
+    "position": "unanchored generic label",
+    "note": "Tokens (s, l, l, s); single/short-letter generic label not clearly tied to a specific drawn element."
+   },
+   {
+    "locus": "~L0",
+    "linked_element": "generic single-letter label",
+    "position": "unanchored",
+    "note": "Single token (o); generic, not groundable to a specific element."
+   },
+   {
+    "locus": "+L0",
+    "linked_element": "generic single-letter label",
+    "position": "unanchored",
+    "note": "Single token (r); generic, not groundable to a specific element."
+   }
+  ],
+  "legibility": "partially",
+  "confidence": 0.55,
+  "zodiac_sign": null,
+  "month_guess": null,
+  "ring_count": null,
+  "notes": "This is a balneological (biological) folio, not a zodiac or cosmological page, so there are no concentric rings, zodiac sign, or radial spokes. The dominant groundable structure is the single horizontal ROW of ~11 nymphs, each standing in/behind a tablet- or barrel-shaped container, with a label per unit. The two Ln labelsets (@Ln = 11 tokens, +Ln = 11 tokens) are the most groundable: they form one-to-one sequences with the row of nymph/basin units, the strongest spatial anchor on the page. The two sets likely represent two written lines of labels across the same row of containers (an upper and a lower line on each tablet). The Lt-variant clusters (@Lt, =Lt, *Lt, +Lt) are short label groups also sitting beside individual nymph/basin units but cannot be pinned to specific containers from the available resolution; treated as low confidence. The L0 tokens (single letters s/l/l/s, o, r) are generic and not anchorable to a drawn element. Legibility of the EVA transliteration is partial; clock-angle positions are not applicable (linear row, so positions expressed left-to-right). Confidence is moderate on the overall row grounding, low on the exact container assignment for individual Lt clusters."
+ },
+ "f69r": {
+  "folio": "f69r",
+  "identified_subject": "A single large circular cosmological/astronomical medallion. At the hub is a small radiant star (a multi-pointed star/sun figure) from which straight radial spokes emanate outward like the spokes of a wheel. The spokes are painted in alternating blue and green stripes, giving a rosette effect. They terminate at an outer rim made of a continuous chain of small scalloped petal-like cells (teardrop/leaf shapes) running around the full circumference. There is NO zodiac animal, NO nymphs, basins, or tubes, and NO labeled jars/plants. This is a star/wind-rose-style diagram with radial inscriptions and a circular text band, plus several lines of paragraph text above the circle.",
+  "layout_topology": "radial_spokes",
+  "elements": [
+   {
+    "type": "central_star_hub",
+    "count": 1,
+    "position_note": "small radiant multi-pointed star/sun at exact center of the medallion; origin point of all spokes"
+   },
+   {
+    "type": "radial_spoke",
+    "count": 16,
+    "position_note": "straight spokes radiating from hub to outer rim, alternating blue/green coloring; roughly evenly spaced ~22.5 deg apart around the wheel (count approximate, on the order of 16)"
+   },
+   {
+    "type": "outer_rim_scallop_cell",
+    "count": 32,
+    "position_note": "chain of small teardrop/petal-shaped cells forming the circular rim, one or two between each pair of spoke ends; count approximate"
+   },
+   {
+    "type": "paragraph_text_block",
+    "count": 1,
+    "position_note": "several lines of running text in the top margin above the circle (the @L0 short label string sits here / near top)"
+   },
+   {
+    "type": "radial_text_strip",
+    "count": 16,
+    "position_note": "lines of text written ALONG the radial spokes, reading outward from hub toward rim (the @Ro radial set); one per spoke gap"
+   },
+   {
+    "type": "circular_text_band",
+    "count": 1,
+    "position_note": "ring of text following the curve near the inner edge of the rim (the @Cc circular set)"
+   }
+  ],
+  "label_links": [
+   {
+    "locus": "&L0",
+    "linked_element": "radial_text_along_spokes",
+    "position": "distributed across the radial spokes of the wheel, reading hub-to-rim",
+    "note": "Largest set (~40 word-tokens). Best interpreted as the running radial/in-wheel text occupying the spaces between/along spokes rather than discrete object-labels; cannot ground individual words to individual spokes with confidence at this resolution. Treated as the general radial inscription pool."
+   },
+   {
+    "locus": "@L0",
+    "linked_element": "paragraph_text_block / top margin",
+    "position": "top of folio, above the circle (12 o'clock zone, outside the medallion)",
+    "note": "Short 9-token string; sits with the marginal paragraph text above the diagram. Low confidence on exact placement."
+   },
+   {
+    "locus": "@Ro",
+    "linked_element": "radial_text_strip (text reading outward along spokes)",
+    "position": "along the ~16 radial spokes, each strip running from the central hub outward to the rim, distributed around the full 360 deg",
+    "note": "Longest set (~67 tokens) and the clearest radial-text role: one text strip per spoke gap, oriented outward. Confident this is the radial-spoke text; not confident which token maps to which clock position."
+   },
+   {
+    "locus": "@Cc",
+    "linked_element": "circular_text_band",
+    "position": "ring following the circumference near the inner edge of the scalloped rim, encircling the spoke ends",
+    "note": "11-token circular band; standard Cc role \u2014 text curving around the wheel just inside the petal-cell rim."
+   }
+  ],
+  "legibility": "partially",
+  "zodiac_sign": null,
+  "month_guess": null,
+  "ring_count": 1,
+  "confidence": 0.62,
+  "notes": "Section is cosmological, not zodiac/balneo/pharma \u2014 so the zodiac/nymph/jar grounding tasks do not apply (zodiac_sign, month, star-rings left null/1). Structure: one central radiant star hub -> ~16 alternating blue/green radial spokes -> outer rim of ~32 scalloped petal-cells. Spoke and rim counts are approximate from the scan resolution (no detail crops available; only iiif_69r.jpg exists). The four label sets map cleanly to drawing zones by ROLE: @Ro = outward radial text along the spokes (the dominant text), @Cc = circular band near the rim, &L0 = the in-wheel radial word pool, @L0 = short marginal/top paragraph label. Individual word-to-spoke clock-angle grounding is NOT reliable here because the radial text wraps each of ~16 near-identical spokes and the script is undecipherable; I did not invent per-spoke assignments. Legibility 'partially' \u2014 strokes visible, transliteration trusted from the JSON but on-image word boundaries indistinct at this zoom. Confidence moderate for topology/role mapping, low for precise angular positions."
+ },
+ "f70v1": {
+  "folio": "f70v1",
+  "identified_subject": "Zodiac roundel for Pisces: two fish at the medallion center (upper fish swimming left/head-left, lower fish swimming right, arranged head-to-tail) with a short central label written between them. The central medallion is encircled by concentric rings of nude female figures (nymphs), most associated with a star, with curved/radial label text beside each. Note: the goat/ram drawn at the upper-right (carrying a marginal 'abril'/April annotation in a later hand) belongs to the adjacent Aries diagram, not to this Pisces center.",
+  "layout_topology": "concentric_rings",
+  "elements": [
+   {
+    "type": "central_zodiac_figure",
+    "count": 2,
+    "position_note": "two fish at medallion center; upper fish oriented head-left, lower fish head-right, tail-to-head; faint central label between them"
+   },
+   {
+    "type": "central_label",
+    "count": 1,
+    "position_note": "single short word centered between the two fish inside the medallion (the @Lz head token cluster)"
+   },
+   {
+    "type": "nymph_figure",
+    "count": 30,
+    "position_note": "nude female figures distributed around the medallion in two concentric rings (inner ring ~10-15, outer ring ~15, standard Voynich zodiac count ~30 total); each typically beside a star"
+   },
+   {
+    "type": "star",
+    "count": 28,
+    "position_note": "small 6-8 point stars held by or set beside most nymphs around both rings"
+   },
+   {
+    "type": "circular_text_band",
+    "count": 1,
+    "position_note": "continuous band of script (@Cc) running around the diagram between/around the figure rings"
+   }
+  ],
+  "label_links": [
+   {
+    "locus": "@Cc",
+    "linked_element": "circular text band encircling the figure rings",
+    "position": "full 0-360 deg ring of running text around the medallion",
+    "note": "59 words of continuous circular text; reads around the wheel, not anchored to a single figure"
+   },
+   {
+    "locus": "@Lz",
+    "linked_element": "central two-fish figure and adjacent inner-ring figures",
+    "position": "center of medallion (head token between the fish) extending to nearest inner-ring labels around 12 o'clock",
+    "note": "the zodiac/central label cluster; first tokens sit on the central fish, remainder fan out to closest nymph labels"
+   },
+   {
+    "locus": "&Lz",
+    "linked_element": "ring of nymph figures (star-labels) around the medallion",
+    "position": "distributed clockwise around both concentric rings, ~21 tokens each beside an individual nymph/star",
+    "note": "each word annotates one nymph-with-star; ordering follows the figures clockwise from ~12 o'clock"
+   }
+  ],
+  "legibility": "partially",
+  "confidence": 0.55,
+  "month_guess": "February-March",
+  "zodiac_sign": "Pisces",
+  "ring_count": 2,
+  "notes": "Central subject identification (Pisces, two fish) is high confidence from the scans (z70v_p0.jpg shows the head-to-tail fish pair clearly with a central label). Pisces precedes Aries in the manuscript's zodiac sequence, so this medallion corresponds to the Pisces month-period (Feb-Mar). The 'abril' marginal word visible at upper-right (z70v_abrilword.jpg / z70v_center.jpg) sits beside the green-and-goat Aries figure, NOT the Pisces center, so it should not be read as a label of this diagram's central fish. Ring count of 2 concentric figure-rings and ~30 nymph total is the standard Voynich zodiac layout but exact per-ring counts could not be tallied precisely from the resolution available; star/nymph counts are approximate. EVA script is undeciphered and not translated. Mapping of &Lz tokens to individual nymphs is by clockwise reading-order convention rather than per-token pixel anchoring, hence moderate confidence. Legibility partial: central word and ring script are visible but several outer-ring words blur at this resolution."
+ },
+ "f72v3": {
+  "folio": "f72v3",
+  "identified_subject": "Zodiac wheel (right-hand of three medallions on f72v). Central circular medallion holds a single robed female figure with a blue cap/headdress and a blue-shaded flowing sleeve/wing on her right side; she holds a wavy tendril terminating in an 8-pointed star at lower-left. The medallion is encircled by two concentric rings of standing star-nymphs, each nymph paired with an 8-pointed star and an adjacent word-label. No clear animal/zodiac emblem is drawn as the central figure; the center is a human star-holder.",
+  "layout_topology": "concentric_rings",
+  "zodiac_sign": "Gemini (uncertain)",
+  "month_guess": "May/June (uncertain)",
+  "ring_count": 2,
+  "elements": [
+   {
+    "type": "central_figure_robed_nymph_with_star",
+    "count": 1,
+    "position_note": "Center of disk; female figure facing slightly left, blue cap/headdress, blue-shaded right sleeve/wing, holding a wavy line ending in an 8-pointed star at her lower-left (~7-8 o'clock relative to her body)."
+   },
+   {
+    "type": "medallion_frame_with_circular_text",
+    "count": 1,
+    "position_note": "Ring immediately enclosing the central figure; carries the @Cc circular script running around the inside of the frame."
+   },
+   {
+    "type": "inner_ring_star_nymph",
+    "count": 15,
+    "position_note": "Inner ring of standing nymphs, each beside an 8-pointed star and a word-label; ~15 figures distributed clockwise from 12 o'clock."
+   },
+   {
+    "type": "outer_ring_star_nymph",
+    "count": 16,
+    "position_note": "Outer ring of standing nymphs, each beside an 8-pointed star and a word-label; ~16 figures distributed clockwise from 12 o'clock."
+   },
+   {
+    "type": "eight_pointed_star",
+    "count": 31,
+    "position_note": "One star per ring nymph (inner + outer rings), plus one star held by the central figure."
+   }
+  ],
+  "label_links": [
+   {
+    "locus": "@Lz",
+    "linked_element": "central robed star-holding figure",
+    "position": "Inside the central medallion, short isolated caption to the left of the figure's torso (~9 o'clock within the medallion); EVA 'ogeom sholeey'.",
+    "note": "Two-word label sitting directly on/beside the central figure; the most groundable as a figure-caption."
+   },
+   {
+    "locus": "@Cc",
+    "linked_element": "medallion frame ring around the central figure",
+    "position": "Curved circular band immediately surrounding the central figure, read around the inner medallion edge starting near 12 o'clock; 84 words.",
+    "note": "Circular text occupying the innermost ring band; not tied to any single nymph but to the whole central medallion."
+   },
+   {
+    "locus": "&Lz",
+    "linked_element": "the ~30 star-nymphs of the two outer rings",
+    "position": "One word per nymph, each label placed beside its nymph/star, distributed clockwise from 12 o'clock across the inner and outer rings; 34 words for ~31 nymph slots.",
+    "note": "Primary zodiac star-label series; each token grounds to one ring nymph+star pair. Count (34) slightly exceeds visible nymph count, consistent with crowding/partial labels."
+   }
+  ],
+  "legibility": "partially",
+  "confidence": 0.5,
+  "notes": "f72v3 is the rightmost of three zodiac medallions on the f72v scan (left/upper medallions are f72v1 and f72v2). Drawing identification (zodiac wheel, two concentric star-nymph rings, central robed star-holder with blue pigment) is high confidence. Sign/month is LOW confidence: the f72-series sits in the Taurus-to-Cancer span of the Voynich zodiac sequence and this disk is conventionally placed in the Gemini region, but the central figure is a human star-holder rather than a recognizable Twins/Bull/Crab emblem, so the sign cannot be confirmed from the drawing alone. Ring count (2) and the clockwise-from-12-o'clock nymph arrangement are clear in the scan. EVA transliteration in the label file is fully legible; the raw script in the scan is only partially legible at this resolution. Each &Lz token grounds to a single ring nymph/star pair; @Cc is the medallion-band circular text; @Lz ('ogeom sholeey') captions the central figure. No basins/tubes/jars (not balneo/pharma)."
+ },
+ "f72r2": {
+  "folio": "f72r2",
+  "identified_subject": "Zodiac wheel medallion with a central red/orange quadruped (a ram standing on a green ground line) inside concentric rings; the rings are populated with star-symbols and small clothed human figures (nymph-like figures) each associated with radial label text.",
+  "zodiac_sign": "Aries",
+  "month_guess": "April",
+  "layout_topology": "concentric_rings",
+  "ring_count": 2,
+  "elements": [
+   {
+    "type": "central_zodiac_figure_ram",
+    "count": 1,
+    "position_note": "center of wheel; red/orange ram standing left-facing on a green ground line, a small inner label appears under/beside the animal"
+   },
+   {
+    "type": "star_with_radial_label",
+    "count": 30,
+    "position_note": "distributed around the two concentric rings; each star paired with a band of radial text (the &Lz set of ~30 short words), roughly 15 per ring read clockwise from 12 o'clock"
+   },
+   {
+    "type": "human_figure_nymph_with_star",
+    "count": 12,
+    "position_note": "small clothed standing figures interspersed in the rings, some holding/touching a star on a tether, alternating with bare star-symbols"
+   },
+   {
+    "type": "circular_text_band",
+    "count": 1,
+    "position_note": "ring of continuous circular script (@Cc) running around the wheel between/inside the star rings"
+   },
+   {
+    "type": "inner_zodiac_caption",
+    "count": 1,
+    "position_note": "the @Lz set sits in the innermost zone immediately beside the central ram (12-2 o'clock inner)"
+   }
+  ],
+  "label_links": [
+   {
+    "locus": "@Lz",
+    "linked_element": "central ram figure / innermost caption",
+    "position": "inner zone adjacent to the central red ram, ~12-1 o'clock",
+    "note": "3 words; functions as the sign caption beside the Aries figure"
+   },
+   {
+    "locus": "&Lz",
+    "linked_element": "star-and-figure labels around the concentric rings",
+    "position": "the ~30 radial words distributed across both rings, read clockwise from 12 o'clock; each maps to one star/nymph slot",
+    "note": "largest label set; each short word annotates an individual star or figure in the two rings"
+   },
+   {
+    "locus": "@Cc",
+    "linked_element": "continuous circular text band of the wheel",
+    "position": "runs the full circumference as a ring of script between the figure rings",
+    "note": "~78 word tokens forming the circular inscription, not tied to a single drawn object"
+   }
+  ],
+  "legibility": "partially",
+  "confidence": 0.6,
+  "notes": "Identification of Aries is high-confidence: the central figure is a red/orange ram (quadruped with curved horns) on a green ground, and this is the second of the sequential zodiac wheels reading Pisces -> Aries -> Taurus across the foldout; the bull (Taurus) appears on the adjacent wheel to the right, confirming order. The crop z72r_A shows the ram body plus nymph figures holding stars on tethers and 8-pointed star symbols, characteristic of VMS zodiac pages where each star/figure carries a radial label. Ring count read as ~2 concentric bands of star-labels; per-ring count approx 15 (total ~30 in &Lz). Exact clock positions of individual &Lz words cannot be pinned from this resolution, and the script is undecipherable; positions are inferred from the standard VMS zodiac layout. @Cc is the circumferential running text. Legibility partial: figures and stars clearly visible, individual EVA glyph strings present in transliteration but the writing itself is unreadable. Confidence moderate overall, high on the Aries/ram identification, lower on exact ring assignment of each label."
+ },
+ "f72r1": {
+  "folio": "f72r1",
+  "identified_subject": "Zodiac volvelle for Aries (first/light Aries wheel of the f72r foldout). Central medallion shows a red-orange ram (quadruped with curved horns) standing on a green ground line; the word commonly read \"oMarS\"/\"doary\" is inscribed on the ground beneath the animal. Surrounding the medallion are concentric rings of nymph/female figures, several standing in barrel-like tubs, each associated with an 8-pointed star, and a band of circular text.",
+  "layout_topology": "concentric_rings",
+  "zodiac_sign": "Aries",
+  "month_guess": "March (first/early Aries; Aries is split across two wheels on f72r, this being the first)",
+  "ring_count": 2,
+  "elements": [
+   {
+    "type": "central_animal_ram",
+    "count": 1,
+    "position_note": "center of wheel; red-orange ram standing left-facing on a green ground line, with the ground-inscription beneath it"
+   },
+   {
+    "type": "central_inscription",
+    "count": 1,
+    "position_note": "on the green ground line directly under the ram's belly (the 'oMarS'/doary word)"
+   },
+   {
+    "type": "circular_text_band",
+    "count": 1,
+    "position_note": "annular band of script encircling the central medallion, between the ram and the figure rings (the @Cc text)"
+   },
+   {
+    "type": "nymph_figure_with_star",
+    "count": 30,
+    "position_note": "~15 figures per ring across two concentric rings, distributed clockwise around the wheel; each figure holds or sits beside an 8-pointed star, many standing in barrel/tub forms"
+   },
+   {
+    "type": "eight_pointed_star",
+    "count": 30,
+    "position_note": "one star per nymph figure, radially placed in both inner and outer rings"
+   }
+  ],
+  "label_links": [
+   {
+    "locus": "@Cc",
+    "linked_element": "circular text band encircling the central ram medallion",
+    "position": "annular ring between central animal and the figure rings; runs around the full circle",
+    "note": "81-word continuous circular inscription (Cc); reading start point uncertain, conventionally from ~12 o'clock"
+   },
+   {
+    "locus": "@Lz",
+    "linked_element": "label beside/within the central Aries medallion (figure or topmost star of the wheel)",
+    "position": "near top of wheel / adjacent to central ram, ~12 o'clock",
+    "note": "two-word zodiac label 'oshodody ofaralar'; ties to the sign-figure rather than an individual star"
+   },
+   {
+    "locus": "&Lz",
+    "linked_element": "sequence of star-labels along one of the figure rings (per-nymph degree labels)",
+    "position": "distributed around a figure ring, clockwise; multiple short tokens each sitting beside a star/nymph",
+    "note": "22 short tokens read as a run of consecutive ring labels (one per star/figure); individual token-to-star pairing not separately resolvable from this aggregated set"
+   }
+  ],
+  "legibility": "partially",
+  "confidence": 0.78,
+  "notes": "Identification of the sign (Aries) and central red ram is high-confidence from the z72r_A crop (ram on green ground with 'oMarS'-type inscription) and the leftmost wheel of pf_72r. f72r carries Aries twice (light and dark Aries); f72r1 is the first wheel. The label file only contains aggregate loci (@Cc circular band, @Lz central/sign label, &Lz a run of ring star-labels) rather than 30 individually-positioned Ls/Lz star labels, so per-star clock-angle grounding is not possible from this JSON alone; the standard Voynich zodiac roster is 30 star-labels split across an inner and outer ring (~15 each), clockwise from 12 o'clock. Ring count and per-ring count are inferred from manuscript convention plus the visible nymph-and-star arrangement, not exhaustively counted in the low-res scan. EVA tokens left untranslated per instructions."
+ },
+ "f73v": {
+  "folio": "f73v",
+  "identified_subject": "Zodiac rondel for Sagittarius. The center medallion shows a clothed standing human figure in a blue tunic and pointed/brimmed hat, holding and drawing a crossbow (the Voynich archer = Sagittarius). Surrounding the center are concentric rings of small nude/semi-nude human figures (\"nymphs\"), each paired with a star, arranged around the disk; an outer band of circular script encircles the whole. The top of the rondel carries the usual larger trio of figures.",
+  "layout_topology": "concentric_rings",
+  "zodiac_sign": "Sagittarius",
+  "month_guess": "November",
+  "ring_count": 2,
+  "elements": [
+   {
+    "type": "central_figure_archer_crossbow",
+    "count": 1,
+    "position_note": "dead center of the rondel; clothed figure in blue tunic and hat aiming a drawn crossbow to the left/lower-left"
+   },
+   {
+    "type": "star_with_nymph_figure",
+    "count": 30,
+    "position_note": "two concentric rings of small human figures each holding/attached to a star; ~15 figures per ring distributed clockwise around the full circle (standard 30 for a zodiac month rondel)"
+   },
+   {
+    "type": "top_trio_larger_figures",
+    "count": 3,
+    "position_note": "at 12 o'clock, three larger figures (heads/busts with star sprays) sitting above the main rings, the conventional crown of the rondel"
+   },
+   {
+    "type": "outer_circular_text_band",
+    "count": 1,
+    "position_note": "single continuous ring of script running around the outermost edge of the disk"
+   }
+  ],
+  "label_links": [
+   {
+    "locus": "@Lz",
+    "linked_element": "central archer figure / inner zone caption",
+    "position": "near center, beside the crossbow archer (top-of-rondel zodiac caption)",
+    "note": "Short 3-word zodiac label (okol okeody otedy). Read-order start of the zodiac labelset; grounds to the central Sagittarius figure region. Legibility moderate."
+   },
+   {
+    "locus": "&Lz",
+    "linked_element": "ring of star-nymph figures (per-figure star labels)",
+    "position": "distributed around both concentric rings, clockwise from ~12 o'clock; each word sits beside one star-bearing nymph",
+    "note": "Long 28-word run lumped under one locus rather than split per figure. These are the individual Ls/Lf star-label set, one label per nymph around the wheel. Cannot map each word to an exact clock-angle figure with confidence from this transliteration; positions are sequential around the rings."
+   },
+   {
+    "locus": "@Cc",
+    "linked_element": "outer circular text band",
+    "position": "outermost ring, running continuously around the full 360 degrees of the disk",
+    "note": "~66-word circular inscription occupying the outer band; not tied to any single drawn figure but to the rondel as a whole. Read clockwise."
+   }
+  ],
+  "legibility": "partially",
+  "ring_count_note": "",
+  "notes": "Identification of Sagittarius (crossbow archer) is high-confidence and matches the known Voynich zodiac sequence (f73v = Sagittarius/November). Ring structure: the figures form two concentric rings of star-nymphs (~30 total, the standard month count) plus a top trio. The provided labels file is coarse: it collapses all per-figure star labels into a single &Lz run and does not provide individual Ls/Lf loci or clock positions, so word-to-figure grounding for &Lz is by reading sequence only (clockwise from 12 o'clock), not exact. @Cc is the outer circular band. @Lz grounds to the central/zodiac-caption zone. Confidence on overall layout and referents is high; confidence on per-word spatial assignment within &Lz is low due to the lumped transliteration.",
+  "confidence": 0.78
+ },
+ "f1r": {
+  "folio": "f1r",
+  "identified_subject": "Opening text page of the manuscript (herbal/text section). A full page of running Voynichese prose in roughly four paragraph blocks. There is NO central figure, zodiac wheel, ring system, nymph/basin scene, or pharma container. The only graphic content is faint, faded green vegetal/leaf-like color splotches in the upper-central area (decorative foliage stains, not a labeled drawing) and a few decorated maroon/red paragraph-initial flourishes in the left margin (gallows-like initials beginning the 2nd and 3rd paragraphs).",
+  "layout_topology": "other",
+  "elements": [
+   {
+    "type": "text_paragraph_block",
+    "count": 4,
+    "position_note": "Four main blocks of running text filling the page top-to-bottom; a long top block, two short mid blocks, and a lower block."
+   },
+   {
+    "type": "decorated_paragraph_initial",
+    "count": 2,
+    "position_note": "Maroon/red flourished gallows initials in the left margin at the start of the 2nd (~33% down) and 3rd (~42% down) paragraphs."
+   },
+   {
+    "type": "faded_green_foliage_splotch",
+    "count": 1,
+    "position_note": "Diffuse pale-green leaf-like color stains across the upper-central region (~25-50% down, center), likely decorative/offset rather than a delineated plant."
+   },
+   {
+    "type": "stray_marginal_character",
+    "count": 3,
+    "position_note": "Isolated single glyphs (the 'd','g','r' loci) sitting outside the main text columns / at line ends; not annotations of any drawing."
+   }
+  ],
+  "label_links": [
+   {
+    "locus": "@Lx",
+    "linked_element": "no drawn referent (text-only page); isolated stray glyphs d/g at a line end or margin, not grounded to any figure",
+    "position": "right edge / line-terminal area of the upper text block",
+    "note": "Lx is a non-standard/stray label locus; single-character 'words' (d, g). No diagram element to ground to."
+   },
+   {
+    "locus": "+Lx",
+    "linked_element": "no drawn referent; isolated stray glyph r, not grounded to any figure",
+    "position": "margin / line-terminal area",
+    "note": "Single character 'r'. Ungroundable on this text-only folio."
+   }
+  ],
+  "legibility": "illegible",
+  "confidence": 0.9,
+  "month_guess": null,
+  "zodiac_sign": null,
+  "ring_count": null,
+  "notes": "f1r is the manuscript's opening page and belongs to the text/herbal section, NOT zodiac, balneo, pharma, or cosmo. There is no diagram to ground labels to: no central animal, no concentric star rings, no radial spokes, no nymphs/basins/tubes, no jars or plant-parts. The only imagery is faded green foliage-like color staining (upper center) and two decorated maroon paragraph-initial flourishes in the left margin. The labels JSON holds only two pseudo-loci (@Lx, +Lx) with single stray characters (d, g, r); these are marginal/line-terminal stray glyphs with no drawn referent, so spatial grounding to a figure is not possible. High confidence on the section identification (this is one of the most recognizable pages in the manuscript); legibility marked 'illegible' because the script is undeciphered and there are no figure-labels to read. The extra image files, if present, would be crops of this same text page."
+ },
+ "f72v1": {
+  "folio": "f72v1",
+  "identified_subject": "Zodiac roundel (right-hand circle on folio 72v). Center: a single standing female figure in a blue gown with a blue head-covering, holding a star-tipped staff/spindle, with a blue dotted 'spray' of rays fanning to her right and an 8-pointed star at her left. A brown-ink later cleartext gloss (a month-name annotation) sits at the lower-left of this figure. Around the center are two concentric rings of nude nymph figures, each figure beside/holding an 8-pointed star; many inner-ring figures also show small crescent shapes. This is the canonical Voynich zodiac-medallion layout (central personification + two rings of star-holding nymphs).",
+  "layout_topology": "concentric_rings",
+  "ring_count": 2,
+  "zodiac_sign": "Leo",
+  "month_guess": "July/August",
+  "elements": [
+   {
+    "type": "central_personification_figure",
+    "count": 1,
+    "position_note": "dead center; blue-robed female holding star-tipped staff/spindle, blue dotted ray-spray to her right (~3-4 o'clock side), 8-pointed star at her left (~9 o'clock)"
+   },
+   {
+    "type": "central_cleartext_month_gloss(brown ink)",
+    "count": 1,
+    "position_note": "lower-left of central figure, ~7-8 o'clock just outside her skirt; a later non-EVA annotation, not part of the cipher text"
+   },
+   {
+    "type": "inner_ring_nymph_with_star",
+    "count": 15,
+    "position_note": "inner concentric ring of standing nude nymphs, each beside an 8-pointed star; ~15 figures spaced clockwise from 12 o'clock; several show crescent shapes"
+   },
+   {
+    "type": "outer_ring_nymph_with_star",
+    "count": 15,
+    "position_note": "outer concentric ring of standing nude nymphs, each beside an 8-pointed star; ~15 figures spaced clockwise from 12 o'clock"
+   },
+   {
+    "type": "8_pointed_stars",
+    "count": 30,
+    "position_note": "one star per ring-nymph across both rings, plus one beside the central figure"
+   },
+   {
+    "type": "circular_text_band",
+    "count": 1,
+    "position_note": "arc band of running text following the rings (the @Cc set); curves with the outer/inner ring perimeter"
+   }
+  ],
+  "label_links": [
+   {
+    "locus": "@Cc",
+    "linked_element": "circular running-text band that arcs along the ring(s)",
+    "position": "follows the ring perimeter as a continuous band; reading-order runs around the circle (clockwise from ~12 o'clock); 75 words is consistent with a full circular gloss spanning the whole rim rather than individual figures",
+    "note": "This is band text, not per-figure labels. Not groundable to one drawn object; spans the entire circumference."
+   },
+   {
+    "locus": "@Lz",
+    "linked_element": "zodiac figure label(s) beside ring nymph(s)",
+    "position": "a short 2-word label group sitting beneath/beside an individual nymph; one of the per-figure star-labels (cannot pin the exact clock-angle nymph from this scan)",
+    "note": "Lz = zodiac label. Two words = label for a single figure (figure name + a modifier). Legible as glyph-forms but exact host nymph not resolvable."
+   },
+   {
+    "locus": "&Lz",
+    "linked_element": "the set of per-figure star-labels for the ring nymphs",
+    "position": "distributed one-per-nymph beneath/beside the standing figures around both rings, clockwise from 12 o'clock; 28 words across ~one ring's worth of figures",
+    "note": "Lz = zodiac label. Each word grounds to the small star/nymph it sits under; the list is the ordered ring of figure labels. Individual word-to-nymph pairing is not separately encoded in this labelset, so each word maps to one successive figure around the ring but I cannot certify which word = which clock position from the scan."
+   }
+  ],
+  "legibility": "partially",
+  "notes": "Drawing structure is high-confidence: central blue-robed female personification with star-staff and ray-spray, two concentric rings of nude nymphs each holding an 8-pointed star (~15 per ring, ~30 total), with a circular text band (@Cc) and per-figure zodiac labels (@Lz, &Lz). Star-figures are clear; the EVA labels are visible as glyph-strings but I did not (and was asked not to) translate them. Sign/month is LOWER confidence: no large distinct zodiac emblem-animal (lion/crab/twins) is legibly drawn at center in this scan to confirm the sign directly. I assign Leo (July/Aug) from sequence/concordance position (the two 72v roundels fall in the Cancer\u2013Leo span of the Voynich zodiac), reinforced by the brown-ink month-gloss beside the central figure (a later cleartext annotation whose exact letters I cannot fully resolve here). Ring figure counts (~15 each) are estimated from the visible arcs; the manuscript fold and faint ink make exact counts approximate. @Cc is band text spanning the whole rim, not a per-object label.",
+  "confidence": 0.55
+ },
+ "f88r": {
+  "folio": "f88r",
+  "identified_subject": "Pharmaceutical herbal page. The left margin holds a vertical column of three ornate apothecary containers (albarelli / stacked pharmacy jars, banded in red, green and white). The main right-hand area is organized in three horizontal registers, each combining a row of detached, disembodied plant parts (brown taproots and rootstocks, with green leaves/leaf-sprays) above a block of running text. Top register: a row of ~6 hanging roots/leaf-tufts with small inline labels above them. Middle register: a row of root-and-leaf specimens (including a wavy/feathery root mass) above text. Lower register: a single rooted plant with radiating leaves at center plus a large feathery/grass-like leaf spray to the right, above text. No zodiac, no nymphs, no astronomical rings.",
+  "layout_topology": "rows",
+  "elements": [
+   {
+    "type": "apothecary_jar_container",
+    "count": 3,
+    "position_note": "left margin, vertical column top-to-bottom; ornate stacked pharmacy vessels (albarelli), red/green/white banded; not directly labeled by the listed loci"
+   },
+   {
+    "type": "detached_root_specimen",
+    "count": 6,
+    "position_note": "top register, horizontal row of brown taproots/rootstocks with green leaf-tufts; the Lf inline labels sit above these"
+   },
+   {
+    "type": "detached_root_and_leaf_specimen",
+    "count": 5,
+    "position_note": "middle register row, including a wavy feathery root mass center; one short label (otorcho-type) sits to the right above the foliage"
+   },
+   {
+    "type": "rooted_plant_with_leaves",
+    "count": 1,
+    "position_note": "lower-left register, single plant with radiating leaves and exposed root; small label above it"
+   },
+   {
+    "type": "feathery_leaf_spray",
+    "count": 1,
+    "position_note": "lower-right register, large grass/fern-like leaf spray extending to right margin"
+   }
+  ],
+  "label_links": [
+   {
+    "locus": "@Lf",
+    "linked_element": "row of detached plant-part specimens (roots + leaf tufts) in the top register",
+    "position": "top register, small script written inline above/between the ~6 hanging roots, reading left-to-right across the row from approx 20% to 90% page width; the multiple word-tokens (oral, orald, oldar, otoky, otaly, oram, dary, okol, sorory, otyda, otor, am, ofaldo) function as individual specimen labels naming successive plant parts in the row",
+    "note": "Lf = label-on-figure; these are the most groundable labels, each token sitting beside one drawn root/leaf specimen. Legibility poor; token-to-specimen one-to-one mapping is inferred from position, not confirmed glyph-by-glyph."
+   },
+   {
+    "locus": "@Lc",
+    "linked_element": "plant-part specimen(s) in the middle/upper register (label-variant, short caption set)",
+    "position": "upper-middle area; a short cluster of 3 tokens (otorchety, otaldy, ofyskydal) sitting above a specimen, right portion of a row",
+    "note": "Lc = label variant; a small caption group attached to a specimen rather than to a jar. Position within the register is approximate."
+   }
+  ],
+  "legibility": "partially",
+  "confidence": 0.5,
+  "zodiac_sign": null,
+  "month_guess": null,
+  "ring_count": null,
+  "notes": "Pharmaceutical section folio: layout is rows of detached plant parts with a left-margin column of apothecary jars, not a circular/zodiac diagram, so no rings, spokes, nymphs, or zodiac sign apply. The label JSON gives only two loci groups (@Lc with 3 tokens and @Lf with 13 tokens). The @Lf group is best read as a sequence of per-specimen names running left-to-right across the top register's row of roots; with ~6 visible specimens but 13 tokens, some specimens likely carry two-word labels or the row continues across registers. The three left-margin jars are the most iconographically distinctive elements but are NOT explicitly tied to any locus in the provided JSON, so I did not force a jar-to-label link. Confidence is moderate (0.5): the rows-of-roots-plus-jars identification is solid, but exact token-to-specimen grounding is positional inference because the script is faint/illegible in this single scan and no detail crops of f88r were provided. Clock-angles are not meaningful here; positions given as register (row) + left/right and approximate page-width percentage."
+ },
+ "f80r": {
+  "folio": "f80r",
+  "identified_subject": "Balneological/biological-section text page. The drawing is a single horizontal top register containing a row of about 10-12 nude female figures (nymphs), several wearing crowns/diadems, standing on or emerging from an undulating ground/water bank. Each nymph has a short EVA label written in the gap above or beside her head. Below the figures the folio is almost entirely dense running text (no rings, no diagram). Small marginal vessel-like objects appear at the lower-left margin (a stemmed vessel with hanging strands) and lower-right margin (a basket/vessel on a stem with dangling tendrils), but the JSON labels do not annotate these. No zodiac wheel, no concentric rings, no radial spokes.",
+  "layout_topology": "scattered_near_figures",
+  "elements": [
+   {
+    "type": "nymph (nude female figure, several crowned)",
+    "count": 11,
+    "position_note": "single horizontal row across the very top of the folio, left edge to right edge; standing on an undulating ground/water line; figures at right partly emerge from behind a curved bank"
+   },
+   {
+    "type": "label-on-figure (EVA word written above/beside a nymph's head)",
+    "count": 9,
+    "position_note": "in the gaps between/above the nymphs' heads in the top row; reading-order left to right"
+   },
+   {
+    "type": "marginal vessel/container",
+    "count": 2,
+    "position_note": "one at lower-left margin (stemmed vessel with hanging strands) and one at lower-right margin (basket-like vessel on a stem with dangling tendrils); not labeled in the JSON"
+   },
+   {
+    "type": "folio number '80'",
+    "count": 1,
+    "position_note": "upper-right area, written in ink among the top-row figures"
+   }
+  ],
+  "label_links": [
+   {
+    "locus": "@Ln",
+    "linked_element": "a single crowned nymph in the top row (label-on-figure)",
+    "position": "top register; the '@' marker denotes the first/lead label position, near the left-of-center crowned figure, ~11 o'clock of the row",
+    "note": "EVA 'yoraly'; isolated single-word label, legible as written; mapping to a specific nymph is inferred from reading order, medium confidence"
+   },
+   {
+    "locus": "=Ln",
+    "linked_element": "the main run of nymphs across the top row (multiple labels-on-figures)",
+    "position": "top register, spanning roughly the left-center to center-right of the row (~10 to ~2 o'clock across the horizontal band)",
+    "note": "six EVA words (olchdy, okaly, okolo, okory, opor, otalshedy); these are the dense cluster of short labels written above successive nymph heads left-to-right; individual word-to-nymph pairing not certain, labels themselves legible, position confident"
+   },
+   {
+    "locus": "~Ln",
+    "linked_element": "two adjacent nymphs in the top row (labels-on-figures)",
+    "position": "top register, leftmost end of the row near the left margin/gutter (~9 o'clock of the band)",
+    "note": "EVA 'olky', 'okar'; small two-word group, the '~' marker groups a separate adjacent pair, low-to-medium confidence on exact figures"
+   },
+   {
+    "locus": "+Ln",
+    "linked_element": "a single nymph at the right side of the top row (the crowned figure beside the curved bank)",
+    "position": "top register, right of center near the '80' folio number / the right-hand crowned nymph (~2-3 o'clock of the band)",
+    "note": "EVA 'otan'; matches the short label 'ottno' visible beside the right crowned nymph emerging from the bank; medium confidence"
+   }
+  ],
+  "legibility": "labels_legible",
+  "confidence": 0.6,
+  "month_guess": null,
+  "ring_count": null,
+  "zodiac_sign": null,
+  "notes": "f80r is NOT a zodiac or cosmological folio; it is a balneological/biological-section text page. The only figural drawing is a top-row frieze of nude nymphs (several crowned) standing on an undulating water/ground line, plus two small unlabeled marginal vessels at the lower left and lower right. All four label loci are Ln (label-variant) words sitting in the spaces above the nymphs in the top register, reading left to right; the @ = ~ + prefixes are transliteration position-group markers within that single horizontal row, not separate diagram zones. No concentric rings, radial spokes, Cc/Ri/Ro circular text, basins or tubes with their own labels are present. Individual EVA-word-to-individual-nymph pairing is uncertain because the labels are written compactly in the gaps; the row-level grounding (which cluster sits over which span of figures) is reliable. Confidence on overall scene identification and label register is high; confidence on one-to-one nymph assignment is moderate."
+ },
+ "f72r3": {
+  "folio": "f72r3",
+  "identified_subject": "Zodiac wheel for Aries: a central red-orange ram (quadruped) standing on a green grassy mound, set in a circular medallion. Around it run concentric bands of circular script and rings of star-labels, each star accompanied by a clothed standing figure/nymph (some in tubs/with crowns). This is the Aries diagram (one of the two Aries folios; the second zodiac wheel from the left in the foldout pf_72r).",
+  "layout_topology": "concentric_rings",
+  "zodiac_sign": "Aries",
+  "month_guess": "April",
+  "ring_count": 2,
+  "elements": [
+   {
+    "type": "central_zodiac_figure_ram",
+    "count": 1,
+    "position_note": "Center medallion: red/orange ram standing left-to-right on green grass, with a short word-caption written directly beneath/beside its body (visible in z72r_Aword crop as a 'Mon'-like cluster on the green groundline)."
+   },
+   {
+    "type": "central_word_caption",
+    "count": 1,
+    "position_note": "Tiny inscription tucked under the ram's belly on the green groundline, center of medallion."
+   },
+   {
+    "type": "circular_band_text",
+    "count": 1,
+    "position_note": "Ring(s) of running script encircling the central medallion between the ram and the star figures (the @Cc circular text)."
+   },
+   {
+    "type": "star_with_figure",
+    "count": 30,
+    "position_note": "Two concentric rings of stars, each star tethered to a small clothed standing figure/nymph holding or pointing at the star; roughly evenly spaced around the wheel, ~15 per ring."
+   },
+   {
+    "type": "nymph_figures",
+    "count": 30,
+    "position_note": "One per star, alternating orientation (some upright, some inverted toward the lower arc), distributed around inner and outer rings."
+   }
+  ],
+  "label_links": [
+   {
+    "locus": "@Cc",
+    "linked_element": "circular_band_text encircling the central ram medallion",
+    "position": "Full 360-degree ring band between the central Aries ram and the surrounding star-figures; reads continuously clockwise.",
+    "note": "~120 words; this is the long running ring text, not discrete labels. Identified by length and @Cc (circular) role."
+   },
+   {
+    "locus": "&Lz",
+    "linked_element": "star-labels paired with the ring of nymph/figure star-bearers",
+    "position": "Distributed around the wheel beside each star+figure, one short word-group per star, spanning both concentric rings clockwise from ~12 o'clock.",
+    "note": "~43 word-groups, consistent with one label per star/figure around the rings; the primary zodiac star-label set."
+   },
+   {
+    "locus": "@Lz",
+    "linked_element": "a single star/figure label or the medallion-edge caption",
+    "position": "One discrete short label (4 words) set beside one figure or just outside the central medallion.",
+    "note": "Short isolated label; exact clock position not resolvable from the available crops."
+   }
+  ],
+  "legibility": "partially",
+  "notes": "Central sign is unambiguously a ram = Aries (red quadruped on green ground), consistent with zodiac ordering Pisces->Aries->Taurus and with this being the second wheel in the pf_72r foldout (a Taurus/bull wheel appears further right). The script glyphs are visible but undecipherable (EVA transliteration only). Ring count read as two concentric rings of star-bearing figures; per-star counts (~15/ring, 30 total) are approximate from the scan and crop \u2014 individual stars are hard to count precisely on the lower arc where figures are inverted. The @Cc/&Lz/@Lz split maps cleanly to: long circular band text, the bulk of discrete star labels, and one small isolated label respectively. Precise clock-angle for each &Lz word-group cannot be assigned without a per-label coordinate source; only ring membership and approximate distribution are confident.",
+  "confidence": 0.6
+ },
+ "f99v": {
+  "folio": "f99v",
+  "identified_subject": "Pharmaceutical page: a left-margin column of stacked apothecary jars/containers (red-and-blue banded ornamental vessels) and, filling the rest of the page, several horizontal rows of disembodied plant parts drawn as labeled specimens (roots, rootlets, leaf sprays, twiggy/feathery fronds, a few colored leaves), with a large green leafy plant with spreading radial roots occupying the bottom-right corner.",
+  "layout_topology": "rows",
+  "elements": [
+   {
+    "type": "apothecary_jar/container",
+    "count": 4,
+    "position_note": "Left margin, stacked vertically: one near top, one upper-mid, one lower-mid, one near bottom. Tall ornamental banded vessels (blue rim, red/blue body bands) typical of pharma section."
+   },
+   {
+    "type": "plant_part_specimen (root/rootlet/leaf-spray/frond)",
+    "count": 14,
+    "position_note": "Arranged in roughly 4 horizontal rows across the central and right area, each specimen a free-floating root, sprig, or leaf cluster with a label written above or beside it."
+   },
+   {
+    "type": "large_leafy_plant_with_radial_roots",
+    "count": 1,
+    "position_note": "Bottom-right corner; green spreading leaves above a fan of radiating root fibers. Largest drawn element, appears unlabeled or only loosely associated with nearby text."
+   }
+  ],
+  "label_links": [
+   {
+    "locus": "@Lc",
+    "linked_element": "Cluster label / row heading near the upper plant-part rows (4 words: otaramy okoldody darolaly dralas)",
+    "position": "Upper region, center-left, sitting as a grouped caption above/beside the first rows of specimens rather than touching a single object",
+    "note": "Lc = generic cluster/caption label; not cleanly tied to one specimen. Medium-low confidence on exact object."
+   },
+   {
+    "locus": "@Lf",
+    "linked_element": "The series of individual plant-part specimens (roots, sprigs, leaf-sprays) across the rows; each of the 22 Lf words labels one adjacent drawn specimen",
+    "position": "Distributed left-to-right, top-to-bottom across the 4 specimen rows; each word sits immediately above or to the right of its specimen",
+    "note": "Lf = label-on-figure. 22 words correspond roughly one-per-specimen to the ~14 visible specimens plus the jars/large plant; exact word-to-object pairing is only partially recoverable from the scan. Words otoldy/otorchy/oldy near top row, darary/otaly/olsy/arol/otoky mid rows, etc. Medium confidence on row assignment, low on individual pairings."
+   }
+  ],
+  "legibility": "partially",
+  "confidence": 0.55,
+  "zodiac_sign": null,
+  "month_guess": null,
+  "ring_count": null,
+  "notes": "Pharmaceutical section folio (not zodiac/cosmo/balneo), so no rings, spokes, nymphs, or zodiac sign apply. Structure is row-based: a vertical stack of ~4 banded apothecary jars down the left margin, and ~14 free-floating plant-part specimens (roots, rootlets, feathery fronds, leaf-sprays, some red/brown and green colored) arranged in about 4 horizontal rows, each captioned by an adjacent Lf label. A large green leafy plant with a radiating root fan dominates the bottom-right corner. Two labelsets only: @Lc is a 4-word grouped caption in the upper specimen region (not bound to a single object), and @Lf is the running set of 22 on-figure labels that annotate the individual specimens left-to-right and top-to-bottom. Body text (paragraph lines between rows) is the main running script, distinct from these labels. Legibility partial: object placement clear, but precise word-to-specimen mapping is uncertain because specimens outnumber neat label slots and the script is undeciphered. Confidence moderate for overall layout/role, low for individual Lf-to-object pairings."
+ },
+ "f83v": {
+  "folio": "f83v",
+  "identified_subject": "Balneological scene: two nymphs flanking a pair of large green pools/basins joined by braided, segmented tube-conduits that cross in the center. Left nymph stands in a woven tub/barrel; right nymph connects to a green tube emptying into the basin. Heavy surrounding text paragraphs above and below; additional nymph groups in margins.",
+  "layout_topology": "scattered_near_figures",
+  "elements": [
+   {
+    "type": "nymph_figure",
+    "count": 2,
+    "position_note": "central register: one nymph at left (~9 o'clock of basins) standing in a tub, one nymph at right (~3 o'clock) feeding/holding a green tube into the basin"
+   },
+   {
+    "type": "green_basin_pool",
+    "count": 2,
+    "position_note": "two large green circular pools occupying the center, side by side"
+   },
+   {
+    "type": "braided_segmented_tube",
+    "count": 2,
+    "position_note": "two woven/segmented conduits crossing in an X over and between the two basins, descending toward bottom text"
+   },
+   {
+    "type": "woven_tub_barrel",
+    "count": 1,
+    "position_note": "at the feet of the left nymph, lower-left of the basins"
+   },
+   {
+    "type": "green_tube_conduit",
+    "count": 1,
+    "position_note": "right side, leading from the right nymph into the right basin"
+   }
+  ],
+  "label_links": [
+   {
+    "locus": "@Lt",
+    "linked_element": "left nymph standing in the woven tub/barrel",
+    "position": "to the immediate right of the left nymph, at ~9 o'clock relative to the basins, beside her hip/tub",
+    "note": "Three-word label group (EVA: ololary okarchy okaiin). Clearly legible glyph forms; sits in the open space between the left nymph and the left green basin, annotating that figure/tub assembly."
+   },
+   {
+    "locus": "@Ln",
+    "linked_element": "right nymph with the green tube/conduit into the basin",
+    "position": "to the left of the right nymph, at ~3 o'clock relative to the basins",
+    "note": "Single-word label (EVA: okchdy) placed in the gap between the right basin and the right nymph; annotates the right figure / her tube. Legible but smaller/fainter than the left group."
+   }
+  ],
+  "legibility": "labels_legible",
+  "zodiac_sign": null,
+  "month_guess": null,
+  "ring_count": null,
+  "confidence": 0.78,
+  "notes": "Biological/balneological folio, not zodiac or cosmological, so no rings or radial text. Only two label loci present, both of locus-on-figure type (Lt/Ln variants), each sitting beside one of the two flanking nymphs of the central pool-and-tube scene rather than on a circular diagram. @Lt (3 words) grounds to the left nymph standing in a woven tub; @Ln (1 word) grounds to the right nymph and her green tube feeding the basins. The bulk of the page is running paragraph text (not labels). Confidence is high on figure association and legibility of glyph shapes; lower only on which sub-element (figure vs. her tube vs. basin) each label is meant to single out, since balneo labels are typically placed near a figure cluster generally. Crops used: /tmp/83v_band_big.jpg (central scene), /tmp/83v_left_big.jpg (left label+tub), /tmp/83v_right_big.jpg (right nymph/tube)."
+ },
+ "f77v": {
+  "layout_topology": "scattered_near_figures",
+  "folio": "f77v",
+  "identified_subject": "Biological/balneological text page. Dominated by ~30 lines of dense script in two paragraph pours with marginal drawings; NOT a zodiac or cosmological ring diagram. Left margin: a vertical column of nude nymph figures, each in/on a basin, tub or barrel-like banded vessel (some lost in the gutter). Right margin: a reclining nymph atop a long horizontal tube/pool at top, then a multi-loop coiled serpentine conduit (snake/intestine-like tube) beside a standing nymph who holds the coil's end, with more nymphs below. A crowned/head-dressed nymph appears lower-left. No central figure, no zodiac animal.</identified_subject>\n<parameter name=\"zodiac_sign\">null",
+  "month_guess": null,
+  "ring_count": null,
+  "legibility": "partially",
+  "confidence": 0.45,
+  "elements": [
+   {
+    "type": "nymph_figure",
+    "count": 6,
+    "position_note": "Nude females: ~3-4 stacked down the LEFT margin (some in the gutter), each in/on a vessel; a reclining nymph top-right; a standing nymph mid-right beside the coiled tube; one crowned nymph lower-left."
+   },
+   {
+    "type": "basin_or_vessel",
+    "count": 4,
+    "position_note": "Tub/barrel/basket-like banded containers beneath the left-margin nymphs."
+   },
+   {
+    "type": "tube_or_conduit",
+    "count": 2,
+    "position_note": "Horizontal tube/pool the top-right nymph reclines on (~1 o'clock); multi-loop coiled serpentine conduit mid-right (~3 o'clock)."
+   },
+   {
+    "type": "text_block",
+    "count": 2,
+    "position_note": "Body text in two paragraph pours filling the page between left and right marginal figures."
+   }
+  ],
+  "label_links": [
+   {
+    "locus": "@Ln",
+    "linked_element": "left-margin nymph in a basin/barrel vessel",
+    "position": "left margin, mid-height (~9 o'clock), beside the figure column near the lower text pour",
+    "note": "words sosoral/oleoeder; beside the left-column nymph-in-vessel figures. Binding moderate confidence (gutter crowding)."
+   },
+   {
+    "locus": "=Lt",
+    "linked_element": "top-right reclining nymph on horizontal tube and adjacent coiled serpentine tube",
+    "position": "upper-right margin; olerchas/orchedal above the reclining nymph (~1 o'clock); otol-like word above the standing nymph at the coil end (~3 o'clock)",
+    "note": "words olkeedal/orchedal/otol/shedy; 'olerchas' and 'otol' legible. Moderate-high confidence."
+   },
+   {
+    "locus": "@Lt",
+    "linked_element": "uppermost figure group (top reclining nymph / top vessel figures)",
+    "position": "upper margin near top reclining nymph and uppermost left vessel (~11-1 o'clock)",
+    "note": "words okain/ykal/okalo/otolor; remaining top label group, single-figure binding lower confidence."
+   }
+  ],
+  "notes": "f77v is a biological-section text page, not a zodiac/cosmo folio, so ring_count, zodiac_sign, month and radial/Cc structure are N/A. Only 3 short label-on-figure groups (@Lt, =Lt, @Ln) attach to marginal nymph-and-vessel drawings; the rest is body text. 'olerchas' (top-right) and an 'otol'-like word (snake-coil terminus) sit legibly beside their figures; 'sosoral/oleoeder' sits beside the in-gutter left nymph column. Clock positions are relative to the whole page (12=top). Confidence moderate: words cannot be matched 1:1 to individual nymphs given gutter crowding. Images: /Users/user/Documents/Dev/voynich/bal_77v.jpg and crops /tmp/lm.png, /tmp/rm.png, /tmp/r_top.png, /tmp/r_snake.png."
+ },
+ "f73r": {
+  "folio": "f73r",
+  "identified_subject": "Zodiac wheel for Scorpio. The central medallion holds a green-and-blue painted quadruped with an open snout, four legs and a long looping/curled tail \u2014 the Voynich manuscript's idiosyncratic rendering of Scorpio as a lizard/salamander-like creature rather than a scorpion. An eight-pointed star sits just above and behind the animal's back. A later-hand German marginal month name \"Nove[m]b[er]\" (November) is inked directly below the central animal, confirming the Scorpio = November assignment. Concentric rings of human figures (nymphs, mostly nude, some clothed/crowned) each holding or beside an eight-pointed star radiate outward, with bands of circular EVA text between and around the rings.",
+  "zodiac_sign": "Scorpio",
+  "month_guess": "November",
+  "layout_topology": "concentric_rings",
+  "ring_count": 2,
+  "elements": [
+   {
+    "type": "central_zodiac_animal",
+    "count": 1,
+    "position_note": "Center of wheel: green/blue quadruped (Voynich Scorpio) with open mouth and long curled tail, facing left; an 8-pointed star above its back."
+   },
+   {
+    "type": "month_inscription_later_hand",
+    "count": 1,
+    "position_note": "Directly beneath the central animal, brown ink cursive 'Nove[m]b[er]' (November) \u2014 a later annotator's gloss, NOT EVA script."
+   },
+   {
+    "type": "nymph_figure_with_star",
+    "count": 30,
+    "position_note": "Two concentric rings of standing human figures, each paired with an 8-pointed star, encircling the center. Roughly 15 figures in the inner ring and 15 in the outer ring (standard 30 star-labels for a single zodiac folio)."
+   },
+   {
+    "type": "eight_pointed_star",
+    "count": 30,
+    "position_note": "One star per nymph, distributed around both rings; also one star at the very center beside the animal."
+   },
+   {
+    "type": "circular_text_band",
+    "count": 3,
+    "position_note": "Bands of circular EVA text running between the inner ring, outer ring, and the outermost margin (Cc rings)."
+   }
+  ],
+  "label_links": [
+   {
+    "locus": "@Lz",
+    "linked_element": "central Scorpio animal / inner zodiac label",
+    "position": "center of wheel, beside the green-blue quadruped (12 o'clock relative to the animal, near the central star)",
+    "note": "Three short tokens (otoly/otaly/okary). Most plausibly the inner sign-label(s) tied to the central animal; cannot localize each token to a precise clock-angle from the scan. Distinct from the later-hand 'November' gloss, which is non-EVA."
+   },
+   {
+    "locus": "&Lz",
+    "linked_element": "the 30 nymph-with-star figures across both concentric rings",
+    "position": "distributed around inner and outer rings, clockwise from 12 o'clock",
+    "note": "27 tokens \u2014 the per-figure star/zodiac labels written next to each nymph holding a star. Sequence is the reading order around the rings (top/12 o'clock proceeding clockwise), but individual token-to-figure pairing is not confidently resolvable at this resolution. Token count (27) is slightly under the ~30 figures, consistent with a few labels being merged/omitted in transliteration."
+   },
+   {
+    "locus": "@Cc",
+    "linked_element": "circular running text bands between/around the rings",
+    "position": "curved text following the ring circumferences (concentric annular bands)",
+    "note": "67 tokens of circular text occupying the annular gaps between the inner ring, outer ring, and outer margin; reads along the curvature rather than annotating a single object."
+   }
+  ],
+  "legibility": "partially",
+  "confidence": 0.72,
+  "notes": "Subject ID (Scorpio/November) is high confidence: the central lizard-like quadruped is the well-known Voynich Scorpio, and a later-hand German month gloss 'November' is legibly inked beneath it (visible in z73r_center.jpg and z73r_word.jpg). The folio sits in the expected zodiac order (Pisces->Aries->...->Scorpio = Nov). Ring structure: two concentric rings of nymphs each holding an 8-pointed star, ~15 per ring (~30 total, the standard count for one zodiac sign), surrounded by 3 circular text bands. EVA labels themselves are undeciphered and individual token-to-figure grounding is low confidence due to scan resolution and dense overlapping ring text; positions given are by ring/zone and reading order (clockwise from 12 o'clock) rather than exact per-figure angles. The @Lz triplet is the inner sign label near the animal; &Lz are the per-figure star labels; @Cc is the curved circular text in the annular bands."
+ },
+ "f70v2": {
+  "folio": "f70v2",
+  "identified_subject": "Zodiac wheel medallion for Aries (the Ram): a small roundel containing a horned goat/ram-like quadruped standing on a wavy blue ground-line, browsing/eating a green bush or shrub it holds to its mouth. The roundel is set into the larger f70v wheel whose innermost center holds the two Pisces fish (f70v1, inscribed 'Mars'). A marginal Latin/Romance gloss 'abril' (April) is written beneath the ram, confirming the month association. Surrounding the medallions are concentric rings of star-holding nymphs/busts, each with a short label, plus a band of circular inscription text.",
+  "layout_topology": "concentric_rings",
+  "zodiac_sign": "Aries",
+  "month_guess": "April",
+  "ring_count": 2,
+  "elements": [
+   {
+    "type": "central_animal_aries_ram",
+    "count": 1,
+    "position_note": "Horned ram/goat quadruped at center of the f70v2 sub-roundel (lower-left of overall wheel in full scan), facing left, eating a green bush; stands on a blue wavy water/ground line. This is the Aries figure."
+   },
+   {
+    "type": "central_pisces_fish",
+    "count": 2,
+    "position_note": "Two fish head-to-tail in the innermost center of the overall f70v wheel (this is f70v1), with marginal inscription 'Mars'; included for context as the adjacent medallion."
+   },
+   {
+    "type": "marginal_month_gloss",
+    "count": 1,
+    "position_note": "'abril' (April) written in brown ink directly beneath the ram inside the roundel; a non-EVA Latin/Romance hand."
+   },
+   {
+    "type": "star_nymph_busts_outer_ring",
+    "count": 15,
+    "position_note": "Outer ring of half-length nymph/bust figures each holding a star, distributed clockwise from ~12 o'clock around the full wheel; each carries one short label."
+   },
+   {
+    "type": "star_nymph_busts_inner_ring",
+    "count": 15,
+    "position_note": "Inner ring of star-holding nymph busts, interleaved inside the outer ring, clockwise from 12 o'clock; each carries one short label."
+   },
+   {
+    "type": "circular_inscription_band",
+    "count": 1,
+    "position_note": "Running band of circular text (Cc) forming a ring around the wheel between the figure rings."
+   }
+  ],
+  "label_links": [
+   {
+    "locus": "@Cc",
+    "linked_element": "circular_inscription_band",
+    "position": "ring band running clockwise around the wheel; ~100 word-tokens forming the continuous circular text",
+    "note": "Role=circular (Cc). This is the long ring inscription, not tied to a single figure; it threads between/around the star-nymph rings."
+   },
+   {
+    "locus": "&Lz",
+    "linked_element": "star_nymph_busts (both rings)",
+    "position": "sequence of ~33 short labels, one beside each star-holding nymph bust, read clockwise from ~12 o'clock across the two concentric rings",
+    "note": "Role=label (Lz). These are the per-nymph zodiac decan labels; count (~33) is consistent with the canonical 30 nymph-labels plus a few overflow tokens."
+   },
+   {
+    "locus": "@Lz",
+    "linked_element": "star_nymph_bust (single, or month/center label)",
+    "position": "4-token short label adjacent to one figure/segment of the ring",
+    "note": "Role=label (Lz). A small isolated label group; likely a single nymph label or a segment/month label distinct from the main &Lz run. Lower confidence on exact figure."
+   }
+  ],
+  "legibility": "partially",
+  "notes": "Central pictogram is unambiguous as the Aries ram (horns, browsing on a green bush, standing on water) and the 'abril' gloss fixes the month as April, consistent with the Pisces-to-Aries-to-Taurus running order (f70v1 Pisces -> f70v2 Aries). The EVA tokens themselves are undeciphered and not translated here. Ring count of 2 (inner+outer nymph rings) and ~15-per-ring is the standard Voynich zodiac layout inferred from the full scan; exact per-nymph label-to-figure pairing cannot be resolved at this resolution because the f70v2 Aries roundel is a small inset and individual nymph labels blur together. The @Cc circular band is legible as discrete words but spatially is a continuous ring rather than per-figure. Confidence is high on subject/month identification, moderate on ring counts, lower on which individual nymph each &Lz/@Lz token annotates.",
+  "confidence": 0.6
+ },
+ "f82r": {
+  "folio": "f82r",
+  "identified_subject": "Balneological (biological-section) folio: text-dominant page with marginal nymph figures and a large green bathing pool along the bottom. Top margins show nymphs in/beside tub-vessels and an ornamental baluster/column conduit apparatus. A middle band shows a nymph holding out a small cup connected by a horizontal tube/conduit to two cylindrical containers (tall vessel above, basin below), ending in a wavy liquid spray and a star/sun-rosette cog. The bottom shows a row of nymph busts emerging from a scalloped green pool, plus a nymph bending over a blue-water barrel at lower right. Each label sits beside/under a specific nymph or vessel.",
+  "layout_topology": "scattered_near_figures",
+  "elements": [
+   {
+    "type": "nymph_bust_in_pool",
+    "count": 8,
+    "position_note": "row of female busts emerging from scalloped green pool along bottom edge, spanning left-to-right; several wear crowns/headdresses; one near center holds a small round object (mirror/disc) aloft"
+   },
+   {
+    "type": "pool_basin",
+    "count": 1,
+    "position_note": "large green wavy/scalloped water body filling the bottom margin"
+   },
+   {
+    "type": "barrel_tub_with_blue_water",
+    "count": 1,
+    "position_note": "lower-right corner; a nymph bends forward over/into a blue-filled barrel"
+   },
+   {
+    "type": "marginal_nymph_in_vessel",
+    "count": 3,
+    "position_note": "top-left nymph standing in a footed tub/barrel; top-right nymph beside a blue pool; mid-left nymph (blue cap) holding out a cup"
+   },
+   {
+    "type": "conduit_tube_with_containers",
+    "count": 1,
+    "position_note": "horizontal tube across the mid band connecting the cup-nymph (left) to two cylindrical containers and a wavy liquid spray, terminating in a star/sun cog at right edge"
+   },
+   {
+    "type": "baluster_column_apparatus",
+    "count": 1,
+    "position_note": "top-center ornamental segmented column/baluster (banded red/blue), the connective tube/standpipe motif between the two text columns"
+   },
+   {
+    "type": "star_sun_rosette",
+    "count": 1,
+    "position_note": "right edge of mid band, terminus of the liquid-spray conduit; a second small star sits lower-right of the page"
+   }
+  ],
+  "label_links": [
+   {
+    "locus": "@Lt",
+    "linked_element": "horizontal conduit/tube with cylindrical containers in the middle band (cup-nymph apparatus)",
+    "position": "mid-page, ~center-left; label written directly ON the conduit between the held-out cup and the tall cylindrical vessel",
+    "note": "words orol/dain/darol/daryry; this @Lt sits on the tube linking the cup-nymph to the paired containers; legible but undeciphered"
+   },
+   {
+    "locus": "@Ln",
+    "linked_element": "individual nymph bust in the bottom pool row",
+    "position": "bottom margin, beneath one nymph head in the emerging-bust row (left-of-center cluster)",
+    "note": "okar/okal/okoldy; one short label set under a single pool nymph"
+   },
+   {
+    "locus": "+Ln",
+    "linked_element": "individual nymph bust in the bottom pool row",
+    "position": "bottom margin, beneath an adjacent nymph head in the right-of-center cluster",
+    "note": "okairady; single label under one pool nymph"
+   },
+   {
+    "locus": "*Ln",
+    "linked_element": "individual nymph bust in the bottom pool row",
+    "position": "bottom margin, beneath a nymph head (right cluster, near the three consecutively-labeled busts)",
+    "note": "sororl ('sister'-shaped EVA token); single label under one pool nymph"
+   },
+   {
+    "locus": "=Ln",
+    "linked_element": "remaining nymph busts in the bottom pool row (multi-word label group spanning several heads)",
+    "position": "bottom margin, distributed under the right-hand nymphs and toward the barrel-nymph at lower right",
+    "note": "olko/ky/sokoly/dolol/olaiin/okeeor; longest group, plausibly several short per-nymph labels concatenated across consecutive heads"
+   }
+  ],
+  "legibility": "labels_legible",
+  "confidence": 0.55,
+  "zodiac_sign": null,
+  "month_guess": null,
+  "ring_count": null,
+  "notes": "Not a zodiac/cosmo folio: no concentric rings or radial spokes; this is biological/balneological. Grounding logic: the @Lt label is unambiguously placed ON the mid-band conduit beside the cup-and-cylinder apparatus (high confidence for that one link). The four Ln-variant labels are short tokens written directly under individual nymph busts emerging from the bottom green pool; the canonical balneo pattern is one label per nymph head, so I mapped each Ln group to a distinct pool nymph progressing left-to-right. The exact nymph-to-label assignment for @Ln/+Ln/*Ln/=Ln carries moderate uncertainty because the JSON gives reading-order tokens, not pixel coordinates, and the long =Ln group likely bundles several per-head labels. Confidently visible labels in the scan include 'sororl', a 'sokoly/sokol'-like token, and the conduit label. Several pool nymphs wear crowns/headdresses and one holds a disc/mirror aloft. The page is mirror-imaged in the crops (text reads right-to-left in my detail images due to verso-bleed lighting), but label positions relative to figures are as described. No Cc/Ri/Ro/Lz/Ls loci present."
+ },
+ "f83r": {
+  "folio": "f83r",
+  "identified_subject": "Biological/balneological section page. Dense text in the upper two-thirds; figures run down the left margin (nude female nymphs, one per text-block) and a connected plumbing/water scene occupies the lower-left quadrant: an upper nymph with a red/maroon waistband whose lower body dissolves into blue flowing water that streams rightward as fine strands, a long wavy tube/conduit descending from a small figure at top-center, and a spiky star-burst basin filled with blue water at the lower-center/right where the tube terminates (a confluence/junction). Three free-floating labels sit within this lower-left water apparatus.",
+  "layout_topology": "scattered_near_figures",
+  "elements": [
+   {
+    "type": "nymph_figure",
+    "count": 5,
+    "position_note": "Stacked down the left margin, one beside each text block (top to bottom). The lowest, in the water scene, wears a red/maroon waistband and her lower body becomes blue flowing water."
+   },
+   {
+    "type": "water_stream_strands",
+    "count": 1,
+    "position_note": "Fine horizontal liquid strands flowing rightward from the lowest nymph's lower body, mid-height of the lower-left quadrant (~9 o'clock toward center)."
+   },
+   {
+    "type": "wavy_tube_conduit",
+    "count": 1,
+    "position_note": "Long S-curved tube descending from a small figure at top-center of the lower scene down to the basin."
+   },
+   {
+    "type": "starburst_basin",
+    "count": 1,
+    "position_note": "Spiky blue-water basin/junction at lower-center-right where the conduit ends (~4-5 o'clock of the lower scene)."
+   },
+   {
+    "type": "floating_label",
+    "count": 3,
+    "position_note": "Three short text labels float in the open space of the lower-left water scene between the nymph, the strands, and the basin."
+   }
+  ],
+  "label_links": [
+   {
+    "locus": "@Lt",
+    "linked_element": "water confluence / streams beside the waistbanded nymph and tube head",
+    "position": "topmost of the three floating labels, upper area of the lower-left scene, just right of the nymph's streams (~1 o'clock of the cluster); two words",
+    "note": "EVA chtorol saroldal; sits as the heading-most label of the apparatus cluster, near where the nymph's water and the descending tube meet."
+   },
+   {
+    "locus": "=Lt",
+    "linked_element": "tip of the horizontal liquid stream-strands flowing from the nymph",
+    "position": "center of the lower-left scene, immediately at the right-hand end of the fine flowing strands (~3 o'clock); single word",
+    "note": "EVA olsaiin; visually abuts the end of the streaming-liquid strands, appears to label the flow itself."
+   },
+   {
+    "locus": "+Lt",
+    "linked_element": "pale-blue water wash / pool below the streams, above the starburst basin",
+    "position": "lower-center of the scene, floating over the blue wash, below and right of olsaiin (~5 o'clock of the cluster); single word",
+    "note": "EVA darolsy; sits over the open blue water zone between the streams and the spiky basin."
+   }
+  ],
+  "legibility": "labels_legible",
+  "confidence": 0.6,
+  "month_guess": null,
+  "zodiac_sign": null,
+  "ring_count": null,
+  "notes": "Not a zodiac/cosmo folio; no concentric rings or radial spokes. This is the balneo/biological water-plumbing imagery. The glyph forms of the three labels are clearly inked and legible as shapes (matching the supplied EVA: chtorol saroldal / olsaiin / darolsy), though the script itself is undeciphered. The bulk of the page is running text (Cc-like body text) not tied to a diagram; only the lower-left quadrant has groundable figure labels. The three Lt labels are floating annotations within the nymph-and-water apparatus rather than direct labels-on-figure; their referents are inferred from spatial proximity: olsaiin -> stream tip, darolsy -> water pool/wash, chtorol saroldal -> confluence/tube-head area. Clock positions are given relative to the lower-left scene, not a circular diagram. Confidence moderate because the labels float in open space and proximity-based referent assignment is the only grounding cue."
+ },
+ "f76r": {
+  "folio": "f76r",
+  "identified_subject": "Full-page continuous prose text with no drawing. f76r is a text-only folio in the biological/balneological section: the entire page is dense paragraph script (roughly 30+ lines) with no central figure, no nymphs, no basins/tubes, no rings, no zodiac sign, and no labeled objects. There is nothing pictorial to ground labels to.",
+  "layout_topology": "other",
+  "elements": [
+   {
+    "type": "text_paragraph",
+    "count": 30,
+    "position_note": "Continuous prose covering the full writing area top-to-bottom; appears as several paragraph blocks. No drawing elements present."
+   },
+   {
+    "type": "folio_number",
+    "count": 1,
+    "position_note": "'76' inked at top-right margin of the page."
+   }
+  ],
+  "label_links": [],
+  "legibility": "illegible",
+  "confidence": 0.6,
+  "month_guess": null,
+  "zodiac_sign": null,
+  "ring_count": null,
+  "notes": "Scan /Users/user/Documents/Dev/voynich/bal_76r.jpg shows a TEXT-ONLY page with no illustration. The labels file /Users/user/Documents/Dev/voynich/_labels/f76r.json contains exactly one entry: locus '*L0' (generic label), role 'label', words ['s','d','q','s','o','l','k','r','s']. The '*' prefix and L0 (generic) code, combined with a page that has no drawing, indicate this is not a true label-on-figure but likely an extracted token/line fragment with no pictorial referent on the page. There is no zodiac animal (no Pisces/Aries/Taurus figure), no concentric star rings, no balneo nymphs or basins, no pharma jars, and no cosmological radial spokes to ground against. Therefore no spatial label-to-element links can be made. Honest assessment: this folio is not groundable for the spatial corpus because it carries no drawing; the single L0 labelset has no on-page drawn referent. Confidence in 'no drawing present' is high; the 0.6 overall reflects that the single label's intended function cannot be determined. Only one scan exists for this folio (no detail crops)."
+ },
+ "f78r": {
+  "folio": "f78r",
+  "identified_subject": "Balneological (biological-section) folio: two green-rimmed oval pools/basins stacked vertically, each filled with nude nymphs, connected by a vertical tube/channel. At the top is an apparatus of tubes/pipes with two flower-or-star rosette ornaments at the upper-left and upper-right corners feeding into the upper pool. The upper pool holds a ring/cluster of bathing nymphs; the lower pool holds more nymphs with a prominent row of three standing figures (one with reddish hair) atop it. A heavy paragraph block of text fills the left two-thirds of the page.",
+  "layout_topology": "scattered_near_figures",
+  "elements": [
+   {
+    "type": "pool_basin",
+    "count": 2,
+    "position_note": "Two green-outlined oval basins: upper pool centered ~upper-middle of page; lower pool centered ~lower-middle. Stacked vertically and joined by a tube."
+   },
+   {
+    "type": "nymph_figure",
+    "count": 18,
+    "position_note": "Nude female figures: roughly a dozen in/around the upper pool arranged in a rosette/ring, plus several in the lower pool with a row of three standing figures on its upper edge (one red-haired, center ~12 o'clock of lower pool)."
+   },
+   {
+    "type": "connecting_tube",
+    "count": 1,
+    "position_note": "Vertical wavy channel/tube linking the bottom of the upper pool to the top of the lower pool, running down page center."
+   },
+   {
+    "type": "pipe_apparatus",
+    "count": 1,
+    "position_note": "Top-of-page network of tubes/pipes feeding the upper pool from above."
+   },
+   {
+    "type": "rosette_ornament",
+    "count": 2,
+    "position_note": "Flower/star rosette finials at the very top, upper-left and upper-right corners, terminating the pipe apparatus."
+   },
+   {
+    "type": "label_group",
+    "count": 1,
+    "position_note": "Single short label-string set (@Lt) floating in the inter-pool corridor on the right side, beside the connecting tube and the upper pool's outflow."
+   }
+  ],
+  "label_links": [
+   {
+    "locus": "@Lt",
+    "linked_element": "Inter-pool corridor: the connecting tube/outflow between the upper and lower pools (also adjacent to the row of standing nymphs atop the lower pool)",
+    "position": "Right of page center, roughly 3-4 o'clock relative to the upper pool / just above and right of the lower pool's standing figures (e.g. the 'otoldy'/'otodal'-type strings seen floating in the right margin of the corridor)",
+    "note": "f78r carries no zodiac/star ring labels; the @Lt set is a short cluster of floating label-words in the gap between the two basins rather than a structured caption tied to one isolated object. Individual words cannot be matched 1:1 to single nymphs with confidence \u2014 they read as a small group annotating the tube/outflow zone and the standing nymphs there. Several entries (the long 'otasodloryorory' especially) sit in the right margin beside the corridor."
+   }
+  ],
+  "legibility": "partially",
+  "confidence": 0.55,
+  "zodiac_sign": null,
+  "month_guess": null,
+  "ring_count": null,
+  "notes": "Section is biological/balneological, not zodiac or pharma, so there are no concentric star-rings, jars, or radial cosmological spokes to ground. The drawing's organizing structure is two stacked oval pools of nymphs joined by a tube, fed from a tube/rosette apparatus at the top. The provided labels file contains a single locus, @Lt (label-variant), with six short word-tokens. On the scans these appear as free-floating label strings in the corridor BETWEEN the two pools, concentrated on the right side near the connecting tube/outflow and the trio of standing nymphs atop the lower basin \u2014 consistent with the balneo convention of short captions beside tubes/figures rather than embedded in the running paragraph. Layout topology is therefore 'scattered_near_figures'. Legibility of the glyph shapes in the crops is moderate (forms are clear but undecipherable script); confidence in the EXACT object each individual token annotates is only moderate because the tokens cluster as a group in the inter-pool zone rather than each abutting a distinct, separable object. No zodiac sign, month, or ring count applies to this folio."
+ },
+ "f67r1": {
+  "folio": "f67r1",
+  "identified_subject": "A circular cosmological/astronomical sun-disk diagram. At the center is an anthropomorphic Sun face (round face with eyes, nose, mouth) drawn in pale flesh/gold tones. Radiating from the face is a corona of alternating red and blue triangular rays/petals (roughly 16-17 rays). Surrounding the ray corona is a ring of small gold/ochre star emblems (the typical Voynich six-to-eight-pointed stars), each accompanied by a short radial caption. The outer region of the disk carries two or more concentric bands of running cursive text. Three lines of paragraph text sit above the disk at the top of the page. This is a sun/cosmos rosette, NOT a zodiac-sign medallion.",
+  "layout_topology": "concentric_rings",
+  "elements": [
+   {
+    "type": "central_figure_sun_face",
+    "count": 1,
+    "position_note": "dead center of the disk; anthropomorphic Sun face with facial features, surrounded immediately by the ray corona"
+   },
+   {
+    "type": "ray_petal_red_blue",
+    "count": 17,
+    "position_note": "first ring out from center; alternating red and blue triangular rays radiating 360 degrees around the Sun face (approx 16-17 rays)"
+   },
+   {
+    "type": "star_emblem",
+    "count": 17,
+    "position_note": "second ring, in the field just beyond the ray tips; one gold star per radial sector/gap, distributed clockwise around the full circle (best seen upper-left and left where ~6-7 stars are clearly visible)"
+   },
+   {
+    "type": "radial_caption_slot",
+    "count": 17,
+    "position_note": "short text written radially next to each star in the star ring; reading inward/along the spoke (the @Ri labelset)"
+   },
+   {
+    "type": "circular_text_band",
+    "count": 2,
+    "position_note": "outer annulus of the disk; two concentric rings of continuous cursive text running around the circumference (the @Cc inner-of-the-two and +Cc outer band)"
+   },
+   {
+    "type": "paragraph_text_block",
+    "count": 1,
+    "position_note": "above the disk, top of page; ~3-4 lines of running text, not a label set"
+   }
+  ],
+  "label_links": [
+   {
+    "locus": "@Ri",
+    "linked_element": "ring of star emblems (one short radial caption per star)",
+    "position": "star ring, radial spokes; 17 captions distributed clockwise around the full circle, each sitting beside its star reading inward toward the Sun",
+    "note": "17 words in this set matches the count of star/sector slots in the star ring; these are the most groundable labels, each captioning the individual star next to it. Clearest examples upper-left and left where stars+captions are co-legible."
+   },
+   {
+    "locus": "@Cc",
+    "linked_element": "inner of the two concentric circular running-text bands in the outer annulus",
+    "position": "outer annulus, complete circle; one continuous ring of cursive text (36 words) running around the disk circumference",
+    "note": "Circular text, not a discrete object label. Annotates/encircles the whole disk rather than a single drawn element."
+   },
+   {
+    "locus": "+Cc",
+    "linked_element": "outer of the two concentric circular running-text bands (outermost rim of the disk)",
+    "position": "outermost annulus, complete circle; the longest text ring (66 words) running around the very edge of the disk",
+    "note": "Outermost circular band of running text; encircles the entire diagram. Distinct from @Cc by being the outer of the two text rings."
+   }
+  ],
+  "legibility": "partially",
+  "confidence": 0.6,
+  "month_guess": null,
+  "zodiac_sign": null,
+  "ring_count": 2,
+  "notes": "f67r1 is the LEFT-hand diagram of folio 67r (the right-hand diagram is f67r2, a separate moon/phase wheel). This is a cosmological sun rosette in the astronomical section, not a zodiac month-medallion, so zodiac_sign/month_guess are null. Ring structure from center outward: (1) anthropomorphic Sun face; (2) corona of ~16-17 alternating red/blue rays; (3) a single ring of gold star emblems, ~17 stars (one per ray-gap/sector), each with a short radial caption = the @Ri labelset (17 words, a clean 1:1 match); (4) outer annulus carrying TWO concentric bands of continuous cursive text = @Cc (36 words, inner band) and +Cc (66 words, outer band). ring_count=2 refers to the two concentric circular-text bands; there is effectively one star-label ring. Script is cursive and fairly clear as strokes but undecipherable; per-word legibility is partial (top-of-disk captions clearest, bottom-of-disk text upside-down and harder). Confidence on the @Ri-to-star grounding is moderate-high; confidence on which Cc band is @Cc vs +Cc (inner vs outer assignment) is lower since both encircle the whole disk. Stars are distributed clockwise from 12 o'clock; clearest cluster is in the upper-left/left quadrant."
+ },
+ "f67r2": {
+  "folio": "f67r2",
+  "identified_subject": "Circular cosmological/astronomical diagram (right-hand disk of f67r). A central 8-pointed star/sun rosette sits on a small blue square ground; radial spoke lines divide the disk into roughly 12 wedge sectors, each containing a crescent-moon symbol (alternating red-filled and plain/outline crescents) together with a small star or sun-disk and a block of text. Two-plus concentric bands of circular text surround the figure, with a red-and-brown outer circumferential ring at the rim and a 2-line caption paragraph below the disk. Not a zodiac-animal folio; this is a moon/lunar (calendrical) cosmological wheel.",
+  "layout_topology": "mixed",
+  "ring_count": 2,
+  "zodiac_sign": null,
+  "month_guess": null,
+  "elements": [
+   {
+    "type": "central_star_sun_rosette",
+    "count": 1,
+    "position_note": "dead center, 8-pointed gold star on a blue square ground; a few radial words wrap around it"
+   },
+   {
+    "type": "radial_spoke_dividers",
+    "count": 12,
+    "position_note": "thin ruled lines from center to mid/outer ring, partitioning disk into ~12 wedge sectors"
+   },
+   {
+    "type": "crescent_moon_symbols",
+    "count": 12,
+    "position_note": "one per sector in the mid ring; alternating red-filled and plain/outline crescents, distributed clockwise around the wheel"
+   },
+   {
+    "type": "small_star_or_sun_disk_symbols",
+    "count": 12,
+    "position_note": "paired with each moon inside the sectors, small circular star/disk marks"
+   },
+   {
+    "type": "concentric_text_band_inner",
+    "count": 1,
+    "position_note": "circular text ring in the mid-disk just outside the central rosette"
+   },
+   {
+    "type": "outer_circumferential_text_ring",
+    "count": 1,
+    "position_note": "rim band of brown+red text running all the way around at ~outermost circle"
+   },
+   {
+    "type": "caption_paragraph",
+    "count": 1,
+    "position_note": "2 lines of text (partly red) below the disk, bottom of folio"
+   }
+  ],
+  "label_links": [
+   {
+    "locus": "&L0",
+    "linked_element": "sector text blocks beside the crescent moons / small star-disks in the mid ring",
+    "position": "distributed across the ~12 wedge sectors, clockwise from 12 o'clock; this is the largest label group (~30 words) and corresponds to the per-sector text accompanying each moon symbol",
+    "note": "Largest generic-label set; treated as the sector annotations next to the moon/star icons. Cannot be matched word-to-sector individually with confidence."
+   },
+   {
+    "locus": "@L0",
+    "linked_element": "a short sector or inner-band label group",
+    "position": "a localized cluster (4 words) likely one sector near the central rosette / inner text band",
+    "note": "Short set; position approximate, low confidence."
+   },
+   {
+    "locus": "+L0",
+    "linked_element": "sector text blocks (second batch) beside moons in lower/outer portion of the ring",
+    "position": "distributed across remaining wedge sectors, roughly lower-half clockwise",
+    "note": "~9 words; continuation of per-sector annotations."
+   },
+   {
+    "locus": "&Ls",
+    "linked_element": "star/sun-disk symbols (star-labels) in the sectors",
+    "position": "ring of small star/disk marks paired with the moons, clockwise around the wheel",
+    "note": "Ls = star labels; map to the small star/sun-disk icons rather than the moons. ~12 words approximately matching the ~12 star marks."
+   },
+   {
+    "locus": "@Ls",
+    "linked_element": "a single star/sun-disk symbol",
+    "position": "one isolated star mark in a sector (single word qotoear)",
+    "note": "Single-word star label; isolated, low positional precision."
+   }
+  ],
+  "legibility": "partially",
+  "confidence": 0.45,
+  "notes": "f67r2 is the RIGHT disk on scan iiif_67r.jpg (the LEFT disk is f67r1, the red/blue sunburst sun-rosette with a face). Crops at /tmp/f67r2_zoom2.jpg, /tmp/f67r2_center2.jpg, /tmp/f67r2_wide2.jpg. The labels JSON gives only grouped generic loci (L0 batches and Ls star-labels) with no per-word coordinates, so word-to-icon grounding is coarse: &L0/+L0/@L0 = the sector text blocks accompanying the ~12 moon symbols; &Ls/@Ls = the small star/sun-disk marks paired with those moons. EVA script itself is undeciphered and not translated. Ring count given as 2 = the two main concentric text bands (inner mid-disk band + outer rim band); the moon/star icons sit on an intermediate ring between them. This is a lunar/cosmological wheel, not a zodiac-sign folio, so zodiac_sign and month_guess are null. Confidence is moderate-low because the label loci are aggregate groups, not individually localized."
+ },
+ "f72v2": {
+  "folio": "f72v2",
+  "identified_subject": "Circular zodiac/month diagram (the second, right-hand roundel on folio 72v). At the hub is a small central medallion containing a single emblematic standing figure in a robe with a blue cape/garment and a hat-like headdress. Around it radiate concentric rings of nude human figures (star-nymphs), each associated with a small star and an arc of curved label text. A later-hand Latin marginal month-gloss (reads roughly 'augst'/august-like, summer) sits near the disk. No clear animal emblem is legible at the center.",
+  "layout_topology": "concentric_rings",
+  "zodiac_sign": "Leo",
+  "month_guess": "August",
+  "ring_count": 2,
+  "elements": [
+   {
+    "type": "central_medallion_figure",
+    "count": 1,
+    "position_note": "hub of disk; single robed standing figure with blue cape and headdress inside a small ringed medallion; emblem of the sign"
+   },
+   {
+    "type": "star_nymph_figures",
+    "count": 30,
+    "position_note": "two concentric rings of nude figures, ~15 per ring, each holding/beside a star; standard count for these disks"
+   },
+   {
+    "type": "stars",
+    "count": 30,
+    "position_note": "one small 6-8 point star per nymph, distributed around both rings"
+   },
+   {
+    "type": "curved_label_arcs",
+    "count": 30,
+    "position_note": "an arc of EVA script curving beside each nymph (the Cc circular text plus per-figure labels)"
+   },
+   {
+    "type": "latin_marginal_month_gloss",
+    "count": 1,
+    "position_note": "later-hand Latin word near disk margin, summer month (august-like); detail in z72v0_word.jpg"
+   }
+  ],
+  "label_links": [
+   {
+    "locus": "@Cc",
+    "linked_element": "circular text band running between/around the ring(s) of star-nymphs",
+    "position": "follows the curvature of the rings, read around the circle (clockwise from ~12 o'clock); ~75 words, one short arc per nymph",
+    "note": "This is the long circular label string; each token sits beside a successive nymph+star around the wreath. Individual token-to-nymph alignment not separable at this resolution; treated as the continuous ring band."
+   },
+   {
+    "locus": "@Lz",
+    "linked_element": "central medallion figure (the sign emblem)",
+    "position": "ring of text immediately encircling the central robed figure; the two words 'oeedey okaiin' read at roughly 9-11 o'clock around the hub medallion, in darker ink",
+    "note": "Two-word zodiac label tied to the central emblem; sits inside the inner star-nymph ring, hugging the medallion."
+   },
+   {
+    "locus": "&Lz",
+    "linked_element": "central medallion / hub label set (secondary/continuation)",
+    "position": "arc of text around the hub medallion continuing around the central figure, between the medallion rim and the inner nymph ring",
+    "note": "Longer 31-word secondary label band associated with the centre; likely the continuation of the hub-encircling text rather than a single figure label."
+   }
+  ],
+  "legibility": "partially",
+  "confidence": 0.45,
+  "notes": "Drawing structure is clear and high-confidence: a two-ring zodiac wreath of star-bearing nude nymphs around a central robed emblem-figure, the standard Voynich zodiac roundel form. Lower confidence on the specific sign: the central emblem is a robed human, not a recognizable animal, and the disk's center is faded. Assignment to Leo/August follows the conventional Voynich zodiac ordering (Pisces->Aries->Taurus->Gemini->Cancer->Leo...) placing the second 72v disk at Leo, supported by an apparent summer/'august'-like later-hand Latin marginal gloss (z72v0_word.jpg) \u2014 but published mappings vary, so treat sign and month as tentative. Label grounding: @Lz and &Lz are the hub-encircling text tied to the central figure; @Cc is the long continuous ring band whose tokens correspond one-per-nymph around the wreath but cannot be individually aligned at this scan resolution. EVA script itself is undeciphered and not translated here; only position/referent grounded."
+ },
+ "f71r": {
+  "folio": "f71r",
+  "identified_subject": "Zodiac cosmological diagram. A central circular medallion holds a single quadruped animal seen in profile facing left, with a wide gaping/open mouth (visible teeth), a horned/maned head, four legs, a curled tail and a scaly, segmented mane running along the back and belly (rendered with green wash). A word is written directly across the animal's flank. The medallion is surrounded by concentric bands of circular text and a peripheral ring of human figures (zodiac \"nymphs\"), several of whom stand inside colored tub/barrel containers (blue, green, red rectangular vessels); each figure is associated with a star and a short radial label. In the standard Voynich zodiac sequence (Pisces -> Aries -> Taurus...), this folio is the second Aries diagram (\"dark Aries\"); the central beast is the Ram/Aries figure.",
+  "layout_topology": "concentric_rings",
+  "zodiac_sign": "Aries",
+  "month_guess": "April",
+  "ring_count": 1,
+  "elements": [
+   {
+    "type": "central_animal_figure",
+    "count": 1,
+    "position_note": "dead center of medallion; quadruped (ram/goat-like Aries beast) in profile facing left, mouth gaping open toward upper-left, tail to the right, green segmented mane along back/belly"
+   },
+   {
+    "type": "label_on_central_animal",
+    "count": 1,
+    "position_note": "single word written horizontally across the animal's mid-flank/body (captured in f71r_word.jpg); a Lf-type label embedded on the figure"
+   },
+   {
+    "type": "peripheral_human_figure",
+    "count": 10,
+    "position_note": "ring of nymph/figures spaced around the periphery between the text bands and the outer edge, clock positions roughly evenly distributed (approx. 12, 1-2, 3, 4-5, 6, 7-8, 9, 10-11 o'clock)"
+   },
+   {
+    "type": "tub_container",
+    "count": 6,
+    "position_note": "colored rectangular barrels/tubs (blue, green, red) that several peripheral figures stand in; visible at approx 9 o'clock (green), 3 o'clock (red), and lower ring near 6-7 o'clock (blue)"
+   },
+   {
+    "type": "star",
+    "count": 10,
+    "position_note": "one star associated with each peripheral figure (held by or beside the figure), e.g. an 8-pointed star at lower-right ~4-5 o'clock"
+   },
+   {
+    "type": "circular_text_band",
+    "count": 3,
+    "position_note": "concentric rings of running circular text (Cc) between the central medallion and the figure ring, read around the circle"
+   }
+  ],
+  "label_links": [
+   {
+    "locus": "@Cc",
+    "linked_element": "concentric circular text band(s) running around the central medallion",
+    "position": "between central animal and the peripheral figure ring; long continuous band read around the full circle (71 word-tokens, multiple concentric loops)",
+    "note": "Cc circular text, not anchored to a single object; spans the whole ring. Glyphs follow the curvature; legible as forms but undeciphered."
+   },
+   {
+    "locus": "@Lz",
+    "linked_element": "a peripheral zodiac figure / its star (one of the nymphs in the outer ring)",
+    "position": "outer figure ring; short 4-word label sitting radially beside one of the human figures (exact clock-position not isolable from full scan, but a single-figure annotation)",
+    "note": "Lz zodiac label group; grounds to one figure-plus-star in the ring."
+   },
+   {
+    "locus": "&Lz",
+    "linked_element": "the series of peripheral zodiac figures / their stars around the ring",
+    "position": "outer figure ring; longer 15-word label sequence distributed as the radial star-labels beside the successive nymph figures around the circle (reading order around the ring, clockwise from ~12 o'clock)",
+    "note": "Lz label set spanning multiple figures; each token plausibly labels one figure/star in sequence."
+   }
+  ],
+  "legibility": "partially",
+  "confidence": 0.5,
+  "notes": "Position/referent grounding only; script not translated. Central figure identification: the beast has an open jaw and segmented mane and reads ambiguously between ram and goat/dragon; placement in the Pisces->Aries->Taurus sequence (f71r) supports Aries (\"dark Aries\", April), confidence moderate. Exact count of peripheral figures (~10) and tubs (~6) is estimated from the full IIIF scan; the medallion is somewhat faded. The two Lz labelsets clearly belong to the peripheral figure/star ring rather than the center; @Cc is the circular running text. The single word on the animal's body (f71r_word.jpg) is a label-on-figure not captured as a separate locus in the provided JSON (the JSON only lists @Cc, @Lz, &Lz). Legibility: glyph forms are mostly visible but a few peripheral labels are faint; honest confidence is moderate due to fading and inability to isolate each radial label's precise clock angle from the available resolution."
+ },
+ "f77r": {
+  "elements": [
+   {
+    "type": "arched_tube_conduit_manifold",
+    "count": 1,
+    "position_note": "Large green arched pipe spanning the full width across the top of the page, apex near 12 o'clock; the central organizing element of the top scene."
+   },
+   {
+    "type": "downspouts_nozzles",
+    "count": 6,
+    "position_note": "Row of short spouts hanging from the underside of the arched tube, spaced left-to-right; several emit hatched streams (water) downward; one near center empties into a small basin."
+   },
+   {
+    "type": "basin_with_reddish_content",
+    "count": 1,
+    "position_note": "Small tub/basin just right of center under the arch, filled with a red/pink hatched substance fed by the central-right spout."
+   },
+   {
+    "type": "nymph_at_tube_end",
+    "count": 2,
+    "position_note": "One nude female figure at the far-left end of the tube (standing in a barrel-like vessel, associated with leftmost spout), and one at the far-right end of the tube receiving/holding the conduit."
+   },
+   {
+    "type": "ribbed_cloudband_or_scaly_element_with_nymph",
+    "count": 1,
+    "position_note": "Mid-left of page below the paragraph: a curled ribbed/scaly band ('manifold'-like coil) with a small nymph; not directly labeled by this labelset."
+   },
+   {
+    "type": "nymph_in_vessel",
+    "count": 1,
+    "position_note": "Lower-left, a nymph standing in a tub/font (with blue water), beside the lower paragraph."
+   },
+   {
+    "type": "paragraph_text_block",
+    "count": 2,
+    "position_note": "Dense body text fills the upper register under the arch and the lower-left register; not labels."
+   }
+  ],
+  "label_links": [
+   {
+    "locus": "+Lt",
+    "linked_element": "leftmost downspout / left end of arched tube near the left nymph",
+    "position": "far left under the arch, ~9-10 o'clock along the conduit",
+    "note": "olkchs \u2014 first in reading order; sits at the left terminus of the tube where the left nymph feeds it. Legible but ungroundable to a specific function beyond 'leftmost spout'."
+   },
+   {
+    "locus": "=Lt",
+    "linked_element": "second/third downspout from left",
+    "position": "left-of-center under the arch, ~10-11 o'clock",
+    "note": "otedy + otol \u2014 a two-word group beside an early left-side spout emitting a water stream."
+   },
+   {
+    "locus": "~Lt",
+    "linked_element": "central downspout cluster (including spout feeding the red basin)",
+    "position": "center / apex of the arch, ~12 o'clock",
+    "note": "otork + dchdy + soral \u2014 three words clustered at the top-center spouts; one of these center spouts empties into the reddish basin."
+   },
+   {
+    "locus": "@Ln",
+    "linked_element": "right-of-center downspout",
+    "position": "right-of-center under the arch, ~1-2 o'clock",
+    "note": "darchdar + otchdy \u2014 paired label beside a right-side spout with a hatched water stream."
+   },
+   {
+    "locus": "~Ln",
+    "linked_element": "right-side downspout",
+    "position": "right under the arch, ~2 o'clock",
+    "note": "dotedy \u2014 single word beside a near-right spout."
+   },
+   {
+    "locus": "@Lt",
+    "linked_element": "rightmost spout / right end of tube near the right nymph",
+    "position": "far right under the arch, ~3 o'clock along the conduit",
+    "note": "otolaiino \u2014 last in reading order; at the right terminus where the right nymph holds the conduit end."
+   }
+  ],
+  "folio": "f77r",
+  "identified_subject": "Balneological top-of-page scene: a large green arched tube/conduit ('manifold') spanning the width of the folio, with a row of ~6 downspouts hanging from its underside, several emitting hatched water streams and one feeding a small reddish basin. Nude female figures (nymphs) stand at each end of the tube, the left one in a barrel/vessel feeding the conduit. Below are dense paragraph text blocks, a ribbed/scaly coiled cloud-band element with a small nymph at mid-left, and a nymph standing in a water-filled tub at lower-left. The six labelsets are spout-labels arrayed left-to-right along the conduit.",
+  "layout_topology": "scattered_near_figures",
+  "legibility": "labels_legible",
+  "zodiac_sign": null,
+  "month_guess": null,
+  "ring_count": null,
+  "confidence": 0.55,
+  "notes": "Biological/balneo folio, not zodiac or cosmo, so no rings/spokes/month apply. The dominant structure is an arched green pipe across the top with a row of pendant spouts; the six labelsets (all Lt/Ln variants) form a left-to-right sequence of spout-labels along this conduit, matching the JSON reading order. I have mapped them as a left-to-right progression (+Lt leftmost -> @Lt rightmost) along the arch, anchored to the two end-nymphs at the tube termini and the central spout that feeds the red-pink basin. Exact one-to-one spout assignment is moderately confident: the row clearly has ~6 spouts and there are 6 labelsets, but pairing each multi-word group to one specific nozzle versus a nozzle-pair is uncertain. The labels visible in the high-res manifold crop (galcedar, oxtchld, ollcdg, ollollo, otedg/ortedg, gottosg) correspond to these EVA transliterations but the crop's reading does not line up word-for-word with the locus order, so positions are approximate. Script is undeciphered; only position/referent grounded, not meaning. Lower-left figures (coiled scaly band with nymph, nymph-in-tub) are present but carry no labels in this labelset."
+ },
+ "f84r": {
+  "folio": "f84r",
+  "identified_subject": "Balneological (biological-section) page: three separate pools/basins of bathing nymphs stacked vertically, surrounded and separated by blocks of paragraph text. Top: a green-rimmed elongated basin holding ~9 standing nude female figures (nymphs), with a blue vessel/object at lower-left and blue and red colored vessels among the figures. Middle: a green elongated tub/pool with ~9-10 nymphs in motion, blue vessel at left end, red vessel at right end. Bottom-left: a curved oval blue-water basin with two tiers of nymphs, fed by a long meandering blue tube/conduit that snakes down to the lower-left page margin. No zodiac wheel, no concentric star rings, no central circular cosmological diagram on this folio.",
+  "layout_topology": "scattered_near_figures",
+  "elements": [
+   {
+    "type": "pool_basin_green",
+    "count": 2,
+    "position_note": "Top zone (~12-18% of page height) and middle zone (~45% height); both elongated green-bordered basins of standing/moving nymphs"
+   },
+   {
+    "type": "pool_basin_blue_oval",
+    "count": 1,
+    "position_note": "Bottom-left zone (~78-92% height), curved blue-water oval basin with two tiers of nymphs"
+   },
+   {
+    "type": "nymph_figure",
+    "count": 28,
+    "position_note": "~9 in top pool, ~9-10 in middle pool, ~8-9 in bottom pool; nude female bathers"
+   },
+   {
+    "type": "vessel_colored",
+    "count": 4,
+    "position_note": "blue object lower-left of top pool; blue (left) and red (right) vessels in middle pool; colored vessels among top-pool figures"
+   },
+   {
+    "type": "conduit_tube",
+    "count": 1,
+    "position_note": "long blue meandering tube/pipe descending along the left margin from bottom pool to lower-left corner; also a blue line tracing up the left edge of the page"
+   },
+   {
+    "type": "text_paragraph_block",
+    "count": 4,
+    "position_note": "between/around the three pools; running text, not labels"
+   }
+  ],
+  "label_links": [
+   {
+    "locus": "@Lt",
+    "linked_element": "Top green pool of nymphs (likely a figure/vessel within or just beside it)",
+    "position": "upper drawing zone, ~15% page height, beside or above the top basin",
+    "note": "Lt label variant; words lmyl/otaly. Cannot confirm which individual nymph/vessel it tags; sits in the top balneo cluster. Low confidence on exact anchor."
+   },
+   {
+    "locus": "@Ln",
+    "linked_element": "A nymph or pool element (longest labelset, 8 words) within the balneo figure clusters",
+    "position": "drawing zone, exact pool ambiguous; most plausibly along the middle or top pool of nymphs",
+    "note": "Ln label variant. Multi-word string reads like a sequence of label-words strung beside several adjacent figures rather than one referent. Low confidence on precise figure."
+   },
+   {
+    "locus": "+Ln",
+    "linked_element": "Single nymph or single vessel (one-word label: ydy)",
+    "position": "within a pool cluster, adjacent to one figure",
+    "note": "Short single-word Lf-like tag; '+' variant marks it as a distinct anchor from @Ln. Cannot resolve which figure from the scan."
+   },
+   {
+    "locus": "=Ln",
+    "linked_element": "Nymph(s)/element in a pool (4 words: oloy ol shy lkol)",
+    "position": "within a pool cluster",
+    "note": "'=' Ln variant, a second label run. Sits beside figures; precise figure not legible/resolvable."
+   }
+  ],
+  "legibility": "partially",
+  "confidence": 0.45,
+  "month_guess": null,
+  "ring_count": null,
+  "zodiac_sign": null,
+  "notes": "Biological/balneo folio, not zodiac or cosmo: zodiac_sign, month, ring_count are null by design. The drawing comprises three vertically stacked pools of nymphs with colored vessels and a long blue conduit feeding the bottom basin, separated by four paragraph text blocks. The JSON provides only 4 label loci (all label variants: one @Lt, three Ln variants @/+/=), which is sparse relative to ~28 figures, so most figures are unlabeled. These loci are label-tags embedded in the figure clusters rather than annotations of a ring/spoke structure; the longer @Ln (8 words) and =Ln (4 words) read as strings of label-words running past several adjacent nymphs, while +Ln (ydy) is a single-figure tag. In the scan the handwriting is legible as glyphs but I could not pin each labelset to one specific nymph/vessel with high confidence \u2014 the colored vessels (blue lower-left of top pool; blue+red flanking the middle pool) are the most distinctive groundable objects. Confidence is moderate-low. Only one scan (bal_84r.jpg) was available; no dedicated label crops, so positional anchoring relies on the full-page view plus zone crops I generated."
+ }
+}
