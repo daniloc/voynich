@@ -50,6 +50,20 @@ control text is reproduced in the findings.
   per-file note. (Re K2: the Hawaiian sample is a 19th-century Bible edition; its
   reduced diacritics are the source of the okina caveat logged in `FINDINGS.md`.)
 
+## Historical abbreviation controls (`data/external/`)
+
+- **Cappelli downloadable data** — University of Zurich, Ad fontes, derived
+  from Adriano Cappelli's *Lexicon Abbreviaturarum* (2nd ed., 1928). Ad fontes
+  states that the images and information are public domain and may be reused
+  without restriction. The checked-in derivative retains Latin records whose
+  stated period intersects the fourteenth or fifteenth century.
+  <https://www.adfontes.uzh.ch/en/ressourcen/abkuerzungen/cappelli-daten-zum-download>
+- **Nuremberg Letterbooks v1** — Martin Mayr et al., *Nuremberg
+  Letterbooks: A Multi-Transcriptional Dataset of Early 15th Century
+  Manuscripts for Document Analysis*, Letterbooks 2–5 (1408–1423), licensed
+  **CC BY 4.0**. Dataset DOI: <https://doi.org/10.5281/zenodo.13881575>.
+  Accompanying data paper: <https://doi.org/10.1038/s41597-025-05144-z>.
+
 ## Comparanda manuscripts (`images/comparanda/`)
 
 Digitizations of other medieval manuscripts, fetched during the zodiac-exemplar hunt
@@ -76,6 +90,36 @@ Nürnberg Staatsarchiv Hs. 426 (catalog-attested, not digitized). Note: the lega
 these institutional image licenses over faithful reproductions of public-domain works is
 contested (cf. *Bridgeman v. Corel*; German UrhG §68); they are honored here regardless as
 a courtesy and to keep the repository trouble-free.
+
+## External vision models
+
+- **DINOv2-S/14** — Meta AI Research's self-supervised vision-transformer
+  backbone, used frozen to derive the K26 guarded page and K27 complete-object
+  embeddings. Code and standard model weights are licensed
+  **Apache License 2.0**. Official
+  repository: <https://github.com/facebookresearch/dinov2>, pinned here at
+  revision `7764ea0f912e53c92e82eb78a2a1631e92725fc8`. The standard
+  `dinov2_vits14_pretrain.pth` weights are fetched from Meta's published URL
+  and are not vendored; SHA-256
+  `b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9`.
+  The checked-in JSON contains derived feature vectors, not model weights.
+- **Surya layout2** — Datalab's public document-layout detector, used in K27
+  to propose `Image`, `Figure`, `Diagram`, and related visual regions.
+  Repository: <https://github.com/datalab-to/surya>. Model card:
+  <https://huggingface.co/datalab-to/surya_layout2>. The weights are licensed
+  **AI Pubs OpenRAIL-M**, pinned at revision
+  `0aee81d5fd9275c0582e545bf3a56944b1e75679`, and are fetched rather than
+  vendored.
+- **HORAE detection models** — the fine-tuned YOLO12s medieval page-layout
+  detector from the HORAE project, used as a secondary K27 decoration proposal
+  source. Model release: <https://doi.org/10.5281/zenodo.17279775>. Training
+  dataset: <https://doi.org/10.5281/zenodo.17279364>. The released model
+  artifacts are licensed **CC BY 4.0** and are fetched rather than vendored.
+- **SAM 2.1** — Meta's Segment Anything 2.1 tiny checkpoint, used in K27 to
+  turn public detector boxes into spatial object guards. Code and official
+  checkpoints are licensed **Apache License 2.0**. Repository:
+  <https://github.com/facebookresearch/sam2>. The checkpoint is fetched rather
+  than vendored.
 
 ## Scholarship cited (facts and findings, not reproduced text)
 

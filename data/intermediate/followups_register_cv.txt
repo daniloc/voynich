@@ -1,0 +1,95 @@
+==============================================================================
+HELD-OUT LABEL/PROSE REGISTER FOLLOW-UP
+==============================================================================
+Corpus: data/corpus/body.json
+Eligibility: >= 4 clean label tokens and >= 30 clean paragraph tokens on a folio.
+Pages=30, label tokens=537, prose tokens=5569, fixed candidate core vocabulary=3328
+Permutation/production strata (section, Currier, hand, quire):
+  ('astronomical', '?', '?', 'I'): 3 folio(s)
+  ('biological', 'B', '2', 'M'): 10 folio(s)
+  ('cosmological', '?', '?', 'I'): 1 folio(s)
+  ('cosmological', '?', '?', 'J'): 1 folio(s)
+  ('pharmaceutical', 'A', '4', 'O'): 2 folio(s)
+  ('pharmaceutical', 'A', '?', 'O'): 4 folio(s)
+  ('pharmaceutical', 'A', '?', 'S'): 8 folio(s)
+  ('text', 'B', '?', 'H'): 1 folio(s)
+
+==============================================================================
+A. BLOCK-MATCHED LOCALITY
+==============================================================================
+Eligible pages: 30; movable within section x Currier x hand x quire: 27
+Complete prose folios are permuted; label/prose token counts and all block metadata remain fixed.
+  label-core TYPE coverage   : own=0.3942  perm=0.3748 [95% 0.3519, 0.3973] delta=+0.0193  p=0.0466
+  label-core TOKEN coverage  : own=0.4291  perm=0.4133 [95% 0.3903, 0.4351] delta=+0.0158  p=0.0798
+
+==============================================================================
+B. LEAVE-ONE-QUIRE-OUT LABEL-CORE PREDICTION
+==============================================================================
+Target pages: 30 (27 movable in the block-matched null); candidate cores: 3328
+  learned local-presence log-odds boost: median=3.434
+  macro average precision: frequency=0.1766  own-prose=0.1965  delta=+0.0199
+                           perm-prose=0.1932 [95% 0.1833, 0.2018]  own-vs-perm p=0.2517
+  macro recall at label-K: frequency=0.2249  own-prose=0.2384  delta=+0.0135
+                           perm-prose=0.2368 [95% 0.2238, 0.2496]  own-vs-perm p=0.4041
+
+==============================================================================
+C. SYNTHETIC LOCAL-CORE POSITIVE CONTROL
+==============================================================================
+Target pages: 30 (27 movable in the block-matched null); candidate cores: 3328
+Synthetic target sets are deterministic samples of each page's prose cores; 28/30 match its real number of distinct label cores (the rest are capped by prose-core count).
+  learned local-presence log-odds boost: median=10.846
+  macro average precision: frequency=0.1194  own-prose=0.3279  delta=+0.2085
+                           perm-prose=0.1781 [95% 0.1401, 0.2316]  own-vs-perm p=0.0002
+  macro recall at label-K: frequency=0.1731  own-prose=0.2693  delta=+0.0962
+                           perm-prose=0.2079 [95% 0.1807, 0.2505]  own-vs-perm p=0.0008
+
+==============================================================================
+D. HELD-OUT CANONICAL REGISTER-FORM PREDICTION
+==============================================================================
+Rows: 170 folio-core pairs on 28 folios. Each row is conditional on that core occurring in both prose and labels.
+Forward: prose affix -> label affix. With the shared core supplied, an exact affix-pair hit is also exact canonical-word reconstruction.
+  leave-one-folio-out
+    field      freq@1  operator@1    delta   freq@3  operator@3
+    pair        0.047       0.059   +0.012    0.147       0.147
+    prefix      0.241       0.300   +0.059    0.600       0.676
+    suffix      0.306       0.329   +0.024    0.524       0.541
+  leave-one-quire-out
+    field      freq@1  operator@1    delta   freq@3  operator@3
+    pair        0.047       0.065   +0.018    0.171       0.165
+    prefix      0.182       0.276   +0.094    0.565       0.612
+    suffix      0.306       0.306   +0.000    0.565       0.571
+  forward prefix @1 by held-out quire:
+    quire    n    freq  operator    delta
+    H        5   0.000     0.000   +0.000
+    I       24   0.167     0.250   +0.083
+    J        8   0.000     0.000   +0.000
+    M       59   0.169     0.288   +0.119
+    O       38   0.184     0.289   +0.105
+    S       36   0.278     0.361   +0.083
+Reverse (invertibility check): label affix -> prose affix.
+  leave-one-quire-out
+    field      freq@1  operator@1    delta   freq@3  operator@3
+    pair        0.124       0.088   -0.035    0.306       0.282
+    prefix      0.159       0.165   +0.006    0.435       0.418
+    suffix      0.541       0.541   +0.000    0.600       0.641
+  forward @1 advantage vs within-folio output shuffle:
+    pair     observed=+0.018, null=+0.005 [95% -0.018, +0.035], raw p=0.2196
+    prefix   observed=+0.094, null=-0.002 [95% -0.041, +0.053], raw p=0.0040
+    suffix   observed=+0.000, null=-0.019 [95% -0.047, +0.006], raw p=0.0878
+    max-field correction: best=prefix delta=+0.094, family-wise p=0.0040
+Synthetic positive control: a known bijective rotation of both affixes.
+  forward leave-one-quire-out
+    field      freq@1  operator@1    delta   freq@3  operator@3
+    pair        0.118       0.453   +0.335    0.306       0.500
+    prefix      0.159       0.506   +0.347    0.435       0.618
+    suffix      0.541       0.541   +0.000    0.612       0.718
+  reverse leave-one-quire-out
+    field      freq@1  operator@1    delta   freq@3  operator@3
+    pair        0.124       0.453   +0.329    0.306       0.500
+    prefix      0.159       0.506   +0.347    0.435       0.618
+    suffix      0.541       0.541   +0.000    0.600       0.688
+
+==============================================================================
+INTERPRETATION LIMIT
+==============================================================================
+A positive locality/core result supports page-local register coupling, not semantics: copying and a local shared generator predict it too. Form prediction is tested only after selecting cores present in both registers. A null form result therefore does not negate core sharing; a positive form result would establish a reproducible orthographic transform only.

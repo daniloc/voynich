@@ -1,0 +1,1137 @@
+{
+  "assets": {
+    "data/corpus/corpus.json": "6c0160de15d4a434816477a65ee4c7ffc384bd66e3a0ad63aedaed638c97fcb0"
+  },
+  "caveats": [
+    "The nuisance profiles are deliberately flexible and may absorb a short counter on pages with fewer than 12 lines. The planted page-line control tests available residual power.",
+    "The word-in-line mod-12 survivor from the first gate is not separately identifiable from exact word position on typical line lengths and is therefore treated as closed here."
+  ],
+  "claim_boundary": "A pass supports a repeating page-line cycle beyond absolute layout position. It still does not identify plaintext or meaning.",
+  "controls": {
+    "base_only_rejection_pass": true,
+    "planted": {
+      "modulus": 4,
+      "preference_multiplier": 64.0,
+      "scope": "line_in_page"
+    },
+    "planted_gain_pass": true,
+    "planted_null_pass": true,
+    "planted_selection_pass": true
+  },
+  "corpus_audit": {
+    "eligible_words": 33133,
+    "hard_breaks": 567,
+    "prose_lines": 4117,
+    "source_tokens": 33700
+  },
+  "experiment": "historical_counter_layout_residual_gate",
+  "interpretation": "If the first gate passes and this gate fails, its apparent periodicity is explained by stable absolute line/word position profiles rather than a repeating counter.",
+  "panels": [
+    {
+      "fold_assignment": {
+        "A": 3,
+        "B": 1,
+        "C": 2,
+        "D": 2,
+        "E": 2,
+        "F": 3,
+        "G": 3,
+        "H": 3,
+        "I": 3,
+        "J": 3,
+        "M": 1,
+        "N": 2,
+        "O": 3,
+        "Q": 2,
+        "S": 2,
+        "T": 0
+      },
+      "fold_event_loads": [
+        10576,
+        7590,
+        7631,
+        7336
+      ],
+      "folds": [
+        {
+          "fold": 0,
+          "nuisance": {
+            "independent_line_profile_test_gain_bits_per_symbol": 0.003124800985645901,
+            "independent_line_profile_test_log2_gain": 210.38347596058156,
+            "independent_word_profile_test_gain_bits_per_symbol": 0.005694517306118876,
+            "independent_word_profile_test_log2_gain": 383.3947666690656,
+            "line_multiplier_range": [
+              0.010392562822230417,
+              10.657851799812974
+            ],
+            "line_observations": 93291,
+            "states_per_profile": 12,
+            "word_multiplier_range": [
+              0.016795696102873552,
+              5.611716496801082
+            ],
+            "word_observations": 93291
+          },
+          "selected": null,
+          "selected_name": "baseline",
+          "test": {
+            "absolute_layout_profile_gain_bits_per_symbol": 0.007856300586444116,
+            "baseline_log2_probability": -121852.73970520702,
+            "candidate_log2_probability": -121852.73970520702,
+            "gain_bits_per_symbol": 0.0,
+            "gain_bits_per_word": 0.0,
+            "net_gain_after_table_description_bits": 0.0,
+            "original_source_baseline_log2_probability": -122381.68085479054,
+            "symbols": 67327,
+            "words": 10576
+          },
+          "validation": {
+            "absolute_layout_profile_gain_bits_per_symbol": 0.007622048103735447,
+            "baseline_log2_probability": -78629.03442660719,
+            "candidate_log2_probability": -78629.03442660719,
+            "gain_bits_per_symbol": 0.0,
+            "net_gain_after_table_description_bits": 0.0,
+            "original_source_baseline_log2_probability": -78981.70659236703,
+            "symbols": 46270
+          },
+          "validation_top_five": [
+            {
+              "candidate": "line_in_page_mod2_alpha2048",
+              "net_gain_after_table_description_bits": -51.08076301892288,
+              "raw_gain_bits_per_symbol": -0.00010980685150038643
+            },
+            {
+              "candidate": "line_in_page_mod2_alpha256",
+              "net_gain_after_table_description_bits": -51.29474835205474,
+              "raw_gain_bits_per_symbol": -0.00011443156153133216
+            },
+            {
+              "candidate": "line_in_page_mod3_alpha2048",
+              "net_gain_after_table_description_bits": -69.5825864438084,
+              "raw_gain_bits_per_symbol": -1.2591018884988014e-05
+            },
+            {
+              "candidate": "line_in_page_mod3_alpha256",
+              "net_gain_after_table_description_bits": -69.66080465057166,
+              "raw_gain_bits_per_symbol": -1.4281492339997038e-05
+            },
+            {
+              "candidate": "line_in_page_mod4_alpha2048",
+              "net_gain_after_table_description_bits": -100.44220896578918,
+              "raw_gain_bits_per_symbol": -0.00018245534829887999
+            }
+          ]
+        },
+        {
+          "fold": 1,
+          "nuisance": {
+            "independent_line_profile_test_gain_bits_per_symbol": 0.003874551200672902,
+            "independent_line_profile_test_log2_gain": 179.27548405513517,
+            "independent_word_profile_test_gain_bits_per_symbol": 0.0022018511257423114,
+            "independent_word_profile_test_log2_gain": 101.87965158809675,
+            "line_multiplier_range": [
+              0.004041169413398917,
+              4.718835508696701
+            ],
+            "line_observations": 113249,
+            "states_per_profile": 12,
+            "word_multiplier_range": [
+              0.01643237691764531,
+              2.961662175912175
+            ],
+            "word_observations": 113249
+          },
+          "selected": null,
+          "selected_name": "baseline",
+          "test": {
+            "absolute_layout_profile_gain_bits_per_symbol": 0.0064109812844077175,
+            "baseline_log2_probability": -77283.59707244308,
+            "candidate_log2_probability": -77283.59707244308,
+            "gain_bits_per_symbol": 0.0,
+            "gain_bits_per_word": 0.0,
+            "net_gain_after_table_description_bits": 0.0,
+            "original_source_baseline_log2_probability": -77580.23317647263,
+            "symbols": 46270,
+            "words": 7590
+          },
+          "validation": {
+            "absolute_layout_profile_gain_bits_per_symbol": 0.008091694382043008,
+            "baseline_log2_probability": -89176.29891783839,
+            "candidate_log2_probability": -89176.29891783839,
+            "gain_bits_per_symbol": 0.0,
+            "net_gain_after_table_description_bits": 0.0,
+            "original_source_baseline_log2_probability": -89559.59438902138,
+            "symbols": 47369
+          },
+          "validation_top_five": [
+            {
+              "candidate": "line_in_page_mod2_alpha2048",
+              "net_gain_after_table_description_bits": -47.33492261033098,
+              "raw_gain_bits_per_symbol": -2.8181355112647038e-05
+            },
+            {
+              "candidate": "line_in_page_mod2_alpha256",
+              "net_gain_after_table_description_bits": -50.22272023934056,
+              "raw_gain_bits_per_symbol": -8.914522661108659e-05
+            },
+            {
+              "candidate": "line_in_page_mod3_alpha2048",
+              "net_gain_after_table_description_bits": -72.98921746101405,
+              "raw_gain_bits_per_symbol": -8.42157837618284e-05
+            },
+            {
+              "candidate": "line_in_page_mod3_alpha256",
+              "net_gain_after_table_description_bits": -76.06120530674525,
+              "raw_gain_bits_per_symbol": -0.0001490680678660147
+            },
+            {
+              "candidate": "line_in_page_mod4_alpha2048",
+              "net_gain_after_table_description_bits": -94.06942716748745,
+              "raw_gain_bits_per_symbol": -4.36873729123994e-05
+            }
+          ]
+        },
+        {
+          "fold": 2,
+          "nuisance": {
+            "independent_line_profile_test_gain_bits_per_symbol": 0.006949326950174266,
+            "independent_line_profile_test_log2_gain": 329.1826683028048,
+            "independent_word_profile_test_gain_bits_per_symbol": 0.001318118897235774,
+            "independent_word_profile_test_log2_gain": 62.437974043161375,
+            "line_multiplier_range": [
+              0.0032207739922499768,
+              6.377495337464073
+            ],
+            "line_observations": 113597,
+            "states_per_profile": 12,
+            "word_multiplier_range": [
+              0.017779012431419088,
+              3.4055737662647187
+            ],
+            "word_observations": 113597
+          },
+          "selected": null,
+          "selected_name": "baseline",
+          "test": {
+            "absolute_layout_profile_gain_bits_per_symbol": 0.00816130896466655,
+            "baseline_log2_probability": -92352.00449630631,
+            "candidate_log2_probability": -92352.00449630631,
+            "gain_bits_per_symbol": 0.0,
+            "gain_bits_per_word": 0.0,
+            "net_gain_after_table_description_bits": 0.0,
+            "original_source_baseline_log2_probability": -92738.5975406536,
+            "symbols": 47369,
+            "words": 7631
+          },
+          "validation": {
+            "absolute_layout_profile_gain_bits_per_symbol": 0.007259723706030286,
+            "baseline_log2_probability": -93378.60007715809,
+            "candidate_log2_probability": -93378.60007715809,
+            "gain_bits_per_symbol": 0.0,
+            "net_gain_after_table_description_bits": 0.0,
+            "original_source_baseline_log2_probability": -93711.98110918641,
+            "symbols": 45922
+          },
+          "validation_top_five": [
+            {
+              "candidate": "line_in_page_mod2_alpha2048",
+              "net_gain_after_table_description_bits": -40.65759319010249,
+              "raw_gain_bits_per_symbol": 7.278443469137911e-05
+            },
+            {
+              "candidate": "line_in_page_mod2_alpha256",
+              "net_gain_after_table_description_bits": -43.42055010785407,
+              "raw_gain_bits_per_symbol": 1.2618132750009382e-05
+            },
+            {
+              "candidate": "line_in_page_mod3_alpha2048",
+              "net_gain_after_table_description_bits": -66.68292118293175,
+              "raw_gain_bits_per_symbol": -1.4871329274242196e-05
+            },
+            {
+              "candidate": "line_in_page_mod3_alpha256",
+              "net_gain_after_table_description_bits": -69.86776775309409,
+              "raw_gain_bits_per_symbol": -8.422472351147785e-05
+            },
+            {
+              "candidate": "line_in_page_mod4_alpha2048",
+              "net_gain_after_table_description_bits": -89.67005111508479,
+              "raw_gain_bits_per_symbol": -3.6367125018178406e-05
+            }
+          ]
+        },
+        {
+          "fold": 3,
+          "nuisance": {
+            "independent_line_profile_test_gain_bits_per_symbol": 0.0058068469279286645,
+            "independent_line_profile_test_log2_gain": 266.6620246243401,
+            "independent_word_profile_test_gain_bits_per_symbol": 0.0019014198256998335,
+            "independent_word_profile_test_log2_gain": 87.31700123578776,
+            "line_multiplier_range": [
+              0.006279280826117843,
+              10.778917006842583
+            ],
+            "line_observations": 93639,
+            "states_per_profile": 12,
+            "word_multiplier_range": [
+              0.018205091736595003,
+              6.874967523770129
+            ],
+            "word_observations": 93639
+          },
+          "selected": null,
+          "selected_name": "baseline",
+          "test": {
+            "absolute_layout_profile_gain_bits_per_symbol": 0.007178506487419538,
+            "baseline_log2_probability": -90286.40778484406,
+            "candidate_log2_probability": -90286.40778484406,
+            "gain_bits_per_symbol": 0.0,
+            "gain_bits_per_word": 0.0,
+            "net_gain_after_table_description_bits": 0.0,
+            "original_source_baseline_log2_probability": -90616.05915975934,
+            "symbols": 45922,
+            "words": 7336
+          },
+          "validation": {
+            "absolute_layout_profile_gain_bits_per_symbol": 0.0057135348067818646,
+            "baseline_log2_probability": -120946.31523718471,
+            "candidate_log2_probability": -120946.31523718471,
+            "gain_bits_per_symbol": 0.0,
+            "net_gain_after_table_description_bits": 0.0,
+            "original_source_baseline_log2_probability": -121330.99039512091,
+            "symbols": 67327
+          },
+          "validation_top_five": [
+            {
+              "candidate": "line_in_page_mod2_alpha256",
+              "net_gain_after_table_description_bits": -38.54248088055465,
+              "raw_gain_bits_per_symbol": 0.00011076565299872786
+            },
+            {
+              "candidate": "line_in_page_mod2_alpha2048",
+              "net_gain_after_table_description_bits": -38.755186936614336,
+              "raw_gain_bits_per_symbol": 0.00010760635500446572
+            },
+            {
+              "candidate": "line_in_page_mod3_alpha2048",
+              "net_gain_after_table_description_bits": -67.90111483751389,
+              "raw_gain_bits_per_symbol": 1.6321611871702477e-05
+            },
+            {
+              "candidate": "line_in_page_mod3_alpha256",
+              "net_gain_after_table_description_bits": -70.8566047030763,
+              "raw_gain_bits_per_symbol": -2.757593095008392e-05
+            },
+            {
+              "candidate": "line_in_page_mod4_alpha2048",
+              "net_gain_after_table_description_bits": -99.02816797643027,
+              "raw_gain_bits_per_symbol": -0.00010438855104832041
+            }
+          ]
+        }
+      ],
+      "name": "VOYNICH",
+      "null_gain_bits_per_symbol": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "summary": {
+        "absolute_layout_positive_test_folds": 4,
+        "absolute_layout_profile_gain_bits_per_symbol": 0.00745244612000521,
+        "gain_bits_per_symbol": 0.0,
+        "gain_bits_per_word": 0.0,
+        "independent_line_profile_gain_bits_per_symbol": 0.004763464545758389,
+        "independent_word_profile_gain_bits_per_symbol": 0.003069435605429563,
+        "null_95th_percentile_gain_bits_per_symbol": 0.0,
+        "null_mean_gain_bits_per_symbol": 0.0,
+        "null_replicates": 32,
+        "phase_origin_null_p_one_sided": 1.0,
+        "positive_test_folds": 0,
+        "selected_candidate_counts": {
+          "baseline": 4
+        },
+        "selected_modulus_counts": {},
+        "table_selected_folds": 0
+      }
+    },
+    {
+      "fold_assignment": {
+        "A": 3,
+        "B": 1,
+        "C": 2,
+        "D": 2,
+        "E": 2,
+        "F": 3,
+        "G": 3,
+        "H": 3,
+        "I": 3,
+        "J": 3,
+        "M": 1,
+        "N": 2,
+        "O": 3,
+        "Q": 2,
+        "S": 2,
+        "T": 0
+      },
+      "fold_event_loads": [
+        10576,
+        7590,
+        7631,
+        7336
+      ],
+      "folds": [
+        {
+          "fold": 0,
+          "nuisance": {
+            "independent_line_profile_test_gain_bits_per_symbol": 0.0003971264814792056,
+            "independent_line_profile_test_log2_gain": 26.803257614476024,
+            "independent_word_profile_test_gain_bits_per_symbol": 0.0007430910253110398,
+            "independent_word_profile_test_log2_gain": 50.15344257131801,
+            "line_multiplier_range": [
+              0.01043960525242635,
+              6.027393966638444
+            ],
+            "line_observations": 92547,
+            "states_per_profile": 12,
+            "word_multiplier_range": [
+              0.016723281944081528,
+              3.5333307572430375
+            ],
+            "word_observations": 92547
+          },
+          "selected": null,
+          "selected_name": "baseline",
+          "test": {
+            "absolute_layout_profile_gain_bits_per_symbol": 0.0004039557329836418,
+            "baseline_log2_probability": -125055.01748227091,
+            "candidate_log2_probability": -125055.01748227091,
+            "gain_bits_per_symbol": 0.0,
+            "gain_bits_per_word": 0.0,
+            "net_gain_after_table_description_bits": 0.0,
+            "original_source_baseline_log2_probability": -125082.28166655717,
+            "symbols": 67493,
+            "words": 10576
+          },
+          "validation": {
+            "absolute_layout_profile_gain_bits_per_symbol": 0.0007534633599930469,
+            "baseline_log2_probability": -81912.67331239225,
+            "candidate_log2_probability": -81912.67331239225,
+            "gain_bits_per_symbol": 0.0,
+            "net_gain_after_table_description_bits": 0.0,
+            "original_source_baseline_log2_probability": -81947.94669959032,
+            "symbols": 46815
+          },
+          "validation_top_five": [
+            {
+              "candidate": "line_in_page_mod2_alpha256",
+              "net_gain_after_table_description_bits": -43.967815013063955,
+              "raw_gain_bits_per_symbol": 4.340884304039399e-05
+            },
+            {
+              "candidate": "line_in_page_mod2_alpha2048",
+              "net_gain_after_table_description_bits": -44.010410193455755,
+              "raw_gain_bits_per_symbol": 4.249898123559212e-05
+            },
+            {
+              "candidate": "line_in_page_mod3_alpha256",
+              "net_gain_after_table_description_bits": -66.84386836232443,
+              "raw_gain_bits_per_symbol": 4.605642716384858e-05
+            },
+            {
+              "candidate": "line_in_page_mod3_alpha2048",
+              "net_gain_after_table_description_bits": -66.88296144772903,
+              "raw_gain_bits_per_symbol": 4.522137247187802e-05
+            },
+            {
+              "candidate": "line_in_page_mod4_alpha256",
+              "net_gain_after_table_description_bits": -89.52973365700745,
+              "raw_gain_bits_per_symbol": 5.276655650950646e-05
+            }
+          ]
+        },
+        {
+          "fold": 1,
+          "nuisance": {
+            "independent_line_profile_test_gain_bits_per_symbol": -0.0004146883346466119,
+            "independent_line_profile_test_log2_gain": -19.413634386481135,
+            "independent_word_profile_test_gain_bits_per_symbol": 0.00017903280467146886,
+            "independent_word_profile_test_log2_gain": 8.381420750694815,
+            "line_multiplier_range": [
+              0.004007953282294487,
+              3.909864248091559
+            ],
+            "line_observations": 112998,
+            "states_per_profile": 12,
+            "word_multiplier_range": [
+              0.01647785787847584,
+              3.2781436366382364
+            ],
+            "word_observations": 112998
+          },
+          "selected": null,
+          "selected_name": "baseline",
+          "test": {
+            "absolute_layout_profile_gain_bits_per_symbol": -0.0001674557850539434,
+            "baseline_log2_probability": -81184.10575487142,
+            "candidate_log2_probability": -81184.10575487142,
+            "gain_bits_per_symbol": 0.0,
+            "gain_bits_per_word": 0.0,
+            "net_gain_after_table_description_bits": 0.0,
+            "original_source_baseline_log2_probability": -81176.26631229412,
+            "symbols": 46815,
+            "words": 7590
+          },
+          "validation": {
+            "absolute_layout_profile_gain_bits_per_symbol": -0.0006939239900961233,
+            "baseline_log2_probability": -90934.7826729731,
+            "candidate_log2_probability": -90934.7826729731,
+            "gain_bits_per_symbol": 0.0,
+            "net_gain_after_table_description_bits": 0.0,
+            "original_source_baseline_log2_probability": -90902.139100631,
+            "symbols": 47042
+          },
+          "validation_top_five": [
+            {
+              "candidate": "line_in_page_mod2_alpha256",
+              "net_gain_after_table_description_bits": -40.20804988275631,
+              "raw_gain_bits_per_symbol": 0.00012312295644835864
+            },
+            {
+              "candidate": "line_in_page_mod2_alpha2048",
+              "net_gain_after_table_description_bits": -40.29663260275265,
+              "raw_gain_bits_per_symbol": 0.00012123990045591913
+            },
+            {
+              "candidate": "line_in_page_mod3_alpha2048",
+              "net_gain_after_table_description_bits": -71.23686042601184,
+              "raw_gain_bits_per_symbol": -4.755028327902395e-05
+            },
+            {
+              "candidate": "line_in_page_mod3_alpha256",
+              "net_gain_after_table_description_bits": -71.51899810810573,
+              "raw_gain_bits_per_symbol": -5.354785315474967e-05
+            },
+            {
+              "candidate": "line_in_page_mod4_alpha2048",
+              "net_gain_after_table_description_bits": -103.98305550694931,
+              "raw_gain_bits_per_symbol": -0.0002547309958536906
+            }
+          ]
+        },
+        {
+          "fold": 2,
+          "nuisance": {
+            "independent_line_profile_test_gain_bits_per_symbol": -0.000242046094286295,
+            "independent_line_profile_test_log2_gain": -11.38633236741589,
+            "independent_word_profile_test_gain_bits_per_symbol": -0.00035327209092241566,
+            "independent_word_profile_test_log2_gain": -16.618625701172277,
+            "line_multiplier_range": [
+              0.0031762574753716275,
+              8.578550084077715
+            ],
+            "line_observations": 114308,
+            "states_per_profile": 12,
+            "word_multiplier_range": [
+              0.01790585437504375,
+              7.531689985831663
+            ],
+            "word_observations": 114308
+          },
+          "selected": null,
+          "selected_name": "baseline",
+          "test": {
+            "absolute_layout_profile_gain_bits_per_symbol": -0.0011215988676805005,
+            "baseline_log2_probability": -93362.5207289006,
+            "candidate_log2_probability": -93362.5207289006,
+            "gain_bits_per_symbol": 0.0,
+            "gain_bits_per_word": 0.0,
+            "net_gain_after_table_description_bits": 0.0,
+            "original_source_baseline_log2_probability": -93309.75847496718,
+            "symbols": 47042,
+            "words": 7631
+          },
+          "validation": {
+            "absolute_layout_profile_gain_bits_per_symbol": -0.0007129710076359962,
+            "baseline_log2_probability": -90462.37483990236,
+            "candidate_log2_probability": -90462.37483990236,
+            "gain_bits_per_symbol": 0.0,
+            "net_gain_after_table_description_bits": 0.0,
+            "original_source_baseline_log2_probability": -90429.93109419988,
+            "symbols": 45505
+          },
+          "validation_top_five": [
+            {
+              "candidate": "line_in_page_mod2_alpha2048",
+              "net_gain_after_table_description_bits": -44.07507826968504,
+              "raw_gain_bits_per_symbol": 4.230132359773571e-05
+            },
+            {
+              "candidate": "line_in_page_mod2_alpha256",
+              "net_gain_after_table_description_bits": -46.85510868867277,
+              "raw_gain_bits_per_symbol": -1.8791532549670842e-05
+            },
+            {
+              "candidate": "line_in_page_mod3_alpha2048",
+              "net_gain_after_table_description_bits": -63.70675467082765,
+              "raw_gain_bits_per_symbol": 0.0001163222795115339
+            },
+            {
+              "candidate": "line_in_page_mod3_alpha256",
+              "net_gain_after_table_description_bits": -63.750588429538766,
+              "raw_gain_bits_per_symbol": 0.00011535900605342785
+            },
+            {
+              "candidate": "line_in_page_mod4_alpha2048",
+              "net_gain_after_table_description_bits": -94.69750943878898,
+              "raw_gain_bits_per_symbol": -5.927940751102042e-05
+            }
+          ]
+        },
+        {
+          "fold": 3,
+          "nuisance": {
+            "independent_line_profile_test_gain_bits_per_symbol": -0.0007557396042349517,
+            "independent_line_profile_test_log2_gain": -34.38993069071148,
+            "independent_word_profile_test_gain_bits_per_symbol": -0.0003227294030377594,
+            "independent_word_profile_test_log2_gain": -14.685801485233242,
+            "line_multiplier_range": [
+              0.006206511988750668,
+              10.796449198382843
+            ],
+            "line_observations": 93857,
+            "states_per_profile": 12,
+            "word_multiplier_range": [
+              0.018196033833250448,
+              7.98159469325047
+            ],
+            "word_observations": 93857
+          },
+          "selected": null,
+          "selected_name": "baseline",
+          "test": {
+            "absolute_layout_profile_gain_bits_per_symbol": -0.0013713178772465173,
+            "baseline_log2_probability": -88245.49434079381,
+            "candidate_log2_probability": -88245.49434079381,
+            "gain_bits_per_symbol": 0.0,
+            "gain_bits_per_word": 0.0,
+            "net_gain_after_table_description_bits": 0.0,
+            "original_source_baseline_log2_probability": -88183.09252078971,
+            "symbols": 45505,
+            "words": 7336
+          },
+          "validation": {
+            "absolute_layout_profile_gain_bits_per_symbol": -0.000922962545272831,
+            "baseline_log2_probability": -124586.91200888612,
+            "candidate_log2_probability": -124586.91200888612,
+            "gain_bits_per_symbol": 0.0,
+            "net_gain_after_table_description_bits": 0.0,
+            "original_source_baseline_log2_probability": -124524.61849781802,
+            "symbols": 67493
+          },
+          "validation_top_five": [
+            {
+              "candidate": "line_in_page_mod2_alpha2048",
+              "net_gain_after_table_description_bits": -49.32663657958619,
+              "raw_gain_bits_per_symbol": -4.928861629481862e-05
+            },
+            {
+              "candidate": "line_in_page_mod2_alpha256",
+              "net_gain_after_table_description_bits": -52.27375999616925,
+              "raw_gain_bits_per_symbol": -9.295423223399829e-05
+            },
+            {
+              "candidate": "line_in_page_mod3_alpha2048",
+              "net_gain_after_table_description_bits": -69.36414407710254,
+              "raw_gain_bits_per_symbol": -5.3952865793865625e-06
+            },
+            {
+              "candidate": "line_in_page_mod3_alpha256",
+              "net_gain_after_table_description_bits": -69.55969818483572,
+              "raw_gain_bits_per_symbol": -8.292684942671455e-06
+            },
+            {
+              "candidate": "line_in_page_mod4_alpha2048",
+              "net_gain_after_table_description_bits": -120.64455838421418,
+              "raw_gain_bits_per_symbol": -0.0004244078405792331
+            }
+          ]
+        }
+      ],
+      "name": "SYNTHETIC_BASE_ONLY",
+      "null_gain_bits_per_symbol": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "summary": {
+        "absolute_layout_positive_test_folds": 1,
+        "absolute_layout_profile_gain_bits_per_symbol": -0.0004628330580772247,
+        "gain_bits_per_symbol": 0.0,
+        "gain_bits_per_word": 0.0,
+        "independent_line_profile_gain_bits_per_symbol": -0.00018557269502855856,
+        "independent_word_profile_gain_bits_per_symbol": 0.00013164021239809193,
+        "null_95th_percentile_gain_bits_per_symbol": 0.0,
+        "null_mean_gain_bits_per_symbol": 0.0,
+        "null_replicates": 8,
+        "phase_origin_null_p_one_sided": 1.0,
+        "positive_test_folds": 0,
+        "selected_candidate_counts": {
+          "baseline": 4
+        },
+        "selected_modulus_counts": {},
+        "table_selected_folds": 0
+      }
+    },
+    {
+      "fold_assignment": {
+        "A": 3,
+        "B": 1,
+        "C": 2,
+        "D": 2,
+        "E": 2,
+        "F": 3,
+        "G": 3,
+        "H": 3,
+        "I": 3,
+        "J": 3,
+        "M": 1,
+        "N": 2,
+        "O": 3,
+        "Q": 2,
+        "S": 2,
+        "T": 0
+      },
+      "fold_event_loads": [
+        10576,
+        7590,
+        7631,
+        7336
+      ],
+      "folds": [
+        {
+          "fold": 0,
+          "nuisance": {
+            "independent_line_profile_test_gain_bits_per_symbol": 0.011034289952003215,
+            "independent_line_profile_test_log2_gain": 717.504704129009,
+            "independent_word_profile_test_gain_bits_per_symbol": 0.0007232904989345401,
+            "independent_word_profile_test_log2_gain": 47.03196469321847,
+            "line_multiplier_range": [
+              0.01022977022977026,
+              2.2146290766052754
+            ],
+            "line_observations": 94596,
+            "states_per_profile": 12,
+            "word_multiplier_range": [
+              0.017088311861691463,
+              2.3066950484737876
+            ],
+            "word_observations": 94596
+          },
+          "selected": {
+            "alpha": 256.0,
+            "modulus": 4,
+            "scope": "line_in_page"
+          },
+          "selected_name": "line_in_page_mod4_alpha256",
+          "test": {
+            "absolute_layout_profile_gain_bits_per_symbol": 0.010937147378610531,
+            "baseline_log2_probability": -130158.77936313208,
+            "candidate_log2_probability": -129459.425274177,
+            "gain_bits_per_symbol": 0.010755157077356073,
+            "gain_bits_per_word": 0.06612652127033648,
+            "net_gain_after_table_description_bits": 611.3540889550786,
+            "original_source_baseline_log2_probability": -130869.96737142623,
+            "symbols": 65025,
+            "words": 10576
+          },
+          "validation": {
+            "absolute_layout_profile_gain_bits_per_symbol": 0.016662540274484005,
+            "baseline_log2_probability": -92205.06921330032,
+            "candidate_log2_probability": -91737.19612274405,
+            "gain_bits_per_symbol": 0.009685409786496155,
+            "net_gain_after_table_description_bits": 379.87309055626974,
+            "original_source_baseline_log2_probability": -93009.98654633982,
+            "symbols": 48307
+          },
+          "validation_top_five": [
+            {
+              "candidate": "line_in_page_mod4_alpha256",
+              "net_gain_after_table_description_bits": 379.87309055626974,
+              "raw_gain_bits_per_symbol": 0.009685409786496155
+            },
+            {
+              "candidate": "line_in_page_mod4_alpha2048",
+              "net_gain_after_table_description_bits": 356.8377979114157,
+              "raw_gain_bits_per_symbol": 0.009208557722719599
+            },
+            {
+              "candidate": "line_in_page_mod2_alpha256",
+              "net_gain_after_table_description_bits": 218.15762297330366,
+              "raw_gain_bits_per_symbol": 0.005426907549077849
+            },
+            {
+              "candidate": "line_in_page_mod2_alpha2048",
+              "net_gain_after_table_description_bits": 211.5439742532035,
+              "raw_gain_bits_per_symbol": 0.005289998845989266
+            },
+            {
+              "candidate": "line_in_page_mod12_alpha256",
+              "net_gain_after_table_description_bits": 204.0084308469959,
+              "raw_gain_bits_per_symbol": 0.00968821145686952
+            }
+          ]
+        },
+        {
+          "fold": 1,
+          "nuisance": {
+            "independent_line_profile_test_gain_bits_per_symbol": 0.01648494625060619,
+            "independent_line_profile_test_log2_gain": 796.3382985280332,
+            "independent_word_profile_test_gain_bits_per_symbol": 0.0001213147681639708,
+            "independent_word_profile_test_log2_gain": 5.860352505696937,
+            "line_multiplier_range": [
+              0.0041259710537343225,
+              2.108228580978319
+            ],
+            "line_observations": 111782,
+            "states_per_profile": 12,
+            "word_multiplier_range": [
+              0.016511867905056758,
+              1.620501723063826
+            ],
+            "word_observations": 111782
+          },
+          "selected": {
+            "alpha": 2048.0,
+            "modulus": 4,
+            "scope": "line_in_page"
+          },
+          "selected_name": "line_in_page_mod4_alpha2048",
+          "test": {
+            "absolute_layout_profile_gain_bits_per_symbol": 0.016608304383971158,
+            "baseline_log2_probability": -91565.42949610637,
+            "candidate_log2_probability": -91046.67308924074,
+            "gain_bits_per_symbol": 0.010738741939380124,
+            "gain_bits_per_word": 0.06834735268321945,
+            "net_gain_after_table_description_bits": 430.75640686563565,
+            "original_source_baseline_log2_probability": -92367.72685598287,
+            "symbols": 48307,
+            "words": 7590
+          },
+          "validation": {
+            "absolute_layout_profile_gain_bits_per_symbol": 0.03697425602604558,
+            "baseline_log2_probability": -96172.5012155528,
+            "candidate_log2_probability": -95998.32547016226,
+            "gain_bits_per_symbol": 0.0036408734586954204,
+            "net_gain_after_table_description_bits": 86.17574539053021,
+            "original_source_baseline_log2_probability": -97941.31264958279,
+            "symbols": 47839
+          },
+          "validation_top_five": [
+            {
+              "candidate": "line_in_page_mod4_alpha2048",
+              "net_gain_after_table_description_bits": 86.17574539053021,
+              "raw_gain_bits_per_symbol": 0.0036408734586954204
+            },
+            {
+              "candidate": "line_in_page_mod2_alpha2048",
+              "net_gain_after_table_description_bits": 75.18555109396402,
+              "raw_gain_bits_per_symbol": 0.002491388847884864
+            },
+            {
+              "candidate": "line_in_page_mod2_alpha256",
+              "net_gain_after_table_description_bits": 68.46712264587404,
+              "raw_gain_bits_per_symbol": 0.002350950535041996
+            },
+            {
+              "candidate": "line_in_page_mod4_alpha256",
+              "net_gain_after_table_description_bits": 60.70358939167636,
+              "raw_gain_bits_per_symbol": 0.0031084175963476735
+            },
+            {
+              "candidate": "line_in_page_mod12_alpha2048",
+              "net_gain_after_table_description_bits": -48.28573696715466,
+              "raw_gain_bits_per_symbol": 0.004509171659793167
+            }
+          ]
+        },
+        {
+          "fold": 2,
+          "nuisance": {
+            "independent_line_profile_test_gain_bits_per_symbol": 0.03615226526511932,
+            "independent_line_profile_test_log2_gain": 1729.488218018043,
+            "independent_word_profile_test_gain_bits_per_symbol": 0.00050324126176202,
+            "independent_word_profile_test_log2_gain": 24.074558721433277,
+            "line_multiplier_range": [
+              0.0032343651295008314,
+              2.5235117102552094
+            ],
+            "line_observations": 113332,
+            "states_per_profile": 12,
+            "word_multiplier_range": [
+              0.017537850243200606,
+              2.3288971449680074
+            ],
+            "word_observations": 113332
+          },
+          "selected": {
+            "alpha": 2048.0,
+            "modulus": 2,
+            "scope": "line_in_page"
+          },
+          "selected_name": "line_in_page_mod2_alpha2048",
+          "test": {
+            "absolute_layout_profile_gain_bits_per_symbol": 0.03648220928420737,
+            "baseline_log2_probability": -98281.0279533074,
+            "candidate_log2_probability": -98168.45247896442,
+            "gain_bits_per_symbol": 0.0023532154589975987,
+            "gain_bits_per_word": 0.014752388198530484,
+            "net_gain_after_table_description_bits": 68.57547434298613,
+            "original_source_baseline_log2_probability": -100026.3003632546,
+            "symbols": 47839,
+            "words": 7631
+          },
+          "validation": {
+            "absolute_layout_profile_gain_bits_per_symbol": 0.03627967456273057,
+            "baseline_log2_probability": -97148.18678771629,
+            "candidate_log2_probability": -97014.72476695219,
+            "gain_bits_per_symbol": 0.0028543751901126736,
+            "net_gain_after_table_description_bits": 89.46202076409827,
+            "original_source_baseline_log2_probability": -98844.51553124588,
+            "symbols": 46757
+          },
+          "validation_top_five": [
+            {
+              "candidate": "line_in_page_mod2_alpha2048",
+              "net_gain_after_table_description_bits": 89.46202076409827,
+              "raw_gain_bits_per_symbol": 0.0028543751901126736
+            },
+            {
+              "candidate": "line_in_page_mod2_alpha256",
+              "net_gain_after_table_description_bits": 79.05655788602598,
+              "raw_gain_bits_per_symbol": 0.0026318317660676688
+            },
+            {
+              "candidate": "line_in_page_mod4_alpha2048",
+              "net_gain_after_table_description_bits": 3.8697639641322894,
+              "raw_gain_bits_per_symbol": 0.0019648344411346383
+            },
+            {
+              "candidate": "line_in_page_mod4_alpha256",
+              "net_gain_after_table_description_bits": -43.2064787162235,
+              "raw_gain_bits_per_symbol": 0.0009580067430283487
+            },
+            {
+              "candidate": "line_in_page_mod3_alpha256",
+              "net_gain_after_table_description_bits": -54.77236336590431,
+              "raw_gain_bits_per_symbol": 0.00024012739555779217
+            }
+          ]
+        },
+        {
+          "fold": 3,
+          "nuisance": {
+            "independent_line_profile_test_gain_bits_per_symbol": 0.037990405474849345,
+            "independent_line_profile_test_log2_gain": 1776.317388787531,
+            "independent_word_profile_test_gain_bits_per_symbol": -0.00018482767426106556,
+            "independent_word_profile_test_log2_gain": -8.641987565424643,
+            "line_multiplier_range": [
+              0.006076574331220811,
+              2.237002856161751
+            ],
+            "line_observations": 96146,
+            "states_per_profile": 12,
+            "word_multiplier_range": [
+              0.01818956941878643,
+              3.329425697581222
+            ],
+            "word_observations": 96146
+          },
+          "selected": {
+            "alpha": 256.0,
+            "modulus": 4,
+            "scope": "line_in_page"
+          },
+          "selected_name": "line_in_page_mod4_alpha256",
+          "test": {
+            "absolute_layout_profile_gain_bits_per_symbol": 0.03787808316194853,
+            "baseline_log2_probability": -94976.28301259213,
+            "candidate_log2_probability": -94633.53477788859,
+            "gain_bits_per_symbol": 0.007330415439475164,
+            "gain_bits_per_word": 0.04672140603919578,
+            "net_gain_after_table_description_bits": 254.74823470354022,
+            "original_source_baseline_log2_probability": -96747.34854699536,
+            "symbols": 46757,
+            "words": 7336
+          },
+          "validation": {
+            "absolute_layout_profile_gain_bits_per_symbol": 0.011791788117465028,
+            "baseline_log2_probability": -129586.92308662672,
+            "candidate_log2_probability": -128682.27526643199,
+            "gain_bits_per_symbol": 0.013912307884578732,
+            "net_gain_after_table_description_bits": 816.647820194732,
+            "original_source_baseline_log2_probability": -130353.68410896488,
+            "symbols": 65025
+          },
+          "validation_top_five": [
+            {
+              "candidate": "line_in_page_mod4_alpha256",
+              "net_gain_after_table_description_bits": 816.647820194732,
+              "raw_gain_bits_per_symbol": 0.013912307884578732
+            },
+            {
+              "candidate": "line_in_page_mod4_alpha2048",
+              "net_gain_after_table_description_bits": 779.6112393512158,
+              "raw_gain_bits_per_symbol": 0.013342733400249378
+            },
+            {
+              "candidate": "line_in_page_mod12_alpha256",
+              "net_gain_after_table_description_bits": 585.939181300666,
+              "raw_gain_bits_per_symbol": 0.013070960112274755
+            },
+            {
+              "candidate": "line_in_page_mod12_alpha2048",
+              "net_gain_after_table_description_bits": 507.0156951567187,
+              "raw_gain_bits_per_symbol": 0.011857219456466263
+            },
+            {
+              "candidate": "line_in_page_mod2_alpha256",
+              "net_gain_after_table_description_bits": 446.46810562963947,
+              "raw_gain_bits_per_symbol": 0.007542762101186305
+            }
+          ]
+        }
+      ],
+      "name": "SYNTHETIC_PLANTED_LINE_PAGE_MOD4",
+      "null_gain_bits_per_symbol": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "summary": {
+        "absolute_layout_positive_test_folds": 4,
+        "absolute_layout_profile_gain_bits_per_symbol": 0.024190216385099977,
+        "gain_bits_per_symbol": 0.008048142649702016,
+        "gain_bits_per_word": 0.0505065706355368,
+        "independent_line_profile_gain_bits_per_symbol": 0.024141282604856568,
+        "independent_word_profile_gain_bits_per_symbol": 0.0003285987859014853,
+        "null_95th_percentile_gain_bits_per_symbol": 0.0,
+        "null_mean_gain_bits_per_symbol": 0.0,
+        "null_replicates": 32,
+        "phase_origin_null_p_one_sided": 0.030303030303030304,
+        "positive_test_folds": 4,
+        "selected_candidate_counts": {
+          "line_in_page_mod2_alpha2048": 1,
+          "line_in_page_mod4_alpha2048": 1,
+          "line_in_page_mod4_alpha256": 2
+        },
+        "selected_modulus_counts": {
+          "2": 1,
+          "4": 3
+        },
+        "table_selected_folds": 4
+      }
+    }
+  ],
+  "parameters": {
+    "alphas": [
+      256.0,
+      2048.0
+    ],
+    "minimum_description_bits_per_phase_glyph_entry": 1.0,
+    "moduli": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      12
+    ],
+    "null": "full validation selection after independent page-level rotations of the line-counter origin",
+    "null_replicates": 32,
+    "position_profiles": {
+      "alpha": 256.0,
+      "coordinate_descent_iterations": 4,
+      "page_line": "exact indices 0..10; shared 11+ class",
+      "word_in_line": "exact indices 0..10; shared 11+ class"
+    },
+    "residual_scope": "line_in_page"
+  },
+  "seed": 20260725,
+  "summary": {
+    "controls_pass": true,
+    "layout_residual_counter_gate_pass": false,
+    "voynich_absolute_layout_positive_test_folds": 4,
+    "voynich_absolute_layout_profile_gain_bits_per_symbol": 0.00745244612000521,
+    "voynich_independent_line_profile_gain_bits_per_symbol": 0.004763464545758389,
+    "voynich_independent_word_profile_gain_bits_per_symbol": 0.003069435605429563,
+    "voynich_phase_origin_null_p_one_sided": 1.0,
+    "voynich_positive_test_folds": 0,
+    "voynich_residual_gain_bits_per_symbol": 0.0,
+    "voynich_selected_modulus_counts": {},
+    "voynich_table_selected_folds": 0
+  }
+}

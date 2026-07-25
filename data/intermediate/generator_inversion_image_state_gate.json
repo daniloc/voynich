@@ -1,0 +1,3920 @@
+{
+  "assets": {
+    "data/corpus/corpus.json": "6c0160de15d4a434816477a65ee4c7ffc384bd66e3a0ad63aedaed638c97fcb0",
+    "data/intermediate/generator_inversion_page_illustration_features.json": "f7233d1d0b34daaf3a09db867d109f82333debcd184823af2156853a7cedee66"
+  },
+  "claim_boundary": "A pass links guarded page-image structure to the frozen textual page state after exact metadata matching. It does not decode Voynichese, name an illustration, or establish semantics. A failure rejects only these coarse silhouette/pigment features and this nearest-donor rule.",
+  "corpus_audit": {
+    "eligible_words": 33133,
+    "hard_breaks": 567,
+    "prose_lines": 4117,
+    "source_tokens": 33700
+  },
+  "experiment": "guarded_illustration_to_page_state_gate",
+  "fold_assignment": {
+    "A": 3,
+    "B": 1,
+    "C": 2,
+    "D": 2,
+    "E": 2,
+    "F": 3,
+    "G": 3,
+    "H": 3,
+    "I": 3,
+    "J": 3,
+    "M": 1,
+    "N": 2,
+    "O": 3,
+    "Q": 2,
+    "S": 2,
+    "T": 0
+  },
+  "fold_event_loads": [
+    10576,
+    7590,
+    7631,
+    7336
+  ],
+  "folds": [
+    {
+      "eligible_pages": 23,
+      "eligible_strata": 1,
+      "fold": 0,
+      "image_gain_over_mean_donor_bits_per_word": -0.18398310645891985,
+      "image_relabeling_null": {
+        "null_mean_bits_per_word": 12.16425933501636,
+        "observed_gain_over_null_bits_per_word": -0.18312156847259856,
+        "replicates": 500,
+        "upper_p": 0.9880239520958084
+      },
+      "image_selected_bits_per_word": 12.34738090348896,
+      "mean_matched_donor_bits_per_word": 12.16339779703004,
+      "own_gain_over_mean_donor_bits_per_word": 0.49928276074526773,
+      "own_prefix_bits_per_word": 11.664115036284771,
+      "posthoc_best_donor_ceiling_bits_per_word": 11.63073337597481,
+      "prefix_state_oracle_bits_per_word": 11.830966326882686,
+      "prefix_state_oracle_gain_over_mean_donor_bits_per_word": 0.3324314701473529,
+      "selected_alpha": 16.0,
+      "selected_family": "pigment_guarded",
+      "selected_neighbors": 1,
+      "static_bits_per_word": 12.288908078873982,
+      "suffix_words": 1472,
+      "targets": [
+        {
+          "block": "T",
+          "currier": "B",
+          "folio": "f103r",
+          "image_selected_bits_per_word": 12.057312945372432,
+          "matched_states": 23,
+          "mean_donor_bits_per_word": 11.749419634036203,
+          "prefix_state_oracle_folio": "f111r",
+          "section": "S",
+          "selected_image_donors": [
+            "f113r"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "T",
+          "currier": "B",
+          "folio": "f103v",
+          "image_selected_bits_per_word": 11.419820395714689,
+          "matched_states": 23,
+          "mean_donor_bits_per_word": 10.982514837458432,
+          "prefix_state_oracle_folio": "f111v",
+          "section": "S",
+          "selected_image_donors": [
+            "f114r"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "T",
+          "currier": "B",
+          "folio": "f104r",
+          "image_selected_bits_per_word": 12.823762945688214,
+          "matched_states": 23,
+          "mean_donor_bits_per_word": 12.651258882333051,
+          "prefix_state_oracle_folio": "f104v",
+          "section": "S",
+          "selected_image_donors": [
+            "f111r"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "T",
+          "currier": "B",
+          "folio": "f104v",
+          "image_selected_bits_per_word": 12.351210173288637,
+          "matched_states": 23,
+          "mean_donor_bits_per_word": 12.189897324212962,
+          "prefix_state_oracle_folio": "f107r",
+          "section": "S",
+          "selected_image_donors": [
+            "f112r"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "T",
+          "currier": "B",
+          "folio": "f105r",
+          "image_selected_bits_per_word": 13.640974787327432,
+          "matched_states": 23,
+          "mean_donor_bits_per_word": 13.668334101778077,
+          "prefix_state_oracle_folio": "f107r",
+          "section": "S",
+          "selected_image_donors": [
+            "f108r"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "T",
+          "currier": "B",
+          "folio": "f105v",
+          "image_selected_bits_per_word": 13.09325599449682,
+          "matched_states": 23,
+          "mean_donor_bits_per_word": 13.37996770433686,
+          "prefix_state_oracle_folio": "f114r",
+          "section": "S",
+          "selected_image_donors": [
+            "f107v"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "T",
+          "currier": "B",
+          "folio": "f106r",
+          "image_selected_bits_per_word": 11.969361674265159,
+          "matched_states": 23,
+          "mean_donor_bits_per_word": 12.066956795328984,
+          "prefix_state_oracle_folio": "f115v",
+          "section": "S",
+          "selected_image_donors": [
+            "f108r"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "T",
+          "currier": "B",
+          "folio": "f106v",
+          "image_selected_bits_per_word": 12.710097855742237,
+          "matched_states": 23,
+          "mean_donor_bits_per_word": 12.525107473834675,
+          "prefix_state_oracle_folio": "f107v",
+          "section": "S",
+          "selected_image_donors": [
+            "f108v"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "T",
+          "currier": "B",
+          "folio": "f107r",
+          "image_selected_bits_per_word": 12.25365684856727,
+          "matched_states": 23,
+          "mean_donor_bits_per_word": 12.098878180958302,
+          "prefix_state_oracle_folio": "f115v",
+          "section": "S",
+          "selected_image_donors": [
+            "f114r"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "T",
+          "currier": "B",
+          "folio": "f107v",
+          "image_selected_bits_per_word": 11.427793980614922,
+          "matched_states": 23,
+          "mean_donor_bits_per_word": 11.229046619491891,
+          "prefix_state_oracle_folio": "f113r",
+          "section": "S",
+          "selected_image_donors": [
+            "f105v"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "T",
+          "currier": "B",
+          "folio": "f108r",
+          "image_selected_bits_per_word": 11.212591142796489,
+          "matched_states": 23,
+          "mean_donor_bits_per_word": 11.398351709318728,
+          "prefix_state_oracle_folio": "f111v",
+          "section": "S",
+          "selected_image_donors": [
+            "f113r"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "T",
+          "currier": "B",
+          "folio": "f108v",
+          "image_selected_bits_per_word": 14.54311792176654,
+          "matched_states": 23,
+          "mean_donor_bits_per_word": 13.532775127531345,
+          "prefix_state_oracle_folio": "f111v",
+          "section": "S",
+          "selected_image_donors": [
+            "f106v"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "T",
+          "currier": "B",
+          "folio": "f111r",
+          "image_selected_bits_per_word": 10.98957194151748,
+          "matched_states": 23,
+          "mean_donor_bits_per_word": 11.077022143976766,
+          "prefix_state_oracle_folio": "f111v",
+          "section": "S",
+          "selected_image_donors": [
+            "f112r"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "T",
+          "currier": "B",
+          "folio": "f111v",
+          "image_selected_bits_per_word": 11.712750117069866,
+          "matched_states": 23,
+          "mean_donor_bits_per_word": 11.564944328626883,
+          "prefix_state_oracle_folio": "f111r",
+          "section": "S",
+          "selected_image_donors": [
+            "f112v"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "T",
+          "currier": "B",
+          "folio": "f112r",
+          "image_selected_bits_per_word": 10.971254260185653,
+          "matched_states": 23,
+          "mean_donor_bits_per_word": 10.484965933244803,
+          "prefix_state_oracle_folio": "f107r",
+          "section": "S",
+          "selected_image_donors": [
+            "f114r"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "T",
+          "currier": "B",
+          "folio": "f112v",
+          "image_selected_bits_per_word": 10.850208850585798,
+          "matched_states": 23,
+          "mean_donor_bits_per_word": 11.056446566588134,
+          "prefix_state_oracle_folio": "f113v",
+          "section": "S",
+          "selected_image_donors": [
+            "f111v"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "T",
+          "currier": "B",
+          "folio": "f113r",
+          "image_selected_bits_per_word": 12.678200838290037,
+          "matched_states": 23,
+          "mean_donor_bits_per_word": 12.543199319623996,
+          "prefix_state_oracle_folio": "f107v",
+          "section": "S",
+          "selected_image_donors": [
+            "f112r"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "T",
+          "currier": "B",
+          "folio": "f113v",
+          "image_selected_bits_per_word": 11.867352378380755,
+          "matched_states": 23,
+          "mean_donor_bits_per_word": 11.403866045555544,
+          "prefix_state_oracle_folio": "f107r",
+          "section": "S",
+          "selected_image_donors": [
+            "f114v"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "T",
+          "currier": "B",
+          "folio": "f114r",
+          "image_selected_bits_per_word": 14.405511762724768,
+          "matched_states": 23,
+          "mean_donor_bits_per_word": 14.687616369121217,
+          "prefix_state_oracle_folio": "f105v",
+          "section": "S",
+          "selected_image_donors": [
+            "f112r"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "T",
+          "currier": "B",
+          "folio": "f114v",
+          "image_selected_bits_per_word": 13.40395212553367,
+          "matched_states": 23,
+          "mean_donor_bits_per_word": 12.440882351008309,
+          "prefix_state_oracle_folio": "f115v",
+          "section": "S",
+          "selected_image_donors": [
+            "f113v"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "T",
+          "currier": "B",
+          "folio": "f115r",
+          "image_selected_bits_per_word": 12.243714299748701,
+          "matched_states": 23,
+          "mean_donor_bits_per_word": 11.867033782813325,
+          "prefix_state_oracle_folio": "f106r",
+          "section": "S",
+          "selected_image_donors": [
+            "f105r"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "T",
+          "currier": "B",
+          "folio": "f115v",
+          "image_selected_bits_per_word": 14.107783509809122,
+          "matched_states": 23,
+          "mean_donor_bits_per_word": 14.156102366587595,
+          "prefix_state_oracle_folio": "f107r",
+          "section": "S",
+          "selected_image_donors": [
+            "f114r"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "T",
+          "currier": "B",
+          "folio": "f116r",
+          "image_selected_bits_per_word": 11.256504030759402,
+          "matched_states": 23,
+          "mean_donor_bits_per_word": 11.003561733924746,
+          "prefix_state_oracle_folio": "f111r",
+          "section": "S",
+          "selected_image_donors": [
+            "f113r"
+          ],
+          "suffix_words": 64
+        }
+      ],
+      "test_blocks": [
+        "T"
+      ],
+      "train_blocks": [
+        "A",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "N",
+        "O",
+        "Q",
+        "S"
+      ],
+      "validation_blocks": [
+        "B",
+        "M"
+      ],
+      "validation_candidates": [
+        {
+          "alpha": 8.0,
+          "eligible_pages": 20,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.08124792826638298,
+          "image_selected_bits_per_word": 10.70890260431862,
+          "mean_matched_donor_bits_per_word": 10.790150532585002,
+          "neighbors": 1,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 20,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.05976712489283074,
+          "image_selected_bits_per_word": 10.663515849066677,
+          "mean_matched_donor_bits_per_word": 10.723282973959508,
+          "neighbors": 1,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 20,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.04023231507242571,
+          "image_selected_bits_per_word": 10.730472666139924,
+          "mean_matched_donor_bits_per_word": 10.77070498121235,
+          "neighbors": 1,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 20,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.02554613282220828,
+          "image_selected_bits_per_word": 10.863104301266986,
+          "mean_matched_donor_bits_per_word": 10.888650434089195,
+          "neighbors": 1,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 20,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.04109717292682689,
+          "image_selected_bits_per_word": 10.749053359658175,
+          "mean_matched_donor_bits_per_word": 10.790150532585002,
+          "neighbors": 3,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 20,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.030031004822149043,
+          "image_selected_bits_per_word": 10.693251969137359,
+          "mean_matched_donor_bits_per_word": 10.723282973959508,
+          "neighbors": 3,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 20,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.020713038446911015,
+          "image_selected_bits_per_word": 10.749991942765439,
+          "mean_matched_donor_bits_per_word": 10.77070498121235,
+          "neighbors": 3,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 20,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.013836414696783095,
+          "image_selected_bits_per_word": 10.874814019392412,
+          "mean_matched_donor_bits_per_word": 10.888650434089195,
+          "neighbors": 3,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 20,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.038114628303975454,
+          "image_selected_bits_per_word": 10.752035904281026,
+          "mean_matched_donor_bits_per_word": 10.790150532585002,
+          "neighbors": 5,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 20,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.03027778282963567,
+          "image_selected_bits_per_word": 10.693005191129872,
+          "mean_matched_donor_bits_per_word": 10.723282973959508,
+          "neighbors": 5,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 20,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.02327676571648709,
+          "image_selected_bits_per_word": 10.747428215495862,
+          "mean_matched_donor_bits_per_word": 10.77070498121235,
+          "neighbors": 5,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 20,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.01728182828616127,
+          "image_selected_bits_per_word": 10.871368605803033,
+          "mean_matched_donor_bits_per_word": 10.888650434089195,
+          "neighbors": 5,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 20,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.017144133868215762,
+          "image_selected_bits_per_word": 10.807294666453219,
+          "mean_matched_donor_bits_per_word": 10.790150532585002,
+          "neighbors": 1,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 20,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.004794979453534154,
+          "image_selected_bits_per_word": 10.728077953413042,
+          "mean_matched_donor_bits_per_word": 10.723282973959508,
+          "neighbors": 1,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 20,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.00338490030576537,
+          "image_selected_bits_per_word": 10.767320080906584,
+          "mean_matched_donor_bits_per_word": 10.77070498121235,
+          "neighbors": 1,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 20,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.007269106372181966,
+          "image_selected_bits_per_word": 10.881381327717012,
+          "mean_matched_donor_bits_per_word": 10.888650434089195,
+          "neighbors": 1,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 20,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.042844355883960364,
+          "image_selected_bits_per_word": 10.747306176701041,
+          "mean_matched_donor_bits_per_word": 10.790150532585002,
+          "neighbors": 3,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 20,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.024912811292780647,
+          "image_selected_bits_per_word": 10.698370162666727,
+          "mean_matched_donor_bits_per_word": 10.723282973959508,
+          "neighbors": 3,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 20,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.010873788007383211,
+          "image_selected_bits_per_word": 10.759831193204967,
+          "mean_matched_donor_bits_per_word": 10.77070498121235,
+          "neighbors": 3,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 20,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.0015019691809712299,
+          "image_selected_bits_per_word": 10.887148464908224,
+          "mean_matched_donor_bits_per_word": 10.888650434089195,
+          "neighbors": 3,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 20,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.012668100203171662,
+          "image_selected_bits_per_word": 10.77748243238183,
+          "mean_matched_donor_bits_per_word": 10.790150532585002,
+          "neighbors": 5,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 20,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.004625178515777861,
+          "image_selected_bits_per_word": 10.718657795443729,
+          "mean_matched_donor_bits_per_word": 10.723282973959508,
+          "neighbors": 5,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 20,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.0010430524491752634,
+          "image_selected_bits_per_word": 10.771748033661526,
+          "mean_matched_donor_bits_per_word": 10.77070498121235,
+          "neighbors": 5,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 20,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.00453013633723458,
+          "image_selected_bits_per_word": 10.893180570426429,
+          "mean_matched_donor_bits_per_word": 10.888650434089195,
+          "neighbors": 5,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 20,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.10302442103520235,
+          "image_selected_bits_per_word": 10.6871261115498,
+          "mean_matched_donor_bits_per_word": 10.790150532585002,
+          "neighbors": 1,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 20,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.08108488753935887,
+          "image_selected_bits_per_word": 10.642198086420148,
+          "mean_matched_donor_bits_per_word": 10.723282973959508,
+          "neighbors": 1,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 20,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.058344807431208776,
+          "image_selected_bits_per_word": 10.712360173781141,
+          "mean_matched_donor_bits_per_word": 10.77070498121235,
+          "neighbors": 1,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 20,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.03847932951657498,
+          "image_selected_bits_per_word": 10.85017110457262,
+          "mean_matched_donor_bits_per_word": 10.888650434089195,
+          "neighbors": 1,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 20,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.08467541429819789,
+          "image_selected_bits_per_word": 10.705475118286804,
+          "mean_matched_donor_bits_per_word": 10.790150532585002,
+          "neighbors": 3,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 20,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.06908238134477784,
+          "image_selected_bits_per_word": 10.65420059261473,
+          "mean_matched_donor_bits_per_word": 10.723282973959508,
+          "neighbors": 3,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 20,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.05153761470528053,
+          "image_selected_bits_per_word": 10.719167366507069,
+          "mean_matched_donor_bits_per_word": 10.77070498121235,
+          "neighbors": 3,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 20,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.035291068348587376,
+          "image_selected_bits_per_word": 10.853359365740607,
+          "mean_matched_donor_bits_per_word": 10.888650434089195,
+          "neighbors": 3,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 20,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.034821180145958405,
+          "image_selected_bits_per_word": 10.755329352439045,
+          "mean_matched_donor_bits_per_word": 10.790150532585002,
+          "neighbors": 5,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 20,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.029094356562303858,
+          "image_selected_bits_per_word": 10.694188617397204,
+          "mean_matched_donor_bits_per_word": 10.723282973959508,
+          "neighbors": 5,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 20,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.021567793125129242,
+          "image_selected_bits_per_word": 10.749137188087222,
+          "mean_matched_donor_bits_per_word": 10.77070498121235,
+          "neighbors": 5,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 20,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.01404010881064437,
+          "image_selected_bits_per_word": 10.87461032527855,
+          "mean_matched_donor_bits_per_word": 10.888650434089195,
+          "neighbors": 5,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 20,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.0545066926361514,
+          "image_selected_bits_per_word": 10.735643839948851,
+          "mean_matched_donor_bits_per_word": 10.790150532585002,
+          "neighbors": 1,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 20,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.041979785610107,
+          "image_selected_bits_per_word": 10.6813031883494,
+          "mean_matched_donor_bits_per_word": 10.723282973959508,
+          "neighbors": 1,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 20,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.030173025284645404,
+          "image_selected_bits_per_word": 10.740531955927704,
+          "mean_matched_donor_bits_per_word": 10.77070498121235,
+          "neighbors": 1,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 20,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.020888185310710128,
+          "image_selected_bits_per_word": 10.867762248778485,
+          "mean_matched_donor_bits_per_word": 10.888650434089195,
+          "neighbors": 1,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 20,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.056362191648256045,
+          "image_selected_bits_per_word": 10.733788340936746,
+          "mean_matched_donor_bits_per_word": 10.790150532585002,
+          "neighbors": 3,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 20,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.04297126535490321,
+          "image_selected_bits_per_word": 10.680311708604604,
+          "mean_matched_donor_bits_per_word": 10.723282973959508,
+          "neighbors": 3,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 20,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.02973487723298831,
+          "image_selected_bits_per_word": 10.740970103979361,
+          "mean_matched_donor_bits_per_word": 10.77070498121235,
+          "neighbors": 3,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 20,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.0185393287457714,
+          "image_selected_bits_per_word": 10.870111105343423,
+          "mean_matched_donor_bits_per_word": 10.888650434089195,
+          "neighbors": 3,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 20,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.041751120938965866,
+          "image_selected_bits_per_word": 10.748399411646037,
+          "mean_matched_donor_bits_per_word": 10.790150532585002,
+          "neighbors": 5,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 20,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.031137941070494436,
+          "image_selected_bits_per_word": 10.692145032889012,
+          "mean_matched_donor_bits_per_word": 10.723282973959508,
+          "neighbors": 5,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 20,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.021124796794101997,
+          "image_selected_bits_per_word": 10.749580184418248,
+          "mean_matched_donor_bits_per_word": 10.77070498121235,
+          "neighbors": 5,
+          "suffix_words": 1280
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 20,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.01275537650967209,
+          "image_selected_bits_per_word": 10.875895057579523,
+          "mean_matched_donor_bits_per_word": 10.888650434089195,
+          "neighbors": 5,
+          "suffix_words": 1280
+        }
+      ],
+      "validation_winner": {
+        "alpha": 16.0,
+        "eligible_pages": 20,
+        "family": "pigment_guarded",
+        "image_gain_over_mean_donor_bits_per_word": 0.08108488753935887,
+        "image_selected_bits_per_word": 10.642198086420148,
+        "mean_matched_donor_bits_per_word": 10.723282973959508,
+        "neighbors": 1,
+        "suffix_words": 1280
+      }
+    },
+    {
+      "eligible_pages": 20,
+      "eligible_strata": 1,
+      "fold": 1,
+      "image_gain_over_mean_donor_bits_per_word": 0.006207541868197097,
+      "image_relabeling_null": {
+        "null_mean_bits_per_word": 10.403015397321878,
+        "observed_gain_over_null_bits_per_word": 0.004857238622268767,
+        "replicates": 500,
+        "upper_p": 0.4431137724550898
+      },
+      "image_selected_bits_per_word": 10.39815815869961,
+      "mean_matched_donor_bits_per_word": 10.404365700567807,
+      "own_gain_over_mean_donor_bits_per_word": 0.12359034423711109,
+      "own_prefix_bits_per_word": 10.280775356330697,
+      "posthoc_best_donor_ceiling_bits_per_word": 10.187139188936545,
+      "prefix_state_oracle_bits_per_word": 10.358219596229029,
+      "prefix_state_oracle_gain_over_mean_donor_bits_per_word": 0.04614610433877857,
+      "selected_alpha": 64.0,
+      "selected_family": "global_guarded",
+      "selected_neighbors": 1,
+      "static_bits_per_word": 10.617818725691567,
+      "suffix_words": 1280,
+      "targets": [
+        {
+          "block": "M",
+          "currier": "B",
+          "folio": "f75r",
+          "image_selected_bits_per_word": 10.801603425220113,
+          "matched_states": 20,
+          "mean_donor_bits_per_word": 10.872064531344463,
+          "prefix_state_oracle_folio": "f79r",
+          "section": "B",
+          "selected_image_donors": [
+            "f82v"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "M",
+          "currier": "B",
+          "folio": "f75v",
+          "image_selected_bits_per_word": 12.569783773572109,
+          "matched_states": 20,
+          "mean_donor_bits_per_word": 12.62533362196121,
+          "prefix_state_oracle_folio": "f78v",
+          "section": "B",
+          "selected_image_donors": [
+            "f80r"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "M",
+          "currier": "B",
+          "folio": "f76r",
+          "image_selected_bits_per_word": 9.664409566480622,
+          "matched_states": 20,
+          "mean_donor_bits_per_word": 9.641104240966433,
+          "prefix_state_oracle_folio": "f84r",
+          "section": "B",
+          "selected_image_donors": [
+            "f79v"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "M",
+          "currier": "B",
+          "folio": "f76v",
+          "image_selected_bits_per_word": 10.024467017684971,
+          "matched_states": 20,
+          "mean_donor_bits_per_word": 10.06574231324652,
+          "prefix_state_oracle_folio": "f81r",
+          "section": "B",
+          "selected_image_donors": [
+            "f82v"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "M",
+          "currier": "B",
+          "folio": "f77r",
+          "image_selected_bits_per_word": 8.947773347552634,
+          "matched_states": 20,
+          "mean_donor_bits_per_word": 9.330866505285746,
+          "prefix_state_oracle_folio": "f80v",
+          "section": "B",
+          "selected_image_donors": [
+            "f82r"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "M",
+          "currier": "B",
+          "folio": "f77v",
+          "image_selected_bits_per_word": 9.544824923999123,
+          "matched_states": 20,
+          "mean_donor_bits_per_word": 9.265863125234821,
+          "prefix_state_oracle_folio": "f82v",
+          "section": "B",
+          "selected_image_donors": [
+            "f81v"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "M",
+          "currier": "B",
+          "folio": "f78r",
+          "image_selected_bits_per_word": 10.003964185869687,
+          "matched_states": 20,
+          "mean_donor_bits_per_word": 10.232840344759978,
+          "prefix_state_oracle_folio": "f82v",
+          "section": "B",
+          "selected_image_donors": [
+            "f84r"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "M",
+          "currier": "B",
+          "folio": "f78v",
+          "image_selected_bits_per_word": 9.30435619335201,
+          "matched_states": 20,
+          "mean_donor_bits_per_word": 9.347091799780888,
+          "prefix_state_oracle_folio": "f75v",
+          "section": "B",
+          "selected_image_donors": [
+            "f82v"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "M",
+          "currier": "B",
+          "folio": "f79r",
+          "image_selected_bits_per_word": 10.494530706842509,
+          "matched_states": 20,
+          "mean_donor_bits_per_word": 10.669440758559531,
+          "prefix_state_oracle_folio": "f81r",
+          "section": "B",
+          "selected_image_donors": [
+            "f79v"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "M",
+          "currier": "B",
+          "folio": "f79v",
+          "image_selected_bits_per_word": 9.780002002044835,
+          "matched_states": 20,
+          "mean_donor_bits_per_word": 9.829168578956585,
+          "prefix_state_oracle_folio": "f80v",
+          "section": "B",
+          "selected_image_donors": [
+            "f75r"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "M",
+          "currier": "B",
+          "folio": "f80r",
+          "image_selected_bits_per_word": 10.370938464620615,
+          "matched_states": 20,
+          "mean_donor_bits_per_word": 10.331655803808575,
+          "prefix_state_oracle_folio": "f80v",
+          "section": "B",
+          "selected_image_donors": [
+            "f75v"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "M",
+          "currier": "B",
+          "folio": "f80v",
+          "image_selected_bits_per_word": 10.159729769433293,
+          "matched_states": 20,
+          "mean_donor_bits_per_word": 10.187700195365863,
+          "prefix_state_oracle_folio": "f77r",
+          "section": "B",
+          "selected_image_donors": [
+            "f75r"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "M",
+          "currier": "B",
+          "folio": "f81r",
+          "image_selected_bits_per_word": 10.524029557177068,
+          "matched_states": 20,
+          "mean_donor_bits_per_word": 10.47949625159916,
+          "prefix_state_oracle_folio": "f79r",
+          "section": "B",
+          "selected_image_donors": [
+            "f83r"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "M",
+          "currier": "B",
+          "folio": "f81v",
+          "image_selected_bits_per_word": 11.926585935122855,
+          "matched_states": 20,
+          "mean_donor_bits_per_word": 12.110846325045339,
+          "prefix_state_oracle_folio": "f80v",
+          "section": "B",
+          "selected_image_donors": [
+            "f78v"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "M",
+          "currier": "B",
+          "folio": "f82r",
+          "image_selected_bits_per_word": 10.562326388120388,
+          "matched_states": 20,
+          "mean_donor_bits_per_word": 10.641487037644968,
+          "prefix_state_oracle_folio": "f83r",
+          "section": "B",
+          "selected_image_donors": [
+            "f80r"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "M",
+          "currier": "B",
+          "folio": "f82v",
+          "image_selected_bits_per_word": 10.722432423230835,
+          "matched_states": 20,
+          "mean_donor_bits_per_word": 10.661711179643511,
+          "prefix_state_oracle_folio": "f83v",
+          "section": "B",
+          "selected_image_donors": [
+            "f78v"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "M",
+          "currier": "B",
+          "folio": "f83r",
+          "image_selected_bits_per_word": 12.43835428880606,
+          "matched_states": 20,
+          "mean_donor_bits_per_word": 12.149812607398266,
+          "prefix_state_oracle_folio": "f77r",
+          "section": "B",
+          "selected_image_donors": [
+            "f81r"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "M",
+          "currier": "B",
+          "folio": "f83v",
+          "image_selected_bits_per_word": 11.21832493855855,
+          "matched_states": 20,
+          "mean_donor_bits_per_word": 10.85139731919698,
+          "prefix_state_oracle_folio": "f82v",
+          "section": "B",
+          "selected_image_donors": [
+            "f81v"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "M",
+          "currier": "B",
+          "folio": "f84r",
+          "image_selected_bits_per_word": 9.983495439796709,
+          "matched_states": 20,
+          "mean_donor_bits_per_word": 9.811705385352662,
+          "prefix_state_oracle_folio": "f79r",
+          "section": "B",
+          "selected_image_donors": [
+            "f76v"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "M",
+          "currier": "B",
+          "folio": "f84v",
+          "image_selected_bits_per_word": 8.921230826507218,
+          "matched_states": 20,
+          "mean_donor_bits_per_word": 8.98198608620462,
+          "prefix_state_oracle_folio": "f76v",
+          "section": "B",
+          "selected_image_donors": [
+            "f75v"
+          ],
+          "suffix_words": 64
+        }
+      ],
+      "test_blocks": [
+        "B",
+        "M"
+      ],
+      "train_blocks": [
+        "A",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "O",
+        "T"
+      ],
+      "validation_blocks": [
+        "C",
+        "D",
+        "E",
+        "N",
+        "Q",
+        "S"
+      ],
+      "validation_candidates": [
+        {
+          "alpha": 8.0,
+          "eligible_pages": 26,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.04453242646460267,
+          "image_selected_bits_per_word": 11.927040606919297,
+          "mean_matched_donor_bits_per_word": 11.9715730333839,
+          "neighbors": 1,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 26,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.0349966170847614,
+          "image_selected_bits_per_word": 11.63276060326301,
+          "mean_matched_donor_bits_per_word": 11.667757220347772,
+          "neighbors": 1,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 26,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.026478449433804455,
+          "image_selected_bits_per_word": 11.446933415396165,
+          "mean_matched_donor_bits_per_word": 11.47341186482997,
+          "neighbors": 1,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 26,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.019005543087390882,
+          "image_selected_bits_per_word": 11.345324815292683,
+          "mean_matched_donor_bits_per_word": 11.364330358380075,
+          "neighbors": 1,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 26,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.01594832327652591,
+          "image_selected_bits_per_word": 11.987521356660427,
+          "mean_matched_donor_bits_per_word": 11.9715730333839,
+          "neighbors": 3,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 26,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.009536720443913916,
+          "image_selected_bits_per_word": 11.677293940791687,
+          "mean_matched_donor_bits_per_word": 11.667757220347772,
+          "neighbors": 3,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 26,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.00565173892629713,
+          "image_selected_bits_per_word": 11.479063603756268,
+          "mean_matched_donor_bits_per_word": 11.47341186482997,
+          "neighbors": 3,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 26,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.0032874704756353274,
+          "image_selected_bits_per_word": 11.36761782885571,
+          "mean_matched_donor_bits_per_word": 11.364330358380075,
+          "neighbors": 3,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 26,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.0019687376538046657,
+          "image_selected_bits_per_word": 11.973541771037706,
+          "mean_matched_donor_bits_per_word": 11.9715730333839,
+          "neighbors": 5,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 26,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.0017887241014298667,
+          "image_selected_bits_per_word": 11.669545944449203,
+          "mean_matched_donor_bits_per_word": 11.667757220347772,
+          "neighbors": 5,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 26,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.0017433289094123002,
+          "image_selected_bits_per_word": 11.475155193739383,
+          "mean_matched_donor_bits_per_word": 11.47341186482997,
+          "neighbors": 5,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 26,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.0015140235695049011,
+          "image_selected_bits_per_word": 11.365844381949579,
+          "mean_matched_donor_bits_per_word": 11.364330358380075,
+          "neighbors": 5,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 26,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.025677773299432206,
+          "image_selected_bits_per_word": 11.997250806683333,
+          "mean_matched_donor_bits_per_word": 11.9715730333839,
+          "neighbors": 1,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 26,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.02244859937187762,
+          "image_selected_bits_per_word": 11.69020581971965,
+          "mean_matched_donor_bits_per_word": 11.667757220347772,
+          "neighbors": 1,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 26,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.016592766012409072,
+          "image_selected_bits_per_word": 11.49000463084238,
+          "mean_matched_donor_bits_per_word": 11.47341186482997,
+          "neighbors": 1,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 26,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.010263598259722576,
+          "image_selected_bits_per_word": 11.374593956639798,
+          "mean_matched_donor_bits_per_word": 11.364330358380075,
+          "neighbors": 1,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 26,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.02254846750047978,
+          "image_selected_bits_per_word": 11.994121500884381,
+          "mean_matched_donor_bits_per_word": 11.9715730333839,
+          "neighbors": 3,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 26,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.014264003176705889,
+          "image_selected_bits_per_word": 11.682021223524478,
+          "mean_matched_donor_bits_per_word": 11.667757220347772,
+          "neighbors": 3,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 26,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.008151685127302181,
+          "image_selected_bits_per_word": 11.481563549957272,
+          "mean_matched_donor_bits_per_word": 11.47341186482997,
+          "neighbors": 3,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 26,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.0042581683632334725,
+          "image_selected_bits_per_word": 11.368588526743308,
+          "mean_matched_donor_bits_per_word": 11.364330358380075,
+          "neighbors": 3,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 26,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.004900815274670048,
+          "image_selected_bits_per_word": 11.97647384865857,
+          "mean_matched_donor_bits_per_word": 11.9715730333839,
+          "neighbors": 5,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 26,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.00327278856373068,
+          "image_selected_bits_per_word": 11.671030008911503,
+          "mean_matched_donor_bits_per_word": 11.667757220347772,
+          "neighbors": 5,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 26,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.002172697487342079,
+          "image_selected_bits_per_word": 11.475584562317312,
+          "mean_matched_donor_bits_per_word": 11.47341186482997,
+          "neighbors": 5,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 26,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.0014290531387165923,
+          "image_selected_bits_per_word": 11.365759411518791,
+          "mean_matched_donor_bits_per_word": 11.364330358380075,
+          "neighbors": 5,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 26,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.05933243061059764,
+          "image_selected_bits_per_word": 12.030905463994499,
+          "mean_matched_donor_bits_per_word": 11.9715730333839,
+          "neighbors": 1,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 26,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.04642987666003667,
+          "image_selected_bits_per_word": 11.714187097007809,
+          "mean_matched_donor_bits_per_word": 11.667757220347772,
+          "neighbors": 1,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 26,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.03338687276285428,
+          "image_selected_bits_per_word": 11.506798737592824,
+          "mean_matched_donor_bits_per_word": 11.47341186482997,
+          "neighbors": 1,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 26,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.0222796645520432,
+          "image_selected_bits_per_word": 11.386610022932118,
+          "mean_matched_donor_bits_per_word": 11.364330358380075,
+          "neighbors": 1,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 26,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.012362628656250436,
+          "image_selected_bits_per_word": 11.983935662040151,
+          "mean_matched_donor_bits_per_word": 11.9715730333839,
+          "neighbors": 3,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 26,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.00422732722978789,
+          "image_selected_bits_per_word": 11.67198454757756,
+          "mean_matched_donor_bits_per_word": 11.667757220347772,
+          "neighbors": 3,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 26,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.0007586877742939647,
+          "image_selected_bits_per_word": 11.472653177055676,
+          "mean_matched_donor_bits_per_word": 11.47341186482997,
+          "neighbors": 3,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 26,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.0030354947098379667,
+          "image_selected_bits_per_word": 11.361294863670237,
+          "mean_matched_donor_bits_per_word": 11.364330358380075,
+          "neighbors": 3,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 26,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.007174003392192128,
+          "image_selected_bits_per_word": 11.964399029991709,
+          "mean_matched_donor_bits_per_word": 11.9715730333839,
+          "neighbors": 5,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 26,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.0075198017589218425,
+          "image_selected_bits_per_word": 11.660237418588851,
+          "mean_matched_donor_bits_per_word": 11.667757220347772,
+          "neighbors": 5,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 26,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.006698560085567288,
+          "image_selected_bits_per_word": 11.466713304744403,
+          "mean_matched_donor_bits_per_word": 11.47341186482997,
+          "neighbors": 5,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 26,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.005259269852269078,
+          "image_selected_bits_per_word": 11.359071088527806,
+          "mean_matched_donor_bits_per_word": 11.364330358380075,
+          "neighbors": 5,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 26,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.03948398683700289,
+          "image_selected_bits_per_word": 12.011057020220903,
+          "mean_matched_donor_bits_per_word": 11.9715730333839,
+          "neighbors": 1,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 26,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.03483516646930131,
+          "image_selected_bits_per_word": 11.702592386817074,
+          "mean_matched_donor_bits_per_word": 11.667757220347772,
+          "neighbors": 1,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 26,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.027241621027845768,
+          "image_selected_bits_per_word": 11.500653485857816,
+          "mean_matched_donor_bits_per_word": 11.47341186482997,
+          "neighbors": 1,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 26,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.01939402735889363,
+          "image_selected_bits_per_word": 11.383724385738967,
+          "mean_matched_donor_bits_per_word": 11.364330358380075,
+          "neighbors": 1,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 26,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.006419511430804624,
+          "image_selected_bits_per_word": 11.977992544814706,
+          "mean_matched_donor_bits_per_word": 11.9715730333839,
+          "neighbors": 3,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 26,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.0008939528517218755,
+          "image_selected_bits_per_word": 11.668651173199494,
+          "mean_matched_donor_bits_per_word": 11.667757220347772,
+          "neighbors": 3,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 26,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.002547938465148979,
+          "image_selected_bits_per_word": 11.47086392636482,
+          "mean_matched_donor_bits_per_word": 11.47341186482997,
+          "neighbors": 3,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 26,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.004046556539853689,
+          "image_selected_bits_per_word": 11.36028380184022,
+          "mean_matched_donor_bits_per_word": 11.364330358380075,
+          "neighbors": 3,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 26,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.004477171795295731,
+          "image_selected_bits_per_word": 11.967095861588605,
+          "mean_matched_donor_bits_per_word": 11.9715730333839,
+          "neighbors": 5,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 26,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.005232770106432928,
+          "image_selected_bits_per_word": 11.662524450241339,
+          "mean_matched_donor_bits_per_word": 11.667757220347772,
+          "neighbors": 5,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 26,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.005171947216041448,
+          "image_selected_bits_per_word": 11.468239917613928,
+          "mean_matched_donor_bits_per_word": 11.47341186482997,
+          "neighbors": 5,
+          "suffix_words": 903
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 26,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.004363534955827649,
+          "image_selected_bits_per_word": 11.359966823424246,
+          "mean_matched_donor_bits_per_word": 11.364330358380075,
+          "neighbors": 5,
+          "suffix_words": 903
+        }
+      ],
+      "validation_winner": {
+        "alpha": 64.0,
+        "eligible_pages": 26,
+        "family": "global_guarded",
+        "image_gain_over_mean_donor_bits_per_word": 0.019005543087390882,
+        "image_selected_bits_per_word": 11.345324815292683,
+        "mean_matched_donor_bits_per_word": 11.364330358380075,
+        "neighbors": 1,
+        "suffix_words": 903
+      }
+    },
+    {
+      "eligible_pages": 26,
+      "eligible_strata": 6,
+      "fold": 2,
+      "image_gain_over_mean_donor_bits_per_word": 0.002424793217466715,
+      "image_relabeling_null": {
+        "null_mean_bits_per_word": 11.858241009668626,
+        "observed_gain_over_null_bits_per_word": 0.0003647361975357408,
+        "replicates": 500,
+        "upper_p": 0.48902195608782434
+      },
+      "image_selected_bits_per_word": 11.85787627347109,
+      "mean_matched_donor_bits_per_word": 11.860301066688557,
+      "own_gain_over_mean_donor_bits_per_word": 0.18497883000235463,
+      "own_prefix_bits_per_word": 11.675322236686203,
+      "posthoc_best_donor_ceiling_bits_per_word": 11.646093470113199,
+      "prefix_state_oracle_bits_per_word": 11.777847453732484,
+      "prefix_state_oracle_gain_over_mean_donor_bits_per_word": 0.08245361295607327,
+      "selected_alpha": 64.0,
+      "selected_family": "combined_guarded",
+      "selected_neighbors": 1,
+      "static_bits_per_word": 11.99442037170163,
+      "suffix_words": 903,
+      "targets": [
+        {
+          "block": "C",
+          "currier": "A",
+          "folio": "f17v",
+          "image_selected_bits_per_word": 10.510892196638068,
+          "matched_states": 8,
+          "mean_donor_bits_per_word": 10.685816482061755,
+          "prefix_state_oracle_folio": "f24v",
+          "section": "H",
+          "selected_image_donors": [
+            "f24r"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "C",
+          "currier": "A",
+          "folio": "f20r",
+          "image_selected_bits_per_word": 10.898424165762753,
+          "matched_states": 8,
+          "mean_donor_bits_per_word": 10.659410971099282,
+          "prefix_state_oracle_folio": "f21r",
+          "section": "H",
+          "selected_image_donors": [
+            "f22r"
+          ],
+          "suffix_words": 19
+        },
+        {
+          "block": "C",
+          "currier": "A",
+          "folio": "f20v",
+          "image_selected_bits_per_word": 8.831350521479187,
+          "matched_states": 8,
+          "mean_donor_bits_per_word": 8.767914455372694,
+          "prefix_state_oracle_folio": "f21r",
+          "section": "H",
+          "selected_image_donors": [
+            "f24v"
+          ],
+          "suffix_words": 19
+        },
+        {
+          "block": "C",
+          "currier": "A",
+          "folio": "f21r",
+          "image_selected_bits_per_word": 10.111015973386806,
+          "matched_states": 8,
+          "mean_donor_bits_per_word": 10.033482329520686,
+          "prefix_state_oracle_folio": "f20r",
+          "section": "H",
+          "selected_image_donors": [
+            "f22r"
+          ],
+          "suffix_words": 29
+        },
+        {
+          "block": "C",
+          "currier": "A",
+          "folio": "f22r",
+          "image_selected_bits_per_word": 12.596882432154585,
+          "matched_states": 8,
+          "mean_donor_bits_per_word": 12.526101262236079,
+          "prefix_state_oracle_folio": "f21r",
+          "section": "H",
+          "selected_image_donors": [
+            "f24r"
+          ],
+          "suffix_words": 32
+        },
+        {
+          "block": "C",
+          "currier": "A",
+          "folio": "f23r",
+          "image_selected_bits_per_word": 13.141014713533755,
+          "matched_states": 8,
+          "mean_donor_bits_per_word": 13.618132351605416,
+          "prefix_state_oracle_folio": "f22r",
+          "section": "H",
+          "selected_image_donors": [
+            "f22r"
+          ],
+          "suffix_words": 32
+        },
+        {
+          "block": "C",
+          "currier": "A",
+          "folio": "f24r",
+          "image_selected_bits_per_word": 12.331020405294144,
+          "matched_states": 8,
+          "mean_donor_bits_per_word": 12.137881788849453,
+          "prefix_state_oracle_folio": "f21r",
+          "section": "H",
+          "selected_image_donors": [
+            "f22r"
+          ],
+          "suffix_words": 33
+        },
+        {
+          "block": "C",
+          "currier": "A",
+          "folio": "f24v",
+          "image_selected_bits_per_word": 13.255763497586324,
+          "matched_states": 8,
+          "mean_donor_bits_per_word": 13.337164160126914,
+          "prefix_state_oracle_folio": "f17v",
+          "section": "H",
+          "selected_image_donors": [
+            "f22r"
+          ],
+          "suffix_words": 16
+        },
+        {
+          "block": "D",
+          "currier": "B",
+          "folio": "f26v",
+          "image_selected_bits_per_word": 14.099453188155723,
+          "matched_states": 3,
+          "mean_donor_bits_per_word": 14.110005107508552,
+          "prefix_state_oracle_folio": "f31v",
+          "section": "H",
+          "selected_image_donors": [
+            "f31v"
+          ],
+          "suffix_words": 23
+        },
+        {
+          "block": "D",
+          "currier": "B",
+          "folio": "f31r",
+          "image_selected_bits_per_word": 11.05036230655229,
+          "matched_states": 3,
+          "mean_donor_bits_per_word": 10.988845299691599,
+          "prefix_state_oracle_folio": "f31v",
+          "section": "H",
+          "selected_image_donors": [
+            "f31v"
+          ],
+          "suffix_words": 33
+        },
+        {
+          "block": "D",
+          "currier": "B",
+          "folio": "f31v",
+          "image_selected_bits_per_word": 13.256297400824371,
+          "matched_states": 3,
+          "mean_donor_bits_per_word": 13.099991795752198,
+          "prefix_state_oracle_folio": "f31r",
+          "section": "H",
+          "selected_image_donors": [
+            "f31r"
+          ],
+          "suffix_words": 41
+        },
+        {
+          "block": "D",
+          "currier": "A",
+          "folio": "f27r",
+          "image_selected_bits_per_word": 9.833329341616658,
+          "matched_states": 2,
+          "mean_donor_bits_per_word": 9.833329341616658,
+          "prefix_state_oracle_folio": "f30r",
+          "section": "H",
+          "selected_image_donors": [
+            "f30r"
+          ],
+          "suffix_words": 16
+        },
+        {
+          "block": "D",
+          "currier": "A",
+          "folio": "f30r",
+          "image_selected_bits_per_word": 15.497389629170373,
+          "matched_states": 2,
+          "mean_donor_bits_per_word": 15.497389629170373,
+          "prefix_state_oracle_folio": "f27r",
+          "section": "H",
+          "selected_image_donors": [
+            "f27r"
+          ],
+          "suffix_words": 22
+        },
+        {
+          "block": "E",
+          "currier": "B",
+          "folio": "f33v",
+          "image_selected_bits_per_word": 10.570541642532678,
+          "matched_states": 7,
+          "mean_donor_bits_per_word": 10.514217831287473,
+          "prefix_state_oracle_folio": "f34v",
+          "section": "H",
+          "selected_image_donors": [
+            "f39r"
+          ],
+          "suffix_words": 24
+        },
+        {
+          "block": "E",
+          "currier": "B",
+          "folio": "f34r",
+          "image_selected_bits_per_word": 13.097653662671842,
+          "matched_states": 7,
+          "mean_donor_bits_per_word": 12.942564507253318,
+          "prefix_state_oracle_folio": "f40v",
+          "section": "H",
+          "selected_image_donors": [
+            "f39r"
+          ],
+          "suffix_words": 52
+        },
+        {
+          "block": "E",
+          "currier": "B",
+          "folio": "f34v",
+          "image_selected_bits_per_word": 9.444071652714195,
+          "matched_states": 7,
+          "mean_donor_bits_per_word": 9.428482803021684,
+          "prefix_state_oracle_folio": "f39r",
+          "section": "H",
+          "selected_image_donors": [
+            "f39r"
+          ],
+          "suffix_words": 50
+        },
+        {
+          "block": "E",
+          "currier": "B",
+          "folio": "f39r",
+          "image_selected_bits_per_word": 10.622451430910717,
+          "matched_states": 7,
+          "mean_donor_bits_per_word": 10.506980067466257,
+          "prefix_state_oracle_folio": "f34v",
+          "section": "H",
+          "selected_image_donors": [
+            "f39v"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "E",
+          "currier": "B",
+          "folio": "f39v",
+          "image_selected_bits_per_word": 12.308431267140957,
+          "matched_states": 7,
+          "mean_donor_bits_per_word": 12.18093410886207,
+          "prefix_state_oracle_folio": "f40v",
+          "section": "H",
+          "selected_image_donors": [
+            "f39r"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "E",
+          "currier": "B",
+          "folio": "f40r",
+          "image_selected_bits_per_word": 11.590123533198234,
+          "matched_states": 7,
+          "mean_donor_bits_per_word": 11.44255195197497,
+          "prefix_state_oracle_folio": "f40v",
+          "section": "H",
+          "selected_image_donors": [
+            "f39r"
+          ],
+          "suffix_words": 23
+        },
+        {
+          "block": "E",
+          "currier": "B",
+          "folio": "f40v",
+          "image_selected_bits_per_word": 12.67905249204076,
+          "matched_states": 7,
+          "mean_donor_bits_per_word": 12.498370560979515,
+          "prefix_state_oracle_folio": "f40r",
+          "section": "H",
+          "selected_image_donors": [
+            "f39r"
+          ],
+          "suffix_words": 32
+        },
+        {
+          "block": "E",
+          "currier": "A",
+          "folio": "f35r",
+          "image_selected_bits_per_word": 14.268094160253115,
+          "matched_states": 3,
+          "mean_donor_bits_per_word": 14.181166938698633,
+          "prefix_state_oracle_folio": "f35v",
+          "section": "H",
+          "selected_image_donors": [
+            "f37v"
+          ],
+          "suffix_words": 18
+        },
+        {
+          "block": "E",
+          "currier": "A",
+          "folio": "f35v",
+          "image_selected_bits_per_word": 9.927533720450864,
+          "matched_states": 3,
+          "mean_donor_bits_per_word": 10.039789715064474,
+          "prefix_state_oracle_folio": "f35r",
+          "section": "H",
+          "selected_image_donors": [
+            "f37v"
+          ],
+          "suffix_words": 19
+        },
+        {
+          "block": "E",
+          "currier": "A",
+          "folio": "f37v",
+          "image_selected_bits_per_word": 12.45009594974609,
+          "matched_states": 3,
+          "mean_donor_bits_per_word": 12.288370476053652,
+          "prefix_state_oracle_folio": "f35v",
+          "section": "H",
+          "selected_image_donors": [
+            "f35r"
+          ],
+          "suffix_words": 23
+        },
+        {
+          "block": "S",
+          "currier": "A",
+          "folio": "f99r",
+          "image_selected_bits_per_word": 12.426396162261582,
+          "matched_states": 3,
+          "mean_donor_bits_per_word": 12.497128762074224,
+          "prefix_state_oracle_folio": "f100r",
+          "section": "P",
+          "selected_image_donors": [
+            "f99v"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "S",
+          "currier": "A",
+          "folio": "f99v",
+          "image_selected_bits_per_word": 12.796331390109906,
+          "matched_states": 3,
+          "mean_donor_bits_per_word": 13.277059065824798,
+          "prefix_state_oracle_folio": "f99r",
+          "section": "P",
+          "selected_image_donors": [
+            "f99r"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "S",
+          "currier": "A",
+          "folio": "f100r",
+          "image_selected_bits_per_word": 11.133658811916701,
+          "matched_states": 3,
+          "mean_donor_bits_per_word": 11.208977227676742,
+          "prefix_state_oracle_folio": "f99r",
+          "section": "P",
+          "selected_image_donors": [
+            "f99r"
+          ],
+          "suffix_words": 27
+        }
+      ],
+      "test_blocks": [
+        "C",
+        "D",
+        "E",
+        "N",
+        "Q",
+        "S"
+      ],
+      "train_blocks": [
+        "B",
+        "M",
+        "T"
+      ],
+      "validation_blocks": [
+        "A",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "O"
+      ],
+      "validation_candidates": [
+        {
+          "alpha": 8.0,
+          "eligible_pages": 31,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.14580895963734702,
+          "image_selected_bits_per_word": 13.473766646247663,
+          "mean_matched_donor_bits_per_word": 13.327957686610317,
+          "neighbors": 1,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 31,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.11165265251122061,
+          "image_selected_bits_per_word": 13.150197714755876,
+          "mean_matched_donor_bits_per_word": 13.038545062244657,
+          "neighbors": 1,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 31,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.08040613447221548,
+          "image_selected_bits_per_word": 12.963384279920158,
+          "mean_matched_donor_bits_per_word": 12.882978145447941,
+          "neighbors": 1,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 31,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.05436304349681258,
+          "image_selected_bits_per_word": 12.882412121180943,
+          "mean_matched_donor_bits_per_word": 12.828049077684131,
+          "neighbors": 1,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 31,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.05684521540436779,
+          "image_selected_bits_per_word": 13.384802902014684,
+          "mean_matched_donor_bits_per_word": 13.327957686610317,
+          "neighbors": 3,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 31,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.04210027921825169,
+          "image_selected_bits_per_word": 13.080645341462908,
+          "mean_matched_donor_bits_per_word": 13.038545062244657,
+          "neighbors": 3,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 31,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.02838571489003052,
+          "image_selected_bits_per_word": 12.911363860337973,
+          "mean_matched_donor_bits_per_word": 12.882978145447941,
+          "neighbors": 3,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 31,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.017035958235888365,
+          "image_selected_bits_per_word": 12.84508503592002,
+          "mean_matched_donor_bits_per_word": 12.828049077684131,
+          "neighbors": 3,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 31,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.007639352650564374,
+          "image_selected_bits_per_word": 13.33559703926088,
+          "mean_matched_donor_bits_per_word": 13.327957686610317,
+          "neighbors": 5,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 31,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.006681902231274697,
+          "image_selected_bits_per_word": 13.045226964475932,
+          "mean_matched_donor_bits_per_word": 13.038545062244657,
+          "neighbors": 5,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 31,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.005165107859519275,
+          "image_selected_bits_per_word": 12.888143253307462,
+          "mean_matched_donor_bits_per_word": 12.882978145447941,
+          "neighbors": 5,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 31,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.003547352296789891,
+          "image_selected_bits_per_word": 12.831596429980921,
+          "mean_matched_donor_bits_per_word": 12.828049077684131,
+          "neighbors": 5,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 31,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.13668308986255906,
+          "image_selected_bits_per_word": 13.464640776472875,
+          "mean_matched_donor_bits_per_word": 13.327957686610317,
+          "neighbors": 1,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 31,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.10105391928010898,
+          "image_selected_bits_per_word": 13.139598981524765,
+          "mean_matched_donor_bits_per_word": 13.038545062244657,
+          "neighbors": 1,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 31,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.06970433594822326,
+          "image_selected_bits_per_word": 12.952682481396165,
+          "mean_matched_donor_bits_per_word": 12.882978145447941,
+          "neighbors": 1,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 31,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.0448075544192126,
+          "image_selected_bits_per_word": 12.872856632103344,
+          "mean_matched_donor_bits_per_word": 12.828049077684131,
+          "neighbors": 1,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 31,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.013379770602995176,
+          "image_selected_bits_per_word": 13.341337457213312,
+          "mean_matched_donor_bits_per_word": 13.327957686610317,
+          "neighbors": 3,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 31,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.011682668002607002,
+          "image_selected_bits_per_word": 13.050227730247263,
+          "mean_matched_donor_bits_per_word": 13.038545062244657,
+          "neighbors": 3,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 31,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.009553835021651868,
+          "image_selected_bits_per_word": 12.892531980469593,
+          "mean_matched_donor_bits_per_word": 12.882978145447941,
+          "neighbors": 3,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 31,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.007285362947517647,
+          "image_selected_bits_per_word": 12.835334440631648,
+          "mean_matched_donor_bits_per_word": 12.828049077684131,
+          "neighbors": 3,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 31,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.006691151489240812,
+          "image_selected_bits_per_word": 13.334648838099557,
+          "mean_matched_donor_bits_per_word": 13.327957686610317,
+          "neighbors": 5,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 31,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.005646456984988132,
+          "image_selected_bits_per_word": 13.044191519229644,
+          "mean_matched_donor_bits_per_word": 13.038545062244657,
+          "neighbors": 5,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 31,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.004196757625686887,
+          "image_selected_bits_per_word": 12.887174903073628,
+          "mean_matched_donor_bits_per_word": 12.882978145447941,
+          "neighbors": 5,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 31,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.0027437069401558237,
+          "image_selected_bits_per_word": 12.830792784624286,
+          "mean_matched_donor_bits_per_word": 12.828049077684131,
+          "neighbors": 5,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 31,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.11761658356150724,
+          "image_selected_bits_per_word": 13.210341103048808,
+          "mean_matched_donor_bits_per_word": 13.327957686610317,
+          "neighbors": 1,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 31,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.08892820942511137,
+          "image_selected_bits_per_word": 12.949616852819545,
+          "mean_matched_donor_bits_per_word": 13.038545062244657,
+          "neighbors": 1,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 31,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.0637808859219838,
+          "image_selected_bits_per_word": 12.819197259525959,
+          "mean_matched_donor_bits_per_word": 12.882978145447941,
+          "neighbors": 1,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 31,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.04284842529559263,
+          "image_selected_bits_per_word": 12.78520065238854,
+          "mean_matched_donor_bits_per_word": 12.828049077684131,
+          "neighbors": 1,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 31,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.008153982325916069,
+          "image_selected_bits_per_word": 13.3198037042844,
+          "mean_matched_donor_bits_per_word": 13.327957686610317,
+          "neighbors": 3,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 31,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.005384456656194153,
+          "image_selected_bits_per_word": 13.033160605588462,
+          "mean_matched_donor_bits_per_word": 13.038545062244657,
+          "neighbors": 3,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 31,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.0027532269290190363,
+          "image_selected_bits_per_word": 12.880224918518923,
+          "mean_matched_donor_bits_per_word": 12.882978145447941,
+          "neighbors": 3,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 31,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.0007208700275998899,
+          "image_selected_bits_per_word": 12.827328207656532,
+          "mean_matched_donor_bits_per_word": 12.828049077684131,
+          "neighbors": 3,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 31,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.015293415163953779,
+          "image_selected_bits_per_word": 13.312664271446362,
+          "mean_matched_donor_bits_per_word": 13.327957686610317,
+          "neighbors": 5,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 31,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.009318014658493357,
+          "image_selected_bits_per_word": 13.029227047586163,
+          "mean_matched_donor_bits_per_word": 13.038545062244657,
+          "neighbors": 5,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 31,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.004605028224615115,
+          "image_selected_bits_per_word": 12.878373117223328,
+          "mean_matched_donor_bits_per_word": 12.882978145447941,
+          "neighbors": 5,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 31,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.001435648037938412,
+          "image_selected_bits_per_word": 12.826613429646192,
+          "mean_matched_donor_bits_per_word": 12.828049077684131,
+          "neighbors": 5,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 31,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.1253458490693366,
+          "image_selected_bits_per_word": 13.20261183754098,
+          "mean_matched_donor_bits_per_word": 13.327957686610317,
+          "neighbors": 1,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 31,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.0961707068217423,
+          "image_selected_bits_per_word": 12.942374355422913,
+          "mean_matched_donor_bits_per_word": 13.038545062244657,
+          "neighbors": 1,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 31,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.06995025775463089,
+          "image_selected_bits_per_word": 12.81302788769331,
+          "mean_matched_donor_bits_per_word": 12.882978145447941,
+          "neighbors": 1,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 31,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.04757679806959595,
+          "image_selected_bits_per_word": 12.780472279614536,
+          "mean_matched_donor_bits_per_word": 12.828049077684131,
+          "neighbors": 1,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 31,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.005975687994960116,
+          "image_selected_bits_per_word": 13.333933374605277,
+          "mean_matched_donor_bits_per_word": 13.327957686610317,
+          "neighbors": 3,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 31,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.005642461218813688,
+          "image_selected_bits_per_word": 13.04418752346347,
+          "mean_matched_donor_bits_per_word": 13.038545062244657,
+          "neighbors": 3,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 31,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.005281139070241461,
+          "image_selected_bits_per_word": 12.888259284518183,
+          "mean_matched_donor_bits_per_word": 12.882978145447941,
+          "neighbors": 3,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 31,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.004712354376399815,
+          "image_selected_bits_per_word": 12.832761432060531,
+          "mean_matched_donor_bits_per_word": 12.828049077684131,
+          "neighbors": 3,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 31,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.015293415163953779,
+          "image_selected_bits_per_word": 13.312664271446362,
+          "mean_matched_donor_bits_per_word": 13.327957686610317,
+          "neighbors": 5,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 31,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.009318014658493357,
+          "image_selected_bits_per_word": 13.029227047586163,
+          "mean_matched_donor_bits_per_word": 13.038545062244657,
+          "neighbors": 5,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 31,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.004605028224615115,
+          "image_selected_bits_per_word": 12.878373117223328,
+          "mean_matched_donor_bits_per_word": 12.882978145447941,
+          "neighbors": 5,
+          "suffix_words": 1214
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 31,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.001435648037938412,
+          "image_selected_bits_per_word": 12.826613429646192,
+          "mean_matched_donor_bits_per_word": 12.828049077684131,
+          "neighbors": 5,
+          "suffix_words": 1214
+        }
+      ],
+      "validation_winner": {
+        "alpha": 64.0,
+        "eligible_pages": 31,
+        "family": "combined_guarded",
+        "image_gain_over_mean_donor_bits_per_word": 0.04757679806959595,
+        "image_selected_bits_per_word": 12.780472279614536,
+        "mean_matched_donor_bits_per_word": 12.828049077684131,
+        "neighbors": 1,
+        "suffix_words": 1214
+      }
+    },
+    {
+      "eligible_pages": 31,
+      "eligible_strata": 7,
+      "fold": 3,
+      "image_gain_over_mean_donor_bits_per_word": -0.015941554604586027,
+      "image_relabeling_null": {
+        "null_mean_bits_per_word": 12.385226528993421,
+        "observed_gain_over_null_bits_per_word": -0.015722485223325925,
+        "replicates": 500,
+        "upper_p": 0.9481037924151696
+      },
+      "image_selected_bits_per_word": 12.400949014216746,
+      "mean_matched_donor_bits_per_word": 12.38500745961216,
+      "own_gain_over_mean_donor_bits_per_word": 0.19312630927719784,
+      "own_prefix_bits_per_word": 12.191881150334963,
+      "posthoc_best_donor_ceiling_bits_per_word": 12.242630480295352,
+      "prefix_state_oracle_bits_per_word": 12.321800939130382,
+      "prefix_state_oracle_gain_over_mean_donor_bits_per_word": 0.0632065204817781,
+      "selected_alpha": 64.0,
+      "selected_family": "global_guarded",
+      "selected_neighbors": 3,
+      "static_bits_per_word": 12.35148787276929,
+      "suffix_words": 1214,
+      "targets": [
+        {
+          "block": "A",
+          "currier": "A",
+          "folio": "f1v",
+          "image_selected_bits_per_word": 11.61304861031143,
+          "matched_states": 5,
+          "mean_donor_bits_per_word": 11.662513891518795,
+          "prefix_state_oracle_folio": "f6v",
+          "section": "H",
+          "selected_image_donors": [
+            "f6v",
+            "f8v",
+            "f8r"
+          ],
+          "suffix_words": 16
+        },
+        {
+          "block": "A",
+          "currier": "A",
+          "folio": "f3r",
+          "image_selected_bits_per_word": 14.367746297976067,
+          "matched_states": 5,
+          "mean_donor_bits_per_word": 14.360123924037188,
+          "prefix_state_oracle_folio": "f6v",
+          "section": "H",
+          "selected_image_donors": [
+            "f8r",
+            "f8v",
+            "f6v"
+          ],
+          "suffix_words": 43
+        },
+        {
+          "block": "A",
+          "currier": "A",
+          "folio": "f6v",
+          "image_selected_bits_per_word": 10.15519651303954,
+          "matched_states": 5,
+          "mean_donor_bits_per_word": 10.109287127637272,
+          "prefix_state_oracle_folio": "f1v",
+          "section": "H",
+          "selected_image_donors": [
+            "f8v",
+            "f8r",
+            "f1v"
+          ],
+          "suffix_words": 39
+        },
+        {
+          "block": "A",
+          "currier": "A",
+          "folio": "f8r",
+          "image_selected_bits_per_word": 14.632666133444301,
+          "matched_states": 5,
+          "mean_donor_bits_per_word": 14.586972260794507,
+          "prefix_state_oracle_folio": "f1v",
+          "section": "H",
+          "selected_image_donors": [
+            "f3r",
+            "f8v",
+            "f6v"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "A",
+          "currier": "A",
+          "folio": "f8v",
+          "image_selected_bits_per_word": 12.633810544644504,
+          "matched_states": 5,
+          "mean_donor_bits_per_word": 12.623950307976417,
+          "prefix_state_oracle_folio": "f6v",
+          "section": "H",
+          "selected_image_donors": [
+            "f6v",
+            "f8r",
+            "f3r"
+          ],
+          "suffix_words": 38
+        },
+        {
+          "block": "F",
+          "currier": "B",
+          "folio": "f41r",
+          "image_selected_bits_per_word": 12.778764330517479,
+          "matched_states": 7,
+          "mean_donor_bits_per_word": 12.724330674107886,
+          "prefix_state_oracle_folio": "f48v",
+          "section": "H",
+          "selected_image_donors": [
+            "f43v",
+            "f48r",
+            "f48v"
+          ],
+          "suffix_words": 21
+        },
+        {
+          "block": "F",
+          "currier": "B",
+          "folio": "f43r",
+          "image_selected_bits_per_word": 11.349770229870257,
+          "matched_states": 7,
+          "mean_donor_bits_per_word": 11.358957973096674,
+          "prefix_state_oracle_folio": "f46v",
+          "section": "H",
+          "selected_image_donors": [
+            "f43v",
+            "f41r",
+            "f46r"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "F",
+          "currier": "B",
+          "folio": "f43v",
+          "image_selected_bits_per_word": 10.959452844082298,
+          "matched_states": 7,
+          "mean_donor_bits_per_word": 10.934883368966078,
+          "prefix_state_oracle_folio": "f46v",
+          "section": "H",
+          "selected_image_donors": [
+            "f41r",
+            "f48r",
+            "f48v"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "F",
+          "currier": "B",
+          "folio": "f46r",
+          "image_selected_bits_per_word": 12.650800830206597,
+          "matched_states": 7,
+          "mean_donor_bits_per_word": 12.665234532705126,
+          "prefix_state_oracle_folio": "f48r",
+          "section": "H",
+          "selected_image_donors": [
+            "f41r",
+            "f46v",
+            "f43v"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "F",
+          "currier": "B",
+          "folio": "f46v",
+          "image_selected_bits_per_word": 11.49744372425102,
+          "matched_states": 7,
+          "mean_donor_bits_per_word": 11.448899662665456,
+          "prefix_state_oracle_folio": "f43r",
+          "section": "H",
+          "selected_image_donors": [
+            "f46r",
+            "f48v",
+            "f41r"
+          ],
+          "suffix_words": 42
+        },
+        {
+          "block": "F",
+          "currier": "B",
+          "folio": "f48r",
+          "image_selected_bits_per_word": 13.607572815265284,
+          "matched_states": 7,
+          "mean_donor_bits_per_word": 13.640473374903051,
+          "prefix_state_oracle_folio": "f46v",
+          "section": "H",
+          "selected_image_donors": [
+            "f41r",
+            "f43v",
+            "f48v"
+          ],
+          "suffix_words": 23
+        },
+        {
+          "block": "F",
+          "currier": "B",
+          "folio": "f48v",
+          "image_selected_bits_per_word": 14.207380704478192,
+          "matched_states": 7,
+          "mean_donor_bits_per_word": 14.246757080290996,
+          "prefix_state_oracle_folio": "f48r",
+          "section": "H",
+          "selected_image_donors": [
+            "f41r",
+            "f48r",
+            "f43v"
+          ],
+          "suffix_words": 43
+        },
+        {
+          "block": "F",
+          "currier": "A",
+          "folio": "f42r",
+          "image_selected_bits_per_word": 10.913188275795527,
+          "matched_states": 4,
+          "mean_donor_bits_per_word": 10.913188275795527,
+          "prefix_state_oracle_folio": "f45r",
+          "section": "H",
+          "selected_image_donors": [
+            "f44v",
+            "f45r",
+            "f42v"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "F",
+          "currier": "A",
+          "folio": "f42v",
+          "image_selected_bits_per_word": 12.409652113527969,
+          "matched_states": 4,
+          "mean_donor_bits_per_word": 12.409652113527969,
+          "prefix_state_oracle_folio": "f42r",
+          "section": "H",
+          "selected_image_donors": [
+            "f42r",
+            "f44v",
+            "f45r"
+          ],
+          "suffix_words": 29
+        },
+        {
+          "block": "F",
+          "currier": "A",
+          "folio": "f44v",
+          "image_selected_bits_per_word": 10.257643546665971,
+          "matched_states": 4,
+          "mean_donor_bits_per_word": 10.25764354666597,
+          "prefix_state_oracle_folio": "f45r",
+          "section": "H",
+          "selected_image_donors": [
+            "f42r",
+            "f45r",
+            "f42v"
+          ],
+          "suffix_words": 30
+        },
+        {
+          "block": "F",
+          "currier": "A",
+          "folio": "f45r",
+          "image_selected_bits_per_word": 10.827282157805994,
+          "matched_states": 4,
+          "mean_donor_bits_per_word": 10.827282157805994,
+          "prefix_state_oracle_folio": "f42r",
+          "section": "H",
+          "selected_image_donors": [
+            "f44v",
+            "f42r",
+            "f42v"
+          ],
+          "suffix_words": 19
+        },
+        {
+          "block": "G",
+          "currier": "A",
+          "folio": "f49r",
+          "image_selected_bits_per_word": 11.752208035979983,
+          "matched_states": 7,
+          "mean_donor_bits_per_word": 11.711071126372296,
+          "prefix_state_oracle_folio": "f49v",
+          "section": "H",
+          "selected_image_donors": [
+            "f54v",
+            "f51r",
+            "f56r"
+          ],
+          "suffix_words": 44
+        },
+        {
+          "block": "G",
+          "currier": "A",
+          "folio": "f49v",
+          "image_selected_bits_per_word": 14.104499121510589,
+          "matched_states": 7,
+          "mean_donor_bits_per_word": 13.956148238739448,
+          "prefix_state_oracle_folio": "f49r",
+          "section": "H",
+          "selected_image_donors": [
+            "f54v",
+            "f51r",
+            "f56v"
+          ],
+          "suffix_words": 61
+        },
+        {
+          "block": "G",
+          "currier": "A",
+          "folio": "f51r",
+          "image_selected_bits_per_word": 16.93239886212473,
+          "matched_states": 7,
+          "mean_donor_bits_per_word": 17.17019826011501,
+          "prefix_state_oracle_folio": "f54v",
+          "section": "H",
+          "selected_image_donors": [
+            "f56v",
+            "f54v",
+            "f54r"
+          ],
+          "suffix_words": 16
+        },
+        {
+          "block": "G",
+          "currier": "A",
+          "folio": "f54r",
+          "image_selected_bits_per_word": 9.728059288312425,
+          "matched_states": 7,
+          "mean_donor_bits_per_word": 9.780244829279441,
+          "prefix_state_oracle_folio": "f51r",
+          "section": "H",
+          "selected_image_donors": [
+            "f56v",
+            "f51r",
+            "f54v"
+          ],
+          "suffix_words": 31
+        },
+        {
+          "block": "G",
+          "currier": "A",
+          "folio": "f54v",
+          "image_selected_bits_per_word": 10.307768929827345,
+          "matched_states": 7,
+          "mean_donor_bits_per_word": 10.442422000118611,
+          "prefix_state_oracle_folio": "f51r",
+          "section": "H",
+          "selected_image_donors": [
+            "f51r",
+            "f56v",
+            "f54r"
+          ],
+          "suffix_words": 22
+        },
+        {
+          "block": "G",
+          "currier": "A",
+          "folio": "f56r",
+          "image_selected_bits_per_word": 11.592545487265255,
+          "matched_states": 7,
+          "mean_donor_bits_per_word": 11.373343919577419,
+          "prefix_state_oracle_folio": "f49v",
+          "section": "H",
+          "selected_image_donors": [
+            "f54r",
+            "f51r",
+            "f54v"
+          ],
+          "suffix_words": 30
+        },
+        {
+          "block": "G",
+          "currier": "A",
+          "folio": "f56v",
+          "image_selected_bits_per_word": 8.372408246296933,
+          "matched_states": 7,
+          "mean_donor_bits_per_word": 8.139843132132553,
+          "prefix_state_oracle_folio": "f49v",
+          "section": "H",
+          "selected_image_donors": [
+            "f54r",
+            "f51r",
+            "f54v"
+          ],
+          "suffix_words": 21
+        },
+        {
+          "block": "G",
+          "currier": "B",
+          "folio": "f50r",
+          "image_selected_bits_per_word": 18.26879111860947,
+          "matched_states": 4,
+          "mean_donor_bits_per_word": 18.26879111860947,
+          "prefix_state_oracle_folio": "f50v",
+          "section": "H",
+          "selected_image_donors": [
+            "f55r",
+            "f55v",
+            "f50v"
+          ],
+          "suffix_words": 22
+        },
+        {
+          "block": "G",
+          "currier": "B",
+          "folio": "f50v",
+          "image_selected_bits_per_word": 12.286969073542057,
+          "matched_states": 4,
+          "mean_donor_bits_per_word": 12.286969073542057,
+          "prefix_state_oracle_folio": "f50r",
+          "section": "H",
+          "selected_image_donors": [
+            "f55v",
+            "f50r",
+            "f55r"
+          ],
+          "suffix_words": 31
+        },
+        {
+          "block": "G",
+          "currier": "B",
+          "folio": "f55r",
+          "image_selected_bits_per_word": 12.138289440970846,
+          "matched_states": 4,
+          "mean_donor_bits_per_word": 12.138289440970846,
+          "prefix_state_oracle_folio": "f50r",
+          "section": "H",
+          "selected_image_donors": [
+            "f50r",
+            "f55v",
+            "f50v"
+          ],
+          "suffix_words": 56
+        },
+        {
+          "block": "G",
+          "currier": "B",
+          "folio": "f55v",
+          "image_selected_bits_per_word": 11.1250921441084,
+          "matched_states": 4,
+          "mean_donor_bits_per_word": 11.1250921441084,
+          "prefix_state_oracle_folio": "f50r",
+          "section": "H",
+          "selected_image_donors": [
+            "f50v",
+            "f50r",
+            "f55r"
+          ],
+          "suffix_words": 26
+        },
+        {
+          "block": "H",
+          "currier": "B",
+          "folio": "f57r",
+          "image_selected_bits_per_word": 15.732688916400646,
+          "matched_states": 2,
+          "mean_donor_bits_per_word": 15.732688916400646,
+          "prefix_state_oracle_folio": "f66v",
+          "section": "H",
+          "selected_image_donors": [
+            "f66v"
+          ],
+          "suffix_words": 17
+        },
+        {
+          "block": "H",
+          "currier": "B",
+          "folio": "f66v",
+          "image_selected_bits_per_word": 13.546057371875179,
+          "matched_states": 2,
+          "mean_donor_bits_per_word": 13.546057371875179,
+          "prefix_state_oracle_folio": "f57r",
+          "section": "H",
+          "selected_image_donors": [
+            "f57r"
+          ],
+          "suffix_words": 46
+        },
+        {
+          "block": "H",
+          "currier": "A",
+          "folio": "f58r",
+          "image_selected_bits_per_word": 12.803456967703209,
+          "matched_states": 2,
+          "mean_donor_bits_per_word": 12.803456967703209,
+          "prefix_state_oracle_folio": "f58v",
+          "section": "T",
+          "selected_image_donors": [
+            "f58v"
+          ],
+          "suffix_words": 64
+        },
+        {
+          "block": "H",
+          "currier": "A",
+          "folio": "f58v",
+          "image_selected_bits_per_word": 12.37533477973624,
+          "matched_states": 2,
+          "mean_donor_bits_per_word": 12.37533477973624,
+          "prefix_state_oracle_folio": "f58r",
+          "section": "T",
+          "selected_image_donors": [
+            "f58r"
+          ],
+          "suffix_words": 64
+        }
+      ],
+      "test_blocks": [
+        "A",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "O"
+      ],
+      "train_blocks": [
+        "B",
+        "C",
+        "D",
+        "E",
+        "M",
+        "N",
+        "Q",
+        "S"
+      ],
+      "validation_blocks": [
+        "T"
+      ],
+      "validation_candidates": [
+        {
+          "alpha": 8.0,
+          "eligible_pages": 23,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.08746688305731586,
+          "image_selected_bits_per_word": 12.278059312932756,
+          "mean_matched_donor_bits_per_word": 12.365526195990071,
+          "neighbors": 1,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 23,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.058523556560774265,
+          "image_selected_bits_per_word": 12.005099901007238,
+          "mean_matched_donor_bits_per_word": 12.063623457568012,
+          "neighbors": 1,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 23,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.03553559272881023,
+          "image_selected_bits_per_word": 11.852499789241827,
+          "mean_matched_donor_bits_per_word": 11.888035381970637,
+          "neighbors": 1,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 23,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.019160865797499337,
+          "image_selected_bits_per_word": 11.788678630609589,
+          "mean_matched_donor_bits_per_word": 11.807839496407087,
+          "neighbors": 1,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 23,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.06709253057762324,
+          "image_selected_bits_per_word": 12.298433665412448,
+          "mean_matched_donor_bits_per_word": 12.365526195990071,
+          "neighbors": 3,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 23,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.053591546496504536,
+          "image_selected_bits_per_word": 12.010031911071508,
+          "mean_matched_donor_bits_per_word": 12.063623457568012,
+          "neighbors": 3,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 23,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.04053948769079279,
+          "image_selected_bits_per_word": 11.847495894279845,
+          "mean_matched_donor_bits_per_word": 11.888035381970637,
+          "neighbors": 3,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 23,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.028661926095821855,
+          "image_selected_bits_per_word": 11.779177570311266,
+          "mean_matched_donor_bits_per_word": 11.807839496407087,
+          "neighbors": 3,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 23,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.04035997666625482,
+          "image_selected_bits_per_word": 12.325166219323817,
+          "mean_matched_donor_bits_per_word": 12.365526195990071,
+          "neighbors": 5,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 23,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.034657405061750524,
+          "image_selected_bits_per_word": 12.028966052506261,
+          "mean_matched_donor_bits_per_word": 12.063623457568012,
+          "neighbors": 5,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 23,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.028079517467142028,
+          "image_selected_bits_per_word": 11.859955864503496,
+          "mean_matched_donor_bits_per_word": 11.888035381970637,
+          "neighbors": 5,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 23,
+          "family": "global_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.02112730207489261,
+          "image_selected_bits_per_word": 11.786712194332196,
+          "mean_matched_donor_bits_per_word": 11.807839496407087,
+          "neighbors": 5,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 23,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.039341542080182,
+          "image_selected_bits_per_word": 12.404867738070253,
+          "mean_matched_donor_bits_per_word": 12.365526195990071,
+          "neighbors": 1,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 23,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.03299403544276728,
+          "image_selected_bits_per_word": 12.096617493010779,
+          "mean_matched_donor_bits_per_word": 12.063623457568012,
+          "neighbors": 1,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 23,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.023886959513867583,
+          "image_selected_bits_per_word": 11.911922341484505,
+          "mean_matched_donor_bits_per_word": 11.888035381970637,
+          "neighbors": 1,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 23,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.014555993046910673,
+          "image_selected_bits_per_word": 11.822395489454,
+          "mean_matched_donor_bits_per_word": 11.807839496407087,
+          "neighbors": 1,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 23,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.004996561747243109,
+          "image_selected_bits_per_word": 12.370522757737314,
+          "mean_matched_donor_bits_per_word": 12.365526195990071,
+          "neighbors": 3,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 23,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.009006645635400158,
+          "image_selected_bits_per_word": 12.072630103203412,
+          "mean_matched_donor_bits_per_word": 12.063623457568012,
+          "neighbors": 3,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 23,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.009365423882340821,
+          "image_selected_bits_per_word": 11.897400805852978,
+          "mean_matched_donor_bits_per_word": 11.888035381970637,
+          "neighbors": 3,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 23,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.007407579684777078,
+          "image_selected_bits_per_word": 11.815247076091865,
+          "mean_matched_donor_bits_per_word": 11.807839496407087,
+          "neighbors": 3,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 23,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.04389176989754471,
+          "image_selected_bits_per_word": 12.321634426092526,
+          "mean_matched_donor_bits_per_word": 12.365526195990071,
+          "neighbors": 5,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 23,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.030485410949391615,
+          "image_selected_bits_per_word": 12.033138046618621,
+          "mean_matched_donor_bits_per_word": 12.063623457568012,
+          "neighbors": 5,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 23,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.020785231779872567,
+          "image_selected_bits_per_word": 11.867250150190765,
+          "mean_matched_donor_bits_per_word": 11.888035381970637,
+          "neighbors": 5,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 23,
+          "family": "silhouette_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.01427365113878572,
+          "image_selected_bits_per_word": 11.793565845268303,
+          "mean_matched_donor_bits_per_word": 11.807839496407087,
+          "neighbors": 5,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 23,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.09777832634505726,
+          "image_selected_bits_per_word": 12.463304522335129,
+          "mean_matched_donor_bits_per_word": 12.365526195990071,
+          "neighbors": 1,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 23,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.07492239305642433,
+          "image_selected_bits_per_word": 12.138545850624437,
+          "mean_matched_donor_bits_per_word": 12.063623457568012,
+          "neighbors": 1,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 23,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.05365895421400934,
+          "image_selected_bits_per_word": 11.941694336184646,
+          "mean_matched_donor_bits_per_word": 11.888035381970637,
+          "neighbors": 1,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 23,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.03558464237468313,
+          "image_selected_bits_per_word": 11.84342413878177,
+          "mean_matched_donor_bits_per_word": 11.807839496407087,
+          "neighbors": 1,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 23,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.03898050532787129,
+          "image_selected_bits_per_word": 12.3265456906622,
+          "mean_matched_donor_bits_per_word": 12.365526195990071,
+          "neighbors": 3,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 23,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.02361363993443023,
+          "image_selected_bits_per_word": 12.040009817633582,
+          "mean_matched_donor_bits_per_word": 12.063623457568012,
+          "neighbors": 3,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 23,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.01310080963192515,
+          "image_selected_bits_per_word": 11.874934572338713,
+          "mean_matched_donor_bits_per_word": 11.888035381970637,
+          "neighbors": 3,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 23,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.006931719015152221,
+          "image_selected_bits_per_word": 11.800907777391936,
+          "mean_matched_donor_bits_per_word": 11.807839496407087,
+          "neighbors": 3,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 23,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.046811878885757385,
+          "image_selected_bits_per_word": 12.318714317104314,
+          "mean_matched_donor_bits_per_word": 12.365526195990071,
+          "neighbors": 5,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 23,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.025012444914468884,
+          "image_selected_bits_per_word": 12.038611012653543,
+          "mean_matched_donor_bits_per_word": 12.063623457568012,
+          "neighbors": 5,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 23,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.010395127232235925,
+          "image_selected_bits_per_word": 11.8776402547384,
+          "mean_matched_donor_bits_per_word": 11.888035381970637,
+          "neighbors": 5,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 23,
+          "family": "pigment_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.0023324506623991865,
+          "image_selected_bits_per_word": 11.805507045744688,
+          "mean_matched_donor_bits_per_word": 11.807839496407087,
+          "neighbors": 5,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 23,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.06514320337235739,
+          "image_selected_bits_per_word": 12.43066939936243,
+          "mean_matched_donor_bits_per_word": 12.365526195990071,
+          "neighbors": 1,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 23,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.04666951582845266,
+          "image_selected_bits_per_word": 12.110292973396465,
+          "mean_matched_donor_bits_per_word": 12.063623457568012,
+          "neighbors": 1,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 23,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.031025830883075523,
+          "image_selected_bits_per_word": 11.919061212853713,
+          "mean_matched_donor_bits_per_word": 11.888035381970637,
+          "neighbors": 1,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 23,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": -0.019278614702483064,
+          "image_selected_bits_per_word": 11.827118111109572,
+          "mean_matched_donor_bits_per_word": 11.807839496407087,
+          "neighbors": 1,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 23,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.051085406453338415,
+          "image_selected_bits_per_word": 12.314440789536732,
+          "mean_matched_donor_bits_per_word": 12.365526195990071,
+          "neighbors": 3,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 23,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.031949990306068925,
+          "image_selected_bits_per_word": 12.031673467261943,
+          "mean_matched_donor_bits_per_word": 12.063623457568012,
+          "neighbors": 3,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 23,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.018566640058234832,
+          "image_selected_bits_per_word": 11.869468741912403,
+          "mean_matched_donor_bits_per_word": 11.888035381970637,
+          "neighbors": 3,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 23,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.01050081845341597,
+          "image_selected_bits_per_word": 11.797338677953672,
+          "mean_matched_donor_bits_per_word": 11.807839496407087,
+          "neighbors": 3,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 8.0,
+          "eligible_pages": 23,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.05363366475997667,
+          "image_selected_bits_per_word": 12.311892531230095,
+          "mean_matched_donor_bits_per_word": 12.365526195990071,
+          "neighbors": 5,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 16.0,
+          "eligible_pages": 23,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.030515541856355747,
+          "image_selected_bits_per_word": 12.033107915711657,
+          "mean_matched_donor_bits_per_word": 12.063623457568012,
+          "neighbors": 5,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 32.0,
+          "eligible_pages": 23,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.014947522623587069,
+          "image_selected_bits_per_word": 11.87308785934705,
+          "mean_matched_donor_bits_per_word": 11.888035381970637,
+          "neighbors": 5,
+          "suffix_words": 1472
+        },
+        {
+          "alpha": 64.0,
+          "eligible_pages": 23,
+          "family": "combined_guarded",
+          "image_gain_over_mean_donor_bits_per_word": 0.006028741592514131,
+          "image_selected_bits_per_word": 11.801810754814573,
+          "mean_matched_donor_bits_per_word": 11.807839496407087,
+          "neighbors": 5,
+          "suffix_words": 1472
+        }
+      ],
+      "validation_winner": {
+        "alpha": 64.0,
+        "eligible_pages": 23,
+        "family": "global_guarded",
+        "image_gain_over_mean_donor_bits_per_word": 0.028661926095821855,
+        "image_selected_bits_per_word": 11.779177570311266,
+        "mean_matched_donor_bits_per_word": 11.807839496407087,
+        "neighbors": 3,
+        "suffix_words": 1472
+      }
+    }
+  ],
+  "leakage_diagnostic_folds": [
+    {
+      "eligible_pages": 23,
+      "eligible_strata": 1,
+      "fold": 0,
+      "image_gain_over_mean_donor_bits_per_word": -0.01273951136091534,
+      "image_relabeling_null": {
+        "null_mean_bits_per_word": 12.165446125115622,
+        "observed_gain_over_null_bits_per_word": -0.0106911832753331,
+        "replicates": 500,
+        "upper_p": 0.6187624750499002
+      },
+      "image_selected_bits_per_word": 12.176137308390954,
+      "mean_matched_donor_bits_per_word": 12.16339779703004,
+      "own_gain_over_mean_donor_bits_per_word": 0.49928276074526773,
+      "own_prefix_bits_per_word": 11.664115036284771,
+      "posthoc_best_donor_ceiling_bits_per_word": 11.63073337597481,
+      "prefix_state_oracle_bits_per_word": 11.830966326882686,
+      "prefix_state_oracle_gain_over_mean_donor_bits_per_word": 0.3324314701473529,
+      "selected_alpha": 16.0,
+      "selected_family": "small_component_grid",
+      "selected_neighbors": 3,
+      "static_bits_per_word": 12.288908078873982,
+      "suffix_words": 1472,
+      "targets": [],
+      "validation_winner": {
+        "alpha": 16.0,
+        "eligible_pages": 20,
+        "family": "small_component_grid",
+        "image_gain_over_mean_donor_bits_per_word": 0.044751354666829,
+        "image_selected_bits_per_word": 10.678531619292679,
+        "mean_matched_donor_bits_per_word": 10.723282973959508,
+        "neighbors": 3,
+        "suffix_words": 1280
+      }
+    },
+    {
+      "eligible_pages": 20,
+      "eligible_strata": 1,
+      "fold": 1,
+      "image_gain_over_mean_donor_bits_per_word": 0.009086250127579376,
+      "image_relabeling_null": {
+        "null_mean_bits_per_word": 10.404933998162287,
+        "observed_gain_over_null_bits_per_word": 0.009654547722058737,
+        "replicates": 500,
+        "upper_p": 0.249500998003992
+      },
+      "image_selected_bits_per_word": 10.395279450440228,
+      "mean_matched_donor_bits_per_word": 10.404365700567807,
+      "own_gain_over_mean_donor_bits_per_word": 0.12359034423711109,
+      "own_prefix_bits_per_word": 10.280775356330697,
+      "posthoc_best_donor_ceiling_bits_per_word": 10.187139188936545,
+      "prefix_state_oracle_bits_per_word": 10.358219596229029,
+      "prefix_state_oracle_gain_over_mean_donor_bits_per_word": 0.04614610433877857,
+      "selected_alpha": 64.0,
+      "selected_family": "small_component_grid",
+      "selected_neighbors": 5,
+      "static_bits_per_word": 10.617818725691567,
+      "suffix_words": 1280,
+      "targets": [],
+      "validation_winner": {
+        "alpha": 64.0,
+        "eligible_pages": 26,
+        "family": "small_component_grid",
+        "image_gain_over_mean_donor_bits_per_word": 0.0025136021969295627,
+        "image_selected_bits_per_word": 11.361816756183144,
+        "mean_matched_donor_bits_per_word": 11.364330358380075,
+        "neighbors": 5,
+        "suffix_words": 903
+      }
+    },
+    {
+      "eligible_pages": 26,
+      "eligible_strata": 6,
+      "fold": 2,
+      "image_gain_over_mean_donor_bits_per_word": -0.0013261795135309745,
+      "image_relabeling_null": {
+        "null_mean_bits_per_word": 11.860607543112042,
+        "observed_gain_over_null_bits_per_word": -0.001019703090044611,
+        "replicates": 500,
+        "upper_p": 0.5449101796407185
+      },
+      "image_selected_bits_per_word": 11.861627246202087,
+      "mean_matched_donor_bits_per_word": 11.860301066688557,
+      "own_gain_over_mean_donor_bits_per_word": 0.18497883000235463,
+      "own_prefix_bits_per_word": 11.675322236686203,
+      "posthoc_best_donor_ceiling_bits_per_word": 11.646093470113199,
+      "prefix_state_oracle_bits_per_word": 11.777847453732484,
+      "prefix_state_oracle_gain_over_mean_donor_bits_per_word": 0.08245361295607327,
+      "selected_alpha": 64.0,
+      "selected_family": "small_component_grid",
+      "selected_neighbors": 3,
+      "static_bits_per_word": 11.99442037170163,
+      "suffix_words": 903,
+      "targets": [],
+      "validation_winner": {
+        "alpha": 64.0,
+        "eligible_pages": 31,
+        "family": "small_component_grid",
+        "image_gain_over_mean_donor_bits_per_word": 0.013926575335190167,
+        "image_selected_bits_per_word": 12.81412250234894,
+        "mean_matched_donor_bits_per_word": 12.828049077684131,
+        "neighbors": 3,
+        "suffix_words": 1214
+      }
+    },
+    {
+      "eligible_pages": 31,
+      "eligible_strata": 7,
+      "fold": 3,
+      "image_gain_over_mean_donor_bits_per_word": 0.013994235361256342,
+      "image_relabeling_null": {
+        "null_mean_bits_per_word": 12.384238305027301,
+        "observed_gain_over_null_bits_per_word": 0.013225080776397467,
+        "replicates": 500,
+        "upper_p": 0.10578842315369262
+      },
+      "image_selected_bits_per_word": 12.371013224250904,
+      "mean_matched_donor_bits_per_word": 12.38500745961216,
+      "own_gain_over_mean_donor_bits_per_word": 0.19312630927719784,
+      "own_prefix_bits_per_word": 12.191881150334963,
+      "posthoc_best_donor_ceiling_bits_per_word": 12.242630480295352,
+      "prefix_state_oracle_bits_per_word": 12.321800939130382,
+      "prefix_state_oracle_gain_over_mean_donor_bits_per_word": 0.0632065204817781,
+      "selected_alpha": 64.0,
+      "selected_family": "small_component_grid",
+      "selected_neighbors": 3,
+      "static_bits_per_word": 12.35148787276929,
+      "suffix_words": 1214,
+      "targets": [],
+      "validation_winner": {
+        "alpha": 64.0,
+        "eligible_pages": 23,
+        "family": "small_component_grid",
+        "image_gain_over_mean_donor_bits_per_word": 0.001422832973315488,
+        "image_selected_bits_per_word": 11.806416663433772,
+        "mean_matched_donor_bits_per_word": 11.807839496407087,
+        "neighbors": 3,
+        "suffix_words": 1472
+      }
+    }
+  ],
+  "parameters": {
+    "alphas": [
+      8.0,
+      16.0,
+      32.0,
+      64.0
+    ],
+    "donor_match": "exact repository quire x Currier x section",
+    "excluded_text_layout_diagnostic": "small_component_grid",
+    "image_relabeling_permutations": 500,
+    "maximum_scored_suffix_words": 64,
+    "minimum_suffix_words": 16,
+    "neighbors": [
+      1,
+      3,
+      5
+    ],
+    "prefix_words": 64,
+    "primary_feature_families": [
+      "global_guarded",
+      "silhouette_guarded",
+      "pigment_guarded",
+      "combined_guarded"
+    ],
+    "selection_objective": "minimum validation image-selected bits per suffix word",
+    "split": "test=fold f; validation=fold f+1; fit=other two folds; complete repository quire blocks",
+    "suffix_start_word": 65
+  },
+  "seed": 20260724,
+  "summary": {
+    "controls": {
+      "prefix_state_oracle_description": "nearest other donor chosen from target's own 64-word prefix state; positive gain establishes donor-pool power",
+      "prefix_state_oracle_positive": true
+    },
+    "excluded_text_layout_diagnostic": {
+      "eligible_pages": 100,
+      "eligible_strata": 15,
+      "fold_relabeling_upper_p_values": [
+        0.6187624750499002,
+        0.249500998003992,
+        0.5449101796407185,
+        0.10578842315369262
+      ],
+      "image_gain_over_mean_donor_bits_per_word": 0.0017805095641571064,
+      "image_selected_bits_per_word": 11.69823193100761,
+      "mean_matched_donor_bits_per_word": 11.700012440571768,
+      "own_gain_over_mean_donor_bits_per_word": 0.26589260369586787,
+      "own_prefix_bits_per_word": 11.434119836875901,
+      "pooled_image_relabeling_null": {
+        "null_mean_bits_per_word": 11.700646154765094,
+        "observed_gain_over_null_bits_per_word": 0.0024142237574830026,
+        "replicates": 500,
+        "upper_p": 0.437125748502994
+      },
+      "posthoc_best_donor_ceiling_bits_per_word": 11.406644793153516,
+      "prefix_state_oracle_bits_per_word": 11.55632904234323,
+      "prefix_state_oracle_gain_over_mean_donor_bits_per_word": 0.14368339822853826,
+      "selected_alphas": {
+        "16": 1,
+        "64": 3
+      },
+      "selected_families": {
+        "small_component_grid": 4
+      },
+      "selected_neighbors": {
+        "3": 3,
+        "5": 1
+      },
+      "static_bits_per_word": 11.81058708855539,
+      "suffix_words": 4869
+    },
+    "primary_gate_pass": false,
+    "primary_guarded_features": {
+      "eligible_pages": 100,
+      "eligible_strata": 15,
+      "fold_relabeling_upper_p_values": [
+        0.9880239520958084,
+        0.4431137724550898,
+        0.48902195608782434,
+        0.9481037924151696
+      ],
+      "image_gain_over_mean_donor_bits_per_word": -0.05751508279540619,
+      "image_selected_bits_per_word": 11.757527523367175,
+      "mean_matched_donor_bits_per_word": 11.700012440571768,
+      "own_gain_over_mean_donor_bits_per_word": 0.26589260369586787,
+      "own_prefix_bits_per_word": 11.434119836875901,
+      "pooled_image_relabeling_null": {
+        "null_mean_bits_per_word": 11.699590488323036,
+        "observed_gain_over_null_bits_per_word": -0.057937035044137934,
+        "replicates": 500,
+        "upper_p": 0.9960079840319361
+      },
+      "posthoc_best_donor_ceiling_bits_per_word": 11.406644793153516,
+      "prefix_state_oracle_bits_per_word": 11.55632904234323,
+      "prefix_state_oracle_gain_over_mean_donor_bits_per_word": 0.14368339822853826,
+      "selected_alphas": {
+        "16": 1,
+        "64": 3
+      },
+      "selected_families": {
+        "combined_guarded": 1,
+        "global_guarded": 2,
+        "pigment_guarded": 1
+      },
+      "selected_neighbors": {
+        "1": 3,
+        "3": 1
+      },
+      "static_bits_per_word": 11.81058708855539,
+      "suffix_words": 4869
+    }
+  },
+  "visual_audit": {
+    "artifact_records": 204,
+    "duplicate_exact_folios": {
+      "f102v (part)": 2,
+      "f70v (part)": 2,
+      "f72v (part)": 2
+    },
+    "eligible_unique_folios": 201,
+    "event_folios": 206,
+    "exact_event_visual_overlap": 171,
+    "unique_exact_folios": 201
+  }
+}

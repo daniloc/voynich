@@ -1,0 +1,106 @@
+==============================================================================================================
+SOLVER-FACING PREFIX-POOLING RESIDUAL CALIBRATION
+==============================================================================================================
+seed=20260723 alpha=0.5 tau_shape=16 tau_prefix=16 tau_word=8
+template=4117 prose lines, 33133 eligible tokens, 71 uncertain and 496 one-character break slots
+split=leave one complete matched quire block out; train-only classes, counts, exact-word vocabulary, and hierarchy
+surface recovery=log2 P(next prefix|exact previous word,surface) - log2 P(next prefix|shape,copy,position)
+prefix residual=log2 P(next prefix|exact word,prefix,surface) - log2 P(next prefix|exact word,surface)
+Interpretation boundary: previous prefix is determined by previous exact word. Residual gain is finite-sample pooling value, not independent population information.
+
+PROVENANCE
+  Naibbe checkout: f2675ec5dd275268bc64dd48ea64fc0e0e9827a2 (https://github.com/greshko/naibbe-cipher)
+  corpus   SHA256=6c0160de15d4a434816477a65ee4c7ffc384bd66e3a0ad63aedaed638c97fcb0 path=data/corpus/corpus.json
+  cipher   SHA256=1fa827c1798c42314c04c1114bdee237f1e9b06767012364fa124ed74bd239c5 path=/tmp/naibbe-cipher/encrypted/nathist_output_ciphertext_respaced.txt
+  latin    SHA256=d4e458fa8598290a73eeb59827788de7ea3f14237c5cee152d5cb48fa28ad229 path=/tmp/naibbe-cipher/figure_utils/gaskell_bowern_2022/data/meaningful/texts/Historical - Latin - Technical - Pliny's Natural History.txt
+  english  SHA256=653f9bca5d75f1e33290de3cfc22cd68d0b538af11fbd25beefd44b44d340d0e path=/tmp/naibbe-cipher/figure_utils/gaskell_bowern_2022/data/meaningful/texts/Modern - English - Literary - NT.txt
+  Latin starts at last duplicated Book 16 incipit, token offset 183748.
+  Procedural arms: strict section+Currier+hand+quire+position exchange; residual.py schema/copy; null_and_morph.py self-citation.
+
+==============================================================================================================
+PRIMARY: GENERIC PREFIX WIDTH 1
+==============================================================================================================
+
+SURFACE EXACT-WORD RECOVERY GATE
+  corpus                events  micro bits              block mean [95% CI]  +blocks     p(>0)   accuracy
+  VOYNICH                28642    +0.01896  +0.00551 [ -0.00862, +0.01954]  9/16   0.23503    +3.491pp
+  NAIBBE_MEANINGFUL      28642    -0.06905  -0.07014 [ -0.07703, -0.06416]  0/16   1.00000    -1.404pp
+  LATIN_PLAIN            28642    -0.06634  -0.06246 [ -0.06947, -0.05584]  0/16   1.00000    +0.377pp
+  LATIN_SIMPLE_SUB       28642    -0.06634  -0.06246 [ -0.06934, -0.05575]  0/16   1.00000    +0.370pp
+  ENGLISH_PLAIN          28642    +0.19615  +0.18614 [ +0.15419, +0.21762] 16/16   0.00002    +4.368pp
+  LAYOUT_EXCHANGE        28642    -0.10213  -0.10005 [ -0.12446, -0.07955]  0/16   1.00000    -0.370pp
+  SCHEMA_COPY            28642    -0.10853  -0.10378 [ -0.11128, -0.09457]  0/16   1.00000    -1.543pp
+  SELF_CITATION          28642    +0.00212  +0.00666 [ +0.00219, +0.01252] 14/16   0.00037    +0.126pp
+
+REQUESTED PREFIX-POOLING RESIDUAL
+  corpus                micro bits              block mean [95% CI]  +blocks     p(>0)   accuracy  novel-word bits
+  VOYNICH                 -0.06520  -0.05880 [ -0.06687, -0.04979]  0/16   1.00000    +0.534pp         -0.07785
+  NAIBBE_MEANINGFUL       -0.07396  -0.07610 [ -0.08515, -0.06864]  0/16   1.00000    -0.730pp         -0.09350
+  LATIN_PLAIN             -0.15893  -0.15366 [ -0.16165, -0.14464]  0/16   1.00000    -0.601pp         -0.15172
+  LATIN_SIMPLE_SUB        -0.15893  -0.15366 [ -0.16179, -0.14480]  0/16   1.00000    -0.601pp         -0.15172
+  ENGLISH_PLAIN           -0.11611  -0.11170 [ -0.12485, -0.09719]  0/16   1.00000    -0.129pp         -0.20083
+  LAYOUT_EXCHANGE         -0.07858  -0.06118 [ -0.07475, -0.04482]  1/16   0.99998    -0.471pp         -0.09060
+  SCHEMA_COPY             -0.08647  -0.08759 [ -0.09955, -0.07753]  0/16   1.00000    -0.216pp         -0.07603
+  SELF_CITATION           +0.19417  +0.23785 [ +0.18707, +0.29110] 16/16   0.00002   +17.055pp         +0.19388
+
+DISCRIMINATION: VOYNICH minus corpus residual, paired blocks
+  corpus                           mean difference [95% CI]     raw p    Bonf p
+  NAIBBE_MEANINGFUL     +0.01731 [ +0.00619, +0.03271]   0.00336   0.02014
+  LATIN_PLAIN           +0.09486 [ +0.08273, +0.10679]   0.00003   0.00018
+  ENGLISH_PLAIN         +0.05290 [ +0.03976, +0.06462]   0.00006   0.00037
+  LAYOUT_EXCHANGE       +0.00238 [ -0.01014, +0.01450]   0.71924   1.00000
+  SCHEMA_COPY           +0.02879 [ +0.01567, +0.04612]   0.00021   0.00128
+  SELF_CITATION         -0.29665 [ -0.35098, -0.24426]   0.00003   0.00018
+  Bonferroni family=6 nonredundant contrasts
+
+==============================================================================================================
+FIXED SENSITIVITY: GENERIC PREFIX WIDTH 2
+==============================================================================================================
+
+SURFACE EXACT-WORD RECOVERY GATE
+  corpus                events  micro bits              block mean [95% CI]  +blocks     p(>0)   accuracy
+  VOYNICH                28642    -0.12672  -0.15291 [ -0.17462, -0.13424]  0/16   1.00000          NA
+  NAIBBE_MEANINGFUL      28642    -0.25310  -0.26096 [ -0.27492, -0.24796]  0/16   1.00000          NA
+  LATIN_PLAIN            28642    -0.22935  -0.22649 [ -0.24527, -0.20854]  0/16   1.00000          NA
+  LATIN_SIMPLE_SUB       28642    -0.22935  -0.22649 [ -0.24500, -0.20854]  0/16   1.00000          NA
+  ENGLISH_PLAIN          28642    +0.23536  +0.19533 [ +0.13273, +0.26068] 15/16   0.00003          NA
+  LAYOUT_EXCHANGE        28642    -0.29469  -0.29023 [ -0.31012, -0.27122]  0/16   1.00000          NA
+  SCHEMA_COPY            28642    -0.33042  -0.33775 [ -0.35121, -0.32485]  0/16   1.00000          NA
+  SELF_CITATION          28642    +0.00615  +0.01363 [ +0.00673, +0.02293] 15/16   0.00005          NA
+
+REQUESTED PREFIX-POOLING RESIDUAL
+  corpus                micro bits              block mean [95% CI]  +blocks     p(>0)   accuracy  novel-word bits
+  VOYNICH                 -0.24704  -0.25163 [ -0.26697, -0.23389]  0/16   1.00000          NA         -0.17010
+  NAIBBE_MEANINGFUL       -0.31184  -0.31081 [ -0.32357, -0.29904]  0/16   1.00000          NA         -0.23190
+  LATIN_PLAIN             -0.43352  -0.44344 [ -0.46387, -0.42583]  0/16   1.00000          NA         -0.32196
+  LATIN_SIMPLE_SUB        -0.43352  -0.44344 [ -0.46407, -0.42566]  0/16   1.00000          NA         -0.32196
+  ENGLISH_PLAIN           -0.34670  -0.36194 [ -0.38651, -0.33714]  0/16   1.00000          NA         -0.13771
+  LAYOUT_EXCHANGE         -0.31157  -0.31661 [ -0.33771, -0.29332]  0/16   1.00000          NA         -0.19190
+  SCHEMA_COPY             -0.36760  -0.38163 [ -0.40890, -0.35952]  0/16   1.00000          NA         -0.23551
+  SELF_CITATION           -0.09784  -0.00159 [ -0.09399, +0.11370]  4/16   0.51158          NA         -0.10352
+
+DISCRIMINATION: VOYNICH minus corpus residual, paired blocks
+  corpus                           mean difference [95% CI]     raw p    Bonf p
+  NAIBBE_MEANINGFUL     +0.05918 [ +0.04071, +0.07885]   0.00003   0.00018
+  LATIN_PLAIN           +0.19181 [ +0.16327, +0.22545]   0.00003   0.00018
+  ENGLISH_PLAIN         +0.11031 [ +0.08013, +0.14025]   0.00006   0.00037
+  LAYOUT_EXCHANGE       +0.06497 [ +0.05214, +0.07773]   0.00003   0.00018
+  SCHEMA_COPY           +0.13000 [ +0.09942, +0.16933]   0.00003   0.00018
+  SELF_CITATION         -0.25005 [ -0.36366, -0.15598]   0.00003   0.00018
+  Bonferroni family=6 nonredundant contrasts
+
+==============================================================================================================
+CALIBRATION GATES
+==============================================================================================================
+  Surface recovery in held-out English: PASS (one-sided block p=0.00002).
+  Positive prefix residual in known-meaningful arms: FAIL (none of Naibbe, Latin, or English).
+  Aggressive self-citation detection: PASS (one-sided block p=0.00002).
+  Voynich positive prefix residual: NO (one-sided block p=1.00000).
+  Use decision: reject prefix-pooling residual as a meaning detector if known-meaningful recovery fails; retain it only as a diagnostic for prefix-preserving local production.
+
+LIMITATIONS
+  1. Prefix pooling is representational backoff, not additional information beyond exact word in the population.
+  2. Latin, English, Naibbe, and generated controls use artificial Voynich line/quire blocks; source sentence and page boundaries are lost.
+  3. Schema tables are estimated globally from Voynich and generator hyperparameters are inherited, not nested or refitted.
+  4. The one-replicate procedural arms are deterministic calibration points, not empirical procedural-null distributions.
+  5. Accuracy is secondary; proper held-out log score is primary. The two-character analysis was declared as a sensitivity, not selected.

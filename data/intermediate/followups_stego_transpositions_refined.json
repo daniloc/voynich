@@ -1,0 +1,110 @@
+[
+  {
+    "language": "english",
+    "channel": "hier/forward/even_odd/forward",
+    "train": -2.923643979860265,
+    "test": -2.884998441418488,
+    "ceiling": -2.0929193651989206,
+    "sample_train": "gaiseyeranamafalldysonysomeifsmtyeromysonheyeallmystreomeralldysohifsoameifstyhamalldyahalmeistamifsalldipsamigsalldohamoeysonipsoeoehamysyigsoalldysohamehalldysoyigsonysoheehaldipstyalldonyipsteefaldysoyseipsohantyysoeirsterohalldipseipsoh",
+    "sample_test": "worttehanisttewifsteworttenisttehalldisteworttthenisthenamhonwotytheystttmnystthenysthwoirstenisthenomysttemepisthemystanhanhewortthemysthewoftthewortthenoisthehisttenisthewortthenisthemistheorissewofthewofewofeistononmystthenisthewofenistt"
+  },
+  {
+    "language": "english",
+    "channel": "hier/forward/reverse/forward",
+    "train": -3.0072572389093257,
+    "test": -3.017101588831578,
+    "ceiling": -2.0929193651989206,
+    "sample_train": "ritullditanitasitaceitacheotaresaotheicteasitheshheshherunitcabeithheasueaserulldasithesasulldrunsulldotaulldasanrulldfubictanrulldictanrubitanruldictunrubothubsulldrubotheictubimtaotulldotasithheitancotarhhoeothemerhheitebaacanrullldotasit",
+    "sample_test": "bothhebewashhrenithhrewashheounbulldwashhenshhewashhebulldereithhewicthewashhenithherulldithewashhhrenithrenubwasulldithabothhewasulldotisthewanshhhrewashhhebuberulldithasenshrebanotherulldithewanithrewashherunmaounotewashreimtunothreothans"
+  },
+  {
+    "language": "english",
+    "channel": "word_columns/forward/boustro_right/top_bottom/chars",
+    "train": -2.8791393079354175,
+    "test": -2.811736536261852,
+    "ceiling": -2.0929193651989206,
+    "sample_train": "hayinarsehunehadoifnadunerhosedifnaduaikneallyseuhifnosedsinemdeifnadinfedifnerhaduntoinohreifaisnohuhalifnouneinerhayerhalyhallyignehartuineduesayhadallyadtoifndtuunadifntuedunhalyuneunouisntountesalyinerinehallyifnohalyifnerugohttohadhall",
+    "sample_test": "tthointoberintobesttobeisntoallybeftthobeftteresinnobesttorinttedrintisnointointedrintobefounthodinthoinifntodunthointurunthdallyhallyunisntohallyunterrinoharbesthodedrstthohttthointhadintisneineginthodintointtouerunthountisnointhobesarbesa"
+  },
+  {
+    "language": "english",
+    "channel": "hier/odd_even/reverse/boustro_words",
+    "train": -2.823954367814416,
+    "test": -2.8169281861757014,
+    "ceiling": -2.0929193651989206,
+    "sample_train": "raeminerintohadinehouinehogedinehamunehohamerinehinemhamunedsohedinedesedunemesedunedsedstinoinedsoinedirnedinehoinedhallydinehoheosedhedehedirntoosedhedintedinetttedbeinesoinedirnedunedesadhedintoinehededinoirnouneunoereallyrehointoigneadh",
+    "sample_test": "insoiseeallyinorallyhakinefinountuthunttohinedineminembereminehamunomoinehallyunesinoinemhoadhalyhinoheuneesintsintaduunrinrogunedinemerunadinegoignedinehounoifnehamunemorinauemallyinsamhinohallyuallyinehosinoineireoirnoeineberinebesinoirnt"
+  },
+  {
+    "language": "english",
+    "channel": "hier/odd_even/odd_even/boustro_words",
+    "train": -2.8262665260553863,
+    "test": -2.8335325880775404,
+    "ceiling": -2.0929193651989206,
+    "sample_train": "ofttaoinadedeinohinersehoesehadinehoinesehohamueintohaldinesteherinesoinerifneruneresarherintoinehererinoifnohallyinerinehoifnersoinerinerstinoserunereserfaedinefintoharinehouinehogerinehadamiknadinadererfintoinahallysinuoheisnoisneisnounoh",
+    "sample_test": "nehohallyintehallyuneresesinehmisnohallldinohertfehallysinuinointoinerisnerhintoinerhinobesadinrallyintayisoinadinallyhalsamsallyunersallyhadunerignerintalyualduinerualdeosttoinerofallyesinehofetesoesellyhoedinallyhaofohedoferefadunallyuned"
+  },
+  {
+    "language": "english",
+    "channel": "hier/forward/forward/forward",
+    "train": -2.84018968671272,
+    "test": -2.7774161681034784,
+    "ceiling": -2.0929193651989206,
+    "sample_train": "fainouosadamarallyunedunemoirnmtuosemunedhouemoisnamemosalminrallyunamamtirnamirnamhayuoallmuntsoemosallyunehirneamoirntuhamallyuaeellyerttoerteumederohallyerallyemesayhalmointamirnallyignamifnallyohamalunoehameounedigneoeohamunuifneallyune",
+    "sample_test": "amintisnedededesadesalminthorintededinthobestthoberthointhaminttodintouadamedmedinobesedintobesalyhttthobesttobesallyedinthorthodinthobesthobesinhodstthobesallyhohallyinhohobestthodinthobestthointtomemeduallyintomalrohawhunthoberttointhobes"
+  },
+  {
+    "language": "latin",
+    "channel": "hier/reverse/reverse/reverse_all",
+    "train": -2.793533532601609,
+    "test": -2.844186028070453,
+    "ceiling": -2.142282241931655,
+    "sample_train": "useopedibuarmamualmamdeamdenicoerddigesesibuttamsidibutamoeditriutributacsecicudiopelioeliuopenutamseribuiamopenuttrdiopeserucuderntamderiuttriuamtrdutributarmamopesiburacopeciunuriseriiuttliuaahmacutrideseriseributacdeoperibiuamuttdeceribu",
+    "sample_test": "nibdintamnibuntligeruntamdelibuntamhiamsintlibdihibuntribunamdiropendisioppeributamspenutamsuntramopperibualmtacdiaccsitlibuntamdelibutributtamsiamduntribunttacuttributtamcduributtribuntacdicuntacseriboppelicuntacndintamoppeliburtacderiuarm"
+  },
+  {
+    "language": "latin",
+    "channel": "hier/odd_even/even_odd/forward",
+    "train": -2.825682599124433,
+    "test": -2.8397755689088267,
+    "ceiling": -2.142282241931655,
+    "sample_train": "matsiatodopplenencatuiatoraxtorofdeamtiamteamtistidmstuuiactimecatedidongeceistendopragteondoratuicedieceopplstestibeenateuuuatuendenactuiimendendeneimendenatedisteremenatendenmidorstendaterecatedorstediicuuoiatorereatidatenmediemedoratedid",
+    "sample_test": "pplstecemediatecenacteactuistenatexidisteatuimstuinediatenoniatuimatematiatsuimatisatuopplactopatoractidoremoragtopplatopplundopplateratoratuonatoferatemusuistuiemonatoncidneateniactereratuisstiedopplsoristeracticepplagtibecedecopplactiemer"
+  },
+  {
+    "language": "latin",
+    "channel": "hier/odd_even/odd_even/forward",
+    "train": -2.840158364489505,
+    "test": -2.822613102609972,
+    "ceiling": -2.142282241931655,
+    "sample_train": "aniiuaorumemeoratorescetaecetumoretatesorecietulmtuhpeoriaorecetaorecaoresonrespresecustesoriaoretesesoraonraecesprescescioraorescaoresonresoretaorestullgnuemorenoriatusoretaporetabesoretumcorpaorutullgesesnoriaorumofrumuhteocraocreocraprat",
+    "sample_test": "noretaorenorenaenumllgececorethtoriaocresoresoriacorporainetullgtestulllmoraocraorestoradecumorsullgoriugocaorumorullgpulmoriulgobrestumprescullgprescullgtulcuhporespulmeaciiaoresanullgecoretaneiecaecellgtaemorullgapraorecoreoronretpremprul"
+  },
+  {
+    "language": "latin",
+    "channel": "hier/even_odd/even_odd/forward",
+    "train": -2.9629988727884284,
+    "test": -2.9687197505583565,
+    "ceiling": -2.142282241931655,
+    "sample_train": "firestscinidibilloteanteadsrbedmtscadteanustsilldtemcsadscilloteaurbeaidsrbemtuidillotiuildsremidrbeillorgeidrfeilloauidasteanrgeasasuidtetrfeailloteauidsuilloteatrfeanteaussuilorgemtilloantrgemssbiloteatesrgeauinmtteasrcemscauillorgesrgeau",
+    "sample_test": "aduremauilotemanhabremushacremushacremusreabidadidilloanreussuremuscaushacmmusreanturemmattemushacmmahacshacmmadremaushacmmahacmadadancremaushacresuremuilohacmmusancmmreusreadremscreadadremuidabidtemauhabmmusuidusdremarceushabreushacmushaci"
+  },
+  {
+    "language": "latin",
+    "channel": "hier/even_odd/even_odd/boustro_words",
+    "train": -2.7961385753631545,
+    "test": -2.7780263256579394,
+    "ceiling": -2.142282241931655,
+    "sample_train": "gupracatusumudullocrescremapdrmicatemcresnacunumullopdricpdreumacrenatulloemcritacaullmnulmapriumpdrullopxrumpgrullocrenumapgreulloccreanumpxreacresaeenumnullocrecpgrescrenapxrenusiccrecraadulopxriacespxriculloanulocreaptriatenullopxrapxren",
+    "sample_test": "emesprnaulloemumpredumbetprinabetprinabedprinacriesnulonprieanprinatenabetiinaprescbetpratprienamemesbetiebetiieprienabetiiembetabetiiecrinanpriiecnprinulobetiinaestiiprnaprempriatprememprinumedumcrienbediinanumnamprnprinukbedumprenaprinump"
+  },
+  {
+    "language": "latin",
+    "channel": "hier/forward/forward/forward",
+    "train": -2.761080946487658,
+    "test": -2.8199722417311173,
+    "ceiling": -2.142282241931655,
+    "sample_train": "hoateseconorodopplstinstireadtrusecirstinmesireactorirecopratdopplstororuadtoradtormolseopprstuceirecopplstimadtioreadtusmoropplsoiippliduueiduisrinidemopplidoppliricolmopreatuoradtopplagtorahtopplemoropsteimoriestinagtieiemorstsahtiopplsti",
+    "sample_test": "oratuactinininiconicopratumedatuininatumeficuumefidumeatumoratuuenatuesonorinrinateficinatueficoplmuuumeficuueficopplinatumedumenatumeficumeficatmencuumeficopplmemopplatmemeficuumenatumeficuumeatuueririnsopplatueropdemobmstumefiduueatumefic"
+  }
+]

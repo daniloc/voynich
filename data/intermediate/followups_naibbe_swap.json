@@ -1,0 +1,77 @@
+{
+  "calibration": {
+    "train": {
+      "known_tokens": 17264,
+      "classification_accuracy": 0.9724860982391103,
+      "joint_emission_accuracy": 0.9306070435588508,
+      "bigram_boundary_accuracy": 0.8662050480232298,
+      "confusion": {
+        "UU": 7993,
+        "BB": 8796,
+        "BU": 158,
+        "UB": 317
+      }
+    },
+    "test": {
+      "known_tokens": 17253,
+      "classification_accuracy": 0.9710195328348693,
+      "joint_emission_accuracy": 0.9335188083231901,
+      "bigram_boundary_accuracy": 0.8677962194559705,
+      "confusion": {
+        "UU": 8210,
+        "BB": 8543,
+        "UB": 367,
+        "BU": 133
+      }
+    },
+    "table_inventory": {
+      "atomic": 137,
+      "left": 138,
+      "right": 138
+    }
+  },
+  "results": [
+    {
+      "stream": "naibbe_control/calibrated_k150",
+      "symbols": 399,
+      "length": 51250,
+      "train": -2.9070831824278542,
+      "test": -3.1185336192573843,
+      "train_kl": 0.023331690999323973,
+      "sample_train": "nlicigmesmuustisterustisomantifuresnatulutiululutiusmerademeunumereliudiapetuorisemosaluticitimeantesodecitiatilintessnelerireresuraresopecuauressestissudeamcticihtirenpriuisdiacemammaliumserireumentericitiontutaaspamutiatatepecusanorerestu",
+      "sample_test": "udinquesumtituguuuitiqotitisitidelitupsuluamitilitextemererisasemiuptiuicepeasmedinadetutimumesirerutiomereditiqsnlasmengciluaremesureciaresdecumanumiuiantederetufudidusererantiarerebitiditeritiassorerelideanotipraruladitereanmeditedeuntamt",
+      "corpus": "naibbe_control",
+      "language": "latin",
+      "ceiling": -2.0396791909961536,
+      "codebook": 150,
+      "tokens": 34764,
+      "matched": 33872,
+      "coverage": 0.9743412725808307,
+      "train_coverage": 0.9765849729605339,
+      "atomic_emissions": 16494,
+      "compound_emissions": 17378,
+      "inventory": 403
+    },
+    {
+      "stream": "voynich/calibrated_k150",
+      "symbols": 415,
+      "length": 45258,
+      "train": -2.9415646031540406,
+      "test": -3.205642169470492,
+      "train_kl": 0.011682866237235986,
+      "sample_train": "etuuinsetitenirsseserirssisiseritisereslituisinusinireretlsuercitinininuuetuitaminuededetccetemetidisinetetueritamiteretouetteretomissetuituaerttetitltumumsislasesetaminsinesueruerituimisuuuitlitamirtacestuitmirermasereriuariuisircuinainacs",
+      "sample_test": "puldualuqerudhdcpioradumametcuusulenbersqfbinuinenemerenerpuetoumetuuuidecbpcesqererbcoqoenenenenenenmuenuaninulooolpcafpatqesccxnmoampcqhoinetqucmcqoolqiscqonolacesatuoacxnxnpisbclbetaaamqetueromqqenercimetonlpbanetesemarembupincubpenccane",
+      "corpus": "voynich",
+      "language": "latin",
+      "ceiling": -2.0396791909961536,
+      "codebook": 150,
+      "tokens": 36894,
+      "matched": 30131,
+      "coverage": 0.8166910608771074,
+      "train_coverage": 0.8189407491733073,
+      "atomic_emissions": 15004,
+      "compound_emissions": 15127,
+      "inventory": 415
+    }
+  ]
+}

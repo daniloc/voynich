@@ -1,0 +1,47 @@
+RESIDUALIZED GENERATIVE-CIPHER SOLVER
+====================================================================================================
+seed=20260723 outer folds=4 steps=6000 restarts=2 codebooks=(40, 80)
+Evidence = held-out log2 likelihood gain of sequential Latin mixture over P(character|U/L/R role, original word-position).
+lambda=0 is the inactive baseline with exactly 0 gain; active keys pay M*log2(n)/(2n) validation bits for M mapped symbols.
+No generic directionality term is present. Uncertain, one-character, unresolved, and out-of-fit-inventory emissions are hard breaks.
+Invariant: no n-gram crosses an exclusion, physical line boundary, held-out quire/block boundary, or outer-fold boundary.
+Naibbe structural calibration held-out joint emission accuracy=0.9248; official oracle emission coverage=0.9763
+
+NAIBBE ORACLE POSITIVE CONTROL
+fold  lambda   val gain  test gain   Latin LM        n
+   0    0.75    +0.5354    +0.5342    -3.4561    11240
+   1    0.75    +0.5469    +0.5356    -3.4717    11274
+   2    0.75    +0.5263    +0.5464    -3.4277    11345
+   3    0.75    +0.5330    +0.5249    -3.4585    11102
+  mean oracle test residual=+0.5353
+
+NAIBBE BLIND SOLVER
+fold  blocks    K    M   lam  on   val raw   val pen  test res  Latin LM  accuracy
+   0   8/4/4   80  240  0.25   0   -0.0628   -0.2442   +0.0000   -3.9316     0.201
+     test sample: e / au / upaliaen / oteslaue / dsuseodetacratimgutedsusessnuriasi / ic / itti / ansutmutinsutie / urissu / umusuitnessita / asienemusuge / ieadsliet / ifidetitiliti / mustocritenur
+   1   8/4/4   80  240  0.25   0   -0.0508   -0.2291   +0.0000   -4.0664     0.014
+     test sample: ideisemur / saes / taurs / rserate / m / onoets / etinusadostsim / rere / qd / tenistiaautumiidifis / si / itmt / iuse / seausmuen / astmueroetatesa / turuius / de / stuinimdiusase
+   2   8/4/4   80  240  0.25   0   -0.1465   -0.3290   +0.0000   -3.8497     0.078
+     test sample: turitiaste / esuqapusneuotistiti / t / iamnitenasa / reliu / ab / metteame / aric / beaotiteradeesetiaar / te / ruua / suati / leus / geotuodesiateseaote / risireteiuio / miteritiu
+   3   8/4/4   40  120  0.25   0   -0.0723   -0.2809   +0.0000   -3.8096     0.236
+     test sample: sus / isisi / u / et / a / ti / in / t / tiric / diu / ura / tus / le / e / i / el / umedta / eia / sin / nqtt / e / iur / in / e / esnu / e / usuru / s / a / ed / umum / ras / ce
+  active folds=0/4; mean test residual=+0.0000; mean Latin LM=-3.9143
+  weighted known-key recovery=0.1249 over 42344 held-out emissions (uniform 23-letter chance=0.0435)
+
+VOYNICH BLIND SOLVER
+fold  blocks    K    M   lam  on   val raw   val pen  test res  Latin LM  accuracy
+   0   8/4/4   80  240  0.25   0   -0.1145   -0.8782   +0.0000   -4.1001         -
+     test sample: iliu / oscim / teci / ditit / ti / a / s / mimidp / e / t / ci / emi / ad / r / uri / e / uitn / b / mari / a / e / ri / s / er / d / o / e / re / e / a / e / iimti / uci / e / iri
+   1   8/4/4   40  120  0.25   0   -0.1230   -0.3423   +0.0000   -3.8562         -
+     test sample: t / ure / u / l / o / ua / i / u / o / e / o / ut / t / oten / ni / ut / n / nitr / u / mnle / o / onr / m / n / e / it / n / l / a / oas / lice / n / s / t / re / oe / r / o / m /
+   2   8/4/4   80  207  0.25   0   -0.0853   -0.1942   +0.0000   -3.8480         -
+     test sample: usep / et / tune / u / p / u / uteteios / u / a / sastalaare / iutamen / rup / usamtas / ote / u / ot / t / ceti / u / u / ci / n / ci / mue / ms / msipe / e / osriusmo / rete / b
+   3   8/4/4   40  120  0.25   0   -0.1288   -0.5684   +0.0000   -3.8957         -
+     test sample: i / i / alii / irisa / reo / a / aler / ntas / c / p / d / siisi / b / d / l / g / s / se / i / ediciiici / re / r / a / oe / i / atg / se / de / oi / eicii / tenis / iri / a / im
+  active folds=0/4; mean test residual=+0.0000; mean Latin LM=-3.9250
+
+INTERPRETATION
+  Oracle Naibbe must be positive for the residual instrument to be valid: observed mean=+0.5353 bits/emission.
+  Blind activation: Naibbe 0/4 folds; Voynich 0/4 folds.
+  Because the blind optimizer does not activate on known-meaningful Naibbe, the Voynich null is underpowered and excludes nothing beyond the particular recovered keys. The oracle result validates the residual score, not blind key recovery.
+  A positive result is a lead, not plaintext: it must also recover stable held-out character assignments and beat the Naibbe-calibrated positive-control threshold.

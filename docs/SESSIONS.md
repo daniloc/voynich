@@ -1,5 +1,9 @@
 # Session transcripts — a reader's guide
 
+The original guide below covers the eight Claude Code sessions. A subsequent
+Codex investigation ran from 2026-07-22 through 2026-07-25 and is documented
+at the end of this file.
+
 This project's actual history lives in eight Claude Code sessions, run over two sittings
 (2026-06-20/21, then a 2026-07-01 audit). One session did the founding investigation;
 five more forked off it the same day/night to attack, dispute, meta-analyze, and extend
@@ -288,6 +292,38 @@ TextTiling boundaries) that remain open bookkeeping tasks, not test failures.
 - K14b's closing observation reframes a design choice as evidence: within-ring duplicate labels are an *excess* over chance (p=0.018) — *"duplicates cluster within rings, the opposite of naming discipline (a roster avoids giving two nymphs in one ring the same name)."*
 
 **Files:** `transcripts/raw/9966cd54-3dfe-4b04-891c-0e4793a49e04.jsonl` (no separately extracted `readable/` or `subagent_reports/` file — the full analyst reports and the K14/K14b vision-agent reports live in the raw jsonl itself) · `docs/AUDIT-2026-07-01.md` (this session's own written summary) · `FINDINGS.md` (K14, K14b rows)
+
+---
+
+### Codex follow-up (`019f90e8-2ebb-76c2-8e91-73ad1f7b70dd`, 2026-07-22 – 2026-07-25)
+
+**What it was:** An adversarial continuation that began by reviewing whether
+the repository's terminal asemic conclusion followed from its evidence. It
+first weakened that conclusion: meaningful Naibbe invalidated the old
+position-lock exclusion, and the published suffix/prefix dependency lost its
+incremental value after exact-word/core/copy/position controls. The session
+then built powered known-family solvers and attacked local edit carriers,
+aligned rows, compact line-reset programs, illustration-derived keys and
+routes, historically licensed Latin abbreviations, causal production models,
+and image-to-page-state prediction. It ended by reframing the problem around a
+fifteenth-century workshop and testing a physically executable small
+table/tally/wheel mechanism.
+
+**Key outcomes:** K15–K28 and D13. The strongest constructive result is a
+normalized source model: word-reset character trigram grammar, register state,
+and persistent page-side adaptation. Recent copy/edit is not the main engine.
+The small-counter screen initially passes, but incompatible selected periods
+reduce completely to absolute page-line and word-slot profiles under a powered
+residual gate. Across the broader campaign, paired meaningful, planted, and
+oracle controls activate while no plaintext, visual key, or referential
+mapping is recovered.
+
+**Files:** `transcripts/raw/codex-019f90e8-2ebb-76c2-8e91-73ad1f7b70dd-messages.jsonl`
+contains the actual timestamped user/assistant message records exported from
+the on-disk Codex session. Executable details and caveats are in Campaigns
+11–21 of `docs/RUNS.md`; scripts live in `analysis/07_followups` through
+`analysis/10_generator_inversion`; derived outputs are indexed in
+`data/INDEX.md`.
 
 ---
 

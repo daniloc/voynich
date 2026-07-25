@@ -1,6 +1,7 @@
 # Transcripts
 
-Complete session history of the investigation (Claude Code sessions, June 20 – July 1, 2026).
+Complete session history of the investigation (Claude Code sessions,
+June 20 – July 1, 2026, plus the Codex follow-up of July 22–25).
 Reader's guide with per-session summaries: **docs/SESSIONS.md**.
 
 - `raw/` — the eight original session files (`<session-id>.jsonl`, one JSON object per
@@ -18,6 +19,17 @@ Reader's guide with per-session summaries: **docs/SESSIONS.md**.
   names; docs written before the rename may be reconciled via docs/SESSIONS.md.
 - `subagent_reports/` — for each multi-agent session, every subagent's task prompt and
   final report, extracted for quick reading.
+
+The Codex follow-up is preserved as
+`raw/codex-019f90e8-2ebb-76c2-8e91-73ad1f7b70dd-messages.jsonl`. It is a direct
+export from the on-disk Codex session file, retaining the original timestamped
+user and assistant message records verbatim. Platform developer instructions,
+hidden reasoning records, and tool-transport records are excluded; the
+analysis scripts, generated outputs, and `docs/RUNS.md` preserve the executable
+record of those tool runs. Unlike the older Claude archives, this file uses
+Codex `response_item` records: read `.payload.role`,
+`.payload.content[]`, and `.timestamp`; user text is `input_text` and assistant
+text is `output_text`.
 
 Extraction code for `readable/` lives inside the audit session's own transcript
 (`raw/9966cd54….jsonl`) — it kept text blocks, truncated thinking to 1,200 chars and

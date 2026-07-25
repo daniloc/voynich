@@ -1,4 +1,5 @@
 .venv/
+.cache/public_object_attack/
 __pycache__/
 *.pyc
 .DS_Store

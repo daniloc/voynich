@@ -1,0 +1,3988 @@
+{
+  "assets": {
+    "data/controls/latin.txt": "d35576eee076806a236f7f9edf8c1a07462a4102084e025076f6227d8847afdb",
+    "data/corpus/corpus.json": "6c0160de15d4a434816477a65ee4c7ffc384bd66e3a0ad63aedaed638c97fcb0"
+  },
+  "caveats": [
+    "The algorithm is a probabilistic source description, not a deterministic reconstruction of each scribal decision.",
+    "Canonical Levenshtein scripts give a valid decodable edit code but do not sum probability over alternative alignments.",
+    "Register conditioning uses known Currier, section, and word position metadata; it deliberately excludes hand identity.",
+    "Residual operation labels are posterior classifications, not observed ground truth outside the synthetic control.",
+    "The adaptive predictor updates only after each observed word. Its gain can express folio-level language or topic variation and is not intrinsically evidence of a content-free copying procedure."
+  ],
+  "claim_boundary": "The winning source model describes production choices. It does not identify plaintext or prove that the residual is asemic.",
+  "controls": {
+    "base_only_false_positive_pass": true,
+    "copy_edit_model_gain_pass": true,
+    "copy_edit_operation_recovery_pass": true,
+    "copy_edit_planted_weights": {
+      "base": 0.68,
+      "copy": 0.14,
+      "edit": 0.18
+    }
+  },
+  "corpus_audit": {
+    "eligible_words": 33133,
+    "hard_breaks": 567,
+    "prose_lines": 4117,
+    "source_tokens": 33700
+  },
+  "experiment": "causal_production_algorithm_inversion",
+  "panels": [
+    {
+      "candidate_summary": {
+        "adaptive_register_trigram": {
+          "pooled_test_bits_per_word": 11.569026974064432,
+          "pooled_test_log2_probability": -383316.5707316768,
+          "test_events": 33133
+        },
+        "adaptive_register_trigram_copy_edit": {
+          "pooled_test_bits_per_word": 11.565148529114099,
+          "pooled_test_log2_probability": -383188.0662151374,
+          "test_events": 33133
+        },
+        "char_bigram": {
+          "pooled_test_bits_per_word": 13.741459457695406,
+          "pooled_test_log2_probability": -455295.7762118219,
+          "test_events": 33133
+        },
+        "char_trigram": {
+          "pooled_test_bits_per_word": 12.342306318877773,
+          "pooled_test_log2_probability": -408937.6352633773,
+          "test_events": 33133
+        },
+        "char_unigram": {
+          "pooled_test_bits_per_word": 24.3077758676169,
+          "pooled_test_log2_probability": -805389.5378217507,
+          "test_events": 33133
+        },
+        "context_trigram": {
+          "pooled_test_bits_per_word": 12.085850192618741,
+          "pooled_test_log2_probability": -400440.47443203675,
+          "test_events": 33133
+        },
+        "register_trigram": {
+          "pooled_test_bits_per_word": 12.090517887618779,
+          "pooled_test_log2_probability": -400595.12917047297,
+          "test_events": 33133
+        },
+        "register_trigram_copy": {
+          "pooled_test_bits_per_word": 12.068057067260304,
+          "pooled_test_log2_probability": -399850.9348095356,
+          "test_events": 33133
+        },
+        "register_trigram_copy_edit": {
+          "pooled_test_bits_per_word": 12.06643367529101,
+          "pooled_test_log2_probability": -399797.14696341706,
+          "test_events": 33133
+        },
+        "register_trigram_edit": {
+          "pooled_test_bits_per_word": 12.088677521791325,
+          "pooled_test_log2_probability": -400534.152329512,
+          "test_events": 33133
+        },
+        "surface_trigram": {
+          "pooled_test_bits_per_word": 12.087417306437867,
+          "pooled_test_log2_probability": -400492.39761420584,
+          "test_events": 33133
+        },
+        "surface_trigram_copy": {
+          "pooled_test_bits_per_word": 12.07706036373618,
+          "pooled_test_log2_probability": -400149.2410316709,
+          "test_events": 33133
+        },
+        "surface_trigram_copy_edit": {
+          "pooled_test_bits_per_word": 12.075462335314487,
+          "pooled_test_log2_probability": -400096.2935559749,
+          "test_events": 33133
+        }
+      },
+      "fold_assignment": {
+        "A": 3,
+        "B": 1,
+        "C": 2,
+        "D": 2,
+        "E": 2,
+        "F": 3,
+        "G": 3,
+        "H": 3,
+        "I": 3,
+        "J": 3,
+        "M": 1,
+        "N": 2,
+        "O": 3,
+        "Q": 2,
+        "S": 2,
+        "T": 0
+      },
+      "fold_event_loads": [
+        10576,
+        7590,
+        7631,
+        7336
+      ],
+      "folds": [
+        {
+          "candidate_scores": [
+            {
+              "candidate": "char_unigram",
+              "test_assignments": null,
+              "test_bits_per_word": 24.882598835385352,
+              "test_log2_probability": -263158.3652830355,
+              "validation_bits_per_word": 23.683208010729317,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "char_bigram",
+              "test_assignments": null,
+              "test_bits_per_word": 13.82313754375509,
+              "test_log2_probability": -146193.50266275383,
+              "validation_bits_per_word": 12.838736143535444,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "char_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 12.40033694869202,
+              "test_log2_probability": -131145.9635693668,
+              "validation_bits_per_word": 11.445995038786583,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "register_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 12.40033694869202,
+              "test_log2_probability": -131145.9635693668,
+              "validation_bits_per_word": 11.373249295981605,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "context_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 12.40033694869202,
+              "test_log2_probability": -131145.9635693668,
+              "validation_bits_per_word": 11.369980710491435,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "surface_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 12.40033694869202,
+              "test_log2_probability": -131145.9635693668,
+              "validation_bits_per_word": 11.370539547227605,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "adaptive_register_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 11.571641533168572,
+              "test_log2_probability": -122381.68085479081,
+              "validation_bits_per_word": 10.406021948928505,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "register_trigram_copy",
+              "test_assignments": null,
+              "test_bits_per_word": 12.371126831651493,
+              "test_log2_probability": -130837.03737154619,
+              "validation_bits_per_word": 11.318792071226508,
+              "weights": {
+                "base": 0.9920773508316648,
+                "copy": 0.007922649168335235
+              }
+            },
+            {
+              "candidate": "register_trigram_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 12.399405167893915,
+              "test_log2_probability": -131136.10905564605,
+              "validation_bits_per_word": 11.373008020876707,
+              "weights": {
+                "base": 0.9999560666944175,
+                "edit": 4.393330558248708e-05
+              }
+            },
+            {
+              "candidate": "register_trigram_copy_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 12.370631635180999,
+              "test_log2_probability": -130831.80017367424,
+              "validation_bits_per_word": 11.318597021923509,
+              "weights": {
+                "base": 0.9920383810137017,
+                "copy": 0.007920796315314511,
+                "edit": 4.082267098385644e-05
+              }
+            },
+            {
+              "candidate": "surface_trigram_copy",
+              "test_assignments": null,
+              "test_bits_per_word": 12.384878122358986,
+              "test_log2_probability": -130982.47102206862,
+              "validation_bits_per_word": 11.346929618588767,
+              "weights": {
+                "base": 0.998070985234491,
+                "copy": 0.0019290147655089886
+              }
+            },
+            {
+              "candidate": "surface_trigram_copy_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 12.384432561193456,
+              "test_log2_probability": -130977.758767182,
+              "validation_bits_per_word": 11.346753397288676,
+              "weights": {
+                "base": 0.9980357674412987,
+                "copy": 0.0019280325022468113,
+                "edit": 3.620005645448593e-05
+              }
+            },
+            {
+              "candidate": "adaptive_register_trigram_copy_edit",
+              "test_assignments": {
+                "argmax_operation_counts": {
+                  "base": 10563,
+                  "copy": 11,
+                  "edit": 2
+                },
+                "mean_operation_posterior_entropy": 0.015673668966750837,
+                "mean_posterior_operation_share": {
+                  "base": 0.9958603222805891,
+                  "copy": 0.0038559397824175744,
+                  "edit": 0.0002837379369893975
+                }
+              },
+              "test_bits_per_word": 11.56854238112191,
+              "test_log2_probability": -122348.90422274532,
+              "validation_bits_per_word": 10.399990622451686,
+              "weights": {
+                "base": 0.9970853081494558,
+                "copy": 0.0028756097952054843,
+                "edit": 3.9082055338656586e-05
+              }
+            }
+          ],
+          "fold": 0,
+          "full_model_channel": {
+            "deletions": 10857,
+            "insertions": 12427,
+            "lag_probabilities": {
+              "1": 0.2304344846491228,
+              "2": 0.16450794956140352,
+              "3": 0.13901452850877194,
+              "4": 0.11838678728070176,
+              "5": 0.10145970394736842,
+              "6": 0.09316748903508772,
+              "7": 0.08014665570175439,
+              "8": 0.07288240131578948
+            },
+            "matches": 44960,
+            "nearest_pairs": 14588,
+            "p_delete": 0.14493672575822297,
+            "p_insert": 0.12192549569790144,
+            "p_substitute": 0.29809538677698855,
+            "substitutions": 19094
+          },
+          "full_model_operation_transition_residual": {
+            "gain_bits_per_operation": -0.0023139720218740742,
+            "transitions": 10485
+          },
+          "planted_operation_accuracy": null,
+          "selected_candidate": "adaptive_register_trigram_copy_edit",
+          "selected_test_bits_per_word": 11.56854238112191,
+          "test_blocks": [
+            "T"
+          ],
+          "test_events": 10576,
+          "train_blocks": [
+            "A",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "N",
+            "O",
+            "Q",
+            "S"
+          ],
+          "train_events": 14967,
+          "validation_blocks": [
+            "B",
+            "M"
+          ],
+          "validation_events": 7590
+        },
+        {
+          "candidate_scores": [
+            {
+              "candidate": "char_unigram",
+              "test_assignments": null,
+              "test_bits_per_word": 23.580593600204487,
+              "test_log2_probability": -178976.70542555206,
+              "validation_bits_per_word": 24.127784399562806,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "char_bigram",
+              "test_assignments": null,
+              "test_bits_per_word": 12.219435530248667,
+              "test_log2_probability": -92745.51567458738,
+              "validation_bits_per_word": 13.877075573861854,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "char_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 10.883961998373712,
+              "test_log2_probability": -82609.27156765647,
+              "validation_bits_per_word": 12.453258895605831,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "register_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 10.759737322440268,
+              "test_log2_probability": -81666.40627732163,
+              "validation_bits_per_word": 11.913034478112305,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "context_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 10.758072459845437,
+              "test_log2_probability": -81653.76997022686,
+              "validation_bits_per_word": 11.899941219697135,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "surface_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 10.758815947338748,
+              "test_log2_probability": -81659.4130403011,
+              "validation_bits_per_word": 11.904901229435499,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "adaptive_register_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 10.221374595055666,
+              "test_log2_probability": -77580.23317647251,
+              "validation_bits_per_word": 11.736285465734682,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "register_trigram_copy",
+              "test_assignments": null,
+              "test_bits_per_word": 10.734033223386668,
+              "test_log2_probability": -81471.3121655048,
+              "validation_bits_per_word": 11.902045585612221,
+              "weights": {
+                "base": 0.9929478032188873,
+                "copy": 0.007052196781112728
+              }
+            },
+            {
+              "candidate": "register_trigram_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 10.759621740744906,
+              "test_log2_probability": -81665.52901225384,
+              "validation_bits_per_word": 11.910329941383845,
+              "weights": {
+                "base": 0.9999601450151285,
+                "edit": 3.985498487151568e-05
+              }
+            },
+            {
+              "candidate": "register_trigram_copy_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 10.733943591035931,
+              "test_log2_probability": -81470.63185596273,
+              "validation_bits_per_word": 11.899413481053651,
+              "weights": {
+                "base": 0.9929125829705034,
+                "copy": 0.007050517367259299,
+                "edit": 3.689966223722949e-05
+              }
+            },
+            {
+              "candidate": "surface_trigram_copy",
+              "test_assignments": null,
+              "test_bits_per_word": 10.751465031359691,
+              "test_log2_probability": -81603.61958802005,
+              "validation_bits_per_word": 11.901126740929554,
+              "weights": {
+                "base": 0.9989086557288696,
+                "copy": 0.0010913442711304629
+              }
+            },
+            {
+              "candidate": "surface_trigram_copy_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 10.751386938636697,
+              "test_log2_probability": -81603.02686425253,
+              "validation_bits_per_word": 11.898635141962176,
+              "weights": {
+                "base": 0.9988789151231856,
+                "copy": 0.0010906381718982067,
+                "edit": 3.0446704916143946e-05
+              }
+            },
+            {
+              "candidate": "adaptive_register_trigram_copy_edit",
+              "test_assignments": {
+                "argmax_operation_counts": {
+                  "base": 7586,
+                  "copy": 4
+                },
+                "mean_operation_posterior_entropy": 0.019447368831779884,
+                "mean_posterior_operation_share": {
+                  "base": 0.9956849922820192,
+                  "copy": 0.0041693356919143216,
+                  "edit": 0.00014567202606513362
+                }
+              },
+              "test_bits_per_word": 10.217660939420602,
+              "test_log2_probability": -77552.04653020237,
+              "validation_bits_per_word": 11.733220837346122,
+              "weights": {
+                "base": 0.9974743884565439,
+                "copy": 0.0024869930146964618,
+                "edit": 3.8618528759613e-05
+              }
+            }
+          ],
+          "fold": 1,
+          "full_model_channel": {
+            "deletions": 13346,
+            "insertions": 13465,
+            "lag_probabilities": {
+              "1": 0.21463843796117607,
+              "2": 0.16145419457373142,
+              "3": 0.1354580542626859,
+              "4": 0.11922465660120332,
+              "5": 0.10389942104665682,
+              "6": 0.09686116471790214,
+              "7": 0.08431717561584742,
+              "8": 0.08414689522079691
+            },
+            "matches": 57370,
+            "nearest_pairs": 17614,
+            "p_delete": 0.14231105519065085,
+            "p_insert": 0.10784219504577017,
+            "p_substitute": 0.2867736641885676,
+            "substitutions": 23067
+          },
+          "full_model_operation_transition_residual": {
+            "gain_bits_per_operation": 0.0002696840864861425,
+            "transitions": 7503
+          },
+          "planted_operation_accuracy": null,
+          "selected_candidate": "adaptive_register_trigram_copy_edit",
+          "selected_test_bits_per_word": 10.217660939420602,
+          "test_blocks": [
+            "B",
+            "M"
+          ],
+          "test_events": 7590,
+          "train_blocks": [
+            "A",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "O",
+            "T"
+          ],
+          "train_events": 17912,
+          "validation_blocks": [
+            "C",
+            "D",
+            "E",
+            "N",
+            "Q",
+            "S"
+          ],
+          "validation_events": 7631
+        },
+        {
+          "candidate_scores": [
+            {
+              "candidate": "char_unigram",
+              "test_assignments": null,
+              "test_bits_per_word": 24.237292241955934,
+              "test_log2_probability": -184954.77709836574,
+              "validation_bits_per_word": 24.419281768813207,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "char_bigram",
+              "test_assignments": null,
+              "test_bits_per_word": 14.426331436335426,
+              "test_log2_probability": -110087.33519067563,
+              "validation_bits_per_word": 15.141325533117337,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "char_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 13.015741550729826,
+              "test_log2_probability": -99323.1237736193,
+              "validation_bits_per_word": 13.698310540584506,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "register_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 12.523146459137399,
+              "test_log2_probability": -95564.13062967749,
+              "validation_bits_per_word": 13.219773908810673,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "context_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 12.516089426663786,
+              "test_log2_probability": -95510.27841487135,
+              "validation_bits_per_word": 13.215963056316124,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "surface_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 12.515675578704226,
+              "test_log2_probability": -95507.12034109194,
+              "validation_bits_per_word": 13.216043804278463,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "adaptive_register_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 12.152876102824523,
+              "test_log2_probability": -92738.59754065394,
+              "validation_bits_per_word": 12.774261328951285,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "register_trigram_copy",
+              "test_assignments": null,
+              "test_bits_per_word": 12.503062619032095,
+              "test_log2_probability": -95410.87084583391,
+              "validation_bits_per_word": 13.200512856581318,
+              "weights": {
+                "base": 0.9898856567008981,
+                "copy": 0.010114343299101772
+              }
+            },
+            {
+              "candidate": "register_trigram_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 12.519951578306934,
+              "test_log2_probability": -95539.75049406021,
+              "validation_bits_per_word": 13.217086378396967,
+              "weights": {
+                "base": 0.999956816158221,
+                "edit": 4.318384177906739e-05
+              }
+            },
+            {
+              "candidate": "register_trigram_copy_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 12.50000151831247,
+              "test_log2_probability": -95387.51158624246,
+              "validation_bits_per_word": 13.198055042432403,
+              "weights": {
+                "base": 0.9898495293667052,
+                "copy": 0.010111902053982234,
+                "edit": 3.856857931249847e-05
+              }
+            },
+            {
+              "candidate": "surface_trigram_copy",
+              "test_assignments": null,
+              "test_bits_per_word": 12.507387818729432,
+              "test_log2_probability": -95443.8764447243,
+              "validation_bits_per_word": 13.20621108665497,
+              "weights": {
+                "base": 0.9983691062429452,
+                "copy": 0.0016308937570548704
+              }
+            },
+            {
+              "candidate": "surface_trigram_copy_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 12.50455427536637,
+              "test_log2_probability": -95422.25367532077,
+              "validation_bits_per_word": 13.2039852883504,
+              "weights": {
+                "base": 0.9983396448106171,
+                "copy": 0.0016296828692148608,
+                "edit": 3.067232016804262e-05
+              }
+            },
+            {
+              "candidate": "adaptive_register_trigram_copy_edit",
+              "test_assignments": {
+                "argmax_operation_counts": {
+                  "base": 7621,
+                  "copy": 9,
+                  "edit": 1
+                },
+                "mean_operation_posterior_entropy": 0.018236615224512732,
+                "mean_posterior_operation_share": {
+                  "base": 0.9950795553008814,
+                  "copy": 0.004397064287875525,
+                  "edit": 0.0005233804112399958
+                }
+              },
+              "test_bits_per_word": 12.148589400780438,
+              "test_log2_probability": -92705.88571735552,
+              "validation_bits_per_word": 12.769176968218451,
+              "weights": {
+                "base": 0.9965458437239525,
+                "copy": 0.0034127896273057692,
+                "edit": 4.136664874178475e-05
+              }
+            }
+          ],
+          "fold": 2,
+          "full_model_channel": {
+            "deletions": 12761,
+            "insertions": 11994,
+            "lag_probabilities": {
+              "1": 0.19044575366829702,
+              "2": 0.1626556247220987,
+              "3": 0.13375389061805246,
+              "4": 0.12163739439751,
+              "5": 0.10968763895064473,
+              "6": 0.10179524232992442,
+              "7": 0.09217985771453979,
+              "8": 0.08784459759893286
+            },
+            "matches": 60727,
+            "nearest_pairs": 17988,
+            "p_delete": 0.13381603506490783,
+            "p_insert": 0.09568960015317357,
+            "p_substitute": 0.2648447430542945,
+            "substitutions": 21877
+          },
+          "full_model_operation_transition_residual": {
+            "gain_bits_per_operation": -0.0018363836024151963,
+            "transitions": 7459
+          },
+          "planted_operation_accuracy": null,
+          "selected_candidate": "adaptive_register_trigram_copy_edit",
+          "selected_test_bits_per_word": 12.148589400780438,
+          "test_blocks": [
+            "C",
+            "D",
+            "E",
+            "N",
+            "Q",
+            "S"
+          ],
+          "test_events": 7631,
+          "train_blocks": [
+            "B",
+            "M",
+            "T"
+          ],
+          "train_events": 18166,
+          "validation_blocks": [
+            "A",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "O"
+          ],
+          "validation_events": 7336
+        },
+        {
+          "candidate_scores": [
+            {
+              "candidate": "char_unigram",
+              "test_assignments": null,
+              "test_bits_per_word": 24.30475599983608,
+              "test_log2_probability": -178299.69001479747,
+              "validation_bits_per_word": 24.80177572058253,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "char_bigram",
+              "test_assignments": null,
+              "test_bits_per_word": 14.486017268784767,
+              "test_log2_probability": -106269.42268380505,
+              "validation_bits_per_word": 13.25723411699826,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "char_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 13.066967877962744,
+              "test_log2_probability": -95859.2763527347,
+              "validation_bits_per_word": 11.94086710097331,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "register_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 12.57069638687392,
+              "test_log2_probability": -92218.62869410707,
+              "validation_bits_per_word": 11.94086710097331,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "context_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 12.55867809127205,
+              "test_log2_probability": -92130.46247757175,
+              "validation_bits_per_word": 11.94086710097331,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "surface_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 12.56541721148391,
+              "test_log2_probability": -92179.90066344597,
+              "validation_bits_per_word": 11.94086710097331,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "adaptive_register_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 12.352243615016294,
+              "test_log2_probability": -90616.05915975953,
+              "validation_bits_per_word": 11.472294855817042,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "register_trigram_copy",
+              "test_assignments": null,
+              "test_bits_per_word": 12.558848749543447,
+              "test_log2_probability": -92131.71442665072,
+              "validation_bits_per_word": 11.927803863331887,
+              "weights": {
+                "base": 0.9884575638321409,
+                "copy": 0.011542436167859072
+              }
+            },
+            {
+              "candidate": "register_trigram_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 12.5671706335267,
+              "test_log2_probability": -92192.76376755188,
+              "validation_bits_per_word": 11.939953929581694,
+              "weights": {
+                "base": 0.9999547510420094,
+                "edit": 4.524895799062396e-05
+              }
+            },
+            {
+              "candidate": "register_trigram_copy_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 12.555507544647986,
+              "test_log2_probability": -92107.20334753762,
+              "validation_bits_per_word": 11.927062168321923,
+              "weights": {
+                "base": 0.9884203060269453,
+                "copy": 0.01153970970437545,
+                "edit": 3.9984268679270945e-05
+              }
+            },
+            {
+              "candidate": "surface_trigram_copy",
+              "test_assignments": null,
+              "test_bits_per_word": 12.55715294122927,
+              "test_log2_probability": -92119.27397685793,
+              "validation_bits_per_word": 11.93339603364594,
+              "weights": {
+                "base": 0.9972972818330509,
+                "copy": 0.002702718166949113
+              }
+            },
+            {
+              "candidate": "surface_trigram_copy_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 12.553606086316739,
+              "test_log2_probability": -92093.2542492196,
+              "validation_bits_per_word": 11.932702348590988,
+              "weights": {
+                "base": 0.9972627015885255,
+                "copy": 0.002701001081686492,
+                "edit": 3.6297329788080696e-05
+              }
+            },
+            {
+              "candidate": "adaptive_register_trigram_copy_edit",
+              "test_assignments": {
+                "argmax_operation_counts": {
+                  "base": 7317,
+                  "copy": 16,
+                  "edit": 3
+                },
+                "mean_operation_posterior_entropy": 0.015341328672277778,
+                "mean_posterior_operation_share": {
+                  "base": 0.9950670959715984,
+                  "copy": 0.004402330701165503,
+                  "edit": 0.0005305733272369018
+                }
+              },
+              "test_bits_per_word": 12.347495875795289,
+              "test_log2_probability": -90581.22974483424,
+              "validation_bits_per_word": 11.470268938986502,
+              "weights": {
+                "base": 0.995749192031701,
+                "copy": 0.004210869260162307,
+                "edit": 3.993870813675772e-05
+              }
+            }
+          ],
+          "fold": 3,
+          "full_model_channel": {
+            "deletions": 10272,
+            "insertions": 10956,
+            "lag_probabilities": {
+              "1": 0.20095549913136443,
+              "2": 0.16587598556728586,
+              "3": 0.1368769210209809,
+              "4": 0.12130829881063744,
+              "5": 0.10847921956434585,
+              "6": 0.09919150073499933,
+              "7": 0.0897033275424295,
+              "8": 0.0776092476279567
+            },
+            "matches": 48317,
+            "nearest_pairs": 14962,
+            "p_delete": 0.13429157842445158,
+            "p_insert": 0.10698453306253174,
+            "p_substitute": 0.2703708737277642,
+            "substitutions": 17904
+          },
+          "full_model_operation_transition_residual": {
+            "gain_bits_per_operation": -0.005903852463310256,
+            "transitions": 7129
+          },
+          "planted_operation_accuracy": null,
+          "selected_candidate": "adaptive_register_trigram_copy_edit",
+          "selected_test_bits_per_word": 12.347495875795289,
+          "test_blocks": [
+            "A",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "O"
+          ],
+          "test_events": 7336,
+          "train_blocks": [
+            "B",
+            "C",
+            "D",
+            "E",
+            "M",
+            "N",
+            "Q",
+            "S"
+          ],
+          "train_events": 15221,
+          "validation_blocks": [
+            "T"
+          ],
+          "validation_events": 10576
+        }
+      ],
+      "name": "VOYNICH",
+      "summary": {
+        "algorithmic_increments_bits_per_word": {
+          "adaptive_to_copy_edit": 0.003878444950332849,
+          "context_to_surface": -0.0015671138191262202,
+          "register_to_adaptive": 0.5214909135543468,
+          "register_to_context": 0.004667695000037497,
+          "trigram_to_register": 0.2517884312589942
+        },
+        "full_model_positive_folds": 4,
+        "full_vs_structural_base_gain_bits_per_word": 0.003878444950332849,
+        "operation_transition_gain_bits_per_operation": -0.00239515921076246,
+        "planted_operation_accuracy": null,
+        "residual_surprisal_order": {
+          "lag1_residual_correlation": 0.07712521875803256,
+          "metric": "lag-1 correlation of bits/character residualized by exact word length and line position",
+          "null_mean": 0.021575235229271864,
+          "stratified_shuffle_replicates": 400,
+          "two_sided_p": 0.0024937655860349127
+        },
+        "selected_candidate_counts": {
+          "adaptive_register_trigram_copy_edit": 4
+        },
+        "selected_pooled_test_bits_per_word": 11.565148529114099
+      }
+    },
+    {
+      "candidate_summary": {
+        "adaptive_register_trigram": {
+          "pooled_test_bits_per_word": 14.738650108802737,
+          "pooled_test_log2_probability": -488335.6940549611,
+          "test_events": 33133
+        },
+        "adaptive_register_trigram_copy_edit": {
+          "pooled_test_bits_per_word": 13.230896819308041,
+          "pooled_test_log2_probability": -438379.30431413336,
+          "test_events": 33133
+        },
+        "char_bigram": {
+          "pooled_test_bits_per_word": 16.636944823553513,
+          "pooled_test_log2_probability": -551231.8928387986,
+          "test_events": 33133
+        },
+        "char_trigram": {
+          "pooled_test_bits_per_word": 15.251742790558774,
+          "pooled_test_log2_probability": -505335.99387958384,
+          "test_events": 33133
+        },
+        "char_unigram": {
+          "pooled_test_bits_per_word": 24.445521595957718,
+          "pooled_test_log2_probability": -809953.4670388671,
+          "test_events": 33133
+        },
+        "context_trigram": {
+          "pooled_test_bits_per_word": 15.145012998206063,
+          "pooled_test_log2_probability": -501799.71566956147,
+          "test_events": 33133
+        },
+        "register_trigram": {
+          "pooled_test_bits_per_word": 15.139348812239835,
+          "pooled_test_log2_probability": -501612.04419594246,
+          "test_events": 33133
+        },
+        "register_trigram_copy": {
+          "pooled_test_bits_per_word": 13.922195692165397,
+          "pooled_test_log2_probability": -461284.1098685161,
+          "test_events": 33133
+        },
+        "register_trigram_copy_edit": {
+          "pooled_test_bits_per_word": 13.289748196291896,
+          "pooled_test_log2_probability": -440329.2269877394,
+          "test_events": 33133
+        },
+        "register_trigram_edit": {
+          "pooled_test_bits_per_word": 13.653156867330317,
+          "pooled_test_log2_probability": -452370.0464852554,
+          "test_events": 33133
+        },
+        "surface_trigram": {
+          "pooled_test_bits_per_word": 15.149005288286801,
+          "pooled_test_log2_probability": -501931.99221680657,
+          "test_events": 33133
+        },
+        "surface_trigram_copy": {
+          "pooled_test_bits_per_word": 13.931499924844326,
+          "pooled_test_log2_probability": -461592.38700986706,
+          "test_events": 33133
+        },
+        "surface_trigram_copy_edit": {
+          "pooled_test_bits_per_word": 13.477575115527511,
+          "pooled_test_log2_probability": -446552.496302773,
+          "test_events": 33133
+        }
+      },
+      "fold_assignment": {
+        "A": 3,
+        "B": 1,
+        "C": 2,
+        "D": 2,
+        "E": 2,
+        "F": 3,
+        "G": 3,
+        "H": 3,
+        "I": 3,
+        "J": 3,
+        "M": 1,
+        "N": 2,
+        "O": 3,
+        "Q": 2,
+        "S": 2,
+        "T": 0
+      },
+      "fold_event_loads": [
+        10576,
+        7590,
+        7631,
+        7336
+      ],
+      "folds": [
+        {
+          "candidate_scores": [
+            {
+              "candidate": "char_unigram",
+              "test_assignments": null,
+              "test_bits_per_word": 24.778823500500486,
+              "test_log2_probability": -262060.83734129314,
+              "validation_bits_per_word": 24.10017543016451,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "char_bigram",
+              "test_assignments": null,
+              "test_bits_per_word": 16.65195987894662,
+              "test_log2_probability": -176111.12767973944,
+              "validation_bits_per_word": 16.215858892715538,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "char_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 15.265544189725345,
+              "test_log2_probability": -161448.39535053525,
+              "validation_bits_per_word": 14.828501462615616,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "register_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 15.265544189725345,
+              "test_log2_probability": -161448.39535053525,
+              "validation_bits_per_word": 14.815088205415048,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "context_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 15.265544189725345,
+              "test_log2_probability": -161448.39535053525,
+              "validation_bits_per_word": 14.819505427298116,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "surface_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 15.265544189725345,
+              "test_log2_probability": -161448.39535053525,
+              "validation_bits_per_word": 14.822830027633682,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "adaptive_register_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 14.787972139019043,
+              "test_log2_probability": -156397.5933422654,
+              "validation_bits_per_word": 14.199819453539462,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "register_trigram_copy",
+              "test_assignments": null,
+              "test_bits_per_word": 14.053144446828728,
+              "test_log2_probability": -148626.05566966062,
+              "validation_bits_per_word": 13.642168792546713,
+              "weights": {
+                "base": 0.8645450566430928,
+                "copy": 0.13545494335690716
+              }
+            },
+            {
+              "candidate": "register_trigram_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 13.874833212598585,
+              "test_log2_probability": -146740.23605644263,
+              "validation_bits_per_word": 13.363028514328276,
+              "weights": {
+                "base": 0.813958646166112,
+                "edit": 0.18604135383388803
+              }
+            },
+            {
+              "candidate": "register_trigram_copy_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 13.470479048547169,
+              "test_log2_probability": -142463.78641743487,
+              "validation_bits_per_word": 12.991140609148399,
+              "weights": {
+                "base": 0.7994475483717303,
+                "copy": 0.13245000909139856,
+                "edit": 0.0681024425368712
+              }
+            },
+            {
+              "candidate": "surface_trigram_copy",
+              "test_assignments": null,
+              "test_bits_per_word": 14.05438065630975,
+              "test_log2_probability": -148639.1298211319,
+              "validation_bits_per_word": 13.650087225063217,
+              "weights": {
+                "base": 0.8711409439664243,
+                "copy": 0.1288590560335757
+              }
+            },
+            {
+              "candidate": "surface_trigram_copy_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 13.658958141758077,
+              "test_log2_probability": -144457.14130723343,
+              "validation_bits_per_word": 13.197110334844348,
+              "weights": {
+                "base": 0.861435282415856,
+                "copy": 0.12847825613608094,
+                "edit": 0.010086461448063178
+              }
+            },
+            {
+              "candidate": "adaptive_register_trigram_copy_edit",
+              "test_assignments": {
+                "argmax_operation_counts": {
+                  "base": 7717,
+                  "copy": 1638,
+                  "edit": 1221
+                },
+                "mean_operation_posterior_entropy": 0.18049215078658049,
+                "mean_posterior_operation_share": {
+                  "base": 0.7395353782148454,
+                  "copy": 0.13919204418580872,
+                  "edit": 0.12127257759934675
+                }
+              },
+              "test_bits_per_word": 13.281943013191466,
+              "test_log2_probability": -140469.82930751293,
+              "validation_bits_per_word": 12.738056095020399,
+              "weights": {
+                "base": 0.8005497276799042,
+                "copy": 0.12865624942039983,
+                "edit": 0.07079402289969611
+              }
+            }
+          ],
+          "fold": 0,
+          "full_model_channel": {
+            "deletions": 11283,
+            "insertions": 12592,
+            "lag_probabilities": {
+              "1": 0.24338678728070176,
+              "2": 0.16759183114035087,
+              "3": 0.13743832236842105,
+              "4": 0.11557702850877193,
+              "5": 0.1049547697368421,
+              "6": 0.08549205043859649,
+              "7": 0.07651452850877193,
+              "8": 0.06904468201754387
+            },
+            "matches": 46194,
+            "nearest_pairs": 14588,
+            "p_delete": 0.14873129901799248,
+            "p_insert": 0.12220389150371197,
+            "p_substitute": 0.2847155554179183,
+            "substitutions": 18387
+          },
+          "full_model_operation_transition_residual": {
+            "gain_bits_per_operation": 0.0031174634708696232,
+            "transitions": 10485
+          },
+          "planted_operation_accuracy": 0.9213313161875946,
+          "selected_candidate": "adaptive_register_trigram_copy_edit",
+          "selected_test_bits_per_word": 13.281943013191466,
+          "test_blocks": [
+            "T"
+          ],
+          "test_events": 10576,
+          "train_blocks": [
+            "A",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "N",
+            "O",
+            "Q",
+            "S"
+          ],
+          "train_events": 14967,
+          "validation_blocks": [
+            "B",
+            "M"
+          ],
+          "validation_events": 7590
+        },
+        {
+          "candidate_scores": [
+            {
+              "candidate": "char_unigram",
+              "test_assignments": null,
+              "test_bits_per_word": 24.043119910329416,
+              "test_log2_probability": -182487.28011940027,
+              "validation_bits_per_word": 24.849058023127537,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "char_bigram",
+              "test_assignments": null,
+              "test_bits_per_word": 15.886182308958057,
+              "test_log2_probability": -120576.12372499166,
+              "validation_bits_per_word": 17.193430993172065,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "char_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 14.521697529106026,
+              "test_log2_probability": -110219.68424591474,
+              "validation_bits_per_word": 15.764498494605885,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "register_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 14.463881171069815,
+              "test_log2_probability": -109780.85808841989,
+              "validation_bits_per_word": 15.584829591490445,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "context_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 14.467487874647103,
+              "test_log2_probability": -109808.23296857151,
+              "validation_bits_per_word": 15.601356620207113,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "surface_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 14.469623883050815,
+              "test_log2_probability": -109824.44527235569,
+              "validation_bits_per_word": 15.612515299310353,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "adaptive_register_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 14.081565669030155,
+              "test_log2_probability": -106879.08342793888,
+              "validation_bits_per_word": 15.257919098380134,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "register_trigram_copy",
+              "test_assignments": null,
+              "test_bits_per_word": 13.351473706329035,
+              "test_log2_probability": -101337.68543103737,
+              "validation_bits_per_word": 14.193584698991147,
+              "weights": {
+                "base": 0.8624473453719856,
+                "copy": 0.1375526546280144
+              }
+            },
+            {
+              "candidate": "register_trigram_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 13.049975162087739,
+              "test_log2_probability": -99049.31148024593,
+              "validation_bits_per_word": 13.89286572882792,
+              "weights": {
+                "base": 0.8039497487035348,
+                "edit": 0.19605025129646528
+              }
+            },
+            {
+              "candidate": "register_trigram_copy_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 12.708496319675186,
+              "test_log2_probability": -96457.48706633467,
+              "validation_bits_per_word": 13.480895097641618,
+              "weights": {
+                "base": 0.7879469504396676,
+                "copy": 0.13354807756409598,
+                "edit": 0.07850497199623632
+              }
+            },
+            {
+              "candidate": "surface_trigram_copy",
+              "test_assignments": null,
+              "test_bits_per_word": 13.357558391839028,
+              "test_log2_probability": -101383.86819405822,
+              "validation_bits_per_word": 14.219263255801856,
+              "weights": {
+                "base": 0.8693343197915497,
+                "copy": 0.13066568020845026
+              }
+            },
+            {
+              "candidate": "surface_trigram_copy_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 12.913526645217239,
+              "test_log2_probability": -98013.66723719884,
+              "validation_bits_per_word": 13.701076160599047,
+              "weights": {
+                "base": 0.8590413991010654,
+                "copy": 0.13018504910239814,
+                "edit": 0.01077355179653652
+              }
+            },
+            {
+              "candidate": "adaptive_register_trigram_copy_edit",
+              "test_assignments": {
+                "argmax_operation_counts": {
+                  "base": 5510,
+                  "copy": 1137,
+                  "edit": 943
+                },
+                "mean_operation_posterior_entropy": 0.20745132332378438,
+                "mean_posterior_operation_share": {
+                  "base": 0.7349804905784187,
+                  "copy": 0.1328643174020643,
+                  "edit": 0.13215519201951703
+                }
+              },
+              "test_bits_per_word": 12.625878435572414,
+              "test_log2_probability": -95830.41732599463,
+              "validation_bits_per_word": 13.57553381064187,
+              "weights": {
+                "base": 0.7831225190084434,
+                "copy": 0.13020254478651444,
+                "edit": 0.08667493620504206
+              }
+            }
+          ],
+          "fold": 1,
+          "full_model_channel": {
+            "deletions": 13357,
+            "insertions": 14298,
+            "lag_probabilities": {
+              "1": 0.23019071404245658,
+              "2": 0.16480304234305823,
+              "3": 0.13647973663298898,
+              "4": 0.12234646384379612,
+              "5": 0.10497786354864343,
+              "6": 0.08851742536042684,
+              "7": 0.07744919968214327,
+              "8": 0.07523555454648655
+            },
+            "matches": 56944,
+            "nearest_pairs": 17614,
+            "p_delete": 0.14488784276292954,
+            "p_insert": 0.11521385289756977,
+            "p_substitute": 0.2776748905942792,
+            "substitutions": 21890
+          },
+          "full_model_operation_transition_residual": {
+            "gain_bits_per_operation": -0.0012685655048149276,
+            "transitions": 7503
+          },
+          "planted_operation_accuracy": 0.9123847167325428,
+          "selected_candidate": "register_trigram_copy_edit",
+          "selected_test_bits_per_word": 12.708496319675186,
+          "test_blocks": [
+            "B",
+            "M"
+          ],
+          "test_events": 7590,
+          "train_blocks": [
+            "A",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "O",
+            "T"
+          ],
+          "train_events": 17912,
+          "validation_blocks": [
+            "C",
+            "D",
+            "E",
+            "N",
+            "Q",
+            "S"
+          ],
+          "validation_events": 7631
+        },
+        {
+          "candidate_scores": [
+            {
+              "candidate": "char_unigram",
+              "test_assignments": null,
+              "test_bits_per_word": 24.907239228971385,
+              "test_log2_probability": -190067.14255628063,
+              "validation_bits_per_word": 23.963718197809545,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "char_bigram",
+              "test_assignments": null,
+              "test_bits_per_word": 17.49704637517168,
+              "test_log2_probability": -133519.9608889351,
+              "validation_bits_per_word": 16.85720425375792,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "char_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 16.073606798062922,
+              "test_log2_probability": -122657.69347601815,
+              "validation_bits_per_word": 15.476616479679723,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "register_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 15.82899711796869,
+              "test_log2_probability": -120791.07700721908,
+              "validation_bits_per_word": 15.180084197531894,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "context_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 15.83014386233569,
+              "test_log2_probability": -120799.82781348366,
+              "validation_bits_per_word": 15.183780471567427,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "surface_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 15.831775632783707,
+              "test_log2_probability": -120812.27985377246,
+              "validation_bits_per_word": 15.186457914098508,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "adaptive_register_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 15.404710509275827,
+              "test_log2_probability": -117553.34589628383,
+              "validation_bits_per_word": 14.795700914073066,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "register_trigram_copy",
+              "test_assignments": null,
+              "test_bits_per_word": 14.411145797815648,
+              "test_log2_probability": -109971.45358313121,
+              "validation_bits_per_word": 14.039088744193156,
+              "weights": {
+                "base": 0.8588117413286468,
+                "copy": 0.14118825867135323
+              }
+            },
+            {
+              "candidate": "register_trigram_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 14.121975872482482,
+              "test_log2_probability": -107764.79788291382,
+              "validation_bits_per_word": 13.722537052174058,
+              "weights": {
+                "base": 0.7890400309228072,
+                "edit": 0.2109599690771929
+              }
+            },
+            {
+              "candidate": "register_trigram_copy_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 13.730100275382068,
+              "test_log2_probability": -104774.39520144055,
+              "validation_bits_per_word": 13.42472918088645,
+              "weights": {
+                "base": 0.7721988054054799,
+                "copy": 0.1361503662172125,
+                "edit": 0.09165082837730759
+              }
+            },
+            {
+              "candidate": "surface_trigram_copy",
+              "test_assignments": null,
+              "test_bits_per_word": 14.413775726940393,
+              "test_log2_probability": -109991.52257228215,
+              "validation_bits_per_word": 14.04422892412812,
+              "weights": {
+                "base": 0.8658241840165714,
+                "copy": 0.13417581598342862
+              }
+            },
+            {
+              "candidate": "surface_trigram_copy_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 13.899220061528426,
+              "test_log2_probability": -106064.94828952343,
+              "validation_bits_per_word": 13.585640582814477,
+              "weights": {
+                "base": 0.8512464383625215,
+                "copy": 0.13342146440251726,
+                "edit": 0.015332097234961347
+              }
+            },
+            {
+              "candidate": "adaptive_register_trigram_copy_edit",
+              "test_assignments": {
+                "argmax_operation_counts": {
+                  "base": 5525,
+                  "copy": 1176,
+                  "edit": 930
+                },
+                "mean_operation_posterior_entropy": 0.19353997901217754,
+                "mean_posterior_operation_share": {
+                  "base": 0.734893008296948,
+                  "copy": 0.13554358246583634,
+                  "edit": 0.12956340923721663
+                }
+              },
+              "test_bits_per_word": 13.744094077684688,
+              "test_log2_probability": -104881.18190681185,
+              "validation_bits_per_word": 13.410832043260104,
+              "weights": {
+                "base": 0.7656454365240002,
+                "copy": 0.13294564250651975,
+                "edit": 0.10140892096948007
+              }
+            }
+          ],
+          "fold": 2,
+          "full_model_channel": {
+            "deletions": 13263,
+            "insertions": 13741,
+            "lag_probabilities": {
+              "1": 0.21306691863050245,
+              "2": 0.16476767452200977,
+              "3": 0.13731102712316584,
+              "4": 0.12413850600266785,
+              "5": 0.10568586038239218,
+              "6": 0.09679301911960872,
+              "7": 0.08195309026233882,
+              "8": 0.07628390395731437
+            },
+            "matches": 59935,
+            "nearest_pairs": 17988,
+            "p_delete": 0.13989853176947092,
+            "p_insert": 0.10859669503781502,
+            "p_substitute": 0.26500091973756823,
+            "substitutions": 21609
+          },
+          "full_model_operation_transition_residual": {
+            "gain_bits_per_operation": -0.0001279803366542668,
+            "transitions": 7459
+          },
+          "planted_operation_accuracy": 0.9314637662167474,
+          "selected_candidate": "adaptive_register_trigram_copy_edit",
+          "selected_test_bits_per_word": 13.744094077684688,
+          "test_blocks": [
+            "C",
+            "D",
+            "E",
+            "N",
+            "Q",
+            "S"
+          ],
+          "test_events": 7631,
+          "train_blocks": [
+            "B",
+            "M",
+            "T"
+          ],
+          "train_events": 18166,
+          "validation_blocks": [
+            "A",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "O"
+          ],
+          "validation_events": 7336
+        },
+        {
+          "candidate_scores": [
+            {
+              "candidate": "char_unigram",
+              "test_assignments": null,
+              "test_bits_per_word": 23.901064206910174,
+              "test_log2_probability": -175338.20702189303,
+              "validation_bits_per_word": 24.7307700273778,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "char_bigram",
+              "test_assignments": null,
+              "test_bits_per_word": 16.49736648652295,
+              "test_log2_probability": -121024.68054513236,
+              "validation_bits_per_word": 16.345384375527203,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "char_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 15.132254744699523,
+              "test_log2_probability": -111010.22080711571,
+              "validation_bits_per_word": 14.983533158542839,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "register_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 14.938892277776475,
+              "test_log2_probability": -109591.71374976821,
+              "validation_bits_per_word": 14.983533158542839,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "context_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 14.959550100459523,
+              "test_log2_probability": -109743.25953697106,
+              "validation_bits_per_word": 14.983533158542839,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "surface_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 14.973673901328123,
+              "test_log2_probability": -109846.8717401431,
+              "validation_bits_per_word": 14.983533158542839,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "adaptive_register_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 14.654535358297844,
+              "test_log2_probability": -107505.67138847298,
+              "validation_bits_per_word": 14.711320651884353,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "register_trigram_copy",
+              "test_assignments": null,
+              "test_bits_per_word": 13.81528287686572,
+              "test_log2_probability": -101348.91518468692,
+              "validation_bits_per_word": 13.817425907419612,
+              "weights": {
+                "base": 0.8602860032508294,
+                "copy": 0.13971399674917073
+              }
+            },
+            {
+              "candidate": "register_trigram_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 13.469970156168626,
+              "test_log2_probability": -98815.70106565305,
+              "validation_bits_per_word": 13.605384046218044,
+              "weights": {
+                "base": 0.80213233565647,
+                "edit": 0.19786766434353004
+              }
+            },
+            {
+              "candidate": "register_trigram_copy_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 13.17251340001763,
+              "test_log2_probability": -96633.55830252933,
+              "validation_bits_per_word": 13.24242394693748,
+              "weights": {
+                "base": 0.7858991111247559,
+                "copy": 0.13595891762061968,
+                "edit": 0.07814197125462446
+              }
+            },
+            {
+              "candidate": "surface_trigram_copy",
+              "test_assignments": null,
+              "test_bits_per_word": 13.846492151362433,
+              "test_log2_probability": -101577.86642239481,
+              "validation_bits_per_word": 13.818194665629157,
+              "weights": {
+                "base": 0.8671868277430231,
+                "copy": 0.13281317225697695
+              }
+            },
+            {
+              "candidate": "surface_trigram_copy_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 13.361060451038345,
+              "test_log2_probability": -98016.7394688173,
+              "validation_bits_per_word": 13.404242023824628,
+              "weights": {
+                "base": 0.8540414428915799,
+                "copy": 0.1322347722288519,
+                "edit": 0.013723784879568218
+              }
+            },
+            {
+              "candidate": "adaptive_register_trigram_copy_edit",
+              "test_assignments": {
+                "argmax_operation_counts": {
+                  "base": 5489,
+                  "copy": 1006,
+                  "edit": 841
+                },
+                "mean_operation_posterior_entropy": 0.19169405832669686,
+                "mean_posterior_operation_share": {
+                  "base": 0.7548126935310289,
+                  "copy": 0.12258334775434772,
+                  "edit": 0.12260395871462337
+                }
+              },
+              "test_bits_per_word": 13.249437809952832,
+              "test_log2_probability": -97197.87577381398,
+              "validation_bits_per_word": 13.211046273125183,
+              "weights": {
+                "base": 0.7841708583340696,
+                "copy": 0.13232632821615053,
+                "edit": 0.08350281344977988
+              }
+            }
+          ],
+          "fold": 3,
+          "full_model_channel": {
+            "deletions": 11189,
+            "insertions": 12035,
+            "lag_probabilities": {
+              "1": 0.22247093411733262,
+              "2": 0.1674796204730723,
+              "3": 0.1384137378056929,
+              "4": 0.11790057463584123,
+              "5": 0.10580649472136844,
+              "6": 0.09551650407590538,
+              "7": 0.081952425497795,
+              "8": 0.07045970867299212
+            },
+            "matches": 49185,
+            "nearest_pairs": 14962,
+            "p_delete": 0.14257591009288872,
+            "p_insert": 0.11410436299512694,
+            "p_substitute": 0.2690735897283481,
+            "substitutions": 18106
+          },
+          "full_model_operation_transition_residual": {
+            "gain_bits_per_operation": 0.0010537996254484656,
+            "transitions": 7129
+          },
+          "planted_operation_accuracy": 0.9244820065430752,
+          "selected_candidate": "adaptive_register_trigram_copy_edit",
+          "selected_test_bits_per_word": 13.249437809952832,
+          "test_blocks": [
+            "A",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "O"
+          ],
+          "test_events": 7336,
+          "train_blocks": [
+            "B",
+            "C",
+            "D",
+            "E",
+            "M",
+            "N",
+            "Q",
+            "S"
+          ],
+          "train_events": 15221,
+          "validation_blocks": [
+            "T"
+          ],
+          "validation_events": 10576
+        }
+      ],
+      "name": "SYNTHETIC_COPY_EDIT",
+      "summary": {
+        "algorithmic_increments_bits_per_word": {
+          "adaptive_to_copy_edit": 1.507753289494696,
+          "context_to_surface": -0.003992290080738314,
+          "register_to_adaptive": 0.40069870343709724,
+          "register_to_context": -0.00566418596622853,
+          "trigram_to_register": 0.1123939783189396
+        },
+        "full_model_positive_folds": 4,
+        "full_vs_structural_base_gain_bits_per_word": 1.507753289494696,
+        "operation_transition_gain_bits_per_operation": 0.0009125273117681586,
+        "planted_operation_accuracy": 0.9223131017414662,
+        "residual_surprisal_order": {
+          "lag1_residual_correlation": 0.0034172293152897365,
+          "metric": "lag-1 correlation of bits/character residualized by exact word length and line position",
+          "null_mean": 0.0017848213955193057,
+          "stratified_shuffle_replicates": 400,
+          "two_sided_p": 0.5411471321695761
+        },
+        "selected_candidate_counts": {
+          "adaptive_register_trigram_copy_edit": 3,
+          "register_trigram_copy_edit": 1
+        },
+        "selected_pooled_test_bits_per_word": 13.249822655795533
+      }
+    },
+    {
+      "candidate_summary": {
+        "adaptive_register_trigram": {
+          "pooled_test_bits_per_word": 11.75851743098383,
+          "pooled_test_log2_probability": -389594.9580407872,
+          "test_events": 33133
+        },
+        "adaptive_register_trigram_copy_edit": {
+          "pooled_test_bits_per_word": 11.757957898947163,
+          "pooled_test_log2_probability": -389576.4190658163,
+          "test_events": 33133
+        },
+        "char_bigram": {
+          "pooled_test_bits_per_word": 13.513479155579525,
+          "pooled_test_log2_probability": -447742.1048618164,
+          "test_events": 33133
+        },
+        "char_trigram": {
+          "pooled_test_bits_per_word": 12.09683564448366,
+          "pooled_test_log2_probability": -400804.4554086771,
+          "test_events": 33133
+        },
+        "char_unigram": {
+          "pooled_test_bits_per_word": 24.37599622107245,
+          "pooled_test_log2_probability": -807649.8827927936,
+          "test_events": 33133
+        },
+        "context_trigram": {
+          "pooled_test_bits_per_word": 11.900984188059612,
+          "pooled_test_log2_probability": -394315.30910297914,
+          "test_events": 33133
+        },
+        "register_trigram": {
+          "pooled_test_bits_per_word": 11.893778971395376,
+          "pooled_test_log2_probability": -394076.578659243,
+          "test_events": 33133
+        },
+        "register_trigram_copy": {
+          "pooled_test_bits_per_word": 11.89361326036206,
+          "pooled_test_log2_probability": -394071.0881555761,
+          "test_events": 33133
+        },
+        "register_trigram_copy_edit": {
+          "pooled_test_bits_per_word": 11.893174271425117,
+          "pooled_test_log2_probability": -394056.5431351284,
+          "test_events": 33133
+        },
+        "register_trigram_edit": {
+          "pooled_test_bits_per_word": 11.893338415468184,
+          "pooled_test_log2_probability": -394061.9817197074,
+          "test_events": 33133
+        },
+        "surface_trigram": {
+          "pooled_test_bits_per_word": 11.905943739948757,
+          "pooled_test_log2_probability": -394479.6339357222,
+          "test_events": 33133
+        },
+        "surface_trigram_copy": {
+          "pooled_test_bits_per_word": 11.905798206046939,
+          "pooled_test_log2_probability": -394474.81196095323,
+          "test_events": 33133
+        },
+        "surface_trigram_copy_edit": {
+          "pooled_test_bits_per_word": 11.905368660129689,
+          "pooled_test_log2_probability": -394460.57981607696,
+          "test_events": 33133
+        }
+      },
+      "fold_assignment": {
+        "A": 3,
+        "B": 1,
+        "C": 2,
+        "D": 2,
+        "E": 2,
+        "F": 3,
+        "G": 3,
+        "H": 3,
+        "I": 3,
+        "J": 3,
+        "M": 1,
+        "N": 2,
+        "O": 3,
+        "Q": 2,
+        "S": 2,
+        "T": 0
+      },
+      "fold_event_loads": [
+        10576,
+        7590,
+        7631,
+        7336
+      ],
+      "folds": [
+        {
+          "candidate_scores": [
+            {
+              "candidate": "char_unigram",
+              "test_assignments": null,
+              "test_bits_per_word": 24.9776049993812,
+              "test_log2_probability": -264163.15047345555,
+              "validation_bits_per_word": 23.98356895409973,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "char_bigram",
+              "test_assignments": null,
+              "test_bits_per_word": 13.645166259077838,
+              "test_log2_probability": -144311.2783560072,
+              "validation_bits_per_word": 12.759228880648001,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "char_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 12.21198268945955,
+              "test_log2_probability": -129153.92892372419,
+              "validation_bits_per_word": 11.38138001392526,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "register_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 12.21198268945955,
+              "test_log2_probability": -129153.92892372419,
+              "validation_bits_per_word": 11.342893286222582,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "context_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 12.21198268945955,
+              "test_log2_probability": -129153.92892372419,
+              "validation_bits_per_word": 11.348841443984513,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "surface_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 12.21198268945955,
+              "test_log2_probability": -129153.92892372419,
+              "validation_bits_per_word": 11.353896930792013,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "adaptive_register_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 11.873567076050515,
+              "test_log2_probability": -125574.84539631024,
+              "validation_bits_per_word": 10.880428152014145,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "register_trigram_copy",
+              "test_assignments": null,
+              "test_bits_per_word": 12.211930829875739,
+              "test_log2_probability": -129153.38045676581,
+              "validation_bits_per_word": 11.342393915143424,
+              "weights": {
+                "base": 0.9997905783110418,
+                "copy": 0.00020942168895824606
+              }
+            },
+            {
+              "candidate": "register_trigram_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 12.21196325835033,
+              "test_log2_probability": -129153.7234203131,
+              "validation_bits_per_word": 11.342889862637556,
+              "weights": {
+                "base": 0.9999641955665882,
+                "edit": 3.580443341188465e-05
+              }
+            },
+            {
+              "candidate": "register_trigram_copy_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 12.21191153547661,
+              "test_log2_probability": -129153.17639920062,
+              "validation_bits_per_word": 11.342390898914468,
+              "weights": {
+                "base": 0.9997549460963855,
+                "copy": 0.00020930987883247863,
+                "edit": 3.5744024782041506e-05
+              }
+            },
+            {
+              "candidate": "surface_trigram_copy",
+              "test_assignments": null,
+              "test_bits_per_word": 12.211960721094103,
+              "test_log2_probability": -129153.69658629123,
+              "validation_bits_per_word": 11.353687807967347,
+              "weights": {
+                "base": 0.999918772472067,
+                "copy": 8.122752793312116e-05
+              }
+            },
+            {
+              "candidate": "surface_trigram_copy_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 12.211941871760464,
+              "test_log2_probability": -129153.49723573867,
+              "validation_bits_per_word": 11.35368129608668,
+              "weights": {
+                "base": 0.9998842465855995,
+                "copy": 8.12099136081471e-05,
+                "edit": 3.454350079233512e-05
+              }
+            },
+            {
+              "candidate": "adaptive_register_trigram_copy_edit",
+              "test_assignments": {
+                "argmax_operation_counts": {
+                  "base": 10576
+                },
+                "mean_operation_posterior_entropy": 0.0010726524134845121,
+                "mean_posterior_operation_share": {
+                  "base": 0.999864021239639,
+                  "copy": 8.413692765545249e-05,
+                  "edit": 5.18418327076262e-05
+                }
+              },
+              "test_bits_per_word": 11.873593395132657,
+              "test_log2_probability": -125575.12374692298,
+              "validation_bits_per_word": 10.88040974942294,
+              "weights": {
+                "base": 0.9998418461585057,
+                "copy": 0.00012245175565272758,
+                "edit": 3.570208584155441e-05
+              }
+            }
+          ],
+          "fold": 0,
+          "full_model_channel": {
+            "deletions": 13164,
+            "insertions": 15610,
+            "lag_probabilities": {
+              "1": 0.20987527412280702,
+              "2": 0.15977933114035087,
+              "3": 0.1328467653508772,
+              "4": 0.12434895833333333,
+              "5": 0.11105400219298246,
+              "6": 0.0932360197368421,
+              "7": 0.08871299342105263,
+              "8": 0.08014665570175439
+            },
+            "matches": 41050,
+            "nearest_pairs": 14588,
+            "p_delete": 0.17826964222842132,
+            "p_insert": 0.1500374841413248,
+            "p_substitute": 0.3235143864737484,
+            "substitutions": 19631
+          },
+          "full_model_operation_transition_residual": {
+            "gain_bits_per_operation": 0.00041440567176529965,
+            "transitions": 10485
+          },
+          "planted_operation_accuracy": 1.0,
+          "selected_candidate": "adaptive_register_trigram_copy_edit",
+          "selected_test_bits_per_word": 11.873593395132657,
+          "test_blocks": [
+            "T"
+          ],
+          "test_events": 10576,
+          "train_blocks": [
+            "A",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "N",
+            "O",
+            "Q",
+            "S"
+          ],
+          "train_events": 14967,
+          "validation_blocks": [
+            "B",
+            "M"
+          ],
+          "validation_events": 7590
+        },
+        {
+          "candidate_scores": [
+            {
+              "candidate": "char_unigram",
+              "test_assignments": null,
+              "test_bits_per_word": 23.90260822382715,
+              "test_log2_probability": -181420.79641884807,
+              "validation_bits_per_word": 24.128753068704913,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "char_bigram",
+              "test_assignments": null,
+              "test_bits_per_word": 12.366733699192093,
+              "test_log2_probability": -93863.50877686798,
+              "validation_bits_per_word": 13.737951240885877,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "char_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 11.06145023441526,
+              "test_log2_probability": -83956.40727921182,
+              "validation_bits_per_word": 12.268218007780193,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "register_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 10.976440457715649,
+              "test_log2_probability": -83311.18307406177,
+              "validation_bits_per_word": 11.830744309589864,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "context_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 10.979102663277672,
+              "test_log2_probability": -83331.38921427753,
+              "validation_bits_per_word": 11.853512508296317,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "surface_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 10.982185516337077,
+              "test_log2_probability": -83354.78806899842,
+              "validation_bits_per_word": 11.865955711888141,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "adaptive_register_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 10.785622879961295,
+              "test_log2_probability": -81862.87765890623,
+              "validation_bits_per_word": 11.93403441014282,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "register_trigram_copy",
+              "test_assignments": null,
+              "test_bits_per_word": 10.976398455123098,
+              "test_log2_probability": -83310.86427438431,
+              "validation_bits_per_word": 11.830569933950544,
+              "weights": {
+                "base": 0.9999343787145357,
+                "copy": 6.562128546422705e-05
+              }
+            },
+            {
+              "candidate": "register_trigram_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 10.975744941145805,
+              "test_log2_probability": -83305.90410329666,
+              "validation_bits_per_word": 11.830305154091851,
+              "weights": {
+                "base": 0.9999695404325903,
+                "edit": 3.0459567409615716e-05
+              }
+            },
+            {
+              "candidate": "register_trigram_copy_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 10.975702979411881,
+              "test_log2_probability": -83305.58561373618,
+              "validation_bits_per_word": 11.830131101753278,
+              "weights": {
+                "base": 0.9999039367834645,
+                "copy": 6.560938703043346e-05,
+                "edit": 3.045382950503378e-05
+              }
+            },
+            {
+              "candidate": "surface_trigram_copy",
+              "test_assignments": null,
+              "test_bits_per_word": 10.982156378030027,
+              "test_log2_probability": -83354.56690924791,
+              "validation_bits_per_word": 11.865824115032014,
+              "weights": {
+                "base": 0.9999554210584571,
+                "copy": 4.457894154294766e-05
+              }
+            },
+            {
+              "candidate": "surface_trigram_copy_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 10.981468040446147,
+              "test_log2_probability": -83349.34242698626,
+              "validation_bits_per_word": 11.865354752765482,
+              "weights": {
+                "base": 0.9999264340368119,
+                "copy": 4.4576709709682375e-05,
+                "edit": 2.8989253478380727e-05
+              }
+            },
+            {
+              "candidate": "adaptive_register_trigram_copy_edit",
+              "test_assignments": {
+                "argmax_operation_counts": {
+                  "base": 7589,
+                  "edit": 1
+                },
+                "mean_operation_posterior_entropy": 0.000777386548279151,
+                "mean_posterior_operation_share": {
+                  "base": 0.9997795589130727,
+                  "copy": 4.6498596703176576e-05,
+                  "edit": 0.0001739424902274219
+                }
+              },
+              "test_bits_per_word": 10.784790289669923,
+              "test_log2_probability": -81856.55829859471,
+              "validation_bits_per_word": 11.933133985349436,
+              "weights": {
+                "base": 0.9999153247028482,
+                "copy": 5.3925844195435016e-05,
+                "edit": 3.0749452956478775e-05
+              }
+            }
+          ],
+          "fold": 1,
+          "full_model_channel": {
+            "deletions": 16102,
+            "insertions": 17755,
+            "lag_probabilities": {
+              "1": 0.19301282778976048,
+              "2": 0.15889998864797367,
+              "3": 0.1355715745260529,
+              "4": 0.12325462595073221,
+              "5": 0.1109376773754115,
+              "6": 0.0995288909070269,
+              "7": 0.09266091497332274,
+              "8": 0.0861334998297196
+            },
+            "matches": 52901,
+            "nearest_pairs": 17614,
+            "p_delete": 0.17435439337339614,
+            "p_insert": 0.13901459396824403,
+            "p_substitute": 0.3062371316538366,
+            "substitutions": 23351
+          },
+          "full_model_operation_transition_residual": {
+            "gain_bits_per_operation": -0.0009502018209546402,
+            "transitions": 7503
+          },
+          "planted_operation_accuracy": 0.9998682476943347,
+          "selected_candidate": "register_trigram_copy_edit",
+          "selected_test_bits_per_word": 10.975702979411881,
+          "test_blocks": [
+            "B",
+            "M"
+          ],
+          "test_events": 7590,
+          "train_blocks": [
+            "A",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "O",
+            "T"
+          ],
+          "train_events": 17912,
+          "validation_blocks": [
+            "C",
+            "D",
+            "E",
+            "N",
+            "Q",
+            "S"
+          ],
+          "validation_events": 7631
+        },
+        {
+          "candidate_scores": [
+            {
+              "candidate": "char_unigram",
+              "test_assignments": null,
+              "test_bits_per_word": 24.20616196032564,
+              "test_log2_probability": -184717.22191924497,
+              "validation_bits_per_word": 24.266888545930808,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "char_bigram",
+              "test_assignments": null,
+              "test_bits_per_word": 14.133929959303888,
+              "test_log2_probability": -107856.01951944797,
+              "validation_bits_per_word": 14.36477482937947,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "char_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 12.640376262915407,
+              "test_log2_probability": -96458.71126230746,
+              "validation_bits_per_word": 12.895348976455766,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "register_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 12.259621738844729,
+              "test_log2_probability": -93553.17348912412,
+              "validation_bits_per_word": 12.46718168549434,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "context_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 12.263739722437855,
+              "test_log2_probability": -93584.59782192326,
+              "validation_bits_per_word": 12.467237629699543,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "surface_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 12.267789605038464,
+              "test_log2_probability": -93615.50247604852,
+              "validation_bits_per_word": 12.4698397040208,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "adaptive_register_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 12.21932960408693,
+              "test_log2_probability": -93245.70420878736,
+              "validation_bits_per_word": 12.428284115636316,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "register_trigram_copy",
+              "test_assignments": null,
+              "test_bits_per_word": 12.258788865786524,
+              "test_log2_probability": -93546.81783481696,
+              "validation_bits_per_word": 12.467197376297095,
+              "weights": {
+                "base": 0.9999076508864373,
+                "copy": 9.234911356272164e-05
+              }
+            },
+            {
+              "candidate": "register_trigram_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 12.258811092943397,
+              "test_log2_probability": -93546.98745025106,
+              "validation_bits_per_word": 12.466892959861767,
+              "weights": {
+                "base": 0.999969083825456,
+                "edit": 3.091617454394233e-05
+              }
+            },
+            {
+              "candidate": "register_trigram_copy_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 12.257984162904245,
+              "test_log2_probability": -93540.67714712229,
+              "validation_bits_per_word": 12.466908770665556,
+              "weights": {
+                "base": 0.9998767790957747,
+                "copy": 9.231690534491425e-05,
+                "edit": 3.0903998880423564e-05
+              }
+            },
+            {
+              "candidate": "surface_trigram_copy",
+              "test_assignments": null,
+              "test_bits_per_word": 12.267156365730425,
+              "test_log2_probability": -93610.67022688888,
+              "validation_bits_per_word": 12.469846813022555,
+              "weights": {
+                "base": 0.9999486722163348,
+                "copy": 5.132778366526586e-05
+              }
+            },
+            {
+              "candidate": "surface_trigram_copy_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 12.266373692165356,
+              "test_log2_probability": -93604.69764491383,
+              "validation_bits_per_word": 12.469572922172604,
+              "weights": {
+                "base": 0.9999197264039354,
+                "copy": 5.132387659476942e-05,
+                "edit": 2.894971946966264e-05
+              }
+            },
+            {
+              "candidate": "adaptive_register_trigram_copy_edit",
+              "test_assignments": {
+                "argmax_operation_counts": {
+                  "base": 7627,
+                  "copy": 1,
+                  "edit": 3
+                },
+                "mean_operation_posterior_entropy": 0.0011605291695023277,
+                "mean_posterior_operation_share": {
+                  "base": 0.9994930670806186,
+                  "copy": 0.00015177603909589425,
+                  "edit": 0.0003551568802882446
+                }
+              },
+              "test_bits_per_word": 12.218008689989334,
+              "test_log2_probability": -93235.62431330861,
+              "validation_bits_per_word": 12.427911167788931,
+              "weights": {
+                "base": 0.9998975959590181,
+                "copy": 7.100916835807245e-05,
+                "edit": 3.139487262384709e-05
+              }
+            }
+          ],
+          "fold": 2,
+          "full_model_channel": {
+            "deletions": 15669,
+            "insertions": 16662,
+            "lag_probabilities": {
+              "1": 0.17960760337927967,
+              "2": 0.15348488216985326,
+              "3": 0.13753334815473545,
+              "4": 0.12097043130280125,
+              "5": 0.11374499777678969,
+              "6": 0.1069086260560249,
+              "7": 0.09773788350377946,
+              "8": 0.09001222765673633
+            },
+            "matches": 56286,
+            "nearest_pairs": 17988,
+            "p_delete": 0.16586220401596224,
+            "p_insert": 0.12904362507066905,
+            "p_substitute": 0.28574057154459165,
+            "substitutions": 22517
+          },
+          "full_model_operation_transition_residual": {
+            "gain_bits_per_operation": -0.004131470575195223,
+            "transitions": 7459
+          },
+          "planted_operation_accuracy": 0.999475822303761,
+          "selected_candidate": "adaptive_register_trigram_copy_edit",
+          "selected_test_bits_per_word": 12.218008689989334,
+          "test_blocks": [
+            "C",
+            "D",
+            "E",
+            "N",
+            "Q",
+            "S"
+          ],
+          "test_events": 7631,
+          "train_blocks": [
+            "B",
+            "M",
+            "T"
+          ],
+          "train_events": 18166,
+          "validation_blocks": [
+            "A",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "O"
+          ],
+          "validation_events": 7336
+        },
+        {
+          "candidate_scores": [
+            {
+              "candidate": "char_unigram",
+              "test_assignments": null,
+              "test_bits_per_word": 24.175124588501223,
+              "test_log2_probability": -177348.71398124498,
+              "validation_bits_per_word": 24.90288352353078,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "char_bigram",
+              "test_assignments": null,
+              "test_bits_per_word": 13.864680781010529,
+              "test_log2_probability": -101711.29820949324,
+              "validation_bits_per_word": 13.253165494105794,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "char_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 12.43666956698932,
+              "test_log2_probability": -91235.40794343365,
+              "validation_bits_per_word": 11.914727818681166,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "register_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 12.003584129271118,
+              "test_log2_probability": -88058.29317233292,
+              "validation_bits_per_word": 11.914727818681166,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "context_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 12.02908848733017,
+              "test_log2_probability": -88245.39314305413,
+              "validation_bits_per_word": 11.914727818681166,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "surface_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 12.044085941514595,
+              "test_log2_probability": -88355.41446695107,
+              "validation_bits_per_word": 11.914727818681166,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "adaptive_register_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 12.119892417773086,
+              "test_log2_probability": -88911.53077678336,
+              "validation_bits_per_word": 11.82137063254011,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "register_trigram_copy",
+              "test_assignments": null,
+              "test_bits_per_word": 12.003820282116818,
+              "test_log2_probability": -88060.02558960898,
+              "validation_bits_per_word": 11.914818907169556,
+              "weights": {
+                "base": 0.9996665196288057,
+                "copy": 0.0003334803711943091
+              }
+            },
+            {
+              "candidate": "register_trigram_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 12.003185216173197,
+              "test_log2_probability": -88055.36674584658,
+              "validation_bits_per_word": 11.914745328128815,
+              "weights": {
+                "base": 0.9999639693899347,
+                "edit": 3.6030610065250716e-05
+              }
+            },
+            {
+              "candidate": "register_trigram_copy_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 12.00342202495492,
+              "test_log2_probability": -88057.1039750693,
+              "validation_bits_per_word": 11.914836349060273,
+              "weights": {
+                "base": 0.9996308415646775,
+                "copy": 0.00033325228852286524,
+                "edit": 3.590614679965514e-05
+              }
+            },
+            {
+              "candidate": "surface_trigram_copy",
+              "test_assignments": null,
+              "test_bits_per_word": 12.044149160104304,
+              "test_log2_probability": -88355.87823852517,
+              "validation_bits_per_word": 11.914753232325577,
+              "weights": {
+                "base": 0.9999016419407781,
+                "copy": 9.835805922191511e-05
+              }
+            },
+            {
+              "candidate": "surface_trigram_copy_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 12.043762610201494,
+              "test_log2_probability": -88353.04250843816,
+              "validation_bits_per_word": 11.914769934838102,
+              "weights": {
+                "base": 0.9998672797864905,
+                "copy": 9.832387249353231e-05,
+                "edit": 3.439634101609506e-05
+              }
+            },
+            {
+              "candidate": "adaptive_register_trigram_copy_edit",
+              "test_assignments": {
+                "argmax_operation_counts": {
+                  "base": 7335,
+                  "edit": 1
+                },
+                "mean_operation_posterior_entropy": 0.0012249283085332939,
+                "mean_posterior_operation_share": {
+                  "base": 0.9997015619315364,
+                  "copy": 6.718593460686926e-05,
+                  "edit": 0.0002312521338615969
+                }
+              },
+              "test_bits_per_word": 12.119562800843793,
+              "test_log2_probability": -88909.11270699007,
+              "validation_bits_per_word": 11.821479630800091,
+              "weights": {
+                "base": 0.9997872777648785,
+                "copy": 0.00017653981452221332,
+                "edit": 3.618242059922308e-05
+              }
+            }
+          ],
+          "fold": 3,
+          "full_model_channel": {
+            "deletions": 12731,
+            "insertions": 14517,
+            "lag_probabilities": {
+              "1": 0.19333823332887878,
+              "2": 0.15324736068421757,
+              "3": 0.13527328611519443,
+              "4": 0.12157557129493518,
+              "5": 0.1144260323399706,
+              "6": 0.10226513430442336,
+              "7": 0.09491514098623546,
+              "8": 0.0849592409461446
+            },
+            "matches": 44435,
+            "nearest_pairs": 14962,
+            "p_delete": 0.16759912590174292,
+            "p_insert": 0.13768102197395748,
+            "p_substitute": 0.2972735755064602,
+            "substitutions": 18797
+          },
+          "full_model_operation_transition_residual": {
+            "gain_bits_per_operation": -0.0006076127002588331,
+            "transitions": 7129
+          },
+          "planted_operation_accuracy": 0.9998636859323882,
+          "selected_candidate": "adaptive_register_trigram",
+          "selected_test_bits_per_word": 12.119892417773086,
+          "test_blocks": [
+            "A",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "O"
+          ],
+          "test_events": 7336,
+          "train_blocks": [
+            "B",
+            "C",
+            "D",
+            "E",
+            "M",
+            "N",
+            "Q",
+            "S"
+          ],
+          "train_events": 15221,
+          "validation_blocks": [
+            "T"
+          ],
+          "validation_events": 10576
+        }
+      ],
+      "name": "SYNTHETIC_BASE_ONLY",
+      "summary": {
+        "algorithmic_increments_bits_per_word": {
+          "adaptive_to_copy_edit": 0.0005595320366662548,
+          "context_to_surface": -0.0049595518891454304,
+          "register_to_adaptive": 0.13526154041154648,
+          "register_to_context": -0.007205216664235792,
+          "trigram_to_register": 0.2030566730882839
+        },
+        "full_model_positive_folds": 3,
+        "full_vs_structural_base_gain_bits_per_word": 0.0005595320366662548,
+        "operation_transition_gain_bits_per_operation": -0.0011644348831866985,
+        "planted_operation_accuracy": 0.999818911659071,
+        "residual_surprisal_order": {
+          "lag1_residual_correlation": 0.014198721964743678,
+          "metric": "lag-1 correlation of bits/character residualized by exact word length and line position",
+          "null_mean": 0.00987171591570428,
+          "stratified_shuffle_replicates": 400,
+          "two_sided_p": 0.2593516209476309
+        },
+        "selected_candidate_counts": {
+          "adaptive_register_trigram": 1,
+          "adaptive_register_trigram_copy_edit": 2,
+          "register_trigram_copy_edit": 1
+        },
+        "selected_pooled_test_bits_per_word": 11.80176453839831
+      }
+    },
+    {
+      "candidate_summary": {
+        "adaptive_register_trigram": {
+          "pooled_test_bits_per_word": 18.682612824235964,
+          "pooled_test_log2_probability": -619011.0107054102,
+          "test_events": 33133
+        },
+        "adaptive_register_trigram_copy_edit": {
+          "pooled_test_bits_per_word": 18.58139823705977,
+          "pooled_test_log2_probability": -615657.4677885013,
+          "test_events": 33133
+        },
+        "char_bigram": {
+          "pooled_test_bits_per_word": 22.760347467555572,
+          "pooled_test_log2_probability": -754118.5926425188,
+          "test_events": 33133
+        },
+        "char_trigram": {
+          "pooled_test_bits_per_word": 19.333998552387094,
+          "pooled_test_log2_probability": -640593.3740362416,
+          "test_events": 33133
+        },
+        "char_unigram": {
+          "pooled_test_bits_per_word": 26.561062736610978,
+          "pooled_test_log2_probability": -880047.6916521315,
+          "test_events": 33133
+        },
+        "context_trigram": {
+          "pooled_test_bits_per_word": 19.334289426386267,
+          "pooled_test_log2_probability": -640603.0115644562,
+          "test_events": 33133
+        },
+        "register_trigram": {
+          "pooled_test_bits_per_word": 19.34108034757538,
+          "pooled_test_log2_probability": -640828.0151562152,
+          "test_events": 33133
+        },
+        "register_trigram_copy": {
+          "pooled_test_bits_per_word": 19.157523153562437,
+          "pooled_test_log2_probability": -634746.2146469842,
+          "test_events": 33133
+        },
+        "register_trigram_copy_edit": {
+          "pooled_test_bits_per_word": 19.153041013454292,
+          "pooled_test_log2_probability": -634597.707898781,
+          "test_events": 33133
+        },
+        "register_trigram_edit": {
+          "pooled_test_bits_per_word": 19.30174420648407,
+          "pooled_test_log2_probability": -639524.6907934367,
+          "test_events": 33133
+        },
+        "surface_trigram": {
+          "pooled_test_bits_per_word": 19.33225921384105,
+          "pooled_test_log2_probability": -640535.7445321955,
+          "test_events": 33133
+        },
+        "surface_trigram_copy": {
+          "pooled_test_bits_per_word": 19.15156131761024,
+          "pooled_test_log2_probability": -634548.6811363802,
+          "test_events": 33133
+        },
+        "surface_trigram_copy_edit": {
+          "pooled_test_bits_per_word": 19.14738717590043,
+          "pooled_test_log2_probability": -634410.379299109,
+          "test_events": 33133
+        }
+      },
+      "fold_assignment": {
+        "A": 3,
+        "B": 1,
+        "C": 2,
+        "D": 2,
+        "E": 2,
+        "F": 3,
+        "G": 3,
+        "H": 3,
+        "I": 3,
+        "J": 3,
+        "M": 1,
+        "N": 2,
+        "O": 3,
+        "Q": 2,
+        "S": 2,
+        "T": 0
+      },
+      "fold_event_loads": [
+        10576,
+        7590,
+        7631,
+        7336
+      ],
+      "folds": [
+        {
+          "candidate_scores": [
+            {
+              "candidate": "char_unigram",
+              "test_assignments": null,
+              "test_bits_per_word": 26.777799539587225,
+              "test_log2_probability": -283202.0079306745,
+              "validation_bits_per_word": 26.53264410292629,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "char_bigram",
+              "test_assignments": null,
+              "test_bits_per_word": 23.384482296769573,
+              "test_log2_probability": -247314.284770635,
+              "validation_bits_per_word": 23.618361502892984,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "char_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 20.314922529732947,
+              "test_log2_probability": -214850.62067445565,
+              "validation_bits_per_word": 21.001774629917566,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "register_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 20.314922529732947,
+              "test_log2_probability": -214850.62067445565,
+              "validation_bits_per_word": 21.03421121002368,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "context_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 20.314922529732947,
+              "test_log2_probability": -214850.62067445565,
+              "validation_bits_per_word": 21.029200200298668,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "surface_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 20.314922529732947,
+              "test_log2_probability": -214850.62067445565,
+              "validation_bits_per_word": 21.02795219607933,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "adaptive_register_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 18.90277106137825,
+              "test_log2_probability": -199915.70674513638,
+              "validation_bits_per_word": 19.190566266236196,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "register_trigram_copy",
+              "test_assignments": null,
+              "test_bits_per_word": 20.015718688375195,
+              "test_log2_probability": -211686.24084825607,
+              "validation_bits_per_word": 20.66000850727298,
+              "weights": {
+                "base": 0.9766357739868945,
+                "copy": 0.023364226013105588
+              }
+            },
+            {
+              "candidate": "register_trigram_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 20.222796930214667,
+              "test_log2_probability": -213876.30033395032,
+              "validation_bits_per_word": 20.907575434353394,
+              "weights": {
+                "base": 0.9994011471200572,
+                "edit": 0.0005988528799427762
+              }
+            },
+            {
+              "candidate": "register_trigram_copy_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 20.00228242492414,
+              "test_log2_probability": -211544.1389259977,
+              "validation_bits_per_word": 20.641182611783368,
+              "weights": {
+                "base": 0.9765980692900122,
+                "copy": 0.023362646185753407,
+                "edit": 3.928452423440104e-05
+              }
+            },
+            {
+              "candidate": "surface_trigram_copy",
+              "test_assignments": null,
+              "test_bits_per_word": 20.021841358294388,
+              "test_log2_probability": -211750.99420532145,
+              "validation_bits_per_word": 20.661751599647005,
+              "weights": {
+                "base": 0.9816325677619351,
+                "copy": 0.018367432238064963
+              }
+            },
+            {
+              "candidate": "surface_trigram_copy_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 20.009028121169425,
+              "test_log2_probability": -211615.48140948784,
+              "validation_bits_per_word": 20.643801200254227,
+              "weights": {
+                "base": 0.9815987638821232,
+                "copy": 0.018366262130284555,
+                "edit": 3.497398759228938e-05
+              }
+            },
+            {
+              "candidate": "adaptive_register_trigram_copy_edit",
+              "test_assignments": {
+                "argmax_operation_counts": {
+                  "base": 10288,
+                  "copy": 272,
+                  "edit": 16
+                },
+                "mean_operation_posterior_entropy": 0.03432783755637646,
+                "mean_posterior_operation_share": {
+                  "base": 0.9693817543362243,
+                  "copy": 0.028771482841675796,
+                  "edit": 0.0018467628221055436
+                }
+              },
+              "test_bits_per_word": 18.757019310637748,
+              "test_log2_probability": -198374.2362293048,
+              "validation_bits_per_word": 19.0085833137694,
+              "weights": {
+                "base": 0.9807368552249462,
+                "copy": 0.01922610476684711,
+                "edit": 3.704000820663427e-05
+              }
+            }
+          ],
+          "fold": 0,
+          "full_model_channel": {
+            "deletions": 18596,
+            "insertions": 17814,
+            "lag_probabilities": {
+              "1": 0.2167283442982456,
+              "2": 0.16827713815789475,
+              "3": 0.13723273026315788,
+              "4": 0.12236156798245613,
+              "5": 0.10769599780701754,
+              "6": 0.09008360745614036,
+              "7": 0.07891310307017543,
+              "8": 0.07870751096491228
+            },
+            "matches": 33913,
+            "nearest_pairs": 14588,
+            "p_delete": 0.22162435943272554,
+            "p_insert": 0.15316132471284133,
+            "p_substitute": 0.48076216431392965,
+            "substitutions": 31400
+          },
+          "full_model_operation_transition_residual": {
+            "gain_bits_per_operation": -0.01418808751990917,
+            "transitions": 10485
+          },
+          "planted_operation_accuracy": null,
+          "selected_candidate": "adaptive_register_trigram_copy_edit",
+          "selected_test_bits_per_word": 18.757019310637748,
+          "test_blocks": [
+            "T"
+          ],
+          "test_events": 10576,
+          "train_blocks": [
+            "A",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "N",
+            "O",
+            "Q",
+            "S"
+          ],
+          "train_events": 14967,
+          "validation_blocks": [
+            "B",
+            "M"
+          ],
+          "validation_events": 7590
+        },
+        {
+          "candidate_scores": [
+            {
+              "candidate": "char_unigram",
+              "test_assignments": null,
+              "test_bits_per_word": 26.2769164887007,
+              "test_log2_probability": -199441.7961492383,
+              "validation_bits_per_word": 26.174425580668597,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "char_bigram",
+              "test_assignments": null,
+              "test_bits_per_word": 22.55931945531559,
+              "test_log2_probability": -171225.23466584532,
+              "validation_bits_per_word": 21.954468133961083,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "char_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 18.513973380559012,
+              "test_log2_probability": -140521.0579584429,
+              "validation_bits_per_word": 18.656137377125166,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "register_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 18.523879672026812,
+              "test_log2_probability": -140596.2467106835,
+              "validation_bits_per_word": 18.691487562759733,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "context_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 18.5215115072925,
+              "test_log2_probability": -140578.2723403501,
+              "validation_bits_per_word": 18.670976665554623,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "surface_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 18.52088586913313,
+              "test_log2_probability": -140573.52374672046,
+              "validation_bits_per_word": 18.664657429320407,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "adaptive_register_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 17.911154962348213,
+              "test_log2_probability": -135945.66616422293,
+              "validation_bits_per_word": 18.568658977867535,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "register_trigram_copy",
+              "test_assignments": null,
+              "test_bits_per_word": 18.338254304086966,
+              "test_log2_probability": -139187.3501680201,
+              "validation_bits_per_word": 18.60161428099411,
+              "weights": {
+                "base": 0.9705869884290672,
+                "copy": 0.02941301157093284
+              }
+            },
+            {
+              "candidate": "register_trigram_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 18.50169620859472,
+              "test_log2_probability": -140427.87422323393,
+              "validation_bits_per_word": 18.681383561098983,
+              "weights": {
+                "base": 0.995526436927001,
+                "edit": 0.004473563072999001
+              }
+            },
+            {
+              "candidate": "register_trigram_copy_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 18.33755036312475,
+              "test_log2_probability": -139182.00725611683,
+              "validation_bits_per_word": 18.60109192358301,
+              "weights": {
+                "base": 0.9704634930975713,
+                "copy": 0.02941005572414869,
+                "edit": 0.0001264511782800457
+              }
+            },
+            {
+              "candidate": "surface_trigram_copy",
+              "test_assignments": null,
+              "test_bits_per_word": 18.33964223175275,
+              "test_log2_probability": -139197.8845390034,
+              "validation_bits_per_word": 18.57619830740451,
+              "weights": {
+                "base": 0.9776585650402524,
+                "copy": 0.02234143495974758
+              }
+            },
+            {
+              "candidate": "surface_trigram_copy_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 18.339289682804313,
+              "test_log2_probability": -139195.20869248474,
+              "validation_bits_per_word": 18.575982377787888,
+              "weights": {
+                "base": 0.9776297387024305,
+                "copy": 0.022340308726264288,
+                "edit": 2.995257130522673e-05
+              }
+            },
+            {
+              "candidate": "adaptive_register_trigram_copy_edit",
+              "test_assignments": {
+                "argmax_operation_counts": {
+                  "base": 7388,
+                  "copy": 202
+                },
+                "mean_operation_posterior_entropy": 0.035911763084962134,
+                "mean_posterior_operation_share": {
+                  "base": 0.9705881844662553,
+                  "copy": 0.02936979993418858,
+                  "edit": 4.201559955712767e-05
+                }
+              },
+              "test_bits_per_word": 17.791525417583966,
+              "test_log2_probability": -135037.6779194623,
+              "validation_bits_per_word": 18.51785348275299,
+              "weights": {
+                "base": 0.9753527105377612,
+                "copy": 0.02460003779462731,
+                "edit": 4.72516676115079e-05
+              }
+            }
+          ],
+          "fold": 1,
+          "full_model_channel": {
+            "deletions": 22096,
+            "insertions": 21479,
+            "lag_probabilities": {
+              "1": 0.2015836076739698,
+              "2": 0.16168123510046542,
+              "3": 0.13375525031218072,
+              "4": 0.12183562265864457,
+              "5": 0.10713474855261665,
+              "6": 0.09964241117039392,
+              "7": 0.08982290838914746,
+              "8": 0.08454421614258145
+            },
+            "matches": 41034,
+            "nearest_pairs": 17614,
+            "p_delete": 0.21910914553729907,
+            "p_insert": 0.15349078176361297,
+            "p_substitute": 0.4789336008431639,
+            "substitutions": 37716
+          },
+          "full_model_operation_transition_residual": {
+            "gain_bits_per_operation": 0.002712427708399396,
+            "transitions": 7503
+          },
+          "planted_operation_accuracy": null,
+          "selected_candidate": "adaptive_register_trigram_copy_edit",
+          "selected_test_bits_per_word": 17.791525417583966,
+          "test_blocks": [
+            "B",
+            "M"
+          ],
+          "test_events": 7590,
+          "train_blocks": [
+            "A",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "O",
+            "T"
+          ],
+          "train_events": 17912,
+          "validation_blocks": [
+            "C",
+            "D",
+            "E",
+            "N",
+            "Q",
+            "S"
+          ],
+          "validation_events": 7631
+        },
+        {
+          "candidate_scores": [
+            {
+              "candidate": "char_unigram",
+              "test_assignments": null,
+              "test_bits_per_word": 26.26755722335227,
+              "test_log2_probability": -200447.72917140118,
+              "validation_bits_per_word": 26.92176757188947,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "char_bigram",
+              "test_assignments": null,
+              "test_bits_per_word": 22.257417793354797,
+              "test_log2_probability": -169846.35518109045,
+              "validation_bits_per_word": 22.810065096654846,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "char_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 19.154296976324797,
+              "test_log2_probability": -146166.44022633453,
+              "validation_bits_per_word": 19.14616008341753,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "register_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 19.123895022452608,
+              "test_log2_probability": -145934.44291633586,
+              "validation_bits_per_word": 19.15656466372071,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "context_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 19.120071944748965,
+              "test_log2_probability": -145905.26901037936,
+              "validation_bits_per_word": 19.154256728836366,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "surface_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 19.11891639882098,
+              "test_log2_probability": -145896.4510394029,
+              "validation_bits_per_word": 19.15310268320114,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "adaptive_register_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 18.931845070649338,
+              "test_log2_probability": -144468.9097341251,
+              "validation_bits_per_word": 19.021774943236828,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "register_trigram_copy",
+              "test_assignments": null,
+              "test_bits_per_word": 19.01655508508111,
+              "test_log2_probability": -145115.33185425395,
+              "validation_bits_per_word": 19.051921564040605,
+              "weights": {
+                "base": 0.9659033215624814,
+                "copy": 0.034096678437518665
+              }
+            },
+            {
+              "candidate": "register_trigram_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 19.108891211953722,
+              "test_log2_probability": -145819.94883841884,
+              "validation_bits_per_word": 19.146034659762314,
+              "weights": {
+                "base": 0.993201904739694,
+                "edit": 0.006798095260305837
+              }
+            },
+            {
+              "candidate": "register_trigram_copy_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 19.016380777969783,
+              "test_log2_probability": -145114.0017166874,
+              "validation_bits_per_word": 19.051825086106497,
+              "weights": {
+                "base": 0.9656769756033922,
+                "copy": 0.03409143293952883,
+                "edit": 0.00023159145707891154
+              }
+            },
+            {
+              "candidate": "surface_trigram_copy",
+              "test_assignments": null,
+              "test_bits_per_word": 19.01291420919957,
+              "test_log2_probability": -145087.54833040194,
+              "validation_bits_per_word": 19.047291374009593,
+              "weights": {
+                "base": 0.9755793367851741,
+                "copy": 0.024420663214826
+              }
+            },
+            {
+              "candidate": "surface_trigram_copy_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 19.012886444260175,
+              "test_log2_probability": -145087.3364561494,
+              "validation_bits_per_word": 19.047271103268486,
+              "weights": {
+                "base": 0.975550600081617,
+                "copy": 0.02441941249984917,
+                "edit": 2.9987418533921526e-05
+              }
+            },
+            {
+              "candidate": "adaptive_register_trigram_copy_edit",
+              "test_assignments": {
+                "argmax_operation_counts": {
+                  "base": 7448,
+                  "copy": 183
+                },
+                "mean_operation_posterior_entropy": 0.035091487593760025,
+                "mean_posterior_operation_share": {
+                  "base": 0.973652266012944,
+                  "copy": 0.02629895571332762,
+                  "edit": 4.8778273731287e-05
+                }
+              },
+              "test_bits_per_word": 18.870985963649087,
+              "test_log2_probability": -144004.49388860617,
+              "validation_bits_per_word": 18.955461762690142,
+              "weights": {
+                "base": 0.9719094691462156,
+                "copy": 0.02803952698663864,
+                "edit": 5.100386714583016e-05
+              }
+            }
+          ],
+          "fold": 2,
+          "full_model_channel": {
+            "deletions": 21666,
+            "insertions": 21815,
+            "lag_probabilities": {
+              "1": 0.18644397510004446,
+              "2": 0.1597098710538017,
+              "3": 0.1347543352601156,
+              "4": 0.12358270342374389,
+              "5": 0.10840929301911961,
+              "6": 0.10451867496665185,
+              "7": 0.09734882169853268,
+              "8": 0.08523232547799021
+            },
+            "matches": 41465,
+            "nearest_pairs": 17988,
+            "p_delete": 0.21589640878472638,
+            "p_insert": 0.1556482280838191,
+            "p_substitute": 0.4730524844325836,
+            "substitutions": 37224
+          },
+          "full_model_operation_transition_residual": {
+            "gain_bits_per_operation": -0.0016631343468493463,
+            "transitions": 7459
+          },
+          "planted_operation_accuracy": null,
+          "selected_candidate": "adaptive_register_trigram_copy_edit",
+          "selected_test_bits_per_word": 18.870985963649087,
+          "test_blocks": [
+            "C",
+            "D",
+            "E",
+            "N",
+            "Q",
+            "S"
+          ],
+          "test_events": 7631,
+          "train_blocks": [
+            "B",
+            "M",
+            "T"
+          ],
+          "train_events": 18166,
+          "validation_blocks": [
+            "A",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "O"
+          ],
+          "validation_events": 7336
+        },
+        {
+          "candidate_scores": [
+            {
+              "candidate": "char_unigram",
+              "test_assignments": null,
+              "test_bits_per_word": 26.847895092805,
+              "test_log2_probability": -196956.15840081748,
+              "validation_bits_per_word": 26.605477913569313,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "char_bigram",
+              "test_assignments": null,
+              "test_bits_per_word": 22.591700930336422,
+              "test_log2_probability": -165732.718024948,
+              "validation_bits_per_word": 22.680742919328797,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "char_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 18.955187455971718,
+              "test_log2_probability": -139055.2551770085,
+              "validation_bits_per_word": 18.7411444041105,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "register_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 19.00854755380864,
+              "test_log2_probability": -139446.70485474018,
+              "validation_bits_per_word": 18.7411444041105,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "context_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 18.984303372310666,
+              "test_log2_probability": -139268.84953927106,
+              "validation_bits_per_word": 18.7411444041105,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "surface_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 18.976983243132015,
+              "test_log2_probability": -139215.14907161647,
+              "validation_bits_per_word": 18.7411444041105,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "adaptive_register_trigram",
+              "test_assignments": null,
+              "test_bits_per_word": 18.90413414148388,
+              "test_log2_probability": -138680.72806192574,
+              "validation_bits_per_word": 18.232115799752485,
+              "weights": {
+                "base": 1.0
+              }
+            },
+            {
+              "candidate": "register_trigram_copy",
+              "test_assignments": null,
+              "test_bits_per_word": 18.914570852842715,
+              "test_log2_probability": -138757.29177645416,
+              "validation_bits_per_word": 18.582301242529038,
+              "weights": {
+                "base": 0.9697067372466778,
+                "copy": 0.030293262753322284
+              }
+            },
+            {
+              "candidate": "register_trigram_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 19.002258369388453,
+              "test_log2_probability": -139400.56739783369,
+              "validation_bits_per_word": 18.72544906292512,
+              "weights": {
+                "base": 0.9962010933203062,
+                "edit": 0.003798906679693837
+              }
+            },
+            {
+              "candidate": "register_trigram_copy_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 18.914607415482436,
+              "test_log2_probability": -138757.55999997916,
+              "validation_bits_per_word": 18.58201299746546,
+              "weights": {
+                "base": 0.969618126556461,
+                "copy": 0.030290416353631094,
+                "edit": 9.145708990803757e-05
+              }
+            },
+            {
+              "candidate": "surface_trigram_copy",
+              "test_assignments": null,
+              "test_bits_per_word": 18.881168765219925,
+              "test_log2_probability": -138512.25406165337,
+              "validation_bits_per_word": 18.585381671870852,
+              "weights": {
+                "base": 0.9777176277016632,
+                "copy": 0.02228237229833686
+              }
+            },
+            {
+              "candidate": "surface_trigram_copy_edit",
+              "test_assignments": null,
+              "test_bits_per_word": 18.881182216601285,
+              "test_log2_probability": -138512.35274098703,
+              "validation_bits_per_word": 18.58522681901009,
+              "weights": {
+                "base": 0.9776837793394124,
+                "copy": 0.022280946123758447,
+                "edit": 3.527453682921283e-05
+              }
+            },
+            {
+              "candidate": "adaptive_register_trigram_copy_edit",
+              "test_assignments": {
+                "argmax_operation_counts": {
+                  "base": 7193,
+                  "copy": 143
+                },
+                "mean_operation_posterior_entropy": 0.025265505316998657,
+                "mean_posterior_operation_share": {
+                  "base": 0.9782703109965085,
+                  "copy": 0.02170146213480489,
+                  "edit": 2.8226868686737676e-05
+                }
+              },
+              "test_bits_per_word": 18.84420116563904,
+              "test_log2_probability": -138241.059751128,
+              "validation_bits_per_word": 18.125545770405296,
+              "weights": {
+                "base": 0.9754465518931033,
+                "copy": 0.02451175701324862,
+                "edit": 4.169109364815377e-05
+              }
+            }
+          ],
+          "fold": 3,
+          "full_model_channel": {
+            "deletions": 18166,
+            "insertions": 18150,
+            "lag_probabilities": {
+              "1": 0.19814913804623813,
+              "2": 0.16574234932513698,
+              "3": 0.13834691968461846,
+              "4": 0.12444875050113591,
+              "5": 0.10921421889616464,
+              "6": 0.09618468528664974,
+              "7": 0.08823332887879193,
+              "8": 0.0796806093812642
+            },
+            "matches": 34344,
+            "nearest_pairs": 14962,
+            "p_delete": 0.21777412819621428,
+            "p_insert": 0.1557568372364435,
+            "p_substitute": 0.47367170858044844,
+            "substitutions": 30908
+          },
+          "full_model_operation_transition_residual": {
+            "gain_bits_per_operation": -0.0005654008349453609,
+            "transitions": 7129
+          },
+          "planted_operation_accuracy": null,
+          "selected_candidate": "adaptive_register_trigram_copy_edit",
+          "selected_test_bits_per_word": 18.84420116563904,
+          "test_blocks": [
+            "A",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "O"
+          ],
+          "test_events": 7336,
+          "train_blocks": [
+            "B",
+            "C",
+            "D",
+            "E",
+            "M",
+            "N",
+            "Q",
+            "S"
+          ],
+          "train_events": 15221,
+          "validation_blocks": [
+            "T"
+          ],
+          "validation_events": 10576
+        }
+      ],
+      "name": "LATIN_REFLOW",
+      "summary": {
+        "algorithmic_increments_bits_per_word": {
+          "adaptive_to_copy_edit": 0.10121458717619447,
+          "context_to_surface": 0.0020302125452182906,
+          "register_to_adaptive": 0.6584675233394179,
+          "register_to_context": 0.00679092118911484,
+          "trigram_to_register": -0.007081795188287998
+        },
+        "full_model_positive_folds": 4,
+        "full_vs_structural_base_gain_bits_per_word": 0.10121458717619447,
+        "operation_transition_gain_bits_per_operation": -0.004446427253057519,
+        "planted_operation_accuracy": null,
+        "residual_surprisal_order": {
+          "lag1_residual_correlation": 0.08460934437139929,
+          "metric": "lag-1 correlation of bits/character residualized by exact word length and line position",
+          "null_mean": 0.004902621697206933,
+          "stratified_shuffle_replicates": 400,
+          "two_sided_p": 0.0024937655860349127
+        },
+        "selected_candidate_counts": {
+          "adaptive_register_trigram_copy_edit": 4
+        },
+        "selected_pooled_test_bits_per_word": 18.58139823705977
+      }
+    }
+  ],
+  "parameters": {
+    "candidate_specs": [
+      {
+        "cell_mode": "global",
+        "name": "char_unigram",
+        "operations": [
+          "base"
+        ],
+        "order": 0
+      },
+      {
+        "cell_mode": "global",
+        "name": "char_bigram",
+        "operations": [
+          "base"
+        ],
+        "order": 1
+      },
+      {
+        "cell_mode": "global",
+        "name": "char_trigram",
+        "operations": [
+          "base"
+        ],
+        "order": 2
+      },
+      {
+        "cell_mode": "register",
+        "name": "register_trigram",
+        "operations": [
+          "base"
+        ],
+        "order": 2
+      },
+      {
+        "cell_mode": "context",
+        "name": "context_trigram",
+        "operations": [
+          "base"
+        ],
+        "order": 2
+      },
+      {
+        "cell_mode": "surface",
+        "name": "surface_trigram",
+        "operations": [
+          "base"
+        ],
+        "order": 2
+      },
+      {
+        "cell_mode": "adaptive_register",
+        "name": "adaptive_register_trigram",
+        "operations": [
+          "base"
+        ],
+        "order": 2
+      },
+      {
+        "cell_mode": "register",
+        "name": "register_trigram_copy",
+        "operations": [
+          "base",
+          "copy"
+        ],
+        "order": 2
+      },
+      {
+        "cell_mode": "register",
+        "name": "register_trigram_edit",
+        "operations": [
+          "base",
+          "edit"
+        ],
+        "order": 2
+      },
+      {
+        "cell_mode": "register",
+        "name": "register_trigram_copy_edit",
+        "operations": [
+          "base",
+          "copy",
+          "edit"
+        ],
+        "order": 2
+      },
+      {
+        "cell_mode": "surface",
+        "name": "surface_trigram_copy",
+        "operations": [
+          "base",
+          "copy"
+        ],
+        "order": 2
+      },
+      {
+        "cell_mode": "surface",
+        "name": "surface_trigram_copy_edit",
+        "operations": [
+          "base",
+          "copy",
+          "edit"
+        ],
+        "order": 2
+      },
+      {
+        "cell_mode": "adaptive_register",
+        "name": "adaptive_register_trigram_copy_edit",
+        "operations": [
+          "base",
+          "copy",
+          "edit"
+        ],
+        "order": 2
+      }
+    ],
+    "character_smoothing": {
+      "adaptive_backoff": 32.0,
+      "alpha": 0.1,
+      "cell_backoff": 48.0,
+      "history_backoff": 24.0
+    },
+    "edit_alpha": 0.5,
+    "folds": 4,
+    "history_words": 8,
+    "mixture_prior": 1.5,
+    "split": "test=fold f; validation=fold f+1; fit=other two folds; complete repository quire blocks"
+  },
+  "seed": 20260724,
+  "summary": {
+    "synthetic_controls_pass": true,
+    "voynich_algorithmic_increments_bits_per_word": {
+      "adaptive_to_copy_edit": 0.003878444950332849,
+      "context_to_surface": -0.0015671138191262202,
+      "register_to_adaptive": 0.5214909135543468,
+      "register_to_context": 0.004667695000037497,
+      "trigram_to_register": 0.2517884312589942
+    },
+    "voynich_full_model_positive_folds": 4,
+    "voynich_full_vs_structural_base_gain_bits_per_word": 0.003878444950332849,
+    "voynich_operation_transition_gain_bits_per_operation": -0.00239515921076246,
+    "voynich_residual_surprisal_order": {
+      "lag1_residual_correlation": 0.07712521875803256,
+      "metric": "lag-1 correlation of bits/character residualized by exact word length and line position",
+      "null_mean": 0.021575235229271864,
+      "stratified_shuffle_replicates": 400,
+      "two_sided_p": 0.0024937655860349127
+    },
+    "voynich_selected_candidates": {
+      "adaptive_register_trigram_copy_edit": 4
+    }
+  }
+}

@@ -1,0 +1,2238 @@
+{
+  "claim_boundary": "A selected cache is a causal predictive production state. Ordinary-language performance determines whether it is Voynich-specific; it does not recover plaintext.",
+  "controls": {
+    "independent_gain_below_0_20_pass": true,
+    "planted_cache_positive_gain_pass": true,
+    "planted_horizon_neighborhood_selected_pass": true
+  },
+  "corpus_audit": {
+    "eligible_words": 33133,
+    "hard_breaks": 567,
+    "prose_lines": 4117,
+    "source_tokens": 33700
+  },
+  "experiment": "causal_adaptive_horizon_selection",
+  "panels": [
+    {
+      "candidate_summary": {
+        "folio_alpha_128": {
+          "pooled_test_bits_per_word": 11.724636683560494,
+          "test_events": 33133
+        },
+        "folio_alpha_16": {
+          "pooled_test_bits_per_word": 11.567905815934877,
+          "test_events": 33133
+        },
+        "folio_alpha_256": {
+          "pooled_test_bits_per_word": 11.823330997500397,
+          "test_events": 33133
+        },
+        "folio_alpha_32": {
+          "pooled_test_bits_per_word": 11.569026974064432,
+          "test_events": 33133
+        },
+        "folio_alpha_4": {
+          "pooled_test_bits_per_word": 11.847150195129739,
+          "test_events": 33133
+        },
+        "folio_alpha_64": {
+          "pooled_test_bits_per_word": 11.631119965652118,
+          "test_events": 33133
+        },
+        "folio_alpha_8": {
+          "pooled_test_bits_per_word": 11.654263903283558,
+          "test_events": 33133
+        },
+        "folio_cumulative": {
+          "pooled_test_bits_per_word": 11.569026974064432,
+          "test_events": 33133
+        },
+        "line_cumulative": {
+          "pooled_test_bits_per_word": 12.001491301107848,
+          "test_events": 33133
+        },
+        "rolling_128": {
+          "pooled_test_bits_per_word": 11.607670033117657,
+          "test_events": 33133
+        },
+        "rolling_16": {
+          "pooled_test_bits_per_word": 11.866976400862594,
+          "test_events": 33133
+        },
+        "rolling_256": {
+          "pooled_test_bits_per_word": 11.5751528551657,
+          "test_events": 33133
+        },
+        "rolling_32": {
+          "pooled_test_bits_per_word": 11.770686347850102,
+          "test_events": 33133
+        },
+        "rolling_64": {
+          "pooled_test_bits_per_word": 11.673845551760701,
+          "test_events": 33133
+        },
+        "rolling_8": {
+          "pooled_test_bits_per_word": 11.944450734150372,
+          "test_events": 33133
+        },
+        "static": {
+          "pooled_test_bits_per_word": 12.090517887618779,
+          "test_events": 33133
+        }
+      },
+      "fold_assignment": {
+        "A": 3,
+        "B": 1,
+        "C": 2,
+        "D": 2,
+        "E": 2,
+        "F": 3,
+        "G": 3,
+        "H": 3,
+        "I": 3,
+        "J": 3,
+        "M": 1,
+        "N": 2,
+        "O": 3,
+        "Q": 2,
+        "S": 2,
+        "T": 0
+      },
+      "fold_event_loads": [
+        10576,
+        7590,
+        7631,
+        7336
+      ],
+      "folds": [
+        {
+          "candidate_scores": [
+            {
+              "candidate": "static",
+              "test_bits_per_word": 12.40033694869202,
+              "validation_bits_per_word": 11.373249295981605
+            },
+            {
+              "candidate": "line_cumulative",
+              "test_bits_per_word": 12.268424232928789,
+              "validation_bits_per_word": 11.25056116249475
+            },
+            {
+              "candidate": "rolling_8",
+              "test_bits_per_word": 12.210573109237751,
+              "validation_bits_per_word": 11.130566641142767
+            },
+            {
+              "candidate": "rolling_16",
+              "test_bits_per_word": 12.096050686768356,
+              "validation_bits_per_word": 10.988901157648472
+            },
+            {
+              "candidate": "rolling_32",
+              "test_bits_per_word": 11.944927093825738,
+              "validation_bits_per_word": 10.811175335193951
+            },
+            {
+              "candidate": "rolling_64",
+              "test_bits_per_word": 11.790180989894353,
+              "validation_bits_per_word": 10.624353893412986
+            },
+            {
+              "candidate": "rolling_128",
+              "test_bits_per_word": 11.658572422447103,
+              "validation_bits_per_word": 10.480311316984391
+            },
+            {
+              "candidate": "rolling_256",
+              "test_bits_per_word": 11.589479478655885,
+              "validation_bits_per_word": 10.411682391756303
+            },
+            {
+              "candidate": "folio_cumulative",
+              "test_bits_per_word": 11.571641533168572,
+              "validation_bits_per_word": 10.406021948928505
+            },
+            {
+              "candidate": "folio_alpha_4",
+              "test_bits_per_word": 11.760588889226995,
+              "validation_bits_per_word": 10.429478602730988
+            },
+            {
+              "candidate": "folio_alpha_8",
+              "test_bits_per_word": 11.612235683862563,
+              "validation_bits_per_word": 10.322805169114037
+            },
+            {
+              "candidate": "folio_alpha_16",
+              "test_bits_per_word": 11.55069706398496,
+              "validation_bits_per_word": 10.319176566094393
+            },
+            {
+              "candidate": "folio_alpha_32",
+              "test_bits_per_word": 11.571641533168572,
+              "validation_bits_per_word": 10.406021948928505
+            },
+            {
+              "candidate": "folio_alpha_64",
+              "test_bits_per_word": 11.660640291929447,
+              "validation_bits_per_word": 10.558657278504297
+            },
+            {
+              "candidate": "folio_alpha_128",
+              "test_bits_per_word": 11.792981386106794,
+              "validation_bits_per_word": 10.742817925506875
+            },
+            {
+              "candidate": "folio_alpha_256",
+              "test_bits_per_word": 11.939657398003119,
+              "validation_bits_per_word": 10.923938500132094
+            }
+          ],
+          "fold": 0,
+          "selected_candidate": "folio_alpha_16",
+          "test_blocks": [
+            "T"
+          ],
+          "train_blocks": [
+            "A",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "N",
+            "O",
+            "Q",
+            "S"
+          ],
+          "validation_blocks": [
+            "B",
+            "M"
+          ]
+        },
+        {
+          "candidate_scores": [
+            {
+              "candidate": "static",
+              "test_bits_per_word": 10.759737322440268,
+              "validation_bits_per_word": 11.913034478112305
+            },
+            {
+              "candidate": "line_cumulative",
+              "test_bits_per_word": 10.688177607571811,
+              "validation_bits_per_word": 11.86448916814813
+            },
+            {
+              "candidate": "rolling_8",
+              "test_bits_per_word": 10.615754993985576,
+              "validation_bits_per_word": 11.833870949910182
+            },
+            {
+              "candidate": "rolling_16",
+              "test_bits_per_word": 10.537303651810575,
+              "validation_bits_per_word": 11.807705364206285
+            },
+            {
+              "candidate": "rolling_32",
+              "test_bits_per_word": 10.436368447516099,
+              "validation_bits_per_word": 11.779687353614849
+            },
+            {
+              "candidate": "rolling_64",
+              "test_bits_per_word": 10.332745821468292,
+              "validation_bits_per_word": 11.747519648093922
+            },
+            {
+              "candidate": "rolling_128",
+              "test_bits_per_word": 10.255165199581585,
+              "validation_bits_per_word": 11.742303456347443
+            },
+            {
+              "candidate": "rolling_256",
+              "test_bits_per_word": 10.222368294550261,
+              "validation_bits_per_word": 11.736592323272836
+            },
+            {
+              "candidate": "folio_cumulative",
+              "test_bits_per_word": 10.221374595055666,
+              "validation_bits_per_word": 11.736285465734682
+            },
+            {
+              "candidate": "folio_alpha_4",
+              "test_bits_per_word": 10.393489911558673,
+              "validation_bits_per_word": 12.175329504930133
+            },
+            {
+              "candidate": "folio_alpha_8",
+              "test_bits_per_word": 10.25076656756213,
+              "validation_bits_per_word": 11.921051472114254
+            },
+            {
+              "candidate": "folio_alpha_16",
+              "test_bits_per_word": 10.197685438239667,
+              "validation_bits_per_word": 11.784538634497506
+            },
+            {
+              "candidate": "folio_alpha_32",
+              "test_bits_per_word": 10.221374595055666,
+              "validation_bits_per_word": 11.736285465734682
+            },
+            {
+              "candidate": "folio_alpha_64",
+              "test_bits_per_word": 10.300169039794755,
+              "validation_bits_per_word": 11.743360966473212
+            },
+            {
+              "candidate": "folio_alpha_128",
+              "test_bits_per_word": 10.406318415506854,
+              "validation_bits_per_word": 11.77663408696573
+            },
+            {
+              "candidate": "folio_alpha_256",
+              "test_bits_per_word": 10.513184006854274,
+              "validation_bits_per_word": 11.815470937207126
+            }
+          ],
+          "fold": 1,
+          "selected_candidate": "folio_alpha_32",
+          "test_blocks": [
+            "B",
+            "M"
+          ],
+          "train_blocks": [
+            "A",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "O",
+            "T"
+          ],
+          "validation_blocks": [
+            "C",
+            "D",
+            "E",
+            "N",
+            "Q",
+            "S"
+          ]
+        },
+        {
+          "candidate_scores": [
+            {
+              "candidate": "static",
+              "test_bits_per_word": 12.523146459137399,
+              "validation_bits_per_word": 13.219773908810673
+            },
+            {
+              "candidate": "line_cumulative",
+              "test_bits_per_word": 12.445975042007747,
+              "validation_bits_per_word": 13.129587780995982
+            },
+            {
+              "candidate": "rolling_8",
+              "test_bits_per_word": 12.393148130717215,
+              "validation_bits_per_word": 13.047817486302069
+            },
+            {
+              "candidate": "rolling_16",
+              "test_bits_per_word": 12.329946833146963,
+              "validation_bits_per_word": 12.965164278399767
+            },
+            {
+              "candidate": "rolling_32",
+              "test_bits_per_word": 12.253708142514888,
+              "validation_bits_per_word": 12.877677985697968
+            },
+            {
+              "candidate": "rolling_64",
+              "test_bits_per_word": 12.181962628479344,
+              "validation_bits_per_word": 12.803068242115863
+            },
+            {
+              "candidate": "rolling_128",
+              "test_bits_per_word": 12.16044323972227,
+              "validation_bits_per_word": 12.782333288899117
+            },
+            {
+              "candidate": "rolling_256",
+              "test_bits_per_word": 12.153365217938196,
+              "validation_bits_per_word": 12.774804562777588
+            },
+            {
+              "candidate": "folio_cumulative",
+              "test_bits_per_word": 12.152876102824523,
+              "validation_bits_per_word": 12.774261328951285
+            },
+            {
+              "candidate": "folio_alpha_4",
+              "test_bits_per_word": 12.470709152689356,
+              "validation_bits_per_word": 13.115603053160207
+            },
+            {
+              "candidate": "folio_alpha_8",
+              "test_bits_per_word": 12.247178474097957,
+              "validation_bits_per_word": 12.872522635788918
+            },
+            {
+              "candidate": "folio_alpha_16",
+              "test_bits_per_word": 12.152196879605775,
+              "validation_bits_per_word": 12.77069536035524
+            },
+            {
+              "candidate": "folio_alpha_32",
+              "test_bits_per_word": 12.152876102824523,
+              "validation_bits_per_word": 12.774261328951285
+            },
+            {
+              "candidate": "folio_alpha_64",
+              "test_bits_per_word": 12.210021738929663,
+              "validation_bits_per_word": 12.841211148885202
+            },
+            {
+              "candidate": "folio_alpha_128",
+              "test_bits_per_word": 12.287825101039815,
+              "validation_bits_per_word": 12.932891715102981
+            },
+            {
+              "candidate": "folio_alpha_256",
+              "test_bits_per_word": 12.361444412634144,
+              "validation_bits_per_word": 13.021130495249645
+            }
+          ],
+          "fold": 2,
+          "selected_candidate": "folio_alpha_16",
+          "test_blocks": [
+            "C",
+            "D",
+            "E",
+            "N",
+            "Q",
+            "S"
+          ],
+          "train_blocks": [
+            "B",
+            "M",
+            "T"
+          ],
+          "validation_blocks": [
+            "A",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "O"
+          ]
+        },
+        {
+          "candidate_scores": [
+            {
+              "candidate": "static",
+              "test_bits_per_word": 12.57069638687392,
+              "validation_bits_per_word": 11.94086710097331
+            },
+            {
+              "candidate": "line_cumulative",
+              "test_bits_per_word": 12.513093375834286,
+              "validation_bits_per_word": 11.861296477401957
+            },
+            {
+              "candidate": "rolling_8",
+              "test_bits_per_word": 12.468752887329904,
+              "validation_bits_per_word": 11.834790889573986
+            },
+            {
+              "candidate": "rolling_16",
+              "test_bits_per_word": 12.430853056915414,
+              "validation_bits_per_word": 11.774140509685939
+            },
+            {
+              "candidate": "rolling_32",
+              "test_bits_per_word": 12.397562495479571,
+              "validation_bits_per_word": 11.687401493615047
+            },
+            {
+              "candidate": "rolling_64",
+              "test_bits_per_word": 12.365113537962706,
+              "validation_bits_per_word": 11.595681019662917
+            },
+            {
+              "candidate": "rolling_128",
+              "test_bits_per_word": 12.358618189795788,
+              "validation_bits_per_word": 11.518069801289565
+            },
+            {
+              "candidate": "rolling_256",
+              "test_bits_per_word": 12.352658022112546,
+              "validation_bits_per_word": 11.480573126350512
+            },
+            {
+              "candidate": "folio_cumulative",
+              "test_bits_per_word": 12.352243615016294,
+              "validation_bits_per_word": 11.472294855817042
+            },
+            {
+              "candidate": "folio_alpha_4",
+              "test_bits_per_word": 12.827299529698221,
+              "validation_bits_per_word": 11.770999879417078
+            },
+            {
+              "candidate": "folio_alpha_8",
+              "test_bits_per_word": 12.550188676571098,
+              "validation_bits_per_word": 11.595765882636163
+            },
+            {
+              "candidate": "folio_alpha_16",
+              "test_bits_per_word": 12.402590565179194,
+              "validation_bits_per_word": 11.497767962851286
+            },
+            {
+              "candidate": "folio_alpha_32",
+              "test_bits_per_word": 12.352243615016294,
+              "validation_bits_per_word": 11.472294855817042
+            },
+            {
+              "candidate": "folio_alpha_64",
+              "test_bits_per_word": 12.36341428471802,
+              "validation_bits_per_word": 11.506563587273293
+            },
+            {
+              "candidate": "folio_alpha_128",
+              "test_bits_per_word": 12.404234729718178,
+              "validation_bits_per_word": 11.579901953831621
+            },
+            {
+              "candidate": "folio_alpha_256",
+              "test_bits_per_word": 12.451385001917203,
+              "validation_bits_per_word": 11.66865759637359
+            }
+          ],
+          "fold": 3,
+          "selected_candidate": "folio_alpha_32",
+          "test_blocks": [
+            "A",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "O"
+          ],
+          "train_blocks": [
+            "B",
+            "C",
+            "D",
+            "E",
+            "M",
+            "N",
+            "Q",
+            "S"
+          ],
+          "validation_blocks": [
+            "T"
+          ]
+        }
+      ],
+      "name": "VOYNICH",
+      "summary": {
+        "descriptive_best_pooled_alpha": "folio_alpha_16",
+        "folio_cumulative_gain_vs_static_bits_per_word": 0.5214909135543468,
+        "nested_selected_gain_vs_static_bits_per_word": 0.5283327889796717,
+        "residual_surprisal_order": {
+          "lag1_residual_correlation": 0.07603316111631919,
+          "metric": "lag-1 correlation of bits/character residualized by exact word length and line position",
+          "null_mean": 0.020676248981812084,
+          "stratified_shuffle_replicates": 400,
+          "two_sided_p": 0.0024937655860349127
+        },
+        "selected_candidate_counts": {
+          "folio_alpha_16": 2,
+          "folio_alpha_32": 2
+        }
+      }
+    },
+    {
+      "candidate_summary": {
+        "folio_alpha_128": {
+          "pooled_test_bits_per_word": 11.74263839759341,
+          "test_events": 33133
+        },
+        "folio_alpha_16": {
+          "pooled_test_bits_per_word": 11.85037311775067,
+          "test_events": 33133
+        },
+        "folio_alpha_256": {
+          "pooled_test_bits_per_word": 11.773501300548263,
+          "test_events": 33133
+        },
+        "folio_alpha_32": {
+          "pooled_test_bits_per_word": 11.75851743098383,
+          "test_events": 33133
+        },
+        "folio_alpha_4": {
+          "pooled_test_bits_per_word": 12.311798464563864,
+          "test_events": 33133
+        },
+        "folio_alpha_64": {
+          "pooled_test_bits_per_word": 11.730604761884397,
+          "test_events": 33133
+        },
+        "folio_alpha_8": {
+          "pooled_test_bits_per_word": 12.028842392382494,
+          "test_events": 33133
+        },
+        "folio_cumulative": {
+          "pooled_test_bits_per_word": 11.75851743098383,
+          "test_events": 33133
+        },
+        "line_cumulative": {
+          "pooled_test_bits_per_word": 11.888974492180333,
+          "test_events": 33133
+        },
+        "rolling_128": {
+          "pooled_test_bits_per_word": 11.783698244933557,
+          "test_events": 33133
+        },
+        "rolling_16": {
+          "pooled_test_bits_per_word": 11.871199487132213,
+          "test_events": 33133
+        },
+        "rolling_256": {
+          "pooled_test_bits_per_word": 11.764228944121033,
+          "test_events": 33133
+        },
+        "rolling_32": {
+          "pooled_test_bits_per_word": 11.850843742018055,
+          "test_events": 33133
+        },
+        "rolling_64": {
+          "pooled_test_bits_per_word": 11.816827189142263,
+          "test_events": 33133
+        },
+        "rolling_8": {
+          "pooled_test_bits_per_word": 11.884928727227583,
+          "test_events": 33133
+        },
+        "static": {
+          "pooled_test_bits_per_word": 11.893778971395376,
+          "test_events": 33133
+        }
+      },
+      "fold_assignment": {
+        "A": 3,
+        "B": 1,
+        "C": 2,
+        "D": 2,
+        "E": 2,
+        "F": 3,
+        "G": 3,
+        "H": 3,
+        "I": 3,
+        "J": 3,
+        "M": 1,
+        "N": 2,
+        "O": 3,
+        "Q": 2,
+        "S": 2,
+        "T": 0
+      },
+      "fold_event_loads": [
+        10576,
+        7590,
+        7631,
+        7336
+      ],
+      "folds": [
+        {
+          "candidate_scores": [
+            {
+              "candidate": "static",
+              "test_bits_per_word": 12.21198268945955,
+              "validation_bits_per_word": 11.342893286222582
+            },
+            {
+              "candidate": "line_cumulative",
+              "test_bits_per_word": 12.186194565886483,
+              "validation_bits_per_word": 11.299304371297975
+            },
+            {
+              "candidate": "rolling_8",
+              "test_bits_per_word": 12.164444126688956,
+              "validation_bits_per_word": 11.263404176533315
+            },
+            {
+              "candidate": "rolling_16",
+              "test_bits_per_word": 12.121072246707547,
+              "validation_bits_per_word": 11.201623565169154
+            },
+            {
+              "candidate": "rolling_32",
+              "test_bits_per_word": 12.065335234535972,
+              "validation_bits_per_word": 11.124384463355316
+            },
+            {
+              "candidate": "rolling_64",
+              "test_bits_per_word": 11.997735912045625,
+              "validation_bits_per_word": 11.021680476214488
+            },
+            {
+              "candidate": "rolling_128",
+              "test_bits_per_word": 11.927730024852375,
+              "validation_bits_per_word": 10.93744646918692
+            },
+            {
+              "candidate": "rolling_256",
+              "test_bits_per_word": 11.885523810740183,
+              "validation_bits_per_word": 10.887504616028766
+            },
+            {
+              "candidate": "folio_cumulative",
+              "test_bits_per_word": 11.873567076050515,
+              "validation_bits_per_word": 10.880428152014145
+            },
+            {
+              "candidate": "folio_alpha_4",
+              "test_bits_per_word": 12.313756265488559,
+              "validation_bits_per_word": 11.21624992505822
+            },
+            {
+              "candidate": "folio_alpha_8",
+              "test_bits_per_word": 12.08835803652827,
+              "validation_bits_per_word": 11.009265519830826
+            },
+            {
+              "candidate": "folio_alpha_16",
+              "test_bits_per_word": 11.943131122974014,
+              "validation_bits_per_word": 10.901468748637189
+            },
+            {
+              "candidate": "folio_alpha_32",
+              "test_bits_per_word": 11.873567076050515,
+              "validation_bits_per_word": 10.880428152014145
+            },
+            {
+              "candidate": "folio_alpha_64",
+              "test_bits_per_word": 11.867784202479758,
+              "validation_bits_per_word": 10.924717914755576
+            },
+            {
+              "candidate": "folio_alpha_128",
+              "test_bits_per_word": 11.906753634673779,
+              "validation_bits_per_word": 11.006310340221038
+            },
+            {
+              "candidate": "folio_alpha_256",
+              "test_bits_per_word": 11.968941744107516,
+              "validation_bits_per_word": 11.097974183105503
+            }
+          ],
+          "fold": 0,
+          "selected_candidate": "folio_alpha_32",
+          "test_blocks": [
+            "T"
+          ],
+          "train_blocks": [
+            "A",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "N",
+            "O",
+            "Q",
+            "S"
+          ],
+          "validation_blocks": [
+            "B",
+            "M"
+          ]
+        },
+        {
+          "candidate_scores": [
+            {
+              "candidate": "static",
+              "test_bits_per_word": 10.976440457715649,
+              "validation_bits_per_word": 11.830744309589864
+            },
+            {
+              "candidate": "line_cumulative",
+              "test_bits_per_word": 10.964293634839214,
+              "validation_bits_per_word": 11.856964574064955
+            },
+            {
+              "candidate": "rolling_8",
+              "test_bits_per_word": 10.95511913475624,
+              "validation_bits_per_word": 11.876863224390233
+            },
+            {
+              "candidate": "rolling_16",
+              "test_bits_per_word": 10.931834740901392,
+              "validation_bits_per_word": 11.900792707673661
+            },
+            {
+              "candidate": "rolling_32",
+              "test_bits_per_word": 10.90412878682224,
+              "validation_bits_per_word": 11.922387157219138
+            },
+            {
+              "candidate": "rolling_64",
+              "test_bits_per_word": 10.857852493995551,
+              "validation_bits_per_word": 11.934085846068793
+            },
+            {
+              "candidate": "rolling_128",
+              "test_bits_per_word": 10.817594898012416,
+              "validation_bits_per_word": 11.935180963384397
+            },
+            {
+              "candidate": "rolling_256",
+              "test_bits_per_word": 10.790214042865136,
+              "validation_bits_per_word": 11.936191501381941
+            },
+            {
+              "candidate": "folio_cumulative",
+              "test_bits_per_word": 10.785622879961295,
+              "validation_bits_per_word": 11.93403441014282
+            },
+            {
+              "candidate": "folio_alpha_4",
+              "test_bits_per_word": 11.218939885067362,
+              "validation_bits_per_word": 12.668042204401035
+            },
+            {
+              "candidate": "folio_alpha_8",
+              "test_bits_per_word": 10.98871515082077,
+              "validation_bits_per_word": 12.308810226926312
+            },
+            {
+              "candidate": "folio_alpha_16",
+              "test_bits_per_word": 10.848508305957578,
+              "validation_bits_per_word": 12.073528610114126
+            },
+            {
+              "candidate": "folio_alpha_32",
+              "test_bits_per_word": 10.785622879961295,
+              "validation_bits_per_word": 11.93403441014282
+            },
+            {
+              "candidate": "folio_alpha_64",
+              "test_bits_per_word": 10.781004788620633,
+              "validation_bits_per_word": 11.860837710236112
+            },
+            {
+              "candidate": "folio_alpha_128",
+              "test_bits_per_word": 10.81146519975289,
+              "validation_bits_per_word": 11.828654595963329
+            },
+            {
+              "candidate": "folio_alpha_256",
+              "test_bits_per_word": 10.855116952059587,
+              "validation_bits_per_word": 11.818706269951038
+            }
+          ],
+          "fold": 1,
+          "selected_candidate": "folio_alpha_256",
+          "test_blocks": [
+            "B",
+            "M"
+          ],
+          "train_blocks": [
+            "A",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "O",
+            "T"
+          ],
+          "validation_blocks": [
+            "C",
+            "D",
+            "E",
+            "N",
+            "Q",
+            "S"
+          ]
+        },
+        {
+          "candidate_scores": [
+            {
+              "candidate": "static",
+              "test_bits_per_word": 12.259621738844729,
+              "validation_bits_per_word": 12.46718168549434
+            },
+            {
+              "candidate": "line_cumulative",
+              "test_bits_per_word": 12.262953545783803,
+              "validation_bits_per_word": 12.473393244081862
+            },
+            {
+              "candidate": "rolling_8",
+              "test_bits_per_word": 12.266517707701253,
+              "validation_bits_per_word": 12.473538990472212
+            },
+            {
+              "candidate": "rolling_16",
+              "test_bits_per_word": 12.262076745403917,
+              "validation_bits_per_word": 12.471635649416749
+            },
+            {
+              "candidate": "rolling_32",
+              "test_bits_per_word": 12.253159649773957,
+              "validation_bits_per_word": 12.461683624690203
+            },
+            {
+              "candidate": "rolling_64",
+              "test_bits_per_word": 12.234222606853637,
+              "validation_bits_per_word": 12.441183733820957
+            },
+            {
+              "candidate": "rolling_128",
+              "test_bits_per_word": 12.222161355285111,
+              "validation_bits_per_word": 12.432484639236776
+            },
+            {
+              "candidate": "rolling_256",
+              "test_bits_per_word": 12.221772806199933,
+              "validation_bits_per_word": 12.431861760876057
+            },
+            {
+              "candidate": "folio_cumulative",
+              "test_bits_per_word": 12.21932960408693,
+              "validation_bits_per_word": 12.428284115636316
+            },
+            {
+              "candidate": "folio_alpha_4",
+              "test_bits_per_word": 12.865432800216347,
+              "validation_bits_per_word": 13.080122727234153
+            },
+            {
+              "candidate": "folio_alpha_8",
+              "test_bits_per_word": 12.528011274955094,
+              "validation_bits_per_word": 12.73900728196484
+            },
+            {
+              "candidate": "folio_alpha_16",
+              "test_bits_per_word": 12.322837063602606,
+              "validation_bits_per_word": 12.53234562552026
+            },
+            {
+              "candidate": "folio_alpha_32",
+              "test_bits_per_word": 12.21932960408693,
+              "validation_bits_per_word": 12.428284115636316
+            },
+            {
+              "candidate": "folio_alpha_64",
+              "test_bits_per_word": 12.183287405505444,
+              "validation_bits_per_word": 12.39208514661886
+            },
+            {
+              "candidate": "folio_alpha_128",
+              "test_bits_per_word": 12.184326969162933,
+              "validation_bits_per_word": 12.393289622011972
+            },
+            {
+              "candidate": "folio_alpha_256",
+              "test_bits_per_word": 12.200385055134536,
+              "validation_bits_per_word": 12.409606823308188
+            }
+          ],
+          "fold": 2,
+          "selected_candidate": "folio_alpha_64",
+          "test_blocks": [
+            "C",
+            "D",
+            "E",
+            "N",
+            "Q",
+            "S"
+          ],
+          "train_blocks": [
+            "B",
+            "M",
+            "T"
+          ],
+          "validation_blocks": [
+            "A",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "O"
+          ]
+        },
+        {
+          "candidate_scores": [
+            {
+              "candidate": "static",
+              "test_bits_per_word": 12.003584129271118,
+              "validation_bits_per_word": 11.914727818681166
+            },
+            {
+              "candidate": "line_cumulative",
+              "test_bits_per_word": 12.028163975502952,
+              "validation_bits_per_word": 11.923470116478091
+            },
+            {
+              "candidate": "rolling_8",
+              "test_bits_per_word": 12.047032657456521,
+              "validation_bits_per_word": 11.92287845459012
+            },
+            {
+              "candidate": "rolling_16",
+              "test_bits_per_word": 12.076262158990417,
+              "validation_bits_per_word": 11.917145781702908
+            },
+            {
+              "candidate": "rolling_32",
+              "test_bits_per_word": 12.102620158727639,
+              "validation_bits_per_word": 11.907152913060523
+            },
+            {
+              "candidate": "rolling_64",
+              "test_bits_per_word": 12.114016781588017,
+              "validation_bits_per_word": 11.885049250273573
+            },
+            {
+              "candidate": "rolling_128",
+              "test_bits_per_word": 12.119512353932649,
+              "validation_bits_per_word": 11.850131629530523
+            },
+            {
+              "candidate": "rolling_256",
+              "test_bits_per_word": 12.121159339383304,
+              "validation_bits_per_word": 11.82780015424678
+            },
+            {
+              "candidate": "folio_cumulative",
+              "test_bits_per_word": 12.119892417773086,
+              "validation_bits_per_word": 11.82137063254011
+            },
+            {
+              "candidate": "folio_alpha_4",
+              "test_bits_per_word": 12.863776013696189,
+              "validation_bits_per_word": 12.332895116682716
+            },
+            {
+              "candidate": "folio_alpha_8",
+              "test_bits_per_word": 12.49993979806083,
+              "validation_bits_per_word": 12.090620846138622
+            },
+            {
+              "candidate": "folio_alpha_16",
+              "test_bits_per_word": 12.261738015170444,
+              "validation_bits_per_word": 11.921814818495884
+            },
+            {
+              "candidate": "folio_alpha_32",
+              "test_bits_per_word": 12.119892417773086,
+              "validation_bits_per_word": 11.82137063254011
+            },
+            {
+              "candidate": "folio_alpha_64",
+              "test_bits_per_word": 12.044431476696722,
+              "validation_bits_per_word": 11.77837592435586
+            },
+            {
+              "candidate": "folio_alpha_128",
+              "test_bits_per_word": 12.010004310161642,
+              "validation_bits_per_word": 11.776669372848547
+            },
+            {
+              "candidate": "folio_alpha_256",
+              "test_bits_per_word": 11.99787550211568,
+              "validation_bits_per_word": 11.79854221638382
+            }
+          ],
+          "fold": 3,
+          "selected_candidate": "folio_alpha_128",
+          "test_blocks": [
+            "A",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "O"
+          ],
+          "train_blocks": [
+            "B",
+            "C",
+            "D",
+            "E",
+            "M",
+            "N",
+            "Q",
+            "S"
+          ],
+          "validation_blocks": [
+            "T"
+          ]
+        }
+      ],
+      "name": "SYNTHETIC_INDEPENDENT",
+      "summary": {
+        "descriptive_best_pooled_alpha": "folio_alpha_64",
+        "folio_cumulative_gain_vs_static_bits_per_word": 0.13526154041154648,
+        "nested_selected_gain_vs_static_bits_per_word": 0.15197349428197476,
+        "residual_surprisal_order": {
+          "lag1_residual_correlation": 0.013154191272512116,
+          "metric": "lag-1 correlation of bits/character residualized by exact word length and line position",
+          "null_mean": 0.0078315678557565,
+          "stratified_shuffle_replicates": 400,
+          "two_sided_p": 0.18204488778054864
+        },
+        "selected_candidate_counts": {
+          "folio_alpha_128": 1,
+          "folio_alpha_256": 1,
+          "folio_alpha_32": 1,
+          "folio_alpha_64": 1
+        }
+      }
+    },
+    {
+      "candidate_summary": {
+        "folio_alpha_128": {
+          "pooled_test_bits_per_word": 11.549513704554506,
+          "test_events": 33133
+        },
+        "folio_alpha_16": {
+          "pooled_test_bits_per_word": 11.520591379431682,
+          "test_events": 33133
+        },
+        "folio_alpha_256": {
+          "pooled_test_bits_per_word": 11.615791097142417,
+          "test_events": 33133
+        },
+        "folio_alpha_32": {
+          "pooled_test_bits_per_word": 11.477521443405932,
+          "test_events": 33133
+        },
+        "folio_alpha_4": {
+          "pooled_test_bits_per_word": 11.881987468218284,
+          "test_events": 33133
+        },
+        "folio_alpha_64": {
+          "pooled_test_bits_per_word": 11.495846764639234,
+          "test_events": 33133
+        },
+        "folio_alpha_8": {
+          "pooled_test_bits_per_word": 11.64929365355519,
+          "test_events": 33133
+        },
+        "folio_cumulative": {
+          "pooled_test_bits_per_word": 11.477521443405932,
+          "test_events": 33133
+        },
+        "line_cumulative": {
+          "pooled_test_bits_per_word": 11.753891767739663,
+          "test_events": 33133
+        },
+        "rolling_128": {
+          "pooled_test_bits_per_word": 11.480553717936406,
+          "test_events": 33133
+        },
+        "rolling_16": {
+          "pooled_test_bits_per_word": 11.588062258966557,
+          "test_events": 33133
+        },
+        "rolling_256": {
+          "pooled_test_bits_per_word": 11.479669976878538,
+          "test_events": 33133
+        },
+        "rolling_32": {
+          "pooled_test_bits_per_word": 11.465575828033629,
+          "test_events": 33133
+        },
+        "rolling_64": {
+          "pooled_test_bits_per_word": 11.467064044092275,
+          "test_events": 33133
+        },
+        "rolling_8": {
+          "pooled_test_bits_per_word": 11.68705888912417,
+          "test_events": 33133
+        },
+        "static": {
+          "pooled_test_bits_per_word": 11.833079195292976,
+          "test_events": 33133
+        }
+      },
+      "fold_assignment": {
+        "A": 3,
+        "B": 1,
+        "C": 2,
+        "D": 2,
+        "E": 2,
+        "F": 3,
+        "G": 3,
+        "H": 3,
+        "I": 3,
+        "J": 3,
+        "M": 1,
+        "N": 2,
+        "O": 3,
+        "Q": 2,
+        "S": 2,
+        "T": 0
+      },
+      "fold_event_loads": [
+        10576,
+        7590,
+        7631,
+        7336
+      ],
+      "folds": [
+        {
+          "candidate_scores": [
+            {
+              "candidate": "static",
+              "test_bits_per_word": 12.208544910419198,
+              "validation_bits_per_word": 11.271965152752243
+            },
+            {
+              "candidate": "line_cumulative",
+              "test_bits_per_word": 12.083919291018178,
+              "validation_bits_per_word": 11.171513394166162
+            },
+            {
+              "candidate": "rolling_8",
+              "test_bits_per_word": 11.998517550835825,
+              "validation_bits_per_word": 11.07344834900791
+            },
+            {
+              "candidate": "rolling_16",
+              "test_bits_per_word": 11.864212945278673,
+              "validation_bits_per_word": 10.938122231162996
+            },
+            {
+              "candidate": "rolling_32",
+              "test_bits_per_word": 11.69180056173146,
+              "validation_bits_per_word": 10.761703337214763
+            },
+            {
+              "candidate": "rolling_64",
+              "test_bits_per_word": 11.67309763112002,
+              "validation_bits_per_word": 10.696752187816658
+            },
+            {
+              "candidate": "rolling_128",
+              "test_bits_per_word": 11.682369433650761,
+              "validation_bits_per_word": 10.667927715690881
+            },
+            {
+              "candidate": "rolling_256",
+              "test_bits_per_word": 11.674153127623583,
+              "validation_bits_per_word": 10.644381237821213
+            },
+            {
+              "candidate": "folio_cumulative",
+              "test_bits_per_word": 11.667515239757154,
+              "validation_bits_per_word": 10.642728012248917
+            },
+            {
+              "candidate": "folio_alpha_4",
+              "test_bits_per_word": 12.027703333157389,
+              "validation_bits_per_word": 10.864644406844903
+            },
+            {
+              "candidate": "folio_alpha_8",
+              "test_bits_per_word": 11.828083948126418,
+              "validation_bits_per_word": 10.698162754618648
+            },
+            {
+              "candidate": "folio_alpha_16",
+              "test_bits_per_word": 11.709534609676632,
+              "validation_bits_per_word": 10.628474457167167
+            },
+            {
+              "candidate": "folio_alpha_32",
+              "test_bits_per_word": 11.667515239757154,
+              "validation_bits_per_word": 10.642728012248917
+            },
+            {
+              "candidate": "folio_alpha_64",
+              "test_bits_per_word": 11.689698533691216,
+              "validation_bits_per_word": 10.719196381960414
+            },
+            {
+              "candidate": "folio_alpha_128",
+              "test_bits_per_word": 11.756520303664812,
+              "validation_bits_per_word": 10.82981480258402
+            },
+            {
+              "candidate": "folio_alpha_256",
+              "test_bits_per_word": 11.846067704661364,
+              "validation_bits_per_word": 10.94726089406127
+            }
+          ],
+          "fold": 0,
+          "selected_candidate": "folio_alpha_16",
+          "test_blocks": [
+            "T"
+          ],
+          "train_blocks": [
+            "A",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "N",
+            "O",
+            "Q",
+            "S"
+          ],
+          "validation_blocks": [
+            "B",
+            "M"
+          ]
+        },
+        {
+          "candidate_scores": [
+            {
+              "candidate": "static",
+              "test_bits_per_word": 10.856089215381713,
+              "validation_bits_per_word": 11.873248710916961
+            },
+            {
+              "candidate": "line_cumulative",
+              "test_bits_per_word": 10.788827293150506,
+              "validation_bits_per_word": 11.817883188240351
+            },
+            {
+              "candidate": "rolling_8",
+              "test_bits_per_word": 10.724845118937758,
+              "validation_bits_per_word": 11.773455961584725
+            },
+            {
+              "candidate": "rolling_16",
+              "test_bits_per_word": 10.631005306675453,
+              "validation_bits_per_word": 11.715079301562447
+            },
+            {
+              "candidate": "rolling_32",
+              "test_bits_per_word": 10.50943011700616,
+              "validation_bits_per_word": 11.64355279399174
+            },
+            {
+              "candidate": "rolling_64",
+              "test_bits_per_word": 10.49867768067799,
+              "validation_bits_per_word": 11.679281109049384
+            },
+            {
+              "candidate": "rolling_128",
+              "test_bits_per_word": 10.515415539663142,
+              "validation_bits_per_word": 11.699268496706328
+            },
+            {
+              "candidate": "rolling_256",
+              "test_bits_per_word": 10.516696915086749,
+              "validation_bits_per_word": 11.699578346272464
+            },
+            {
+              "candidate": "folio_cumulative",
+              "test_bits_per_word": 10.518330788333417,
+              "validation_bits_per_word": 11.697724905777804
+            },
+            {
+              "candidate": "folio_alpha_4",
+              "test_bits_per_word": 10.839697659208342,
+              "validation_bits_per_word": 12.20209984066502
+            },
+            {
+              "candidate": "folio_alpha_8",
+              "test_bits_per_word": 10.649321859225749,
+              "validation_bits_per_word": 11.920407459254426
+            },
+            {
+              "candidate": "folio_alpha_16",
+              "test_bits_per_word": 10.546591140803741,
+              "validation_bits_per_word": 11.762202804241857
+            },
+            {
+              "candidate": "folio_alpha_32",
+              "test_bits_per_word": 10.518330788333417,
+              "validation_bits_per_word": 11.697724905777804
+            },
+            {
+              "candidate": "folio_alpha_64",
+              "test_bits_per_word": 10.544983776887758,
+              "validation_bits_per_word": 11.69418290821602
+            },
+            {
+              "candidate": "folio_alpha_128",
+              "test_bits_per_word": 10.603160250080867,
+              "validation_bits_per_word": 11.722172463273193
+            },
+            {
+              "candidate": "folio_alpha_256",
+              "test_bits_per_word": 10.670860621420143,
+              "validation_bits_per_word": 11.759853283275667
+            }
+          ],
+          "fold": 1,
+          "selected_candidate": "rolling_32",
+          "test_blocks": [
+            "B",
+            "M"
+          ],
+          "train_blocks": [
+            "A",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "O",
+            "T"
+          ],
+          "validation_blocks": [
+            "C",
+            "D",
+            "E",
+            "N",
+            "Q",
+            "S"
+          ]
+        },
+        {
+          "candidate_scores": [
+            {
+              "candidate": "static",
+              "test_bits_per_word": 12.266267063752283,
+              "validation_bits_per_word": 12.244062925509454
+            },
+            {
+              "candidate": "line_cumulative",
+              "test_bits_per_word": 12.189601094704622,
+              "validation_bits_per_word": 12.195531126131556
+            },
+            {
+              "candidate": "rolling_8",
+              "test_bits_per_word": 12.12548769133245,
+              "validation_bits_per_word": 12.1317570251708
+            },
+            {
+              "candidate": "rolling_16",
+              "test_bits_per_word": 12.04040298308547,
+              "validation_bits_per_word": 12.037691129719956
+            },
+            {
+              "candidate": "rolling_32",
+              "test_bits_per_word": 11.936881108563448,
+              "validation_bits_per_word": 11.933824399814402
+            },
+            {
+              "candidate": "rolling_64",
+              "test_bits_per_word": 11.952471528672724,
+              "validation_bits_per_word": 11.935916643417801
+            },
+            {
+              "candidate": "rolling_128",
+              "test_bits_per_word": 11.962554128065582,
+              "validation_bits_per_word": 11.943869396587774
+            },
+            {
+              "candidate": "rolling_256",
+              "test_bits_per_word": 11.96205316784522,
+              "validation_bits_per_word": 11.949231079304587
+            },
+            {
+              "candidate": "folio_cumulative",
+              "test_bits_per_word": 11.959867025302634,
+              "validation_bits_per_word": 11.949950913755416
+            },
+            {
+              "candidate": "folio_alpha_4",
+              "test_bits_per_word": 12.391027863128997,
+              "validation_bits_per_word": 12.398467210493477
+            },
+            {
+              "candidate": "folio_alpha_8",
+              "test_bits_per_word": 12.126793419895222,
+              "validation_bits_per_word": 12.12553936976679
+            },
+            {
+              "candidate": "folio_alpha_16",
+              "test_bits_per_word": 11.993549251951087,
+              "validation_bits_per_word": 11.986643957383741
+            },
+            {
+              "candidate": "folio_alpha_32",
+              "test_bits_per_word": 11.959867025302634,
+              "validation_bits_per_word": 11.949950913755416
+            },
+            {
+              "candidate": "folio_alpha_64",
+              "test_bits_per_word": 11.989131444679796,
+              "validation_bits_per_word": 11.978134237345046
+            },
+            {
+              "candidate": "folio_alpha_128",
+              "test_bits_per_word": 12.047493496242573,
+              "validation_bits_per_word": 12.036341501588822
+            },
+            {
+              "candidate": "folio_alpha_256",
+              "test_bits_per_word": 12.109951985439212,
+              "validation_bits_per_word": 12.098405023181387
+            }
+          ],
+          "fold": 2,
+          "selected_candidate": "rolling_32",
+          "test_blocks": [
+            "C",
+            "D",
+            "E",
+            "N",
+            "Q",
+            "S"
+          ],
+          "train_blocks": [
+            "B",
+            "M",
+            "T"
+          ],
+          "validation_blocks": [
+            "A",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "O"
+          ]
+        },
+        {
+          "candidate_scores": [
+            {
+              "candidate": "static",
+              "test_bits_per_word": 11.851995760197365,
+              "validation_bits_per_word": 11.86247118854808
+            },
+            {
+              "candidate": "line_cumulative",
+              "test_bits_per_word": 11.823353381952936,
+              "validation_bits_per_word": 11.781594307313057
+            },
+            {
+              "candidate": "rolling_8",
+              "test_bits_per_word": 11.777512204255174,
+              "validation_bits_per_word": 11.721680112400135
+            },
+            {
+              "candidate": "rolling_16",
+              "test_bits_per_word": 11.70961086088874,
+              "validation_bits_per_word": 11.629682697509757
+            },
+            {
+              "candidate": "rolling_32",
+              "test_bits_per_word": 11.638430594580404,
+              "validation_bits_per_word": 11.506165895901589
+            },
+            {
+              "candidate": "rolling_64",
+              "test_bits_per_word": 11.667022709178916,
+              "validation_bits_per_word": 11.534114596921388
+            },
+            {
+              "candidate": "rolling_128",
+              "test_bits_per_word": 11.686776541546463,
+              "validation_bits_per_word": 11.585043954140616
+            },
+            {
+              "candidate": "rolling_256",
+              "test_bits_per_word": 11.6938255938978,
+              "validation_bits_per_word": 11.603056716655058
+            },
+            {
+              "candidate": "folio_cumulative",
+              "test_bits_per_word": 11.694274925730918,
+              "validation_bits_per_word": 11.603835532577216
+            },
+            {
+              "candidate": "folio_alpha_4",
+              "test_bits_per_word": 12.220782643957904,
+              "validation_bits_per_word": 12.041597431810697
+            },
+            {
+              "candidate": "folio_alpha_8",
+              "test_bits_per_word": 11.92943256394701,
+              "validation_bits_per_word": 11.823654010027992
+            },
+            {
+              "candidate": "folio_alpha_16",
+              "test_bits_per_word": 11.763946979611589,
+              "validation_bits_per_word": 11.67941395469027
+            },
+            {
+              "candidate": "folio_alpha_32",
+              "test_bits_per_word": 11.694274925730918,
+              "validation_bits_per_word": 11.603835532577216
+            },
+            {
+              "candidate": "folio_alpha_64",
+              "test_bits_per_word": 11.687043380526688,
+              "validation_bits_per_word": 11.58581407867863
+            },
+            {
+              "candidate": "folio_alpha_128",
+              "test_bits_per_word": 11.712195975123292,
+              "validation_bits_per_word": 11.608920784898595
+            },
+            {
+              "candidate": "folio_alpha_256",
+              "test_bits_per_word": 11.74742620769569,
+              "validation_bits_per_word": 11.655112670784561
+            }
+          ],
+          "fold": 3,
+          "selected_candidate": "rolling_32",
+          "test_blocks": [
+            "A",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "O"
+          ],
+          "train_blocks": [
+            "B",
+            "C",
+            "D",
+            "E",
+            "M",
+            "N",
+            "Q",
+            "S"
+          ],
+          "validation_blocks": [
+            "T"
+          ]
+        }
+      ],
+      "name": "SYNTHETIC_ROLLING_32",
+      "summary": {
+        "descriptive_best_pooled_alpha": "folio_alpha_32",
+        "folio_cumulative_gain_vs_static_bits_per_word": 0.3555577518870443,
+        "nested_selected_gain_vs_static_bits_per_word": 0.36184268784401546,
+        "residual_surprisal_order": {
+          "lag1_residual_correlation": 0.02023083264138606,
+          "metric": "lag-1 correlation of bits/character residualized by exact word length and line position",
+          "null_mean": 0.011349105427926666,
+          "stratified_shuffle_replicates": 400,
+          "two_sided_p": 0.05486284289276808
+        },
+        "selected_candidate_counts": {
+          "folio_alpha_16": 1,
+          "rolling_32": 3
+        }
+      }
+    },
+    {
+      "candidate_summary": {
+        "folio_alpha_128": {
+          "pooled_test_bits_per_word": 18.92314482137086,
+          "test_events": 33133
+        },
+        "folio_alpha_16": {
+          "pooled_test_bits_per_word": 18.635519568983437,
+          "test_events": 33133
+        },
+        "folio_alpha_256": {
+          "pooled_test_bits_per_word": 19.038344137311128,
+          "test_events": 33133
+        },
+        "folio_alpha_32": {
+          "pooled_test_bits_per_word": 18.682612824235964,
+          "test_events": 33133
+        },
+        "folio_alpha_4": {
+          "pooled_test_bits_per_word": 19.03286277052912,
+          "test_events": 33133
+        },
+        "folio_alpha_64": {
+          "pooled_test_bits_per_word": 18.795497375645184,
+          "test_events": 33133
+        },
+        "folio_alpha_8": {
+          "pooled_test_bits_per_word": 18.72633238846903,
+          "test_events": 33133
+        },
+        "folio_cumulative": {
+          "pooled_test_bits_per_word": 18.682612824235964,
+          "test_events": 33133
+        },
+        "line_cumulative": {
+          "pooled_test_bits_per_word": 19.30900720894848,
+          "test_events": 33133
+        },
+        "rolling_128": {
+          "pooled_test_bits_per_word": 18.780933143745678,
+          "test_events": 33133
+        },
+        "rolling_16": {
+          "pooled_test_bits_per_word": 19.171121466234453,
+          "test_events": 33133
+        },
+        "rolling_256": {
+          "pooled_test_bits_per_word": 18.697781083460985,
+          "test_events": 33133
+        },
+        "rolling_32": {
+          "pooled_test_bits_per_word": 19.041136429331303,
+          "test_events": 33133
+        },
+        "rolling_64": {
+          "pooled_test_bits_per_word": 18.89564197551138,
+          "test_events": 33133
+        },
+        "rolling_8": {
+          "pooled_test_bits_per_word": 19.262984957134126,
+          "test_events": 33133
+        },
+        "static": {
+          "pooled_test_bits_per_word": 19.34108034757538,
+          "test_events": 33133
+        }
+      },
+      "fold_assignment": {
+        "A": 3,
+        "B": 1,
+        "C": 2,
+        "D": 2,
+        "E": 2,
+        "F": 3,
+        "G": 3,
+        "H": 3,
+        "I": 3,
+        "J": 3,
+        "M": 1,
+        "N": 2,
+        "O": 3,
+        "Q": 2,
+        "S": 2,
+        "T": 0
+      },
+      "fold_event_loads": [
+        10576,
+        7590,
+        7631,
+        7336
+      ],
+      "folds": [
+        {
+          "candidate_scores": [
+            {
+              "candidate": "static",
+              "test_bits_per_word": 20.314922529732947,
+              "validation_bits_per_word": 21.03421121002368
+            },
+            {
+              "candidate": "line_cumulative",
+              "test_bits_per_word": 20.24467467805116,
+              "validation_bits_per_word": 20.95668392566797
+            },
+            {
+              "candidate": "rolling_8",
+              "test_bits_per_word": 20.16690680645011,
+              "validation_bits_per_word": 20.823012351675327
+            },
+            {
+              "candidate": "rolling_16",
+              "test_bits_per_word": 19.980407870582148,
+              "validation_bits_per_word": 20.560422528193868
+            },
+            {
+              "candidate": "rolling_32",
+              "test_bits_per_word": 19.70224204001026,
+              "validation_bits_per_word": 20.183513818506945
+            },
+            {
+              "candidate": "rolling_64",
+              "test_bits_per_word": 19.38958467631514,
+              "validation_bits_per_word": 19.77665513388396
+            },
+            {
+              "candidate": "rolling_128",
+              "test_bits_per_word": 19.128043723638573,
+              "validation_bits_per_word": 19.43583442261863
+            },
+            {
+              "candidate": "rolling_256",
+              "test_bits_per_word": 18.941559321638714,
+              "validation_bits_per_word": 19.220476787985053
+            },
+            {
+              "candidate": "folio_cumulative",
+              "test_bits_per_word": 18.90277106137825,
+              "validation_bits_per_word": 19.190566266236196
+            },
+            {
+              "candidate": "folio_alpha_4",
+              "test_bits_per_word": 19.037405122210902,
+              "validation_bits_per_word": 18.92621013678691
+            },
+            {
+              "candidate": "folio_alpha_8",
+              "test_bits_per_word": 18.786338875320727,
+              "validation_bits_per_word": 18.800036985613414
+            },
+            {
+              "candidate": "folio_alpha_16",
+              "test_bits_per_word": 18.761670345086742,
+              "validation_bits_per_word": 18.916107666355018
+            },
+            {
+              "candidate": "folio_alpha_32",
+              "test_bits_per_word": 18.90277106137825,
+              "validation_bits_per_word": 19.190566266236196
+            },
+            {
+              "candidate": "folio_alpha_64",
+              "test_bits_per_word": 19.133277961500976,
+              "validation_bits_per_word": 19.533877830630978
+            },
+            {
+              "candidate": "folio_alpha_128",
+              "test_bits_per_word": 19.385920769384356,
+              "validation_bits_per_word": 19.87639931562254
+            },
+            {
+              "candidate": "folio_alpha_256",
+              "test_bits_per_word": 19.618555066441225,
+              "validation_bits_per_word": 20.17846382167833
+            }
+          ],
+          "fold": 0,
+          "selected_candidate": "folio_alpha_8",
+          "test_blocks": [
+            "T"
+          ],
+          "train_blocks": [
+            "A",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "N",
+            "O",
+            "Q",
+            "S"
+          ],
+          "validation_blocks": [
+            "B",
+            "M"
+          ]
+        },
+        {
+          "candidate_scores": [
+            {
+              "candidate": "static",
+              "test_bits_per_word": 18.523879672026812,
+              "validation_bits_per_word": 18.691487562759733
+            },
+            {
+              "candidate": "line_cumulative",
+              "test_bits_per_word": 18.510711150026193,
+              "validation_bits_per_word": 18.67523993053383
+            },
+            {
+              "candidate": "rolling_8",
+              "test_bits_per_word": 18.466926459367045,
+              "validation_bits_per_word": 18.654685308248553
+            },
+            {
+              "candidate": "rolling_16",
+              "test_bits_per_word": 18.38376684845014,
+              "validation_bits_per_word": 18.631614213659635
+            },
+            {
+              "candidate": "rolling_32",
+              "test_bits_per_word": 18.26055440036117,
+              "validation_bits_per_word": 18.608803155263676
+            },
+            {
+              "candidate": "rolling_64",
+              "test_bits_per_word": 18.12324547004683,
+              "validation_bits_per_word": 18.58456508942889
+            },
+            {
+              "candidate": "rolling_128",
+              "test_bits_per_word": 18.00672717082795,
+              "validation_bits_per_word": 18.580909960438085
+            },
+            {
+              "candidate": "rolling_256",
+              "test_bits_per_word": 17.921518840471965,
+              "validation_bits_per_word": 18.56927339292959
+            },
+            {
+              "candidate": "folio_cumulative",
+              "test_bits_per_word": 17.911154962348213,
+              "validation_bits_per_word": 18.568658977867535
+            },
+            {
+              "candidate": "folio_alpha_4",
+              "test_bits_per_word": 18.084941208478615,
+              "validation_bits_per_word": 19.197796385628564
+            },
+            {
+              "candidate": "folio_alpha_8",
+              "test_bits_per_word": 17.85027677785201,
+              "validation_bits_per_word": 18.80526464288647
+            },
+            {
+              "candidate": "folio_alpha_16",
+              "test_bits_per_word": 17.81869285621172,
+              "validation_bits_per_word": 18.62395581498963
+            },
+            {
+              "candidate": "folio_alpha_32",
+              "test_bits_per_word": 17.911154962348213,
+              "validation_bits_per_word": 18.568658977867535
+            },
+            {
+              "candidate": "folio_alpha_64",
+              "test_bits_per_word": 18.05178027491165,
+              "validation_bits_per_word": 18.574343702982958
+            },
+            {
+              "candidate": "folio_alpha_128",
+              "test_bits_per_word": 18.18939503886832,
+              "validation_bits_per_word": 18.601735900310658
+            },
+            {
+              "candidate": "folio_alpha_256",
+              "test_bits_per_word": 18.30165512063499,
+              "validation_bits_per_word": 18.631049766917588
+            }
+          ],
+          "fold": 1,
+          "selected_candidate": "folio_alpha_32",
+          "test_blocks": [
+            "B",
+            "M"
+          ],
+          "train_blocks": [
+            "A",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "O",
+            "T"
+          ],
+          "validation_blocks": [
+            "C",
+            "D",
+            "E",
+            "N",
+            "Q",
+            "S"
+          ]
+        },
+        {
+          "candidate_scores": [
+            {
+              "candidate": "static",
+              "test_bits_per_word": 19.123895022452608,
+              "validation_bits_per_word": 19.15656466372071
+            },
+            {
+              "candidate": "line_cumulative",
+              "test_bits_per_word": 19.097977295240305,
+              "validation_bits_per_word": 19.147661299453034
+            },
+            {
+              "candidate": "rolling_8",
+              "test_bits_per_word": 19.070977019352338,
+              "validation_bits_per_word": 19.11913615515581
+            },
+            {
+              "candidate": "rolling_16",
+              "test_bits_per_word": 19.034588120796506,
+              "validation_bits_per_word": 19.090244000906498
+            },
+            {
+              "candidate": "rolling_32",
+              "test_bits_per_word": 18.997846881512604,
+              "validation_bits_per_word": 19.06509101653844
+            },
+            {
+              "candidate": "rolling_64",
+              "test_bits_per_word": 18.959894547513745,
+              "validation_bits_per_word": 19.036223487155933
+            },
+            {
+              "candidate": "rolling_128",
+              "test_bits_per_word": 18.94872250781032,
+              "validation_bits_per_word": 19.025323047638654
+            },
+            {
+              "candidate": "rolling_256",
+              "test_bits_per_word": 18.93351151291716,
+              "validation_bits_per_word": 19.0219598035232
+            },
+            {
+              "candidate": "folio_cumulative",
+              "test_bits_per_word": 18.931845070649338,
+              "validation_bits_per_word": 19.021774943236828
+            },
+            {
+              "candidate": "folio_alpha_4",
+              "test_bits_per_word": 19.47249915567287,
+              "validation_bits_per_word": 19.622148583088716
+            },
+            {
+              "candidate": "folio_alpha_8",
+              "test_bits_per_word": 19.10928318314336,
+              "validation_bits_per_word": 19.235749586386987
+            },
+            {
+              "candidate": "folio_alpha_16",
+              "test_bits_per_word": 18.958826615566824,
+              "validation_bits_per_word": 19.066191525161813
+            },
+            {
+              "candidate": "folio_alpha_32",
+              "test_bits_per_word": 18.931845070649338,
+              "validation_bits_per_word": 19.021774943236828
+            },
+            {
+              "candidate": "folio_alpha_64",
+              "test_bits_per_word": 18.960716695176668,
+              "validation_bits_per_word": 19.034574882734518
+            },
+            {
+              "candidate": "folio_alpha_128",
+              "test_bits_per_word": 19.00543225536431,
+              "validation_bits_per_word": 19.065643034773924
+            },
+            {
+              "candidate": "folio_alpha_256",
+              "test_bits_per_word": 19.046673527296004,
+              "validation_bits_per_word": 19.09656505584048
+            }
+          ],
+          "fold": 2,
+          "selected_candidate": "folio_alpha_32",
+          "test_blocks": [
+            "C",
+            "D",
+            "E",
+            "N",
+            "Q",
+            "S"
+          ],
+          "train_blocks": [
+            "B",
+            "M",
+            "T"
+          ],
+          "validation_blocks": [
+            "A",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "O"
+          ]
+        },
+        {
+          "candidate_scores": [
+            {
+              "candidate": "static",
+              "test_bits_per_word": 19.00854755380864,
+              "validation_bits_per_word": 18.7411444041105
+            },
+            {
+              "candidate": "line_cumulative",
+              "test_bits_per_word": 19.00554717698246,
+              "validation_bits_per_word": 18.7266439071421
+            },
+            {
+              "candidate": "rolling_8",
+              "test_bits_per_word": 18.983189304584936,
+              "validation_bits_per_word": 18.701827163324946
+            },
+            {
+              "candidate": "rolling_16",
+              "test_bits_per_word": 18.961047106316066,
+              "validation_bits_per_word": 18.640921209186125
+            },
+            {
+              "candidate": "rolling_32",
+              "test_bits_per_word": 18.940687574471326,
+              "validation_bits_per_word": 18.54529815012962
+            },
+            {
+              "candidate": "rolling_64",
+              "test_bits_per_word": 18.915849185956503,
+              "validation_bits_per_word": 18.431440866702243
+            },
+            {
+              "candidate": "rolling_128",
+              "test_bits_per_word": 18.906993831357603,
+              "validation_bits_per_word": 18.321143925531974
+            },
+            {
+              "candidate": "rolling_256",
+              "test_bits_per_word": 18.904265934897587,
+              "validation_bits_per_word": 18.24152710298647
+            },
+            {
+              "candidate": "folio_cumulative",
+              "test_bits_per_word": 18.90413414148388,
+              "validation_bits_per_word": 18.232115799752485
+            },
+            {
+              "candidate": "folio_alpha_4",
+              "test_bits_per_word": 19.54974110879859,
+              "validation_bits_per_word": 18.607602238309564
+            },
+            {
+              "candidate": "folio_alpha_8",
+              "test_bits_per_word": 19.14786128234576,
+              "validation_bits_per_word": 18.302742153880782
+            },
+            {
+              "candidate": "folio_alpha_16",
+              "test_bits_per_word": 18.96245360243367,
+              "validation_bits_per_word": 18.198265265637488
+            },
+            {
+              "candidate": "folio_alpha_32",
+              "test_bits_per_word": 18.90413414148388,
+              "validation_bits_per_word": 18.232115799752485
+            },
+            {
+              "candidate": "folio_alpha_64",
+              "test_bits_per_word": 18.9061376007286,
+              "validation_bits_per_word": 18.333370876110155
+            },
+            {
+              "candidate": "folio_alpha_128",
+              "test_bits_per_word": 18.929538907275948,
+              "validation_bits_per_word": 18.44634621206084
+            },
+            {
+              "candidate": "folio_alpha_256",
+              "test_bits_per_word": 18.955410287136296,
+              "validation_bits_per_word": 18.542563246949477
+            }
+          ],
+          "fold": 3,
+          "selected_candidate": "folio_alpha_16",
+          "test_blocks": [
+            "A",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "O"
+          ],
+          "train_blocks": [
+            "B",
+            "C",
+            "D",
+            "E",
+            "M",
+            "N",
+            "Q",
+            "S"
+          ],
+          "validation_blocks": [
+            "T"
+          ]
+        }
+      ],
+      "name": "LATIN_REFLOW",
+      "summary": {
+        "descriptive_best_pooled_alpha": "folio_alpha_16",
+        "folio_cumulative_gain_vs_static_bits_per_word": 0.6584675233394179,
+        "nested_selected_gain_vs_static_bits_per_word": 0.6827199373742451,
+        "residual_surprisal_order": {
+          "lag1_residual_correlation": 0.07312192847391158,
+          "metric": "lag-1 correlation of bits/character residualized by exact word length and line position",
+          "null_mean": 0.002960890926051574,
+          "stratified_shuffle_replicates": 400,
+          "two_sided_p": 0.0024937655860349127
+        },
+        "selected_candidate_counts": {
+          "folio_alpha_16": 1,
+          "folio_alpha_32": 2,
+          "folio_alpha_8": 1
+        }
+      }
+    }
+  ],
+  "parameters": {
+    "cache_backoff": 32.0,
+    "cumulative_candidates": [
+      "line",
+      "folio"
+    ],
+    "folio_dirichlet_concentrations": [
+      4.0,
+      8.0,
+      16.0,
+      32.0,
+      64.0,
+      128.0,
+      256.0
+    ],
+    "planted_horizon_words": 32,
+    "rolling_horizons_words": [
+      8,
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "split": "test=fold f; validation=fold f+1; fit=other two folds; complete repository quire blocks"
+  },
+  "seed": 20260724,
+  "summary": {
+    "controls_pass": true,
+    "voynich": {
+      "descriptive_best_pooled_alpha": "folio_alpha_16",
+      "folio_cumulative_gain_vs_static_bits_per_word": 0.5214909135543468,
+      "nested_selected_gain_vs_static_bits_per_word": 0.5283327889796717,
+      "residual_surprisal_order": {
+        "lag1_residual_correlation": 0.07603316111631919,
+        "metric": "lag-1 correlation of bits/character residualized by exact word length and line position",
+        "null_mean": 0.020676248981812084,
+        "stratified_shuffle_replicates": 400,
+        "two_sided_p": 0.0024937655860349127
+      },
+      "selected_candidate_counts": {
+        "folio_alpha_16": 2,
+        "folio_alpha_32": 2
+      }
+    }
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "coordinate_system": "normalized source-canvas [left, top, right, bottom]",
+  "method": "manual panel assignment from the pinned Yale/PDF contact sheet; adjacent panel crops overlap at folds so ink crossing a seam is not cut",
+  "pages": [
+    {
+      "pdf_page_index": 120,
+      "source_label": "67r",
+      "targets": [
+        {"folio": "f67r1", "crop": [0.0, 0.0, 0.51, 1.0]},
+        {"folio": "f67r2", "crop": [0.49, 0.0, 1.0, 1.0]}
+      ]
+    },
+    {
+      "pdf_page_index": 121,
+      "source_label": "67v",
+      "targets": [
+        {"folio": "f67v1", "crop": [0.0, 0.0, 0.51, 1.0]},
+        {"folio": "f67v2", "crop": [0.49, 0.0, 1.0, 1.0]}
+      ]
+    },
+    {
+      "pdf_page_index": 122,
+      "source_label": "68r",
+      "targets": [
+        {"folio": "f68r1", "crop": [0.0, 0.0, 0.35, 1.0]},
+        {"folio": "f68r2", "crop": [0.325, 0.0, 0.675, 1.0]},
+        {"folio": "f68r3", "crop": [0.65, 0.0, 1.0, 1.0]}
+      ]
+    },
+    {
+      "pdf_page_index": 123,
+      "source_label": "68v",
+      "targets": [
+        {"folio": "f68v1", "crop": [0.0, 0.0, 0.35, 1.0]},
+        {"folio": "f68v2", "crop": [0.325, 0.0, 0.675, 1.0]},
+        {"folio": "f68v3", "crop": [0.65, 0.0, 1.0, 1.0]}
+      ]
+    },
+    {
+      "pdf_page_index": 125,
+      "source_label": "69v and 70r",
+      "targets": [
+        {"folio": "f69v", "crop": [0.0, 0.0, 0.35, 1.0]},
+        {"folio": "f70r1", "crop": [0.325, 0.0, 0.675, 1.0]},
+        {"folio": "f70r2", "crop": [0.65, 0.0, 1.0, 1.0]}
+      ]
+    },
+    {
+      "pdf_page_index": 126,
+      "source_label": "70v (part)",
+      "targets": [
+        {"folio": "f70v1", "crop": [0.0, 0.0, 1.0, 1.0]}
+      ]
+    },
+    {
+      "pdf_page_index": 127,
+      "source_label": "70v (part)",
+      "targets": [
+        {"folio": "f70v2", "crop": [0.0, 0.0, 1.0, 1.0]}
+      ]
+    },
+    {
+      "pdf_page_index": 129,
+      "source_label": "71v and 72r",
+      "targets": [
+        {"folio": "f71v", "crop": [0.0, 0.0, 0.265, 1.0]},
+        {"folio": "f72r1", "crop": [0.235, 0.0, 0.515, 1.0]},
+        {"folio": "f72r2", "crop": [0.485, 0.0, 0.765, 1.0]},
+        {"folio": "f72r3", "crop": [0.735, 0.0, 1.0, 1.0]}
+      ]
+    },
+    {
+      "pdf_page_index": 130,
+      "source_label": "72v (part)",
+      "targets": [
+        {"folio": "f72v1", "crop": [0.0, 0.0, 0.51, 1.0]},
+        {"folio": "f72v2", "crop": [0.49, 0.0, 1.0, 1.0]}
+      ]
+    },
+    {
+      "pdf_page_index": 131,
+      "source_label": "72v (part)",
+      "targets": [
+        {"folio": "f72v3", "crop": [0.0, 0.0, 1.0, 1.0]}
+      ]
+    },
+    {
+      "pdf_page_index": 154,
+      "source_label": "85r (part) (part of 85-86 foldout)",
+      "targets": [
+        {"folio": "f85r1", "crop": [0.0, 0.0, 1.0, 1.0]}
+      ]
+    },
+    {
+      "pdf_page_index": 155,
+      "source_label": "85r (part) 86v (part) (part of 85-86 foldout)",
+      "targets": [
+        {"folio": "f85r2", "crop": [0.0, 0.0, 0.35, 1.0]},
+        {"folio": "f86v3", "crop": [0.325, 0.0, 0.675, 1.0]},
+        {"folio": "f86v4", "crop": [0.65, 0.0, 1.0, 1.0]}
+      ]
+    },
+    {
+      "pdf_page_index": 156,
+      "source_label": "86v (part) (part of 85-86 foldout)",
+      "targets": [
+        {"folio": "f86v5", "crop": [0.0, 0.0, 0.51, 1.0]},
+        {"folio": "f86v6", "crop": [0.49, 0.0, 1.0, 1.0]}
+      ]
+    },
+    {
+      "pdf_page_index": 161,
+      "source_label": "88v and 89r",
+      "targets": [
+        {"folio": "f88v", "crop": [0.0, 0.0, 0.35, 1.0]},
+        {"folio": "f89r1", "crop": [0.325, 0.0, 0.675, 1.0]},
+        {"folio": "f89r2", "crop": [0.65, 0.0, 1.0, 1.0]}
+      ]
+    },
+    {
+      "pdf_page_index": 162,
+      "source_label": "89v (part)",
+      "targets": [
+        {"folio": "f89v1", "crop": [0.0, 0.0, 1.0, 1.0]}
+      ]
+    },
+    {
+      "pdf_page_index": 163,
+      "source_label": "89v (part) and 90r",
+      "targets": [
+        {"folio": "f89v2", "crop": [0.0, 0.0, 0.51, 1.0]},
+        {"folio": "f90r1", "crop": [0.49, 0.0, 1.0, 1.0]}
+      ]
+    },
+    {
+      "pdf_page_index": 164,
+      "source_label": "90r",
+      "targets": [
+        {"folio": "f90r2", "crop": [0.0, 0.0, 1.0, 1.0]}
+      ]
+    },
+    {
+      "pdf_page_index": 165,
+      "source_label": "90v (part)",
+      "note": "The transcription divides one photographed panel; both units share the complete visual field.",
+      "targets": [
+        {"folio": "f90v1", "crop": [0.0, 0.0, 1.0, 1.0], "shared_canvas": true},
+        {"folio": "f90v2", "crop": [0.0, 0.0, 1.0, 1.0], "shared_canvas": true}
+      ]
+    },
+    {
+      "pdf_page_index": 169,
+      "source_label": "94v and 95r",
+      "targets": [
+        {"folio": "f94v", "crop": [0.0, 0.0, 0.35, 1.0]},
+        {"folio": "f95r1", "crop": [0.325, 0.0, 0.675, 1.0]},
+        {"folio": "f95r2", "crop": [0.65, 0.0, 1.0, 1.0]}
+      ]
+    },
+    {
+      "pdf_page_index": 170,
+      "source_label": "95v (part)",
+      "targets": [
+        {"folio": "f95v1", "crop": [0.0, 0.0, 1.0, 1.0]}
+      ]
+    },
+    {
+      "pdf_page_index": 171,
+      "source_label": "95v",
+      "targets": [
+        {"folio": "f95v2", "crop": [0.0, 0.0, 1.0, 1.0]}
+      ]
+    },
+    {
+      "pdf_page_index": 177,
+      "source_label": "100v and 101r",
+      "targets": [
+        {"folio": "f100v", "crop": [0.0, 0.0, 0.51, 1.0]},
+        {"folio": "f101r", "crop": [0.49, 0.0, 1.0, 1.0]}
+      ]
+    },
+    {
+      "pdf_page_index": 178,
+      "source_label": "101v (part)",
+      "targets": [
+        {"folio": "f101v", "crop": [0.0, 0.0, 1.0, 1.0]}
+      ]
+    },
+    {
+      "pdf_page_index": 179,
+      "source_label": "101v (part) and 102r",
+      "note": "The first panel repeats the already mapped 101v field and is excluded.",
+      "targets": [
+        {"folio": "f102r1", "crop": [0.325, 0.0, 0.675, 1.0]},
+        {"folio": "f102r2", "crop": [0.65, 0.0, 1.0, 1.0]}
+      ]
+    },
+    {
+      "pdf_page_index": 180,
+      "source_label": "102v (part)",
+      "targets": [
+        {"folio": "f102v1", "crop": [0.0, 0.0, 1.0, 1.0]}
+      ]
+    },
+    {
+      "pdf_page_index": 181,
+      "source_label": "102v (part)",
+      "targets": [
+        {"folio": "f102v2", "crop": [0.0, 0.0, 1.0, 1.0]}
+      ]
+    }
+  ],
+  "shared_canvas_groups": [["f90v1", "f90v2"]]
+}

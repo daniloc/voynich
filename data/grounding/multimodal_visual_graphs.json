@@ -1,0 +1,1488 @@
+{
+  "built": "2026-07-23",
+  "method": "shared resolution-normalized pixel descriptors and explicit domain-specific graph construction",
+  "pixel_schema": [
+    "ink_fraction",
+    "red_fraction",
+    "green_fraction",
+    "blue_fraction",
+    "gold_fraction",
+    "edge_density",
+    "contrast",
+    "entropy",
+    "horizontal_symmetry",
+    "vertical_symmetry",
+    "ink_centroid_x",
+    "ink_centroid_y",
+    "large_component_fraction",
+    "largest_component_fraction",
+    "large_component_count",
+    "large_component_centroid_x",
+    "large_component_centroid_y",
+    "large_horizontal_symmetry",
+    "large_vertical_symmetry"
+  ],
+  "graph_schema": [
+    "node_count",
+    "axis_count",
+    "branch_point_count",
+    "terminal_group_count",
+    "cycle_rank",
+    "hierarchy_depth",
+    "radial_layer_count",
+    "horizontal_axis",
+    "repetition_count"
+  ],
+  "records": [
+    {
+      "domain": "herbal",
+      "id": "m0_a",
+      "folio": "f4r",
+      "source": "images/derived/plants_montage_0.png",
+      "source_crop": [
+        8,
+        30,
+        568,
+        806
+      ],
+      "panel_image": "images/crops/multimodal_graphs/m0_a_panel.jpg",
+      "panel_size": [
+        560,
+        776
+      ],
+      "visual": {
+        "ink_fraction": 0.26454926,
+        "red_fraction": 0.25271606,
+        "green_fraction": 0.01046371,
+        "blue_fraction": 0.0001564,
+        "gold_fraction": 0.65732956,
+        "edge_density": 0.07948187,
+        "contrast": 0.18812829,
+        "entropy": 2.36586098,
+        "horizontal_symmetry": 0.49267969,
+        "vertical_symmetry": 0.74417754,
+        "ink_centroid_x": 0.29246407,
+        "ink_centroid_y": -0.00013462,
+        "large_component_fraction": 0.20399475,
+        "largest_component_fraction": 0.19098663,
+        "large_component_count": 4.0,
+        "large_component_centroid_x": 0.30640437,
+        "large_component_centroid_y": 0.04237949,
+        "large_horizontal_symmetry": 0.73310852,
+        "large_vertical_symmetry": 0.91722107
+      },
+      "graph": {
+        "node_count": 4,
+        "axis_count": 2,
+        "branch_point_count": 0,
+        "terminal_group_count": 1,
+        "cycle_rank": 0,
+        "hierarchy_depth": 4,
+        "radial_layer_count": 0,
+        "horizontal_axis": 0,
+        "repetition_count": 1
+      },
+      "graph_provenance": "coarse_organ_tags",
+      "tags": {
+        "root": "taproot",
+        "stem": "single_erect",
+        "leaf": "lanceolate_drooping",
+        "infl": "none_leafy"
+      }
+    },
+    {
+      "domain": "herbal",
+      "id": "m0_b",
+      "folio": "f6r",
+      "source": "images/derived/plants_montage_0.png",
+      "source_crop": [
+        576,
+        30,
+        1136,
+        806
+      ],
+      "panel_image": "images/crops/multimodal_graphs/m0_b_panel.jpg",
+      "panel_size": [
+        560,
+        776
+      ],
+      "visual": {
+        "ink_fraction": 0.32229233,
+        "red_fraction": 0.19299316,
+        "green_fraction": 0.07995987,
+        "blue_fraction": 6.866e-05,
+        "gold_fraction": 0.60224533,
+        "edge_density": 0.08796898,
+        "contrast": 0.19967923,
+        "entropy": 2.54637636,
+        "horizontal_symmetry": 0.4672016,
+        "vertical_symmetry": 0.71607921,
+        "ink_centroid_x": 0.25406395,
+        "ink_centroid_y": -0.0018499,
+        "large_component_fraction": 0.29489899,
+        "largest_component_fraction": 0.29489899,
+        "large_component_count": 1.0,
+        "large_component_centroid_x": 0.21928212,
+        "large_component_centroid_y": -0.00171413,
+        "large_horizontal_symmetry": 0.64381409,
+        "large_vertical_symmetry": 0.82070923
+      },
+      "graph": {
+        "node_count": 11,
+        "axis_count": 4,
+        "branch_point_count": 1,
+        "terminal_group_count": 6,
+        "cycle_rank": 0,
+        "hierarchy_depth": 4,
+        "radial_layer_count": 0,
+        "horizontal_axis": 0,
+        "repetition_count": 4
+      },
+      "graph_provenance": "coarse_organ_tags",
+      "tags": {
+        "root": "fibrous_thin",
+        "stem": "single_erect",
+        "leaf": "pinnate_fern",
+        "infl": "berry_pair"
+      }
+    },
+    {
+      "domain": "herbal",
+      "id": "m0_c",
+      "folio": "f9r",
+      "source": "images/derived/plants_montage_0.png",
+      "source_crop": [
+        8,
+        836,
+        568,
+        1612
+      ],
+      "panel_image": "images/crops/multimodal_graphs/m0_c_panel.jpg",
+      "panel_size": [
+        560,
+        776
+      ],
+      "visual": {
+        "ink_fraction": 0.3254509,
+        "red_fraction": 0.52805328,
+        "green_fraction": 0.06726456,
+        "blue_fraction": 3.81e-06,
+        "gold_fraction": 0.64578629,
+        "edge_density": 0.1044769,
+        "contrast": 0.19634408,
+        "entropy": 2.72185081,
+        "horizontal_symmetry": 0.58539322,
+        "vertical_symmetry": 0.69435387,
+        "ink_centroid_x": 0.18766685,
+        "ink_centroid_y": 0.13655196,
+        "large_component_fraction": 0.30200577,
+        "largest_component_fraction": 0.29924011,
+        "large_component_count": 2.0,
+        "large_component_centroid_x": 0.153086,
+        "large_component_centroid_y": 0.1816351,
+        "large_horizontal_symmetry": 0.7252121,
+        "large_vertical_symmetry": 0.72837067
+      },
+      "graph": {
+        "node_count": 7,
+        "axis_count": 3,
+        "branch_point_count": 3,
+        "terminal_group_count": 3,
+        "cycle_rank": 0,
+        "hierarchy_depth": 4,
+        "radial_layer_count": 0,
+        "horizontal_axis": 0,
+        "repetition_count": 3
+      },
+      "graph_provenance": "coarse_organ_tags",
+      "tags": {
+        "root": "taproot_branched",
+        "stem": "branching",
+        "leaf": "palmate_lobed",
+        "infl": "none_leafy"
+      }
+    },
+    {
+      "domain": "herbal",
+      "id": "m0_d",
+      "folio": "f11r",
+      "source": "images/derived/plants_montage_0.png",
+      "source_crop": [
+        576,
+        836,
+        1136,
+        1612
+      ],
+      "panel_image": "images/crops/multimodal_graphs/m0_d_panel.jpg",
+      "panel_size": [
+        560,
+        776
+      ],
+      "visual": {
+        "ink_fraction": 0.29086685,
+        "red_fraction": 0.18701553,
+        "green_fraction": 0.0158577,
+        "blue_fraction": 0.00495911,
+        "gold_fraction": 0.61569214,
+        "edge_density": 0.09802891,
+        "contrast": 0.19610277,
+        "entropy": 2.36281688,
+        "horizontal_symmetry": 0.51506582,
+        "vertical_symmetry": 0.70283129,
+        "ink_centroid_x": 0.25547268,
+        "ink_centroid_y": -0.03324583,
+        "large_component_fraction": 0.26871872,
+        "largest_component_fraction": 0.25312805,
+        "large_component_count": 2.0,
+        "large_component_centroid_x": 0.19144459,
+        "large_component_centroid_y": -0.05301292,
+        "large_horizontal_symmetry": 0.68857574,
+        "large_vertical_symmetry": 0.77718353
+      },
+      "graph": {
+        "node_count": 10,
+        "axis_count": 6,
+        "branch_point_count": 3,
+        "terminal_group_count": 3,
+        "cycle_rank": 0,
+        "hierarchy_depth": 4,
+        "radial_layer_count": 0,
+        "horizontal_axis": 0,
+        "repetition_count": 3
+      },
+      "graph_provenance": "coarse_organ_tags",
+      "tags": {
+        "root": "fibrous_dense",
+        "stem": "multi_radiating",
+        "leaf": "none_small",
+        "infl": "composite_blue_cluster"
+      }
+    },
+    {
+      "domain": "herbal",
+      "id": "m1_a",
+      "folio": "f15r",
+      "source": "images/derived/plants_montage_1.png",
+      "source_crop": [
+        8,
+        30,
+        568,
+        806
+      ],
+      "panel_image": "images/crops/multimodal_graphs/m1_a_panel.jpg",
+      "panel_size": [
+        560,
+        776
+      ],
+      "visual": {
+        "ink_fraction": 0.28754044,
+        "red_fraction": 0.1361618,
+        "green_fraction": 0.04210663,
+        "blue_fraction": 0.0005188,
+        "gold_fraction": 0.60796356,
+        "edge_density": 0.09811873,
+        "contrast": 0.19745634,
+        "entropy": 2.43135837,
+        "horizontal_symmetry": 0.49821538,
+        "vertical_symmetry": 0.72183778,
+        "ink_centroid_x": 0.22041158,
+        "ink_centroid_y": 0.06143621,
+        "large_component_fraction": 0.24431229,
+        "largest_component_fraction": 0.24431229,
+        "large_component_count": 1.0,
+        "large_component_centroid_x": 0.15904647,
+        "large_component_centroid_y": 0.13064961,
+        "large_horizontal_symmetry": 0.74022675,
+        "large_vertical_symmetry": 0.78562164
+      },
+      "graph": {
+        "node_count": 10,
+        "axis_count": 2,
+        "branch_point_count": 0,
+        "terminal_group_count": 7,
+        "cycle_rank": 0,
+        "hierarchy_depth": 4,
+        "radial_layer_count": 0,
+        "horizontal_axis": 0,
+        "repetition_count": 4
+      },
+      "graph_provenance": "coarse_organ_tags",
+      "tags": {
+        "root": "taproot_red",
+        "stem": "single_erect",
+        "leaf": "pinnate_fern",
+        "infl": "umbel"
+      }
+    },
+    {
+      "domain": "herbal",
+      "id": "m1_b",
+      "folio": "f18r",
+      "source": "images/derived/plants_montage_1.png",
+      "source_crop": [
+        576,
+        30,
+        1136,
+        806
+      ],
+      "panel_image": "images/crops/multimodal_graphs/m1_b_panel.jpg",
+      "panel_size": [
+        560,
+        776
+      ],
+      "visual": {
+        "ink_fraction": 0.30821609,
+        "red_fraction": 0.14542389,
+        "green_fraction": 0.06492233,
+        "blue_fraction": 0.00362396,
+        "gold_fraction": 0.59947968,
+        "edge_density": 0.08380664,
+        "contrast": 0.19322202,
+        "entropy": 2.50459676,
+        "horizontal_symmetry": 0.4900283,
+        "vertical_symmetry": 0.75507007,
+        "ink_centroid_x": 0.2515933,
+        "ink_centroid_y": -0.05987421,
+        "large_component_fraction": 0.2798996,
+        "largest_component_fraction": 0.2798996,
+        "large_component_count": 1.0,
+        "large_component_centroid_x": 0.24198796,
+        "large_component_centroid_y": -0.05373238,
+        "large_horizontal_symmetry": 0.63542175,
+        "large_vertical_symmetry": 0.84690857
+      },
+      "graph": {
+        "node_count": 6,
+        "axis_count": 2,
+        "branch_point_count": 0,
+        "terminal_group_count": 3,
+        "cycle_rank": 0,
+        "hierarchy_depth": 4,
+        "radial_layer_count": 0,
+        "horizontal_axis": 0,
+        "repetition_count": 2
+      },
+      "graph_provenance": "coarse_organ_tags",
+      "tags": {
+        "root": "taproot",
+        "stem": "single_erect",
+        "leaf": "ovate_paired",
+        "infl": "composite_blue_head"
+      }
+    },
+    {
+      "domain": "herbal",
+      "id": "m1_c",
+      "folio": "f20r",
+      "source": "images/derived/plants_montage_1.png",
+      "source_crop": [
+        8,
+        836,
+        568,
+        1612
+      ],
+      "panel_image": "images/crops/multimodal_graphs/m1_c_panel.jpg",
+      "panel_size": [
+        560,
+        776
+      ],
+      "visual": {
+        "ink_fraction": 0.27960205,
+        "red_fraction": 0.17535782,
+        "green_fraction": 0.0106163,
+        "blue_fraction": 0.00058746,
+        "gold_fraction": 0.6424408,
+        "edge_density": 0.08273262,
+        "contrast": 0.18774121,
+        "entropy": 2.3647695,
+        "horizontal_symmetry": 0.51242571,
+        "vertical_symmetry": 0.75436588,
+        "ink_centroid_x": 0.27481333,
+        "ink_centroid_y": 0.01276311,
+        "large_component_fraction": 0.24541473,
+        "largest_component_fraction": 0.2419014,
+        "large_component_count": 2.0,
+        "large_component_centroid_x": 0.22744749,
+        "large_component_centroid_y": 0.08793407,
+        "large_horizontal_symmetry": 0.73628235,
+        "large_vertical_symmetry": 0.84353638
+      },
+      "graph": {
+        "node_count": 8,
+        "axis_count": 5,
+        "branch_point_count": 3,
+        "terminal_group_count": 2,
+        "cycle_rank": 0,
+        "hierarchy_depth": 4,
+        "radial_layer_count": 0,
+        "horizontal_axis": 0,
+        "repetition_count": 1
+      },
+      "graph_provenance": "coarse_organ_tags",
+      "tags": {
+        "root": "fibrous_thin",
+        "stem": "branching",
+        "leaf": "small_oval",
+        "infl": "spike_red"
+      }
+    },
+    {
+      "domain": "herbal",
+      "id": "m1_d",
+      "folio": "f23r",
+      "source": "images/derived/plants_montage_1.png",
+      "source_crop": [
+        576,
+        836,
+        1136,
+        1612
+      ],
+      "panel_image": "images/crops/multimodal_graphs/m1_d_panel.jpg",
+      "panel_size": [
+        560,
+        776
+      ],
+      "visual": {
+        "ink_fraction": 0.31209564,
+        "red_fraction": 0.15882874,
+        "green_fraction": 0.05624008,
+        "blue_fraction": 0.00222778,
+        "gold_fraction": 0.61049271,
+        "edge_density": 0.12560581,
+        "contrast": 0.2026002,
+        "entropy": 2.52366341,
+        "horizontal_symmetry": 0.47877983,
+        "vertical_symmetry": 0.73617524,
+        "ink_centroid_x": 0.25255441,
+        "ink_centroid_y": -0.01563874,
+        "large_component_fraction": 0.27801895,
+        "largest_component_fraction": 0.23051834,
+        "large_component_count": 8.0,
+        "large_component_centroid_x": 0.20379888,
+        "large_component_centroid_y": 0.03591043,
+        "large_horizontal_symmetry": 0.68152618,
+        "large_vertical_symmetry": 0.8134079
+      },
+      "graph": {
+        "node_count": 11,
+        "axis_count": 4,
+        "branch_point_count": 2,
+        "terminal_group_count": 6,
+        "cycle_rank": 0,
+        "hierarchy_depth": 4,
+        "radial_layer_count": 0,
+        "horizontal_axis": 1,
+        "repetition_count": 3
+      },
+      "graph_provenance": "coarse_organ_tags",
+      "tags": {
+        "root": "rhizome_horizontal",
+        "stem": "multi_radiating",
+        "leaf": "palmate_lobed",
+        "infl": "composite_blue_cluster"
+      }
+    },
+    {
+      "domain": "herbal",
+      "id": "m2_a",
+      "folio": "f31r",
+      "source": "images/derived/plants_montage_2.png",
+      "source_crop": [
+        8,
+        30,
+        568,
+        806
+      ],
+      "panel_image": "images/crops/multimodal_graphs/m2_a_panel.jpg",
+      "panel_size": [
+        560,
+        776
+      ],
+      "visual": {
+        "ink_fraction": 0.3019104,
+        "red_fraction": 0.15595245,
+        "green_fraction": 0.06536102,
+        "blue_fraction": 0.0,
+        "gold_fraction": 0.59033585,
+        "edge_density": 0.11725248,
+        "contrast": 0.19458784,
+        "entropy": 2.59109207,
+        "horizontal_symmetry": 0.48094499,
+        "vertical_symmetry": 0.70481376,
+        "ink_centroid_x": 0.22703455,
+        "ink_centroid_y": 0.05541289,
+        "large_component_fraction": 0.27976608,
+        "largest_component_fraction": 0.27627945,
+        "large_component_count": 2.0,
+        "large_component_centroid_x": 0.19760619,
+        "large_component_centroid_y": 0.11318153,
+        "large_horizontal_symmetry": 0.68508148,
+        "large_vertical_symmetry": 0.80312347
+      },
+      "graph": {
+        "node_count": 8,
+        "axis_count": 2,
+        "branch_point_count": 1,
+        "terminal_group_count": 5,
+        "cycle_rank": 0,
+        "hierarchy_depth": 4,
+        "radial_layer_count": 0,
+        "horizontal_axis": 0,
+        "repetition_count": 3
+      },
+      "graph_provenance": "coarse_organ_tags",
+      "tags": {
+        "root": "taproot_red_forked",
+        "stem": "single_erect",
+        "leaf": "ovate_paired",
+        "infl": "composite_white_cluster"
+      }
+    },
+    {
+      "domain": "herbal",
+      "id": "m2_b",
+      "folio": "f35r",
+      "source": "images/derived/plants_montage_2.png",
+      "source_crop": [
+        576,
+        30,
+        1136,
+        806
+      ],
+      "panel_image": "images/crops/multimodal_graphs/m2_b_panel.jpg",
+      "panel_size": [
+        560,
+        776
+      ],
+      "visual": {
+        "ink_fraction": 0.32339859,
+        "red_fraction": 0.20303345,
+        "green_fraction": 0.02110291,
+        "blue_fraction": 0.00264359,
+        "gold_fraction": 0.62067032,
+        "edge_density": 0.08423473,
+        "contrast": 0.18677308,
+        "entropy": 2.57424165,
+        "horizontal_symmetry": 0.53141346,
+        "vertical_symmetry": 0.72094033,
+        "ink_centroid_x": 0.24265235,
+        "ink_centroid_y": -0.08781229,
+        "large_component_fraction": 0.30536652,
+        "largest_component_fraction": 0.19181061,
+        "large_component_count": 5.0,
+        "large_component_centroid_x": 0.16225534,
+        "large_component_centroid_y": -0.10108086,
+        "large_horizontal_symmetry": 0.68634033,
+        "large_vertical_symmetry": 0.77679443
+      },
+      "graph": {
+        "node_count": 4,
+        "axis_count": 2,
+        "branch_point_count": 0,
+        "terminal_group_count": 1,
+        "cycle_rank": 0,
+        "hierarchy_depth": 4,
+        "radial_layer_count": 0,
+        "horizontal_axis": 0,
+        "repetition_count": 1
+      },
+      "graph_provenance": "coarse_organ_tags",
+      "tags": {
+        "root": "taproot_red",
+        "stem": "single_erect",
+        "leaf": "basal_brown_mass",
+        "infl": "composite_blue_head"
+      }
+    },
+    {
+      "domain": "herbal",
+      "id": "m2_c",
+      "folio": "f43r",
+      "source": "images/derived/plants_montage_2.png",
+      "source_crop": [
+        8,
+        836,
+        568,
+        1612
+      ],
+      "panel_image": "images/crops/multimodal_graphs/m2_c_panel.jpg",
+      "panel_size": [
+        560,
+        776
+      ],
+      "visual": {
+        "ink_fraction": 0.32147598,
+        "red_fraction": 0.20240402,
+        "green_fraction": 0.01602173,
+        "blue_fraction": 0.00090408,
+        "gold_fraction": 0.69570541,
+        "edge_density": 0.14216151,
+        "contrast": 0.18641287,
+        "entropy": 2.67366245,
+        "horizontal_symmetry": 0.54980381,
+        "vertical_symmetry": 0.73825584,
+        "ink_centroid_x": 0.24122275,
+        "ink_centroid_y": 0.0454849,
+        "large_component_fraction": 0.27205658,
+        "largest_component_fraction": 0.26111221,
+        "large_component_count": 3.0,
+        "large_component_centroid_x": 0.20070433,
+        "large_component_centroid_y": 0.1326359,
+        "large_horizontal_symmetry": 0.71284485,
+        "large_vertical_symmetry": 0.81846619
+      },
+      "graph": {
+        "node_count": 13,
+        "axis_count": 6,
+        "branch_point_count": 3,
+        "terminal_group_count": 6,
+        "cycle_rank": 0,
+        "hierarchy_depth": 4,
+        "radial_layer_count": 0,
+        "horizontal_axis": 0,
+        "repetition_count": 3
+      },
+      "graph_provenance": "coarse_organ_tags",
+      "tags": {
+        "root": "fibrous_dense_red",
+        "stem": "multi_radiating",
+        "leaf": "palmate_lobed",
+        "infl": "composite_white_cluster"
+      }
+    },
+    {
+      "domain": "herbal",
+      "id": "m2_d",
+      "folio": "f52r",
+      "source": "images/derived/plants_montage_2.png",
+      "source_crop": [
+        576,
+        836,
+        1136,
+        1612
+      ],
+      "panel_image": "images/crops/multimodal_graphs/m2_d_panel.jpg",
+      "panel_size": [
+        560,
+        776
+      ],
+      "visual": {
+        "ink_fraction": 0.34162521,
+        "red_fraction": 0.17050552,
+        "green_fraction": 0.07448578,
+        "blue_fraction": 0.00038528,
+        "gold_fraction": 0.58329773,
+        "edge_density": 0.08230071,
+        "contrast": 0.18461017,
+        "entropy": 2.57918781,
+        "horizontal_symmetry": 0.56175917,
+        "vertical_symmetry": 0.74208476,
+        "ink_centroid_x": 0.21485881,
+        "ink_centroid_y": 0.06729785,
+        "large_component_fraction": 0.31893158,
+        "largest_component_fraction": 0.25757599,
+        "large_component_count": 5.0,
+        "large_component_centroid_x": 0.16198811,
+        "large_component_centroid_y": 0.10886156,
+        "large_horizontal_symmetry": 0.68742371,
+        "large_vertical_symmetry": 0.7989502
+      },
+      "graph": {
+        "node_count": 8,
+        "axis_count": 3,
+        "branch_point_count": 2,
+        "terminal_group_count": 4,
+        "cycle_rank": 0,
+        "hierarchy_depth": 4,
+        "radial_layer_count": 0,
+        "horizontal_axis": 0,
+        "repetition_count": 3
+      },
+      "graph_provenance": "coarse_organ_tags",
+      "tags": {
+        "root": "taproot_red_heart",
+        "stem": "branching",
+        "leaf": "lanceolate",
+        "infl": "composite_blue_cluster"
+      }
+    },
+    {
+      "domain": "herbal",
+      "id": "r016_f8",
+      "folio": "f8r",
+      "source": "images/facsimile/raw_016.png",
+      "source_crop": null,
+      "panel_image": "images/crops/multimodal_graphs/r016_f8_panel.jpg",
+      "panel_size": [
+        1101,
+        1536
+      ],
+      "visual": {
+        "ink_fraction": 0.28709793,
+        "red_fraction": 0.1977272,
+        "green_fraction": 0.0495224,
+        "blue_fraction": 5.722e-05,
+        "gold_fraction": 0.6356926,
+        "edge_density": 0.0774523,
+        "contrast": 0.19407192,
+        "entropy": 2.36800097,
+        "horizontal_symmetry": 0.48630406,
+        "vertical_symmetry": 0.74362812,
+        "ink_centroid_x": 0.25113041,
+        "ink_centroid_y": -0.05704666,
+        "large_component_fraction": 0.25023651,
+        "largest_component_fraction": 0.2458992,
+        "large_component_count": 2.0,
+        "large_component_centroid_x": 0.22489815,
+        "large_component_centroid_y": -0.08010142,
+        "large_horizontal_symmetry": 0.68882751,
+        "large_vertical_symmetry": 0.82211304
+      },
+      "graph": {
+        "node_count": 6,
+        "axis_count": 4,
+        "branch_point_count": 1,
+        "terminal_group_count": 1,
+        "cycle_rank": 0,
+        "hierarchy_depth": 4,
+        "radial_layer_count": 0,
+        "horizontal_axis": 0,
+        "repetition_count": 1
+      },
+      "graph_provenance": "coarse_organ_tags",
+      "tags": {
+        "root": "fibrous_thin",
+        "stem": "single_erect",
+        "leaf": "hastate_single_large",
+        "infl": "none_leafy"
+      }
+    },
+    {
+      "domain": "herbal",
+      "id": "r026_f16",
+      "folio": "f16r",
+      "source": "images/facsimile/raw_026.png",
+      "source_crop": null,
+      "panel_image": "images/crops/multimodal_graphs/r026_f16_panel.jpg",
+      "panel_size": [
+        1108,
+        1536
+      ],
+      "visual": {
+        "ink_fraction": 0.3290863,
+        "red_fraction": 0.15782928,
+        "green_fraction": 0.06003952,
+        "blue_fraction": 7.629e-05,
+        "gold_fraction": 0.59931946,
+        "edge_density": 0.0940252,
+        "contrast": 0.19022791,
+        "entropy": 2.62653452,
+        "horizontal_symmetry": 0.50768411,
+        "vertical_symmetry": 0.75626833,
+        "ink_centroid_x": 0.26654667,
+        "ink_centroid_y": 0.0069697,
+        "large_component_fraction": 0.29926682,
+        "largest_component_fraction": 0.29926682,
+        "large_component_count": 1.0,
+        "large_component_centroid_x": 0.20941869,
+        "large_component_centroid_y": -0.01949701,
+        "large_horizontal_symmetry": 0.64919281,
+        "large_vertical_symmetry": 0.82238007
+      },
+      "graph": {
+        "node_count": 5,
+        "axis_count": 2,
+        "branch_point_count": 0,
+        "terminal_group_count": 2,
+        "cycle_rank": 0,
+        "hierarchy_depth": 4,
+        "radial_layer_count": 0,
+        "horizontal_axis": 1,
+        "repetition_count": 1
+      },
+      "graph_provenance": "coarse_organ_tags",
+      "tags": {
+        "root": "rhizome_segmented_coiled",
+        "stem": "single_erect",
+        "leaf": "sword_whorl",
+        "infl": "composite_head"
+      }
+    },
+    {
+      "domain": "herbal",
+      "id": "r050_f26",
+      "folio": "f26r",
+      "source": "images/facsimile/raw_050.png",
+      "source_crop": null,
+      "panel_image": "images/crops/multimodal_graphs/r050_f26_panel.jpg",
+      "panel_size": [
+        1141,
+        1536
+      ],
+      "visual": {
+        "ink_fraction": 0.2864151,
+        "red_fraction": 0.1299057,
+        "green_fraction": 0.05636978,
+        "blue_fraction": 0.00079346,
+        "gold_fraction": 0.58306503,
+        "edge_density": 0.08977686,
+        "contrast": 0.20834473,
+        "entropy": 2.45698693,
+        "horizontal_symmetry": 0.46607613,
+        "vertical_symmetry": 0.74927724,
+        "ink_centroid_x": 0.27411932,
+        "ink_centroid_y": -0.07309594,
+        "large_component_fraction": 0.25601196,
+        "largest_component_fraction": 0.20014191,
+        "large_component_count": 5.0,
+        "large_component_centroid_x": 0.22647389,
+        "large_component_centroid_y": -0.02889314,
+        "large_horizontal_symmetry": 0.69781494,
+        "large_vertical_symmetry": 0.862854
+      },
+      "graph": {
+        "node_count": 10,
+        "axis_count": 5,
+        "branch_point_count": 3,
+        "terminal_group_count": 4,
+        "cycle_rank": 0,
+        "hierarchy_depth": 4,
+        "radial_layer_count": 0,
+        "horizontal_axis": 0,
+        "repetition_count": 3
+      },
+      "graph_provenance": "coarse_organ_tags",
+      "tags": {
+        "root": "fibrous_fingered",
+        "stem": "branching",
+        "leaf": "round_cordate",
+        "infl": "berry_cluster"
+      }
+    },
+    {
+      "domain": "zodiac",
+      "id": "f70v2",
+      "folio": "f70v2",
+      "source": "images/crops/zodiac_z10/f70v2_full.jpg",
+      "source_crop": null,
+      "panel_image": "images/crops/zodiac_all12/f70v2_panel.jpg",
+      "panel_size": [
+        3945,
+        3772
+      ],
+      "visual": {
+        "ink_fraction": 0.27107239,
+        "red_fraction": 0.59142303,
+        "green_fraction": 0.00170517,
+        "blue_fraction": 0.00130081,
+        "gold_fraction": 0.60695648,
+        "edge_density": 0.1007178,
+        "contrast": 0.18414778,
+        "entropy": 2.10114778,
+        "horizontal_symmetry": 0.55205232,
+        "vertical_symmetry": 0.75531887,
+        "ink_centroid_x": 0.2815133,
+        "ink_centroid_y": 0.00480422,
+        "large_component_fraction": 0.20408249,
+        "largest_component_fraction": 0.20408249,
+        "large_component_count": 1.0,
+        "large_component_centroid_x": 0.30724524,
+        "large_component_centroid_y": 0.04636921,
+        "large_horizontal_symmetry": 0.76222992,
+        "large_vertical_symmetry": 0.90151215
+      },
+      "graph": {
+        "node_count": 30,
+        "axis_count": 2,
+        "branch_point_count": 0,
+        "terminal_group_count": 30,
+        "cycle_rank": 2,
+        "hierarchy_depth": 2,
+        "radial_layer_count": 2,
+        "horizontal_axis": 0,
+        "repetition_count": 30
+      },
+      "graph_provenance": "ordered_ring_geometry",
+      "tags": {
+        "outer_nodes": 19,
+        "inner_nodes": 11,
+        "outside_labels": 0
+      }
+    },
+    {
+      "domain": "zodiac",
+      "id": "f70v1",
+      "folio": "f70v1",
+      "source": "images/crops/zodiac_all12/f70v1_source.jpg",
+      "source_crop": null,
+      "panel_image": "images/crops/zodiac_all12/f70v1_panel.jpg",
+      "panel_size": [
+        2979,
+        3700
+      ],
+      "visual": {
+        "ink_fraction": 0.23999023,
+        "red_fraction": 0.65327454,
+        "green_fraction": 0.00046921,
+        "blue_fraction": 0.0,
+        "gold_fraction": 0.65833282,
+        "edge_density": 0.0867994,
+        "contrast": 0.15441392,
+        "entropy": 1.97668406,
+        "horizontal_symmetry": 0.49011336,
+        "vertical_symmetry": 0.76104418,
+        "ink_centroid_x": -0.29990912,
+        "ink_centroid_y": -0.00140228,
+        "large_component_fraction": 0.19379425,
+        "largest_component_fraction": 0.18632889,
+        "large_component_count": 3.0,
+        "large_component_centroid_x": -0.35498001,
+        "large_component_centroid_y": 0.03331001,
+        "large_horizontal_symmetry": 0.75920105,
+        "large_vertical_symmetry": 0.93943787
+      },
+      "graph": {
+        "node_count": 15,
+        "axis_count": 2,
+        "branch_point_count": 0,
+        "terminal_group_count": 15,
+        "cycle_rank": 2,
+        "hierarchy_depth": 2,
+        "radial_layer_count": 2,
+        "horizontal_axis": 0,
+        "repetition_count": 15
+      },
+      "graph_provenance": "ordered_ring_geometry",
+      "tags": {
+        "outer_nodes": 10,
+        "inner_nodes": 5,
+        "outside_labels": 0
+      }
+    },
+    {
+      "domain": "zodiac",
+      "id": "f71r",
+      "folio": "f71r",
+      "source": "images/crops/zodiac_z10/f71r_full.jpg",
+      "source_crop": null,
+      "panel_image": "images/crops/zodiac_all12/f71r_panel.jpg",
+      "panel_size": [
+        2793,
+        3762
+      ],
+      "visual": {
+        "ink_fraction": 0.19543457,
+        "red_fraction": 0.70140457,
+        "green_fraction": 0.00102997,
+        "blue_fraction": 0.00131607,
+        "gold_fraction": 0.70560455,
+        "edge_density": 0.07317148,
+        "contrast": 0.15471141,
+        "entropy": 2.0675924,
+        "horizontal_symmetry": 0.58862814,
+        "vertical_symmetry": 0.73702086,
+        "ink_centroid_x": 0.23424056,
+        "ink_centroid_y": -0.01752482,
+        "large_component_fraction": 0.14883804,
+        "largest_component_fraction": 0.1354866,
+        "large_component_count": 5.0,
+        "large_component_centroid_x": 0.25060435,
+        "large_component_centroid_y": 0.03659196,
+        "large_horizontal_symmetry": 0.84807587,
+        "large_vertical_symmetry": 0.93036652
+      },
+      "graph": {
+        "node_count": 15,
+        "axis_count": 2,
+        "branch_point_count": 0,
+        "terminal_group_count": 15,
+        "cycle_rank": 2,
+        "hierarchy_depth": 2,
+        "radial_layer_count": 2,
+        "horizontal_axis": 0,
+        "repetition_count": 15
+      },
+      "graph_provenance": "ordered_ring_geometry",
+      "tags": {
+        "outer_nodes": 10,
+        "inner_nodes": 5,
+        "outside_labels": 0
+      }
+    },
+    {
+      "domain": "zodiac",
+      "id": "f71v",
+      "folio": "f71v",
+      "source": "images/crops/zodiac_all12/f71v_f72r_source.jpg",
+      "source_crop": [
+        0,
+        0,
+        2300,
+        3018
+      ],
+      "panel_image": "images/crops/zodiac_all12/f71v_panel.jpg",
+      "panel_size": [
+        2300,
+        3018
+      ],
+      "visual": {
+        "ink_fraction": 0.31921005,
+        "red_fraction": 0.66561127,
+        "green_fraction": 0.00049591,
+        "blue_fraction": 0.0,
+        "gold_fraction": 0.68760681,
+        "edge_density": 0.04853382,
+        "contrast": 0.1917599,
+        "entropy": 2.44540964,
+        "horizontal_symmetry": 0.50608089,
+        "vertical_symmetry": 0.86156493,
+        "ink_centroid_x": -0.32266777,
+        "ink_centroid_y": -0.02120978,
+        "large_component_fraction": 0.29101181,
+        "largest_component_fraction": 0.28764725,
+        "large_component_count": 2.0,
+        "large_component_centroid_x": -0.37603319,
+        "large_component_centroid_y": 0.03431087,
+        "large_horizontal_symmetry": 0.56880951,
+        "large_vertical_symmetry": 0.9292984
+      },
+      "graph": {
+        "node_count": 15,
+        "axis_count": 2,
+        "branch_point_count": 0,
+        "terminal_group_count": 15,
+        "cycle_rank": 2,
+        "hierarchy_depth": 2,
+        "radial_layer_count": 2,
+        "horizontal_axis": 0,
+        "repetition_count": 15
+      },
+      "graph_provenance": "ordered_ring_geometry",
+      "tags": {
+        "outer_nodes": 10,
+        "inner_nodes": 5,
+        "outside_labels": 0
+      }
+    },
+    {
+      "domain": "zodiac",
+      "id": "f72r1",
+      "folio": "f72r1",
+      "source": "images/crops/zodiac_all12/f71v_f72r_source.jpg",
+      "source_crop": [
+        2000,
+        0,
+        4400,
+        3018
+      ],
+      "panel_image": "images/crops/zodiac_all12/f72r1_panel.jpg",
+      "panel_size": [
+        2400,
+        3018
+      ],
+      "visual": {
+        "ink_fraction": 0.23550034,
+        "red_fraction": 0.6874733,
+        "green_fraction": 0.00024414,
+        "blue_fraction": 0.0,
+        "gold_fraction": 0.68865585,
+        "edge_density": 0.05454417,
+        "contrast": 0.17513345,
+        "entropy": 2.1356356,
+        "horizontal_symmetry": 0.71450371,
+        "vertical_symmetry": 0.79004183,
+        "ink_centroid_x": -0.05111288,
+        "ink_centroid_y": 0.04452338,
+        "large_component_fraction": 0.1996727,
+        "largest_component_fraction": 0.19161987,
+        "large_component_count": 3.0,
+        "large_component_centroid_x": -0.05639293,
+        "large_component_centroid_y": 0.03321576,
+        "large_horizontal_symmetry": 0.77181244,
+        "large_vertical_symmetry": 0.90642548
+      },
+      "graph": {
+        "node_count": 15,
+        "axis_count": 2,
+        "branch_point_count": 0,
+        "terminal_group_count": 15,
+        "cycle_rank": 2,
+        "hierarchy_depth": 2,
+        "radial_layer_count": 2,
+        "horizontal_axis": 0,
+        "repetition_count": 15
+      },
+      "graph_provenance": "ordered_ring_geometry",
+      "tags": {
+        "outer_nodes": 10,
+        "inner_nodes": 5,
+        "outside_labels": 0
+      }
+    },
+    {
+      "domain": "zodiac",
+      "id": "f72r2",
+      "folio": "f72r2",
+      "source": "images/crops/zodiac_z10/f72r2_full.jpg",
+      "source_crop": null,
+      "panel_image": "images/crops/zodiac_all12/f72r2_panel.jpg",
+      "panel_size": [
+        1950,
+        3018
+      ],
+      "visual": {
+        "ink_fraction": 0.13357544,
+        "red_fraction": 0.66634369,
+        "green_fraction": 0.00039291,
+        "blue_fraction": 0.00024414,
+        "gold_fraction": 0.66936874,
+        "edge_density": 0.05404538,
+        "contrast": 0.1758583,
+        "entropy": 1.43812235,
+        "horizontal_symmetry": 0.80726378,
+        "vertical_symmetry": 0.80645571,
+        "ink_centroid_x": -0.00735961,
+        "ink_centroid_y": 0.04767132,
+        "large_component_fraction": 0.09380341,
+        "largest_component_fraction": 0.04478073,
+        "large_component_count": 3.0,
+        "large_component_centroid_x": -0.07562602,
+        "large_component_centroid_y": 0.00069396,
+        "large_horizontal_symmetry": 0.95880127,
+        "large_vertical_symmetry": 0.96405029
+      },
+      "graph": {
+        "node_count": 24,
+        "axis_count": 2,
+        "branch_point_count": 0,
+        "terminal_group_count": 24,
+        "cycle_rank": 2,
+        "hierarchy_depth": 2,
+        "radial_layer_count": 2,
+        "horizontal_axis": 0,
+        "repetition_count": 24
+      },
+      "graph_provenance": "ordered_ring_geometry",
+      "tags": {
+        "outer_nodes": 15,
+        "inner_nodes": 9,
+        "outside_labels": 5
+      }
+    },
+    {
+      "domain": "zodiac",
+      "id": "f72r3",
+      "folio": "f72r3",
+      "source": "images/crops/zodiac_all12/f71v_f72r_source.jpg",
+      "source_crop": [
+        6200,
+        0,
+        8865,
+        3018
+      ],
+      "panel_image": "images/crops/zodiac_all12/f72r3_panel.jpg",
+      "panel_size": [
+        2665,
+        3018
+      ],
+      "visual": {
+        "ink_fraction": 0.2797966,
+        "red_fraction": 0.56397247,
+        "green_fraction": 0.0,
+        "blue_fraction": 0.0,
+        "gold_fraction": 0.56856537,
+        "edge_density": 0.04833124,
+        "contrast": 0.23067103,
+        "entropy": 1.99994413,
+        "horizontal_symmetry": 0.63536994,
+        "vertical_symmetry": 0.72150139,
+        "ink_centroid_x": 0.25055819,
+        "ink_centroid_y": -0.15548172,
+        "large_component_fraction": 0.24359131,
+        "largest_component_fraction": 0.24359131,
+        "large_component_count": 1.0,
+        "large_component_centroid_x": 0.34872733,
+        "large_component_centroid_y": -0.05377988,
+        "large_horizontal_symmetry": 0.74789429,
+        "large_vertical_symmetry": 0.86808777
+      },
+      "graph": {
+        "node_count": 30,
+        "axis_count": 2,
+        "branch_point_count": 0,
+        "terminal_group_count": 30,
+        "cycle_rank": 2,
+        "hierarchy_depth": 2,
+        "radial_layer_count": 2,
+        "horizontal_axis": 0,
+        "repetition_count": 30
+      },
+      "graph_provenance": "ordered_ring_geometry",
+      "tags": {
+        "outer_nodes": 23,
+        "inner_nodes": 7,
+        "outside_labels": 0
+      }
+    },
+    {
+      "domain": "zodiac",
+      "id": "f72v1",
+      "folio": "f72v1",
+      "source": "images/crops/zodiac_all12/f72v_wide_source.jpg",
+      "source_crop": [
+        1000,
+        0,
+        3400,
+        3794
+      ],
+      "panel_image": "images/crops/zodiac_all12/f72v1_panel.jpg",
+      "panel_size": [
+        2400,
+        3794
+      ],
+      "visual": {
+        "ink_fraction": 0.12142181,
+        "red_fraction": 0.7054863,
+        "green_fraction": 7.63e-06,
+        "blue_fraction": 0.0,
+        "gold_fraction": 0.70582199,
+        "edge_density": 0.04807516,
+        "contrast": 0.1278248,
+        "entropy": 1.50290446,
+        "horizontal_symmetry": 0.73240338,
+        "vertical_symmetry": 0.76293737,
+        "ink_centroid_x": -0.0139018,
+        "ink_centroid_y": 0.04509342,
+        "large_component_fraction": 0.09337997,
+        "largest_component_fraction": 0.09337997,
+        "large_component_count": 1.0,
+        "large_component_centroid_x": -0.08922996,
+        "large_component_centroid_y": 0.03892829,
+        "large_horizontal_symmetry": 0.95275116,
+        "large_vertical_symmetry": 0.9759903
+      },
+      "graph": {
+        "node_count": 30,
+        "axis_count": 2,
+        "branch_point_count": 0,
+        "terminal_group_count": 30,
+        "cycle_rank": 2,
+        "hierarchy_depth": 2,
+        "radial_layer_count": 2,
+        "horizontal_axis": 0,
+        "repetition_count": 30
+      },
+      "graph_provenance": "ordered_ring_geometry",
+      "tags": {
+        "outer_nodes": 20,
+        "inner_nodes": 10,
+        "outside_labels": 0
+      }
+    },
+    {
+      "domain": "zodiac",
+      "id": "f72v2",
+      "folio": "f72v2",
+      "source": "images/crops/zodiac_all12/f72v_wide_source.jpg",
+      "source_crop": [
+        3400,
+        0,
+        5976,
+        3794
+      ],
+      "panel_image": "images/crops/zodiac_all12/f72v2_panel.jpg",
+      "panel_size": [
+        2576,
+        3794
+      ],
+      "visual": {
+        "ink_fraction": 0.18909073,
+        "red_fraction": 0.69934464,
+        "green_fraction": 7.629e-05,
+        "blue_fraction": 0.00014114,
+        "gold_fraction": 0.70082474,
+        "edge_density": 0.05053281,
+        "contrast": 0.1625081,
+        "entropy": 1.92406786,
+        "horizontal_symmetry": 0.58742454,
+        "vertical_symmetry": 0.77659411,
+        "ink_centroid_x": 0.22933406,
+        "ink_centroid_y": -0.06905277,
+        "large_component_fraction": 0.15893173,
+        "largest_component_fraction": 0.15893173,
+        "large_component_count": 1.0,
+        "large_component_centroid_x": 0.20555216,
+        "large_component_centroid_y": 0.03774179,
+        "large_horizontal_symmetry": 0.85932159,
+        "large_vertical_symmetry": 0.93439484
+      },
+      "graph": {
+        "node_count": 30,
+        "axis_count": 2,
+        "branch_point_count": 0,
+        "terminal_group_count": 30,
+        "cycle_rank": 2,
+        "hierarchy_depth": 2,
+        "radial_layer_count": 2,
+        "horizontal_axis": 0,
+        "repetition_count": 30
+      },
+      "graph_provenance": "ordered_ring_geometry",
+      "tags": {
+        "outer_nodes": 18,
+        "inner_nodes": 12,
+        "outside_labels": 0
+      }
+    },
+    {
+      "domain": "zodiac",
+      "id": "f72v3",
+      "folio": "f72v3",
+      "source": "images/crops/zodiac_all12/f72v_part_source.jpg",
+      "source_crop": null,
+      "panel_image": "images/crops/zodiac_all12/f72v3_panel.jpg",
+      "panel_size": [
+        2979,
+        3712
+      ],
+      "visual": {
+        "ink_fraction": 0.24450684,
+        "red_fraction": 0.68072891,
+        "green_fraction": 1.907e-05,
+        "blue_fraction": 1.526e-05,
+        "gold_fraction": 0.68242264,
+        "edge_density": 0.07964049,
+        "contrast": 0.15586719,
+        "entropy": 2.24496222,
+        "horizontal_symmetry": 0.52159097,
+        "vertical_symmetry": 0.76229726,
+        "ink_centroid_x": -0.32602608,
+        "ink_centroid_y": 0.06473811,
+        "large_component_fraction": 0.19493866,
+        "largest_component_fraction": 0.18848419,
+        "large_component_count": 3.0,
+        "large_component_centroid_x": -0.38319049,
+        "large_component_centroid_y": 0.06629931,
+        "large_horizontal_symmetry": 0.74559021,
+        "large_vertical_symmetry": 0.94195557
+      },
+      "graph": {
+        "node_count": 30,
+        "axis_count": 2,
+        "branch_point_count": 0,
+        "terminal_group_count": 30,
+        "cycle_rank": 2,
+        "hierarchy_depth": 2,
+        "radial_layer_count": 2,
+        "horizontal_axis": 0,
+        "repetition_count": 30
+      },
+      "graph_provenance": "ordered_ring_geometry",
+      "tags": {
+        "outer_nodes": 18,
+        "inner_nodes": 12,
+        "outside_labels": 0
+      }
+    },
+    {
+      "domain": "zodiac",
+      "id": "f73r",
+      "folio": "f73r",
+      "source": "images/crops/zodiac_all12/f73r_source.jpg",
+      "source_crop": null,
+      "panel_image": "images/crops/zodiac_all12/f73r_panel.jpg",
+      "panel_size": [
+        2834,
+        3761
+      ],
+      "visual": {
+        "ink_fraction": 0.20137405,
+        "red_fraction": 0.67667007,
+        "green_fraction": 1.526e-05,
+        "blue_fraction": 3.81e-06,
+        "gold_fraction": 0.67871094,
+        "edge_density": 0.06146228,
+        "contrast": 0.17933737,
+        "entropy": 1.97354409,
+        "horizontal_symmetry": 0.51579777,
+        "vertical_symmetry": 0.75721372,
+        "ink_centroid_x": 0.30225887,
+        "ink_centroid_y": -0.08701421,
+        "large_component_fraction": 0.16530228,
+        "largest_component_fraction": 0.15809631,
+        "large_component_count": 2.0,
+        "large_component_centroid_x": 0.23501317,
+        "large_component_centroid_y": -0.03102353,
+        "large_horizontal_symmetry": 0.85984039,
+        "large_vertical_symmetry": 0.95294952
+      },
+      "graph": {
+        "node_count": 26,
+        "axis_count": 2,
+        "branch_point_count": 0,
+        "terminal_group_count": 26,
+        "cycle_rank": 2,
+        "hierarchy_depth": 2,
+        "radial_layer_count": 2,
+        "horizontal_axis": 0,
+        "repetition_count": 26
+      },
+      "graph_provenance": "ordered_ring_geometry",
+      "tags": {
+        "outer_nodes": 16,
+        "inner_nodes": 10,
+        "outside_labels": 4
+      }
+    },
+    {
+      "domain": "zodiac",
+      "id": "f73v",
+      "folio": "f73v",
+      "source": "images/crops/zodiac_z10/f73v_full.jpg",
+      "source_crop": null,
+      "panel_image": "images/crops/zodiac_all12/f73v_panel.jpg",
+      "panel_size": [
+        2979,
+        3724
+      ],
+      "visual": {
+        "ink_fraction": 0.22828293,
+        "red_fraction": 0.68435669,
+        "green_fraction": 0.00011063,
+        "blue_fraction": 0.00020981,
+        "gold_fraction": 0.68605804,
+        "edge_density": 0.06472068,
+        "contrast": 0.15962033,
+        "entropy": 2.1249347,
+        "horizontal_symmetry": 0.58152742,
+        "vertical_symmetry": 0.79049671,
+        "ink_centroid_x": -0.29074005,
+        "ink_centroid_y": 0.03927611,
+        "large_component_fraction": 0.20062256,
+        "largest_component_fraction": 0.19657898,
+        "large_component_count": 2.0,
+        "large_component_centroid_x": -0.25656771,
+        "large_component_centroid_y": 0.03611005,
+        "large_horizontal_symmetry": 0.82778931,
+        "large_vertical_symmetry": 0.93807983
+      },
+      "graph": {
+        "node_count": 26,
+        "axis_count": 2,
+        "branch_point_count": 0,
+        "terminal_group_count": 26,
+        "cycle_rank": 2,
+        "hierarchy_depth": 2,
+        "radial_layer_count": 2,
+        "horizontal_axis": 0,
+        "repetition_count": 26
+      },
+      "graph_provenance": "ordered_ring_geometry",
+      "tags": {
+        "outer_nodes": 16,
+        "inner_nodes": 10,
+        "outside_labels": 4
+      }
+    }
+  ]
+}

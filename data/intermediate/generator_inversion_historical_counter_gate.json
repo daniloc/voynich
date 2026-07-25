@@ -1,0 +1,4422 @@
+{
+  "assets": {
+    "data/controls/latin.txt": "d35576eee076806a236f7f9edf8c1a07462a4102084e025076f6227d8847afdb",
+    "data/corpus/corpus.json": "6c0160de15d4a434816477a65ee4c7ffc384bd66e3a0ad63aedaed638c97fcb0"
+  },
+  "caveats": [
+    "The Latin control is a comparator, not a required null: ordinary language can have line-position conventions.",
+    "A phase table is statistical. Even a pass would require an interpretable glyph table and independent manuscript replication before being called an algorithm.",
+    "Hard-break transcription tokens reset counter coordinates because their exact glyph count and phase are unknown.",
+    "The phase-offset audit is diagnostic and follows model selection; it is not a second confirmatory significance test."
+  ],
+  "claim_boundary": "A pass supports a compact boundary-reset production table. It does not identify plaintext, language, or semantics.",
+  "controls": {
+    "base_only_false_positive_pass": true,
+    "planted": {
+      "modulus": 4,
+      "preference_multiplier": 64.0,
+      "scope": "word_in_line"
+    },
+    "planted_gain_pass": true,
+    "planted_modulus_recovery_folds": 4,
+    "planted_null_pass": true,
+    "planted_scope_recovery_folds": 4,
+    "planted_selection_pass": true
+  },
+  "corpus_audit": {
+    "eligible_words": 33133,
+    "hard_breaks": 567,
+    "prose_lines": 4117,
+    "source_tokens": 33700
+  },
+  "experiment": "historical_table_counter_mechanism_gate",
+  "historical_model": {
+    "not_searched": [
+      "modern ciphers",
+      "arbitrary bit extraction",
+      "computer-sized state spaces",
+      "semantic language models",
+      "one plaintext character per Voynich word"
+    ],
+    "operation": "advance a small counter and consult a phase-conditioned glyph-choice table",
+    "physical_memory": "one tally, short row of marks, small wheel, or memorized cycle plus the ordinary glyph grammar",
+    "searched_moduli": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      12
+    ],
+    "searched_scopes": [
+      "word_in_line",
+      "word_in_paragraph",
+      "glyph_in_line",
+      "line_in_page",
+      "boustrophedon_word_in_line"
+    ],
+    "visible_resets_only": [
+      "line",
+      "paragraph",
+      "page"
+    ]
+  },
+  "panels": [
+    {
+      "fold_assignment": {
+        "A": 3,
+        "B": 1,
+        "C": 2,
+        "D": 2,
+        "E": 2,
+        "F": 3,
+        "G": 3,
+        "H": 3,
+        "I": 3,
+        "J": 3,
+        "M": 1,
+        "N": 2,
+        "O": 3,
+        "Q": 2,
+        "S": 2,
+        "T": 0
+      },
+      "fold_event_loads": [
+        10576,
+        7590,
+        7631,
+        7336
+      ],
+      "folds": [
+        {
+          "fold": 0,
+          "minimum_table_description_bits": 69.0,
+          "phase_action_table": [
+            {
+              "observations": 33649,
+              "phase": 0,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 3.343770369193315,
+                  "multiplier": 1.7883836073073773,
+                  "observed": 6.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 236.2807735868732,
+                  "multiplier": 1.6582673408328465,
+                  "observed": 393.0,
+                  "symbol": "p"
+                },
+                {
+                  "baseline_expected": 95.65206397092099,
+                  "multiplier": 1.6053960262030602,
+                  "observed": 154.0,
+                  "symbol": "f"
+                },
+                {
+                  "baseline_expected": 0.6270216068350667,
+                  "multiplier": 1.5903500174468541,
+                  "observed": 1.0,
+                  "symbol": "z"
+                },
+                {
+                  "baseline_expected": 14.056643396934417,
+                  "multiplier": 1.3490187242516598,
+                  "observed": 19.0,
+                  "symbol": "g"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 2.1935292067385606e-05,
+                  "multiplier": 0.007550508774516991,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 198.39035470661244,
+                  "multiplier": 0.8929945627795051,
+                  "observed": 177.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 607.5323987848991,
+                  "multiplier": 0.9419551761080983,
+                  "observed": 572.0,
+                  "symbol": "q"
+                },
+                {
+                  "baseline_expected": 1485.4845819356267,
+                  "multiplier": 0.9495688909542466,
+                  "observed": 1410.0,
+                  "symbol": "k"
+                },
+                {
+                  "baseline_expected": 1082.5159026941292,
+                  "multiplier": 0.9601046641610318,
+                  "observed": 1039.0,
+                  "symbol": "t"
+                }
+              ]
+            },
+            {
+              "observations": 31177,
+              "phase": 1,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 191.20885641538646,
+                  "multiplier": 1.1804717337859663,
+                  "observed": 226.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 12.282125081055698,
+                  "multiplier": 1.1387287629036178,
+                  "observed": 14.0,
+                  "symbol": "g"
+                },
+                {
+                  "baseline_expected": 1852.8477574652827,
+                  "multiplier": 1.0578954299095618,
+                  "observed": 1961.0,
+                  "symbol": "a"
+                },
+                {
+                  "baseline_expected": 1008.2741415230341,
+                  "multiplier": 1.0380952576459508,
+                  "observed": 1047.0,
+                  "symbol": "t"
+                },
+                {
+                  "baseline_expected": 2055.9567651070624,
+                  "multiplier": 1.0313788227060956,
+                  "observed": 2121.0,
+                  "symbol": "e"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 0.6118015679881008,
+                  "multiplier": 0.008144306938567701,
+                  "observed": 0.0,
+                  "symbol": "z"
+                },
+                {
+                  "baseline_expected": 1.289928341762913e-05,
+                  "multiplier": 0.008144306938567703,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 87.52386523317841,
+                  "multiplier": 0.6880884733112209,
+                  "observed": 60.0,
+                  "symbol": "f"
+                },
+                {
+                  "baseline_expected": 217.30106796067662,
+                  "multiplier": 0.7019377924478981,
+                  "observed": 152.0,
+                  "symbol": "p"
+                },
+                {
+                  "baseline_expected": 2139.9502067302014,
+                  "multiplier": 0.972213393723578,
+                  "observed": 2080.0,
+                  "symbol": "c"
+                }
+              ]
+            },
+            {
+              "observations": 28465,
+              "phase": 2,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 0.5605510237336548,
+                  "multiplier": 1.7769712305774674,
+                  "observed": 1.0,
+                  "symbol": "z"
+                },
+                {
+                  "baseline_expected": 170.9257683488062,
+                  "multiplier": 1.0758089123821706,
+                  "observed": 184.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 1273.219351137581,
+                  "multiplier": 1.0605452340385033,
+                  "observed": 1351.0,
+                  "symbol": "k"
+                },
+                {
+                  "baseline_expected": 1931.2046382018557,
+                  "multiplier": 1.0404374712590598,
+                  "observed": 2010.0,
+                  "symbol": "e"
+                },
+                {
+                  "baseline_expected": 1681.7161329450528,
+                  "multiplier": 1.0314018096559792,
+                  "observed": 1735.0,
+                  "symbol": "a"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 1.0959533638742873e-05,
+                  "multiplier": 0.008913338672051744,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 2.6462415076765637,
+                  "multiplier": 0.3834394952805375,
+                  "observed": 1.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 198.14670466955053,
+                  "multiplier": 0.5791165100031593,
+                  "observed": 114.0,
+                  "symbol": "p"
+                },
+                {
+                  "baseline_expected": 79.83149281939852,
+                  "multiplier": 0.741382580486607,
+                  "observed": 59.0,
+                  "symbol": "f"
+                },
+                {
+                  "baseline_expected": 11.466214099466793,
+                  "multiplier": 0.9597026035536833,
+                  "observed": 11.0,
+                  "symbol": "g"
+                }
+              ]
+            }
+          ],
+          "phase_offset_audit": {
+            "best_offset_counts": {
+              "0": 387,
+              "1": 366,
+              "2": 381
+            },
+            "declared_origin_best_fraction": 0.3412698412698413,
+            "eligible_test_lines": 1134,
+            "interpretation": "A stable boundary-reset table predicts offset 0 on unseen lines. A copied or skipped counter position predicts a persistent nonzero offset and agreement between line halves.",
+            "line_half_comparisons": 1134,
+            "line_half_offset_agreement": 0.4444444444444444,
+            "mean_oracle_offset_gain_bits_per_symbol": 0.0059443677115618146
+          },
+          "selected": {
+            "alpha": 256.0,
+            "modulus": 3,
+            "scope": "line_in_page"
+          },
+          "selected_name": "line_in_page_mod3_alpha256",
+          "test": {
+            "baseline_bits_per_symbol": 1.8177206893934164,
+            "baseline_log2_probability": -122381.68085479054,
+            "candidate_bits_per_symbol": 1.8169687001758021,
+            "candidate_log2_probability": -122331.05167673623,
+            "gain_bits_per_symbol": 0.0007519892176141907,
+            "gain_bits_per_word": 0.004787176442351609,
+            "net_gain_after_table_description_bits": -18.370821945689386,
+            "symbols": 67327,
+            "words": 10576
+          },
+          "validation": {
+            "baseline_bits_per_symbol": 1.7069744238678848,
+            "candidate_bits_per_symbol": 1.7051930620733207,
+            "gain_bits_per_symbol": 0.001781361794564244,
+            "net_gain_after_table_description_bits": 13.423610234487569,
+            "symbols": 46270,
+            "words": 7590
+          },
+          "validation_top_five": [
+            {
+              "candidate": "line_in_page_mod3_alpha256",
+              "net_gain_after_table_description_bits": 13.423610234487569,
+              "raw_gain_bits_per_symbol": 0.001781361794564244
+            },
+            {
+              "candidate": "line_in_page_mod3_alpha2048",
+              "net_gain_after_table_description_bits": 10.678819361899514,
+              "raw_gain_bits_per_symbol": 0.001722040617287649
+            },
+            {
+              "candidate": "line_in_page_mod2_alpha256",
+              "net_gain_after_table_description_bits": -12.720481169148115,
+              "raw_gain_bits_per_symbol": 0.0007192461385530989
+            },
+            {
+              "candidate": "line_in_page_mod2_alpha2048",
+              "net_gain_after_table_description_bits": -13.141847401187988,
+              "raw_gain_bits_per_symbol": 0.0007101394553449754
+            },
+            {
+              "candidate": "glyph_in_line_mod2_alpha256",
+              "net_gain_after_table_description_bits": -16.25694440359075,
+              "raw_gain_bits_per_symbol": 0.0006428151198705262
+            }
+          ]
+        },
+        {
+          "fold": 1,
+          "minimum_table_description_bits": 92.0,
+          "phase_action_table": [
+            {
+              "observations": 30518,
+              "phase": 0,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 56.596036744791846,
+                  "multiplier": 1.760528487888548,
+                  "observed": 100.0,
+                  "symbol": "f"
+                },
+                {
+                  "baseline_expected": 241.47520235499695,
+                  "multiplier": 1.4621126116877137,
+                  "observed": 354.0,
+                  "symbol": "p"
+                },
+                {
+                  "baseline_expected": 858.9941601384803,
+                  "multiplier": 1.0958275878014623,
+                  "observed": 942.0,
+                  "symbol": "s"
+                },
+                {
+                  "baseline_expected": 1340.8280879327822,
+                  "multiplier": 1.0208360477641534,
+                  "observed": 1369.0,
+                  "symbol": "l"
+                },
+                {
+                  "baseline_expected": 2194.90874234395,
+                  "multiplier": 1.0203726722985635,
+                  "observed": 2240.0,
+                  "symbol": "y"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 9.9491744719085e-06,
+                  "multiplier": 0.00831871059985694,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 0.13369982885516393,
+                  "multiplier": 0.008318710599856942,
+                  "observed": 0.0,
+                  "symbol": "z"
+                },
+                {
+                  "baseline_expected": 6.955319224066056,
+                  "multiplier": 0.5786340375909362,
+                  "observed": 4.0,
+                  "symbol": "g"
+                },
+                {
+                  "baseline_expected": 723.0642910702442,
+                  "multiplier": 0.93956590924942,
+                  "observed": 679.0,
+                  "symbol": "q"
+                },
+                {
+                  "baseline_expected": 165.43113439046618,
+                  "multiplier": 0.9434648166603968,
+                  "observed": 156.0,
+                  "symbol": "m"
+                }
+              ]
+            },
+            {
+              "observations": 29123,
+              "phase": 1,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 6.735533401789139,
+                  "multiplier": 1.7747854946439374,
+                  "observed": 12.0,
+                  "symbol": "g"
+                },
+                {
+                  "baseline_expected": 148.8629092984196,
+                  "multiplier": 1.08082155390642,
+                  "observed": 161.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 2056.501453280176,
+                  "multiplier": 1.0363922302997395,
+                  "observed": 2132.0,
+                  "symbol": "y"
+                },
+                {
+                  "baseline_expected": 810.7277058690624,
+                  "multiplier": 1.0321234427629618,
+                  "observed": 837.0,
+                  "symbol": "s"
+                },
+                {
+                  "baseline_expected": 3059.5160937912224,
+                  "multiplier": 1.0218648535152048,
+                  "observed": 3127.0,
+                  "symbol": "o"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 0.13727077347686212,
+                  "multiplier": 0.008713707069675539,
+                  "observed": 0.0,
+                  "symbol": "z"
+                },
+                {
+                  "baseline_expected": 9.161802294623324e-06,
+                  "multiplier": 0.00871370706967554,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 54.12143208039698,
+                  "multiplier": 0.7413523345603718,
+                  "observed": 40.0,
+                  "symbol": "f"
+                },
+                {
+                  "baseline_expected": 233.93542296026047,
+                  "multiplier": 0.8858628794352247,
+                  "observed": 207.0,
+                  "symbol": "p"
+                },
+                {
+                  "baseline_expected": 5.493978067419453,
+                  "multiplier": 0.9108708332592383,
+                  "observed": 5.0,
+                  "symbol": "x"
+                }
+              ]
+            },
+            {
+              "observations": 27459,
+              "phase": 2,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 6.502706182636198,
+                  "multiplier": 1.6852151627135188,
+                  "observed": 11.0,
+                  "symbol": "g"
+                },
+                {
+                  "baseline_expected": 146.01916315804004,
+                  "multiplier": 1.2373505125167148,
+                  "observed": 181.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 5.589237909183001,
+                  "multiplier": 1.0728127768406133,
+                  "observed": 6.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 1630.467597031361,
+                  "multiplier": 1.0410364577026534,
+                  "observed": 1698.0,
+                  "symbol": "c"
+                },
+                {
+                  "baseline_expected": 2893.56629113528,
+                  "multiplier": 1.0271982673558873,
+                  "observed": 2973.0,
+                  "symbol": "o"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 9.166613343347025e-06,
+                  "multiplier": 0.009236875338264394,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 0.09913973752035134,
+                  "multiplier": 0.009236875338264396,
+                  "observed": 0.0,
+                  "symbol": "z"
+                },
+                {
+                  "baseline_expected": 220.99787503019203,
+                  "multiplier": 0.762403415606726,
+                  "observed": 168.0,
+                  "symbol": "p"
+                },
+                {
+                  "baseline_expected": 52.06588881913435,
+                  "multiplier": 0.7894269197690958,
+                  "observed": 41.0,
+                  "symbol": "f"
+                },
+                {
+                  "baseline_expected": 2631.0001999732153,
+                  "multiplier": 0.955187760927561,
+                  "observed": 2512.0,
+                  "symbol": "e"
+                }
+              ]
+            },
+            {
+              "observations": 26149,
+              "phase": 3,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 0.13729383132206582,
+                  "multiplier": 7.222727627138655,
+                  "observed": 1.0,
+                  "symbol": "z"
+                },
+                {
+                  "baseline_expected": 5.8910795017657955,
+                  "multiplier": 1.1864122467939207,
+                  "observed": 7.0,
+                  "symbol": "g"
+                },
+                {
+                  "baseline_expected": 144.17017593015638,
+                  "multiplier": 1.1705560491420965,
+                  "observed": 169.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 828.9827538255611,
+                  "multiplier": 1.0525831121280003,
+                  "observed": 873.0,
+                  "symbol": "r"
+                },
+                {
+                  "baseline_expected": 1760.3010570046654,
+                  "multiplier": 1.045399368279582,
+                  "observed": 1841.0,
+                  "symbol": "a"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 8.41989029797729e-06,
+                  "multiplier": 0.009695133497443581,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 214.1834999823402,
+                  "multiplier": 0.8188300652369871,
+                  "observed": 175.0,
+                  "symbol": "p"
+                },
+                {
+                  "baseline_expected": 721.2319788862403,
+                  "multiplier": 0.9406392945225569,
+                  "observed": 678.0,
+                  "symbol": "s"
+                },
+                {
+                  "baseline_expected": 5.263884852242536,
+                  "multiplier": 0.9503548309456731,
+                  "observed": 5.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 1477.748225466319,
+                  "multiplier": 0.9532586093362306,
+                  "observed": 1408.0,
+                  "symbol": "i"
+                }
+              ]
+            }
+          ],
+          "phase_offset_audit": {
+            "best_offset_counts": {
+              "0": 252,
+              "1": 249,
+              "2": 237,
+              "3": 232
+            },
+            "declared_origin_best_fraction": 0.2597938144329897,
+            "eligible_test_lines": 970,
+            "interpretation": "A stable boundary-reset table predicts offset 0 on unseen lines. A copied or skipped counter position predicts a persistent nonzero offset and agreement between line halves.",
+            "line_half_comparisons": 970,
+            "line_half_offset_agreement": 0.30103092783505153,
+            "mean_oracle_offset_gain_bits_per_symbol": 0.004519885256548446
+          },
+          "selected": {
+            "alpha": 256.0,
+            "modulus": 4,
+            "scope": "line_in_page"
+          },
+          "selected_name": "line_in_page_mod4_alpha256",
+          "test": {
+            "baseline_bits_per_symbol": 1.6766853939155528,
+            "baseline_log2_probability": -77580.23317647263,
+            "candidate_bits_per_symbol": 1.6763301432545987,
+            "candidate_log2_probability": -77563.79572839028,
+            "gain_bits_per_symbol": 0.00035525066095410063,
+            "gain_bits_per_word": 0.0021656716841035885,
+            "net_gain_after_table_description_bits": -75.56255191765376,
+            "symbols": 46270,
+            "words": 7590
+          },
+          "validation": {
+            "baseline_bits_per_symbol": 1.8906794399084081,
+            "candidate_bits_per_symbol": 1.8882287348928706,
+            "gain_bits_per_symbol": 0.002450705015537576,
+            "net_gain_after_table_description_bits": 24.08744588099944,
+            "symbols": 47369,
+            "words": 7631
+          },
+          "validation_top_five": [
+            {
+              "candidate": "line_in_page_mod4_alpha256",
+              "net_gain_after_table_description_bits": 24.08744588099944,
+              "raw_gain_bits_per_symbol": 0.002450705015537576
+            },
+            {
+              "candidate": "line_in_page_mod4_alpha2048",
+              "net_gain_after_table_description_bits": 22.773160130818724,
+              "raw_gain_bits_per_symbol": 0.0024229593221477912
+            },
+            {
+              "candidate": "line_in_page_mod5_alpha256",
+              "net_gain_after_table_description_bits": 20.184947100729914,
+              "raw_gain_bits_per_symbol": 0.002853869558165254
+            },
+            {
+              "candidate": "line_in_page_mod5_alpha2048",
+              "net_gain_after_table_description_bits": 17.782392383014667,
+              "raw_gain_bits_per_symbol": 0.002803149578479906
+            },
+            {
+              "candidate": "line_in_page_mod2_alpha2048",
+              "net_gain_after_table_description_bits": 10.920670199848246,
+              "raw_gain_bits_per_symbol": 0.001201643906349052
+            }
+          ]
+        },
+        {
+          "fold": 2,
+          "minimum_table_description_bits": 110.0,
+          "phase_action_table": [
+            {
+              "observations": 24201,
+              "phase": 0,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 33.485065556890696,
+                  "multiplier": 1.694900696380411,
+                  "observed": 57.0,
+                  "symbol": "f"
+                },
+                {
+                  "baseline_expected": 3.2793405723876847,
+                  "multiplier": 1.519204591315759,
+                  "observed": 5.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 177.52796096868568,
+                  "multiplier": 1.3872339345794191,
+                  "observed": 247.0,
+                  "symbol": "p"
+                },
+                {
+                  "baseline_expected": 702.5247700864074,
+                  "multiplier": 1.0809560302183974,
+                  "observed": 760.0,
+                  "symbol": "s"
+                },
+                {
+                  "baseline_expected": 645.0602979631407,
+                  "multiplier": 1.052064037073091,
+                  "observed": 679.0,
+                  "symbol": "t"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 8.423493068146981e-06,
+                  "multiplier": 0.010467350860694249,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 3.2406602916952707,
+                  "multiplier": 0.6211655173270451,
+                  "observed": 2.0,
+                  "symbol": "g"
+                },
+                {
+                  "baseline_expected": 779.4296724243678,
+                  "multiplier": 0.9385156304070735,
+                  "observed": 731.0,
+                  "symbol": "q"
+                },
+                {
+                  "baseline_expected": 1304.5750530966209,
+                  "multiplier": 0.9419170901905402,
+                  "observed": 1228.0,
+                  "symbol": "c"
+                },
+                {
+                  "baseline_expected": 1234.1409750078462,
+                  "multiplier": 0.9557880370390495,
+                  "observed": 1179.0,
+                  "symbol": "k"
+                }
+              ]
+            },
+            {
+              "observations": 23404,
+              "phase": 1,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 78.39862918519069,
+                  "multiplier": 1.1211435017202365,
+                  "observed": 88.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 676.2283430091555,
+                  "multiplier": 1.0786566415609435,
+                  "observed": 730.0,
+                  "symbol": "s"
+                },
+                {
+                  "baseline_expected": 1107.0871904066428,
+                  "multiplier": 1.0195790487802325,
+                  "observed": 1129.0,
+                  "symbol": "l"
+                },
+                {
+                  "baseline_expected": 1198.4003500653428,
+                  "multiplier": 1.017828718772238,
+                  "observed": 1220.0,
+                  "symbol": "c"
+                },
+                {
+                  "baseline_expected": 1220.8895613034758,
+                  "multiplier": 1.0130528796969245,
+                  "observed": 1237.0,
+                  "symbol": "k"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 4.855026338408604e-06,
+                  "multiplier": 0.01081994928148769,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 3.377591392262906,
+                  "multiplier": 0.5965509841156245,
+                  "observed": 2.0,
+                  "symbol": "g"
+                },
+                {
+                  "baseline_expected": 3.1180367399381432,
+                  "multiplier": 0.6453089776167574,
+                  "observed": 2.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 32.427482293651906,
+                  "multiplier": 0.7734293015593217,
+                  "observed": 25.0,
+                  "symbol": "f"
+                },
+                {
+                  "baseline_expected": 171.27517903338273,
+                  "multiplier": 0.8193738091119305,
+                  "observed": 140.0,
+                  "symbol": "p"
+                }
+              ]
+            },
+            {
+              "observations": 22574,
+              "phase": 2,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 3.202160618266244,
+                  "multiplier": 1.2463627065671168,
+                  "observed": 4.0,
+                  "symbol": "g"
+                },
+                {
+                  "baseline_expected": 724.465735494406,
+                  "multiplier": 1.055323169934479,
+                  "observed": 765.0,
+                  "symbol": "q"
+                },
+                {
+                  "baseline_expected": 1150.4710532897186,
+                  "multiplier": 1.0425682704913952,
+                  "observed": 1200.0,
+                  "symbol": "c"
+                },
+                {
+                  "baseline_expected": 1796.5261544182601,
+                  "multiplier": 1.0387879686156158,
+                  "observed": 1867.0,
+                  "symbol": "y"
+                },
+                {
+                  "baseline_expected": 1054.852475393068,
+                  "multiplier": 1.0254472653438895,
+                  "observed": 1082.0,
+                  "symbol": "l"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 5.2924759030314004e-06,
+                  "multiplier": 0.011213315812527307,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 2.9797233146845867,
+                  "multiplier": 0.6748901607830402,
+                  "observed": 2.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 31.816802831807685,
+                  "multiplier": 0.6949183117896004,
+                  "observed": 22.0,
+                  "symbol": "f"
+                },
+                {
+                  "baseline_expected": 166.94252344111246,
+                  "multiplier": 0.8463445909163955,
+                  "observed": 141.0,
+                  "symbol": "p"
+                },
+                {
+                  "baseline_expected": 646.5711699502676,
+                  "multiplier": 0.9517189229865516,
+                  "observed": 615.0,
+                  "symbol": "s"
+                }
+              ]
+            },
+            {
+              "observations": 21733,
+              "phase": 3,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 3.31880105578921,
+                  "multiplier": 1.7984762829291232,
+                  "observed": 6.0,
+                  "symbol": "g"
+                },
+                {
+                  "baseline_expected": 2.934836403846348,
+                  "multiplier": 1.358712589029215,
+                  "observed": 4.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 70.95415042788669,
+                  "multiplier": 1.1538634693682173,
+                  "observed": 82.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 1116.608364240615,
+                  "multiplier": 1.05079979118065,
+                  "observed": 1174.0,
+                  "symbol": "c"
+                },
+                {
+                  "baseline_expected": 1036.7639995087727,
+                  "multiplier": 1.037404083999701,
+                  "observed": 1076.0,
+                  "symbol": "l"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 7.2866384948693895e-06,
+                  "multiplier": 0.011642184728727925,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 30.168788995654772,
+                  "multiplier": 0.7323828130350138,
+                  "observed": 22.0,
+                  "symbol": "f"
+                },
+                {
+                  "baseline_expected": 160.23012274175147,
+                  "multiplier": 0.8567081334729681,
+                  "observed": 137.0,
+                  "symbol": "p"
+                },
+                {
+                  "baseline_expected": 632.770911749259,
+                  "multiplier": 0.9253841270302836,
+                  "observed": 585.0,
+                  "symbol": "s"
+                },
+                {
+                  "baseline_expected": 573.5207900027373,
+                  "multiplier": 0.9801460330021338,
+                  "observed": 562.0,
+                  "symbol": "t"
+                }
+              ]
+            },
+            {
+              "observations": 21685,
+              "phase": 4,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 2.9140173407369283,
+                  "multiplier": 1.707492061280078,
+                  "observed": 5.0,
+                  "symbol": "g"
+                },
+                {
+                  "baseline_expected": 30.531304207982373,
+                  "multiplier": 1.209398892463833,
+                  "observed": 37.0,
+                  "symbol": "f"
+                },
+                {
+                  "baseline_expected": 72.27846248415447,
+                  "multiplier": 1.0782360387932601,
+                  "observed": 78.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 160.29693806085973,
+                  "multiplier": 1.0659911689013568,
+                  "observed": 171.0,
+                  "symbol": "p"
+                },
+                {
+                  "baseline_expected": 582.762109226688,
+                  "multiplier": 1.0377142343444559,
+                  "observed": 605.0,
+                  "symbol": "t"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 6.6059551542653455e-06,
+                  "multiplier": 0.01166765416343821,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 2.9452725014789016,
+                  "multiplier": 0.6827989979289425,
+                  "observed": 2.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 1143.0192196952034,
+                  "multiplier": 0.9723139996529059,
+                  "observed": 1111.0,
+                  "symbol": "k"
+                },
+                {
+                  "baseline_expected": 611.9751456411941,
+                  "multiplier": 0.9725853482253751,
+                  "observed": 595.0,
+                  "symbol": "r"
+                },
+                {
+                  "baseline_expected": 1594.6662396420638,
+                  "multiplier": 0.9840927372740154,
+                  "observed": 1569.0,
+                  "symbol": "h"
+                }
+              ]
+            }
+          ],
+          "phase_offset_audit": {
+            "best_offset_counts": {
+              "0": 282,
+              "1": 236,
+              "2": 192,
+              "3": 192,
+              "4": 221
+            },
+            "declared_origin_best_fraction": 0.25111308993766696,
+            "eligible_test_lines": 1123,
+            "interpretation": "A stable boundary-reset table predicts offset 0 on unseen lines. A copied or skipped counter position predicts a persistent nonzero offset and agreement between line halves.",
+            "line_half_comparisons": 1123,
+            "line_half_offset_agreement": 0.2867319679430098,
+            "mean_oracle_offset_gain_bits_per_symbol": 0.006335387667551376
+          },
+          "selected": {
+            "alpha": 256.0,
+            "modulus": 5,
+            "scope": "line_in_page"
+          },
+          "selected_name": "line_in_page_mod5_alpha256",
+          "test": {
+            "baseline_bits_per_symbol": 1.9577909084138065,
+            "baseline_log2_probability": -92738.5975406536,
+            "candidate_bits_per_symbol": 1.9554205082913956,
+            "candidate_log2_probability": -92626.31405725512,
+            "gain_bits_per_symbol": 0.002370400122410894,
+            "gain_bits_per_word": 0.014714124413377227,
+            "net_gain_after_table_description_bits": 2.2834833984816214,
+            "symbols": 47369,
+            "words": 7631
+          },
+          "validation": {
+            "baseline_bits_per_symbol": 2.040677259465755,
+            "candidate_bits_per_symbol": 2.037959273362398,
+            "gain_bits_per_symbol": 0.0027179861033574102,
+            "net_gain_after_table_description_bits": 14.815357838378986,
+            "symbols": 45922,
+            "words": 7336
+          },
+          "validation_top_five": [
+            {
+              "candidate": "line_in_page_mod5_alpha256",
+              "net_gain_after_table_description_bits": 14.815357838378986,
+              "raw_gain_bits_per_symbol": 0.0027179861033574102
+            },
+            {
+              "candidate": "line_in_page_mod5_alpha2048",
+              "net_gain_after_table_description_bits": 11.448220921127358,
+              "raw_gain_bits_per_symbol": 0.002644663144486899
+            },
+            {
+              "candidate": "line_in_page_mod3_alpha2048",
+              "net_gain_after_table_description_bits": 5.094422471549478,
+              "raw_gain_bits_per_symbol": 0.0015481560574789747
+            },
+            {
+              "candidate": "line_in_page_mod3_alpha256",
+              "net_gain_after_table_description_bits": 4.255506202491233,
+              "raw_gain_bits_per_symbol": 0.0015298877706217333
+            },
+            {
+              "candidate": "line_in_page_mod2_alpha2048",
+              "net_gain_after_table_description_bits": -3.2620845307101263,
+              "raw_gain_bits_per_symbol": 0.0008871110898760915
+            }
+          ]
+        },
+        {
+          "fold": 3,
+          "minimum_table_description_bits": 276.0,
+          "phase_action_table": [
+            {
+              "observations": 14047,
+              "phase": 0,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 596.2345846580904,
+                  "multiplier": 1.101738339762799,
+                  "observed": 658.0,
+                  "symbol": "s"
+                },
+                {
+                  "baseline_expected": 772.1494164081575,
+                  "multiplier": 1.07485242419729,
+                  "observed": 831.0,
+                  "symbol": "i"
+                },
+                {
+                  "baseline_expected": 477.7847986235844,
+                  "multiplier": 1.0579972324445122,
+                  "observed": 506.0,
+                  "symbol": "r"
+                },
+                {
+                  "baseline_expected": 737.7429630079614,
+                  "multiplier": 1.052259937419668,
+                  "observed": 777.0,
+                  "symbol": "c"
+                },
+                {
+                  "baseline_expected": 1028.012365056819,
+                  "multiplier": 1.0496658835598045,
+                  "observed": 1080.0,
+                  "symbol": "e"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 0.04019957153638418,
+                  "multiplier": 0.01789834300496386,
+                  "observed": 0.0,
+                  "symbol": "z"
+                },
+                {
+                  "baseline_expected": 1.9937173161531978,
+                  "multiplier": 0.017898343004963863,
+                  "observed": 0.0,
+                  "symbol": "g"
+                },
+                {
+                  "baseline_expected": 0.38417928466166673,
+                  "multiplier": 0.017898343004963863,
+                  "observed": 0.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 3.3916429560021445e-06,
+                  "multiplier": 0.017898343004963863,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 34.22126811806018,
+                  "multiplier": 0.44837697997724546,
+                  "observed": 15.0,
+                  "symbol": "m"
+                }
+              ]
+            },
+            {
+              "observations": 12761,
+              "phase": 1,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 1.9772488306997025,
+                  "multiplier": 1.5070869816553822,
+                  "observed": 3.0,
+                  "symbol": "g"
+                },
+                {
+                  "baseline_expected": 377.7467074676317,
+                  "multiplier": 1.0655376894000954,
+                  "observed": 403.0,
+                  "symbol": "r"
+                },
+                {
+                  "baseline_expected": 555.3503971986071,
+                  "multiplier": 1.048808517182087,
+                  "observed": 583.0,
+                  "symbol": "i"
+                },
+                {
+                  "baseline_expected": 843.7300018033179,
+                  "multiplier": 1.0421422622669665,
+                  "observed": 880.0,
+                  "symbol": "c"
+                },
+                {
+                  "baseline_expected": 30.819672152558876,
+                  "multiplier": 1.0375446830860566,
+                  "observed": 32.0,
+                  "symbol": "f"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 0.035049591037268756,
+                  "multiplier": 0.019666589844050206,
+                  "observed": 0.0,
+                  "symbol": "z"
+                },
+                {
+                  "baseline_expected": 4.651314844653005e-06,
+                  "multiplier": 0.019666589844050206,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 0.1363532072116521,
+                  "multiplier": 0.01966658984405021,
+                  "observed": 0.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 27.913603888304507,
+                  "multiplier": 0.616711243746081,
+                  "observed": 17.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 721.6725400780002,
+                  "multiplier": 0.9175812923253795,
+                  "observed": 661.0,
+                  "symbol": "d"
+                }
+              ]
+            },
+            {
+              "observations": 12482,
+              "phase": 2,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 362.1362123260172,
+                  "multiplier": 1.1673969286489019,
+                  "observed": 424.0,
+                  "symbol": "q"
+                },
+                {
+                  "baseline_expected": 384.8595862142579,
+                  "multiplier": 1.1582175903576344,
+                  "observed": 447.0,
+                  "symbol": "s"
+                },
+                {
+                  "baseline_expected": 647.7105384029901,
+                  "multiplier": 1.0639785107329442,
+                  "observed": 690.0,
+                  "symbol": "k"
+                },
+                {
+                  "baseline_expected": 585.2764558961584,
+                  "multiplier": 1.0296737511332017,
+                  "observed": 603.0,
+                  "symbol": "i"
+                },
+                {
+                  "baseline_expected": 761.9444520886943,
+                  "multiplier": 1.0142180452974519,
+                  "observed": 773.0,
+                  "symbol": "c"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 0.1367684147202686,
+                  "multiplier": 0.02009734652221717,
+                  "observed": 0.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 0.11006428525303123,
+                  "multiplier": 0.02009734652221717,
+                  "observed": 0.0,
+                  "symbol": "z"
+                },
+                {
+                  "baseline_expected": 3.958985648369203e-06,
+                  "multiplier": 0.02009734652221717,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 26.28319782928026,
+                  "multiplier": 0.579334464381298,
+                  "observed": 15.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 762.1718624143305,
+                  "multiplier": 0.8943539771122627,
+                  "observed": 680.0,
+                  "symbol": "d"
+                }
+              ]
+            },
+            {
+              "observations": 11664,
+              "phase": 3,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 0.16857128363237903,
+                  "multiplier": 5.826281865093383,
+                  "observed": 1.0,
+                  "symbol": "z"
+                },
+                {
+                  "baseline_expected": 23.672571722360843,
+                  "multiplier": 1.261548988979809,
+                  "observed": 30.0,
+                  "symbol": "f"
+                },
+                {
+                  "baseline_expected": 1291.0416549543634,
+                  "multiplier": 1.0462023609429534,
+                  "observed": 1352.0,
+                  "symbol": "o"
+                },
+                {
+                  "baseline_expected": 704.2716948284902,
+                  "multiplier": 1.0329683901214752,
+                  "observed": 728.0,
+                  "symbol": "c"
+                },
+                {
+                  "baseline_expected": 339.67196538590036,
+                  "multiplier": 1.032633685126401,
+                  "observed": 351.0,
+                  "symbol": "q"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 0.155581778596212,
+                  "multiplier": 0.021476510067114138,
+                  "observed": 0.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 5.111511337380124e-06,
+                  "multiplier": 0.021476510067114138,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 3.405328848906898,
+                  "multiplier": 0.5961778287059818,
+                  "observed": 2.0,
+                  "symbol": "g"
+                },
+                {
+                  "baseline_expected": 28.652977180546184,
+                  "multiplier": 0.8752477288196022,
+                  "observed": 25.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 615.6265100080868,
+                  "multiplier": 0.916351431592144,
+                  "observed": 563.0,
+                  "symbol": "a"
+                }
+              ]
+            },
+            {
+              "observations": 10585,
+              "phase": 4,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 54.80936602240241,
+                  "multiplier": 1.2884234677241349,
+                  "observed": 71.0,
+                  "symbol": "p"
+                },
+                {
+                  "baseline_expected": 630.0082908302583,
+                  "multiplier": 1.0852260717128346,
+                  "observed": 685.0,
+                  "symbol": "d"
+                },
+                {
+                  "baseline_expected": 1121.882247637454,
+                  "multiplier": 1.0497101817748755,
+                  "observed": 1179.0,
+                  "symbol": "o"
+                },
+                {
+                  "baseline_expected": 557.3361749056293,
+                  "multiplier": 1.0362005361284898,
+                  "observed": 578.0,
+                  "symbol": "i"
+                },
+                {
+                  "baseline_expected": 623.6232500564693,
+                  "multiplier": 1.0256405264288355,
+                  "observed": 640.0,
+                  "symbol": "c"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 4.0791691793816146e-06,
+                  "multiplier": 0.023614057743750482,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 0.14856335105802032,
+                  "multiplier": 0.023614057743750486,
+                  "observed": 0.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 0.15896659149973777,
+                  "multiplier": 0.023614057743750486,
+                  "observed": 0.0,
+                  "symbol": "z"
+                },
+                {
+                  "baseline_expected": 31.024383696890567,
+                  "multiplier": 0.7789316441652528,
+                  "observed": 24.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 3.2531254061340826,
+                  "multiplier": 0.9240274943870284,
+                  "observed": 3.0,
+                  "symbol": "g"
+                }
+              ]
+            },
+            {
+              "observations": 9294,
+              "phase": 5,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 3.1120157535839863,
+                  "multiplier": 1.2776916179354831,
+                  "observed": 4.0,
+                  "symbol": "g"
+                },
+                {
+                  "baseline_expected": 261.89471326235383,
+                  "multiplier": 1.0970065440586214,
+                  "observed": 288.0,
+                  "symbol": "t"
+                },
+                {
+                  "baseline_expected": 45.62449948226256,
+                  "multiplier": 1.072001138287689,
+                  "observed": 49.0,
+                  "symbol": "p"
+                },
+                {
+                  "baseline_expected": 273.2550210258091,
+                  "multiplier": 1.0631984802550896,
+                  "observed": 291.0,
+                  "symbol": "r"
+                },
+                {
+                  "baseline_expected": 585.4648468608113,
+                  "multiplier": 1.040783758436612,
+                  "observed": 610.0,
+                  "symbol": "d"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 4.093376537190305e-06,
+                  "multiplier": 0.02680628272251288,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 0.16323268785664993,
+                  "multiplier": 0.026806282722512884,
+                  "observed": 0.0,
+                  "symbol": "z"
+                },
+                {
+                  "baseline_expected": 0.10849939857476872,
+                  "multiplier": 0.026806282722512887,
+                  "observed": 0.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 27.71221993573268,
+                  "multiplier": 0.9398705088254687,
+                  "observed": 26.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 469.6667202921423,
+                  "multiplier": 0.95303241889083,
+                  "observed": 447.0,
+                  "symbol": "i"
+                }
+              ]
+            },
+            {
+              "observations": 7636,
+              "phase": 6,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 0.1147844847579859,
+                  "multiplier": 8.46181833051847,
+                  "observed": 1.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 2.3648743439061493,
+                  "multiplier": 1.6689935126324549,
+                  "observed": 4.0,
+                  "symbol": "g"
+                },
+                {
+                  "baseline_expected": 14.83574476397968,
+                  "multiplier": 1.5976771691572733,
+                  "observed": 24.0,
+                  "symbol": "f"
+                },
+                {
+                  "baseline_expected": 25.503533442463365,
+                  "multiplier": 1.2464652500976443,
+                  "observed": 32.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 219.527413179472,
+                  "multiplier": 1.1078623706467898,
+                  "observed": 244.0,
+                  "symbol": "t"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 0.13545021844262595,
+                  "multiplier": 0.03243791180942693,
+                  "observed": 0.0,
+                  "symbol": "z"
+                },
+                {
+                  "baseline_expected": 5.051672165892324e-06,
+                  "multiplier": 0.03243791180942693,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 233.7882873939401,
+                  "multiplier": 0.8891333198131733,
+                  "observed": 207.0,
+                  "symbol": "s"
+                },
+                {
+                  "baseline_expected": 222.7569266432025,
+                  "multiplier": 0.9315585599240089,
+                  "observed": 207.0,
+                  "symbol": "n"
+                },
+                {
+                  "baseline_expected": 397.6410987376001,
+                  "multiplier": 0.9376086749664061,
+                  "observed": 372.0,
+                  "symbol": "k"
+                }
+              ]
+            },
+            {
+              "observations": 5977,
+              "phase": 7,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 2.103198722908949,
+                  "multiplier": 2.3207618710401645,
+                  "observed": 5.0,
+                  "symbol": "g"
+                },
+                {
+                  "baseline_expected": 11.449439726173546,
+                  "multiplier": 1.5486309967101952,
+                  "observed": 18.0,
+                  "symbol": "f"
+                },
+                {
+                  "baseline_expected": 25.404278089214404,
+                  "multiplier": 1.362207070884241,
+                  "observed": 35.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 163.76825859794442,
+                  "multiplier": 1.153597278305846,
+                  "observed": 190.0,
+                  "symbol": "t"
+                },
+                {
+                  "baseline_expected": 27.97223601429716,
+                  "multiplier": 1.10379608281991,
+                  "observed": 31.0,
+                  "symbol": "p"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 0.09462622330810724,
+                  "multiplier": 0.04107171506497652,
+                  "observed": 0.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 0.09396818218454049,
+                  "multiplier": 0.04107171506497652,
+                  "observed": 0.0,
+                  "symbol": "z"
+                },
+                {
+                  "baseline_expected": 4.1564999625739915e-06,
+                  "multiplier": 0.041071715064976526,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 185.28429345554343,
+                  "multiplier": 0.8691425824232879,
+                  "observed": 160.0,
+                  "symbol": "s"
+                },
+                {
+                  "baseline_expected": 185.3093355662157,
+                  "multiplier": 0.8897296536886319,
+                  "observed": 164.0,
+                  "symbol": "q"
+                }
+              ]
+            },
+            {
+              "observations": 4397,
+              "phase": 8,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 22.344489163452106,
+                  "multiplier": 1.7043863641780397,
+                  "observed": 39.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 1.5759455288813218,
+                  "multiplier": 1.2542751137826604,
+                  "observed": 2.0,
+                  "symbol": "g"
+                },
+                {
+                  "baseline_expected": 8.180727937880171,
+                  "multiplier": 1.2101498641304582,
+                  "observed": 10.0,
+                  "symbol": "f"
+                },
+                {
+                  "baseline_expected": 138.79009420413107,
+                  "multiplier": 1.1716469794518491,
+                  "observed": 164.0,
+                  "symbol": "r"
+                },
+                {
+                  "baseline_expected": 272.89891187148055,
+                  "multiplier": 1.0869188872081685,
+                  "observed": 298.0,
+                  "symbol": "a"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 0.05559543258896848,
+                  "multiplier": 0.05501826778422519,
+                  "observed": 0.0,
+                  "symbol": "z"
+                },
+                {
+                  "baseline_expected": 0.16061666488583337,
+                  "multiplier": 0.055018267784225194,
+                  "observed": 0.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 2.2648423444911933e-06,
+                  "multiplier": 0.055018267784225194,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 133.90463394914886,
+                  "multiplier": 0.803073511734271,
+                  "observed": 106.0,
+                  "symbol": "s"
+                },
+                {
+                  "baseline_expected": 233.7798656592358,
+                  "multiplier": 0.8917507982656734,
+                  "observed": 207.0,
+                  "symbol": "i"
+                }
+              ]
+            },
+            {
+              "observations": 2730,
+              "phase": 9,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 0.17638493153074972,
+                  "multiplier": 10.45245318068851,
+                  "observed": 2.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 19.976041236418627,
+                  "multiplier": 2.053764143102794,
+                  "observed": 43.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 5.533001879307626,
+                  "multiplier": 1.4076438030134415,
+                  "observed": 8.0,
+                  "symbol": "f"
+                },
+                {
+                  "baseline_expected": 185.32869400351754,
+                  "multiplier": 1.2351728749079005,
+                  "observed": 233.0,
+                  "symbol": "a"
+                },
+                {
+                  "baseline_expected": 152.43669032318974,
+                  "multiplier": 1.147322885450103,
+                  "observed": 177.0,
+                  "symbol": "d"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 1.1579063968592929,
+                  "multiplier": 0.08573342263898195,
+                  "observed": 0.0,
+                  "symbol": "g"
+                },
+                {
+                  "baseline_expected": 2.881635970558751e-06,
+                  "multiplier": 0.08573342263898197,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 0.03168253438423124,
+                  "multiplier": 0.08573342263898198,
+                  "observed": 0.0,
+                  "symbol": "z"
+                },
+                {
+                  "baseline_expected": 12.810568037618228,
+                  "multiplier": 0.7280467979777234,
+                  "observed": 9.0,
+                  "symbol": "p"
+                },
+                {
+                  "baseline_expected": 168.14512701596365,
+                  "multiplier": 0.7762788900305267,
+                  "observed": 127.0,
+                  "symbol": "i"
+                }
+              ]
+            },
+            {
+              "observations": 1408,
+              "phase": 10,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 0.7125398799373401,
+                  "multiplier": 2.5288819096785318,
+                  "observed": 2.0,
+                  "symbol": "g"
+                },
+                {
+                  "baseline_expected": 13.019985802727279,
+                  "multiplier": 2.0385226742553777,
+                  "observed": 29.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 92.01462194493203,
+                  "multiplier": 1.303329013565237,
+                  "observed": 125.0,
+                  "symbol": "a"
+                },
+                {
+                  "baseline_expected": 89.80130101069963,
+                  "multiplier": 1.2374350463511556,
+                  "observed": 115.0,
+                  "symbol": "l"
+                },
+                {
+                  "baseline_expected": 103.79089880054221,
+                  "multiplier": 1.099534526219449,
+                  "observed": 116.0,
+                  "symbol": "y"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 0.08435797573938879,
+                  "multiplier": 0.15384615384615377,
+                  "observed": 0.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 0.007004575141675535,
+                  "multiplier": 0.15384615384615377,
+                  "observed": 0.0,
+                  "symbol": "z"
+                },
+                {
+                  "baseline_expected": 1.3346915977130122e-06,
+                  "multiplier": 0.15384615384615377,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 2.683615059217051,
+                  "multiplier": 0.469149886863926,
+                  "observed": 1.0,
+                  "symbol": "f"
+                },
+                {
+                  "baseline_expected": 44.72931225614227,
+                  "multiplier": 0.6646108558680722,
+                  "observed": 27.0,
+                  "symbol": "q"
+                }
+              ]
+            },
+            {
+              "observations": 658,
+              "phase": 11,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 6.492650694488246,
+                  "multiplier": 2.6085913445121967,
+                  "observed": 21.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 0.3706251574999585,
+                  "multiplier": 2.2225149586250468,
+                  "observed": 1.0,
+                  "symbol": "g"
+                },
+                {
+                  "baseline_expected": 45.24354887024815,
+                  "multiplier": 1.298451457679416,
+                  "observed": 64.0,
+                  "symbol": "a"
+                },
+                {
+                  "baseline_expected": 15.138436391635768,
+                  "multiplier": 1.1836377109012306,
+                  "observed": 19.0,
+                  "symbol": "n"
+                },
+                {
+                  "baseline_expected": 27.87588555399439,
+                  "multiplier": 1.1065078783795113,
+                  "observed": 32.0,
+                  "symbol": "k"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 1.1971747441237055,
+                  "multiplier": 0.28008752735229764,
+                  "observed": 0.0,
+                  "symbol": "f"
+                },
+                {
+                  "baseline_expected": 0.07396958332294683,
+                  "multiplier": 0.28008752735229764,
+                  "observed": 0.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 0.0025192983147577083,
+                  "multiplier": 0.28008752735229764,
+                  "observed": 0.0,
+                  "symbol": "z"
+                },
+                {
+                  "baseline_expected": 6.161804665718252e-07,
+                  "multiplier": 0.28008752735229764,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 20.066859438087754,
+                  "multiplier": 0.710595833767966,
+                  "observed": 12.0,
+                  "symbol": "q"
+                }
+              ]
+            }
+          ],
+          "phase_offset_audit": {
+            "best_offset_counts": {
+              "0": 143,
+              "1": 111,
+              "10": 82,
+              "11": 116,
+              "2": 93,
+              "3": 83,
+              "4": 75,
+              "5": 90,
+              "6": 81,
+              "7": 94,
+              "8": 89,
+              "9": 82
+            },
+            "declared_origin_best_fraction": 0.12554872695346794,
+            "eligible_test_lines": 1139,
+            "interpretation": "A stable boundary-reset table predicts offset 0 on unseen lines. A copied or skipped counter position predicts a persistent nonzero offset and agreement between line halves.",
+            "line_half_comparisons": 1139,
+            "line_half_offset_agreement": 0.06409130816505706,
+            "mean_oracle_offset_gain_bits_per_symbol": 0.018656203833309928
+          },
+          "selected": {
+            "alpha": 256.0,
+            "modulus": 12,
+            "scope": "word_in_line"
+          },
+          "selected_name": "word_in_line_mod12_alpha256",
+          "test": {
+            "baseline_bits_per_symbol": 1.9732602926649394,
+            "baseline_log2_probability": -90616.05915975934,
+            "candidate_bits_per_symbol": 1.9715499220700818,
+            "candidate_log2_probability": -90537.5155213023,
+            "gain_bits_per_symbol": 0.001710370594857571,
+            "gain_bits_per_word": 0.01070660284310924,
+            "net_gain_after_table_description_bits": -197.45636154295062,
+            "symbols": 45922,
+            "words": 7336
+          },
+          "validation": {
+            "baseline_bits_per_symbol": 1.8021149077653975,
+            "candidate_bits_per_symbol": 1.7978328880905505,
+            "gain_bits_per_symbol": 0.004282019674846793,
+            "net_gain_after_table_description_bits": 12.295538648410002,
+            "symbols": 67327,
+            "words": 10576
+          },
+          "validation_top_five": [
+            {
+              "candidate": "word_in_line_mod12_alpha256",
+              "net_gain_after_table_description_bits": 12.295538648410002,
+              "raw_gain_bits_per_symbol": 0.004282019674846793
+            },
+            {
+              "candidate": "word_in_line_mod2_alpha256",
+              "net_gain_after_table_description_bits": -12.398087320063496,
+              "raw_gain_bits_per_symbol": 0.0004990852507899729
+            },
+            {
+              "candidate": "boustrophedon_word_in_line_mod2_alpha256",
+              "net_gain_after_table_description_bits": -12.398087320063496,
+              "raw_gain_bits_per_symbol": 0.0004990852507899729
+            },
+            {
+              "candidate": "glyph_in_line_mod2_alpha256",
+              "net_gain_after_table_description_bits": -13.130744927548221,
+              "raw_gain_bits_per_symbol": 0.00048820317365175605
+            },
+            {
+              "candidate": "word_in_line_mod2_alpha2048",
+              "net_gain_after_table_description_bits": -13.229978564588237,
+              "raw_gain_bits_per_symbol": 0.0004867292681303454
+            }
+          ]
+        }
+      ],
+      "name": "VOYNICH",
+      "null_gain_bits_per_symbol": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "summary": {
+        "gain_bits_per_symbol": 0.0012465379721984255,
+        "gain_bits_per_word": 0.007783591826643765,
+        "null_95th_percentile_gain_bits_per_symbol": 0.0,
+        "null_mean_gain_bits_per_symbol": 0.0,
+        "null_replicates": 32,
+        "phase_origin_null_p_one_sided": 0.030303030303030304,
+        "pooled_test_symbols": 206888,
+        "pooled_test_words": 33133,
+        "positive_test_folds": 4,
+        "selected_candidate_counts": {
+          "line_in_page_mod3_alpha256": 1,
+          "line_in_page_mod4_alpha256": 1,
+          "line_in_page_mod5_alpha256": 1,
+          "word_in_line_mod12_alpha256": 1
+        },
+        "selected_modulus_counts": {
+          "12": 1,
+          "3": 1,
+          "4": 1,
+          "5": 1
+        },
+        "selected_scope_counts": {
+          "line_in_page": 3,
+          "word_in_line": 1
+        },
+        "table_selected_folds": 4
+      }
+    },
+    {
+      "fold_assignment": {
+        "A": 3,
+        "B": 1,
+        "C": 2,
+        "D": 2,
+        "E": 2,
+        "F": 3,
+        "G": 3,
+        "H": 3,
+        "I": 3,
+        "J": 3,
+        "M": 1,
+        "N": 2,
+        "O": 3,
+        "Q": 2,
+        "S": 2,
+        "T": 0
+      },
+      "fold_event_loads": [
+        10576,
+        7590,
+        7631,
+        7336
+      ],
+      "folds": [
+        {
+          "fold": 0,
+          "minimum_table_description_bits": 0.0,
+          "phase_action_table": null,
+          "phase_offset_audit": null,
+          "selected": null,
+          "selected_name": "baseline",
+          "test": {
+            "baseline_bits_per_symbol": 1.8532630297446724,
+            "baseline_log2_probability": -125082.28166655717,
+            "candidate_bits_per_symbol": 1.8532630297446724,
+            "candidate_log2_probability": -125082.28166655717,
+            "gain_bits_per_symbol": 0.0,
+            "gain_bits_per_word": 0.0,
+            "net_gain_after_table_description_bits": 0.0,
+            "symbols": 67493,
+            "words": 10576
+          },
+          "validation": {
+            "baseline_bits_per_symbol": 1.7504634561484635,
+            "candidate_bits_per_symbol": 1.7504634561484635,
+            "gain_bits_per_symbol": 0.0,
+            "net_gain_after_table_description_bits": 0.0,
+            "symbols": 46815,
+            "words": 7590
+          },
+          "validation_top_five": [
+            {
+              "candidate": "glyph_in_line_mod2_alpha256",
+              "net_gain_after_table_description_bits": -5.725655359347002,
+              "raw_gain_bits_per_symbol": 0.0008602871865994446
+            },
+            {
+              "candidate": "word_in_line_mod2_alpha256",
+              "net_gain_after_table_description_bits": -6.880500464190845,
+              "raw_gain_bits_per_symbol": 0.0008356189156426178
+            },
+            {
+              "candidate": "boustrophedon_word_in_line_mod2_alpha256",
+              "net_gain_after_table_description_bits": -6.880500464190845,
+              "raw_gain_bits_per_symbol": 0.0008356189156426178
+            },
+            {
+              "candidate": "glyph_in_line_mod2_alpha2048",
+              "net_gain_after_table_description_bits": -7.081173730941373,
+              "raw_gain_bits_per_symbol": 0.0008313323992109073
+            },
+            {
+              "candidate": "word_in_line_mod2_alpha2048",
+              "net_gain_after_table_description_bits": -8.191598408826394,
+              "raw_gain_bits_per_symbol": 0.0008076129785575906
+            }
+          ]
+        },
+        {
+          "fold": 1,
+          "minimum_table_description_bits": 0.0,
+          "phase_action_table": null,
+          "phase_offset_audit": null,
+          "selected": null,
+          "selected_name": "baseline",
+          "test": {
+            "baseline_bits_per_symbol": 1.7339798421936157,
+            "baseline_log2_probability": -81176.26631229412,
+            "candidate_bits_per_symbol": 1.7339798421936157,
+            "candidate_log2_probability": -81176.26631229412,
+            "gain_bits_per_symbol": 0.0,
+            "gain_bits_per_word": 0.0,
+            "net_gain_after_table_description_bits": 0.0,
+            "symbols": 46815,
+            "words": 7590
+          },
+          "validation": {
+            "baseline_bits_per_symbol": 1.9323612750442372,
+            "candidate_bits_per_symbol": 1.9323612750442372,
+            "gain_bits_per_symbol": 0.0,
+            "net_gain_after_table_description_bits": 0.0,
+            "symbols": 47042,
+            "words": 7631
+          },
+          "validation_top_five": [
+            {
+              "candidate": "line_in_page_mod2_alpha256",
+              "net_gain_after_table_description_bits": -25.0209820894961,
+              "raw_gain_bits_per_symbol": 0.0004459635625718273
+            },
+            {
+              "candidate": "line_in_page_mod2_alpha2048",
+              "net_gain_after_table_description_bits": -25.516348584162188,
+              "raw_gain_bits_per_symbol": 0.00043543325997699527
+            },
+            {
+              "candidate": "word_in_line_mod2_alpha256",
+              "net_gain_after_table_description_bits": -27.4496062699327,
+              "raw_gain_bits_per_symbol": 0.00039433684218501125
+            },
+            {
+              "candidate": "boustrophedon_word_in_line_mod2_alpha256",
+              "net_gain_after_table_description_bits": -27.4496062699327,
+              "raw_gain_bits_per_symbol": 0.00039433684218501125
+            },
+            {
+              "candidate": "word_in_line_mod2_alpha2048",
+              "net_gain_after_table_description_bits": -27.87586862979515,
+              "raw_gain_bits_per_symbol": 0.0003852755276179765
+            }
+          ]
+        },
+        {
+          "fold": 2,
+          "minimum_table_description_bits": 0.0,
+          "phase_action_table": null,
+          "phase_offset_audit": null,
+          "selected": null,
+          "selected_name": "baseline",
+          "test": {
+            "baseline_bits_per_symbol": 1.983541483673466,
+            "baseline_log2_probability": -93309.75847496718,
+            "candidate_bits_per_symbol": 1.983541483673466,
+            "candidate_log2_probability": -93309.75847496718,
+            "gain_bits_per_symbol": 0.0,
+            "gain_bits_per_word": 0.0,
+            "net_gain_after_table_description_bits": 0.0,
+            "symbols": 47042,
+            "words": 7631
+          },
+          "validation": {
+            "baseline_bits_per_symbol": 1.987252633649047,
+            "candidate_bits_per_symbol": 1.987252633649047,
+            "gain_bits_per_symbol": 0.0,
+            "net_gain_after_table_description_bits": 0.0,
+            "symbols": 45505,
+            "words": 7336
+          },
+          "validation_top_five": [
+            {
+              "candidate": "word_in_paragraph_mod2_alpha2048",
+              "net_gain_after_table_description_bits": -18.51190876979672,
+              "raw_gain_bits_per_symbol": 0.0006040674921481877
+            },
+            {
+              "candidate": "glyph_in_line_mod2_alpha2048",
+              "net_gain_after_table_description_bits": -20.087661667974317,
+              "raw_gain_bits_per_symbol": 0.0005694393656087394
+            },
+            {
+              "candidate": "line_in_page_mod2_alpha2048",
+              "net_gain_after_table_description_bits": -20.109141525099403,
+              "raw_gain_bits_per_symbol": 0.0005689673327085067
+            },
+            {
+              "candidate": "word_in_paragraph_mod2_alpha256",
+              "net_gain_after_table_description_bits": -20.588848342144047,
+              "raw_gain_bits_per_symbol": 0.0005584254841853852
+            },
+            {
+              "candidate": "word_in_line_mod2_alpha2048",
+              "net_gain_after_table_description_bits": -20.81577082327567,
+              "raw_gain_bits_per_symbol": 0.0005534387249032926
+            }
+          ]
+        },
+        {
+          "fold": 3,
+          "minimum_table_description_bits": 0.0,
+          "phase_action_table": null,
+          "phase_offset_audit": null,
+          "selected": null,
+          "selected_name": "baseline",
+          "test": {
+            "baseline_bits_per_symbol": 1.9378769919962577,
+            "baseline_log2_probability": -88183.09252078971,
+            "candidate_bits_per_symbol": 1.9378769919962577,
+            "candidate_log2_probability": -88183.09252078971,
+            "gain_bits_per_symbol": 0.0,
+            "gain_bits_per_word": 0.0,
+            "net_gain_after_table_description_bits": 0.0,
+            "symbols": 45505,
+            "words": 7336
+          },
+          "validation": {
+            "baseline_bits_per_symbol": 1.8450004963154405,
+            "candidate_bits_per_symbol": 1.8450004963154405,
+            "gain_bits_per_symbol": 0.0,
+            "net_gain_after_table_description_bits": 0.0,
+            "symbols": 67493,
+            "words": 10576
+          },
+          "validation_top_five": [
+            {
+              "candidate": "word_in_line_mod2_alpha256",
+              "net_gain_after_table_description_bits": -25.25301986708655,
+              "raw_gain_bits_per_symbol": 0.0003073945465887344
+            },
+            {
+              "candidate": "boustrophedon_word_in_line_mod2_alpha256",
+              "net_gain_after_table_description_bits": -25.25301986708655,
+              "raw_gain_bits_per_symbol": 0.0003073945465887344
+            },
+            {
+              "candidate": "word_in_line_mod2_alpha2048",
+              "net_gain_after_table_description_bits": -25.806166242298787,
+              "raw_gain_bits_per_symbol": 0.00029919893555926117
+            },
+            {
+              "candidate": "boustrophedon_word_in_line_mod2_alpha2048",
+              "net_gain_after_table_description_bits": -25.806166242298787,
+              "raw_gain_bits_per_symbol": 0.00029919893555926117
+            },
+            {
+              "candidate": "line_in_page_mod2_alpha2048",
+              "net_gain_after_table_description_bits": -33.670577685770695,
+              "raw_gain_bits_per_symbol": 0.00018267705264589373
+            }
+          ]
+        }
+      ],
+      "name": "SYNTHETIC_BASE_ONLY",
+      "null_gain_bits_per_symbol": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "summary": {
+        "gain_bits_per_symbol": 0.0,
+        "gain_bits_per_word": 0.0,
+        "null_95th_percentile_gain_bits_per_symbol": 0.0,
+        "null_mean_gain_bits_per_symbol": 0.0,
+        "null_replicates": 8,
+        "phase_origin_null_p_one_sided": 1.0,
+        "pooled_test_symbols": 206855,
+        "pooled_test_words": 33133,
+        "positive_test_folds": 0,
+        "selected_candidate_counts": {
+          "baseline": 4
+        },
+        "selected_modulus_counts": {},
+        "selected_scope_counts": {},
+        "table_selected_folds": 0
+      }
+    },
+    {
+      "fold_assignment": {
+        "A": 3,
+        "B": 1,
+        "C": 2,
+        "D": 2,
+        "E": 2,
+        "F": 3,
+        "G": 3,
+        "H": 3,
+        "I": 3,
+        "J": 3,
+        "M": 1,
+        "N": 2,
+        "O": 3,
+        "Q": 2,
+        "S": 2,
+        "T": 0
+      },
+      "fold_event_loads": [
+        10576,
+        7590,
+        7631,
+        7336
+      ],
+      "folds": [
+        {
+          "fold": 0,
+          "minimum_table_description_bits": 0.0,
+          "phase_action_table": null,
+          "phase_offset_audit": null,
+          "selected": null,
+          "selected_name": "baseline",
+          "test": {
+            "baseline_bits_per_symbol": 2.849303860227424,
+            "baseline_log2_probability": -199915.70674513673,
+            "candidate_bits_per_symbol": 2.849303860227424,
+            "candidate_log2_probability": -199915.70674513673,
+            "gain_bits_per_symbol": 0.0,
+            "gain_bits_per_word": 0.0,
+            "net_gain_after_table_description_bits": 0.0,
+            "symbols": 70163,
+            "words": 10576
+          },
+          "validation": {
+            "baseline_bits_per_symbol": 2.94237516838843,
+            "candidate_bits_per_symbol": 2.94237516838843,
+            "gain_bits_per_symbol": 0.0,
+            "net_gain_after_table_description_bits": 0.0,
+            "symbols": 49503,
+            "words": 7590
+          },
+          "validation_top_five": [
+            {
+              "candidate": "word_in_paragraph_mod2_alpha2048",
+              "net_gain_after_table_description_bits": -44.390865947760176,
+              "raw_gain_bits_per_symbol": 3.250578858331463e-05
+            },
+            {
+              "candidate": "word_in_paragraph_mod2_alpha256",
+              "net_gain_after_table_description_bits": -50.05469483611523,
+              "raw_gain_bits_per_symbol": -8.190806286720465e-05
+            },
+            {
+              "candidate": "word_in_line_mod2_alpha2048",
+              "net_gain_after_table_description_bits": -50.7996072738606,
+              "raw_gain_bits_per_symbol": -9.695588699393171e-05
+            },
+            {
+              "candidate": "boustrophedon_word_in_line_mod2_alpha2048",
+              "net_gain_after_table_description_bits": -50.7996072738606,
+              "raw_gain_bits_per_symbol": -9.695588699393171e-05
+            },
+            {
+              "candidate": "glyph_in_line_mod2_alpha2048",
+              "net_gain_after_table_description_bits": -52.2419803533121,
+              "raw_gain_bits_per_symbol": -0.00012609297119996971
+            }
+          ]
+        },
+        {
+          "fold": 1,
+          "minimum_table_description_bits": 0.0,
+          "phase_action_table": null,
+          "phase_offset_audit": null,
+          "selected": null,
+          "selected_name": "baseline",
+          "test": {
+            "baseline_bits_per_symbol": 2.746210657217197,
+            "baseline_log2_probability": -135945.6661642229,
+            "candidate_bits_per_symbol": 2.746210657217197,
+            "candidate_log2_probability": -135945.6661642229,
+            "gain_bits_per_symbol": 0.0,
+            "gain_bits_per_word": 0.0,
+            "net_gain_after_table_description_bits": 0.0,
+            "symbols": 49503,
+            "words": 7590
+          },
+          "validation": {
+            "baseline_bits_per_symbol": 2.806223247516676,
+            "candidate_bits_per_symbol": 2.806223247516676,
+            "gain_bits_per_symbol": 0.0,
+            "net_gain_after_table_description_bits": 0.0,
+            "symbols": 50494,
+            "words": 7631
+          },
+          "validation_top_five": [
+            {
+              "candidate": "glyph_in_line_mod2_alpha256",
+              "net_gain_after_table_description_bits": -16.547443301562453,
+              "raw_gain_bits_per_symbol": 0.0006228969124735126
+            },
+            {
+              "candidate": "glyph_in_line_mod2_alpha2048",
+              "net_gain_after_table_description_bits": -17.25195854937192,
+              "raw_gain_bits_per_symbol": 0.000608944457769796
+            },
+            {
+              "candidate": "line_in_page_mod2_alpha256",
+              "net_gain_after_table_description_bits": -21.81825386491255,
+              "raw_gain_bits_per_symbol": 0.000518512023905562
+            },
+            {
+              "candidate": "word_in_paragraph_mod2_alpha256",
+              "net_gain_after_table_description_bits": -22.216019260959,
+              "raw_gain_bits_per_symbol": 0.000510634545471561
+            },
+            {
+              "candidate": "line_in_page_mod2_alpha2048",
+              "net_gain_after_table_description_bits": -22.450265566265443,
+              "raw_gain_bits_per_symbol": 0.0005059954535931904
+            }
+          ]
+        },
+        {
+          "fold": 2,
+          "minimum_table_description_bits": 0.0,
+          "phase_action_table": null,
+          "phase_offset_audit": null,
+          "selected": null,
+          "selected_name": "baseline",
+          "test": {
+            "baseline_bits_per_symbol": 2.861110423696381,
+            "baseline_log2_probability": -144468.90973412507,
+            "candidate_bits_per_symbol": 2.861110423696381,
+            "candidate_log2_probability": -144468.90973412507,
+            "gain_bits_per_symbol": 0.0,
+            "gain_bits_per_word": 0.0,
+            "net_gain_after_table_description_bits": 0.0,
+            "symbols": 50494,
+            "words": 7631
+          },
+          "validation": {
+            "baseline_bits_per_symbol": 2.80856880313143,
+            "candidate_bits_per_symbol": 2.80856880313143,
+            "gain_bits_per_symbol": 0.0,
+            "net_gain_after_table_description_bits": 0.0,
+            "symbols": 49685,
+            "words": 7336
+          },
+          "validation_top_five": [
+            {
+              "candidate": "glyph_in_line_mod2_alpha256",
+              "net_gain_after_table_description_bits": -32.2655107541068,
+              "raw_gain_bits_per_symbol": 0.0003166848997865191
+            },
+            {
+              "candidate": "glyph_in_line_mod2_alpha2048",
+              "net_gain_after_table_description_bits": -32.57896233806969,
+              "raw_gain_bits_per_symbol": 0.0003103761228123239
+            },
+            {
+              "candidate": "word_in_line_mod2_alpha256",
+              "net_gain_after_table_description_bits": -38.95395874112728,
+              "raw_gain_bits_per_symbol": 0.000182067852649144
+            },
+            {
+              "candidate": "boustrophedon_word_in_line_mod2_alpha256",
+              "net_gain_after_table_description_bits": -38.95395874112728,
+              "raw_gain_bits_per_symbol": 0.000182067852649144
+            },
+            {
+              "candidate": "word_in_line_mod2_alpha2048",
+              "net_gain_after_table_description_bits": -39.118389085895615,
+              "raw_gain_bits_per_symbol": 0.00017875839617800915
+            }
+          ]
+        },
+        {
+          "fold": 3,
+          "minimum_table_description_bits": 0.0,
+          "phase_action_table": null,
+          "phase_offset_audit": null,
+          "selected": null,
+          "selected_name": "baseline",
+          "test": {
+            "baseline_bits_per_symbol": 2.791199115667213,
+            "baseline_log2_probability": -138680.72806192547,
+            "candidate_bits_per_symbol": 2.791199115667213,
+            "candidate_log2_probability": -138680.72806192547,
+            "gain_bits_per_symbol": 0.0,
+            "gain_bits_per_word": 0.0,
+            "net_gain_after_table_description_bits": 0.0,
+            "symbols": 49685,
+            "words": 7336
+          },
+          "validation": {
+            "baseline_bits_per_symbol": 2.7482128286729623,
+            "candidate_bits_per_symbol": 2.7482128286729623,
+            "gain_bits_per_symbol": 0.0,
+            "net_gain_after_table_description_bits": 0.0,
+            "symbols": 70163,
+            "words": 10576
+          },
+          "validation_top_five": [
+            {
+              "candidate": "glyph_in_line_mod2_alpha2048",
+              "net_gain_after_table_description_bits": -54.38952154832077,
+              "raw_gain_bits_per_symbol": -9.10668236580644e-05
+            },
+            {
+              "candidate": "glyph_in_line_mod2_alpha256",
+              "net_gain_after_table_description_bits": -54.87084647818119,
+              "raw_gain_bits_per_symbol": -9.79269198606273e-05
+            },
+            {
+              "candidate": "word_in_paragraph_mod2_alpha2048",
+              "net_gain_after_table_description_bits": -57.22289230133174,
+              "raw_gain_bits_per_symbol": -0.0001314495147204615
+            },
+            {
+              "candidate": "word_in_paragraph_mod2_alpha256",
+              "net_gain_after_table_description_bits": -57.82760631639394,
+              "raw_gain_bits_per_symbol": -0.00014006821710009463
+            },
+            {
+              "candidate": "line_in_page_mod2_alpha2048",
+              "net_gain_after_table_description_bits": -64.0187843546737,
+              "raw_gain_bits_per_symbol": -0.00022830814467274344
+            }
+          ]
+        }
+      ],
+      "name": "LATIN_REFLOW",
+      "null_gain_bits_per_symbol": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "summary": {
+        "gain_bits_per_symbol": 0.0,
+        "gain_bits_per_word": 0.0,
+        "null_95th_percentile_gain_bits_per_symbol": 0.0,
+        "null_mean_gain_bits_per_symbol": 0.0,
+        "null_replicates": 8,
+        "phase_origin_null_p_one_sided": 1.0,
+        "pooled_test_symbols": 219845,
+        "pooled_test_words": 33133,
+        "positive_test_folds": 0,
+        "selected_candidate_counts": {
+          "baseline": 4
+        },
+        "selected_modulus_counts": {},
+        "selected_scope_counts": {},
+        "table_selected_folds": 0
+      }
+    },
+    {
+      "fold_assignment": {
+        "A": 3,
+        "B": 1,
+        "C": 2,
+        "D": 2,
+        "E": 2,
+        "F": 3,
+        "G": 3,
+        "H": 3,
+        "I": 3,
+        "J": 3,
+        "M": 1,
+        "N": 2,
+        "O": 3,
+        "Q": 2,
+        "S": 2,
+        "T": 0
+      },
+      "fold_event_loads": [
+        10576,
+        7590,
+        7631,
+        7336
+      ],
+      "folds": [
+        {
+          "fold": 0,
+          "minimum_table_description_bits": 88.0,
+          "phase_action_table": [
+            {
+              "observations": 31833,
+              "phase": 0,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 1879.8281795770943,
+                  "multiplier": 1.6834875641639753,
+                  "observed": 3175.0,
+                  "symbol": "a"
+                },
+                {
+                  "baseline_expected": 46.46697389885463,
+                  "multiplier": 1.5878018409919465,
+                  "observed": 74.0,
+                  "symbol": "g"
+                },
+                {
+                  "baseline_expected": 946.7296617225363,
+                  "multiplier": 1.2171863657163362,
+                  "observed": 1154.0,
+                  "symbol": "t"
+                },
+                {
+                  "baseline_expected": 17.502539404377632,
+                  "multiplier": 1.198231721315562,
+                  "observed": 21.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 1692.4088726234645,
+                  "multiplier": 1.1222677510056644,
+                  "observed": 1901.0,
+                  "symbol": "e"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 1.3408905821395693e-05,
+                  "multiplier": 0.007977811711178229,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 475.1707891330495,
+                  "multiplier": 0.542433392756648,
+                  "observed": 256.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 1817.035886999647,
+                  "multiplier": 0.7302779954864512,
+                  "observed": 1323.0,
+                  "symbol": "y"
+                },
+                {
+                  "baseline_expected": 913.1177842445105,
+                  "multiplier": 0.8206140451123016,
+                  "observed": 748.0,
+                  "symbol": "k"
+                },
+                {
+                  "baseline_expected": 1464.6157498905823,
+                  "multiplier": 0.8539578670706154,
+                  "observed": 1249.0,
+                  "symbol": "s"
+                }
+              ]
+            },
+            {
+              "observations": 24769,
+              "phase": 1,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 1575.4335900521764,
+                  "multiplier": 1.4539542168671302,
+                  "observed": 2298.0,
+                  "symbol": "s"
+                },
+                {
+                  "baseline_expected": 317.1451719743119,
+                  "multiplier": 1.4302275956481296,
+                  "observed": 455.0,
+                  "symbol": "q"
+                },
+                {
+                  "baseline_expected": 1762.9093498670043,
+                  "multiplier": 1.3419686853317299,
+                  "observed": 2372.0,
+                  "symbol": "e"
+                },
+                {
+                  "baseline_expected": 117.7105243578587,
+                  "multiplier": 1.2210553430868634,
+                  "observed": 144.0,
+                  "symbol": "p"
+                },
+                {
+                  "baseline_expected": 43.0475651927203,
+                  "multiplier": 1.090876273485838,
+                  "observed": 47.0,
+                  "symbol": "f"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 9.520122976808509e-06,
+                  "multiplier": 0.01022977022977028,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 12.131835709698432,
+                  "multiplier": 0.2549833887556924,
+                  "observed": 3.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 13.148413542728141,
+                  "multiplier": 0.46189044847986915,
+                  "observed": 6.0,
+                  "symbol": "g"
+                },
+                {
+                  "baseline_expected": 186.28561190922315,
+                  "multiplier": 0.5574879971078183,
+                  "observed": 103.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 677.4515443326927,
+                  "multiplier": 0.7495058711604435,
+                  "observed": 506.0,
+                  "symbol": "r"
+                }
+              ]
+            },
+            {
+              "observations": 21536,
+              "phase": 2,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 27.966581436960112,
+                  "multiplier": 1.7785929275765082,
+                  "observed": 50.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 1429.7777142673508,
+                  "multiplier": 1.6291394137306736,
+                  "observed": 2340.0,
+                  "symbol": "y"
+                },
+                {
+                  "baseline_expected": 2878.982011711848,
+                  "multiplier": 1.4809198604089209,
+                  "observed": 4280.0,
+                  "symbol": "o"
+                },
+                {
+                  "baseline_expected": 946.6126999636969,
+                  "multiplier": 1.1580465678246068,
+                  "observed": 1098.0,
+                  "symbol": "l"
+                },
+                {
+                  "baseline_expected": 308.8516344138753,
+                  "multiplier": 1.0772690887359182,
+                  "observed": 333.0,
+                  "symbol": "n"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 1.0717208125877053e-05,
+                  "multiplier": 0.011747430249632887,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 207.52531545700091,
+                  "multiplier": 0.18318238233086348,
+                  "observed": 36.0,
+                  "symbol": "q"
+                },
+                {
+                  "baseline_expected": 19.448886182588907,
+                  "multiplier": 0.3166242937797636,
+                  "observed": 6.0,
+                  "symbol": "g"
+                },
+                {
+                  "baseline_expected": 193.1761389205866,
+                  "multiplier": 0.4363597231943654,
+                  "observed": 83.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 1202.6464354787238,
+                  "multiplier": 0.497390800979766,
+                  "observed": 591.0,
+                  "symbol": "e"
+                }
+              ]
+            },
+            {
+              "observations": 18377,
+              "phase": 3,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 256.9742653463211,
+                  "multiplier": 2.6964839406080814,
+                  "observed": 699.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 693.8202595472517,
+                  "multiplier": 1.5560594278189515,
+                  "observed": 1085.0,
+                  "symbol": "k"
+                },
+                {
+                  "baseline_expected": 630.6459381822766,
+                  "multiplier": 1.4619012911977212,
+                  "observed": 926.0,
+                  "symbol": "r"
+                },
+                {
+                  "baseline_expected": 762.5650370696435,
+                  "multiplier": 1.4338336850706888,
+                  "observed": 1098.0,
+                  "symbol": "d"
+                },
+                {
+                  "baseline_expected": 173.63357796788986,
+                  "multiplier": 1.4224107904529486,
+                  "observed": 248.0,
+                  "symbol": "q"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 5.490366547541312e-06,
+                  "multiplier": 0.013739065099554592,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 6.824698595503629,
+                  "multiplier": 0.15825254376808243,
+                  "observed": 1.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 561.3926683635084,
+                  "multiplier": 0.5460528627591537,
+                  "observed": 303.0,
+                  "symbol": "l"
+                },
+                {
+                  "baseline_expected": 660.9130033032723,
+                  "multiplier": 0.6404926477766231,
+                  "observed": 420.0,
+                  "symbol": "s"
+                },
+                {
+                  "baseline_expected": 5.976593340631599,
+                  "multiplier": 0.6738214087955161,
+                  "observed": 4.0,
+                  "symbol": "g"
+                }
+              ]
+            }
+          ],
+          "phase_offset_audit": {
+            "best_offset_counts": {
+              "0": 852,
+              "1": 67,
+              "2": 144,
+              "3": 76
+            },
+            "declared_origin_best_fraction": 0.7480245829675154,
+            "eligible_test_lines": 1139,
+            "interpretation": "A stable boundary-reset table predicts offset 0 on unseen lines. A copied or skipped counter position predicts a persistent nonzero offset and agreement between line halves.",
+            "line_half_comparisons": 1139,
+            "line_half_offset_agreement": 0.44073748902546095,
+            "mean_oracle_offset_gain_bits_per_symbol": 0.005545930593364695
+          },
+          "selected": {
+            "alpha": 256.0,
+            "modulus": 4,
+            "scope": "word_in_line"
+          },
+          "selected_name": "word_in_line_mod4_alpha256",
+          "test": {
+            "baseline_bits_per_symbol": 2.0192276001707112,
+            "baseline_log2_probability": -135217.57624543167,
+            "candidate_bits_per_symbol": 1.994085623076232,
+            "candidate_log2_probability": -133533.94374929988,
+            "gain_bits_per_symbol": 0.025141977094479025,
+            "gain_bits_per_word": 0.1591936929020223,
+            "net_gain_after_table_description_bits": 1595.6324961317878,
+            "symbols": 66965,
+            "words": 10576
+          },
+          "validation": {
+            "baseline_bits_per_symbol": 1.922428707539007,
+            "candidate_bits_per_symbol": 1.893302122114538,
+            "gain_bits_per_symbol": 0.029126585424468814,
+            "net_gain_after_table_description_bits": 1341.2124201932602,
+            "symbols": 49069,
+            "words": 7590
+          },
+          "validation_top_five": [
+            {
+              "candidate": "word_in_line_mod4_alpha256",
+              "net_gain_after_table_description_bits": 1341.2124201932602,
+              "raw_gain_bits_per_symbol": 0.029126585424468814
+            },
+            {
+              "candidate": "word_in_line_mod4_alpha2048",
+              "net_gain_after_table_description_bits": 1288.6359320955962,
+              "raw_gain_bits_per_symbol": 0.028055104691263245
+            },
+            {
+              "candidate": "word_in_line_mod12_alpha256",
+              "net_gain_after_table_description_bits": 1186.1674107474828,
+              "raw_gain_bits_per_symbol": 0.02955363693467327
+            },
+            {
+              "candidate": "word_in_line_mod12_alpha2048",
+              "net_gain_after_table_description_bits": 1044.5374421943561,
+              "raw_gain_bits_per_symbol": 0.026667293855476087
+            },
+            {
+              "candidate": "boustrophedon_word_in_line_mod4_alpha256",
+              "net_gain_after_table_description_bits": 1014.9904736197059,
+              "raw_gain_bits_per_symbol": 0.022478356469862966
+            }
+          ]
+        },
+        {
+          "fold": 1,
+          "minimum_table_description_bits": 88.0,
+          "phase_action_table": [
+            {
+              "observations": 35668,
+              "phase": 0,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 2188.959663322219,
+                  "multiplier": 1.8468568647032886,
+                  "observed": 4056.0,
+                  "symbol": "a"
+                },
+                {
+                  "baseline_expected": 36.44913479898529,
+                  "multiplier": 1.5870452209235049,
+                  "observed": 58.0,
+                  "symbol": "g"
+                },
+                {
+                  "baseline_expected": 929.5839422435394,
+                  "multiplier": 1.2204697129288435,
+                  "observed": 1136.0,
+                  "symbol": "t"
+                },
+                {
+                  "baseline_expected": 2201.4187647610456,
+                  "multiplier": 1.0782878165539145,
+                  "observed": 2375.0,
+                  "symbol": "e"
+                },
+                {
+                  "baseline_expected": 1998.5969233382325,
+                  "multiplier": 1.0702469891502056,
+                  "observed": 2140.0,
+                  "symbol": "l"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 9.81106108923154e-06,
+                  "multiplier": 0.007126155216568499,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 469.33317840679774,
+                  "multiplier": 0.5635023783177402,
+                  "observed": 263.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 390.0639076125571,
+                  "multiplier": 0.7045693899310186,
+                  "observed": 274.0,
+                  "symbol": "q"
+                },
+                {
+                  "baseline_expected": 1808.6995838240725,
+                  "multiplier": 0.7712554801188559,
+                  "observed": 1392.0,
+                  "symbol": "y"
+                },
+                {
+                  "baseline_expected": 950.1643512002325,
+                  "multiplier": 0.8389060251404213,
+                  "observed": 796.0,
+                  "symbol": "k"
+                }
+              ]
+            },
+            {
+              "observations": 29541,
+              "phase": 1,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 421.2456585980084,
+                  "multiplier": 1.6795880541519956,
+                  "observed": 710.0,
+                  "symbol": "q"
+                },
+                {
+                  "baseline_expected": 1552.02106870104,
+                  "multiplier": 1.473965371470351,
+                  "observed": 2294.0,
+                  "symbol": "s"
+                },
+                {
+                  "baseline_expected": 2679.406285393919,
+                  "multiplier": 1.2951180704811214,
+                  "observed": 3477.0,
+                  "symbol": "e"
+                },
+                {
+                  "baseline_expected": 155.45678551287145,
+                  "multiplier": 1.1947859870422495,
+                  "observed": 186.0,
+                  "symbol": "p"
+                },
+                {
+                  "baseline_expected": 36.80427306957239,
+                  "multiplier": 1.1938336087366785,
+                  "observed": 44.0,
+                  "symbol": "f"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 8.12648209467229e-06,
+                  "multiplier": 0.008591468939826114,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 39.633747921157514,
+                  "multiplier": 0.08363422288520314,
+                  "observed": 3.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 964.1441871992612,
+                  "multiplier": 0.6461240054817617,
+                  "observed": 620.0,
+                  "symbol": "r"
+                },
+                {
+                  "baseline_expected": 172.13569989981863,
+                  "multiplier": 0.6939671072578657,
+                  "observed": 119.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 4109.703547121408,
+                  "multiplier": 0.7641426866074336,
+                  "observed": 3132.0,
+                  "symbol": "o"
+                }
+              ]
+            },
+            {
+              "observations": 27128,
+              "phase": 2,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 3155.7645043254165,
+                  "multiplier": 1.7139235978836806,
+                  "observed": 5430.0,
+                  "symbol": "o"
+                },
+                {
+                  "baseline_expected": 1716.8973560964075,
+                  "multiplier": 1.5689822024161397,
+                  "observed": 2703.0,
+                  "symbol": "y"
+                },
+                {
+                  "baseline_expected": 127.12164387795882,
+                  "multiplier": 1.3029767368888092,
+                  "observed": 166.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 1186.1095586889326,
+                  "multiplier": 1.0834295721922707,
+                  "observed": 1286.0,
+                  "symbol": "l"
+                },
+                {
+                  "baseline_expected": 1488.6822972242092,
+                  "multiplier": 1.068753309468206,
+                  "observed": 1592.0,
+                  "symbol": "c"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 6.991744726790062e-06,
+                  "multiplier": 0.009348524685947917,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 298.75601057319636,
+                  "multiplier": 0.25472671484382947,
+                  "observed": 74.0,
+                  "symbol": "q"
+                },
+                {
+                  "baseline_expected": 13.727446461595754,
+                  "multiplier": 0.51450877765788,
+                  "observed": 7.0,
+                  "symbol": "g"
+                },
+                {
+                  "baseline_expected": 2059.067168029053,
+                  "multiplier": 0.5366523610068821,
+                  "observed": 1096.0,
+                  "symbol": "e"
+                },
+                {
+                  "baseline_expected": 179.96829914773897,
+                  "multiplier": 0.5653119886990282,
+                  "observed": 101.0,
+                  "symbol": "m"
+                }
+              ]
+            },
+            {
+              "observations": 22123,
+              "phase": 3,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 318.2500730367405,
+                  "multiplier": 2.238612468646975,
+                  "observed": 717.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 985.250738873962,
+                  "multiplier": 1.8957484663139503,
+                  "observed": 1878.0,
+                  "symbol": "r"
+                },
+                {
+                  "baseline_expected": 726.0796070930983,
+                  "multiplier": 1.4941177739840736,
+                  "observed": 1089.0,
+                  "symbol": "k"
+                },
+                {
+                  "baseline_expected": 827.1209521024269,
+                  "multiplier": 1.2293305304801818,
+                  "observed": 1019.0,
+                  "symbol": "d"
+                },
+                {
+                  "baseline_expected": 2195.8985692366855,
+                  "multiplier": 1.170665796053084,
+                  "observed": 2575.0,
+                  "symbol": "i"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 5.051828471311951e-06,
+                  "multiplier": 0.011439295768353858,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 20.219321447617315,
+                  "multiplier": 0.06033117904904329,
+                  "observed": 1.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 647.0703920001895,
+                  "multiplier": 0.625594120365869,
+                  "observed": 402.0,
+                  "symbol": "l"
+                },
+                {
+                  "baseline_expected": 618.8144738843688,
+                  "multiplier": 0.6616248095245524,
+                  "observed": 407.0,
+                  "symbol": "s"
+                },
+                {
+                  "baseline_expected": 2914.3082890047162,
+                  "multiplier": 0.6691662811861481,
+                  "observed": 1939.0,
+                  "symbol": "o"
+                }
+              ]
+            }
+          ],
+          "phase_offset_audit": {
+            "best_offset_counts": {
+              "0": 708,
+              "1": 64,
+              "2": 120,
+              "3": 79
+            },
+            "declared_origin_best_fraction": 0.729145211122554,
+            "eligible_test_lines": 971,
+            "interpretation": "A stable boundary-reset table predicts offset 0 on unseen lines. A copied or skipped counter position predicts a persistent nonzero offset and agreement between line halves.",
+            "line_half_comparisons": 971,
+            "line_half_offset_agreement": 0.4232749742533471,
+            "mean_oracle_offset_gain_bits_per_symbol": 0.006182372817121269
+          },
+          "selected": {
+            "alpha": 256.0,
+            "modulus": 4,
+            "scope": "word_in_line"
+          },
+          "selected_name": "word_in_line_mod4_alpha256",
+          "test": {
+            "baseline_bits_per_symbol": 1.9092027474522653,
+            "baseline_log2_probability": -93682.6696147352,
+            "candidate_bits_per_symbol": 1.8796115041743158,
+            "candidate_log2_probability": -92230.6568983295,
+            "gain_bits_per_symbol": 0.029591243277949517,
+            "gain_bits_per_word": 0.19130602324185836,
+            "net_gain_after_table_description_bits": 1364.0127164057049,
+            "symbols": 49069,
+            "words": 7590
+          },
+          "validation": {
+            "baseline_bits_per_symbol": 2.012681320798249,
+            "candidate_bits_per_symbol": 1.976960145757135,
+            "gain_bits_per_symbol": 0.035721175041114044,
+            "net_gain_after_table_description_bits": 1663.0520005154103,
+            "symbols": 49020,
+            "words": 7631
+          },
+          "validation_top_five": [
+            {
+              "candidate": "word_in_line_mod4_alpha256",
+              "net_gain_after_table_description_bits": 1663.0520005154103,
+              "raw_gain_bits_per_symbol": 0.035721175041114044
+            },
+            {
+              "candidate": "word_in_line_mod12_alpha256",
+              "net_gain_after_table_description_bits": 1656.6496277332626,
+              "raw_gain_bits_per_symbol": 0.03918093895824689
+            },
+            {
+              "candidate": "word_in_line_mod4_alpha2048",
+              "net_gain_after_table_description_bits": 1620.5909888856113,
+              "raw_gain_bits_per_symbol": 0.0348549773334478
+            },
+            {
+              "candidate": "word_in_line_mod12_alpha2048",
+              "net_gain_after_table_description_bits": 1541.243646658142,
+              "raw_gain_bits_per_symbol": 0.03682667577841987
+            },
+            {
+              "candidate": "boustrophedon_word_in_line_mod12_alpha256",
+              "net_gain_after_table_description_bits": 1279.5502582210029,
+              "raw_gain_bits_per_symbol": 0.03148817336232156
+            }
+          ]
+        },
+        {
+          "fold": 2,
+          "minimum_table_description_bits": 88.0,
+          "phase_action_table": [
+            {
+              "observations": 35356,
+              "phase": 0,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 2045.230868372029,
+                  "multiplier": 1.8663761088587179,
+                  "observed": 3830.0,
+                  "symbol": "a"
+                },
+                {
+                  "baseline_expected": 26.491320360990926,
+                  "multiplier": 1.431309135430864,
+                  "observed": 38.0,
+                  "symbol": "g"
+                },
+                {
+                  "baseline_expected": 897.5938133164966,
+                  "multiplier": 1.2426810019694796,
+                  "observed": 1117.0,
+                  "symbol": "t"
+                },
+                {
+                  "baseline_expected": 2387.5788471034116,
+                  "multiplier": 1.0970620026441917,
+                  "observed": 2621.0,
+                  "symbol": "e"
+                },
+                {
+                  "baseline_expected": 2087.273283255808,
+                  "multiplier": 1.0669366543716865,
+                  "observed": 2228.0,
+                  "symbol": "l"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 1.0476952801603201e-05,
+                  "multiplier": 0.0071885881163652465,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 417.8459792127555,
+                  "multiplier": 0.5536737431571136,
+                  "observed": 230.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 1861.5582088682613,
+                  "multiplier": 0.7906397620357247,
+                  "observed": 1469.0,
+                  "symbol": "y"
+                },
+                {
+                  "baseline_expected": 1380.167670678808,
+                  "multiplier": 0.7941478160966166,
+                  "observed": 1094.0,
+                  "symbol": "c"
+                },
+                {
+                  "baseline_expected": 556.6601660093904,
+                  "multiplier": 0.8151206030967576,
+                  "observed": 453.0,
+                  "symbol": "q"
+                }
+              ]
+            },
+            {
+              "observations": 29874,
+              "phase": 1,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 599.3269414571399,
+                  "multiplier": 1.6446601492284811,
+                  "observed": 989.0,
+                  "symbol": "q"
+                },
+                {
+                  "baseline_expected": 1405.2744036541217,
+                  "multiplier": 1.425258246831141,
+                  "observed": 2008.0,
+                  "symbol": "s"
+                },
+                {
+                  "baseline_expected": 2980.282354549926,
+                  "multiplier": 1.256408333314488,
+                  "observed": 3751.0,
+                  "symbol": "e"
+                },
+                {
+                  "baseline_expected": 143.9957245397442,
+                  "multiplier": 1.2134844438184713,
+                  "observed": 175.0,
+                  "symbol": "p"
+                },
+                {
+                  "baseline_expected": 26.12954394914326,
+                  "multiplier": 1.1848127987564476,
+                  "observed": 31.0,
+                  "symbol": "f"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 8.170343091386837e-06,
+                  "multiplier": 0.008496515101228008,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 35.13788412414135,
+                  "multiplier": 0.0931490355599852,
+                  "observed": 3.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 1017.5418441992307,
+                  "multiplier": 0.6106822209378789,
+                  "observed": 618.0,
+                  "symbol": "r"
+                },
+                {
+                  "baseline_expected": 128.5980020167619,
+                  "multiplier": 0.725535836470831,
+                  "observed": 93.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 4121.898207650964,
+                  "multiplier": 0.7411976791900912,
+                  "observed": 3046.0,
+                  "symbol": "o"
+                }
+              ]
+            },
+            {
+              "observations": 28269,
+              "phase": 2,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 3032.3620222023037,
+                  "multiplier": 1.8264001746080225,
+                  "observed": 5561.0,
+                  "symbol": "o"
+                },
+                {
+                  "baseline_expected": 1810.0520687731444,
+                  "multiplier": 1.5091577483223824,
+                  "observed": 2740.0,
+                  "symbol": "y"
+                },
+                {
+                  "baseline_expected": 113.79523026532974,
+                  "multiplier": 1.341428398683447,
+                  "observed": 153.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 1608.7934670794352,
+                  "multiplier": 1.2064890246214428,
+                  "observed": 1944.0,
+                  "symbol": "c"
+                },
+                {
+                  "baseline_expected": 524.6597223672137,
+                  "multiplier": 1.0195316650179842,
+                  "observed": 535.0,
+                  "symbol": "n"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 6.470005928709422e-06,
+                  "multiplier": 0.008974583698509944,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 382.1918999127106,
+                  "multiplier": 0.21641496462292661,
+                  "observed": 80.0,
+                  "symbol": "q"
+                },
+                {
+                  "baseline_expected": 124.67734456224107,
+                  "multiplier": 0.5415388849782221,
+                  "observed": 67.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 1960.153458190293,
+                  "multiplier": 0.5721969728165168,
+                  "observed": 1114.0,
+                  "symbol": "a"
+                },
+                {
+                  "baseline_expected": 2349.213537774213,
+                  "multiplier": 0.5729935459127659,
+                  "observed": 1337.0,
+                  "symbol": "e"
+                }
+              ]
+            },
+            {
+              "observations": 22535,
+              "phase": 3,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 1071.4660334334646,
+                  "multiplier": 2.140172238925552,
+                  "observed": 2307.0,
+                  "symbol": "r"
+                },
+                {
+                  "baseline_expected": 335.5741637814314,
+                  "multiplier": 1.9323470502120452,
+                  "observed": 652.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 709.5539434369002,
+                  "multiplier": 1.4507239377332142,
+                  "observed": 1033.0,
+                  "symbol": "k"
+                },
+                {
+                  "baseline_expected": 842.7707996407312,
+                  "multiplier": 1.156309049722254,
+                  "observed": 976.0,
+                  "symbol": "d"
+                },
+                {
+                  "baseline_expected": 2192.308213459068,
+                  "multiplier": 1.1333619176143133,
+                  "observed": 2488.0,
+                  "symbol": "i"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 4.9854394925443545e-06,
+                  "multiplier": 0.011232504058619771,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 16.930317170276474,
+                  "multiplier": 0.011232504058619773,
+                  "observed": 0.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 2950.1524076666014,
+                  "multiplier": 0.6510493300798362,
+                  "observed": 1909.0,
+                  "symbol": "o"
+                },
+                {
+                  "baseline_expected": 1415.2176626132248,
+                  "multiplier": 0.6526098591137595,
+                  "observed": 918.0,
+                  "symbol": "y"
+                },
+                {
+                  "baseline_expected": 601.1499620149351,
+                  "multiplier": 0.659281107596958,
+                  "observed": 394.0,
+                  "symbol": "s"
+                }
+              ]
+            }
+          ],
+          "phase_offset_audit": {
+            "best_offset_counts": {
+              "0": 837,
+              "1": 66,
+              "2": 148,
+              "3": 85
+            },
+            "declared_origin_best_fraction": 0.7367957746478874,
+            "eligible_test_lines": 1136,
+            "interpretation": "A stable boundary-reset table predicts offset 0 on unseen lines. A copied or skipped counter position predicts a persistent nonzero offset and agreement between line halves.",
+            "line_half_comparisons": 1136,
+            "line_half_offset_agreement": 0.41813380281690143,
+            "mean_oracle_offset_gain_bits_per_symbol": 0.008355811305421904
+          },
+          "selected": {
+            "alpha": 256.0,
+            "modulus": 4,
+            "scope": "word_in_line"
+          },
+          "selected_name": "word_in_line_mod4_alpha256",
+          "test": {
+            "baseline_bits_per_symbol": 2.073738341088132,
+            "baseline_log2_probability": -101654.65348014023,
+            "candidate_bits_per_symbol": 2.0377545541113715,
+            "candidate_log2_probability": -99890.72824253942,
+            "gain_bits_per_symbol": 0.03598378697676067,
+            "gain_bits_per_word": 0.2311525668458666,
+            "net_gain_after_table_description_bits": 1675.925237600808,
+            "symbols": 49020,
+            "words": 7631
+          },
+          "validation": {
+            "baseline_bits_per_symbol": 2.0887825831958775,
+            "candidate_bits_per_symbol": 2.052684984057947,
+            "gain_bits_per_symbol": 0.0360975991379304,
+            "net_gain_after_table_description_bits": 1626.4554710560042,
+            "symbols": 47495,
+            "words": 7336
+          },
+          "validation_top_five": [
+            {
+              "candidate": "word_in_line_mod4_alpha256",
+              "net_gain_after_table_description_bits": 1626.4554710560042,
+              "raw_gain_bits_per_symbol": 0.0360975991379304
+            },
+            {
+              "candidate": "word_in_line_mod4_alpha2048",
+              "net_gain_after_table_description_bits": 1590.735601582608,
+              "raw_gain_bits_per_symbol": 0.03534552271992016
+            },
+            {
+              "candidate": "word_in_line_mod12_alpha256",
+              "net_gain_after_table_description_bits": 1496.7807739948767,
+              "raw_gain_bits_per_symbol": 0.037072971344244164
+            },
+            {
+              "candidate": "word_in_line_mod12_alpha2048",
+              "net_gain_after_table_description_bits": 1420.8059123022103,
+              "raw_gain_bits_per_symbol": 0.03547333218869798
+            },
+            {
+              "candidate": "boustrophedon_word_in_line_mod4_alpha256",
+              "net_gain_after_table_description_bits": 1206.8605714299338,
+              "raw_gain_bits_per_symbol": 0.027263092355614985
+            }
+          ]
+        },
+        {
+          "fold": 3,
+          "minimum_table_description_bits": 88.0,
+          "phase_action_table": [
+            {
+              "observations": 31521,
+              "phase": 0,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 1731.6626285792352,
+                  "multiplier": 1.697324241857452,
+                  "observed": 2949.0,
+                  "symbol": "a"
+                },
+                {
+                  "baseline_expected": 33.65635229239986,
+                  "multiplier": 1.5995823977931585,
+                  "observed": 54.0,
+                  "symbol": "g"
+                },
+                {
+                  "baseline_expected": 889.9468321284069,
+                  "multiplier": 1.2731387720769507,
+                  "observed": 1135.0,
+                  "symbol": "t"
+                },
+                {
+                  "baseline_expected": 11.818750120636098,
+                  "multiplier": 1.1830715938812113,
+                  "observed": 14.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 1911.3599141872205,
+                  "multiplier": 1.1222908015732986,
+                  "observed": 2147.0,
+                  "symbol": "e"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 1.4729887852018997e-05,
+                  "multiplier": 0.008056141234226051,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 421.2592727938323,
+                  "multiplier": 0.5331567023155874,
+                  "observed": 223.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 1878.9791541377579,
+                  "multiplier": 0.7471390625183378,
+                  "observed": 1400.0,
+                  "symbol": "y"
+                },
+                {
+                  "baseline_expected": 954.503354659532,
+                  "multiplier": 0.8446323590216172,
+                  "observed": 805.0,
+                  "symbol": "k"
+                },
+                {
+                  "baseline_expected": 1421.747535548855,
+                  "multiplier": 0.8766844126288641,
+                  "observed": 1245.0,
+                  "symbol": "c"
+                }
+              ]
+            },
+            {
+              "observations": 25102,
+              "phase": 1,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 1368.4039020958849,
+                  "multiplier": 1.4655779740100245,
+                  "observed": 2012.0,
+                  "symbol": "s"
+                },
+                {
+                  "baseline_expected": 501.59556875786,
+                  "multiplier": 1.458652791442759,
+                  "observed": 734.0,
+                  "symbol": "q"
+                },
+                {
+                  "baseline_expected": 2085.062147254275,
+                  "multiplier": 1.2663109791458667,
+                  "observed": 2646.0,
+                  "symbol": "e"
+                },
+                {
+                  "baseline_expected": 108.58190572712638,
+                  "multiplier": 1.2226115195406784,
+                  "observed": 133.0,
+                  "symbol": "p"
+                },
+                {
+                  "baseline_expected": 29.490455833485335,
+                  "multiplier": 1.151371629823249,
+                  "observed": 34.0,
+                  "symbol": "f"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 9.61644903191528e-06,
+                  "multiplier": 0.01009543339380083,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 9.34750624681537,
+                  "multiplier": 0.32779660645590586,
+                  "observed": 3.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 12.317949393919982,
+                  "multiplier": 0.5726348419144791,
+                  "observed": 7.0,
+                  "symbol": "g"
+                },
+                {
+                  "baseline_expected": 135.38226652034592,
+                  "multiplier": 0.5731134237686496,
+                  "observed": 77.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 753.8573167554508,
+                  "multiplier": 0.6719075435644712,
+                  "observed": 504.0,
+                  "symbol": "r"
+                }
+              ]
+            },
+            {
+              "observations": 22677,
+              "phase": 2,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 18.015827911181457,
+                  "multiplier": 2.041986677578518,
+                  "observed": 37.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 2705.5188973685276,
+                  "multiplier": 1.623334362575011,
+                  "observed": 4411.0,
+                  "symbol": "o"
+                },
+                {
+                  "baseline_expected": 1501.4461070614148,
+                  "multiplier": 1.576630837400545,
+                  "observed": 2377.0,
+                  "symbol": "y"
+                },
+                {
+                  "baseline_expected": 1512.5441901928448,
+                  "multiplier": 1.1238581488930302,
+                  "observed": 1702.0,
+                  "symbol": "c"
+                },
+                {
+                  "baseline_expected": 368.46256862872144,
+                  "multiplier": 1.060483340731757,
+                  "observed": 391.0,
+                  "symbol": "n"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 1.0627553616723684e-05,
+                  "multiplier": 0.01116295294989775,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 296.46844835565423,
+                  "multiplier": 0.15124921240332204,
+                  "observed": 42.0,
+                  "symbol": "q"
+                },
+                {
+                  "baseline_expected": 12.97963041402928,
+                  "multiplier": 0.3158979925489602,
+                  "observed": 4.0,
+                  "symbol": "g"
+                },
+                {
+                  "baseline_expected": 128.169660446201,
+                  "multiplier": 0.3892010560140241,
+                  "observed": 49.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 1557.9089835013592,
+                  "multiplier": 0.5392505574623646,
+                  "observed": 832.0,
+                  "symbol": "e"
+                }
+              ]
+            },
+            {
+              "observations": 18789,
+              "phase": 3,
+              "strongest_promotions": [
+                {
+                  "baseline_expected": 264.9618721833973,
+                  "multiplier": 2.374075335075004,
+                  "observed": 634.0,
+                  "symbol": "m"
+                },
+                {
+                  "baseline_expected": 726.48623029423,
+                  "multiplier": 1.8535129189394572,
+                  "observed": 1355.0,
+                  "symbol": "r"
+                },
+                {
+                  "baseline_expected": 678.4045211567878,
+                  "multiplier": 1.5098474683338352,
+                  "observed": 1029.0,
+                  "symbol": "k"
+                },
+                {
+                  "baseline_expected": 781.2725214083698,
+                  "multiplier": 1.3456515722255395,
+                  "observed": 1055.0,
+                  "symbol": "d"
+                },
+                {
+                  "baseline_expected": 254.2302409125675,
+                  "multiplier": 1.1853738763157227,
+                  "observed": 302.0,
+                  "symbol": "q"
+                }
+              ],
+              "strongest_suppressions": [
+                {
+                  "baseline_expected": 4.041260682136489,
+                  "multiplier": 0.013441848254134641,
+                  "observed": 0.0,
+                  "symbol": "x"
+                },
+                {
+                  "baseline_expected": 5.09741903603709e-06,
+                  "multiplier": 0.013441848254134643,
+                  "observed": 0.0,
+                  "symbol": "<UNK>"
+                },
+                {
+                  "baseline_expected": 621.1553268728334,
+                  "multiplier": 0.6296879727211018,
+                  "observed": 388.0,
+                  "symbol": "l"
+                },
+                {
+                  "baseline_expected": 632.8149162286983,
+                  "multiplier": 0.6479546535993475,
+                  "observed": 407.0,
+                  "symbol": "s"
+                },
+                {
+                  "baseline_expected": 5.876846911594435,
+                  "multiplier": 0.6849299210841306,
+                  "observed": 4.0,
+                  "symbol": "g"
+                }
+              ]
+            }
+          ],
+          "phase_offset_audit": {
+            "best_offset_counts": {
+              "0": 825,
+              "1": 88,
+              "2": 148,
+              "3": 78
+            },
+            "declared_origin_best_fraction": 0.7243195785776997,
+            "eligible_test_lines": 1139,
+            "interpretation": "A stable boundary-reset table predicts offset 0 on unseen lines. A copied or skipped counter position predicts a persistent nonzero offset and agreement between line halves.",
+            "line_half_comparisons": 1139,
+            "line_half_offset_agreement": 0.43985952589991223,
+            "mean_oracle_offset_gain_bits_per_symbol": 0.008779124340139692
+          },
+          "selected": {
+            "alpha": 256.0,
+            "modulus": 4,
+            "scope": "word_in_line"
+          },
+          "selected_name": "word_in_line_mod4_alpha256",
+          "test": {
+            "baseline_bits_per_symbol": 2.0279050925457347,
+            "baseline_log2_probability": -96315.35237045967,
+            "candidate_bits_per_symbol": 1.9910951062196989,
+            "candidate_log2_probability": -94567.0620699046,
+            "gain_bits_per_symbol": 0.03680998632603592,
+            "gain_bits_per_word": 0.23831656223487951,
+            "net_gain_after_table_description_bits": 1660.290300555076,
+            "symbols": 47495,
+            "words": 7336
+          },
+          "validation": {
+            "baseline_bits_per_symbol": 2.0127345504724485,
+            "candidate_bits_per_symbol": 1.9860619073429724,
+            "gain_bits_per_symbol": 0.026672643129476186,
+            "net_gain_after_table_description_bits": 1698.1335471653729,
+            "symbols": 66965,
+            "words": 10576
+          },
+          "validation_top_five": [
+            {
+              "candidate": "word_in_line_mod4_alpha256",
+              "net_gain_after_table_description_bits": 1698.1335471653729,
+              "raw_gain_bits_per_symbol": 0.026672643129476186
+            },
+            {
+              "candidate": "word_in_line_mod4_alpha2048",
+              "net_gain_after_table_description_bits": 1637.330866966775,
+              "raw_gain_bits_per_symbol": 0.02576466612359852
+            },
+            {
+              "candidate": "word_in_line_mod12_alpha256",
+              "net_gain_after_table_description_bits": 1630.1988983450574,
+              "raw_gain_bits_per_symbol": 0.028286401827000037
+            },
+            {
+              "candidate": "word_in_line_mod12_alpha2048",
+              "net_gain_after_table_description_bits": 1415.9716869590047,
+              "raw_gain_bits_per_symbol": 0.025087309593952136
+            },
+            {
+              "candidate": "boustrophedon_word_in_line_mod4_alpha256",
+              "net_gain_after_table_description_bits": 1276.4274532900308,
+              "raw_gain_bits_per_symbol": 0.02037523263331637
+            }
+          ]
+        }
+      ],
+      "name": "SYNTHETIC_PLANTED_WORD_LINE_MOD4",
+      "null_gain_bits_per_symbol": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "summary": {
+        "gain_bits_per_symbol": 0.03127683852049822,
+        "gain_bits_per_word": 0.20064167901166138,
+        "null_95th_percentile_gain_bits_per_symbol": 0.0,
+        "null_mean_gain_bits_per_symbol": 0.0,
+        "null_replicates": 32,
+        "phase_origin_null_p_one_sided": 0.030303030303030304,
+        "pooled_test_symbols": 212549,
+        "pooled_test_words": 33133,
+        "positive_test_folds": 4,
+        "selected_candidate_counts": {
+          "word_in_line_mod4_alpha256": 4
+        },
+        "selected_modulus_counts": {
+          "4": 4
+        },
+        "selected_scope_counts": {
+          "word_in_line": 4
+        },
+        "table_selected_folds": 4
+      }
+    }
+  ],
+  "parameters": {
+    "baseline": "train-only register/position character trigram plus causal within-page adaptation",
+    "candidate_count": 60,
+    "candidates": [
+      {
+        "alpha": 256.0,
+        "modulus": 2,
+        "scope": "word_in_line"
+      },
+      {
+        "alpha": 2048.0,
+        "modulus": 2,
+        "scope": "word_in_line"
+      },
+      {
+        "alpha": 256.0,
+        "modulus": 3,
+        "scope": "word_in_line"
+      },
+      {
+        "alpha": 2048.0,
+        "modulus": 3,
+        "scope": "word_in_line"
+      },
+      {
+        "alpha": 256.0,
+        "modulus": 4,
+        "scope": "word_in_line"
+      },
+      {
+        "alpha": 2048.0,
+        "modulus": 4,
+        "scope": "word_in_line"
+      },
+      {
+        "alpha": 256.0,
+        "modulus": 5,
+        "scope": "word_in_line"
+      },
+      {
+        "alpha": 2048.0,
+        "modulus": 5,
+        "scope": "word_in_line"
+      },
+      {
+        "alpha": 256.0,
+        "modulus": 7,
+        "scope": "word_in_line"
+      },
+      {
+        "alpha": 2048.0,
+        "modulus": 7,
+        "scope": "word_in_line"
+      },
+      {
+        "alpha": 256.0,
+        "modulus": 12,
+        "scope": "word_in_line"
+      },
+      {
+        "alpha": 2048.0,
+        "modulus": 12,
+        "scope": "word_in_line"
+      },
+      {
+        "alpha": 256.0,
+        "modulus": 2,
+        "scope": "word_in_paragraph"
+      },
+      {
+        "alpha": 2048.0,
+        "modulus": 2,
+        "scope": "word_in_paragraph"
+      },
+      {
+        "alpha": 256.0,
+        "modulus": 3,
+        "scope": "word_in_paragraph"
+      },
+      {
+        "alpha": 2048.0,
+        "modulus": 3,
+        "scope": "word_in_paragraph"
+      },
+      {
+        "alpha": 256.0,
+        "modulus": 4,
+        "scope": "word_in_paragraph"
+      },
+      {
+        "alpha": 2048.0,
+        "modulus": 4,
+        "scope": "word_in_paragraph"
+      },
+      {
+        "alpha": 256.0,
+        "modulus": 5,
+        "scope": "word_in_paragraph"
+      },
+      {
+        "alpha": 2048.0,
+        "modulus": 5,
+        "scope": "word_in_paragraph"
+      },
+      {
+        "alpha": 256.0,
+        "modulus": 7,
+        "scope": "word_in_paragraph"
+      },
+      {
+        "alpha": 2048.0,
+        "modulus": 7,
+        "scope": "word_in_paragraph"
+      },
+      {
+        "alpha": 256.0,
+        "modulus": 12,
+        "scope": "word_in_paragraph"
+      },
+      {
+        "alpha": 2048.0,
+        "modulus": 12,
+        "scope": "word_in_paragraph"
+      },
+      {
+        "alpha": 256.0,
+        "modulus": 2,
+        "scope": "glyph_in_line"
+      },
+      {
+        "alpha": 2048.0,
+        "modulus": 2,
+        "scope": "glyph_in_line"
+      },
+      {
+        "alpha": 256.0,
+        "modulus": 3,
+        "scope": "glyph_in_line"
+      },
+      {
+        "alpha": 2048.0,
+        "modulus": 3,
+        "scope": "glyph_in_line"
+      },
+      {
+        "alpha": 256.0,
+        "modulus": 4,
+        "scope": "glyph_in_line"
+      },
+      {
+        "alpha": 2048.0,
+        "modulus": 4,
+        "scope": "glyph_in_line"
+      },
+      {
+        "alpha": 256.0,
+        "modulus": 5,
+        "scope": "glyph_in_line"
+      },
+      {
+        "alpha": 2048.0,
+        "modulus": 5,
+        "scope": "glyph_in_line"
+      },
+      {
+        "alpha": 256.0,
+        "modulus": 7,
+        "scope": "glyph_in_line"
+      },
+      {
+        "alpha": 2048.0,
+        "modulus": 7,
+        "scope": "glyph_in_line"
+      },
+      {
+        "alpha": 256.0,
+        "modulus": 12,
+        "scope": "glyph_in_line"
+      },
+      {
+        "alpha": 2048.0,
+        "modulus": 12,
+        "scope": "glyph_in_line"
+      },
+      {
+        "alpha": 256.0,
+        "modulus": 2,
+        "scope": "line_in_page"
+      },
+      {
+        "alpha": 2048.0,
+        "modulus": 2,
+        "scope": "line_in_page"
+      },
+      {
+        "alpha": 256.0,
+        "modulus": 3,
+        "scope": "line_in_page"
+      },
+      {
+        "alpha": 2048.0,
+        "modulus": 3,
+        "scope": "line_in_page"
+      },
+      {
+        "alpha": 256.0,
+        "modulus": 4,
+        "scope": "line_in_page"
+      },
+      {
+        "alpha": 2048.0,
+        "modulus": 4,
+        "scope": "line_in_page"
+      },
+      {
+        "alpha": 256.0,
+        "modulus": 5,
+        "scope": "line_in_page"
+      },
+      {
+        "alpha": 2048.0,
+        "modulus": 5,
+        "scope": "line_in_page"
+      },
+      {
+        "alpha": 256.0,
+        "modulus": 7,
+        "scope": "line_in_page"
+      },
+      {
+        "alpha": 2048.0,
+        "modulus": 7,
+        "scope": "line_in_page"
+      },
+      {
+        "alpha": 256.0,
+        "modulus": 12,
+        "scope": "line_in_page"
+      },
+      {
+        "alpha": 2048.0,
+        "modulus": 12,
+        "scope": "line_in_page"
+      },
+      {
+        "alpha": 256.0,
+        "modulus": 2,
+        "scope": "boustrophedon_word_in_line"
+      },
+      {
+        "alpha": 2048.0,
+        "modulus": 2,
+        "scope": "boustrophedon_word_in_line"
+      },
+      {
+        "alpha": 256.0,
+        "modulus": 3,
+        "scope": "boustrophedon_word_in_line"
+      },
+      {
+        "alpha": 2048.0,
+        "modulus": 3,
+        "scope": "boustrophedon_word_in_line"
+      },
+      {
+        "alpha": 256.0,
+        "modulus": 4,
+        "scope": "boustrophedon_word_in_line"
+      },
+      {
+        "alpha": 2048.0,
+        "modulus": 4,
+        "scope": "boustrophedon_word_in_line"
+      },
+      {
+        "alpha": 256.0,
+        "modulus": 5,
+        "scope": "boustrophedon_word_in_line"
+      },
+      {
+        "alpha": 2048.0,
+        "modulus": 5,
+        "scope": "boustrophedon_word_in_line"
+      },
+      {
+        "alpha": 256.0,
+        "modulus": 7,
+        "scope": "boustrophedon_word_in_line"
+      },
+      {
+        "alpha": 2048.0,
+        "modulus": 7,
+        "scope": "boustrophedon_word_in_line"
+      },
+      {
+        "alpha": 256.0,
+        "modulus": 12,
+        "scope": "boustrophedon_word_in_line"
+      },
+      {
+        "alpha": 2048.0,
+        "modulus": 12,
+        "scope": "boustrophedon_word_in_line"
+      }
+    ],
+    "folds": 4,
+    "minimum_table_description_bits_per_entry": 1.0,
+    "null": "repeat full validation selection after independently rotating the phase origin within every reset unit",
+    "page_adaptation_backoff": 32.0,
+    "phase_origin_nulls": 32,
+    "selection_rule": "validation log probability minus one lower-bound description bit per phase/glyph table entry; the baseline with no table is an explicit candidate",
+    "split": "test=fold f; validation=fold f+1; fit=other two folds; complete repository quire blocks"
+  },
+  "seed": 20260725,
+  "summary": {
+    "controls_pass": true,
+    "historical_counter_family_screen_pass": true,
+    "single_historical_counter_algorithm_pass": false,
+    "voynich_gain_bits_per_symbol": 0.0012465379721984255,
+    "voynich_gain_bits_per_word": 0.007783591826643765,
+    "voynich_phase_origin_null_p_one_sided": 0.030303030303030304,
+    "voynich_positive_test_folds": 4,
+    "voynich_selected_modulus_counts": {
+      "12": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1
+    },
+    "voynich_selected_scope_counts": {
+      "line_in_page": 3,
+      "word_in_line": 1
+    }
+  }
+}

@@ -100,8 +100,8 @@ Transcript: `transcripts/readable/main_session.txt`. Session `308ba40b`.
 - **Question:** Does word order carry information (syntax), and are there calendar/list regularities (zodiac label counts, star-bulleted paragraphs)?
 - **Method & control:** Bigram-information test vs within-line shuffle null.
 - **Result:** within-line shuffle ≈ identical bigram entropy — no syntax signal.
-- **Ledger:** D2 — no word-order syntax ("bag of records").
-- **Caveats:** none noted.
+- **Ledger:** historical D2 result, superseded by Campaign 8's lower-cardinality held-out morph-class test.
+- **Caveats:** exact-word entropy was too sparse and in-sample to support the general "bag of records" claim.
 
 ### glue.py
 - **Question:** Is there a "surface" the manuscript's high-frequency glue words adhere to — line-edges, or a fixed line template?
@@ -455,6 +455,328 @@ No readable transcript for this campaign (it postdates the seven `transcripts/re
 
 ---
 
+## Campaign 8 — 2026-07-22 (held-out follow-ups and conclusion audit)
+
+### sequence_parallel.py / morph_voynich_transfer.py
+- **Question:** Does word-class order generalize beyond exact-word sparsity and known line-position/production-block effects?
+- **Method & control:** EVA prefix/suffix/affix/shape representations; train-only counts and vocabulary; complete-quire holdout; target-position-conditioned unigram baseline; uncertain and one-character tokens retained as adjacency breaks; quire-level bootstrap/sign-flip inference.
+- **Result:** EVA prefix adds `+0.02025` held-out bits/transition, 13/16 quires positive, Bonferroni `p=0.00146`. Affix-pair forward-vs-deep-interior-reversed direction is `+0.1440`, positive in 16/16 quires, but the high-cardinality affix predictor has negative calibrated gain (`-0.458`). Cross-hand transfer is weak; Currier transfer is asymmetric.
+- **Ledger:** D2 revised from "no word-order syntax / positional bag" to a narrow morph-class ordering result, then further qualified by Campaign 10.
+- **Caveats:** the baseline does not contain exact previous-word identity. Campaign 10 shows the morph-class gain is nonpositive after a stronger surface hierarchy. The qualitative boundary dependency also predates this repository: Smith and Ponzi, [*Cryptologia* 43(6), 2019](https://doi.org/10.1080/01611194.2019.1596998), and Parisel, [arXiv:2604.19762](https://arxiv.org/abs/2604.19762).
+
+### morph_control_benchmark.py
+- **Question:** Is Voynich directional morphology distinguishable from known-meaningful text and verbose ciphertext?
+- **Method & control:** Exact Voynich line/quire template imposed on official Naibbe ciphertext and Pliny controls; leave-one-block-out scoring under generic two-character boundaries and a separately marked Voynich-selected EVA sensitivity; official Naibbe revision and asset hashes recorded.
+- **Result:** Generic affix-pair direction is Voynich `+0.10249`, meaningful Naibbe `+0.03245`, ordinary Latin `+0.13083`; Voynich is indistinguishable from Latin (`p=0.20367`). Under the selected EVA map, Voynich prefix gain is `+0.02025` while Naibbe is `-0.01695`, but this map was selected on Voynich and is not substitution-invariant.
+- **Ledger:** D2 defended as structure, not semantics; L1 reopened but constrained.
+- **Caveats:** control line/quire boundaries are artificial; generic high-cardinality predictors remain too sparse to beat their position-only baseline.
+
+### naibbe_benchmark.py
+- **Question:** Can the K11 diagnostics reject a known-meaningful verbose homophonic ciphertext?
+- **Method & control:** Official author repository at pinned revision `f2675ec5...`; token-count/line-template matched comparisons; BPE, position-lock, EVA slots, lexical tail, order, and the repository R1 attack.
+- **Result:** Naibbe is more position-locked than Voynich (`1.574` vs `1.682`), has a similar BPE climb (`+1.613` vs `+1.742`), and a close EVA slot/MI profile. R1 fails on it despite passing a simple-substitution control. Naibbe still mismatches Voynich hapax rate, burstiness, exact-token order, and selected-prefix transfer.
+- **Ledger:** K11 split: BPE is still non-evidence, but the position-lock exclusion of verbose ciphertext is retracted.
+- **Caveats:** Naibbe is a counterexample to the diagnostic, not evidence that the manuscript uses Naibbe.
+
+### morph_procedural_nulls.py
+- **Question:** Do the repository's content-free procedures reproduce the held-out directional signal?
+- **Method & control:** 60 independent replicas each of strict layout exchange, `residual.py` schema/copy, and aggressive local self-citation; complete-quire scoring; preserved adjacency breaks; transition-profile residuals.
+- **Result:** layout exchange and schema/copy direction intervals remain near zero (schema/copy affix `[-0.0150,+0.0158]`) versus real affix `+0.1440`. Aggressive self-citation can bracket generic prefix/suffix predictive gain but not directionality, and is degenerate (`none->none` prefix transition about 74% vs real 5%).
+- **Ledger:** D2 and confound #3 revised; the existing generator is not a matched null for directional order.
+- **Caveats:** generator schema is globally estimated, copy parameters are inherited hard-coded values rather than demonstrated fits, and 60 replicas give minimum raw empirical `p=0.0164`.
+
+---
+
+## Campaign 9 — 2026-07-23 (blind hidden-channel search)
+
+### stego_channel_search.py / stego_bit_search.py / stego_slot_cipher.py
+- **Question:** Is a low-complexity message carried by a fixed word/glyph subsequence, a binary glyph/word feature, or prefix/suffix free choices?
+- **Method & control:** 332 pre-specified extraction channels; 2,560 Bacon-5/ASCII-7/ASCII-8 variants with shuffled bit-stream controls; homophonic substitution on prefix, suffix, pair, and interleaved streams with keys fitted on the first half and frozen on the second. Synthetic English and Latin homophonic streams are the positive controls.
+- **Result:** No readable held-out output. The best fixed-channel outputs remain over 1 nat/character below language ceilings. Binary leaders have low printable fractions or letter soup and only small gains over shuffle. Voynich slot streams are at least 1.23 nats/character below their ceilings, while the synthetic controls recover fluent held-out text.
+- **Ledger:** K15, limited to the enumerated fixed and monoalphabetic channels.
+- **Caveats:** keyed routes, higher-radix arithmetic, variable per-page keys, and unconstrained generative encodings are outside this battery.
+
+### naibbe_style_attack.py
+- **Question:** Can an unknown Naibbe-like mixture of one-letter atomic words and two-letter compounds be segmented and solved without its plaintext key?
+- **Method & control:** Naibbe's published table supplies only atomic/compound labels and boundaries for calibration; plaintext letter values are withheld. A structural ranker/classifier is fitted on the first half of official Naibbe and frozen on its second half and on Voynich. Homophonic keys are then fitted independently on train halves. Direct true-key application is used only as a diagnostic upper bound after blind scoring.
+- **Result:** Held-out Naibbe token classification is 97.1%; complete emission boundaries are right for 93.4% of tokens. The true key over those noisy boundaries recovers clear Pliny, proving the segmentation is usable. Blind paired-swap key search scores Naibbe `-3.119` and Voynich `-3.206` against a Latin ceiling of `-2.040`, a separation of only `0.087`; neither blind output is plaintext.
+- **Ledger:** L1 remains live but low-prior; this attack is inconclusive, not a Voynich lead.
+- **Caveats:** the homophonic optimizer still leaves a large gap to the known-key control, so failure cannot reject the variable one/two-letter family. Naibbe's component shapes were designed from EVA and are a mechanism control, not independent evidence for that scheme.
+
+### stego_transposition_search.py
+- **Question:** Does a fixed nonstandard reading order expose substituted English or Latin?
+- **Method & control:** 208 deterministic folio/line/word/glyph orders: reversals, odd-even unweaving, boustrophedon rows, and ragged vertical reads. Substitution keys are train-half fitted and held-out tested; initial leaders and ordinary order receive heavier 12-restart refits.
+- **Result:** No readable output. Selection was optimizer-sensitive: ordinary forward order becomes the best English result on refinement (`-2.777`, ceiling `-2.093`). The refined Latin leader is `-2.778` versus ceiling `-2.142` and remains repetitive pseudo-Latin; ordinary order is `-2.820`.
+- **Ledger:** K15 for these fixed route/transposition choices.
+- **Caveats:** arbitrary keyed column widths, page-specific routes, diagram-specific spirals, and transposition combined with a variable homophonic code remain outside scope.
+
+---
+
+## Campaign 10 — 2026-07-23 (surface residualization and solver hardening)
+
+### morph_markov_residual.py
+- **Question:** Does the suffix/prefix arrow add held-out predictive information beyond observed word-level and local-copy structure?
+- **Method & control:** Leave one complete quire out; train-only vocabulary/counts; uncertain and one-character tokens remain hard breaks. Nested next-prefix models add exact previous word, rare-core pooling, causal copy-lag state, and target position before testing source prefix or suffix. A separately fitted deep-interior analysis and 24 word-Markov surrogates use the same scorer.
+- **Result:** Raw suffix(N)→prefix(N+1) is strong (`+0.07374` bits/transition, 14/16 quires, block-flip `p=0.00089`). Its primary surface residual is negative (`-0.01629`, 95% CI `[-0.02059,-0.01219]`, 1/16 positive); prefix→prefix is `-0.02411` with 0/16 positive. Real residuals are less negative than all 24 parametric surrogates, but morphology never improves absolute held-out likelihood over the declared surface model.
+- **Ledger:** D2 retained as a descriptive dependency; K16 kills it as an independent solver clue.
+- **Caveats:** prefix and suffix are deterministic functions of the exact source word, so this can only test sparse-context backoff. The surrogate generator is fitted globally and the 24-replicate empirical minimum is `p=0.04`.
+
+### solver_residual_controls.py
+- **Question:** Can source-prefix pooling after an exact-word hierarchy distinguish meaningful text/cipher from procedural output?
+- **Method & control:** Matched 16-block leave-one-out tests on Voynich, Naibbe, Latin, substitution-invariant Latin, English, layout exchange, schema/copy, and self-citation. Proper held-out log score is primary; accuracy and novel-word score are secondary.
+- **Result:** The surface exact-word stage detects English (`+0.19615` bits/event, 16/16 blocks, `p=0.00002`), showing pipeline sensitivity. Prefix pooling is negative for Voynich (`-0.06520`), Naibbe, Latin, and English. It is strongly positive only for aggressive self-citation (`+0.19417`, 16/16), making it a local-production diagnostic rather than a meaning detector.
+- **Ledger:** K16.
+- **Caveats:** non-Voynich controls use artificial Voynich line/block templates; procedural arms are single deterministic calibration points.
+
+### residual_cipher_solver.py
+- **Question:** Can a Naibbe-style variable one/two-character code produce held-out Latin likelihood beyond surface role and word-position statistics without being rewarded for generic directionality?
+- **Method & control:** Four outer folds over 16 complete blocks, with 8 fit / 4 inner-validation / 4 outer-test blocks. Uncertain, one-character, unresolved, and out-of-fit-inventory emissions are hard breaks; no n-gram crosses a break, line, block, or fold boundary. Codebook size and sequential-mixture weight are selected on inner validation with an `M log2(n)/(2n)` mapped-symbol penalty. `lambda=0` is the exact inactive baseline.
+- **Result:** The official Naibbe oracle activates in all folds at mean `+0.5353` held-out bits/emission. Blind Naibbe and blind Voynich both activate in 0/4 folds because every active candidate has negative inner-validation residual before the complexity penalty. Voynich therefore receives exactly zero residual evidence.
+- **Ledger:** L1 remains live but underpowered.
+- **Caveats:** At this stage blind recovery also failed the meaningful Naibbe control, so this run alone excluded no variable-key family. Campaign 11 supersedes that optimizer limitation for the declared Naibbe family.
+
+---
+
+## Campaign 11 — 2026-07-23 (powered known-family recovery)
+
+### recurrence_decoder_prototype.py / recurrence_key_synth.py
+- **Question:** Does first-occurrence recurrence encoding transfer information across randomized homophonic keys without sharing glyph identities?
+- **Method & control:** Randomized Naibbe-style keys over disjoint Latin control text; recurrence/frequency/context features exclude glyph strings and official values. Models freeze before official ciphertext scoring. The second implementation separately reports oracle structural boundaries and a synthetic-trained blind segmenter.
+- **Result:** The minimal statistical probe is weak but above its destroyed-recurrence control. The larger synthetic-key learner reaches **92.32%** weighted recovery on unseen synthetic keys and **59.05%** on official Naibbe with oracle structure; blind structure reduces official character recovery to **24.25%**.
+- **Ledger:** L1 calibration only.
+- **Caveats:** These are applicability probes, not generic Voynich decoders. Structural segmentation, not recurrence evidence, is the dominant bottleneck.
+
+### naibbe_permutation_decoder.py
+- **Question:** Can the official Naibbe key be recovered without reading its published letter values, and does the recovery generalize to untouched ciphertext?
+- **Method & control:** Treat the cipher specification as 18 independently permuted 23-symbol role/table blocks. Tune rank/context initialization and deterministic tetragram refinement only on three randomized synthetic keys. Canonically sort glyph surfaces so CSV row order cannot encode the alphabet; freeze full and both half-stream keys before opening official plaintext. The Naibbe checkout was `f2675ec5dd275268bc64dd48ea64fc0e0e9827a2`; exact asset hashes and the recovered key are serialized.
+- **Result:** Identity-row accuracy is **4.26%**. Unseen synthetic recovery is **99.21–99.69%**; official full-stream recovery is **99.61%**. Fit-first/test-second recovers **99.46%** and fit-second/test-first **99.64%**. The frozen output begins `ipomiferaearboresquaequemitioribus...`.
+- **Ledger:** powered positive control for K17; the old blind-optimizer caveat is resolved for this known family.
+- **Caveats:** This assumes the published Naibbe role/table inventory and unrespaced word boundaries. It is not a generic cipher solution.
+
+### voynich_latent_channel_gate.py
+- **Question:** Do the published inventory itself, or morphology-nearest/clustered latent channel assignments, transfer the powered Naibbe solver to held-out Voynich quires?
+- **Method & control:** Four outer folds over 16 complete blocks: eight fit, four inner validation, four test. Segmentation statistics, channel maps, and permutation keys are fit-only; lambda is validation-selected; physical lines and hard breaks are preserved; mapped-symbol complexity receives an MDL penalty. Each channel hypothesis must first activate in all four corresponding Naibbe folds.
+- **Result:** Three controls are powered: exact inventory and K23 nearest morphology average about **+0.484 bits/emission**, K12 nearest **+0.346**, all 4/4 active. Their Voynich counterparts are 0/4 active with mean raw residuals **−0.0384**, **−0.0649**, and **−0.0217** respectively. Morphology clustering fails its own Naibbe control and is excluded.
+- **Ledger:** K17. No tested Naibbe-lineage channel hypothesis passes.
+- **Caveats:** This closes only exact published membership and the declared nearest-morphology assignments under a Latin tetragram target. A materially different latent grouping remains outside scope.
+
+### permutation_heldout_controls.py
+- **Question:** Does the table-permutation optimizer manufacture held-out Latin gains from key breaks, block exchange, or matched table-Markov streams?
+- **Method & control:** Two directionally held-out Naibbe attacks and 20 plaintext-free adversarial attacks across three null families. The key is frozen before the test half; the threshold is the strict maximum null residual and LM score.
+- **Result:** First→second and second→first Naibbe residuals are **+1.1427** and **+1.0099 bits/tetragram**, with **99.46% / 99.64%** plaintext accuracy. Both clear the strict worst-null residual (**+0.7536**) and LM (**−4.5558**) cutoffs; 0/20 null attacks clear both.
+- **Ledger:** K17 control.
+- **Caveats:** This predeclared threshold calibrates one attack. It cannot be imported unchanged after searching additional latent groupings.
+
+---
+
+## Campaign 12 — 2026-07-23 (edit carriers and the remaining row axis)
+
+### edit_operation_channel.py
+- **Question:** Does the ordered edit that turns an adjacent or nearest-local-source word into its target carry a stationary homophonic plaintext symbol?
+- **Method & control:** Forty-two predeclared source/distance/representation channels cover edit operation, position, changed glyph, source lag, and full source→target delta. Keys fit on complete fit quires, channel/language selection uses disjoint validation quires, and keys freeze before complete test quires. Position/lag-matched shuffles repeat shortlist selection. Embedded English/Latin uses the same physical layout.
+- **Result:** Selected Voynich keys gain **+0.1118 nats/tetragram** over a frequency baseline, below the matched-null maximum **+0.1213** (`p=0.40`); output is unreadable and averages **−2.6095 nats/character** from its language ceiling. Embedded controls average **−0.1875** from ceiling and recover continuous plaintext.
+- **Ledger:** K18.
+- **Caveats:** This tests stationary many-to-one edit-symbol mappings, not arbitrary stateful or keyed edit ciphers. Four null replicates give coarse empirical resolution; the absolute language gap is the stronger discriminator.
+
+### edit_choice_bitstream.py
+- **Question:** Could the writer encode bits by choosing an odd/even-ranked alternative under the same source or edit context?
+- **Method & control:** Rank dictionaries fit only on complete fit quires. Fifty direct/conditional channels are decoded under 80 fixed Bacon-5/ASCII phase, polarity, and bit-order variants; channel and codec are validation-selected and frozen for test. Event order is shuffled within quire for the null, preserving every context, alternative count, and bit imbalance. Bacon controls are embedded at observed per-quire capacities.
+- **Result:** Embedded English/Latin Bacon payloads recover exactly (mean ceiling gap **−0.0299**). Voynich averages **−5.4894** below ceiling, is unreadable, and is worse than the null panel (`p=0.8889`).
+- **Ledger:** K18.
+- **Caveats:** Conditional rank is only one enumerative coding convention; keyed arithmetic coding or a changing rank dictionary is outside scope.
+
+### row_axis_gate.py
+- **Question:** Do successive prose rows behave as aligned table records after ordinary previous-row copying is controlled?
+- **Method & control:** For 27,730 target cells, complete-quire held-out mixtures add (1) numeric-position vocabulary, (2) copying from anywhere in the preceding row, then (3) a same-numeric-column point mass. EM weights fit on train quires and freeze for test. Page-preserving row shuffles repeat the six-representation family-wise search. An 8% same-column copy injection is the positive control.
+- **Result:** Raw same-column core matching is **7.43%** versus **7.08%** in neighboring source columns, but the row-bag component absorbs it. Every equal-quire diagonal residual is nonpositive (best **−0.00000013 bits/cell**; core **−0.0000403**), family-wise `p=1.0`. The injected table signal reaches **+0.1271 bits/cell** and improves 16/16 word blocks.
+- **Ledger:** K19; L8 closed.
+- **Caveats:** This excludes literal numeric-column continuity. More elaborate ragged alignment rules would be new hypotheses and need their own selection-adjusted null.
+
+### Crib-input audit
+- **Question:** Does `data/grounding/cribs.json` provide the ~200 known plaintext anchors assumed by L2?
+- **Method & control:** Direct schema/content audit against the grounding and binding files.
+- **Result:** No. It contains only Voynich label strings grouped by medallion/pharma context; there are no translations, plant names, month names, or other candidate plaintext values. K13/K14 already tested the available broad visual-class information.
+- **Ledger:** L2 corrected from an unrun decode lead to a missing-input requirement.
+- **Caveats:** A future independently established lexeme-level anchor would reopen a genuine crib attack.
+
+---
+
+## Campaign 13 — 2026-07-23 (parallel anchors and bounded line-state synthesis)
+
+### parallel_passage_gate.py
+- **Question:** Does the corpus contain a cross-quire near-parallel prose line strong enough to support differential cryptanalysis without a plaintext hint?
+- **Method & control:** Lines from the same section and Currier dialect but different quires are proposed through uncommon shared cores. Order-preserving matching blocks receive inverse-document-frequency weights. Thirty-two strict nulls preserve quire, section, Currier, and physical word-position buckets and repeat the complete maximum-over-pairs search.
+- **Result:** The observed maximum normalized score is **0.2169**, below the strict-null maximum **0.3089** and below the mean null maximum **0.2425** (family-wise **p=0.8182**). The leading pair's longest contiguous core match is only two words. No credible differential anchor is present.
+- **Ledger:** K20.
+- **Caveats:** This searches line-scale ordered core recurrence. A longer parallel with heavy synonymy or a transformation not preserving core order would not be proposed.
+
+### stateful_line_program_search.py
+- **Question:** Does one character per Voynich word emerge under a compact line-reset recurrence over deterministic word morphology?
+- **Method & control:** Eight declared coordinates (length, edges, glyph sums, and polynomial whole/core/affix values) are crossed with fifteen direct, lag, line-seed, position, and running-register programs and Latin/English targets: **240 candidates**. Global 23-letter output keys fit on complete fit quires; feature/program/language selection uses disjoint validation quires; keys freeze before test quires. Eight strict nulls preserve quire/section/Currier/position and repeat the full 240-way selection. Three unknown-program/unknown-key Latin controls use the same line geometry.
+- **Result:** `lag_minus`, `seed_minus`, and `running_plus` controls recover **100% plaintext accuracy**. Voynich averages **−12.4525** unconditional log likelihood per tetragram, **−1.1947** below the selected language ceiling. It loses to the matched-null maximum on final likelihood (**−12.2213**, empirical **p=0.8889**) and residual gain (**+1.4173** null maximum versus Voynich **+1.2513**, **p=0.3333**). Exact candidate consistency is only **0.50** and all outputs are repetitive pseudo-language.
+- **Ledger:** K20.
+- **Caveats:** The gate covers one global permutation key, one emitted character per retained word, modulus 23, line resets, and at most one running register. Multi-register, variable-length, page-keyed, or non-arithmetic transducers remain outside scope.
+
+---
+
+## Campaign 14 — 2026-07-23 (visual graphs as decoder state)
+
+### multimodal_visual_key_gate.py
+- **Question:** Do the invented-looking plants or zodiac figures carry a key that becomes meaningful only when combined with the text, rather than naming the pictured object directly?
+- **Method & control:** Two annotation-matched gates. The plant arm aligns 15 tagged herbal drawings to 142 prose runs (1,010 words), reduces root/stem/leaf/inflorescence tags to eight fixed graph invariants, and adds each invariant with coefficient ±1 to ten representative K20 state programs modulo 23. A global substitution key fits on complete fit quires; candidate/language selection uses disjoint validation quires; test quires remain untouched. The full **2,720-candidate** search is repeated after rematching complete plant records within quire and within Currier language. Two hidden Latin controls use actual plant keys, then repeat under mismatched drawings. The zodiac arm uses 95 inner/outer nodes on four anchor-bound rings, crosses eight text coordinates, three current/lag operations, four moduli, and sixteen current/transition visual features (**1,536 candidates**), and nests train/validation/test by whole folio. Its null nontrivially rotates the complete visual sequence within each folio×tier, preserving circular order and autocorrelation.
+- **Result:** Plant authentic pairing gains **+0.1137 nats/tetragram** over text-only. All eight rematches do better: within-quire mean **+0.4333** and within-Currier mean **+0.3540**, both empirical **p=1.0**; selected formulas differ in all four folds. The simple paired control recovers **99.88%** plaintext and the planted feature/program in 4/4 folds, versus **34.64%** accuracy after image rematching. The harder running/whole-graph control reaches **78.19%** versus **2.58%** rematched but misses its predeclared 80% pass threshold. Zodiac held-out gain is **−0.0901 bits/node**, only 1/4 folds positive, cyclic-rotation **p=0.3951**. Its 10%-noise control gains **+0.5567 bits/node** and selects the planted transition in 4/4 folds.
+- **Ledger:** K21.
+- **Caveats:** This excludes fixed additive plant page shifts and the declared local zodiac state/transition vocabulary, not arbitrary image steganography. The plant complex-state arm has only partial power. A plant↔zodiac transfer is not identifiable because the committed plant annotations are page-level organ slots while zodiac bindings are ordered figure nodes. Scaling the K14 protocol to all 12 rings and defining a common graph schema are data prerequisites for a stronger multimodal attack.
+
+---
+
+## Campaign 15 — 2026-07-23 (all-zodiac visual binding and cross-domain transfer)
+
+### build_zodiac_visual_nodes.py / build_multimodal_visual_graphs.py
+- **Question:** Can the missing visual data prerequisite be closed without inventing semantic attributes for the eight unannotated zodiac rings?
+- **Method & control:** Yale scans are assigned explicit panel crops, centers, elliptical ring radii, and clockwise tier geometry. Four folios retain their pixel-read K14 phase; the other eight use the anchored modal start and carry ±1-node uncertainty. Figure-core descriptors exclude raw ink/edge/entropy and remove glyph-sized connected components; larger context crops remain only for leakage testing. QC overlays expose every node placement. The second builder applies the identical pixel schema and an explicit graph vocabulary to 15 herbal and 12 zodiac diagrams.
+- **Result:** **286** inner/outer zodiac nodes, 12 QC overlays, and **27** common-schema page records are generated reproducibly. All label counts reconcile; 13 outside-diagram labels remain separately recorded.
+- **Ledger:** K22 data.
+- **Caveats:** Eight ring phases remain geometry-inferred, not label-read. The common graph fields have domain-specific construction provenance and are not assumed semantically equivalent.
+
+### multimodal_graph_transfer_gate.py
+- **Question:** Does the all-ring visual sequence predict label morphology, or does one pigment/graph relation transfer between herbal and zodiac pages?
+- **Method & control:** The node arm searches **2,112** modular text-coordinate × guarded pixel-state/transition candidates with whole-folio train/validation/test splits. Sixty nulls rotate complete visual sequences within folio×tier and repeat selection. Fixed ±1-node phase scenarios, a planted channel, four-ring pixel→semantic prediction, and core/context label-length leakage probes audit the image bindings. The cross-domain arm tests 15 herbal against 12 zodiac page records. Its primary gate uses pigment only, requires one shared feature pair and sign in both domains, rank-residualizes folio order and text sample size, and repeats pair selection in 1,000 complete text-record permutations.
+- **Result:** Zodiac gain is **−0.0456 bits/node**, 4/12 folds positive, cyclic **p=0.131**; all phase scenarios remain negative. The planted channel passes at **+0.3057** and is selected in 8/12 folds. Pixel→semantic calibration is **−0.1252**, 0/4 positive, **p=0.410**. Raw context pixels leak label length (**p=0.0365**), but the guarded core does not (**p=0.309**). Exploratory green pigment tracks `o`-initial rate in both domains (**rho +0.571/+0.591, p=0.032**). The controlled common-pair gate instead selects blue pigment vs type-token ratio (**rho −0.521/−0.538**) and fails selection-adjusted significance (**p=0.152**); its zodiac correlation drops to **−0.171** after shared-canvas aggregation. A post-hoc green/gallows node-localization check is negative (**−0.0066 bits/node, p=0.927**).
+- **Ledger:** K22. No visual key or plaintext recovered; freeze the raw green relation only as an independent replication target.
+- **Caveats:** The raw transfer is compatible with production order, canvas exposure, register, or other page-level effects. The semantic calibration failure limits what a null from automatically extracted silhouettes can exclude.
+
+---
+
+## Campaign 16 — 2026-07-24 (external abbreviation controls and illustration routes)
+
+### build_historical_abbreviation_controls.py
+- **Question:** Can a variable-length decoder be restricted by attested medieval abbreviation practice instead of an invented expansion inventory?
+- **Method & control:** The builder selects Latin Cappelli records whose stated period intersects the fourteenth or fifteenth century, preserving Cappelli's notation without treating every bracket as omitted text. It separately extracts line-level diplomatic `<expan>/<ex>` events from Nuremberg Letterbooks 2–5 (1408–1423), grouped by book and writer. Source URLs, licenses, input hashes, selection rules, and exclusion counts are embedded in the artifact.
+- **Result:** **8,869** Cappelli source rows become **8,420** deduplicated records. The Nuremberg arm contains **118,681** usable expansion events and **18,179** distinct book/writer-grouped pairs. Every one of the 12 declared decoder chunks is attested in the Cappelli solution field; this licenses the inventory but does not identify an EVA sign.
+- **Ledger:** L4 calibration.
+- **Caveats:** Cappelli is a lexicon rather than continuous prose. The Nuremberg manuscript is German running text with Latin scribal inheritance, so its event coverage calibrates abbreviation frequency and diversity, not a Voynich target language.
+
+### abbreviation_transducer_gate.py
+- **Question:** Does a bounded, historically licensed variable-length expansion map make held-out Voynich decode more economically as Latin than the same fitted one-character key?
+- **Method & control:** Four complete-quire folds fit a 22-way monographic base using fit-block frequencies only, select its restart on a disjoint validation fold, and freeze it. The variable arm exhausts all **432** null-or-expansion maps over five position-conditioned `y/q/ch/sh` slots on fit blocks. The primary score pools full Latin-trigram log probability over identical source observations; every added output character pays its code length and the variable arm pays **8.7549 map-description bits per fold**. Nineteen schema/copy replicates provide a rank screen. A planted synthetic-Latin transducer tests recovery.
+- **Result:** Voynich is negative in **4/4 folds**, pooled **−0.002264 bits/source observation**, and ranks **19/20** against the procedural panel (18/19 nulls score higher). Its variable output expands 188,372 source observations to 191,136 decoded characters while worsening joint code length. Synthetic Latin is positive in 4/4 folds (**+0.02810**), but active-slot recovery is only **80.97% globally / 62.42% minimum fold**, below the locked 90% power threshold. The bounded screen fails.
+- **Ledger:** L4 remains live at low prior; this is no evidence for Latin or the declared EVA-to-siglum assignments.
+- **Caveats:** The result is a pilot rank, not a calibrated significance test. EVA is not a diplomatic allograph transcription, the language model is Ciceronian rather than matched fifteenth-century technical Latin, and the synthetic recovery failure prevents a family-wide exclusion.
+
+### illustration_route_gate.py
+- **Question:** Do the illustrations specify the order in which existing text units should be read, rather than changing their values?
+- **Method & control:** All 24 inner/outer zodiac rings are scored clockwise and counterclockwise as closed cycles, removing arbitrary start phase. Each of 1,000 null replicates draws one random circular order per ring and scores that route together with its exact reverse before taking the same two-candidate maximum. The planted counterclockwise control uses donor prose excluded, together with the target quire, from its reference transition model.
+- **Result:** Clockwise scores **−6.50845** and counterclockwise **−6.54769 bits/transition**; the paired route/reverse null gives **p=0.35265**. The donor-held-out planted counterclockwise route is selected at **p=0.000999**. Canonical zodiac direction is unsupported.
+- **Ledger:** K23.
+- **Caveats:** Existing herbal data contain aggregate graph counts but no observed node-edge topology. Constructed DFS/BFS outputs are software diagnostics only, carry no inferential p-values, and do not test real plant routes.
+
+---
+
+## Campaign 17 — 2026-07-24 (causal production-algorithm inversion)
+
+### production_algorithm_gate.py
+- **Question:** What smallest normalized causal source model assigns the best probability to untouched Voynich words: a character grammar, register conditioning, previous-word context, recent exact copying, or a general mutation channel?
+- **Method & control:** Four complete-quire outer folds use two fit folds, one disjoint validation fold, and one untouched test fold over 33,133 gap-safe prose words. Every candidate is a normalized word code. Character models reset at word boundaries; register state uses Currier, section, and line position but excludes hand. The folio model updates transition counts only after scoring each word. Exact-copy and canonical prefix-decodable edit channels use only the preceding eight words, with mixture weights fitted on training. A planted 14%-copy/18%-edit source, a base-only source, and Latin reflowed into the same layout calibrate the channel.
+- **Result:** Character trigram scores **12.3423 bits/word**; register conditioning improves it by **0.2518**. Causal folio state adds **0.5215** at fixed concentration 32. After that state, exact-copy+edit adds only **0.00388**, with fitted copy weight **0.25–0.42%** and edit weight about **0.004%**. The planted operation control is recovered at **92.23%** with **+1.5078 bits/word**; base-only false gain is **+0.00056**. Latin copy/edit gain is **+0.1012**.
+- **Ledger:** D13; K24 kills recent copy/mutation as the main production engine.
+- **Caveats:** This is a probabilistic source description, not plaintext. Canonical edit scripts do not sum over alternative alignments. Folio adaptation can represent meaningful topical/register variation or a content-free page-specific procedure.
+
+### adaptive_horizon_gate.py
+- **Question:** Is the state a short copying cache, a line process, or a persistent folio profile, and what prior concentration does it require?
+- **Method & control:** The same nested folds select among static, line-cumulative, rolling 8/16/32/64/128/256-word, and full-folio caches. A second validation scan selects concentrations 4–256. An independent generator measures generic online-estimation gain; a planted 32-word cache tests horizon localization; Latin measures ordinary-language behavior.
+- **Result:** Full-folio state wins **4/4 folds** before concentration tuning; rolling performance improves monotonically with horizon (8: **11.9445**, 32: **11.7707**, 128: **11.6077**, 256: **11.5752**, folio: **11.5690 bits/word**). Nested concentration selection chooses **16 twice and 32 twice**, for **+0.5283 bits/word** over static register and about **11.5622 bits/word** total. The independent generator gains **+0.1520** and selects weaker concentrations 32–256. The planted 32-word cache is localized to rolling-32 in 3/4 folds. Latin gains **+0.6827** and selects concentrations 8–32.
+- **Ledger:** D13.
+- **Caveats:** The Latin result is decisive for interpretation: persistent folio state is compatible with meaningful language and is not proof of an asemic generator. Residual lag-1 difficulty remains, but Latin's residual is comparable; it is not a Voynich-specific second channel.
+
+### state_boundary_gate.py
+- **Question:** Is the inferred state truly page-specific rather than generic online adaptation or quire/register drift, and does the source require one reset boundary or a hierarchy?
+- **Method & control:** The boundary tournament crosses line, paragraph, page side, physical leaf, repository quire, Currier×section register, Currier, and global reset units with concentrations 4–256. A second declared family layers a page-side cache over leaf/quire/register/Currier/global outer state. Selection uses validation quires and scoring uses untouched test quires. The state-swap gate requires at least 80 words per side, selects 16/32/64 prefix words and concentration on validation, freezes the prefix state, and always scores words 65–128. Donor states are restricted to the same repository quire, Currier, and section; each donor's conditional counts are normalized context-by-context to the target's evidence totals before 500 within-stratum permutations. The corpus does not safely identify true bifolia, so the available `r/v` pair is called a physical leaf.
+- **Result:** Every fold selects the hierarchical family: three `side over Currier`, one `side over register`. Selected held-out score is **11.3709 bits/word**. The descriptive best hierarchy (`side over register`, outer/inner concentration 64/64) scores **11.3667**, a **+0.09684** gain over the best single register boundary (**11.4635**). The frozen own-page prefix beats quire×Currier×section-matched permutations by **+0.28082 bits/word** over 5,954 suffix words on 120 sides, with **p=0.001996 in all four folds**; own state ranks first on **56/120** sides. Across 99 usable `r/v` pairs it beats the opposite side by **+0.1869 bits/word** on average. The signal spans herbal, biological, cosmological, pharmaceutical, recipe, and text-only sections. The independent source is null (**+0.00394**, no fold significant); the planted page-state source gives **+1.2602**, 119/120 rank-1, with all folds significant. Latin is stronger at **+0.60555** and 50/120 rank-1.
+- **Ledger:** D13 is refined from a single folio cache to hierarchical Currier/register plus page-side state.
+- **Caveats:** This establishes a reusable page-side distribution beyond quire, dialect, and section. Latin proves that such a state can arise from ordinary topical language; the result does not decide whether the Voynich state is semantic, cryptographic, or procedural. The next discriminating use is to predict this state from independent image features under whole-quire holdout and within-stratum image rematching.
+
+---
+
+## Campaign 18 — 2026-07-24 (illustration-to-page-state prediction)
+
+### build_page_illustration_features.py
+- **Question:** Can full-facsimile image features be built without allowing the target writing itself to leak into the visual predictor?
+- **Method & control:** The 209-page pinned PDF is aligned to the IIIF canvas order after removing four edge views. Detection runs at 384×512 after local paper-background subtraction. Connected foreground survives only if it spans at least 18 detection pixels vertically; large components entering the guarded scan-edge zone are rejected. Primary features are global component statistics, 8×8 silhouette density plus row/column projections, and four 8×8 pigment grids. Small components are retained only as an excluded leakage diagnostic. A reproducible eight-page overlay marks admitted illustration pixels green and excluded foreground red.
+- **Result:** 204 labeled manuscript-side records are produced; 171 labels exactly overlap corpus folios. Composite foldout labels are deliberately not guessed. Pixel inspection confirms that ordinary text is excluded while substantial plant, zodiac, figure, root, and diagram structure survives.
+- **Ledger:** K25 feature substrate.
+- **Caveats:** Disconnected short drawing strokes are sacrificed with the text, some page blemishes remain, and composite foldouts require a manually verified many-to-many map. These are coarse whole-page descriptors, not object recognition.
+
+### image_state_gate.py
+- **Question:** Does independent illustration structure identify a better donor for the frozen page-specific text state established by D13?
+- **Method & control:** Four complete-quire folds reuse the register-conditioned word-reset trigram source and a frozen 64-word page prefix. Fit pages alone scale image features; validation pages choose among four guarded families, 1/3/5 nearest donors, and concentrations 8/16/32/64. On untouched test pages every donor is another page in the exact same repository quire×Currier×section stratum. The primary null performs 500 complete image-vector relabelings inside those same strata. The excluded small-component grid is run separately. A target-prefix state oracle chooses the nearest other textual state and tests whether the donor pool contains recoverable structure.
+- **Result:** The 100 test pages contribute 4,869 suffix words in 15 matched strata. Guarded-image selection loses **0.05752 bits/word** to the mean matched donor and is worse than the pooled relabeling null (**p=0.99601**); no fold is individually significant. The excluded text-layout diagnostic gains only **0.00178**, **p=0.43713**. The prefix-state oracle succeeds at **+0.14368**, and the target's own prefix gains **+0.26589**, so the negative is not caused by an empty donor signal. A second full run is byte-identical.
+- **Ledger:** K25 closes coarse whole-page silhouette/pigment nearest-donor prediction.
+- **Caveats:** The result does not exclude object-level graph correspondence, corrected composite-foldout alignment, trained image embeddings, local label-to-object links, or a nonlinear joint text/image model. It establishes no plaintext or visual semantics.
+
+---
+
+## Campaign 19 — 2026-07-24 (learned visual embeddings to text-state axes)
+
+### build_guarded_dinov2_embeddings.py
+- **Question:** Can an externally pretrained visual backbone retain useful object similarity after the anti-text guard that defeated coarse image features?
+- **Method & control:** The frozen 22,056,576-parameter DINOv2-S/14 backbone is loaded from Meta's official repository at revision `7764ea0f...`; the 84.1MB weights hash to `b938bf1b...60cd9`. The same reproducible PDF/IIIF mapping produces 204 sides. Four 224×224 guarded views are embedded: full-layout and tight union-of-components crops, each in original color and black silhouette. CLS and mean-patch pooling yield eight 384-dimensional families. No Voynich label or text statistic fits the backbone. A dedicated montage records the exact color inputs.
+- **Result:** All 204 records receive all eight embeddings. The input audit confirms no ordinary prose is presented, but also exposes the price of the strict guard: disconnected short strokes are omitted, making some ring and figure inputs sparse.
+- **Ledger:** K26 feature substrate.
+- **Caveats:** DINOv2 was trained on modern natural images, not manuscript drawings. The frozen embeddings are global/tight page summaries, not detected medieval objects. Model code/weights are Apache-2.0 and are fetched rather than vendored.
+
+### visual_state_axis_gate.py
+- **Question:** Can learned image features predict a compact coordinate system for the D13 page state even when raw image-neighbor matching fails?
+- **Method & control:** In each complete-quire fold, fit pages alone define standardized PCA axes of log first-64-word character-transition counts and fit kernel-ridge maps from the frozen image embeddings. Validation chooses eight visual representations, four ridges, 2/4/8/16 axes, 1/3/5 donors, and concentrations 16/32/64. Untouched suffixes always begin at word 65. Donors and 500 complete image relabelings are restricted to exact repository quire×Currier×section. Target prefix coordinates are unavailable to the primary predictor and appear only in selected-axis and full-state oracles. The excluded small-component text-layout grid runs through the same supervised pipeline.
+- **Result:** Over 100 test pages, 4,869 suffix words, and 15 strata, image-selected states gain **+0.02842 bits/word** over the mean donor. That is not a pairing result: relabeled images gain **+0.02470**, leaving only **+0.00372** for authentic pairing (**p=0.30739**). Direct image→axis reconstruction is **R²=−0.7701**; selected visual families differ in all four folds and fold p-values are `0.222/0.701/0.703/0.287`. The text-layout diagnostic is null (**p=0.71657**). The selected-axis oracle gains **+0.02873** and the full-state oracle **+0.14368**, so the state and donor pool remain recoverable. Leading axes repeatedly contrast `ed→y / dy→end` with `ch/sh→o / ho→l,r`, but the images do not predict those coordinates.
+- **Ledger:** K26 closes the guarded global/tight DINOv2 plus linear-kernel state-axis family.
+- **Caveats:** The positive raw gain is regression toward a few central donor states, not image information. This does not test complete object-region segmentation, traced illustration graphs, corrected composite foldouts, manually aligned local features, nonlinear fine-tuning, or joint training on an independent manuscript-image control.
+
+---
+
+## Campaign 20 — 2026-07-25 (public complete-object visual attack)
+
+### setup_public_object_attack.sh
+- **Question:** Can the complete-object attack be mounted reproducibly from public resources rather than ad hoc local models or repeated permission-gated commands?
+- **Method & control:** One idempotent shell entry point installs pinned inference runtimes, downloads public artifacts into the gitignored cache, verifies published or locally pinned digests, and smoke-tests every checkpoint load. It pins Surya layout revision `0aee81d...`, the HORAE fine-tuned YOLO12s release, official SAM 2.1 tiny, and the same official DINOv2-S/14 revision/weights used in K26. The generated SHA-256 manifest covers every inference artifact.
+- **Result:** All four model families load from the verified cache. The bootstrap is the sole network/install step required by the subsequent builder and gate.
+- **Ledger:** K27 public-resource substrate.
+- **Caveats:** Surya and DINOv2 are not Voynich-trained. HORAE transfers weakly by itself; it is retained as a secondary proposal source, not treated as a semantic classifier.
+
+### build_public_object_embeddings.py
+- **Question:** Do complete illustration objects and their topology carry the page-state signal lost by K25/K26's coarse masks?
+- **Method & control:** A manually audited normalized crop map resolves every composite foldout scan into all **49** previously missing corpus targets, yielding exactly **225 unique folios**. Two transcript units share the same f90v photographed field and are explicitly excluded from gate fitting/scoring. Surya visual boxes, HORAE decoration boxes, and directional green/blue/red pigment components propose regions. SAM supplies spatial guards; retained masks are substantial foreground-connected components with page-frame rejection, contour filling, and narrow pigment support. DINOv2 embeds full/tight RGB and silhouette views; a separate descriptor records object, ink, pigment, skeleton, component, endpoint/junction, grid, and projection topology. A seven-page montage audits a plant, circle, foldout chart, biological page, mixed object pages, and a text-only negative.
+- **Result:** The artifact contains all eight DINO feature families plus topology for all 225 folios. There are **196 proposal-bearing** and **29 blank** sides, **49 foldout-mapped** sides, and **2 shared-canvas exclusions**. Completed objects cover median **11.4%** of a page (maximum **27.3%**), avoiding the page-scale leakage seen during development. The final QC retains complete plants, rings, charts, and figures while f103r's ordinary prose remains blank.
+- **Ledger:** K27 feature substrate.
+- **Caveats:** The masks are publicly pretrained proposals plus deterministic color/geometry guards, not human gold segmentation. Disconnected, uncolored micro-strokes can still be lost, and object semantics are not labeled.
+
+### public_object_state_axis_gate.py
+- **Question:** Does the stronger foldout-complete object representation predict D13's text-state axes out of quire?
+- **Method & control:** The K26 four-fold state-axis implementation, split logic, validation grid, exact quire×Currier×section donor restriction, 500 within-stratum image relabelings per fold, and textual oracles are reused. Only the visual artifact changes. Shared photographed canvases are unavailable to both fit and scoring.
+- **Result:** The primary gate fails over **120 untouched pages / 5,954 suffix words / 18 strata**. Image-selected donors score **11.71727 bits/word** versus **11.70006** for the matched mean, a **−0.01721 bits/word** loss. The observed pairing is ordinary under pooled relabeling (**p=0.26148**) and direct held-out axis prediction is **R²=−11.4447**. Fold gains are `−0.0273/−0.0338/−0.0308/+0.0193`; the lone positive fourth fold is nominally significant but does not replicate. The selected-axis oracle remains positive (**+0.00804**) and the full-state oracle gains **+0.11810**, so the failure is visual prediction rather than an empty donor pool.
+- **Ledger:** K27 closes the public detector/SAM complete-object DINO/topology representation under the frozen linear-kernel state-axis gate.
+- **Caveats:** This does not exclude manually traced local icon/text correspondences, object-to-label alignment, manuscript-specific segmentation training, or nonlinear joint multimodal learning. It recovers no plaintext or visual semantics.
+
+---
+
+## Campaign 21 — 2026-07-25 (historical table/counter reconstruction)
+
+### historical_counter_mechanism_gate.py
+- **Question:** Could a fifteenth-century scribe have generated the text by advancing a short tally or wheel and consulting a compact glyph-choice table?
+- **Method & control:** Five manually executable counters advance by word, glyph, or page line and reset only at lines, paragraphs, or pages. Periods 2/3/4/5/7/12 and two shrinkage levels give 60 candidates. Each table contains only phase×glyph multipliers over D13's train-only register trigram and causal page state. Complete-quire folds fit on two folds, select on a third after paying a lower-bound one description bit per table entry, and score the fourth. The baseline with no table is explicit. Thirty-two nulls independently rotate the phase origin in every reset unit and repeat full selection. Base-only, Latin reflow, and a planted word-line mod-4 source are controls. A per-line offset audit tests the manual-error prediction.
+- **Result:** The first screen passes statistically but not algorithmically. All four Voynich folds improve, pooled **+0.0012465 bits/glyph** (**+0.007784 bits/word**), phase-origin **p=0.030303**. Three folds choose page-line counters, but with incompatible periods **3, 4, and 5**; the fourth chooses word-line period **12**. Base-only and Latin choose no table in 4/4 folds. The planted source recovers word-line mod 4 in 4/4, gains **+0.031277 bits/glyph**, and reaches **p=0.030303**. Offset-0 and half-line persistence are only weakly above chance. The heterogeneous periods and phase tables, dominated by rare position-sensitive glyphs, trigger the absolute-layout discriminator rather than an algorithm claim.
+- **Ledger:** K28 provisional screen; superseded in interpretation by the residual gate below.
+- **Caveats:** A positive family-level phase-origin test does not identify one reproducible table. The 32-null p-value is resolution-limited, and most individual test folds do not repay their table description cost.
+
+### historical_counter_residual_gate.py
+- **Question:** Does the apparent repeating cycle survive after ordinary absolute layout conventions are learned?
+- **Method & control:** Train quires fit two nonperiodic nuisance profiles by coordinate descent: exact page-line indices 0–10 with one 11+ class, and exact word-in-line indices 0–10 with one 11+ class. The page-line counter tournament is then rerun on residual glyph probabilities with the same validation description charge, explicit no-counter baseline, untouched test quires, and 32 page-origin rotations. A fresh planted page-line mod-4 source tests whether a real repeating cycle remains recoverable after the nuisance profiles.
+- **Result:** The absolute page-line/word-slot profiles themselves add **+0.007452 bits/glyph in all four held-out folds**. Fitted independently, exact page-line contributes **+0.004763** and exact word slot **+0.003069**. After that structure is present, Voynich selects no residual table in **4/4 folds**: pooled gain **0**, no positive fold, **p=1.0**. The independent base-only source also selects no table. The planted line cycle selects a table in 4/4 folds, recovers period 4 in 3/4 (period 2 in one fold), gains **+0.008048 bits/glyph**, and reaches **p=0.030303**. Thus the first screen was stable absolute layout structure, not a repeating counter. The period-12 word arm is observationally confounded with exact word position on normal line lengths and is closed rather than decoded.
+- **Ledger:** K28 closes the declared small repeating table/tally/wheel mechanism.
+- **Caveats:** This does not exclude nonperiodic per-page recipes, semantic writing with layout conventions, a keyed table whose state is not tied to visible boundaries, or tables operating on untranscribed allographic distinctions.
+
+---
+
 ## Vision-agent runs
 
 - **28-folio grounding pass → D12** (Campaign 2, `1bb4a48a`/`transcripts/readable/adversarial_fork.txt`): one vision agent per illustrated folio, building `body_spatial.json` (37,019 tokens with locus role/line-position/section/Currier/hand) from deterministic IVTFF parsing plus vision-grounded label→drawing binding. Produced D11 (q-register law) and D12 itself, and seeded the later crib/zodiac datasets (`data/grounding/cribs.json`, `grounding.json`).
@@ -470,4 +792,4 @@ Per the audit doc's own list, these remain open/under-specified as of 2026-07-01
 - The rosette causeway graph and the balneo pool-topology dataset — mentioned as under-logged artifacts in `docs/AUDIT-2026-07-01.md` §2, but no corresponding script or transcript passage with a discrete result was located in this pass; **result not recovered from sources**.
 - R1's cipher-family exclusion re-run against medieval Latin / German / Italian vernacular target LMs — not run (audit-flagged gap, still open).
 - L2's crib-anchored held-out decode at the ~200-entry scale specified — not built (audit-flagged gap, still open).
-- Named-rival confrontation (scott-schechter Latin-Occitan glossary, the Naibbe cipher, Montemurro & Zanette's clustering metric, a tonal-language control) — none run through the held-out harness (audit-flagged gap, still open).
+- Named-rival confrontation: public Scott Schechter and Naibbe materials have now been inspected/run; Montemurro & Zanette's clustering metric and a tonal-language control remain open.

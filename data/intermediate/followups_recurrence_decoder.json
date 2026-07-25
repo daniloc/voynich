@@ -1,0 +1,312 @@
+{
+  "configuration": {
+    "bigram_probability": 0.5,
+    "feature_names": [
+      "symbol_frequency",
+      "first_occurrence_rank",
+      "first_position",
+      "last_position",
+      "prior_occurrences",
+      "future_occurrences",
+      "previous_gap",
+      "next_gap",
+      "sequence_position",
+      "left1_frequency",
+      "right1_frequency",
+      "left2_frequency",
+      "right2_frequency",
+      "left1_is_same",
+      "right1_is_same",
+      "left2_is_same",
+      "right2_is_same"
+    ],
+    "feature_weights": [
+      0.05,
+      0.1,
+      0.25,
+      0.5,
+      1.0
+    ],
+    "homophone_range": [
+      2,
+      8
+    ],
+    "observed_naibbe_bigram_probability": 0.51423886779427,
+    "seed": 20260723,
+    "selected_feature_weight": 0.25,
+    "sequence_length": 400,
+    "smoothing": 0.25,
+    "test_sequences": 400,
+    "train_sequences": 4000,
+    "validation_sequences": 400
+  },
+  "elapsed_seconds": 24.312974214553833,
+  "experiment": "minimal_recurrence_encoded_decoder",
+  "interpretation_guardrail": "A useful EACL-style signal requires the learned decoder to beat both prior-only and recurrence-destroyed controls on synthetic holdout and transfer above those controls to untouched Naibbe. The oracle is a ceiling, not a blind-decipherment result.",
+  "leakage_policy": "Latin control split 80/20 by position. Synthetic keys are newly randomized per sequence. The generator's 50/50 default emission length mix is fixed without consulting Naibbe. Official Naibbe plaintext is first loaded only after fit and validation, for scoring and the labelled oracle.",
+  "official_naibbe": {
+    "aligned_character_accuracy": 0.08511822508828497,
+    "dropped_tail_units": 364,
+    "emission_length_accuracy": 0.8822674418604651,
+    "mean_unique_fraction": 0.6831686046511626,
+    "scored_units": 34400,
+    "unit_accuracy": 0.06546511627906977,
+    "whole_document_unique_fraction": 0.16108618110689218,
+    "windows": 86
+  },
+  "official_naibbe_evaluation_only_oracle": {
+    "ambiguous_word_types": 13,
+    "cipher_word_types": 5600,
+    "majority_word_to_unit_accuracy": 0.9994822229892992
+  },
+  "official_naibbe_examples": [
+    {
+      "ciphertext": [
+        "shedy",
+        "qolkdair",
+        "deor",
+        "qokchey",
+        "ols",
+        "ol",
+        "chaiin",
+        "sheol",
+        "okchdy",
+        "reedy",
+        "chckhy",
+        "lkiin",
+        "fched",
+        "chedy",
+        "esee",
+        "ar",
+        "okar",
+        "qokedy",
+        "okaiin",
+        "shedy",
+        "reear",
+        "raiin",
+        "qokchdy",
+        "opar"
+      ],
+      "prediction": [
+        "i",
+        "qu",
+        "er",
+        "i",
+        "t",
+        "i",
+        "qu",
+        "e",
+        "um",
+        "er",
+        "i",
+        "s",
+        "er",
+        "i",
+        "qu",
+        "i",
+        "qu",
+        "i",
+        "t",
+        "i",
+        "um",
+        "a",
+        "e",
+        "er"
+      ],
+      "truth": [
+        "i",
+        "po",
+        "mi",
+        "f",
+        "er",
+        "a",
+        "ea",
+        "r",
+        "b",
+        "or",
+        "e",
+        "sq",
+        "ua",
+        "e",
+        "qu",
+        "e",
+        "m",
+        "i",
+        "t",
+        "i",
+        "or",
+        "i",
+        "b",
+        "us"
+      ]
+    },
+    {
+      "ciphertext": [
+        "ddy",
+        "aiiry",
+        "dar",
+        "qokeedy",
+        "qockhaiin",
+        "otal",
+        "ctho",
+        "lkey",
+        "osheam",
+        "olkeeo",
+        "ckhar",
+        "qotd",
+        "saleees",
+        "lol",
+        "dy",
+        "shol",
+        "olkody",
+        "lsg",
+        "shedy",
+        "areeol",
+        "qopcheos",
+        "ochedy",
+        "cheol",
+        "dain"
+      ],
+      "prediction": [
+        "er",
+        "a",
+        "i",
+        "i",
+        "um",
+        "a",
+        "er",
+        "er",
+        "er",
+        "er",
+        "er",
+        "er",
+        "er",
+        "er",
+        "er",
+        "i",
+        "um",
+        "er",
+        "i",
+        "qu",
+        "er",
+        "er",
+        "i",
+        "i"
+      ],
+      "truth": [
+        "mi",
+        "nt",
+        "e",
+        "r",
+        "va",
+        "l",
+        "li",
+        "se",
+        "ff",
+        "us",
+        "us",
+        "in",
+        "in",
+        "me",
+        "n",
+        "s",
+        "um",
+        "ag",
+        "i",
+        "tu",
+        "ro",
+        "ce",
+        "a",
+        "n"
+      ]
+    }
+  ],
+  "official_naibbe_prior_only": {
+    "aligned_character_accuracy": 0.037559496391831725,
+    "dropped_tail_units": 364,
+    "emission_length_accuracy": 0.48534883720930233,
+    "mean_unique_fraction": 0.6831686046511626,
+    "scored_units": 34400,
+    "unit_accuracy": 0.05688953488372093,
+    "whole_document_unique_fraction": 0.16108618110689218,
+    "windows": 86
+  },
+  "official_naibbe_recurrence_destroyed": {
+    "aligned_character_accuracy": 0.059150928911407955,
+    "dropped_tail_units": 364,
+    "emission_length_accuracy": 0.5146511627906977,
+    "mean_unique_fraction": 0.6831686046511626,
+    "scored_units": 34400,
+    "unit_accuracy": 0.009854651162790698,
+    "whole_document_unique_fraction": 0.16108618110689218,
+    "windows": 86
+  },
+  "paper": {
+    "citation": "Kambhatla, Born, and Sarkar (2023), Decipherment as Regression, Findings of EACL 2023",
+    "faithfulness": "Uses first-occurrence recurrence encoding and randomized homophonic training. Replaces the paper's 12-layer causal Transformer and 2M examples with recurrence-feature Naive Bayes because no local neural backend is available.",
+    "url": "https://aclanthology.org/2023.findings-eacl.160/"
+  },
+  "runtime": {
+    "neural_backend_available": false,
+    "numpy": "2.0.2",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python": "3.9.6"
+  },
+  "synthetic_test": {
+    "aligned_character_accuracy": 0.08890676313201194,
+    "emission_length_accuracy": 0.888475,
+    "mean_unique_fraction": 0.65050625,
+    "unit_accuracy": 0.07206875
+  },
+  "synthetic_test_prior_only": {
+    "aligned_character_accuracy": 0.03896260856518913,
+    "emission_length_accuracy": 0.500325,
+    "mean_unique_fraction": 0.65050625,
+    "unit_accuracy": 0.05843125
+  },
+  "synthetic_test_recurrence_destroyed": {
+    "aligned_character_accuracy": 0.059066964508976944,
+    "emission_length_accuracy": 0.499675,
+    "mean_unique_fraction": 0.65050625,
+    "unit_accuracy": 0.01023125
+  },
+  "synthetic_validation_by_weight": {
+    "0.05": {
+      "aligned_character_accuracy": 0.03858697689529784,
+      "emission_length_accuracy": 0.49949375,
+      "mean_unique_fraction": 0.64906875,
+      "unit_accuracy": 0.0579
+    },
+    "0.1": {
+      "aligned_character_accuracy": 0.03939920276906544,
+      "emission_length_accuracy": 0.49949375,
+      "mean_unique_fraction": 0.64906875,
+      "unit_accuracy": 0.05911875
+    },
+    "0.25": {
+      "aligned_character_accuracy": 0.08740383453917636,
+      "emission_length_accuracy": 0.88565,
+      "mean_unique_fraction": 0.64906875,
+      "unit_accuracy": 0.07061875
+    },
+    "0.5": {
+      "aligned_character_accuracy": 0.08842015819660864,
+      "emission_length_accuracy": 0.88565,
+      "mean_unique_fraction": 0.64906875,
+      "unit_accuracy": 0.07045625
+    },
+    "1.0": {
+      "aligned_character_accuracy": 0.09272287269713138,
+      "emission_length_accuracy": 0.885575,
+      "mean_unique_fraction": 0.64906875,
+      "unit_accuracy": 0.06845625
+    }
+  },
+  "training": {
+    "mean_unique_fraction": 0.649594375,
+    "median_unique_fraction": 0.6675,
+    "mode_target_id": 8,
+    "observed_target_classes": 370,
+    "tokens": 1600000
+  }
+}

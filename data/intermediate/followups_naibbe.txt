@@ -1,0 +1,84 @@
+NAIBBE MEANINGFUL-CIPHERTEXT BENCHMARK
+================================================================================
+Naibbe implementation: https://github.com/greshko/naibbe-cipher
+Paper: https://doi.org/10.1080/01611194.2025.2566408
+Naibbe revision: f2675ec5dd275268bc64dd48ea64fc0e0e9827a2
+Ciphertext SHA-256: 9cdf2de12f371ac7efdb2e78713f229ada508286c1717758184238a59cd64326
+Book 16 source SHA-256: 957909f4982f7ff723dfaaf456678f0a131b844a5c2a8130d8ec75a8740397db
+Plaintext SHA-256: d4e458fa8598290a73eeb59827788de7ea3f14237c5cee152d5cb48fa28ad229
+Matched token count: 33133
+Line control: every stream reflowed to the same Voynich prose-line length template
+Plaintext relation: published Pliny Natural History comparator; ciphertext source is Book 16 of the same work, not token-aligned
+
+CORPORA
+--------------------------------------------------------------------------------
+VOYNICH              tokens= 33133 types=  7451 glyphs= 21
+NAIBBE_MEANINGFUL    tokens= 33133 types=  5484 glyphs= 20
+LATIN_PLAIN          tokens= 33133 types= 11572 glyphs= 23
+SCHEMA_COPY_NULL     tokens= 33133 types=  6961 glyphs= 21
+
+EXACT-TOKEN ORDER (H(next word|word); positive gap means order helps)
+--------------------------------------------------------------------------------
+corpus                  real H   shuffle H       gap  shuffle SD
+VOYNICH                  4.226       4.231    +0.004       0.007
+NAIBBE_MEANINGFUL        4.371       4.446    +0.075       0.006
+LATIN_PLAIN              2.895       3.082    +0.188       0.008
+SCHEMA_COPY_NULL         4.129       4.132    +0.003       0.007
+
+GLYPH POSITION LOCK (5 relative-position bins; lower = more locked)
+--------------------------------------------------------------------------------
+corpus                  H_position    glyphs
+VOYNICH                      1.682        21
+NAIBBE_MEANINGFUL            1.574        20
+LATIN_PLAIN                  2.182        23
+SCHEMA_COPY_NULL             1.703        21
+
+BPE UNIT H2 (same greedy merge procedure)
+--------------------------------------------------------------------------------
+corpus                     m=0      m=10      m=25      m=50     m=100     climb
+VOYNICH                  2.125     2.708     3.209     3.542     3.867    +1.742
+NAIBBE_MEANINGFUL        2.081     2.643     3.092     3.418     3.695    +1.613
+LATIN_PLAIN              3.413     3.672     3.949     4.147     4.331    +0.918
+SCHEMA_COPY_NULL         2.211     2.813     3.307     3.643     3.955    +1.744
+
+HAND-SPECIFIED EVA SLOT DECOMPOSITION
+--------------------------------------------------------------------------------
+corpus                coverage       P/C/S types    I(P;S)    I(P;C)    I(C;S)
+VOYNICH                  0.953        15/3132/18     0.202     1.336     1.614
+NAIBBE_MEANINGFUL        0.925        14/1536/18     0.246     1.361     1.571
+LATIN_PLAIN              0.112         5/11476/9     0.002     0.494     0.200
+SCHEMA_COPY_NULL         0.937        15/2974/18     0.144     1.405     1.674
+
+LEXICAL TAIL / BURSTINESS
+--------------------------------------------------------------------------------
+corpus                  hapax/type     burst B    eligible
+VOYNICH                      0.702       0.138         463
+NAIBBE_MEANINGFUL            0.415      -0.058         412
+LATIN_PLAIN                  0.704       0.195         403
+SCHEMA_COPY_NULL             0.541      -0.010         459
+
+BIJECTIVE CHARACTER-SUBSTITUTION ATTACK (repository R1 hypothesis class)
+--------------------------------------------------------------------------------
+Latin LM ceiling=-2.218; random-key floor=-3.600
+corpus                         train    held-out    gap closed
+POS_CTRL_SIMPLE_SUB           -1.947      -2.488        80.4%
+VOYNICH                       -2.652      -2.660        68.0%
+NAIBBE_MEANINGFUL             -2.875      -2.872        52.7%
+SCHEMA_COPY_NULL              -2.707      -2.714        64.1%
+
+RESULT SUMMARY
+--------------------------------------------------------------------------------
+Known-meaningful Naibbe is more position-locked than Voynich (1.574 vs 1.682) and has a similar BPE climb (+1.613 vs +1.742).
+Its EVA slot coverage and MI profile are also close to Voynich: coverage 0.925 vs 0.953; I(prefix;suffix) 0.246 vs 0.202.
+Some exact-token order survives encryption: Naibbe's shuffle gap is +0.075 bits, 40% of the plaintext comparator's +0.188, while Voynich is +0.004.
+Naibbe does not match Voynich's lexical tail or clumping: hapax/type 0.415 vs 0.702; burst B -0.058 vs +0.138.
+Consequently, position lock, BPE climb, EVA slot structure, and the bijective R1 attack cannot exclude meaningful verbose ciphertext. The order and lexical differences remain usable constraints on a Voynich-specific cipher model.
+
+INTERPRETATION LIMITS
+--------------------------------------------------------------------------------
+1. Naibbe is a constructed positive control, not evidence that MS 408 uses this cipher.
+2. The exact-token entropy estimator is the repository's in-sample diagnostic; sparse vocabularies bias it. Read only its shuffle gap.
+3. The slot inventory is hand-selected for EVA. Its Latin row is a mechanical negative control, not a Latin morphology analysis.
+4. The schema/copy null is fitted from Voynich word parts and is not an independent content-free process.
+5. The R1 attack can recover bijective character substitutions only. Failure on Naibbe is expected and measures the attack's scope.
+6. A diagnostic that assigns Naibbe and Voynich the same verdict cannot by itself distinguish meaningful verbose ciphertext from asemic text.

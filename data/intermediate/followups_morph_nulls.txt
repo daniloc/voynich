@@ -1,0 +1,141 @@
+MORPHOTACTIC PROCEDURAL-NULL BENCHMARK
+seed=20260722 independent replicates=60 alpha=0.5
+prose lines=4117 quires=16 source tokens=33700 eligible tokens=33133 uncertain breaks=71 one-char breaks=496
+primary adjacent transitions=28642; direction transitions on original lines >=7 slots=24335
+Primary: held-out log2 P(y|predecessor,target-position) - log2 P(y|target-position).
+Direction: held-out forward minus deep-interior-reversed bigram log probability.
+
+Observed Voynich block inference:
+repr               gain   G median  G +blocks   G sign-p   direction   D median  D +blocks   D sign-p
+prefix          +0.0201    +0.0231      0.812     0.0003     +0.0185    +0.0121      0.688     0.0349
+suffix          +0.0034    +0.0180      0.812     0.0093     +0.0114    +0.0094      0.688     0.0083
+affix_pair      -0.4584    -0.4563      0.000     1.0000     +0.1440    +0.1014      1.000     0.0000
+shape           -0.0772    -0.0960      0.000     1.0000     +0.0840    +0.0789      0.938     0.0000
+
+============================================================================================================
+LAYOUT EXCHANGE (section x Currier x hand x quire x position)
+============================================================================================================
+repr          real gain           null gain 95%       p   real dir            null dir 95%       p
+prefix          +0.0201 [-0.0183,-0.0106]  0.0164    +0.0185 [-0.0037,+0.0050]  0.0164
+suffix          +0.0034 [-0.0292,-0.0208]  0.0164    +0.0114 [-0.0042,+0.0058]  0.0164
+affix_pair      -0.4584 [-0.6362,-0.6156]  0.0164    +0.1440 [-0.0134,+0.0144]  0.0164
+shape           -0.0772 [-0.1470,-0.1349]  0.0164    +0.0840 [-0.0089,+0.0081]  0.0164
+
+Cross-quire stability (fraction of 16 held-out quires > 0):
+repr           real G          null G 95%   real D          null D 95%     match?
+prefix          0.812 [0.062,0.283]    0.688 [0.250,0.783]         NO
+suffix          0.812 [0.062,0.345]    0.688 [0.280,0.750]         NO
+affix_pair      0.000 [0.000,0.000]    1.000 [0.250,0.783]         NO
+shape           0.000 [0.000,0.000]    0.938 [0.250,0.750]         NO
+Family verdict: does NOT reproduce both magnitude and stability across all representations.
+
+Diagnostic transition residuals: LAYOUT EXCHANGE (section x Currier x hand x quire x position)
+Largest real-minus-null probability differences among the 30 most frequent real transitions.
+  prefix:
+    sh -> qok                                       real= 1.892% null= 0.968% 95%=[ 0.866, 1.081] diff=+0.924pp
+    sh -> ch                                        real= 1.054% null= 1.758% 95%=[ 1.630, 1.889] diff=-0.704pp
+    none -> qok                                     real= 1.417% null= 2.032% 95%=[ 1.878, 2.135] diff=-0.614pp
+    qok -> none                                     real= 1.480% null= 2.005% 95%=[ 1.895, 2.145] diff=-0.525pp
+  suffix:
+    none -> none                                    real=11.218% null=10.634% 95%=[10.330,10.873] diff=+0.584pp
+    none -> edy                                     real= 1.306% null= 1.711% 95%=[ 1.602, 1.816] diff=-0.405pp
+    edy -> edy                                      real= 1.019% null= 0.617% 95%=[ 0.525, 0.697] diff=+0.402pp
+    none -> iin                                     real= 2.577% null= 2.227% 95%=[ 2.117, 2.366] diff=+0.350pp
+  affix_pair:
+    (none,none) -> (none,none)                      real= 0.555% null= 0.242% 95%=[ 0.192, 0.290] diff=+0.313pp
+    (o,none) -> (none,iin)                          real= 0.328% null= 0.072% 95%=[ 0.044, 0.103] diff=+0.256pp
+    (sh,y) -> (qok,none)                            real= 0.241% null= 0.099% 95%=[ 0.077, 0.133] diff=+0.142pp
+    (qok,none) -> (ch,y)                            real= 0.297% null= 0.157% 95%=[ 0.122, 0.194] diff=+0.140pp
+  shape:
+    (True,True,6,True) -> (True,True,6,True)        real= 1.421% null= 1.160% 95%=[ 1.052, 1.264] diff=+0.261pp
+    (True,False,5,True) -> (True,True,5,False)      real= 0.723% null= 0.471% 95%=[ 0.382, 0.545] diff=+0.252pp
+    (True,True,7,True) -> (True,True,7,True)        real= 0.925% null= 0.700% 95%=[ 0.627, 0.775] diff=+0.225pp
+    (True,False,2,False) -> (True,True,5,False)     real= 0.555% null= 0.345% 95%=[ 0.298, 0.410] diff=+0.210pp
+
+============================================================================================================
+SCHEMA/COPY (residual.py matched generator)
+============================================================================================================
+repr          real gain           null gain 95%       p   real dir            null dir 95%       p
+prefix          +0.0201 [-0.0227,-0.0185]  0.0164    +0.0185 [-0.0049,+0.0040]  0.0164
+suffix          +0.0034 [-0.0322,-0.0267]  0.0164    +0.0114 [-0.0047,+0.0033]  0.0164
+affix_pair      -0.4584 [-0.6586,-0.6238]  0.0164    +0.1440 [-0.0150,+0.0158]  0.0164
+shape           -0.0772 [-0.1639,-0.1526]  0.0164    +0.0840 [-0.0088,+0.0107]  0.0164
+
+Cross-quire stability (fraction of 16 held-out quires > 0):
+repr           real G          null G 95%   real D          null D 95%     match?
+prefix          0.812 [0.000,0.062]    0.688 [0.217,0.783]         NO
+suffix          0.812 [0.000,0.062]    0.688 [0.312,0.720]         NO
+affix_pair      0.000 [0.000,0.000]    1.000 [0.280,0.845]         NO
+shape           0.000 [0.000,0.000]    0.938 [0.312,0.720]         NO
+Family verdict: does NOT reproduce both magnitude and stability across all representations.
+
+Diagnostic transition residuals: SCHEMA/COPY (residual.py matched generator)
+Largest real-minus-null probability differences among the 30 most frequent real transitions.
+  prefix:
+    sh -> qok                                       real= 1.892% null= 0.799% 95%=[ 0.717, 0.922] diff=+1.093pp
+    d -> none                                       real= 1.225% null= 2.158% 95%=[ 1.975, 2.279] diff=-0.932pp
+    none -> d                                       real= 1.442% null= 2.178% 95%=[ 2.038, 2.328] diff=-0.736pp
+    qok -> ch                                       real= 2.098% null= 1.445% 95%=[ 1.327, 1.563] diff=+0.653pp
+  suffix:
+    none -> edy                                     real= 1.306% null= 1.971% 95%=[ 1.799, 2.125] diff=-0.665pp
+    dy -> dy                                        real= 1.449% null= 0.797% 95%=[ 0.688, 0.919] diff=+0.652pp
+    edy -> edy                                      real= 1.019% null= 0.377% 95%=[ 0.311, 0.458] diff=+0.642pp
+    edy -> dy                                       real= 0.988% null= 0.531% 95%=[ 0.470, 0.616] diff=+0.457pp
+  affix_pair:
+    (o,none) -> (none,iin)                          real= 0.328% null= 0.050% 95%=[ 0.028, 0.077] diff=+0.278pp
+    (qok,none) -> (ch,y)                            real= 0.297% null= 0.108% 95%=[ 0.078, 0.143] diff=+0.189pp
+    (ch,none) -> (ch,none)                          real= 0.402% null= 0.219% 95%=[ 0.180, 0.271] diff=+0.183pp
+    (sh,y) -> (qok,none)                            real= 0.241% null= 0.059% 95%=[ 0.031, 0.087] diff=+0.182pp
+  shape:
+    (True,True,6,True) -> (True,True,6,True)        real= 1.421% null= 0.962% 95%=[ 0.854, 1.072] diff=+0.459pp
+    (True,True,7,True) -> (True,True,6,True)        real= 1.117% null= 0.702% 95%=[ 0.595, 0.805] diff=+0.415pp
+    (True,True,5,False) -> (True,True,6,True)       real= 1.302% null= 0.915% 95%=[ 0.817, 1.017] diff=+0.388pp
+    (True,True,7,True) -> (True,True,7,True)        real= 0.925% null= 0.548% 95%=[ 0.459, 0.634] diff=+0.378pp
+
+============================================================================================================
+LOCAL SELF-CITATION (null_and_morph.py stress control)
+============================================================================================================
+repr          real gain           null gain 95%       p   real dir            null dir 95%       p
+prefix          +0.0201 [+0.0002,+0.0871]  0.6230    +0.0185 [-0.0028,+0.0066]  0.0164
+suffix          +0.0034 [-0.0013,+0.0417]  0.5082    +0.0114 [-0.0023,+0.0036]  0.0164
+affix_pair      -0.4584 [-0.0211,+0.0723]  1.0000    +0.1440 [-0.0041,+0.0084]  0.0164
+shape           -0.0772 [+0.0021,+0.0810]  1.0000    +0.0840 [-0.0032,+0.0034]  0.0164
+
+Cross-quire stability (fraction of 16 held-out quires > 0):
+repr           real G          null G 95%   real D          null D 95%     match?
+prefix          0.812 [0.438,1.000]    0.688 [0.312,0.688]         NO
+suffix          0.812 [0.375,0.938]    0.688 [0.250,0.720]         NO
+affix_pair      0.000 [0.155,0.845]    1.000 [0.250,0.753]         NO
+shape           0.000 [0.684,1.000]    0.938 [0.280,0.750]         NO
+Family verdict: does NOT reproduce both magnitude and stability across all representations.
+
+Diagnostic transition residuals: LOCAL SELF-CITATION (null_and_morph.py stress control)
+Largest real-minus-null probability differences among the 30 most frequent real transitions.
+  prefix:
+    none -> none                                    real= 4.961% null=74.080% 95%=[70.530,78.970] diff=-69.119pp
+    none -> ch                                      real= 3.816% null= 0.181% 95%=[ 0.045, 0.400] diff=+3.635pp
+    ch -> none                                      real= 3.757% null= 0.183% 95%=[ 0.049, 0.381] diff=+3.574pp
+    ch -> ch                                        real= 3.177% null= 0.016% 95%=[ 0.000, 0.087] diff=+3.162pp
+  suffix:
+    none -> none                                    real=11.218% null=89.937% 95%=[86.066,93.016] diff=-78.719pp
+    none -> dy                                      real= 2.800% null= 0.130% 95%=[ 0.000, 0.349] diff=+2.670pp
+    dy -> none                                      real= 2.699% null= 0.126% 95%=[ 0.000, 0.337] diff=+2.573pp
+    none -> iin                                     real= 2.577% null= 0.014% 95%=[ 0.000, 0.089] diff=+2.563pp
+  affix_pair:
+    (none,none) -> (none,none)                      real= 0.555% null=66.417% 95%=[61.946,69.982] diff=-65.862pp
+    (d,none) -> (none,none)                         real= 0.220% null= 3.236% 95%=[ 2.178, 4.093] diff=-3.016pp
+    (none,none) -> (o,none)                         real= 0.262% null= 2.748% 95%=[ 1.796, 3.532] diff=-2.486pp
+    (o,none) -> (none,none)                         real= 0.297% null= 2.748% 95%=[ 1.782, 3.495] diff=-2.451pp
+  shape:
+    (True,True,6,True) -> (True,True,6,True)        real= 1.421% null= 0.008% 95%=[ 0.000, 0.082] diff=+1.413pp
+    (True,True,5,False) -> (True,True,6,True)       real= 1.302% null= 0.000% 95%=[ 0.000, 0.000] diff=+1.302pp
+    (True,True,7,True) -> (True,True,6,True)        real= 1.117% null= 0.000% 95%=[ 0.000, 0.000] diff=+1.117pp
+    (True,True,6,True) -> (True,True,5,False)       real= 1.044% null= 0.000% 95%=[ 0.000, 0.000] diff=+1.044pp
+
+============================================================================================================
+INTERPRETATION BOUNDARY
+============================================================================================================
+A failed null says the observed directional morphotactics require more than that specific content-free process. It does not by itself imply syntax, semantics, or plaintext.
+Schema tables were estimated once on the full Voynich stream. The copy hyperparameters are inherited hard-coded values from residual.py, not a demonstrated fit. Held-out scoring excludes each generated quire, but schema estimation is not nested.
+Empirical comparison p-values are raw. With 60 replicates their minimum is .0164, so they do not by themselves resolve a four-representation Bonferroni threshold; use the effect intervals and block tests jointly.
+The local self-citation control is intentionally severe and single-lineage: it preserves length from one seed and has .45 total exact copying. A failure is informative; a match would not validate that model as a realistic manuscript generator.

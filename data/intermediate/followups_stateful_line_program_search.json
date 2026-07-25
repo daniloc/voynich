@@ -1,0 +1,2310 @@
+{
+  "method": "nested complete-quire search over deterministic word coordinates, line-reset modular programs, frozen languages, and global monoalphabetic output keys",
+  "scope": {
+    "modulus": 23,
+    "alphabet": "abcdefghilmnopqrstuvxyz",
+    "features": [
+      "length",
+      "first",
+      "last",
+      "glyph_sum",
+      "weighted_sum",
+      "polynomial",
+      "core_polynomial",
+      "affix_polynomial"
+    ],
+    "programs": [
+      {
+        "name": "direct",
+        "kind": "affine",
+        "a": 0,
+        "b": 0,
+        "c": 0,
+        "skip_first": false,
+        "complexity": 1
+      },
+      {
+        "name": "position_plus",
+        "kind": "affine",
+        "a": 0,
+        "b": 0,
+        "c": 1,
+        "skip_first": false,
+        "complexity": 2
+      },
+      {
+        "name": "position_minus",
+        "kind": "affine",
+        "a": 0,
+        "b": 0,
+        "c": -1,
+        "skip_first": false,
+        "complexity": 2
+      },
+      {
+        "name": "lag_minus",
+        "kind": "affine",
+        "a": -1,
+        "b": 0,
+        "c": 0,
+        "skip_first": true,
+        "complexity": 2
+      },
+      {
+        "name": "lag_plus",
+        "kind": "affine",
+        "a": 1,
+        "b": 0,
+        "c": 0,
+        "skip_first": true,
+        "complexity": 2
+      },
+      {
+        "name": "seed_minus",
+        "kind": "affine",
+        "a": 0,
+        "b": -1,
+        "c": 0,
+        "skip_first": true,
+        "complexity": 2
+      },
+      {
+        "name": "seed_plus",
+        "kind": "affine",
+        "a": 0,
+        "b": 1,
+        "c": 0,
+        "skip_first": true,
+        "complexity": 2
+      },
+      {
+        "name": "lag_minus_seed_plus",
+        "kind": "affine",
+        "a": -1,
+        "b": 1,
+        "c": 0,
+        "skip_first": true,
+        "complexity": 3
+      },
+      {
+        "name": "lag_minus_seed_minus",
+        "kind": "affine",
+        "a": -1,
+        "b": -1,
+        "c": 0,
+        "skip_first": true,
+        "complexity": 3
+      },
+      {
+        "name": "lag_plus_seed_minus",
+        "kind": "affine",
+        "a": 1,
+        "b": -1,
+        "c": 0,
+        "skip_first": true,
+        "complexity": 3
+      },
+      {
+        "name": "lag_minus_position_plus",
+        "kind": "affine",
+        "a": -1,
+        "b": 0,
+        "c": 1,
+        "skip_first": true,
+        "complexity": 3
+      },
+      {
+        "name": "lag_minus_position_minus",
+        "kind": "affine",
+        "a": -1,
+        "b": 0,
+        "c": -1,
+        "skip_first": true,
+        "complexity": 3
+      },
+      {
+        "name": "running_plus",
+        "kind": "running_plus",
+        "a": 0,
+        "b": 0,
+        "c": 0,
+        "skip_first": false,
+        "complexity": 3
+      },
+      {
+        "name": "running_minus",
+        "kind": "running_minus",
+        "a": 0,
+        "b": 0,
+        "c": 0,
+        "skip_first": false,
+        "complexity": 3
+      },
+      {
+        "name": "seeded_running_plus",
+        "kind": "seeded_running_plus",
+        "a": 0,
+        "b": 0,
+        "c": 0,
+        "skip_first": true,
+        "complexity": 4
+      }
+    ],
+    "languages": [
+      "latin",
+      "english"
+    ],
+    "candidate_count": 240,
+    "shortlist": 15,
+    "maximum_key_swaps": 64,
+    "nulls": 8,
+    "null_search_repeated_in_full": true
+  },
+  "corpus": {
+    "lines": 3518,
+    "words": 30323,
+    "blocks": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "M",
+      "N",
+      "O",
+      "Q",
+      "S",
+      "T"
+    ]
+  },
+  "synthetic_controls": [
+    {
+      "summary": {
+        "mean_test_final": -10.811964866968845,
+        "mean_test_residual": 2.42165079001452,
+        "mean_gap_to_language_ceiling": 0.4458208726915651,
+        "mean_plaintext_accuracy": 1.0,
+        "selection_consistency": 1.0,
+        "selection_counts": {
+          "synthetic|lag_minus|latin": 4
+        },
+        "true_program": "lag_minus",
+        "passed": true
+      },
+      "folds": [
+        {
+          "fold": 0,
+          "fit_blocks": [
+            "C",
+            "D",
+            "G",
+            "H",
+            "M",
+            "N",
+            "S",
+            "T"
+          ],
+          "validation_blocks": [
+            "B",
+            "F",
+            "J",
+            "Q"
+          ],
+          "test_blocks": [
+            "A",
+            "E",
+            "I",
+            "O"
+          ],
+          "feature": "synthetic",
+          "program": "lag_minus",
+          "language": "latin",
+          "program_complexity": 2,
+          "initial_validation": -12.902111096593305,
+          "validation_score": -10.27647612796855,
+          "validation_penalized": -10.2814874050942,
+          "test_initial": -13.20134327266499,
+          "test_final": -10.532041345986348,
+          "test_residual": 2.669301926678642,
+          "gap_to_language_ceiling": 0.7257443936740611,
+          "swaps": 9,
+          "plaintext_accuracy": 1.0,
+          "known_plaintext": 3055,
+          "sample": "elesin patria mquamnes everitat eanimad version isnimisve hementesi nacerbis simosho stisfui ssevide amur sedeaqua eexaudio patresc onscr iptidis simul arenon possumi aciu ntureni mvocesqu aeperveniu ntadauris measeorum quive reri vide nturutha beamsat ispraes idiiadeaq uaev osstatu eritis hodiern odietran sigun daom niae tpro visa etpar atae tcon stit utas"
+        },
+        {
+          "fold": 1,
+          "fit_blocks": [
+            "A",
+            "D",
+            "E",
+            "H",
+            "I",
+            "N",
+            "O",
+            "T"
+          ],
+          "validation_blocks": [
+            "C",
+            "G",
+            "M",
+            "S"
+          ],
+          "test_blocks": [
+            "B",
+            "F",
+            "J",
+            "Q"
+          ],
+          "feature": "synthetic",
+          "program": "lag_minus",
+          "language": "latin",
+          "program_complexity": 2,
+          "initial_validation": -12.579739391891843,
+          "validation_score": -11.670426003429403,
+          "validation_penalized": -11.672106032897961,
+          "test_initial": -11.385722339752522,
+          "test_final": -10.27647612796855,
+          "test_residual": 1.1092462117839723,
+          "gap_to_language_ceiling": 0.9813096116918594,
+          "swaps": 4,
+          "plaintext_accuracy": 1.0,
+          "known_plaintext": 2647,
+          "sample": "avirtut eadcomm unemsal utemdign itate mquecon sent iuntq uidegohic equitesro manosco mmemor emquiv obis itas umma mordini sconsilii queconced untutvobi scumdea morerei public aecer tent quose xmultoru mannorum disse nsione huiusor dinisa dsocie tatemco ncord iamquerev ocat oshodiern usdie svobi scumatq uehaec causac oniu ngitquam siconiun ctionemi nconsula"
+        },
+        {
+          "fold": 2,
+          "fit_blocks": [
+            "A",
+            "B",
+            "E",
+            "F",
+            "I",
+            "J",
+            "O",
+            "Q"
+          ],
+          "validation_blocks": [
+            "D",
+            "H",
+            "N",
+            "T"
+          ],
+          "test_blocks": [
+            "C",
+            "G",
+            "M",
+            "S"
+          ],
+          "feature": "synthetic",
+          "program": "lag_minus",
+          "language": "latin",
+          "program_complexity": 2,
+          "initial_validation": -13.861935338412476,
+          "validation_score": -10.768915990491076,
+          "validation_penalized": -10.77003541141263,
+          "test_initial": -14.075057222406034,
+          "test_final": -11.670426003429403,
+          "test_residual": 2.404631218976631,
+          "gap_to_language_ceiling": -0.4126402637689939,
+          "swaps": 12,
+          "plaintext_accuracy": 1.0,
+          "known_plaintext": 8661,
+          "sample": "uorumade stmultit udoeti amtenu issimor umqu ises tenim cuino nhae ctemp laas pect usurb ispo sses sioli berta tislu xden iqueh aecipsa ethoc commu nepatr iaesol umcu msitca rumtu mver odulc eatquei ucund umop erae preti umestp atresc onscri ptili bertin orum hominum studia cogno scer equisuav irtut efort unam huiu scivi tatisc onse cutiv ereha ncsua mess ep"
+        },
+        {
+          "fold": 3,
+          "fit_blocks": [
+            "B",
+            "C",
+            "F",
+            "G",
+            "J",
+            "M",
+            "Q",
+            "S"
+          ],
+          "validation_blocks": [
+            "A",
+            "E",
+            "I",
+            "O"
+          ],
+          "test_blocks": [
+            "D",
+            "H",
+            "N",
+            "T"
+          ],
+          "feature": "synthetic",
+          "program": "lag_minus",
+          "language": "latin",
+          "program_complexity": 2,
+          "initial_validation": -14.160876029985806,
+          "validation_score": -10.532041345986348,
+          "validation_penalized": -10.536446033053656,
+          "test_initial": -14.27233979310991,
+          "test_final": -10.768915990491076,
+          "test_residual": 3.503423802618835,
+          "gap_to_language_ceiling": 0.4888697491693339,
+          "swaps": 13,
+          "plaintext_accuracy": 1.0,
+          "known_plaintext": 12442,
+          "sample": "uetempta tumsednul lisunt inventi tamautf ortunam iseriaut volu ntat eperd itiq uinonil lumip sumsell aeatque operis etquaes tusc otidia nilo cumqu inoncubile aclectulu msuumquid eniquenoncu rsumhunco tiosumvit acsua esalvum esseveli ntmult overo maxim aparse orumqu iintab ernis sunt immovero idenimpotiu sestdic endumge nush ocuniv ersumam antis simume stoti"
+        }
+      ]
+    },
+    {
+      "summary": {
+        "mean_test_final": -10.811964866968845,
+        "mean_test_residual": 2.42165079001452,
+        "mean_gap_to_language_ceiling": 0.4458208726915651,
+        "mean_plaintext_accuracy": 1.0,
+        "selection_consistency": 1.0,
+        "selection_counts": {
+          "synthetic|seed_minus|latin": 4
+        },
+        "true_program": "seed_minus",
+        "passed": true
+      },
+      "folds": [
+        {
+          "fold": 0,
+          "fit_blocks": [
+            "C",
+            "D",
+            "G",
+            "H",
+            "M",
+            "N",
+            "S",
+            "T"
+          ],
+          "validation_blocks": [
+            "B",
+            "F",
+            "J",
+            "Q"
+          ],
+          "test_blocks": [
+            "A",
+            "E",
+            "I",
+            "O"
+          ],
+          "feature": "synthetic",
+          "program": "seed_minus",
+          "language": "latin",
+          "program_complexity": 2,
+          "initial_validation": -12.902111096593305,
+          "validation_score": -10.27647612796855,
+          "validation_penalized": -10.2814874050942,
+          "test_initial": -13.20134327266499,
+          "test_final": -10.532041345986348,
+          "test_residual": 2.669301926678642,
+          "gap_to_language_ceiling": 0.7257443936740611,
+          "swaps": 9,
+          "plaintext_accuracy": 1.0,
+          "known_plaintext": 3055,
+          "sample": "elesin patria mquamnes everitat eanimad version isnimisve hementesi nacerbis simosho stisfui ssevide amur sedeaqua eexaudio patresc onscr iptidis simul arenon possumi aciu ntureni mvocesqu aeperveniu ntadauris measeorum quive reri vide nturutha beamsat ispraes idiiadeaq uaev osstatu eritis hodiern odietran sigun daom niae tpro visa etpar atae tcon stit utas"
+        },
+        {
+          "fold": 1,
+          "fit_blocks": [
+            "A",
+            "D",
+            "E",
+            "H",
+            "I",
+            "N",
+            "O",
+            "T"
+          ],
+          "validation_blocks": [
+            "C",
+            "G",
+            "M",
+            "S"
+          ],
+          "test_blocks": [
+            "B",
+            "F",
+            "J",
+            "Q"
+          ],
+          "feature": "synthetic",
+          "program": "seed_minus",
+          "language": "latin",
+          "program_complexity": 2,
+          "initial_validation": -12.579739391891843,
+          "validation_score": -11.670426003429403,
+          "validation_penalized": -11.672106032897961,
+          "test_initial": -11.385722339752522,
+          "test_final": -10.27647612796855,
+          "test_residual": 1.1092462117839723,
+          "gap_to_language_ceiling": 0.9813096116918594,
+          "swaps": 4,
+          "plaintext_accuracy": 1.0,
+          "known_plaintext": 2647,
+          "sample": "avirtut eadcomm unemsal utemdign itate mquecon sent iuntq uidegohic equitesro manosco mmemor emquiv obis itas umma mordini sconsilii queconced untutvobi scumdea morerei public aecer tent quose xmultoru mannorum disse nsione huiusor dinisa dsocie tatemco ncord iamquerev ocat oshodiern usdie svobi scumatq uehaec causac oniu ngitquam siconiun ctionemi nconsula"
+        },
+        {
+          "fold": 2,
+          "fit_blocks": [
+            "A",
+            "B",
+            "E",
+            "F",
+            "I",
+            "J",
+            "O",
+            "Q"
+          ],
+          "validation_blocks": [
+            "D",
+            "H",
+            "N",
+            "T"
+          ],
+          "test_blocks": [
+            "C",
+            "G",
+            "M",
+            "S"
+          ],
+          "feature": "synthetic",
+          "program": "seed_minus",
+          "language": "latin",
+          "program_complexity": 2,
+          "initial_validation": -13.861935338412476,
+          "validation_score": -10.768915990491076,
+          "validation_penalized": -10.77003541141263,
+          "test_initial": -14.075057222406034,
+          "test_final": -11.670426003429403,
+          "test_residual": 2.404631218976631,
+          "gap_to_language_ceiling": -0.4126402637689939,
+          "swaps": 12,
+          "plaintext_accuracy": 1.0,
+          "known_plaintext": 8661,
+          "sample": "uorumade stmultit udoeti amtenu issimor umqu ises tenim cuino nhae ctemp laas pect usurb ispo sses sioli berta tislu xden iqueh aecipsa ethoc commu nepatr iaesol umcu msitca rumtu mver odulc eatquei ucund umop erae preti umestp atresc onscri ptili bertin orum hominum studia cogno scer equisuav irtut efort unam huiu scivi tatisc onse cutiv ereha ncsua mess ep"
+        },
+        {
+          "fold": 3,
+          "fit_blocks": [
+            "B",
+            "C",
+            "F",
+            "G",
+            "J",
+            "M",
+            "Q",
+            "S"
+          ],
+          "validation_blocks": [
+            "A",
+            "E",
+            "I",
+            "O"
+          ],
+          "test_blocks": [
+            "D",
+            "H",
+            "N",
+            "T"
+          ],
+          "feature": "synthetic",
+          "program": "seed_minus",
+          "language": "latin",
+          "program_complexity": 2,
+          "initial_validation": -14.160876029985806,
+          "validation_score": -10.532041345986348,
+          "validation_penalized": -10.536446033053656,
+          "test_initial": -14.27233979310991,
+          "test_final": -10.768915990491076,
+          "test_residual": 3.503423802618835,
+          "gap_to_language_ceiling": 0.4888697491693339,
+          "swaps": 13,
+          "plaintext_accuracy": 1.0,
+          "known_plaintext": 12442,
+          "sample": "uetempta tumsednul lisunt inventi tamautf ortunam iseriaut volu ntat eperd itiq uinonil lumip sumsell aeatque operis etquaes tusc otidia nilo cumqu inoncubile aclectulu msuumquid eniquenoncu rsumhunco tiosumvit acsua esalvum esseveli ntmult overo maxim aparse orumqu iintab ernis sunt immovero idenimpotiu sestdic endumge nush ocuniv ersumam antis simume stoti"
+        }
+      ]
+    },
+    {
+      "summary": {
+        "mean_test_final": -10.7808303729529,
+        "mean_test_residual": 2.6358287743336133,
+        "mean_gap_to_language_ceiling": 0.47695536670750904,
+        "mean_plaintext_accuracy": 1.0,
+        "selection_consistency": 0.75,
+        "selection_counts": {
+          "synthetic|running_plus|latin": 3,
+          "synthetic|seeded_running_plus|latin": 1
+        },
+        "true_program": "running_plus",
+        "passed": true
+      },
+      "folds": [
+        {
+          "fold": 0,
+          "fit_blocks": [
+            "C",
+            "D",
+            "G",
+            "H",
+            "M",
+            "N",
+            "S",
+            "T"
+          ],
+          "validation_blocks": [
+            "B",
+            "F",
+            "J",
+            "Q"
+          ],
+          "test_blocks": [
+            "A",
+            "E",
+            "I",
+            "O"
+          ],
+          "feature": "synthetic",
+          "program": "running_plus",
+          "language": "latin",
+          "program_complexity": 3,
+          "initial_validation": -13.72863288922959,
+          "validation_score": -10.27267585936318,
+          "validation_penalized": -10.278772683765588,
+          "test_initial": -13.666718473203472,
+          "test_final": -10.620881819328662,
+          "test_residual": 3.04583665387481,
+          "gap_to_language_ceiling": 0.636903920331747,
+          "swaps": 10,
+          "plaintext_accuracy": 1.0,
+          "known_plaintext": 3511,
+          "sample": "elesinp atriamq uamneseve ritateani madversi onisnimi svehemente sinacerbis simoshost isfuisse videamur sedeaqua eexau diopatres conscript idissimu lareno npossumi aciunt urenimv ocesquae perve niuntada urismease orumquivere rividentur uthabeamsa tispra esidi iadea quaevosst atueriti shodiern odietransi gunda omniaetp rovisae tparatae tconstitu tasunt patre"
+        },
+        {
+          "fold": 1,
+          "fit_blocks": [
+            "A",
+            "D",
+            "E",
+            "H",
+            "I",
+            "N",
+            "O",
+            "T"
+          ],
+          "validation_blocks": [
+            "C",
+            "G",
+            "M",
+            "S"
+          ],
+          "test_blocks": [
+            "B",
+            "F",
+            "J",
+            "Q"
+          ],
+          "feature": "synthetic",
+          "program": "running_plus",
+          "language": "latin",
+          "program_complexity": 3,
+          "initial_validation": -13.11357499848781,
+          "validation_score": -11.649323734706666,
+          "validation_penalized": -11.651414602709558,
+          "test_initial": -12.470074845187812,
+          "test_final": -10.27267585936318,
+          "test_residual": 2.1973989858246323,
+          "gap_to_language_ceiling": 0.9851098802972302,
+          "swaps": 5,
+          "plaintext_accuracy": 1.0,
+          "known_plaintext": 3045,
+          "sample": "caecerte ntquosex multorum annorumdi ssensi onehuius ordin isadso cietatemco ncordiamqu erevocat oshodie rnusdie svobi scuma tqueh aeccausa coniungitq uamsiconiu nctionemin consulat uconfirm atammeo perpet uamin republ icatenuer imusconfi rmovob isnullu mposthac malumci vileacd omesticu madull amreipubli caepa rtemesseve nturum parist udiodefe ndundae reipub"
+        },
+        {
+          "fold": 2,
+          "fit_blocks": [
+            "A",
+            "B",
+            "E",
+            "F",
+            "I",
+            "J",
+            "O",
+            "Q"
+          ],
+          "validation_blocks": [
+            "D",
+            "H",
+            "N",
+            "T"
+          ],
+          "test_blocks": [
+            "C",
+            "G",
+            "M",
+            "S"
+          ],
+          "feature": "synthetic",
+          "program": "seeded_running_plus",
+          "language": "latin",
+          "program_complexity": 4,
+          "initial_validation": -13.174826251616762,
+          "validation_score": -10.531275375495884,
+          "validation_penalized": -10.533514217338995,
+          "test_initial": -13.68987622634557,
+          "test_final": -11.692169656912236,
+          "test_residual": 1.9977065694333334,
+          "gap_to_language_ceiling": -0.4343839172518269,
+          "swaps": 7,
+          "plaintext_accuracy": 1.0,
+          "known_plaintext": 8661,
+          "sample": "scivitat sconsecu ivereh ncsuam ssepatr amiu ican quamq idamh cnat etsum onat loco onpat iams amse urbem ostiu essei dica erunt edquide ohosc homin sordin squeco memo oquosp ivata fort naequ scommun sresp blic quos eniqu libert seaqua dulcis imaes adsalu empa riaedef ndenda excit vits rvusestn moqui odoto erab lico dicio esitse vitu isqui onaud ciamc vium er"
+        },
+        {
+          "fold": 3,
+          "fit_blocks": [
+            "B",
+            "C",
+            "F",
+            "G",
+            "J",
+            "M",
+            "Q",
+            "S"
+          ],
+          "validation_blocks": [
+            "A",
+            "E",
+            "I",
+            "O"
+          ],
+          "test_blocks": [
+            "D",
+            "H",
+            "N",
+            "T"
+          ],
+          "feature": "synthetic",
+          "program": "running_plus",
+          "language": "latin",
+          "program_complexity": 3,
+          "initial_validation": -13.735954381198093,
+          "validation_score": -10.620881819328662,
+          "validation_penalized": -10.626250434817795,
+          "test_initial": -13.839967044409201,
+          "test_final": -10.537594156207524,
+          "test_residual": 3.3023728882016776,
+          "gap_to_language_ceiling": 0.7201915834528858,
+          "swaps": 17,
+          "plaintext_accuracy": 1.0,
+          "known_plaintext": 13912,
+          "sample": "nisminuis oletquidta ndeminc ensisfut urumfuit quaecumi tasintpat resco nscri ptivob ispop uliroman ipraes idianond esuntvos nepopul oromanod eesse videami nipro videte habetiscons ulemexplur imispericu lisetinsidii satqueexme diamorteno nadvit amsuamse dadsalute mvestra mreser vatumo mnesord inesadc onserva ndamre mpubl icammente voluntatestu diovirtu tevoc"
+        }
+      ]
+    }
+  ],
+  "observed": {
+    "summary": {
+      "mean_test_final": -12.452498557611793,
+      "mean_test_residual": 1.2512531687418997,
+      "mean_gap_to_language_ceiling": -1.1947128179513844,
+      "mean_plaintext_accuracy": null,
+      "selection_consistency": 0.5,
+      "selection_counts": {
+        "last|direct|latin": 2,
+        "length|lag_minus|latin": 2
+      }
+    },
+    "folds": [
+      {
+        "fold": 0,
+        "fit_blocks": [
+          "C",
+          "D",
+          "G",
+          "H",
+          "M",
+          "N",
+          "S",
+          "T"
+        ],
+        "validation_blocks": [
+          "B",
+          "F",
+          "J",
+          "Q"
+        ],
+        "test_blocks": [
+          "A",
+          "E",
+          "I",
+          "O"
+        ],
+        "feature": "length",
+        "program": "lag_minus",
+        "language": "latin",
+        "program_complexity": 2,
+        "initial_validation": -13.732754928381457,
+        "validation_score": -12.413390500644336,
+        "validation_penalized": -12.418401777769986,
+        "test_initial": -13.836891782300036,
+        "test_final": -12.642616456599631,
+        "test_residual": 1.1942753257004046,
+        "gap_to_language_ceiling": -1.3848307169392218,
+        "swaps": 11,
+        "plaintext_accuracy": null,
+        "known_plaintext": 0,
+        "sample": "nnunii amsetn smunaner titinsts tensass iemprna tteiminis enstsitsi ientsore iemitsa isutsne umntiit ttti earorems tinetnii emineta nseii inentse airim nnpmis ettplur anon stortas sisdlnti tusnplitnu tsesestsi ttssontne urqha ssvb uoxt mettimia uciolit mtesprt siinsdctn esii tsietem sttiqh naecsii itttspmn asofu rise ssit nsum emis sttts ciss imtt ntsi ntis"
+      },
+      {
+        "fold": 1,
+        "fit_blocks": [
+          "A",
+          "D",
+          "E",
+          "H",
+          "I",
+          "N",
+          "O",
+          "T"
+        ],
+        "validation_blocks": [
+          "C",
+          "G",
+          "M",
+          "S"
+        ],
+        "test_blocks": [
+          "B",
+          "F",
+          "J",
+          "Q"
+        ],
+        "feature": "last",
+        "program": "direct",
+        "language": "latin",
+        "program_complexity": 1,
+        "initial_validation": -14.08181540916534,
+        "validation_score": -12.147137066985222,
+        "validation_penalized": -12.147834022986185,
+        "test_initial": -13.772688196286767,
+        "test_final": -12.6555881914817,
+        "test_residual": 1.1171000048050672,
+        "gap_to_language_ceiling": -1.3978024518212901,
+        "swaps": 12,
+        "plaintext_accuracy": null,
+        "known_plaintext": 0,
+        "sample": "siessete esuestuc snutetis ettseiils eetiis tisitite nssee nsssee tssteniiie teetitises steeseae ssetiss tstssse issus estss siiss stssiidc sttsatiseu tsessitsss tesnstetts tstesses sieseetc ttiiiet tttsee ttste ntstst eenssetse eestelese nsisis teesste nsesties etsseie isiseee iisessss sessie sistsseeeu issse ittssessie iettss sssite issseses ttssnse sststs"
+      },
+      {
+        "fold": 2,
+        "fit_blocks": [
+          "A",
+          "B",
+          "E",
+          "F",
+          "I",
+          "J",
+          "O",
+          "Q"
+        ],
+        "validation_blocks": [
+          "D",
+          "H",
+          "N",
+          "T"
+        ],
+        "test_blocks": [
+          "C",
+          "G",
+          "M",
+          "S"
+        ],
+        "feature": "length",
+        "program": "lag_minus",
+        "language": "latin",
+        "program_complexity": 2,
+        "initial_validation": -13.239902561580912,
+        "validation_score": -12.264669414437765,
+        "validation_penalized": -12.26578883535932,
+        "test_initial": -13.22757746293313,
+        "test_final": -12.22504593739074,
+        "test_residual": 1.0025315255423894,
+        "gap_to_language_ceiling": -0.9672601977303312,
+        "swaps": 11,
+        "plaintext_accuracy": null,
+        "known_plaintext": 0,
+        "sample": "tamtsita sssimaic nietse inaems cssiplt tine msun temen snaic sset tumni mucu atsm tmsdv niuv stsa eeire tsiss tensi misu nsspc ecetste setts sstta eicott miiisn tmem isttit mesii isit tanst itsemss ineta iaru tsin utstt sients caneis iisest titns nnianm tiec niissnt masnis ssnsn isst isceenii sestt cants nime teen canit estist stes mance tnuns tisti etss st"
+      },
+      {
+        "fold": 3,
+        "fit_blocks": [
+          "B",
+          "C",
+          "F",
+          "G",
+          "J",
+          "M",
+          "Q",
+          "S"
+        ],
+        "validation_blocks": [
+          "A",
+          "E",
+          "I",
+          "O"
+        ],
+        "test_blocks": [
+          "D",
+          "H",
+          "N",
+          "T"
+        ],
+        "feature": "last",
+        "program": "direct",
+        "language": "latin",
+        "program_complexity": 1,
+        "initial_validation": -13.784436725324003,
+        "validation_score": -12.539888696235735,
+        "validation_penalized": -12.541678234732112,
+        "test_initial": -13.977849463894842,
+        "test_final": -12.286743644975104,
+        "test_residual": 1.6911058189197377,
+        "gap_to_language_ceiling": -1.0289579053146944,
+        "swaps": 15,
+        "plaintext_accuracy": null,
+        "known_plaintext": 0,
+        "sample": "ssississs ttsstoussi iiiiiii ississtn uteitiss iueiteit tstseeuii sseit useii stosss sssst iscssssi snssia isssisss ustunssn isstsss usssssss rinse stsssss tssst sstrns tttessstsss ssssttniui esssssssnt ssstsntstsss stbstnisss snnissinns tsuios sieitesn eseeseisa sttssns tnusit sntess ssessna ssessee sousesa einnsi issse lluusetst stssssssucss sssutsso usoee"
+      }
+    ]
+  },
+  "nulls": [
+    {
+      "replicate": 1,
+      "summary": {
+        "mean_test_final": -12.263403206161318,
+        "mean_test_residual": 1.074388780270887,
+        "mean_gap_to_language_ceiling": -1.005617466500908,
+        "mean_plaintext_accuracy": null,
+        "selection_consistency": 1.0,
+        "selection_counts": {
+          "length|lag_minus|latin": 4
+        }
+      },
+      "folds": [
+        {
+          "fold": 0,
+          "fit_blocks": [
+            "C",
+            "D",
+            "G",
+            "H",
+            "M",
+            "N",
+            "S",
+            "T"
+          ],
+          "validation_blocks": [
+            "B",
+            "F",
+            "J",
+            "Q"
+          ],
+          "test_blocks": [
+            "A",
+            "E",
+            "I",
+            "O"
+          ],
+          "feature": "length",
+          "program": "lag_minus",
+          "language": "latin",
+          "program_complexity": 2,
+          "initial_validation": -13.79138690222949,
+          "validation_score": -12.26399979925984,
+          "validation_penalized": -12.26901107638549,
+          "test_initial": -13.807576491469927,
+          "test_final": -12.467935459948654,
+          "test_residual": 1.339641031521273,
+          "gap_to_language_ceiling": -1.2101497202882445,
+          "swaps": 11,
+          "plaintext_accuracy": null,
+          "known_plaintext": 0,
+          "sample": "tnomse tetinn intsenec ucinenie isnustt sttasni imtsieanc naadsunss eturamti ssenane inestso emumass ames tttmeini assatmte ttittnu ssiss tsantsa ninit sitnts oleucen niam stsaceu istoncac odtitensie castqdins secassemi tssin tneg igbs tniaimts recutst emiaron tsocntort isit sanodim etoris mnaticu ststamfd nuicm annn seem tnia inta ninte iini tisa orii nasm"
+        },
+        {
+          "fold": 1,
+          "fit_blocks": [
+            "A",
+            "D",
+            "E",
+            "H",
+            "I",
+            "N",
+            "O",
+            "T"
+          ],
+          "validation_blocks": [
+            "C",
+            "G",
+            "M",
+            "S"
+          ],
+          "test_blocks": [
+            "B",
+            "F",
+            "J",
+            "Q"
+          ],
+          "feature": "length",
+          "program": "lag_minus",
+          "language": "latin",
+          "program_complexity": 2,
+          "initial_validation": -13.272428428578324,
+          "validation_score": -12.190031610577384,
+          "validation_penalized": -12.191711640045941,
+          "test_initial": -13.495658874211466,
+          "test_final": -12.261654854283526,
+          "test_residual": 1.2340040199279407,
+          "gap_to_language_ceiling": -1.0038691146231162,
+          "swaps": 10,
+          "plaintext_accuracy": null,
+          "known_plaintext": 0,
+          "sample": "stiseca ninansn usmsepl tsisiudi unisi secitun ntta sntit siemenits tnmiprtsi simeice usocst csiett mene mpct terp nesnuss inatreise isttssiip instiamsi antnitn cimenem ssniac ceuns emen enttn tnsateod ienteine renit citisn mtsoicn imssdh cettac csiitsn nttim iissanttt hdst asnniamtu niemp srats tucatre stsitt xemusi setn enaniinn nttttsem tstentni senessna"
+        },
+        {
+          "fold": 2,
+          "fit_blocks": [
+            "A",
+            "B",
+            "E",
+            "F",
+            "I",
+            "J",
+            "O",
+            "Q"
+          ],
+          "validation_blocks": [
+            "D",
+            "H",
+            "N",
+            "T"
+          ],
+          "test_blocks": [
+            "C",
+            "G",
+            "M",
+            "S"
+          ],
+          "feature": "length",
+          "program": "lag_minus",
+          "language": "latin",
+          "program_complexity": 2,
+          "initial_validation": -12.46893151569657,
+          "validation_score": -12.136714091058288,
+          "validation_penalized": -12.137833511979842,
+          "test_initial": -12.462860700531326,
+          "test_final": -12.214557645993496,
+          "test_residual": 0.2483030545378302,
+          "gap_to_language_ceiling": -0.9567719063330866,
+          "swaps": 12,
+          "plaintext_accuracy": null,
+          "known_plaintext": 0,
+          "sample": "ttinniii miissour isasmo satmit stttsat rtne miem netat estin anse tnumi ssos nsur sisna eism ttns ninie rtite giiti isan stnni nmenetn nisit oresn eistir ntnits iina ttisna nettn catn stetm pnmtiti tesis iasl siam isstt smesta einexg emisiu imetn sutrea miac snettat umunre ntien emis ittstasn sutma rtsta minu itse tents sstsas rsit enisi nanen sttin anst te"
+        },
+        {
+          "fold": 3,
+          "fit_blocks": [
+            "B",
+            "C",
+            "F",
+            "G",
+            "J",
+            "M",
+            "Q",
+            "S"
+          ],
+          "validation_blocks": [
+            "A",
+            "E",
+            "I",
+            "O"
+          ],
+          "test_blocks": [
+            "D",
+            "H",
+            "N",
+            "T"
+          ],
+          "feature": "length",
+          "program": "lag_minus",
+          "language": "latin",
+          "program_complexity": 2,
+          "initial_validation": -13.771908616809169,
+          "validation_score": -12.505643191352332,
+          "validation_penalized": -12.51004787841964,
+          "test_initial": -13.585071879516098,
+          "test_final": -12.109464864419595,
+          "test_residual": 1.4756070150965037,
+          "gap_to_language_ceiling": -0.8516791247591851,
+          "swaps": 10,
+          "plaintext_accuracy": null,
+          "known_plaintext": 0,
+          "sample": "sasteims anisflisi ntpnsm iertutn niessit mansitn tttsfxef tair saec train itec mmeflts rtist ittnfrn mestiin nsseir ittmuns more eecumt srat inets rasitsamts nsthxetts ssimaruni etinietinns imtsomemo atiramont miine siamtfx tnttuces ittist tmses snass rsinam eaniim istetm sinql imuc nisasnpm tnnearesnpn tdottnm ettespe esin canima stneaap tirom tienqm atsna"
+        }
+      ]
+    },
+    {
+      "replicate": 2,
+      "summary": {
+        "mean_test_final": -12.334830018135992,
+        "mean_test_residual": 1.406840389604576,
+        "mean_gap_to_language_ceiling": -1.077044278475582,
+        "mean_plaintext_accuracy": null,
+        "selection_consistency": 0.75,
+        "selection_counts": {
+          "last|direct|latin": 1,
+          "length|lag_minus|latin": 3
+        }
+      },
+      "folds": [
+        {
+          "fold": 0,
+          "fit_blocks": [
+            "C",
+            "D",
+            "G",
+            "H",
+            "M",
+            "N",
+            "S",
+            "T"
+          ],
+          "validation_blocks": [
+            "B",
+            "F",
+            "J",
+            "Q"
+          ],
+          "test_blocks": [
+            "A",
+            "E",
+            "I",
+            "O"
+          ],
+          "feature": "length",
+          "program": "lag_minus",
+          "language": "latin",
+          "program_complexity": 2,
+          "initial_validation": -13.816490069989273,
+          "validation_score": -12.342973207075861,
+          "validation_penalized": -12.347984484201511,
+          "test_initial": -13.784244143200569,
+          "test_final": -12.538521139990419,
+          "test_residual": 1.2457230032101503,
+          "gap_to_language_ceiling": -1.280735400330009,
+          "swaps": 12,
+          "plaintext_accuracy": null,
+          "known_plaintext": 0,
+          "sample": "eiicee namina imitspdn ursocame temseer tinenet iinitnuss einstsenu nemistia entttst tieedet asnumsn ttne etmsitis ttniesem tiintit iessi sanitmo tisar enornn isnosns caet neodiin sisseist mttpdannei seumnensn setnonngb titse tten untm earfhati eisiisa mpriins seessastt retm steudim gbtstu ecasteo ampnmtte itens rest issi iara sfbi diiiu ntom nusm rtns manc"
+        },
+        {
+          "fold": 1,
+          "fit_blocks": [
+            "A",
+            "D",
+            "E",
+            "H",
+            "I",
+            "N",
+            "O",
+            "T"
+          ],
+          "validation_blocks": [
+            "C",
+            "G",
+            "M",
+            "S"
+          ],
+          "test_blocks": [
+            "B",
+            "F",
+            "J",
+            "Q"
+          ],
+          "feature": "length",
+          "program": "lag_minus",
+          "language": "latin",
+          "program_complexity": 2,
+          "initial_validation": -13.649041212103802,
+          "validation_score": -12.182101549935497,
+          "validation_penalized": -12.183781579404055,
+          "test_initial": -13.81331379984692,
+          "test_final": -12.468143563573333,
+          "test_residual": 1.345170236273587,
+          "gap_to_language_ceiling": -1.2103578239129238,
+          "swaps": 8,
+          "plaintext_accuracy": null,
+          "known_plaintext": 0,
+          "sample": "ssenito msssetn tsanssi inssssss ctite tseinme unit stunt ensssinis eececeeen tsinett iitsin ntteuc smet sssp istn etiarst sittsiema smssitecs mtamesneo ttasssn tsnucsi atimso tutti itss mamse iimsettt ninsstes esetm iinitt dumient eemitu inisin niastsi iiten tipcnenfn toci isecoceca titii natem sniamsm prsmas ttiits tsim ntoceins imstssen nsumnets imenaime"
+        },
+        {
+          "fold": 2,
+          "fit_blocks": [
+            "A",
+            "B",
+            "E",
+            "F",
+            "I",
+            "J",
+            "O",
+            "Q"
+          ],
+          "validation_blocks": [
+            "D",
+            "H",
+            "N",
+            "T"
+          ],
+          "test_blocks": [
+            "C",
+            "G",
+            "M",
+            "S"
+          ],
+          "feature": "last",
+          "program": "direct",
+          "language": "latin",
+          "program_complexity": 1,
+          "initial_validation": -13.215233402612697,
+          "validation_score": -12.180527757806097,
+          "validation_penalized": -12.181009722528353,
+          "test_initial": -13.70912111074542,
+          "test_final": -12.043812362640393,
+          "test_residual": 1.6653087481050264,
+          "gap_to_language_ceiling": -0.7860266229799837,
+          "swaps": 12,
+          "plaintext_accuracy": null,
+          "known_plaintext": 0,
+          "sample": "ttsedneei ieestscst etessts satseuu etoesssi cltss tssts ueeica uttesu sisii esiiti sests einea tattsn suisi nette isseta tteisi csuene nssss neeist ttetesis tiiesn tseeiq ussaees niisese tessa uesssei ieeutt etees ssieia sseetaue tnsess ussie eesss tenses esseess tsistis itsesuq estete ietists istss nseeeesq otsdtii tiiens sesai ntssieeea ieisdt tteite ettt"
+        },
+        {
+          "fold": 3,
+          "fit_blocks": [
+            "B",
+            "C",
+            "F",
+            "G",
+            "J",
+            "M",
+            "Q",
+            "S"
+          ],
+          "validation_blocks": [
+            "A",
+            "E",
+            "I",
+            "O"
+          ],
+          "test_blocks": [
+            "D",
+            "H",
+            "N",
+            "T"
+          ],
+          "feature": "length",
+          "program": "lag_minus",
+          "language": "latin",
+          "program_complexity": 2,
+          "initial_validation": -13.825674166423683,
+          "validation_score": -12.605719612381174,
+          "validation_penalized": -12.610124299448481,
+          "test_initial": -13.660002577169362,
+          "test_final": -12.288843006339821,
+          "test_residual": 1.3711595708295405,
+          "gap_to_language_ceiling": -1.0310572666794116,
+          "swaps": 11,
+          "plaintext_accuracy": null,
+          "known_plaintext": 0,
+          "sample": "nstseatc sieerunqr easmem ienisti tsasesg stestei ritemtqy nemt emum smtta tanm neneiin mnatm mantann eemtetm titest tesicpl meis meeudm aere iseen seimsettan meenetime ttmsisetn rtttanettta nttttttfl maerturas ssmut stsfsmr tstflgye somnee nesur ntsee tismts nnamti cestum tetse isas muestmtm inttenetttt neinsui tseeimn ssoe sntist misuree ineii nunteq emtsu"
+        }
+      ]
+    },
+    {
+      "replicate": 3,
+      "summary": {
+        "mean_test_final": -12.221261417562213,
+        "mean_test_residual": 1.1809692157669494,
+        "mean_gap_to_language_ceiling": -0.963475677901803,
+        "mean_plaintext_accuracy": null,
+        "selection_consistency": 0.75,
+        "selection_counts": {
+          "last|direct|latin": 1,
+          "length|lag_minus|latin": 3
+        }
+      },
+      "folds": [
+        {
+          "fold": 0,
+          "fit_blocks": [
+            "C",
+            "D",
+            "G",
+            "H",
+            "M",
+            "N",
+            "S",
+            "T"
+          ],
+          "validation_blocks": [
+            "B",
+            "F",
+            "J",
+            "Q"
+          ],
+          "test_blocks": [
+            "A",
+            "E",
+            "I",
+            "O"
+          ],
+          "feature": "last",
+          "program": "direct",
+          "language": "latin",
+          "program_complexity": 1,
+          "initial_validation": -13.851624730941845,
+          "validation_score": -12.277620835807873,
+          "validation_penalized": -12.279653110608676,
+          "test_initial": -13.419245987586649,
+          "test_final": -12.275323845388357,
+          "test_residual": 1.1439221421982921,
+          "gap_to_language_ceiling": -1.0175381057279473,
+          "swaps": 16,
+          "plaintext_accuracy": null,
+          "known_plaintext": 0,
+          "sample": "siutstc nssiesi niisstous ueitesess isseiieo tissrssi sittsesisi sssisusiic ditiiirse isiintiu issteeit sttsssri esiiu nsseisssu nistteetn tessoena teeitt nsitiest pesnet tieiiei tteeaeas ssssi tsitstss iiseeesto teussuttsto ltesssstis stsrottsts easeti ateai snses nttnseetn onniasss isessssi teiutsests ueets ltiiiesa sismitq tnieiits nniseetee usttss niesi"
+        },
+        {
+          "fold": 1,
+          "fit_blocks": [
+            "A",
+            "D",
+            "E",
+            "H",
+            "I",
+            "N",
+            "O",
+            "T"
+          ],
+          "validation_blocks": [
+            "C",
+            "G",
+            "M",
+            "S"
+          ],
+          "test_blocks": [
+            "B",
+            "F",
+            "J",
+            "Q"
+          ],
+          "feature": "length",
+          "program": "lag_minus",
+          "language": "latin",
+          "program_complexity": 2,
+          "initial_validation": -13.659759252704163,
+          "validation_score": -12.179402753789653,
+          "validation_penalized": -12.18108278325821,
+          "test_initial": -13.674042373778455,
+          "test_final": -12.30874400074371,
+          "test_residual": 1.3652983730347454,
+          "gap_to_language_ceiling": -1.0509582610833004,
+          "swaps": 11,
+          "plaintext_accuracy": null,
+          "known_plaintext": 0,
+          "sample": "tnpcseo cqrciir mnpctee neasertt ismtq mtuminu tses ntsao ttseestes eunssetme emissii tamtim cineet tart sten stis anemisi meetimant neentfdse rinameims ttsstsp ssitttm semtim ortvd ntam emisn tsttsisn lpsmtess stttt istntt ttnamse ntantt mitria mtetnei sissa isogituaz tsur esestsett nisss sasts metttin tsitan meitzb ttet settisss atrisnis inistepd sametttn"
+        },
+        {
+          "fold": 2,
+          "fit_blocks": [
+            "A",
+            "B",
+            "E",
+            "F",
+            "I",
+            "J",
+            "O",
+            "Q"
+          ],
+          "validation_blocks": [
+            "D",
+            "H",
+            "N",
+            "T"
+          ],
+          "test_blocks": [
+            "C",
+            "G",
+            "M",
+            "S"
+          ],
+          "feature": "length",
+          "program": "lag_minus",
+          "language": "latin",
+          "program_complexity": 2,
+          "initial_validation": -13.261260211614537,
+          "validation_score": -12.214770530857987,
+          "validation_penalized": -12.215889951779541,
+          "test_initial": -13.193964389636433,
+          "test_final": -12.131508984591948,
+          "test_residual": 1.062455405044485,
+          "gap_to_language_ceiling": -0.8737232449315382,
+          "swaps": 10,
+          "plaintext_accuracy": null,
+          "known_plaintext": 0,
+          "sample": "ninemeic essiimei sssist niitun sinamsu mani tais sstss tcino eans tiste sits raur ttini tssm amit tentu intsn ssnsn mete miatn tasnivb mnian arien imtort ocetei eiri tissts emnes msnv senit acnotii iitsi neti stne nnane atsnti siiaru sierae sttit sssemn saoz acitatm tsiiti mttsi tvrs ticattes stotc nseni mste nett nanti stsiis etis entet sicgl icsen utns am"
+        },
+        {
+          "fold": 3,
+          "fit_blocks": [
+            "B",
+            "C",
+            "F",
+            "G",
+            "J",
+            "M",
+            "Q",
+            "S"
+          ],
+          "validation_blocks": [
+            "A",
+            "E",
+            "I",
+            "O"
+          ],
+          "test_blocks": [
+            "D",
+            "H",
+            "N",
+            "T"
+          ],
+          "feature": "length",
+          "program": "lag_minus",
+          "language": "latin",
+          "program_complexity": 2,
+          "initial_validation": -13.42069750435957,
+          "validation_score": -12.473336818382334,
+          "validation_penalized": -12.477741505449641,
+          "test_initial": -13.32166978231511,
+          "test_final": -12.169468839524836,
+          "test_residual": 1.1522009427902749,
+          "gap_to_language_ceiling": -0.9116830998644261,
+          "swaps": 10,
+          "plaintext_accuracy": null,
+          "known_plaintext": 0,
+          "sample": "tsepdent ttatmiauc sistes tsemati tenieti mttttsa usnttiap ritp dasm isesi mats sitqxit snunn eocnsin ensomem mociit tssastc niss nestsi nins lhcem msintnqrhu itnatstat setmocitm xnxzinsuctt tnenicapc splceiiin etmoi ntensun iiinsiam ttitss tacta ttamf stacpc inetam utctqx ctiem iean ssinaadp ctassstitan mtiemun tttinuc sitn nttnus istnest teeus amatis lstei"
+        }
+      ]
+    },
+    {
+      "replicate": 4,
+      "summary": {
+        "mean_test_final": -12.36223143265477,
+        "mean_test_residual": 1.417322326231862,
+        "mean_gap_to_language_ceiling": -1.1044456929943602,
+        "mean_plaintext_accuracy": null,
+        "selection_consistency": 0.5,
+        "selection_counts": {
+          "last|direct|latin": 1,
+          "length|direct|latin": 1,
+          "length|lag_minus|latin": 2
+        }
+      },
+      "folds": [
+        {
+          "fold": 0,
+          "fit_blocks": [
+            "C",
+            "D",
+            "G",
+            "H",
+            "M",
+            "N",
+            "S",
+            "T"
+          ],
+          "validation_blocks": [
+            "B",
+            "F",
+            "J",
+            "Q"
+          ],
+          "test_blocks": [
+            "A",
+            "E",
+            "I",
+            "O"
+          ],
+          "feature": "last",
+          "program": "direct",
+          "language": "latin",
+          "program_complexity": 1,
+          "initial_validation": -13.868532541359565,
+          "validation_score": -12.417626907571874,
+          "validation_penalized": -12.419659182372676,
+          "test_initial": -13.476221409990968,
+          "test_final": -12.37871027410764,
+          "test_residual": 1.0975111358833285,
+          "gap_to_language_ceiling": -1.12092453444723,
+          "swaps": 15,
+          "plaintext_accuracy": null,
+          "known_plaintext": 0,
+          "sample": "useesse esiisdn seisatisu aesesuess asssetsa tsssisst seeesetdat aeeseeetto tstsnssse rsiiseei estsnses tesuistu seeeo iitststse sseiesiue eitititc aideiu atseitet tisiee ttuieit cisisite metcs stiiesis atitsaeec asseisttsus tieeieiett utsattieie tinase siaie etsic setstetes siaaaise eieuitss esietetssu tette aauisits stitiei sietiast tesiautsa sessse sitaa"
+        },
+        {
+          "fold": 1,
+          "fit_blocks": [
+            "A",
+            "D",
+            "E",
+            "H",
+            "I",
+            "N",
+            "O",
+            "T"
+          ],
+          "validation_blocks": [
+            "C",
+            "G",
+            "M",
+            "S"
+          ],
+          "test_blocks": [
+            "B",
+            "F",
+            "J",
+            "Q"
+          ],
+          "feature": "length",
+          "program": "lag_minus",
+          "language": "latin",
+          "program_complexity": 2,
+          "initial_validation": -13.357893382123422,
+          "validation_score": -12.256464525618597,
+          "validation_penalized": -12.258144555087155,
+          "test_initial": -13.33517105202192,
+          "test_final": -12.301708112070232,
+          "test_residual": 1.0334629399516881,
+          "gap_to_language_ceiling": -1.0439223724098223,
+          "swaps": 10,
+          "plaintext_accuracy": null,
+          "known_plaintext": 0,
+          "sample": "tniaica istifbt snemiss erutmiii amsas ttitamp inei ettin ittetumts eititucit tarspcs ntisss tseemm aini scte rteo setitnt nneornett sininisim mseactain reneinm stsacet nnnetp temei bssn ttsne tuntutre sitessnn seste mastsn imimeti tiacas tsiitm entesni iiisr arsnpmtss tucu audarsiin aimsa tssia stnisio mestsn esocea emsi nsepctst intsisss glematst tsisiitr"
+        },
+        {
+          "fold": 2,
+          "fit_blocks": [
+            "A",
+            "B",
+            "E",
+            "F",
+            "I",
+            "J",
+            "O",
+            "Q"
+          ],
+          "validation_blocks": [
+            "D",
+            "H",
+            "N",
+            "T"
+          ],
+          "test_blocks": [
+            "C",
+            "G",
+            "M",
+            "S"
+          ],
+          "feature": "length",
+          "program": "lag_minus",
+          "language": "latin",
+          "program_complexity": 2,
+          "initial_validation": -13.85734615694264,
+          "validation_score": -12.330506882367574,
+          "validation_penalized": -12.331626303289129,
+          "test_initial": -13.90837965287115,
+          "test_final": -12.324568090088574,
+          "test_residual": 1.583811562782575,
+          "gap_to_language_ceiling": -1.0667823504281646,
+          "swaps": 14,
+          "plaintext_accuracy": null,
+          "known_plaintext": 0,
+          "sample": "eriistem nsarsiti smutsr ssunrp iiinsnu edar enie unnan reans tula itian neob smur ntuer iits amis ntnun litan eumii nsit msens ersstss astss ename riesal nssere alen tinten tsnan ulea nspsr etetnas tssie inur seud risam enishv usmuob ssnuma litts tnenyc teta snerins tetstt datse dera nssstier inrii telun atst etts atret tensir remt nalai lfmnt iniar tisr st"
+        },
+        {
+          "fold": 3,
+          "fit_blocks": [
+            "B",
+            "C",
+            "F",
+            "G",
+            "J",
+            "M",
+            "Q",
+            "S"
+          ],
+          "validation_blocks": [
+            "A",
+            "E",
+            "I",
+            "O"
+          ],
+          "test_blocks": [
+            "D",
+            "H",
+            "N",
+            "T"
+          ],
+          "feature": "length",
+          "program": "direct",
+          "language": "latin",
+          "program_complexity": 1,
+          "initial_validation": -14.159411598836968,
+          "validation_score": -12.499489101074278,
+          "validation_penalized": -12.501278639570655,
+          "test_initial": -14.39844292066249,
+          "test_final": -12.443939254352633,
+          "test_residual": 1.954503666309856,
+          "gap_to_language_ceiling": -1.186153514692224,
+          "swaps": 11,
+          "plaintext_accuracy": null,
+          "known_plaintext": 0,
+          "sample": "eaieestis tatineieri tatiime iseennie tsestaei esaeiese ieeeaisse tiara sseio titute sssis netestss ieetia euttissm satssete tttitaa iiissien tntts stuiist nssea aettta ttstssumnei uttsasstna sutssetnse tstseseaissb ttttmnaess ttsnsositn eeases asauesua itaeetedo ssusmsi ieasdt esicsn tetasaa eeeaeie isscsst tsdtua isece aaiiisest seaeaeeeeeta etsssiai stsee"
+        }
+      ]
+    },
+    {
+      "replicate": 5,
+      "summary": {
+        "mean_test_final": -12.501656324609959,
+        "mean_test_residual": 1.1854673352189105,
+        "mean_gap_to_language_ceiling": -1.24387058494955,
+        "mean_plaintext_accuracy": null,
+        "selection_consistency": 0.75,
+        "selection_counts": {
+          "length|direct|latin": 1,
+          "length|lag_minus|latin": 3
+        }
+      },
+      "folds": [
+        {
+          "fold": 0,
+          "fit_blocks": [
+            "C",
+            "D",
+            "G",
+            "H",
+            "M",
+            "N",
+            "S",
+            "T"
+          ],
+          "validation_blocks": [
+            "B",
+            "F",
+            "J",
+            "Q"
+          ],
+          "test_blocks": [
+            "A",
+            "E",
+            "I",
+            "O"
+          ],
+          "feature": "length",
+          "program": "lag_minus",
+          "language": "latin",
+          "program_complexity": 2,
+          "initial_validation": -13.766409406202625,
+          "validation_score": -12.379045837564064,
+          "validation_penalized": -12.384057114689714,
+          "test_initial": -13.608872844494838,
+          "test_final": -12.663706033474956,
+          "test_residual": 0.9451668110198828,
+          "gap_to_language_ceiling": -1.405920293814546,
+          "swaps": 8,
+          "plaintext_accuracy": null,
+          "known_plaintext": 0,
+          "sample": "ttiimt taresn ttisitii tspcsasa enmeene temista tsastsemi ntamamtse tstiemis isommas tnsoras tsnaere ultt iitnfltn ansiinem titimte aname iratnii rpcat mtinyl cotsstf tnit amitise ussinast onisantadi ulbdsanit tcaiemmus isenm stnn itss taeitsci istemee iniemti mflansten tttn iorsten ucesar ttsemes nuceenem esssa nttn tstt stte isim talta sitt umii cifg runt"
+        },
+        {
+          "fold": 1,
+          "fit_blocks": [
+            "A",
+            "D",
+            "E",
+            "H",
+            "I",
+            "N",
+            "O",
+            "T"
+          ],
+          "validation_blocks": [
+            "C",
+            "G",
+            "M",
+            "S"
+          ],
+          "test_blocks": [
+            "B",
+            "F",
+            "J",
+            "Q"
+          ],
+          "feature": "length",
+          "program": "lag_minus",
+          "language": "latin",
+          "program_complexity": 2,
+          "initial_validation": -13.518494434551947,
+          "validation_score": -12.25222938134411,
+          "validation_penalized": -12.253909410812668,
+          "test_initial": -13.75176298605215,
+          "test_final": -12.372411021869885,
+          "test_residual": 1.3793519641822645,
+          "gap_to_language_ceiling": -1.1146252822094755,
+          "swaps": 10,
+          "plaintext_accuracy": null,
+          "known_plaintext": 0,
+          "sample": "surnuna nianens irastmi stnesnat sflns enumsat inte sunss enitsisbv tsstusrii tesentn eriiia nntusm sttn tnio ttin tssitip sttssieim tsiismesu tasulseum sacbnme tnamien iudiim eulem tsse msiii sttnesit ctuceums mestt iisats imasitt uinntt tiimas ttsiuns emsii tnestssum raim mitssesti tists miira ttemans iamttm ttnumt icet sitnitti nanqgact tsetniis menisist"
+        },
+        {
+          "fold": 2,
+          "fit_blocks": [
+            "A",
+            "B",
+            "E",
+            "F",
+            "I",
+            "J",
+            "O",
+            "Q"
+          ],
+          "validation_blocks": [
+            "D",
+            "H",
+            "N",
+            "T"
+          ],
+          "test_blocks": [
+            "C",
+            "G",
+            "M",
+            "S"
+          ],
+          "feature": "length",
+          "program": "lag_minus",
+          "language": "latin",
+          "program_complexity": 2,
+          "initial_validation": -13.109339666044919,
+          "validation_score": -12.259969212837492,
+          "validation_penalized": -12.261088633759046,
+          "test_initial": -13.080902462679456,
+          "test_final": -12.320384437237221,
+          "test_residual": 0.7605180254422343,
+          "gap_to_language_ceiling": -1.0625986975768118,
+          "swaps": 10,
+          "plaintext_accuracy": null,
+          "known_plaintext": 0,
+          "sample": "imeissni nanemnni iitnet satsts nntseni esma esan dunss anine nuli nsssu aner ntai esamm ntei icri tsiit ntsss tesnn eten ssnst emantne emnne ismii etantn rssisa ntgv eninin ieere ette aimit urtiien emaol riti itse ntsie snssai tsniis sinnti rasit iimutn rnat mnenncd ttutti nnass nssu amiarets titni enins nnis tuov ensem iissnn enni emtcr ssien intin essn ms"
+        },
+        {
+          "fold": 3,
+          "fit_blocks": [
+            "B",
+            "C",
+            "F",
+            "G",
+            "J",
+            "M",
+            "Q",
+            "S"
+          ],
+          "validation_blocks": [
+            "A",
+            "E",
+            "I",
+            "O"
+          ],
+          "test_blocks": [
+            "D",
+            "H",
+            "N",
+            "T"
+          ],
+          "feature": "length",
+          "program": "direct",
+          "language": "latin",
+          "program_complexity": 1,
+          "initial_validation": -14.135284606178775,
+          "validation_score": -12.695521531750954,
+          "validation_penalized": -12.69731107024733,
+          "test_initial": -14.306956346089036,
+          "test_final": -12.650123805857776,
+          "test_residual": 1.6568325402312603,
+          "gap_to_language_ceiling": -1.3923380661973663,
+          "swaps": 7,
+          "plaintext_accuracy": null,
+          "known_plaintext": 0,
+          "sample": "uissteuut itesstisae ctensmm eeiitnns ensseeam netsiose eusteseac sssci iuoee ssemse smitt niiuuust teseee siueiiis nseiisee siissit iueacson sssss iieuuim seuui smeise ieuaisiisis sissieetss uitsotqsin usssiisemeis sisesmesst uittmucnes ueitue iesesueu eeteeiseu ttnsseu eeuuss useese suueeae eeuisur ettiemu teiste senst cstutmeci tssaistieeee isstaiin esusi"
+        }
+      ]
+    },
+    {
+      "replicate": 6,
+      "summary": {
+        "mean_test_final": -12.329572055515282,
+        "mean_test_residual": 0.9631412766288907,
+        "mean_gap_to_language_ceiling": -1.0717863158548733,
+        "mean_plaintext_accuracy": null,
+        "selection_consistency": 1.0,
+        "selection_counts": {
+          "length|lag_minus|latin": 4
+        }
+      },
+      "folds": [
+        {
+          "fold": 0,
+          "fit_blocks": [
+            "C",
+            "D",
+            "G",
+            "H",
+            "M",
+            "N",
+            "S",
+            "T"
+          ],
+          "validation_blocks": [
+            "B",
+            "F",
+            "J",
+            "Q"
+          ],
+          "test_blocks": [
+            "A",
+            "E",
+            "I",
+            "O"
+          ],
+          "feature": "length",
+          "program": "lag_minus",
+          "language": "latin",
+          "program_complexity": 2,
+          "initial_validation": -13.904777632957316,
+          "validation_score": -12.353001270614937,
+          "validation_penalized": -12.358012547740588,
+          "test_initial": -13.70243987443291,
+          "test_final": -12.585031410020719,
+          "test_residual": 1.1174084644121915,
+          "gap_to_language_ceiling": -1.327245670360309,
+          "swaps": 10,
+          "plaintext_accuracy": null,
+          "known_plaintext": 0,
+          "sample": "esmoca uminia nsetnsss tenimair snesiti sasmiit amsamissa sentenssi issstent sssniti onmsatt tseresn nemu iocansna ennsumis tsprnse iamsr itsstei intpd ucseqb neacsao mmis miisrot temsemes totnnimpmn teteripcs sansitime astip namg nuna tinsemei siinise nstiist rsssamtii nnet uritamn tesnts iennisa tssinssu snomt tnes sare ritt aarn isigc ensi sten nite siam"
+        },
+        {
+          "fold": 1,
+          "fit_blocks": [
+            "A",
+            "D",
+            "E",
+            "H",
+            "I",
+            "N",
+            "O",
+            "T"
+          ],
+          "validation_blocks": [
+            "C",
+            "G",
+            "M",
+            "S"
+          ],
+          "test_blocks": [
+            "B",
+            "F",
+            "J",
+            "Q"
+          ],
+          "feature": "length",
+          "program": "lag_minus",
+          "language": "latin",
+          "program_complexity": 2,
+          "initial_validation": -13.642441650153971,
+          "validation_score": -12.232122188709912,
+          "validation_penalized": -12.23380221817847,
+          "test_initial": -13.894937303185277,
+          "test_final": -12.25746102437125,
+          "test_residual": 1.6374762788140274,
+          "gap_to_language_ceiling": -0.9996752847108397,
+          "swaps": 16,
+          "plaintext_accuracy": null,
+          "known_plaintext": 0,
+          "sample": "nsitini istulat teresie meacsiim isani nsthlss itss rasse nensanien ubseacama isastsm ttiori mmasio summ unso tent ssumari tsutctitn nmiicetna mtestisst saadsin instets rsucii eciti niis eacis tsastsim sisntiql snans senitt tstinte stsomn tititm rtsstsi ttess cesamsita amet nnesemesp amten inene ttsiaar emisum metisn ntit miimastm stearams nitniitn inisemie"
+        },
+        {
+          "fold": 2,
+          "fit_blocks": [
+            "A",
+            "B",
+            "E",
+            "F",
+            "I",
+            "J",
+            "O",
+            "Q"
+          ],
+          "validation_blocks": [
+            "D",
+            "H",
+            "N",
+            "T"
+          ],
+          "test_blocks": [
+            "C",
+            "G",
+            "M",
+            "S"
+          ],
+          "feature": "length",
+          "program": "lag_minus",
+          "language": "latin",
+          "program_complexity": 2,
+          "initial_validation": -12.382993787812419,
+          "validation_score": -12.23400616038421,
+          "validation_penalized": -12.235125581305764,
+          "test_initial": -12.250239443965098,
+          "test_final": -12.216338831253113,
+          "test_residual": 0.03390061271198519,
+          "gap_to_language_ceiling": -0.9585530915927034,
+          "swaps": 11,
+          "plaintext_accuracy": null,
+          "known_plaintext": 0,
+          "sample": "utttmeti seniinxz iraisn assise sttasti matr teru runnp amtat tstt itsas sstu mtbr atocs iasm tarn tsiic istsa erpcs teru nrttu tintnem sstti umtbd iensen cietnt tiim istens mimam nine nntas imantsi ietne isii imnt terem irutme nsttes unitni sumne tseier sesn ntteesm ttassn surit rein anseteri tssbh emsan asen enes natmt nsases unce meses tnneu rtttt ssso sa"
+        },
+        {
+          "fold": 3,
+          "fit_blocks": [
+            "B",
+            "C",
+            "F",
+            "G",
+            "J",
+            "M",
+            "Q",
+            "S"
+          ],
+          "validation_blocks": [
+            "A",
+            "E",
+            "I",
+            "O"
+          ],
+          "test_blocks": [
+            "D",
+            "H",
+            "N",
+            "T"
+          ],
+          "feature": "length",
+          "program": "lag_minus",
+          "language": "latin",
+          "program_complexity": 2,
+          "initial_validation": -13.567048650884374,
+          "validation_score": -12.50929532654508,
+          "validation_penalized": -12.513700013612388,
+          "test_initial": -13.32323670699341,
+          "test_final": -12.25945695641605,
+          "test_residual": 1.0637797505773587,
+          "gap_to_language_ceiling": -1.001671216755641,
+          "swaps": 10,
+          "plaintext_accuracy": null,
+          "known_plaintext": 0,
+          "sample": "snspctes atnesinir iitsse matnnii esniiem ssuters mitnisee lera inia niitn entn senmett misin ssimets eneisen neucem atssmpm nenn tsttts itst ttmhb spgumsitts reemtsenn itrunerie teinsaarnii mtsinsusm mitiimamx sisst itemima ssmotnar irtamo stnos luttl tsasog nitsxc rinets itifv mset nttanttf tttisitinpm miimast sseirur emss otmtfr etnatss astpg muceiq lesse"
+        }
+      ]
+    },
+    {
+      "replicate": 7,
+      "summary": {
+        "mean_test_final": -12.358464593229472,
+        "mean_test_residual": 1.0940299124421804,
+        "mean_gap_to_language_ceiling": -1.1006788535690628,
+        "mean_plaintext_accuracy": null,
+        "selection_consistency": 0.5,
+        "selection_counts": {
+          "last|direct|latin": 1,
+          "length|direct|latin": 1,
+          "length|lag_minus|latin": 2
+        }
+      },
+      "folds": [
+        {
+          "fold": 0,
+          "fit_blocks": [
+            "C",
+            "D",
+            "G",
+            "H",
+            "M",
+            "N",
+            "S",
+            "T"
+          ],
+          "validation_blocks": [
+            "B",
+            "F",
+            "J",
+            "Q"
+          ],
+          "test_blocks": [
+            "A",
+            "E",
+            "I",
+            "O"
+          ],
+          "feature": "last",
+          "program": "direct",
+          "language": "latin",
+          "program_complexity": 1,
+          "initial_validation": -13.68136279824249,
+          "validation_score": -12.36678878771423,
+          "validation_penalized": -12.368821062515032,
+          "test_initial": -13.373763031521237,
+          "test_final": -12.411688236615236,
+          "test_residual": 0.9620747949060018,
+          "gap_to_language_ceiling": -1.1539024969548262,
+          "swaps": 11,
+          "plaintext_accuracy": null,
+          "known_plaintext": 0,
+          "sample": "esitsse ueeeama seestuset usmssiets eiesnsea ssnseteu reiissssed uteetitiit usietisai essestus isteeesa seeasise ueste tistetist tititsssn tsesiese seeitc assmsssd cteete itisses tsseties isiss stiitsec ucseitsea ettassettst stiesiitis vsuttttecs suiise etese tiets tssteeiai eiississ ttesieti tiiilscses eseee atiuists ussteie siiaisis uttimisse csasis seete"
+        },
+        {
+          "fold": 1,
+          "fit_blocks": [
+            "A",
+            "D",
+            "E",
+            "H",
+            "I",
+            "N",
+            "O",
+            "T"
+          ],
+          "validation_blocks": [
+            "C",
+            "G",
+            "M",
+            "S"
+          ],
+          "test_blocks": [
+            "B",
+            "F",
+            "J",
+            "Q"
+          ],
+          "feature": "length",
+          "program": "lag_minus",
+          "language": "latin",
+          "program_complexity": 2,
+          "initial_validation": -13.482223825020728,
+          "validation_score": -12.3330707187859,
+          "validation_penalized": -12.334750748254457,
+          "test_initial": -13.652470542477674,
+          "test_final": -12.39593794070855,
+          "test_residual": 1.2565326017691252,
+          "gap_to_language_ceiling": -1.1381522010481397,
+          "swaps": 10,
+          "plaintext_accuracy": null,
+          "known_plaintext": 0,
+          "sample": "eennest unnsena ntseemu sucitett tssta teamssi rocs cnatt tssinetim tmseitnam teaents amemae stsatn neso rina iolt insitna nmstotsts etodtqvsp etereutns unsistn msstest anstem mstti esta tinby ntsiniet nisststi ietse nitadg ntitesn esucsm nissts tnonsad acini msimasmet test cuetmames manen ennam eetsucn itssuc neudac sett tssenatu tteteeti tamnsani netinsti"
+        },
+        {
+          "fold": 2,
+          "fit_blocks": [
+            "A",
+            "B",
+            "E",
+            "F",
+            "I",
+            "J",
+            "O",
+            "Q"
+          ],
+          "validation_blocks": [
+            "D",
+            "H",
+            "N",
+            "T"
+          ],
+          "test_blocks": [
+            "C",
+            "G",
+            "M",
+            "S"
+          ],
+          "feature": "length",
+          "program": "lag_minus",
+          "language": "latin",
+          "program_complexity": 2,
+          "initial_validation": -12.480892231138077,
+          "validation_score": -12.16731325410012,
+          "validation_penalized": -12.168432675021675,
+          "test_initial": -12.378728615564627,
+          "test_final": -12.046477480491077,
+          "test_residual": 0.33225113507355,
+          "gap_to_language_ceiling": -0.788691740830668,
+          "swaps": 11,
+          "plaintext_accuracy": null,
+          "known_plaintext": 0,
+          "sample": "tatsteni titnitec ainimo ensnem asistec stsi eido iseni einee cpnn ssnss ttie eist miiim semi aces acatn utets ensmu issi iiste ietsett stsmi eeste annsto esncfn itst ttissm nises siti ssnat itemesi smanu sist iins esemi tsimas inense sinies isnse tsnein mant osttant siraam tnese nuvp sisimatm utina enetn ttus ssen stots imittu endo ittis istno pmtam urut ei"
+        },
+        {
+          "fold": 3,
+          "fit_blocks": [
+            "B",
+            "C",
+            "F",
+            "G",
+            "J",
+            "M",
+            "Q",
+            "S"
+          ],
+          "validation_blocks": [
+            "A",
+            "E",
+            "I",
+            "O"
+          ],
+          "test_blocks": [
+            "D",
+            "H",
+            "N",
+            "T"
+          ],
+          "feature": "length",
+          "program": "direct",
+          "language": "latin",
+          "program_complexity": 1,
+          "initial_validation": -14.050316971554608,
+          "validation_score": -12.47562440084885,
+          "validation_penalized": -12.477413939345228,
+          "test_initial": -14.405015833123072,
+          "test_final": -12.579754715103027,
+          "test_residual": 1.8252611180200446,
+          "gap_to_language_ceiling": -1.3219689754426174,
+          "swaps": 9,
+          "plaintext_accuracy": null,
+          "known_plaintext": 0,
+          "sample": "sesoateit esatrrsurs ntaaeei sertsiee ttseciid ssstitnp teatsieai tstts tseet tsestn ttnae tttaeitt eerasf esertets esaitats irestss eeetoisn tsasr eteasse aetee atnneu etettseteei ereeesrnii eeetsssmns ftstritssees atcsiteaer atssreieie tssiar seiesest atsinssoe rtcseci aetnsa eiiene sssarts tsssatt esiitcs easesr ssisi ieaiaesus ssetssntsios etaessas ieaes"
+        }
+      ]
+    },
+    {
+      "replicate": 8,
+      "summary": {
+        "mean_test_final": -12.344520746558937,
+        "mean_test_residual": 1.1047674005912218,
+        "mean_gap_to_language_ceiling": -1.0867350068985266,
+        "mean_plaintext_accuracy": null,
+        "selection_consistency": 1.0,
+        "selection_counts": {
+          "length|lag_minus|latin": 4
+        }
+      },
+      "folds": [
+        {
+          "fold": 0,
+          "fit_blocks": [
+            "C",
+            "D",
+            "G",
+            "H",
+            "M",
+            "N",
+            "S",
+            "T"
+          ],
+          "validation_blocks": [
+            "B",
+            "F",
+            "J",
+            "Q"
+          ],
+          "test_blocks": [
+            "A",
+            "E",
+            "I",
+            "O"
+          ],
+          "feature": "length",
+          "program": "lag_minus",
+          "language": "latin",
+          "program_complexity": 2,
+          "initial_validation": -13.422194173738536,
+          "validation_score": -12.38629435590091,
+          "validation_penalized": -12.39130563302656,
+          "test_initial": -13.53892872742763,
+          "test_final": -12.632817203999387,
+          "test_residual": 0.9061115234282422,
+          "gap_to_language_ceiling": -1.3750314643389778,
+          "swaps": 9,
+          "plaintext_accuracy": null,
+          "known_plaintext": 0,
+          "sample": "sstpla tstett sstumets nitettsn ssnstat tsamitt amstainti itatsmama tsisucet sitinsa eerarat plattut iann sulatssa ienintis esmeine inimo itsisnt inunt iissin tpcnani test eroadtm ocsinpnm sititmsisn stneteiic eernamfam airnp tsit stst setocsso mnamsus mepdstp moscisiim rens enuscne totmse emiisse sisttsis miurm tiss frti icot amma tnvct vbus ensa ants enot"
+        },
+        {
+          "fold": 1,
+          "fit_blocks": [
+            "A",
+            "D",
+            "E",
+            "H",
+            "I",
+            "N",
+            "O",
+            "T"
+          ],
+          "validation_blocks": [
+            "C",
+            "G",
+            "M",
+            "S"
+          ],
+          "test_blocks": [
+            "B",
+            "F",
+            "J",
+            "Q"
+          ],
+          "feature": "length",
+          "program": "lag_minus",
+          "language": "latin",
+          "program_complexity": 2,
+          "initial_validation": -13.23571299205228,
+          "validation_score": -12.206439457462045,
+          "validation_penalized": -12.208119486930602,
+          "test_initial": -13.419017903596181,
+          "test_final": -12.33852011096865,
+          "test_residual": 1.080497792627531,
+          "gap_to_language_ceiling": -1.0807343713082407,
+          "swaps": 9,
+          "plaintext_accuracy": null,
+          "known_plaintext": 0,
+          "sample": "ctsaraa nnesnsi eneinnu dudatnar tittv tistssi ssso miset nrorpuhei issactsum nucurgh itiinn etices rnsu mssi tett irunsne istisitit ntetucair secumitta tientem sttomna missss smisi cuct mgmtn nsititar inimieni iirsa svlnet sisitns ttsaci nentii tolpcso nsumt snatsstit plsm antemomsm ctunt ctese sainsis cattom tsaecs tann ecseimeo enamtacu ssmastpd csenantt"
+        },
+        {
+          "fold": 2,
+          "fit_blocks": [
+            "A",
+            "B",
+            "E",
+            "F",
+            "I",
+            "J",
+            "O",
+            "Q"
+          ],
+          "validation_blocks": [
+            "D",
+            "H",
+            "N",
+            "T"
+          ],
+          "test_blocks": [
+            "C",
+            "G",
+            "M",
+            "S"
+          ],
+          "feature": "length",
+          "program": "lag_minus",
+          "language": "latin",
+          "program_complexity": 2,
+          "initial_validation": -13.298221704608313,
+          "validation_score": -12.222183940089296,
+          "validation_penalized": -12.223303361010851,
+          "test_initial": -13.241326435786092,
+          "test_final": -12.197249640893617,
+          "test_residual": 1.0440767948924758,
+          "gap_to_language_ceiling": -0.9394639012332071,
+          "swaps": 13,
+          "plaintext_accuracy": null,
+          "known_plaintext": 0,
+          "sample": "estanisn siecteec nninen mttsin tteinna ctsi msts esmus antis mtii utntn tnse imat stten stis isbh seimi stess innis matm unnes cucaemt msiia tseal itsant tstace mtte nsston esats tesn itsit iucisso sentt onam etsm intit nttema stentn stenov singv stisam tsti snunest rattse ctiti itae niemomtn runii eevit nnis iisn cinun isesnt ssee seint siece mpcac mimi em"
+        },
+        {
+          "fold": 3,
+          "fit_blocks": [
+            "B",
+            "C",
+            "F",
+            "G",
+            "J",
+            "M",
+            "Q",
+            "S"
+          ],
+          "validation_blocks": [
+            "A",
+            "E",
+            "I",
+            "O"
+          ],
+          "test_blocks": [
+            "D",
+            "H",
+            "N",
+            "T"
+          ],
+          "feature": "length",
+          "program": "lag_minus",
+          "language": "latin",
+          "program_complexity": 2,
+          "initial_validation": -13.893061636979274,
+          "validation_score": -12.618032622882636,
+          "validation_penalized": -12.622437309949943,
+          "test_initial": -13.597879521790729,
+          "test_final": -12.20949603037409,
+          "test_residual": 1.3883834914166382,
+          "gap_to_language_ceiling": -0.951710290713681,
+          "swaps": 11,
+          "plaintext_accuracy": null,
+          "known_plaintext": 0,
+          "sample": "sentetcd sittneiit nniasr ssettst einiasr rtirise smumisin aesm itgy tssuc tisi tentist stemt stsians emusuct ssniit nteiiri raoq cessas nsii ituct tsittssumt einturitm medbnsiiu siammastent nitttasss iannuniem sesti unemitt sessttts nneear nimen mdntt mtsiac surnup nameni cssap enup nttsanon sgbsiiniatm seimtas simesor ittn namitn utnsthb sndst isnure nidbi"
+        }
+      ]
+    }
+  ],
+  "gate": {
+    "synthetic_controls_pass": true,
+    "observed_exceeds_null_final_maximum": false,
+    "observed_exceeds_null_residual_maximum": false,
+    "observed_final_empirical_p": 0.8888888888888888,
+    "observed_residual_empirical_p": 0.3333333333333333,
+    "language_ceiling_gap_required": -0.5,
+    "selection_consistency_required": 0.75,
+    "real_pass": false
+  }
+}

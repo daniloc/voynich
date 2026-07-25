@@ -1,0 +1,690 @@
+{
+  "caveats": [
+    "The herbal annotations contain graph summaries rather than traced node coordinates or edges. Plant results are pipeline diagnostics only and provide no evidence for or against real plant traversals.",
+    "The gate detects whether a route restores ordinary Voynich morphological transition order. It does not assume or recover plaintext.",
+    "Zodiac alignment confidence is retained in the output, but the circular statistic removes start-node phase uncertainty."
+  ],
+  "decision": {
+    "plant_route_status": "not testable until traced herbal node-edge graphs exist",
+    "plant_route_supported": null,
+    "zodiac_route_supported": false
+  },
+  "experiment": "external illustration-derived route gate",
+  "plant_gate": {
+    "data_gap": "The records provide aggregate node, branch-point, and terminal counts but no observed node-edge adjacency or sibling geometry. DFS/BFS orders are therefore properties of a constructed diagnostic tree, not recoverable properties of the drawings.",
+    "excluded_from_decision": true,
+    "identifiable": false,
+    "inferential_status": "not_testable_from_aggregate_graph_summaries",
+    "n_folios": 15,
+    "n_quires": 7,
+    "null_interpretation": "exploratory software diagnostics only; no plant null probability has inferential meaning without observed node-edge topology",
+    "per_folio": [
+      {
+        "display_score_bits": -5.6523287483228435,
+        "folio": "f4r",
+        "node_count": 4,
+        "quire": "A",
+        "root_bfs_gain_bits_per_boundary": -1.058218734268964,
+        "root_dfs_gain_bits_per_boundary": -1.058218734268964
+      },
+      {
+        "display_score_bits": -7.010543994372129,
+        "folio": "f6r",
+        "node_count": 11,
+        "quire": "A",
+        "root_bfs_gain_bits_per_boundary": -0.04213813963517854,
+        "root_dfs_gain_bits_per_boundary": -0.04213813963517854
+      },
+      {
+        "display_score_bits": -6.260526120556265,
+        "folio": "f9r",
+        "node_count": 7,
+        "quire": "B",
+        "root_bfs_gain_bits_per_boundary": -0.23194342434884607,
+        "root_dfs_gain_bits_per_boundary": -0.060856054874290244
+      },
+      {
+        "display_score_bits": -5.632962086457677,
+        "folio": "f11r",
+        "node_count": 10,
+        "quire": "B",
+        "root_bfs_gain_bits_per_boundary": -0.6921670478495221,
+        "root_dfs_gain_bits_per_boundary": -0.6568355681657696
+      },
+      {
+        "display_score_bits": -6.908989158631624,
+        "folio": "f15r",
+        "node_count": 10,
+        "quire": "B",
+        "root_bfs_gain_bits_per_boundary": 0.057764389422996665,
+        "root_dfs_gain_bits_per_boundary": 0.057764389422996665
+      },
+      {
+        "display_score_bits": -6.43095363941274,
+        "folio": "f18r",
+        "node_count": 6,
+        "quire": "C",
+        "root_bfs_gain_bits_per_boundary": -0.21578007532962928,
+        "root_dfs_gain_bits_per_boundary": -0.21578007532962928
+      },
+      {
+        "display_score_bits": -5.499091925796493,
+        "folio": "f20r",
+        "node_count": 8,
+        "quire": "C",
+        "root_bfs_gain_bits_per_boundary": -0.3698972984064435,
+        "root_dfs_gain_bits_per_boundary": -0.1716471076441639
+      },
+      {
+        "display_score_bits": -6.339490882985471,
+        "folio": "f23r",
+        "node_count": 11,
+        "quire": "C",
+        "root_bfs_gain_bits_per_boundary": -0.5525018566839037,
+        "root_dfs_gain_bits_per_boundary": -0.3970109754730782
+      },
+      {
+        "display_score_bits": -6.063700232372132,
+        "folio": "f31r",
+        "node_count": 8,
+        "quire": "D",
+        "root_bfs_gain_bits_per_boundary": 0.23121432907310346,
+        "root_dfs_gain_bits_per_boundary": 0.23121432907310346
+      },
+      {
+        "display_score_bits": -7.027146594265637,
+        "folio": "f35r",
+        "node_count": 4,
+        "quire": "E",
+        "root_bfs_gain_bits_per_boundary": 0.18914428328973631,
+        "root_dfs_gain_bits_per_boundary": 0.18914428328973631
+      },
+      {
+        "display_score_bits": -6.479422982236841,
+        "folio": "f43r",
+        "node_count": 13,
+        "quire": "F",
+        "root_bfs_gain_bits_per_boundary": -0.12824619585312025,
+        "root_dfs_gain_bits_per_boundary": -0.21742225782848568
+      },
+      {
+        "display_score_bits": -6.661249076069869,
+        "folio": "f52r",
+        "node_count": 8,
+        "quire": "G",
+        "root_bfs_gain_bits_per_boundary": -0.3480063017896837,
+        "root_dfs_gain_bits_per_boundary": -0.6498476846261001
+      },
+      {
+        "display_score_bits": -5.408236747204933,
+        "folio": "f8r",
+        "node_count": 6,
+        "quire": "A",
+        "root_bfs_gain_bits_per_boundary": -0.8906130730743165,
+        "root_dfs_gain_bits_per_boundary": -0.8906130730743165
+      },
+      {
+        "display_score_bits": -6.253173745273987,
+        "folio": "f16r",
+        "node_count": 5,
+        "quire": "B",
+        "root_bfs_gain_bits_per_boundary": -0.610320034883844,
+        "root_dfs_gain_bits_per_boundary": -0.610320034883844
+      },
+      {
+        "display_score_bits": -6.647142374294466,
+        "folio": "f26r",
+        "node_count": 10,
+        "quire": "D",
+        "root_bfs_gain_bits_per_boundary": -0.12181539594195456,
+        "root_dfs_gain_bits_per_boundary": -0.21076953182996583
+      }
+    ],
+    "positive_control": {
+      "gain_bits_per_boundary": 0.3681464306674611,
+      "passed": true,
+      "planted_route": "root_dfs",
+      "random_null_mean_gain": 0.08284995420031778,
+      "random_null_p_upper": 0.000999000999000999
+    },
+    "random_route_null": {
+      "mean": -0.24381329491823556,
+      "observed_debug_quantile": 0.11,
+      "replicates": 1000
+    },
+    "route_gains_bits_per_boundary": {
+      "root_bfs": -0.318901638418638,
+      "root_dfs": -0.31355574905652994
+    },
+    "routes": {
+      "root_bfs": "level-order root-to-tip traversal of the coarse organ tree",
+      "root_dfs": "preorder root-to-tip traversal of the coarse organ tree"
+    },
+    "selected_route": "root_dfs",
+    "selected_statistic": -0.31355574905652994,
+    "unit": "complete herbal folio; reference model excludes its quire",
+    "within_quire_graph_rematch_null": {
+      "mean": -0.24217804118563482,
+      "mean_moved_folios": 12,
+      "observed_debug_quantile": 0.12,
+      "replicates": 1000,
+      "singleton_quires_remain_fixed": true
+    }
+  },
+  "predeclared_scope": {
+    "allowed": "illustration-derived permutation of existing text units",
+    "excluded": [
+      "visual value shifts",
+      "pigment keys",
+      "visual state-conditioned symbol values",
+      "phase selection from text",
+      "reverse or alternating plant routes without traced geometry"
+    ],
+    "score": "mean heldout log2 transition probability across fixed morphological signature channels",
+    "signature_channels": [
+      "edges",
+      "affixes",
+      "shape"
+    ]
+  },
+  "replicates": 1000,
+  "seed": 20260724,
+  "zodiac_gate": {
+    "evaluation": "two fixed routes evaluated over three physical quires; no route is fitted, and quire exclusion applies only to the reference transition model",
+    "identifiable": true,
+    "n_folios": 12,
+    "n_quires": 3,
+    "n_rings": 24,
+    "per_ring": [
+      {
+        "alignment_confidence": "high",
+        "clockwise_score_bits_per_transition": -5.793649379463785,
+        "counterclockwise_score_bits_per_transition": -6.064664302546948,
+        "folio": "f70v2",
+        "nodes": 19,
+        "tier": "outer"
+      },
+      {
+        "alignment_confidence": "high",
+        "clockwise_score_bits_per_transition": -7.317228872278435,
+        "counterclockwise_score_bits_per_transition": -7.225028712146955,
+        "folio": "f70v2",
+        "nodes": 11,
+        "tier": "inner"
+      },
+      {
+        "alignment_confidence": "low",
+        "clockwise_score_bits_per_transition": -6.345135662091818,
+        "counterclockwise_score_bits_per_transition": -6.715379358940989,
+        "folio": "f70v1",
+        "nodes": 10,
+        "tier": "outer"
+      },
+      {
+        "alignment_confidence": "low",
+        "clockwise_score_bits_per_transition": -6.281445575473576,
+        "counterclockwise_score_bits_per_transition": -6.3512898494324315,
+        "folio": "f70v1",
+        "nodes": 5,
+        "tier": "inner"
+      },
+      {
+        "alignment_confidence": "high",
+        "clockwise_score_bits_per_transition": -6.703942501117792,
+        "counterclockwise_score_bits_per_transition": -6.610579858459128,
+        "folio": "f71r",
+        "nodes": 10,
+        "tier": "outer"
+      },
+      {
+        "alignment_confidence": "high",
+        "clockwise_score_bits_per_transition": -7.108767921089723,
+        "counterclockwise_score_bits_per_transition": -6.838537874199912,
+        "folio": "f71r",
+        "nodes": 5,
+        "tier": "inner"
+      },
+      {
+        "alignment_confidence": "low",
+        "clockwise_score_bits_per_transition": -5.629738639744619,
+        "counterclockwise_score_bits_per_transition": -5.926142833526123,
+        "folio": "f71v",
+        "nodes": 10,
+        "tier": "outer"
+      },
+      {
+        "alignment_confidence": "low",
+        "clockwise_score_bits_per_transition": -7.297895393636163,
+        "counterclockwise_score_bits_per_transition": -7.5748667577720505,
+        "folio": "f71v",
+        "nodes": 5,
+        "tier": "inner"
+      },
+      {
+        "alignment_confidence": "low",
+        "clockwise_score_bits_per_transition": -7.0522179134067615,
+        "counterclockwise_score_bits_per_transition": -7.1677934786163595,
+        "folio": "f72r1",
+        "nodes": 10,
+        "tier": "outer"
+      },
+      {
+        "alignment_confidence": "low",
+        "clockwise_score_bits_per_transition": -6.778376415768332,
+        "counterclockwise_score_bits_per_transition": -7.211067350257885,
+        "folio": "f72r1",
+        "nodes": 5,
+        "tier": "inner"
+      },
+      {
+        "alignment_confidence": "high",
+        "clockwise_score_bits_per_transition": -6.277798737292023,
+        "counterclockwise_score_bits_per_transition": -6.174367493718346,
+        "folio": "f72r2",
+        "nodes": 15,
+        "tier": "outer"
+      },
+      {
+        "alignment_confidence": "high",
+        "clockwise_score_bits_per_transition": -5.852604294260672,
+        "counterclockwise_score_bits_per_transition": -6.307711304576119,
+        "folio": "f72r2",
+        "nodes": 9,
+        "tier": "inner"
+      },
+      {
+        "alignment_confidence": "low",
+        "clockwise_score_bits_per_transition": -6.95319064175798,
+        "counterclockwise_score_bits_per_transition": -6.939070741484779,
+        "folio": "f72r3",
+        "nodes": 23,
+        "tier": "outer"
+      },
+      {
+        "alignment_confidence": "low",
+        "clockwise_score_bits_per_transition": -7.066613702825029,
+        "counterclockwise_score_bits_per_transition": -6.8365538020091146,
+        "folio": "f72r3",
+        "nodes": 7,
+        "tier": "inner"
+      },
+      {
+        "alignment_confidence": "low",
+        "clockwise_score_bits_per_transition": -6.292384994038637,
+        "counterclockwise_score_bits_per_transition": -6.223917041870863,
+        "folio": "f72v1",
+        "nodes": 20,
+        "tier": "outer"
+      },
+      {
+        "alignment_confidence": "low",
+        "clockwise_score_bits_per_transition": -6.289197861361372,
+        "counterclockwise_score_bits_per_transition": -6.2744952865162045,
+        "folio": "f72v1",
+        "nodes": 10,
+        "tier": "inner"
+      },
+      {
+        "alignment_confidence": "low",
+        "clockwise_score_bits_per_transition": -6.943019303319118,
+        "counterclockwise_score_bits_per_transition": -6.744849848433275,
+        "folio": "f72v2",
+        "nodes": 18,
+        "tier": "outer"
+      },
+      {
+        "alignment_confidence": "low",
+        "clockwise_score_bits_per_transition": -6.323108420913969,
+        "counterclockwise_score_bits_per_transition": -6.126061112406445,
+        "folio": "f72v2",
+        "nodes": 12,
+        "tier": "inner"
+      },
+      {
+        "alignment_confidence": "low",
+        "clockwise_score_bits_per_transition": -6.195045736680746,
+        "counterclockwise_score_bits_per_transition": -6.335270045413285,
+        "folio": "f72v3",
+        "nodes": 18,
+        "tier": "outer"
+      },
+      {
+        "alignment_confidence": "low",
+        "clockwise_score_bits_per_transition": -6.29801874928367,
+        "counterclockwise_score_bits_per_transition": -6.137124631908198,
+        "folio": "f72v3",
+        "nodes": 12,
+        "tier": "inner"
+      },
+      {
+        "alignment_confidence": "low",
+        "clockwise_score_bits_per_transition": -6.0886940364666335,
+        "counterclockwise_score_bits_per_transition": -6.210240521612511,
+        "folio": "f73r",
+        "nodes": 16,
+        "tier": "outer"
+      },
+      {
+        "alignment_confidence": "low",
+        "clockwise_score_bits_per_transition": -6.322638937155728,
+        "counterclockwise_score_bits_per_transition": -6.101063813924527,
+        "folio": "f73r",
+        "nodes": 10,
+        "tier": "inner"
+      },
+      {
+        "alignment_confidence": "high",
+        "clockwise_score_bits_per_transition": -6.432229059174186,
+        "counterclockwise_score_bits_per_transition": -6.407210684933554,
+        "folio": "f73v",
+        "nodes": 16,
+        "tier": "outer"
+      },
+      {
+        "alignment_confidence": "high",
+        "clockwise_score_bits_per_transition": -6.559810508412802,
+        "counterclockwise_score_bits_per_transition": -6.641373319576508,
+        "folio": "f73v",
+        "nodes": 10,
+        "tier": "inner"
+      }
+    ],
+    "positive_control": {
+      "control_rows": [
+        {
+          "donor_line_excluded": {
+            "folio": "f101r",
+            "line": 9,
+            "locus": "+P0",
+            "quire": "S"
+          },
+          "target_folio": "f70v2",
+          "target_quire_excluded": "J",
+          "target_tier": "outer"
+        },
+        {
+          "donor_line_excluded": {
+            "folio": "f89v1",
+            "line": 14,
+            "locus": "+P0",
+            "quire": "O"
+          },
+          "target_folio": "f70v2",
+          "target_quire_excluded": "J",
+          "target_tier": "inner"
+        },
+        {
+          "donor_line_excluded": {
+            "folio": "f78v",
+            "line": 5,
+            "locus": "+P0",
+            "quire": "M"
+          },
+          "target_folio": "f70v1",
+          "target_quire_excluded": "J",
+          "target_tier": "outer"
+        },
+        {
+          "donor_line_excluded": {
+            "folio": "f20v",
+            "line": 1,
+            "locus": "@P0",
+            "quire": "C"
+          },
+          "target_folio": "f70v1",
+          "target_quire_excluded": "J",
+          "target_tier": "inner"
+        },
+        {
+          "donor_line_excluded": {
+            "folio": "f76r",
+            "line": 53,
+            "locus": "+P0",
+            "quire": "M"
+          },
+          "target_folio": "f71r",
+          "target_quire_excluded": "K",
+          "target_tier": "outer"
+        },
+        {
+          "donor_line_excluded": {
+            "folio": "f18r",
+            "line": 3,
+            "locus": "+P0",
+            "quire": "C"
+          },
+          "target_folio": "f71r",
+          "target_quire_excluded": "K",
+          "target_tier": "inner"
+        },
+        {
+          "donor_line_excluded": {
+            "folio": "f76v",
+            "line": 2,
+            "locus": "+P0",
+            "quire": "M"
+          },
+          "target_folio": "f71v",
+          "target_quire_excluded": "K",
+          "target_tier": "outer"
+        },
+        {
+          "donor_line_excluded": {
+            "folio": "f18r",
+            "line": 7,
+            "locus": "+P0",
+            "quire": "C"
+          },
+          "target_folio": "f71v",
+          "target_quire_excluded": "K",
+          "target_tier": "inner"
+        },
+        {
+          "donor_line_excluded": {
+            "folio": "f77v",
+            "line": 41,
+            "locus": "+P0",
+            "quire": "M"
+          },
+          "target_folio": "f72r1",
+          "target_quire_excluded": "K",
+          "target_tier": "outer"
+        },
+        {
+          "donor_line_excluded": {
+            "folio": "f20r",
+            "line": 12,
+            "locus": "+P0",
+            "quire": "C"
+          },
+          "target_folio": "f72r1",
+          "target_quire_excluded": "K",
+          "target_tier": "inner"
+        },
+        {
+          "donor_line_excluded": {
+            "folio": "f101v",
+            "line": 22,
+            "locus": "+P0",
+            "quire": "S"
+          },
+          "target_folio": "f72r2",
+          "target_quire_excluded": "K",
+          "target_tier": "outer"
+        },
+        {
+          "donor_line_excluded": {
+            "folio": "f66r",
+            "line": 51,
+            "locus": "+P0",
+            "quire": "H"
+          },
+          "target_folio": "f72r2",
+          "target_quire_excluded": "K",
+          "target_tier": "inner"
+        },
+        {
+          "donor_line_excluded": {
+            "folio": "f101r",
+            "line": 5,
+            "locus": "+P0",
+            "quire": "S"
+          },
+          "target_folio": "f72r3",
+          "target_quire_excluded": "K",
+          "target_tier": "outer"
+        },
+        {
+          "donor_line_excluded": {
+            "folio": "f34v",
+            "line": 3,
+            "locus": "+P0",
+            "quire": "E"
+          },
+          "target_folio": "f72r3",
+          "target_quire_excluded": "K",
+          "target_tier": "inner"
+        },
+        {
+          "donor_line_excluded": {
+            "folio": "f101r",
+            "line": 8,
+            "locus": "+P0",
+            "quire": "S"
+          },
+          "target_folio": "f72v1",
+          "target_quire_excluded": "K",
+          "target_tier": "outer"
+        },
+        {
+          "donor_line_excluded": {
+            "folio": "f78v",
+            "line": 3,
+            "locus": "+P0",
+            "quire": "M"
+          },
+          "target_folio": "f72v1",
+          "target_quire_excluded": "K",
+          "target_tier": "inner"
+        },
+        {
+          "donor_line_excluded": {
+            "folio": "f101r",
+            "line": 5,
+            "locus": "+P0",
+            "quire": "S"
+          },
+          "target_folio": "f72v2",
+          "target_quire_excluded": "K",
+          "target_tier": "outer"
+        },
+        {
+          "donor_line_excluded": {
+            "folio": "f111r",
+            "line": 38,
+            "locus": "+P0",
+            "quire": "T"
+          },
+          "target_folio": "f72v2",
+          "target_quire_excluded": "K",
+          "target_tier": "inner"
+        },
+        {
+          "donor_line_excluded": {
+            "folio": "f101r",
+            "line": 7,
+            "locus": "+P0",
+            "quire": "S"
+          },
+          "target_folio": "f72v3",
+          "target_quire_excluded": "K",
+          "target_tier": "outer"
+        },
+        {
+          "donor_line_excluded": {
+            "folio": "f111r",
+            "line": 40,
+            "locus": "+P0",
+            "quire": "T"
+          },
+          "target_folio": "f72v3",
+          "target_quire_excluded": "K",
+          "target_tier": "inner"
+        },
+        {
+          "donor_line_excluded": {
+            "folio": "f101r",
+            "line": 8,
+            "locus": "+P0",
+            "quire": "S"
+          },
+          "target_folio": "f73r",
+          "target_quire_excluded": "L",
+          "target_tier": "outer"
+        },
+        {
+          "donor_line_excluded": {
+            "folio": "f76r",
+            "line": 55,
+            "locus": "+P0",
+            "quire": "M"
+          },
+          "target_folio": "f73r",
+          "target_quire_excluded": "L",
+          "target_tier": "inner"
+        },
+        {
+          "donor_line_excluded": {
+            "folio": "f101v",
+            "line": 23,
+            "locus": "+P0",
+            "quire": "S"
+          },
+          "target_folio": "f73v",
+          "target_quire_excluded": "L",
+          "target_tier": "outer"
+        },
+        {
+          "donor_line_excluded": {
+            "folio": "f76v",
+            "line": 4,
+            "locus": "+P0",
+            "quire": "M"
+          },
+          "target_folio": "f73v",
+          "target_quire_excluded": "L",
+          "target_tier": "inner"
+        }
+      ],
+      "passed": true,
+      "planted_route": "counterclockwise",
+      "random_null_mean_score": -6.141729338406613,
+      "random_null_p_upper": 0.000999000999000999,
+      "route_scores_bits_per_transition": {
+        "clockwise": -6.09894144151681,
+        "counterclockwise": -5.942589140564121
+      },
+      "selected_route": "counterclockwise",
+      "selected_score_bits_per_transition": -5.942589140564121,
+      "training_exclusion": "each control model excludes the complete target quire and the exact donor prose line"
+    },
+    "quires": [
+      "J",
+      "K",
+      "L"
+    ],
+    "random_hamiltonian_route_null": {
+      "construction": "one random circular order per ring, scored forward and in its exact reverse; statistic is the maximum global mean",
+      "mean": -6.518065305964601,
+      "p_upper": 0.35264735264735264,
+      "replicates": 1000
+    },
+    "route_scores_bits_per_transition": {
+      "clockwise": -6.508448052375566,
+      "counterclockwise": -6.547694167678438
+    },
+    "selected_route": "clockwise",
+    "selected_statistic": -6.508448052375566,
+    "unit": "complete folio/ring tier; circular score is invariant to start anchor; reference model excludes the complete quire"
+  }
+}
